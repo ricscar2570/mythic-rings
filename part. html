@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mythic Rings - Parte I: Il Mondo. Ambientazione, Casate, Creazione Personaggio">
+    <title>Mythic Rings v2.1 - Parte I: Il Mondo</title>
+    <style>
+        /* ═══════════════════════════════════════════
+           MYTHIC RINGS - STILE UNIFICATO ELEGANTE
+        ═══════════════════════════════════════════ */
+        
+        :root {
+            --primary-dark: #1a1a2e;
+            --secondary-dark: #16213e;
+            --accent-gold: #f39c12;
+            --accent-gold-dark: #e67e22;
+            --text-light: #ecf0f1;
+            --text-muted: #95a5a6;
+            --border-gold: rgba(243, 156, 18, 0.3);
+            --shadow-glow: 0 0 20px rgba(243, 156, 18, 0.3);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Palatino', 'Times New Roman', serif;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 50%, #0f3460 100%);
+            background-attachment: fixed;
+            color: var(--text-light);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        
+        .page-wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* SIDEBAR */
+        .sidebar {
+            width: 300px;
+            background: linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, rgba(22, 33, 62, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            border-right: 2px solid var(--border-gold);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 25px 18px;
+            z-index: 1000;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .sidebar::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb {
+            background: var(--accent-gold);
+            border-radius: 4px;
+        }
+        
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-gold);
+        }
+        
+        .sidebar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+            letter-spacing: 1px;
+        }
+        
+        .sidebar-version {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        .menu-section {
+            margin-bottom: 25px;
+        }
+        
+        .menu-title {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            padding-left: 8px;
+            border-left: 3px solid var(--accent-gold);
+        }
+        
+        .menu-items {
+            list-style: none;
+        }
+        
+        .menu-items li {
+            margin-bottom: 5px;
+        }
+        
+        .menu-items a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 13px;
+            display: block;
+            padding: 7px 10px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .menu-items a:hover {
+            background: rgba(243, 156, 18, 0.1);
+            border-left-color: var(--accent-gold);
+            padding-left: 15px;
+            color: var(--accent-gold);
+        }
+        
+        .menu-items a.active {
+            background: rgba(243, 156, 18, 0.2);
+            border-left-color: var(--accent-gold);
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        /* CONTENUTO */
+        .main-content {
+            margin-left: 300px;
+            flex: 1;
+            padding: 50px 70px;
+            max-width: 1400px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(5px);
+            min-height: 100vh;
+        }
+        
+        /* TIPOGRAFIA */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Palatino', 'Georgia', serif;
+            color: var(--accent-gold);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 46px;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 18px;
+            margin-bottom: 40px;
+            text-shadow: 0 0 20px rgba(243, 156, 18, 0.4);
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            font-size: 34px;
+            margin-top: 55px;
+            padding-left: 18px;
+            border-left: 5px solid var(--accent-gold);
+        }
+        
+        h3 {
+            font-size: 26px;
+            color: var(--accent-gold-dark);
+        }
+        
+        h4 {
+            font-size: 20px;
+            color: var(--text-light);
+        }
+        
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            line-height: 1.9;
+            font-size: 16px;
+        }
+        
+        strong {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        em {
+            font-style: italic;
+            color: var(--accent-gold-dark);
+        }
+        
+        ul, ol {
+            margin-left: 32px;
+            margin-bottom: 18px;
+        }
+        
+        ul li, ol li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        ul li::marker {
+            color: var(--accent-gold);
+        }
+        
+        ol li::marker {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        /* INFO BOX */
+        .info-box {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.05), rgba(243, 156, 18, 0.1));
+            border: 2px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .info-box h3, .info-box h4 {
+            margin-top: 0;
+            color: var(--accent-gold);
+        }
+        
+        /* EXAMPLE BOX */
+        .example-box {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.08), rgba(41, 128, 185, 0.12));
+            border: 2px solid rgba(52, 152, 219, 0.4);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+        }
+        
+        .example-box h4 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        
+        /* CASATA BOX */
+        .casata-box {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.08), rgba(243, 156, 18, 0.12));
+            border: 3px solid var(--border-gold);
+            border-radius: 15px;
+            padding: 35px;
+            margin: 35px 0;
+            box-shadow: var(--shadow-glow);
+            position: relative;
+        }
+        
+        .casata-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--accent-gold);
+        }
+        
+        .casata-name {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--accent-gold);
+        }
+        
+        .casata-icon {
+            font-size: 56px;
+        }
+        
+        .casata-subtitle {
+            font-size: 18px;
+            color: var(--accent-gold-dark);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .casata-colors {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            margin: 10px 0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        /* STEP BOX */
+        .step-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 4px solid var(--accent-gold);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .step-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+        
+        /* TABELLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 28px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        table thead {
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: var(--primary-dark);
+        }
+        
+        table th {
+            padding: 16px;
+            text-align: left;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 13px;
+        }
+        
+        table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        table tbody tr {
+            transition: background 0.3s ease;
+        }
+        
+        table tbody tr:hover {
+            background: rgba(243, 156, 18, 0.1);
+        }
+        
+        table tbody tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        
+        /* NAVIGAZIONE */
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+        
+        a:hover {
+            color: var(--accent-gold);
+            border-bottom-color: var(--accent-gold);
+        }
+        
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 70px;
+            padding-top: 35px;
+            border-top: 2px solid var(--border-gold);
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+            border: none;
+            font-size: 15px;
+        }
+        
+        .nav-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(243, 156, 18, 0.6);
+            color: white;
+            border: none;
+        }
+        
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+            margin: 45px 0;
+        }
+        
+        .separator {
+            text-align: center;
+            font-size: 28px;
+            color: var(--accent-gold);
+            margin: 50px 0;
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 260px;
+            }
+            
+            .main-content {
+                margin-left: 260px;
+                padding: 40px 45px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 2px solid var(--border-gold);
+            }
+            
+            .main-content {
+                margin-left: 0;
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 34px;
+            }
+            
+            h2 {
+                font-size: 26px;
+            }
+            
+            .page-navigation {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">⟡ MYTHIC RINGS ⟡</div>
+                <div class="sidebar-version">Versione 2.1 - FINALE</div>
+            </div>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Navigazione</div>
+                <ul class="menu-items">
+                    <li><a href="index.html">🏠 Homepage</a></li>
+                    <li><a href="parte2.html">Parte II →</a></li>
+                </ul>
+            </nav>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Parte I - Questa Sezione</div>
+                <ul class="menu-items">
+                    <li><a href="#cap1" class="active">Cap 1: Milano Nascosta</a></li>
+                    <li><a href="#cap2">Cap 2: Custodi e Anelli</a></li>
+                    <li><a href="#cap3">Cap 3: Le Quattro Casate</a></li>
+                    <li><a href="#cap3-avalon">— Avalon</a></li>
+                    <li><a href="#cap3-umbra">— Umbra</a></li>
+                    <li><a href="#cap3-ife">— Ife</a></li>
+                    <li><a href="#cap3-mictlan">— Mictlan</a></li>
+                    <li><a href="#cap4">Cap 4: Crea Guardiano</a></li>
+                    <li><a href="#cap5">Cap 5: Session Zero</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- CONTENUTO PRINCIPALE -->
+        <main class="main-content">
+            
+            <h1>Parte I: Il Mondo di Mythic Rings</h1>
+            
+            <p style="font-size: 18px; font-style: italic; color: var(--accent-gold-dark);">
+                "Sotto ogni grande città dorme un orrore. Sopra ogni orrore vegliano gli eroi."
+            </p>
+            
+            <!-- CAPITOLO 1 -->
+            <section id="cap1">
+                <h2>Capitolo 1: Milano Nascosta</h2>
+                
+                <p><strong>Milano, 2025.</strong> Una metropoli di oltre 3 milioni di anime, cuore economico d'Italia, capitale della moda e del design. Ma sotto la superficie scintillante di vetro e acciaio, nelle ombre tra i Navigli e i sotterranei del Duomo, esiste un altro mondo.</p>
+                
+                <p>Un mondo dove antiche profezie si intrecciano con il presente, dove creature dell'ombra cacciano di notte, e dove quattro ordini mistici proteggono la città da minacce che l'umanità ordinaria non può nemmeno immaginare.</p>
+                
+                <h3>Il Velo</h3>
+                
+                <p>La magia esiste. Demoni camminano tra noi. Spiriti dei morti sussurrano segreti. Ma la gente comune non vede nulla.</p>
+                
+                <p><strong>Il Velo</strong> è un'illusione collettiva, un filtro percettivo che separa il mondo ordinario da quello occulto. Non è un muro fisico, ma una barriera cognitiva: il cervello umano non-magico semplicemente <em>rifiuta</em> di vedere la magia, razionalizzandola come coincidenza, costume teatrale, effetto speciale, o allucinazione.</p>
+                
+                <div class="example-box">
+                    <h4>Esempio: Il Velo in Azione</h4>
+                    <p>Un Guardiano combatte un demone in Piazza Duomo alle 2 di notte. Lame di luce sacra contro artigli d'ombra. Un passante ubriaco osserva la scena.</p>
+                    <p><strong>Cosa vede il Guardiano:</strong> Battaglia epica contro creatura soprannaturale alta 3 metri.</p>
+                    <p><strong>Cosa vede il passante:</strong> "Due tizi con costumi fighi che fanno parkour. Forse stanno girando film? O è flash mob? Boh, vado a casa."</p>
+                    <p>Il mattino dopo, se interrogato, il passante dirà: "Non ricordo bene, ero troppo ubriaco."</p>
+                </div>
+                
+                <p>Il Velo non è perfetto. Trauma estremo, shock emotivo, o esposizione prolungata alla magia possono "rompere" il Velo per singoli individui. Queste persone diventano <strong>Consapevoli</strong> — vedono il mondo occulto ma non hanno poteri per difendersi.</p>
+                
+                <h3>Le Due Milano</h3>
+                
+                <p>Esistono due versioni di Milano sovrapposte:</p>
+                
+                <p><strong>Milano Ordinaria:</strong> La città che tutti conoscono. Tram, aperitivi, Fashion Week, San Siro, Navigli. 3 milioni di persone vivono vite normali, ignare.</p>
+                
+                <p><strong>Milano Mitica:</strong> La città nascosta. Sotto ogni strada ci sono catacombe dimenticate. Nei vicoli bui si aprono portali verso altri piani. Il Duomo nasconde il Nexus, punto dove cinque Linee Ley convergono. I morti camminano a Cimitero Monumentale dopo mezzanotte. Le ombre hanno denti.</p>
+                
+                <div class="info-box">
+                    <h4>⚡ Linee Ley</h4>
+                    <p>Fiumi invisibili di energia magica che attraversano il pianeta. Milano ne ha cinque che convergono sotto il Duomo, creando il <strong>Nexus</strong> — uno dei punti di potere più forti d'Europa. Questo è il motivo per cui Milano attira creature occulte come miele attira api.</p>
+                </div>
+                
+                <h3>Minacce Occulte</h3>
+                
+                <p>Milano Mitica pullula di pericoli:</p>
+                
+                <ul>
+                    <li><strong>Creature d'Ombra:</strong> Demoni minori, spiriti maligni, manifestazioni da incubi. Cacciano negli angoli bui.</li>
+                    <li><strong>Vampiri:</strong> Antichi predatori che controllano finanza e politica dall'ombra.</li>
+                    <li><strong>Culti:</strong> Umani che adorano entità proibite, cercando potere attraverso sacrifici.</li>
+                    <li><strong>Rinnegati:</strong> Ex-Guardiani espulsi O fuggiti, ora mercenari O criminali magici.</li>
+                    <li><strong>Porte Dimensionali:</strong> Crepe nella realtà da cui emergono orrori da altri piani.</li>
+                </ul>
+                
+                <p>Senza protezione, Milano cadrebbe nel caos in settimane. Qui entrano in gioco i <strong>Custodi</strong>.</p>
+            </section>
+            
+            <!-- CAPITOLO 2 -->
+            <section id="cap2">
+                <h2>Capitolo 2: I Custodi e gli Anelli Custodia</h2>
+                
+                <h3>L'Organizzazione</h3>
+                
+                <p>I <strong>Custodi di Milano</strong> sono un'organizzazione segreta che protegge la città da minacce occulte da oltre 800 anni. Non sono governo, non sono religione — sono ordine indipendente guidato da un solo obiettivo: <em>mantenere il Velo e difendere l'umanità.</em></p>
+                
+                <p><strong>Struttura:</strong></p>
+                <ul>
+                    <li><strong>Cerchia degli Anziani:</strong> Consiglio direttivo di 5 membri (1 rappresentante per Casata + Presidente neutrale). Prendono decisioni strategiche.</li>
+                    <li><strong>Guardiani Attivi:</strong> ~40 operativi sul campo. Divisi in 4 Casate (Avalon, Umbra, Ife, Mictlan).</li>
+                    <li><strong>Supporto:</strong> ~200 persone tra analisti, ricercatori, medici, tecnici. Molti sono Consapevoli senza poteri.</li>
+                    <li><strong>Alleati Esterni:</strong> Società del Velo (cover-up), Mercato Notturno (forniture), contatti internazionali.</li>
+                </ul>
+                
+                <div class="info-box">
+                    <h4>🏢 Coperture Custodi</h4>
+                    <p>I Custodi operano attraverso facciate legali:</p>
+                    <ul>
+                        <li><strong>Fondazione Medici:</strong> ONG culturale (copertura principale)</li>
+                        <li><strong>NexusTech srl:</strong> Startup tecnologia (finanziamento)</li>
+                        <li><strong>Studio Legale Conti:</strong> Avvocati (protezione legale)</li>
+                    </ul>
+                    <p>Guardiani hanno lavori ordinari di giorno, missioni di notte. Doppia vita costante.</p>
+                </div>
+                
+                <h3>Gli Anelli Custodia</h3>
+                
+                <p>Al cuore del potere dei Guardiani ci sono gli <strong>Anelli Custodia</strong> — quattro artefatti magici leggendari creati millenni fa da entità sconosciute.</p>
+                
+                <p><strong>Natura degli Anelli:</strong></p>
+                <ul>
+                    <li>Sono <strong>indistruttibili</strong> (provato più volte)</li>
+                    <li><strong>Scelgono</strong> i loro portatori (non puoi "rubare" un Anello — ti rifiuterà)</li>
+                    <li>Si <strong>legano</strong> permanentemente al portatore scelto (connessione spirituale)</li>
+                    <li>Conferiscono <strong>poteri magici</strong> attingendo da piani dimensionali diversi</li>
+                    <li>Un solo Anello per Casata, tramandato quando portatore muore</li>
+                </ul>
+                
+                <div class="example-box">
+                    <h4>Come Funziona la Scelta</h4>
+                    <p>Quando un Guardiano muore, l'Anello "dorme" per 1d6 giorni. Poi inizia cercare nuovo portatore. Criteri sono misteriosi MA tendono verso:</p>
+                    <ul>
+                        <li>Allineamento filosofico con Casata</li>
+                        <li>Forte volontà / senso dovere</li>
+                        <li>Momento di bisogno disperato (spesso Anello appare quando persona rischia morte)</li>
+                    </ul>
+                    <p>Quando Anello ti sceglie, <strong>senti il richiamo</strong> — impulso irresistibile seguire sensazione verso location specifica. Trovi Anello. Lo indossi. Il legame è istantaneo e irreversibile.</p>
+                </div>
+                
+                <h3>I Quattro Anelli</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Anello</th>
+                            <th>Casata</th>
+                            <th>Materiale</th>
+                            <th>Potere</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Anello di Avalon</strong></td>
+                            <td>Luce</td>
+                            <td>Oro puro inciso runici</td>
+                            <td>Luce sacra, protezione, guarigione</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Anello di Umbra</strong></td>
+                            <td>Ombre</td>
+                            <td>Onice nero opaco</td>
+                            <td>Manipolare ombre, furtività, inganno</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Anello di Ife</strong></td>
+                            <td>Vita</td>
+                            <td>Giada viva (pulsa)</td>
+                            <td>Natura, guarigione, crescita</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Anello di Mictlan</strong></td>
+                            <td>Morte</td>
+                            <td>Ossidiana nera lucida</td>
+                            <td>Spiriti, necromanzia, confine vita/morte</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><strong>Costo del Potere:</strong> Ogni Anello ha prezzo. Avalon e Ife consumano <strong>Stress</strong> (salute mentale). Umbra accumula <strong>Corruzione</strong> (contaminazione ombre). Mictlan costa <strong>Punti Ferita</strong> (vita letterale). Nulla è gratis.</p>
+            </section>
+            
+            <!-- CAPITOLO 3 -->
+            <section id="cap3">
+                <h2>Capitolo 3: Le Quattro Casate</h2>
+                
+                <p>I Guardiani sono divisi in quattro Casate, ognuna filosoficamente e magicamente distinta. Non sono fazioni rivali (anche se tensioni esistono), ma approcci diversi allo stesso scopo: proteggere Milano.</p>
+                
+                <div class="separator">⟡ ⟡ ⟡</div>
+                
+                <!-- AVALON -->
+                <div id="cap3-avalon" class="casata-box">
+                    <div class="casata-header">
+                        <div>
+                            <div class="casata-name">☀️ AVALON</div>
+                            <div class="casata-subtitle">Casata della Luce</div>
+                            <div class="casata-colors">Colori: Oro e Bianco</div>
+                        </div>
+                        <div class="casata-icon">⚔️</div>
+                    </div>
+                    
+                    <h4>Filosofia</h4>
+                    <p><strong>"La luce scaccia le tenebre. La giustizia protegge i deboli. Il sacrificio salva molti."</strong></p>
+                    
+                    <p>Avalon rappresenta luce, giustizia, protezione, ordine. Sono i paladini, i difensori, coloro che stanno tra l'oscurità e l'innocente. Credono in codici morali assoluti, anche quando difficili. Spesso leader naturali, carismatici, ispiratori.</p>
+                    
+                    <p><strong>Virtù:</strong> Coraggio, sacrificio, compassione, leadership</p>
+                    <p><strong>Difetti:</strong> Rigidità, senso colpa eccessivo, burnout emotivo</p>
+                    
+                    <h4>Poteri</h4>
+                    <p>Avalon canalizza energia dal <strong>Piano della Luce</strong> — dimensione di ordine e verità assoluta. I loro poteri includono:</p>
+                    <ul>
+                        <li><strong>Luce Sacra:</strong> Lame radianti, barriere luminose, esplosioni solari</li>
+                        <li><strong>Guarigione:</strong> Cura ferite, purifica veleni, rimuove maledizioni</li>
+                        <li><strong>Protezione:</strong> Scudi divini, aure defensive, resurrezione (alto livello)</li>
+                        <li><strong>Esorcismo:</strong> Bandire demoni, purificare corruzione, rompere possessioni</li>
+                    </ul>
+                    
+                    <p><strong>Costo:</strong> Poteri Avalon costano <strong>Stress</strong>. Canalizzare luce pura brucia psiche. A 10 Stress = burnout (conseguenze severe). Avalon sono vulnerabili esaurimento emotivo.</p>
+                    
+                    <h4>Archetipi Tipici</h4>
+                    <ul>
+                        <li><strong>Il Paladino:</strong> Guerriero virtuoso, combatte in prima linea</li>
+                        <li><strong>Il Guaritore:</strong> Medico/prete, salva vite, supporto</li>
+                        <li><strong>L'Esorcista:</strong> Specialista anti-demoni, purificatore</li>
+                        <li><strong>Il Comandante:</strong> Leader tattico, ispira gruppo</li>
+                    </ul>
+                    
+                    <h4>Storia Casata</h4>
+                    <p>Avalon è la più antica Casata registrata. Radici in tradizioni cavalleresche medievali, influenzata da cristianesimo MA non esclusivamente religiosa. Molti membri sono credenti (cristiani, musulmani, altro) MA Casata accoglie anche atei guidati da senso giustizia laico.</p>
+                    
+                    <p><strong>Momento Buio:</strong> Durante Grande Scisma (1503), fazione estremista Avalon tentò "purgare" Milano con luce, eliminare TUTTE creature ombre (anche innocue). Altri Custodi fermarono. Da allora, Avalon attenta a non diventare fanatici.</p>
+                </div>
+                
+                <div class="separator">⟡ ⟡ ⟡</div>
+                
+                <!-- UMBRA -->
+                <div id="cap3-umbra" class="casata-box">
+                    <div class="casata-header">
+                        <div>
+                            <div class="casata-name">🌑 UMBRA</div>
+                            <div class="casata-subtitle">Casata delle Ombre</div>
+                            <div class="casata-colors">Colori: Nero e Viola</div>
+                        </div>
+                        <div class="casata-icon">👤</div>
+                    </div>
+                    
+                    <h4>Filosofia</h4>
+                    <p><strong>"Le ombre nascondono verità. L'inganno protegge segreti. Il prezzo del potere è accettabile."</strong></p>
+                    
+                    <p>Umbra rappresenta ombre, segreti, pragmatismo, flessibilità morale. Sono spie, infiltratori, assassini quando necessario. Credono che fine giustifica mezzi — se mentire salva 100 vite, mentono. Spesso solitari, misteriosi, moralmente grigi.</p>
+                    
+                    <p><strong>Virtù:</strong> Astuzia, adattabilità, pragmatismo, lealtà (a pochi scelti)</p>
+                    <p><strong>Difetti:</strong> Paranoia, isolamento, corruzione crescente, cinismo</p>
+                    
+                    <h4>Poteri</h4>
+                    <p>Umbra attinge al <strong>Piano delle Ombre</strong> — dimensione parallela oscura, distorta. I loro poteri includono:</p>
+                    <ul>
+                        <li><strong>Furtività:</strong> Invisibilità, fondersi ombre, camminare muri</li>
+                        <li><strong>Inganno:</strong> Illusioni, cambio apparenza, manipolare percezioni</li>
+                        <li><strong>Controllo Ombre:</strong> Tentacoli oscuri, vincoli, armi d'ombra</li>
+                        <li><strong>Teleportazione:</strong> Viaggi istantanei attraverso ombre (alto livello)</li>
+                    </ul>
+                    
+                    <p><strong>Costo:</strong> Poteri Umbra danno <strong>Corruzione</strong> (0-5). Ogni uso contamina anima con essenza ombre. A 5 Corruzione = trasformazione irreversibile in creatura ombra (perdita PG). Umbra camminano filo rasoio costantemente.</p>
+                    
+                    <h4>Archetipi Tipici</h4>
+                    <ul>
+                        <li><strong>L'Infiltratore:</strong> Spia, maestro travestimenti, informazioni</li>
+                        <li><strong>L'Assassino:</strong> Killer silenzioso, elimina minacce</li>
+                        <li><strong>L'Illusionista:</strong> Manipolatore percezioni, inganna nemici</li>
+                        <li><strong>Il Ladro:</strong> Recupero artefatti, furto informazioni</li>
+                    </ul>
+                    
+                    <h4>Storia Casata</h4>
+                    <p>Umbra ha reputazione controversa. Alcuni li vedono come necessari (lavoro sporco deve essere fatto). Altri li temono (troppo vicini a ciò che combattono). Durante Grande Scisma, Umbra restò neutrale MA alcune sue fazioni flirtarono con idea liberare Ouroboros, credendo fosse "dio ombre" che li avrebbe ricompensati. Errore quasi fatale.</p>
+                    
+                    <p><strong>Regola Ferrea:</strong> Umbra NON usa Corruzione contro altri Custodi (tranne autodifesa assoluta). Rompere = espulsione automatica.</p>
+                </div>
+                
+                <div class="separator">⟡ ⟡ ⟡</div>
+                
+                <!-- IFE -->
+                <div id="cap3-ife" class="casata-box">
+                    <div class="casata-header">
+                        <div>
+                            <div class="casata-name">🌳 IFE</div>
+                            <div class="casata-subtitle">Casata della Vita</div>
+                            <div class="casata-colors">Colori: Verde e Marrone</div>
+                        </div>
+                        <div class="casata-icon">🌿</div>
+                    </div>
+                    
+                    <h4>Filosofia</h4>
+                    <p><strong>"La vita è sacra. La natura è equilibrio. La guarigione è dovere."</strong></p>
+                    
+                    <p>Ife rappresenta vita, natura, crescita, interconnessione. Sono guaritori, druidi urbani, protettori ecosistema (anche occulto). Credono in cicli naturali, equilibrio, rispetto per TUTTE forme vita (anche creature "malvagie" hanno ruolo). Spesso empatici, pazienti, saggi.</p>
+                    
+                    <p><strong>Virtù:</strong> Compassione, pazienza, empatia, connessione</p>
+                    <p><strong>Difetti:</strong> Ingenuità, esitazione uccidere, sovraccarico emotivo</p>
+                    
+                    <h4>Poteri</h4>
+                    <p>Ife canalizza energia dal <strong>Piano della Vita</strong> — dimensione di natura pura, ciclo eterno. I loro poteri includono:</p>
+                    <ul>
+                        <li><strong>Guarigione Avanzata:</strong> Cura massiva, rigenerazione, anti-veleni</li>
+                        <li><strong>Controllo Natura:</strong> Piante che obbediscono, animali alleati, terremoti locali</li>
+                        <li><strong>Metamorfosi:</strong> Trasformazioni animali, adattamenti fisici</li>
+                        <li><strong>Rinascita:</strong> Resurrezione (limitata), crescita accelerata</li>
+                    </ul>
+                    
+                    <p><strong>Costo:</strong> Poteri Ife costano <strong>Stress</strong> (come Avalon). Canalizzare vita è faticoso — trasferisci vitalità propria. Differenza: Ife accumula Stress più lentamente MA recupera anche più lentamente (natura non affretta).</p>
+                    
+                    <h4>Archetipi Tipici</h4>
+                    <ul>
+                        <li><strong>Il Guaritore:</strong> Medico naturale, salva vite costantemente</li>
+                        <li><strong>Il Druido Urbano:</strong> Protegge parchi, verde, animali città</li>
+                        <li><strong>Il Mutaforma:</strong> Combatte assumendo forma bestie</li>
+                        <li><strong>L'Empatico:</strong> Sente emozioni, media conflitti, counselor</li>
+                    </ul>
+                    
+                    <h4>Storia Casata</h4>
+                    <p>Ife ha radici in tradizioni africane (Yoruba, Ifa), MA si è espansa globalmente. Nome "Ife" viene da città sacra nigeriana. Casata arrivò Milano ~1600s via mercanti, si integrò. Ife è Casata più multiculturale — membri da ogni continente.</p>
+                    
+                    <p><strong>Principio Chiave:</strong> Ife NON è pacifista. Uccidono quando necessario MA solo dopo aver esaurito alternative. "Vita va protetta, anche se significa toglierla a chi minaccia innocenti."</p>
+                </div>
+                
+                <div class="separator">⟡ ⟡ ⟡</div>
+                
+                <!-- MICTLAN -->
+                <div id="cap3-mictlan" class="casata-box">
+                    <div class="casata-header">
+                        <div>
+                            <div class="casata-name">💀 MICTLAN</div>
+                            <div class="casata-subtitle">Casata della Morte</div>
+                            <div class="casata-colors">Colori: Nero e Grigio</div>
+                        </div>
+                        <div class="casata-icon">⚰️</div>
+                    </div>
+                    
+                    <h4>Filosofia</h4>
+                    <p><strong>"La morte è inevitabile. Gli spiriti hanno voce. Il confine va custodito."</strong></p>
+                    
+                    <p>Mictlan rappresenta morte, spiriti, transizione, confine. Sono psicopompi (guide anime), necromanti (MA non malvagi), guardiani soglia vita/morte. Credono morte non sia fine MA transizione naturale. Rispettano morti, parlano con spiriti, mantengono equilibrio tra mondi. Spesso stoici, filosofici, accettano mortalità.</p>
+                    
+                    <p><strong>Virtù:</strong> Saggezza, accettazione, rispetto, coraggio (confrontano morte quotidianamente)</p>
+                    <p><strong>Difetti:</strong> Distacco emotivo, ossessione morte, sacrificio eccessivo</p>
+                    
+                    <h4>Poteri</h4>
+                    <p>Mictlan attinge al <strong>Piano degli Spiriti</strong> — regno morti, ricordi, fine. I loro poteri includono:</p>
+                    <ul>
+                        <li><strong>Necromanzia:</strong> Rianimare morti (temporaneo), controllare zombie/scheletri</li>
+                        <li><strong>Comunicazione Spiriti:</strong> Parlare morti, vedere fantasmi, ottenere informazioni</li>
+                        <li><strong>Energia Vitale:</strong> Drenare vita nemici, trasferire ad alleati</li>
+                        <li><strong>Camminare tra Mondi:</strong> Visitare regno morti fisicamente (pericoloso)</li>
+                    </ul>
+                    
+                    <p><strong>Costo:</strong> Poteri Mictlan costano <strong>Punti Ferita</strong> (vita letterale). Ogni potere usato consuma salute. Nessun limite superiore (puoi usare finché hai PF) MA rischi morte reale. Mictlan accettano: potere morte richiede sacrificio vita.</p>
+                    
+                    <h4>Archetipi Tipici</h4>
+                    <ul>
+                        <li><strong>Il Necromante:</strong> Comanda morti, esercito non-morti</li>
+                        <li><strong>Il Medium:</strong> Parla spiriti, ottiene informazioni</li>
+                        <li><strong>Lo Psicopompo:</strong> Guida anime, aiuta transizione</li>
+                        <li><strong>Il Giudice:</strong> Determina chi merita morire, esecutore</li>
+                    </ul>
+                    
+                    <h4>Storia Casata</h4>
+                    <p>Mictlan prende nome da inferi aztechi (9 livelli regno morti). Casata ha radici mesoamericane MA si è globalizzata. Arrivò Milano ~1800s via immigrazione. Inizialmente temuta (necromanzia = male per molti) MA dimostrò valore (spiriti hanno informazioni cruciali, morti possono testimoniare).</p>
+                    
+                    <p><strong>Regola Sacra:</strong> Mictlan NON riporta morti permanentemente (resurrezione vera richiede L5 Avalon/Ife, Mictlan può solo rianimare cadavere). Rispettano ciclo naturale. "Morte va accettata, non combattuta."</p>
+                </div>
+            </section>
+            
+            <!-- CAPITOLO 4 -->
+            <section id="cap4">
+                <h2>Capitolo 4: Creare il Tuo Guardiano</h2>
+                
+                <p>Sei pronto a diventare Guardiano? Segui questi passi per creare il tuo personaggio.</p>
+                
+                <div class="step-box">
+                    <div class="step-number">PASSO 1: Concept</div>
+                    <p>Rispondi a queste domande:</p>
+                    <ul>
+                        <li><strong>Chi eri PRIMA di diventare Guardiano?</strong> (Studente? Poliziotto? Artista? Disoccupato?)</li>
+                        <li><strong>Come hai ottenuto l'Anello?</strong> (Momento disperazione? Caso? Eredità?)</li>
+                        <li><strong>Perché hai accettato?</strong> (Vendetta? Dovere? Curiosità? Nessuna scelta?)</li>
+                        <li><strong>Cosa ti definisce?</strong> (Una parola: Coraggioso? Cinico? Curioso? Spezzato?)</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <div class="step-number">PASSO 2: Scegli Casata</div>
+                    <p>Leggi descrizioni 4 Casate (Capitolo 3). Scegli quella che risuona con te. Considera:</p>
+                    <ul>
+                        <li><strong>Filosofia:</strong> Ti identifichi con valori Casata?</li>
+                        <li><strong>Poteri:</strong> Che tipo magia vuoi usare?</li>
+                        <li><strong>Costo:</strong> Sei ok pagare prezzo (Stress/Corruzione/PF)?</li>
+                        <li><strong>Archetipo:</strong> Che ruolo vuoi nel gruppo?</li>
+                    </ul>
+                    <p><strong>Nota:</strong> Ogni gruppo dovrebbe avere MIX Casate (complementari). Evita 4 Avalon O 4 Umbra — diversità è forza.</p>
+                </div>
+                
+                <div class="step-box">
+                    <div class="step-number">PASSO 3: Nome e Dettagli</div>
+                    <ul>
+                        <li><strong>Nome Completo:</strong> Italiano? Straniero? Soprannome?</li>
+                        <li><strong>Età:</strong> 18-60 (Guardiani possono essere ogni età)</li>
+                        <li><strong>Aspetto:</strong> 3-5 tratti distintivi (cicatrice? Tatuaggio? Stile?)</li>
+                        <li><strong>Vita Normale:</strong> Lavoro/studio attuale (devi mantenere copertura)</li>
+                        <li><strong>Quartiere:</strong> Dove vivi a Milano? (Parte V ha dettagli)</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <div class="step-number">PASSO 4: Caratteristiche</div>
+                    <p>Hai <strong>5 caratteristiche</strong>. Distribuisci questi valori: <strong>+2, +1, +1, 0, -1</strong></p>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Caratteristica</th>
+                                <th>Cosa Rappresenta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>FOR (Forza)</strong></td>
+                                <td>Potenza fisica, resistenza, muscoli</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CUO (Cuore)</strong></td>
+                                <td>Coraggio, istinto, riflessi, agilità</td>
+                            </tr>
+                            <tr>
+                                <td><strong>MEN (Mente)</strong></td>
+                                <td>Intelligenza, percezione, memoria, analisi</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CAR (Carisma)</strong></td>
+                                <td>Fascino, leadership, presenza, persuasione</td>
+                            </tr>
+                            <tr>
+                                <td><strong>FAT (Fato)</strong></td>
+                                <td>Fortuna, destino, connessione magica</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Consiglio:</strong> Metti +2 nella caratteristica che usi per poteri Casata:</p>
+                    <ul>
+                        <li>Avalon: +2 CAR (poteri +CAR)</li>
+                        <li>Umbra/Ife/Mictlan: +2 FAT (poteri +FAT)</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <div class="step-number">PASSO 5: Punti Ferita e Risorse</div>
+                    <p><strong>PF Iniziali:</strong> 20 + (FOR × 2)</p>
+                    <p>Esempio: FOR +1 → PF = 20 + 2 = 22</p>
+                    
+                    <p><strong>Stress:</strong> Inizi a 0 (max 10)</p>
+                    <p><strong>Corruzione:</strong> Inizi a 0 (max 5, solo Umbra)</p>
+                    <p><strong>Armatura:</strong> Inizi con 0 (acquisibile dopo)</p>
+                </div>
+                
+                <div class="step-box">
+                    <div class="step-number">PASSO 6: Poteri Iniziali</div>
+                    <p>Scegli <strong>3 poteri Livello 1</strong> dalla tua Casata (vedi Parte IV).</p>
+                    <p>Raccomandazione mix:</p>
+                    <ul>
+                        <li>1 potere <strong>offensivo</strong> (danno/controllo)</li>
+                        <li>1 potere <strong>difensivo/utility</strong> (protezione/movimento)</li>
+                        <li>1 potere <strong>signature</strong> (quello che definisce TUO stile)</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <div class="step-number">PASSO 7: Equipaggiamento Base</div>
+                    <p>Inizi con:</p>
+                    <ul>
+                        <li><strong>Anello Custodia</strong> (al dito, indistruttibile)</li>
+                        <li><strong>Smartphone</strong> (criptato, app Custodi)</li>
+                        <li><strong>Auricolare</strong> (comunicazione gruppo)</li>
+                        <li><strong>500€ contanti</strong></li>
+                        <li><strong>1 arma corpo-a-corpo</strong> (coltello, bastone, altro — scegli)</li>
+                        <li><strong>Abbigliamento civile</strong> + <strong>outfit operativo</strong> (nero, funzionale)</li>
+                    </ul>
+                    <p><strong>Opzionale:</strong> Se FOR +1 o superiore, puoi avere anche <strong>pistola</strong> (con licenza Custodi).</p>
+                </div>
+                
+                <div class="step-box">
+                    <div class="step-number">PASSO 8: Legami</div>
+                    <p>Scegli <strong>2 PNG</strong> con cui hai <strong>Legame</strong> livello 1.</p>
+                    <p>Possono essere:</p>
+                    <ul>
+                        <li>Familiari (genitore, fratello, partner)</li>
+                        <li>Amici (compagno università, collega, vicino)</li>
+                        <li>Altri Custodi (altro PG O PNG)</li>
+                        <li>Contatti utili (informatore, medico, hacker)</li>
+                    </ul>
+                    <p>Per ogni Legame, scrivi: <strong>Nome, relazione, perché importante</strong>.</p>
+                    <p><strong>Nota:</strong> Legami danno bonus meccanici MA possono rompersi (drama!). Vedi Parte II per dettagli.</p>
+                </div>
+                
+                <div class="step-box">
+                    <div class="step-number">PASSO 9: Tocchi Finali</div>
+                    <ul>
+                        <li><strong>Citazione:</strong> Una frase che cattura essenza PG</li>
+                        <li><strong>Paura:</strong> Cosa teme di più?</li>
+                        <li><strong>Desiderio:</strong> Cosa vuole ottenere?</li>
+                        <li><strong>Segreto:</strong> Cosa nasconde (anche ad altri Custodi)?</li>
+                    </ul>
+                    <p>Questi non hanno effetto meccanico MA guidano roleplay.</p>
+                </div>
+                
+                <div class="example-box">
+                    <h4>Esempio PG Completo: Marco Ferretti (Avalon)</h4>
+                    <p><strong>Concept:</strong> Ex-poliziotto che ha visto troppo. Anello lo scelse dopo sparatoria quasi-fatale contro cultisti. Accettò per proteggere altri da orrori che scoprì.</p>
+                    
+                    <p><strong>Dettagli:</strong></p>
+                    <ul>
+                        <li>Età: 35</li>
+                        <li>Aspetto: Cicatrice collo, capelli grigi prematuri, sempre porta distintivo ex-polizia</li>
+                        <li>Vita normale: Detective privato (copertura perfetta)</li>
+                        <li>Quartiere: Porta Venezia</li>
+                    </ul>
+                    
+                    <p><strong>Caratteristiche:</strong> FOR +1, CUO +1, MEN 0, CAR +2, FAT -1</p>
+                    <p><strong>PF:</strong> 20 + (1×2) = 22</p>
+                    
+                    <p><strong>Poteri L1:</strong></p>
+                    <ul>
+                        <li>Lama Radiante (offensivo)</li>
+                        <li>Scudo di Luce (difensivo)</li>
+                        <li>Presenza Intimidatoria (utility social)</li>
+                    </ul>
+                    
+                    <p><strong>Equipaggiamento:</strong> Anello Avalon, smartphone, auricolare, Glock 19, manganello, 500€, giacca kevlar leggera</p>
+                    
+                    <p><strong>Legami:</strong></p>
+                    <ul>
+                        <li>Sofia Conti (collega detective) — Legame 1 — Ex partner, unica che sa verità</li>
+                        <li>Padre Giovanni (prete) — Legame 1 — Confessore, guida spirituale</li>
+                    </ul>
+                    
+                    <p><strong>Citazione:</strong> "Ho giurato proteggere. Non importa da cosa."</p>
+                    <p><strong>Paura:</strong> Fallire di nuovo (persone morte per sua colpa)</p>
+                    <p><strong>Desiderio:</strong> Redentione, salvare abbastanza vite da bilanciare quelle perse</p>
+                    <p><strong>Segreto:</strong> Uccise cultista disarmato per vendetta (non autodifesa)</p>
+                </div>
+            </section>
+            
+            <!-- CAPITOLO 5 -->
+            <section id="cap5">
+                <h2>Capitolo 5: Session Zero</h2>
+                
+                <p>Prima di giocare prima sessione vera, dedicate 2-3 ore a <strong>Session Zero</strong> — sessione preparazione dove stabilite tono, aspettative, e connessioni gruppo.</p>
+                
+                <h3>Obiettivi Session Zero</h3>
+                
+                <div class="info-box">
+                    <h4>1. Stabilire Contratto Sociale</h4>
+                    <p>Discutete apertamente:</p>
+                    <ul>
+                        <li><strong>Tono:</strong> Quanto dark? Realistico O cinematico? Humor ok?</li>
+                        <li><strong>Violenza:</strong> Descrizioni grafiche O fade-to-black?</li>
+                        <li><strong>Temi sensibili:</strong> Cosa è assolutamente OFF-LIMITS? (trauma, violenza sessuale, altro)</li>
+                        <li><strong>Commitment:</strong> Quanto spesso giocate? Quanto durano sessioni?</li>
+                        <li><strong>Safety Tools:</strong> X-Card? Lines & Veils? (Vedi sotto)</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <h4>2. Creare PG Insieme</h4>
+                    <p>Non create PG separatamente. Fatelo a Session Zero così potete:</p>
+                    <ul>
+                        <li>Assicurare MIX Casate (non tutti stessa)</li>
+                        <li>Creare Legami tra PG (fondamentale!)</li>
+                        <li>Allineare backstories (evitare contraddizioni)</li>
+                        <li>Bilanciare ruoli (tank, healer, DPS, support)</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <h4>3. Stabilire Connessioni Gruppo</h4>
+                    <p>Rispondete insieme:</p>
+                    <ul>
+                        <li><strong>Come vi conoscete?</strong> (Reclutati insieme? Squadra esistente? Appena formata?)</li>
+                        <li><strong>Quanto tempo lavorate insieme?</strong> (Giorni? Mesi? Anni?)</li>
+                        <li><strong>Fiducia reciproca?</strong> (Vi fidate ciecamente O ancora cauti?)</li>
+                        <li><strong>Dinamiche:</strong> Chi è leader? Chi scettico? Chi ottimista?</li>
+                    </ul>
+                    <p><strong>Raccomandazione:</strong> Ogni PG crea 1 Legame verso altro PG. Questo garantisce coesione gruppo.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>4. Creare Scenario Iniziale</h4>
+                    <p>Custode presenta:</p>
+                    <ul>
+                        <li><strong>Prima missione:</strong> Descrizione breve (non spoiler!)</li>
+                        <li><strong>Contesto:</strong> Perché Custodi vi assegnano questa?</li>
+                        <li><strong>Stakes:</strong> Cosa succede se fallite?</li>
+                        <li><strong>Hook personali:</strong> Come missione coinvolge backstory PG?</li>
+                    </ul>
+                </div>
+                
+                <h3>Safety Tools (IMPORTANTE)</h3>
+                
+                <p>Mythic Rings può toccare temi dark (morte, violenza, horror). Usate safety tools per garantire tutti si divertono senza disagio.</p>
+                
+                <div class="info-box">
+                    <h4>🛑 X-Card</h4>
+                    <p>Metti carta (O post-it) con X scritta al centro tavolo.</p>
+                    <p><strong>Chiunque, in qualsiasi momento, può toccare X-Card.</strong> Questo significa: "Mi sento a disagio, cambiamo scena ORA."</p>
+                    <p><strong>Regole:</strong></p>
+                    <ul>
+                        <li>Nessuno chiede perché</li>
+                        <li>Nessuno giudica</li>
+                        <li>Custode cambia scena immediatamente ("Ok, saltiamo avanti...")</li>
+                        <li>Può essere usata infinite volte</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <h4>🚦 Lines
