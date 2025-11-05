@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mythic Rings v2.1 - GDR Urban Fantasy ambientato a Milano. Powered by the Apocalypse.">
+    <meta name="keywords" content="GDR, gioco di ruolo, Milano, urban fantasy, PbtA, Mythic Rings">
+    <title>Mythic Rings v2.1 - Il Manuale Completo</title>
+    <style>
+        /* ═══════════════════════════════════════════
+           MYTHIC RINGS - INDEX MASTER
+           Stile Homepage Elegante
+        ═══════════════════════════════════════════ */
+        
+        :root {
+            --primary-dark: #1a1a2e;
+            --secondary-dark: #16213e;
+            --accent-gold: #f39c12;
+            --accent-gold-dark: #e67e22;
+            --text-light: #ecf0f1;
+            --text-muted: #95a5a6;
+            --border-gold: rgba(243, 156, 18, 0.3);
+            --shadow-glow: 0 0 20px rgba(243, 156, 18, 0.3);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Palatino', 'Times New Roman', serif;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 50%, #0f3460 100%);
+            background-attachment: fixed;
+            color: var(--text-light);
+            line-height: 1.8;
+            overflow-x: hidden;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(243, 156, 18, 0.1), transparent 70%);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+        
+        .logo-ring {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 40px;
+            border: 8px solid var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-glow), inset 0 0 40px rgba(243, 156, 18, 0.3);
+            animation: pulse 3s ease-in-out infinite;
+            background: radial-gradient(circle, rgba(243, 156, 18, 0.2), transparent);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: var(--shadow-glow); }
+            50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(243, 156, 18, 0.6); }
+        }
+        
+        .logo-ring span {
+            font-size: 72px;
+            color: var(--accent-gold);
+        }
+        
+        h1 {
+            font-size: 72px;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(243, 156, 18, 0.5);
+            letter-spacing: 4px;
+        }
+        
+        .subtitle {
+            font-size: 28px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        
+        .version {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 50px;
+            font-style: italic;
+        }
+        
+        .hero-description {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button {
+            padding: 18px 45px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-primary {
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: white;
+            box-shadow: 0 6px 25px rgba(243, 156, 18, 0.4);
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 40px rgba(243, 156, 18, 0.6);
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: var(--accent-gold);
+            border: 3px solid var(--accent-gold);
+        }
+        
+        .cta-secondary:hover {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            transform: translateY(-5px);
+        }
+        
+        /* STATS SECTION */
+        .stats-section {
+            padding: 80px 30px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.05), rgba(243, 156, 18, 0.1));
+            border: 2px solid var(--border-gold);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .stat-number {
+            font-size: 56px;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 18px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        /* NAVIGATION SECTION */
+        .navigation-section {
+            padding: 100px 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 48px;
+            color: var(--accent-gold);
+            margin-bottom: 60px;
+            text-shadow: 0 0 20px rgba(243, 156, 18, 0.4);
+        }
+        
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
+        }
+        
+        .nav-card {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.05), rgba(243, 156, 18, 0.1));
+            border: 2px solid var(--border-gold);
+            border-radius: 15px;
+            padding: 35px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--accent-gold);
+        }
+        
+        .nav-card-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .nav-card-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+        
+        .nav-card-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+        
+        .nav-card-chapters {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        /* FEATURES SECTION */
+        .features-section {
+            padding: 100px 30px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-box {
+            padding: 35px;
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.05), rgba(243, 156, 18, 0.1));
+            border: 2px solid var(--border-gold);
+            border-radius: 15px;
+        }
+        
+        .feature-icon {
+            font-size: 56px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .feature-title {
+            font-size: 24px;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .feature-description {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-light);
+        }
+        
+        /* FOOTER */
+        .footer {
+            padding: 60px 30px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.4);
+            border-top: 2px solid var(--border-gold);
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-size: 32px;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+        
+        .footer-text {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .footer-link {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: var(--accent-gold-dark);
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+        }
+        
+        .copyright {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-gold);
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 48px;
+            }
+            
+            .subtitle {
+                font-size: 22px;
+            }
+            
+            .hero-description {
+                font-size: 18px;
+            }
+            
+            .logo-ring {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .logo-ring span {
+                font-size: 56px;
+            }
+            
+            .nav-grid, .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="logo-ring">
+                <span>⟡</span>
+            </div>
+            
+            <h1>MYTHIC RINGS</h1>
+            <p class="subtitle">Guardiani di Milano</p>
+            <p class="version">Versione 2.1 - Manuale Completo</p>
+            
+            <p class="hero-description">
+                Un gioco di ruolo urban fantasy ambientato nella Milano contemporanea, dove antiche profezie si intrecciano con il presente e quattro Casate di Guardiani proteggono la città da minacce occulte.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="parte1.html" class="cta-button cta-primary">📖 Inizia a Leggere</a>
+                <a href="parte8.html#quickref" class="cta-button cta-secondary">⚡ Quick Start</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- STATS SECTION -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-box">
+                <div class="stat-number">135K+</div>
+                <div class="stat-label">Parole</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">60</div>
+                <div class="stat-label">Poteri Magici</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Creature</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">25</div>
+                <div class="stat-label">Artefatti</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">10</div>
+                <div class="stat-label">Tabelle d20</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Completo</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- NAVIGATION SECTION -->
+    <section class="navigation-section">
+        <h2 class="section-title">Esplora il Manuale</h2>
+        
+        <div class="nav-grid">
+            <!-- Parte I -->
+            <a href="parte1.html" class="nav-card">
+                <span class="nav-card-icon">🌆</span>
+                <h3 class="nav-card-title">Parte I: Il Mondo</h3>
+                <p class="nav-card-description">
+                    Scopri l'ambientazione di Mythic Rings: le quattro Casate mistiche, gli Anelli Custodia, e come creare il tuo Guardiano.
+                </p>
+                <p class="nav-card-chapters">Cap 1-5: Ambientazione, Casate, Creazione PG</p>
+            </a>
+            
+            <!-- Parte II -->
+            <a href="parte2.html" class="nav-card">
+                <span class="nav-card-icon">⚙️</span>
+                <h3 class="nav-card-title">Parte II: Regole Base</h3>
+                <p class="nav-card-description">
+                    Il cuore meccanico del gioco: caratteristiche, tiri dado, Stress, Corruzione, Legami, e gestione Punti Ferita.
+                </p>
+                <p class="nav-card-chapters">Cap 6-11: Sistema 2d6, Caratteristiche, Risorse</p>
+            </a>
+            
+            <!-- Parte III -->
+            <a href="parte3.html" class="nav-card">
+                <span class="nav-card-icon">⚔️</span>
+                <h3 class="nav-card-title">Parte III: Combattimento</h3>
+                <p class="nav-card-description">
+                    Tutto sul combattimento: iniziativa, attacchi, difesa, danno, Armatura, e la temuta mossa Ultimo Respiro.
+                </p>
+                <p class="nav-card-chapters">Cap 12-17: Meccaniche Combattimento, Morte</p>
+            </a>
+            
+            <!-- Parte IV -->
+            <a href="parte4.html" class="nav-card">
+                <span class="nav-card-icon">✨</span>
+                <h3 class="nav-card-title">Parte IV: Mosse e Poteri</h3>
+                <p class="nav-card-description">
+                    Le 12 Mosse Base e tutti i 60 Poteri delle quattro Casate (Avalon, Umbra, Ife, Mictlan) dettagliati livello per livello.
+                </p>
+                <p class="nav-card-chapters">Cap 18-26: Mosse + 4 Casate Complete</p>
+            </a>
+            
+            <!-- Parte V -->
+            <a href="parte5.html" class="nav-card">
+                <span class="nav-card-icon">🏙️</span>
+                <h3 class="nav-card-title">Parte V: Milano Mitica</h3>
+                <p class="nav-card-description">
+                    La geografia occulta di Milano: Linee Ley, Nexus, quartieri del potere, PNG chiave, minacce ricorrenti, e fazioni segrete.
+                </p>
+                <p class="nav-card-chapters">Cap 27-31: Ambientazione, Location, PNG</p>
+            </a>
+            
+            <!-- Parte VI -->
+            <a href="parte6.html" class="nav-card">
+                <span class="nav-card-icon">🎯</span>
+                <h3 class="nav-card-title">Parte VI: Gioco Avanzato</h3>
+                <p class="nav-card-description">
+                    Per Custodi esperti: Downtime, avanzamento PG, creazione campagne, Session Zero, e consigli per masterare.
+                </p>
+                <p class="nav-card-chapters">Cap 32-36: Tools Master, Campagne</p>
+            </a>
+            
+            <!-- Parte VII -->
+            <a href="parte7.html" class="nav-card">
+                <span class="nav-card-icon">👹</span>
+                <h3 class="nav-card-title">Parte VII: Bestiario & Tesori</h3>
+                <p class="nav-card-description">
+                    15 creature dettagliate (da LS 1 a 12), 25 artefatti magici (Comune→Leggendario), e 3 avventure one-shot complete.
+                </p>
+                <p class="nav-card-chapters">Creature, Artefatti, Avventure Pronte</p>
+            </a>
+            
+            <!-- Parte VIII -->
+            <a href="parte8.html" class="nav-card">
+                <span class="nav-card-icon">📚</span>
+                <h3 class="nav-card-title">Parte VIII: Appendici</h3>
+                <p class="nav-card-description">
+                    Glossario completo, Quick Reference stampabili, FAQ, indice alfabetico, conversioni altri sistemi, credits e licenza.
+                </p>
+                <p class="nav-card-chapters">Riferimenti Rapidi, FAQ, Conversioni</p>
+            </a>
+            
+            <!-- Front Esempio -->
+            <a href="front-esempio.html" class="nav-card">
+                <span class="nav-card-icon">🐍</span>
+                <h3 class="nav-card-title">Front Esempio</h3>
+                <p class="nav-card-description">
+                    Esempio completo Front campagna: "Risveglio di Ouroboros" passo dopo passo, con doom clock 0-12, cast PNG, e cronologia 20 sessioni.
+                </p>
+                <p class="nav-card-chapters">Material Master Avanzato</p>
+            </a>
+            
+            <!-- Cosmologia -->
+            <a href="cosmologia.html" class="nav-card">
+                <span class="nav-card-icon">🌌</span>
+                <h3 class="nav-card-title">Cosmologia & Storia</h3>
+                <p class="nav-card-description">
+                    I Sei Piani dell'Esistenza dettagliati, cronologia completa Anelli Custodia, verità nascoste, e segreti cosmici per Custode.
+                </p>
+                <p class="nav-card-chapters">Lore Profondo (Solo Custode)</p>
+            </a>
+            
+            <!-- Schede -->
+            <a href="schede-stampabili.html" class="nav-card">
+                <span class="nav-card-icon">📄</span>
+                <h3 class="nav-card-title">Schede Stampabili</h3>
+                <p class="nav-card-description">
+                    Scheda personaggio completa, Quick Reference giocatori, e materiali pronti per stampa. File PDF-friendly.
+                </p>
+                <p class="nav-card-chapters">Materiali Tavolo</p>
+            </a>
+        </div>
+    </section>
+    
+    <!-- FEATURES SECTION -->
+    <section class="features-section">
+        <h2 class="section-title">Caratteristiche Principali</h2>
+        
+        <div class="features-grid">
+            <div class="feature-box">
+                <span class="feature-icon">🎲</span>
+                <h3 class="feature-title">Powered by the Apocalypse</h3>
+                <p class="feature-description">
+                    Sistema elegante 2d6: tiri rapidi, narrativa prima delle meccaniche, conversazione fluida tra giocatori e Custode.
+                </p>
+            </div>
+            
+            <div class="feature-box">
+                <span class="feature-icon">🏛️</span>
+                <h3 class="feature-title">Quattro Casate Uniche</h3>
+                <p class="feature-description">
+                    Avalon (luce), Umbra (ombre), Ife (vita), Mictlan (morte). Ogni Casata ha 15 poteri distintivi e filosofia propria.
+                </p>
+            </div>
+            
+            <div class="feature-box">
+                <span class="feature-icon">🌆</span>
+                <h3 class="feature-title">Milano Contemporanea</h3>
+                <p class="feature-description">
+                    Ambientazione urban fantasy nella Milano reale, con geografia occulta dettagliata: Linee Ley, Nexus, quartieri magici.
+                </p>
+            </div>
+            
+            <div class="feature-box">
+                <span class="feature-icon">⚡</span>
+                <h3 class="feature-title">Pronto all'Uso</h3>
+                <p class="feature-description">
+                    3 avventure one-shot complete, 15 creature bilanciate, 25 artefatti, Quick Reference — inizia a giocare subito.
+                </p>
+            </div>
+            
+            <div class="feature-box">
+                <span class="feature-icon">💔</span>
+                <h3 class="feature-title">Scelte Morali</h3>
+                <p class="feature-description">
+                    Sistema Stress/Corruzione/PF crea tensione. Poteri hanno costo. Sacrificio è tema centrale. Morte è possibile.
+                </p>
+            </div>
+            
+            <div class="feature-box">
+                <span class="feature-icon">🤝</span>
+                <h3 class="feature-title">Legami Emotivi</h3>
+                <p class="feature-description">
+                    Sistema Legami meccanico: relazioni con PNG danno bonus MA possono rompersi. Drama personale integrato.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">⟡ MYTHIC RINGS v2.1 ⟡</div>
+            
+            <p class="footer-text">
+                Un gioco di ruolo completo per vivere storie urban fantasy nella Milano contemporanea. 
+    ema Powered by the Apocalypse. Completamente gratuito e open source.
+            </p>
+            
+            <div class="footer-links">
+                <a href="parte1.html" class="footer-link">Inizia</a>
+                <a href="parte8.html#quickref" class="footer-link">Quick Start</a>
+                <a href="parte8.html#faq" class="footer-link">FAQ</a>
+                <a href="parte8.html#credits" class="footer-link">Credits</a>
+                <a href="parte8.html#glossario" class="footer-link">Glossario</a>
+            </div>
+            
+            <div class="copyright">
+                <p>
+                    © 2025 Riccardo / <strong>ilgiocointavolo.it</strong><br>
+                    Licenza Creative Commons BY-NC-SA 4.0<br>
+                    Powered by the Apocalypse framework by Meguey & Vincent Baker
+                </p>
+                <p style="margin-top: 20px; font-size: 16px; color: var(--accent-gold);">
+                    <strong>Benvenuto, Guardiano. Milano ti aspetta.</strong>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
