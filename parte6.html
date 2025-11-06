@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythic Rings v2.1 - Parte VI: Guida Custode</title>
+    <style>
+        /* [STESSO CSS parte5] */
+        :root {
+            --primary-dark: #1a1a2e;
+            --secondary-dark: #16213e;
+            --accent-gold: #f39c12;
+            --accent-gold-dark: #e67e22;
+            --text-light: #ecf0f1;
+            --border-gold: rgba(243, 156, 18, 0.3);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, var(--primary-dark), var(--secondary-dark), #0f3460);
+            background-attachment: fixed;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .page-wrapper { display: flex; min-height: 100vh; }
+        
+        .sidebar {
+            width: 300px;
+            background: linear-gradient(180deg, rgba(26, 26, 46, 0.95), rgba(22, 33, 62, 0.95));
+            position: fixed;
+            height: 100vh;
+            padding: 25px 18px;
+            border-right: 2px solid var(--border-gold);
+        }
+        
+        .sidebar-logo { font-size: 24px; font-weight: bold; color: var(--accent-gold); text-align: center; }
+        .menu-items { list-style: none; margin-top: 30px; }
+        .menu-items a {
+            color: var(--text-light);
+            text-decoration: none;
+            display: block;
+            padding: 7px 10px;
+            border-radius: 6px;
+        }
+        .menu-items a:hover { background: rgba(243, 156, 18, 0.1); color: var(--accent-gold); }
+        
+        .main-content { margin-left: 300px; padding: 50px 70px; max-width: 1400px; }
+        
+        h1 {
+            font-size: 46px;
+            color: var(--accent-gold);
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 18px;
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            font-size: 34px;
+            color: var(--accent-gold);
+            margin-top: 55px;
+            padding-left: 18px;
+            border-left: 5px solid var(--accent-gold);
+        }
+        
+        h3 { font-size: 26px; color: var(--accent-gold-dark); margin-top: 30px; }
+        p { margin-bottom: 16px; line-height: 1.9; }
+        strong { color: var(--accent-gold); }
+        
+        ul { margin-left: 32px; margin-bottom: 18px; }
+        li { margin-bottom: 10px; }
+        
+        .info-box {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.05), rgba(243, 156, 18, 0.1));
+            border: 2px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+        }
+        
+        .info-box h3 { margin-top: 0; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 28px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        table thead { background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark)); color: var(--primary-dark); }
+        table th { padding: 16px; text-align: left; font-weight: bold; }
+        table td { padding: 14px 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        a { color: #3498db; text-decoration: none; }
+        a:hover { color: var(--accent-gold); }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        
+        .nav-button:hover { transform: translateY(-3px); }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-logo">⟡ MYTHIC RINGS ⟡</div>
+            <ul class="menu-items">
+                <li><a href="index.html">🏠 Homepage</a></li>
+                <li><a href="parte5.html">← Parte V</a></li>
+                <li><a href="parte7.html">Parte VII →</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <h1>Parte VI: Guida per il Custode</h1>
+            
+            <h2>Capitolo 27: Principi del Custode</h2>
+            
+            <div class="info-box">
+                <h3>🎭 I Tuoi Principi Fondamentali</h3>
+                <ul>
+                    <li><strong>Descrivi un mondo vivo:</strong> Milano esiste anche quando PG non guardano. Eventi procedono indipendenti.</li>
+                    <li><strong>Gioca per scoprire:</strong> Non pre-plotta tutto. Improvvisa risposte oneste.</li>
+                    <li><strong>Sii fan dei PG:</strong> Tifi per loro, non contro. Vuoi vederli vincere (MA attraverso sfide).</li>
+                    <li><strong>Fai domande oneste:</strong> "Cosa fai?" "Come reagisci?" Non retoriche.</li>
+                    <li><strong>Usa nomi:</strong> PNG hanno nomi sempre, anche guardia random.</li>
+                    <li><strong>Fallimenti = opportunità:</strong> 6- non è "nulla succede". È "succede qualcosa DIVERSO".</li>
+                </ul>
+            </div>
+            
+            <h2>Capitolo 28: Le Tue Mosse</h2>
+            
+            <p><strong>Quando fare mossa:</strong> Sempre quando PG ti guarda (tira 6-, esita, fa domanda).</p>
+            
+            <h3>Mosse Custode (Lista)</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mossa</th>
+                        <th>Quando Usarla</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Infliggi danno</strong></td>
+                        <td>Diretto (attacco colpisce) O indiretto (trappola, ambiente)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Metti in pericolo</strong></td>
+                        <td>Minaccia incombente (bomba tick, nemico arriva, struttura crolla)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Consuma risorse</strong></td>
+                        <td>Munizioni finite, PF calano, Stress sale, tempo scade</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Offri scelta difficile</strong></td>
+                        <td>Dilemma morale, no soluzione perfetta (salva A O B)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rivela verità scomoda</strong></td>
+                        <td>Informazione cambia tutto (alleato tradisce, missione bugia)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Introduci minaccia</strong></td>
+                        <td>Nemico nuovo appare, complicazione emerge</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Separa gruppo</strong></td>
+                        <td>PG divisi (crollo muro, teletrasporto, inseguimento)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cattura qualcuno</strong></td>
+                        <td>PG O PNG importante preso ostaggio</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Avanza Front</strong></td>
+                        <td>Doom Clock progredisce (piano nemico avanza step)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Mosse Soft vs Hard</h3>
+            
+            <div class="info-box">
+                <h4>Mossa Soft (Minaccia)</h4>
+                <p>"Vampiro ringhia, artigli alzati. Cosa fai?"</p>
+                <p><em>PG può reagire prima conseguenze.</em></p>
+            </div>
+            
+            <div class="info-box">
+                <h4>Mossa Hard (Conseguenza)</h4>
+                <p>"Vampiro ti afferra, artigli affondano. Subisci 2d6 danno."</p>
+                <p><em>Conseguenza immediata, PG subisce.</em></p>
+            </div>
+            
+            <p><strong>Quando Hard:</strong> Sempre su 6-. Quando PG ignora minaccia. Quando fiction richiede (bomba esplode).</p>
+            
+            <h2>Capitolo 29: Creare Sessione</h2>
+            
+            <h3>Struttura Standard (3-4 ore)</h3>
+            
+            <ol>
+                <li><strong>Recap (5 min):</strong> Riassumi sessione scorsa, stabilisci continuità.</li>
+                <li><strong>Hook (10 min):</strong> Presenta missione/problema. Custodi chiamano, O evento spontaneo.</li>
+                <li><strong>Investigazione (45 min):</strong> PG raccolgono indizi, parlano PNG, esplorano.</li>
+                <li><strong>Complicazione (30 min):</strong> Piano cambia, rivelazione, O scontro minore.</li>
+                <li><strong>Climax (60 min):</strong> Confronto finale, boss fight, O risoluzione tensione.</li>
+                <li><strong>Risoluzione (15 min):</strong> Conseguenze, downtime veloce, XP, cliffhanger prossima.</li>
+            </ol>
+            
+            <h3>Regola dei 3 Indizi</h3>
+            
+            <p><strong>Mai bloccare progressione su 1 tiro.</strong> Se serve info X per avanzare, offri 3+ modi ottenerla:</p>
+            <ul>
+                <li>Indagare scena crimine</li>
+                <li>Interrogare testimone</li>
+                <li>Consultare archivi Custodi</li>
+                <li>Parlare con spirito morto (Mictlan)</li>
+            </ul>
+            
+            <p>Se PG falliscono tutti = dai info comunque MA con costo (tempo perso, attenti attirati, info parziale).</p>
+            
+            <h2>Capitolo 30: Bilanciare Combattimento</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Difficoltà</th>
+                        <th>Setup</th>
+                        <th>LS Totale</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Facile</strong></td>
+                        <td>3-4 nemici deboli (LS 1-2)</td>
+                        <td>LS totale = livello gruppo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medio</strong></td>
+                        <td>5-6 nemici misti O 1 forte</td>
+                        <td>LS totale = livello gruppo +2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Difficile</strong></td>
+                        <td>Boss (LS livello+2) + 2-3 minion</td>
+                        <td>LS totale = livello gruppo +4</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mortale</strong></td>
+                        <td>Boss (LS livello+4) + rinforzi</td>
+                        <td>LS totale = livello gruppo +6</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><strong>Esempio:</strong> Gruppo livello 3 (4 PG). Combattimento Difficile = Boss LS 5 + 3 cultisti LS 2.</p>
+            
+            <h2>Capitolo 31: XP e Avanzamento</h2>
+            
+            <h3>Fine Sessione XP</h3>
+            
+            <p><strong>Ogni giocatore risponde (1 XP per SÌ):</strong></p>
+            <ol>
+                <li>Hai affrontato pericolo significativo?</li>
+                <li>Hai imparato qualcosa nuovo (mondo O te stesso)?</li>
+                <li>Hai risolto problema importante?</li>
+                <li>Hai sviluppato/sfidato Legame?</li>
+                <li>Hai agito secondo principi Casata (ANCHE se costoso)?</li>
+            </ol>
+            
+            <p><strong>Bonus Custode (+1 XP):</strong> Se PG ha fatto qualcosa eccezionale (eroismo, creatività, roleplay profondo).</p>
+            
+            <p><strong>Tipico:</strong> 2-4 XP per sessione. 5 XP = level up.</p>
+            
+            <h3>Level Up</h3>
+            
+            <p><strong>A 5 XP, PG sceglie 1:</strong></p>
+            <ul>
+                <li>+1 Caratteristica (max +3)</li>
+                <li>Nuovo Potere Casata (costo 5 XP)</li>
+                <li>+5 PF permanenti</li>
+                <li>Nuovo Legame livello 1</li>
+                <li>Talento speciale (custom, approvazione Custode)</li>
+            </ul>
+            
+            <h2>Capitolo 32: Safety Tools</h2>
+            
+            <div class="info-box">
+                <h3>🛡️ X-Card</h3>
+                <p><strong>Chiunque</strong> può toccare carta X (fisica O virtuale) per skip scena/argomento. <strong>No domande, no giudizio.</strong> Salta immediatamente.</p>
+            </div>
+            
+            <div class="info-box">
+                <h3>📋 Lines & Veils</h3>
+                <p><strong>Lines:</strong> Content assolutamente NO (mai presente).</p>
+                <p><strong>Veils:</strong> Content ok off-screen solo (accade MA non descritto).</p>
+                <p><strong>Session Zero:</strong> Gruppo discute lines/veils. Esempi comuni lines: abuso minori, violenza sessuale, self-harm grafico.</p>
+            </div>
+            
+            <hr style="margin: 60px 0; border: none; height: 2px; background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);">
+            
+            <div class="info-box" style="text-align: center;">
+                <h3>✅ Parte VI Completa</h3>
+                <p>Fondamentali Custode coperti. Resto = esperienza!</p>
+                <p style="margin-top: 20px; color: var(--accent-gold);"><strong>Prossimo:</strong> Parte VII (Bestiari & One-Shots)</p>
+            </div>
+            
+            <a href="parte5.html" class="nav-button">← Parte V</a>
+            <a href="parte7.html" class="nav-button" style="margin-left: 20px;">Parte VII: Bestiari →</a>
+        </main>
+    </div>
+</body>
+</html>
