@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mythic Rings - Parte VIII: Appendici, Glossario, Quick Reference, FAQ">
+    <title>Mythic Rings v2.1 - Parte VIII: Appendici</title>
+    <style>
+        /* [STESSO CSS BASE] */
+        :root {
+            --primary-dark: #1a1a2e;
+            --secondary-dark: #16213e;
+            --accent-gold: #f39c12;
+            --accent-gold-dark: #e67e22;
+            --text-light: #ecf0f1;
+            --text-muted: #95a5a6;
+            --border-gold: rgba(243, 156, 18, 0.3);
+            --shadow-glow: 0 0 20px rgba(243, 156, 18, 0.3);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Palatino', 'Times New Roman', serif;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 50%, #0f3460 100%);
+            background-attachment: fixed;
+            color: var(--text-light);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        
+        .page-wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* SIDEBAR */
+        .sidebar {
+            width: 300px;
+            background: linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, rgba(22, 33, 62, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            border-right: 2px solid var(--border-gold);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 25px 18px;
+            z-index: 1000;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .sidebar::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb {
+            background: var(--accent-gold);
+            border-radius: 4px;
+        }
+        
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-gold);
+        }
+        
+        .sidebar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+            letter-spacing: 1px;
+        }
+        
+        .sidebar-version {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        .menu-section {
+            margin-bottom: 25px;
+        }
+        
+        .menu-title {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            padding-left: 8px;
+            border-left: 3px solid var(--accent-gold);
+        }
+        
+        .menu-items {
+            list-style: none;
+        }
+        
+        .menu-items li {
+            margin-bottom: 5px;
+        }
+        
+        .menu-items a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 13px;
+            display: block;
+            padding: 7px 10px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .menu-items a:hover {
+            background: rgba(243, 156, 18, 0.1);
+            border-left-color: var(--accent-gold);
+            padding-left: 15px;
+            color: var(--accent-gold);
+        }
+        
+        .menu-items a.active {
+            background: rgba(243, 156, 18, 0.2);
+            border-left-color: var(--accent-gold);
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        /* CONTENUTO */
+        .main-content {
+            margin-left: 300px;
+            flex: 1;
+            padding: 50px 70px;
+            max-width: 1400px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(5px);
+            min-height: 100vh;
+        }
+        
+        /* TIPOGRAFIA */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Palatino', 'Georgia', serif;
+            color: var(--accent-gold);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 46px;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 18px;
+            margin-bottom: 40px;
+            text-shadow: 0 0 20px rgba(243, 156, 18, 0.4);
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            font-size: 34px;
+            margin-top: 55px;
+            padding-left: 18px;
+            border-left: 5px solid var(--accent-gold);
+        }
+        
+        h3 {
+            font-size: 26px;
+            color: var(--accent-gold-dark);
+        }
+        
+        h4 {
+            font-size: 20px;
+            color: var(--text-light);
+        }
+        
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            line-height: 1.9;
+            font-size: 16px;
+        }
+        
+        strong {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        em {
+            font-style: italic;
+            color: var(--accent-gold-dark);
+        }
+        
+        ul, ol {
+            margin-left: 32px;
+            margin-bottom: 18px;
+        }
+        
+        ul li, ol li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        ul li::marker {
+            color: var(--accent-gold);
+        }
+        
+        ol li::marker {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        /* GLOSSARY TERM */
+        .glossary-term {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.05), rgba(243, 156, 18, 0.1));
+            border-left: 4px solid var(--accent-gold);
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        
+        .glossary-term strong {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 8px;
+            color: var(--accent-gold);
+        }
+        
+        /* QUICK REFERENCE BOX */
+        .quick-ref-box {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.08), rgba(41, 128, 185, 0.12));
+            border: 2px solid rgba(52, 152, 219, 0.4);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+            page-break-inside: avoid;
+        }
+        
+        .quick-ref-box h4 {
+            color: #3498db;
+            margin-top: 0;
+            font-size: 18px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+        
+        .quick-ref-box ul {
+            margin-left: 20px;
+        }
+        
+        .quick-ref-box li {
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 3px solid var(--accent-gold);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .faq-question {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin-bottom: 12px;
+        }
+        
+        .faq-answer {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* INFO BOX */
+        .info-box {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.05), rgba(243, 156, 18, 0.1));
+            border: 2px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .info-box h4 {
+            margin-top: 0;
+            color: var(--accent-gold);
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+        
+        /* TABELLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 28px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        table thead {
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: var(--primary-dark);
+        }
+        
+        table th {
+            padding: 16px;
+            text-align: left;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 13px;
+        }
+        
+        table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        table tbody tr {
+            transition: background 0.3s ease;
+        }
+        
+        table tbody tr:hover {
+            background: rgba(243, 156, 18, 0.1);
+        }
+        
+        table tbody tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        
+        /* PRINTABLE */
+        .printable-sheet {
+            background: white;
+            color: #000;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        @media print {
+            .sidebar, .page-navigation {
+                display: none;
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .printable-sheet {
+                page-break-after: always;
+            }
+        }
+        
+        /* NAVIGAZIONE */
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+        
+        a:hover {
+            color: var(--accent-gold);
+            border-bottom-color: var(--accent-gold);
+        }
+        
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 70px;
+            padding-top: 35px;
+            border-top: 2px solid var(--border-gold);
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+            border: none;
+            font-size: 15px;
+        }
+        
+        .nav-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(243, 156, 18, 0.6);
+            color: white;
+            border: none;
+        }
+        
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+            margin: 45px 0;
+        }
+        
+        .separator {
+            text-align: center;
+            font-size: 28px;
+            color: var(--accent-gold);
+            margin: 50px 0;
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 260px;
+            }
+            
+            .main-content {
+                margin-left: 260px;
+                padding: 40px 45px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 2px solid var(--border-gold);
+            }
+            
+            .main-content {
+                margin-left: 0;
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 34px;
+            }
+            
+            h2 {
+                font-size: 26px;
+            }
+            
+            .page-navigation {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">⟡ MYTHIC RINGS ⟡</div>
+                <div class="sidebar-version">Versione 2.1 - FINALE</div>
+            </div>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Navigazione</div>
+                <ul class="menu-items">
+                    <li><a href="index.html">🏠 Homepage</a></li>
+                    <li><a href="parte7.html">← Parte VII</a></li>
+                </ul>
+            </nav>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Parte VIII - Questa Sezione</div>
+                <ul class="menu-items">
+                    <li><a href="#glossario" class="active">Glossario</a></li>
+                    <li><a href="#quickref">Quick Reference</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#indice">Indice Completo</a></li>
+                    <li><a href="#conversioni">Conversioni</a></li>
+                    <li><a href="#credits">Credits</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- CONTENUTO PRINCIPALE -->
+        <main class="main-content">
+            
+            <h1>Parte VIII: Appendici</h1>
+            
+            <p>Riferimenti rapidi, glossario termini, FAQ, e materiali supplementari per facilitare il gioco.</p>
+            
+            <!-- GLOSSARIO -->
+            <section id="glossario">
+                <h2>Glossario dei Termini</h2>
+                
+                <p>Tutti i termini tecnici usati in Mythic Rings, in ordine alfabetico.</p>
+                
+                <div class="glossary-term">
+                    <strong>Anello Custodia</strong>
+                    <p>Artefatto magico che conferisce poteri ai Guardiani. Uno per Casata. Si lega al portatore scelto. Indistruttibile.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Armatura</strong>
+                    <p>Valore che riduce danno subito. Va da 0 (nessuna protezione) a 5+ (corazzato). Alcuni attacchi ignorano Armatura.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Avalon</strong>
+                    <p>Casata della luce, giustizia, protezione. Poteri costano Stress. Colori: oro e bianco.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Casata</strong>
+                    <p>Ordine magico di Guardiani. Quattro totali: Avalon, Umbra, Ife, Mictlan. Ognuna ha filosofia e poteri unici.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Caratteristiche</strong>
+                    <p>Attributi base PG: Forza (FOR), Cuore (CUO), Mente (MEN), Carisma (CAR), Fato (FAT). Da -1 a +3.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Cerchia degli Anziani</strong>
+                    <p>Consiglio direttivo Custodi Milano. 5 membri (1 per Casata + Presidente). Guidano operazioni.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Corruzione</strong>
+                    <p>Contatore negativo Umbra. Va da 0 a 5. A 5 = trasformazione in creatura ombra (perdita PG). Riducibile con rituale purificazione.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Custode / Custodi</strong>
+                    <p>Organizzazione segreta Guardiani. Protegge Milano da minacce occulte. Mantiene Velo. Struttura gerarchica.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>d6, d8, d10, d12</strong>
+                    <p>Dadi poliedrici. d6 = dado 6 facce, d8 = 8 facce, etc. 2d6 = tira 2 dadi somma risultati.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Downtime</strong>
+                    <p>Tempo tra missioni. PG recuperano, addestrano, vivono vita normale. Sistema meccanico Parte VI.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Fato (FAT)</strong>
+                    <p>Caratteristica. Rappresenta fortuna, destino, connessione magica. Usata per tutti poteri (tranne Avalon = CAR).</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Front</strong>
+                    <p>Minaccia attiva campagna. Progredisce indipendentemente da PG. Ha "doom clock" 0-12. A 12 = catastrofe.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Guardiano</strong>
+                    <p>Persona scelta da Anello Custodia. Ottiene poteri magici. Missione: proteggere mondo da minacce occulte.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Ife</strong>
+                    <p>Casata della vita, natura, guarigione. Poteri costano Stress. Colori: verde e marrone.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Legame</strong>
+                    <p>Connessione emotiva PG con PNG. Va da 0 a 3. Dà bonus +1 per livello quando PNG coinvolto. Può rompersi.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Linee Ley</strong>
+                    <p>Fiumi energia magica attraversano pianeta. Milano ha 5 linee che si incrociano sotto Duomo (nexus potere).</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>LS (Livello Sfida)</strong>
+                    <p>Difficoltà creatura. LS 1-3 = debole, 4-6 = media, 7-9 = forte, 10+ = boss. Suggerisce quanti PG servono.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Mercato Notturno</strong>
+                    <p>Mercato nero artefatti magici. Ruota location ogni venerdì. Zona neutrale assoluta (no combattimento).</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Mictlan</strong>
+                    <p>Casata della morte, spiriti, confine. Poteri costano Punti Ferita. Colori: nero e grigio.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Mossa</strong>
+                    <p>Azione significativa PG. Innesca tiro dado. 12 mosse base + mosse Casata. Struttura: dichiara → tira → risolvi.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Nexus</strong>
+                    <p>Punto dove 5 Linee Ley si incrociano. Sotto Piazza Duomo Milano. Centro potere assoluto. Neutrale per patto antico.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>PNG</strong>
+                    <p>Personaggio Non Giocante. Controllato da Custode. Include alleati, nemici, civili.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Potere</strong>
+                    <p>Abilità magica Casata. 15 per Casata (3 per livello, L1-L5). Costo: Stress (Avalon/Ife), Corruzione (Umbra), O PF (Mictlan).</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>PF (Punti Ferita)</strong>
+                    <p>Salute PG. Inizia 20 + (FOR × 2). A 0 = morente (tira Ultimo Respiro). Recupera con riposo/guarigione.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Rinnegato</strong>
+                    <p>Ex-Guardiano espulso O fuggito da Custodi. Spesso diventa antagonista. Organizzati in Fratellanza dei Caduti.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Società del Velo</strong>
+                    <p>Organizzazione umani non-magici consapevoli occulto. Aiutano Custodi mantenere Velo (cover-up eventi magici).</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Stress</strong>
+                    <p>Contatore affaticamento mentale/spirituale. Va da 0 a 10. A 10 = burnout (conseguenze severe). Riducibile con downtime.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Tiro</strong>
+                    <p>Meccanica core. Lancia 2d6 + caratteristica. 10+ = successo, 7-9 = successo parziale, 6- = fallimento con conseguenze.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Ultimo Respiro</strong>
+                    <p>Mossa quando PG scende a 0 PF. Tira +nulla. 10+ = sopravvive a 1 PF, 7-9 = scelta difficile, 6- = morte.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Umbra</strong>
+                    <p>Casata delle ombre, inganno, infiltrazione. Poteri costano Corruzione. Colori: nero e viola.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>Velo</strong>
+                    <p>Illusione collettiva separa mondo magico da ordinario. Profani (non-magici) non vedono magia. Custodi devono mantenerlo.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <strong>XP (Esperienza)</strong>
+                    <p>Punti esperienza. Guadagnati fine sessione (2-5 tipici). A 5 XP = level up (scegli miglioramento da lista).</p>
+                </div>
+                
+                <div class="separator">⟡ ⟡ ⟡</div>
+            </section>
+            
+            <!-- QUICK REFERENCE -->
+            <section id="quickref">
+                <h2>Quick Reference Sheets</h2>
+                
+                <p>Riferimenti rapidi 1-pagina per giocatori e Custode. Stampabili.</p>
+                
+                <h3>Quick Reference Giocatori</h3>
+                
+                <div class="printable-sheet">
+                    <h2 style="text-align: center; color: #1a1a2e; border-bottom: 2px solid #f39c12; padding-bottom: 10px;">MYTHIC RINGS - GIOCATORI</h2>
+                    
+                    <div class="quick-ref-box">
+                        <h4>⚙️ MECCANICA BASE</h4>
+                        <p><strong>Quando agisci:</strong> Tira 2d6 + Caratteristica</p>
+                        <ul>
+                            <li><strong>10+:</strong> Successo pieno</li>
+                            <li><strong>7-9:</strong> Successo con complicazione</li>
+                            <li><strong>6-:</strong> Fallimento (Custode fa mossa)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="quick-ref-box">
+                        <h4>📊 CARATTERISTICHE</h4>
+                        <ul>
+                            <li><strong>FOR (Forza):</strong> Potenza fisica, resistenza</li>
+                            <li><strong>CUO (Cuore):</strong> Coraggio, istinto, riflessi</li>
+                            <li><strong>MEN (Mente):</strong> Intelligenza, percezione, memoria</li>
+                            <li><strong>CAR (Carisma):</strong> Fascino, leadership, presenza</li>
+                            <li><strong>FAT (Fato):</strong> Fortuna, magia, destino</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="quick-ref-box">
+                        <h4>⚔️ MOSSE ESSENZIALI</h4>
+                        <ul>
+                            <li><strong>Attaccare:</strong> +FOR (mischia) o +CUO (distanza)</li>
+                            <li><strong>Difendere:</strong> +FOR (scudo/parare) o +CUO (schivare)</li>
+                            <li><strong>Sfidare Pericolo:</strong> +Caratteristica appropriata</li>
+                            <li><strong>Leggere Situazione:</strong> +MEN (fai domande)</li>
+                            <li><strong>Persuadere/Raggirare:</strong> +CAR</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="quick-ref-box">
+                        <h4>💔 DANNO & SALUTE</h4>
+                        <ul>
+                            <li><strong>PF Iniziali:</strong> 20 + (FOR × 2)</li>
+                            <li><strong>Armatura:</strong> Riduce danno subito</li>
+                            <li><strong>A 0 PF:</strong> Tira Ultimo Respiro</li>
+                            <li><strong>Recupero:</strong> 1d4 PF per notte riposo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="quick-ref-box">
+                        <h4>✨ POTERI</h4>
+                        <ul>
+                            <li><strong>Avalon:</strong> -Stress (max 10)</li>
+                            <li><strong>Umbra:</strong> +Corruzione (max 5)</li>
+                            <li><strong>Ife:</strong> -Stress (max 10)</li>
+                            <li><strong>Mictlan:</strong> -PF (no max)</li>
+                        </ul>
+                        <p><strong>Attivare:</strong> Dichiari potere → Paghi costo → Tiri +FAT (o +CAR per Avalon)</p>
+                    </div>
+                    
+                    <div class="quick-ref-box">
+                        <h4>🎯 XP & AVANZAMENTO</h4>
+                        <p><strong>Fine Sessione (1 XP per SÌ):</strong></p>
+                        <ul>
+                            <li>Affrontato pericolo significativo?</li>
+                            <li>Imparato qualcosa nuovo?</li>
+                            <li>Risolto problema importante?</li>
+                            <li>Sviluppato Legame?</li>
+                            <li>Agito secondo principi Casata?</li>
+                        </ul>
+                        <p><strong>A 5 XP:</strong> Level up (scegli: +1 Caratteristica, nuovo Potere, +5 PF, etc)</p>
+                    </div>
+                </div>
+                
+                <h3>Quick Reference Custode</h3>
+                
+                <div class="printable-sheet">
+                    <h2 style="text-align: center; color: #1a1a2e; border-bottom: 2px solid #f39c12; padding-bottom: 10px;">MYTHIC RINGS - CUSTODE</h2>
+                    
+                    <div class="quick-ref-box">
+                        <h4>🎭 PRINCIPI CUSTODE</h4>
+                        <ul>
+                            <li>Descrivi mondo dinamico (vive senza PG)</li>
+                            <li>Gioca per scoprire (improvvisa)</li>
+                            <li>Sii fan dei PG (tifa per loro)</li>
+                            <li>Fai domande oneste</li>
+                            <li>Fallimenti interessanti > Successi noiosi</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="quick-ref-box">
+                        <h4>⚠️ MOSSE CUSTODE (Su 6-)</h4>
+                        <ul>
+                            <li>Infliggi danno (diretto/indiretto)</li>
+                            <li>Metti in pericolo</li>
+                            <li>Consuma risorse</li>
+                            <li>Offri scelta difficile</li>
+                            <li>Rivela verità scomoda</li>
+                            <li>Introduci minaccia nuova</li>
+                            <li>Separa gruppo</li>
+                            <li>Cattura qualcuno</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="quick-ref-box">
+                        <h4>💀 DIFFICOLTÀ COMBATTIMENTO</h4>
+                        <ul>
+                            <li><strong>Facile:</strong> Nemici PF/Armatura bassi, 1-2 creature</li>
+                            <li><strong>Medio:</strong> 3-4 creature O 1 forte</li>
+                            <li><strong>Difficile:</strong> 5+ creature O boss LS alto</li>
+                            <li><strong>Mortale:</strong> Boss + rinforzi, abilità speciali</li>
+                        </ul>
+                        <p><strong>Bilanciamento:</strong> LS creatura ≈ livello medio gruppo</p>
+                    </div>
+                    
+                    <div class="quick-ref-box">
+                        <h4>📅 STRUTTURA SESSIONE</h4>
+                        <ol>
+                            <li>Recap (5 min)</li>
+                            <li>Hook/Missione (10 min)</li>
+                            <li>Investigazione (30-45 min)</li>
+                            <li>Complicazione (20-30 min)</li>
+                            <li>Climax (30-40 min)</li>
+                            <li>Risoluzione + XP (10-15 min)</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="quick-ref-box">
+                        <h4>🎲 IMPROVVISAZIONE RAPIDA</h4>
+                        <p><strong>PNG al volo:</strong></p>
+                        <ul>
+                            <li>Aspetto distintivo (cicatrice, eleganza, etc)</li>
+                            <li>Personalità base (nervoso, arrogante, gentile)</li>
+                            <li>Obiettivo chiaro (proteggere segreto, vendetta, etc)</li>
+                        </ul>
+                        <p><strong>Complicazione:</strong> Tira d10 tabella pag. Parte VI</p>
+                    </div>
+                    
+                    <div class="quick-ref-box">
+                        <h4>⏰ GESTIONE TEMPO</h4>
+                        <ul>
+                            <li><strong>Combattimento:</strong> ~3 min/round reale</li>
+                            <li><strong>Investigazione:</strong> Avanza dopo 3 indizi trovati</li>
+                            <li><strong>Timer Pressione:</strong> Usa timer visibile (clessidra)</li>
+                            <li><strong>Tagliare Scene:</strong> Ok skip noia ("Arrivate dopo 2 ore viaggio")</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="quick-ref-box">
+                        <h4>🛡️ SAFETY</h4>
+                        <ul>
+                            <li><strong>X-Card:</strong> Chiunque tocca = skip scena, no domande</li>
+                            <li><strong>Lines:</strong> Content assolutamente NO</li>
+                            <li><strong>Veils:</strong> Content ok off-screen solo</li>
+                            <li><strong>Pause:</strong> Sempre ok chiedere pausa</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="separator">⟡ ⟡ ⟡</div>
+            </section>
+            
+            <!-- FAQ -->
+            <section id="faq">
+                <h2>Domande Frequenti (FAQ)</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: Posso cambiare Casata durante gioco?</div>
+                    <div class="faq-answer">
+                        <p><strong>No, normalmente.</strong> Anello si lega permanentemente. Eccezione: evento narrativo traumatico (tradimento, morte vicina, rivelazione) può permettere "conversione" MA richiede consenso Custode + arco personale 3-5 sessioni. Perdi tutti poteri vecchia Casata, inizi da 0 con nuova.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: Cosa succede se Umbra raggiunge Corruzione 5?</div>
+                    <div class="faq-answer">
+                        <p><strong>Trasformazione irreversibile.</strong> Diventi creatura ombra pura (perdi controllo PG). Custode prende personaggio come PNG antagonista. Devi creare nuovo PG. Eccezione: se gruppo intraprende quest epica purificazione (rituale L5 Avalon/Ife + artefatto leggendario + sacrificio), può salvare MA con conseguenze permanenti (-1 caratteristica, trauma).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: Posso usare più poteri stesso turno?</div>
+                    <div class="faq-answer">
+                        <p><strong>Sì, MA:</strong> Ogni potere costa azione. Turno standard = 1 azione principale. Poteri istantanei (reazioni) non contano. Esempio: turno normale = attacco O potere. Turno frenetico (spendi Fato point) = 2 azioni. Limite: 3 poteri massimo per scena (strain magico).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: Come funziona Armatura vs attacchi magici?</div>
+                    <div class="faq-answer">
+                        <p><strong>Dipende da tipo attacco:</strong> Armatura fisica (giubbotto, scudo) protegge solo vs danni fisici. Attacchi "radiante", "necrotic", "psichico" ignorano Armatura fisica. Armatura magica (amuleti, scudi energia) protegge vs tutto. Alcuni poteri specificano "ignora Armatura" — in quel caso nessuna protezione.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: Posso avere Legami con altri PG?</div>
+                    <div class="faq-answer">
+                        <p><strong>Assolutamente sì!</strong> Anzi, raccomandato. Session Zero: ogni PG dichiara 1 Legame verso altro PG. Sviluppa naturalmente durante gioco. Legami PG-PG danno bonus quando collaborate. Differenza: Legami PG-PNG possono rompersi se PNG muore/tradisce. Legami PG-PG più resilienti MA possono incrinarsi (conflitti seri).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: Cosa faccio se tiro 12 (doppio 6)?</div>
+                    <div class="faq-answer">
+                        <p><strong>Successo critico!</strong> Conta come 10+ MA con beneficio extra. Esempi: danno × 1.5 (combattimento), info bonus (investigazione), eviti completamente costo (mosse con scelte). Custode narra successo spettacolare. Opposto: doppio 1 (snake eyes) = fallimento critico (6- MA peggio — complicazione severa).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: Quanti Legami posso avere?</div>
+                    <div class="faq-answer">
+                        <p><strong>Teoricamente illimitati, praticamente 4-6.</strong> Gestire più Legami = complesso narrativamente. Raccomandazione: 2-3 Legami forti (livello 2-3) + 2-3 conoscenti (livello 1). Qualità > quantità. Meglio pochi Legami profondi che molti superficiali.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: Posso giocare Guardiano non-umano?</div>
+                    <div class="faq-answer">
+                        <p><strong>No standard, MA...</strong> Anelli scelgono solo umani (lore). TUTTAVIA: Custode può permettere eccezioni narrative. Esempio: spirito antico possiede corpo umano E riceve Anello. O: mago trasformato in animale che conserva Anello. Richiede discussione tavolo + buona giustificazione narrativa. Mai "voglio essere drago perché figo" — serve motivo storia profondo.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: Come gestisco giocatore assente?</div>
+                    <div class="faq-answer">
+                        <p><strong>Opzioni:</strong><br>
+                        1) <strong>PNG temporaneo:</strong> Custode controlla PG (minimo dialogo, azioni sicure).<br>
+                        2) <strong>Offscreen:</strong> "Marco sta investigando altrove" (assente scena).<br>
+                        3) <strong>Altro giocatore:</strong> Giocatore fidato controlla temporaneamente.<br>
+                        <strong>MAI:</strong> Uccidere/ferire gravemente PG assente senza consenso giocatore.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: Serve miniature/mappa per combattimento?</div>
+                    <div class="faq-answer">
+                        <p><strong>No, teatro mente funziona.</strong> Mythic Rings è narrativo. Descrizioni verbali sufficienti. MA: se gruppo preferisce tattico, usa pure miniature/griglia. Raccomandazione: zone astratte ("vicino/medio/lontano") invece misure precise. Combattimento deve essere cinematico, non scacchi.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: Cosa faccio se PG vuole azione non coperta da mosse?</div>
+                    <div class="faq-answer">
+                        <p><strong>Improvvisa!</strong> Mosse sono framework, non prigione. Se azione ha senso narrativo MA non c'è mossa specifica: scegli caratteristica appropriata, fai tirare, risolvi come 10+/7-9/6-. Esempio: "Voglio intimidire nemico facendogli vedere cadavere amico" → tira +CAR, interpreta risultato. Sistema supporta creatività.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: Posso multi-classing (imparare poteri altra Casata)?</div>
+                    <div class="faq-answer">
+                        <p><strong>Limitato.</strong> Normalmente no. Anello permette solo poteri propria Casata. TUTTAVIA: con XP, puoi spendere 10 XP (doppio normale) per imparare 1 potere L1-2 da altra Casata. Requisiti: mentore di quella Casata + giustificazione narrativa + approvazione Custode. Max 2 poteri esterni totali. Questo rappresenta addestramento inter-Casata raro.</p>
+                    </div>
+                </div>
+                
+                <div class="separator">⟡ ⟡ ⟡</div>
+            </section>
+            
+            <!-- INDICE COMPLETO -->
+            <section id="indice">
+                <h2>Indice Alfabetico Completo</h2>
+                
+                <p>Tutti capitoli e sezioni principali del manuale, con link diretti.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Argomento</th>
+                            <th>Sezione</th>
+                            <th>Pagina</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ambientazione</td>
+                            <td><a href="parte1.html#cap1">Parte I, Cap 1</a></td>
+                            <td>parte1.html</td>
+                        </tr>
+                        <tr>
+                            <td>Anelli Custodia</td>
+                            <td><a href="parte1.html#cap2">Parte I, Cap 2</a></td>
+                            <td>parte1.html</td>
+                        </tr>
+                        <tr>
+                            <td>Artefatti Magici</td>
+                            <td><a href="parte7.html#artefatti">Parte VII</a></td>
+                            <td>parte7.html</td>
+                        </tr>
+                        <tr>
+                            <td>Armatura</td>
+                            <td><a href="parte3.html#cap14">Parte III, Cap 14</a></td>
+                            <td>parte3.html</td>
+                        </tr>
+                        <tr>
+                            <td>Attaccare (mossa)</td>
+                            <td><a href="parte4.html">Parte IV</a></td>
+                            <td>parte4.html</td>
+                        </tr>
+                        <tr>
+                            <td>Avalon (Casata)</td>
+                            <td><a href="parte1.html#cap3">Parte I, Cap 3</a></td>
+                            <td>parte1.html</td>
+                        </tr>
+                        <tr>
+                            <td>Avalon (Poteri)</td>
+                            <td><a href="parte4.html#avalon-livelli">Parte IV</a></td>
+                            <td>parte4.html</td>
+                        </tr>
+                        <tr>
+                            <td>Avanzamento PG</td>
+                            <td><a href="parte6.html#cap33">Parte VI, Cap 33</a></td>
+                            <td>parte6.html</td>
+                        </tr>
+                        <tr>
+                            <td>Bestiario</td>
+                            <td><a href="parte7.html#bestiario">Parte VII</a></td>
+                            <td>parte7.html</td>
+                        </tr>
+                        <tr>
+                            <td>Campagne (creare)</td>
+                            <td><a href="parte6.html#cap34">Parte VI, Cap 34</a></td>
+                            <td>parte6.html</td>
+                        </tr>
+                        <tr>
+                            <td>Caratteristiche</td>
+                            <td><a href="parte2.html#cap7">Parte II, Cap 7</a></td>
+                            <td>parte2.html</td>
+                        </tr>
+                        <tr>
+                            <td>Casate (quattro)</td>
+                            <td><a href="parte1.html#cap3">Parte I, Cap 3</a></td>
+                            <td>parte1.html</td>
+                        </tr>
+                        <tr>
+                            <td>Combattimento</td>
+                            <td><a href="parte3.html">Parte III</a></td>
+                            <td>parte3.html</td>
+                        </tr>
+                        <tr>
+                            <td>Consigli Custode</td>
+                            <td><a href="parte6.html#cap36">Parte VI, Cap 36</a></td>
+                            <td>parte6.html</td>
+                        </tr>
+                        <tr>
+                            <td>Corruzione (Umbra)</td>
+                            <td><a href="parte2.html#cap11">Parte II, Cap 11</a></td>
+                            <td>parte2.html</td>
+                        </tr>
+                        <tr>
+                            <td>Creazione Personaggio</td>
+                            <td><a href="parte1.html#cap4">Parte I, Cap 4-5</a></td>
+                            <td>parte1.html</td>
+                        </tr>
+                        <tr>
+                            <td>Creature (stats)</td>
+                            <td><a href="parte7.html#bestiario">Parte VII</a></td>
+                            <td>parte7.html</td>
+                        </tr>
+                        <tr>
+                            <td>Custodi (organizzazione)</td>
+                            <td><a href="parte1.html#cap2">Parte I, Cap 2</a></td>
+                            <td>parte1.html</td>
+                        </tr>
+                        <tr>
+                            <td>Danno</td>
+                            <td><a href="parte3.html#cap14">Parte III, Cap 14</a></td>
+                            <td>parte3.html</td>
+                        </tr>
+                        <tr>
+                            <td>Downtime</td>
+                            <td><a href="parte6.html#cap32">Parte VI, Cap 32</a></td>
+                            <td>parte6.html</td>
+                        </tr>
+                        <tr>
+                            <td>FAQ</td>
+                            <td><a href="#faq">Parte VIII</a></td>
+                            <td>parte8.html</td>
+                        </tr>
+                        <tr>
+                            <td>Fazioni Milano</td>
+                            <td><a href="parte5.html#cap31">Parte V, Cap 31</a></td>
+                            <td>parte5.html</td>
+                        </tr>
+                        <tr>
+                            <td>Glossario</td>
+                            <td><a href="#glossario">Parte VIII</a></td>
+                            <td>parte8.html</td>
+                        </tr>
+                        <tr>
+                            <td>Ife (Casata)</td>
+                            <td><a href="parte1.html#cap3">Parte I, Cap 3</a></td>
+                            <td>parte1.html</td>
+                        </tr>
+                        <tr>
+                            <td>Ife (Poteri)</td>
+                            <td><a href="parte4c.html">Parte IV-C</a></td>
+                            <td>parte4c.html</td>
+                        </tr>
+                        <tr>
+                            <td>Legami</td>
+                            <td><a href="parte2.html#cap10">Parte II, Cap 10</a></td>
+                            <td>parte2.html</td>
+                        </tr>
+                        <tr>
+                            <td>Linee Ley</td>
+                            <td><a href="parte5.html#cap27">Parte V, Cap 27</a></td>
+                            <td>parte5.html</td>
+                        </tr>
+                        <tr>
+                            <td>Mictlan (Casata)</td>
+                            <td><a href="parte1.html#cap3">Parte I, Cap 3</a></td>
+                            <td>parte1.html</td>
+                        </tr>
+                        <tr>
+                            <td>Mictlan (Poteri)</td>
+                            <td><a href="parte4d.html">Parte IV-D</a></td>
+                            <td>parte4d.html</td>
+                        </tr>
+                        <tr>
+                            <td>Milano Mitica</td>
+                            <td><a href="parte5.html">Parte V</a></td>
+                            <td>parte5.html</td>
+                        </tr>
+                        <tr>
+                            <td>Minacce Ricorrenti</td>
+                            <td><a href="parte5.html#cap30">Parte V, Cap 30</a></td>
+                            <td>parte5.html</td>
+                        </tr>
+                        <tr>
+                            <td>Mosse Base</td>
+                            <td><a href="parte4.html">Parte IV</a></td>
+                            <td>parte4.html</td>
+                        </tr>
+                        <tr>
+                            <td>One-Shot Avventure</td>
+                            <td><a href="parte7.html#oneshots">Parte VII</a></td>
+                            <td>parte7.html</td>
+                        </tr>
+                        <tr>
+                            <td>PNG Milano</td>
+                            <td><a href="parte5.html#cap29">Parte V, Cap 29</a></td>
+                            <td>parte5.html</td>
+                        </tr>
+                        <tr>
+                            <td>Poteri (tutti)</td>
+                            <td><a href="parte4.html">Parte IV (a,b,c,d)</a></td>
+                            <td>parte4.html</td>
+                        </tr>
+                        <tr>
+                            <td>Punti Ferita</td>
+                            <td><a href="parte2.html#cap9">Parte II, Cap 9</a></td>
+                            <td>parte2.html</td>
+                        </tr>
+                        <tr>
+                            <td>Quartieri Milano</td>
+                            <td><a href="parte5.html#cap28">Parte V, Cap 28</a></td>
+                            <td>parte5.html</td>
+                        </tr>
+                        <tr>
+                            <td>Quick Reference</td>
+                            <td><a href="#quickref">Parte VIII</a></td>
+                            <td>parte8.html</td>
+                        </tr>
+                        <tr>
+                            <td>Regole Base</td>
+                            <td><a href="parte2.html">Parte II</a></td>
+                            <td>parte2.html</td>
+                        </tr>
+                        <tr>
+                            <td>Safety Tools</td>
+                            <td><a href="parte6.html#safety">Parte VI</a></td>
+                            <td>parte6.html</td>
+                        </tr>
+                        <tr>
+                            <td>Session Zero</td>
+                            <td><a href="parte6.html#cap35">Parte VI, Cap 35</a></td>
+                            <td>parte6.html</td>
+                        </tr>
+                        <tr>
+                            <td>Stress</td>
+                            <td><a href="parte2.html#cap11">Parte II, Cap 11</a></td>
+                            <td>parte2.html</td>
+                        </tr>
+                        <tr>
+                            <td>Tiri Dado</td>
+                            <td><a href="parte2.html#cap8">Parte II, Cap 8</a></td>
+                            <td>parte2.html</td>
+                        </tr>
+                        <tr>
+                            <td>Ultimo Respiro</td>
+                            <td><a href="parte3.html#cap17">Parte III, Cap 17</a></td>
+                            <td>parte3.html</td>
+                        </tr>
+                        <tr>
+                            <td>Umbra (Casata)</td>
+                            <td><a href="parte1.html#cap3">Parte I, Cap 3</a></td>
+                            <td>parte1.html</td>
+                        </tr>
+                        <tr>
+                            <td>Umbra (Poteri)</td>
+                            <td><a href="parte4b.html">Parte IV-B</a></td>
+                            <td>parte4b.html</td>
+                        </tr>
+                        <tr>
+                            <td>XP (Esperienza)</td>
+                            <td><a href="parte6.html#cap33">Parte VI, Cap 33</a></td>
+                            <td>parte6.html</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="separator">⟡ ⟡ ⟡</div>
+            </section>
+            
+            <!-- CONVERSIONI - Sezione breve per non superare limiti -->
+            <section id="conversioni">
+                <h2>Conversioni da/verso Altri Sistemi</h2>
+                
+                <p>Guida rapida per convertire meccaniche Mythic Rings verso sistemi popolari.</p>
+                
+                <h3>Mythic Rings → D&D 5E</h3>
+                
+                <div class="info-box">
+                    <h4>🎲 Equivalenze Meccaniche</h4>
+                    
+                    <p><strong>Caratteristiche:</strong></p>
+                    <ul>
+                        <li>Mythic -1 = D&D 8-9 (-1 modifier)</li>
+                        <li>Mythic 0 = D&D 10-11 (+0)</li>
+                        <li>Mythic +1 = D&D 12-13 (+1)</li>
+                        <li>Mythic +2 = D&D 14-15 (+2)</li>
+                        <li>Mythic +3 = D&D 16-17 (+3)</li>
+                    </ul>
+                    
+                    <p><strong>PF:</strong> PF Mythic × 0.5 = HP D&D circa.</p>
+                    
+                    <p><strong>Armatura:</strong> Armatura 0=AC 10, 1=AC 12-13, 2=AC 14-15, 3=AC 16-17, 4+=AC 18+</p>
+                </div>
+                
+                <div class="separator">⟡ ⟡ ⟡</div>
+            </section>
+            
+            <!-- CREDITS -->
+            <section id="credits">
+                <h2>Credits, Licenza & Bibliografia</h2>
+                
+                <h3>Creazione del Gioco</h3>
+                
+                <div class="info-box">
+                    <h4>👥 Team Creativo</h4>
+                    <p><strong>Design & Scrittura:</strong> Riccardo (ilgiocointavolo.it)</p>
+                    <p><strong>Sistema Base:</strong> Ispirato da Powered by the Apocalypse framework</p>
+                    <p><strong>Sviluppo:</strong> Collaborazione con Claude (Anthropic AI)</p>
+                    <p><strong>Playtesting:</strong> Community ilgiocointavolo</p>
+                    <p><strong>Versione:</strong> 2.1 (Novembre 2025)</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>📜 Licenza</h4>
+                    <p><strong>Mythic Rings v2.1</strong></p>
+                    <p>© 2025 Riccardo / ilgiocointavolo.it</p>
+                    <p><strong>Licenza:</strong> Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</p>
+                    <p><strong>Powered by the Apocalypse:</strong> Framework creato da Meguey e Vincent Baker per Apocalypse World.</p>
+                </div>
+            </section>
+            
+            <hr style="margin-top: 80px; margin-bottom: 60px;">
+            
+            <!-- CHIUSURA FINALE -->
+            <div class="info-box" style="text-align: center; background: linear-gradient(135deg, rgba(243, 156, 18, 0.1), rgba(243, 156, 18, 0.2)); border: 3px solid var(--accent-gold); padding: 50px;">
+                <h2 style="color: var(--accent-gold); font-size: 42px; margin-bottom: 30px;">⟡ FINE DEL MANUALE ⟡</h2>
+                <p style="font-size: 20px; line-height: 2; margin-bottom: 25px;">
+                Hai completato la lettura di <strong>Mythic Rings v2.1</strong>.<br>
+                Ora possiedi tutti gli strumenti per giocare.
+            </p>
+            
+            <p style="font-size: 18px; color: var(--text-muted); margin-bottom: 35px;">
+                Le strade di Milano ti aspettano.<br>
+                Il Velo nasconde segreti antichi.<br>
+                Il tuo Anello brilla nella notte.
+            </p>
+            
+            <div style="border-top: 2px solid var(--accent-gold); padding-top: 30px; margin-top: 30px;">
+                <p style="font-size: 16px; margin-bottom: 15px;"><strong>Cosa fare ora:</strong></p>
+                <ul style="list-style: none; margin: 0; padding: 0; font-size: 16px;">
+                    <li style="margin: 8px 0;">✅ Riunisci 2-5 giocatori + 1 Custode</li>
+                    <li style="margin: 8px 0;">✅ Fate Session Zero (Parte VI, Cap 35)</li>
+                    <li style="margin: 8px 0;">✅ Create personaggi (Parte I, Cap 4-5)</li>
+                    <li style="margin: 8px 0;">✅ Scegliete scenario starter (Parte VII)</li>
+                    <li style="margin: 8px 0;">✅ <strong>GIOCATE!</strong></li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 40px; padding-top: 30px; border-top: 2px solid var(--border-gold);">
+                <p style="font-size: 15px; font-style: italic; color: var(--text-muted);">
+                    "Il Custode ti ha scelto. L'Anello ti ha trovato.<br>
+                    Milano ha bisogno di eroi. Sei pronto?"
+                </p>
+            </div>
+            
+            <div style="margin-top: 50px;">
+                <p style="font-size: 14px; color: var(--text-muted);">
+                    Per feedback, domande, O condividere tue storie:<br>
+                    <strong style="color: var(--accent-gold);">ilgiocointavolo.it</strong><br>
+                    YouTube: <strong style="color: var(--accent-gold);">ilgiocointavolo</strong>
+                </p>
+            </div>
+            
+            <div style="margin-top: 40px; font-size: 32px; color: var(--accent-gold);">
+                ⟡ ⟡ ⟡
+            </div>
+        </div>
+        
+        <!-- NAVIGAZIONE FINALE -->
+        <div class="page-navigation">
+            <a href="parte7.html" class="nav-button">← Parte VII</a>
+            <a href="index.html" class="nav-button">🏠 Torna Homepage</a>
+        </div>
+        
+    </main>
+</div>
+
+<!-- SCRIPT STAMPABILE (opzionale) -->
+<script>
+    // Funzione stampa Quick Reference
+    function printQuickRef() {
+        window.print();
+    }
+    
+    // Smooth scroll migliorato
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>
