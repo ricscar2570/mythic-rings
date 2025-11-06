@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mythic Rings - Parte III: Combattimento. Meccaniche combattimento, morte, Ultimo Respiro.">
+    <title>Mythic Rings v2.1 - Parte III: Combattimento</title>
+    <style>
+        /* [STESSO CSS BASE] */
+        :root {
+            --primary-dark: #1a1a2e;
+            --secondary-dark: #16213e;
+            --accent-gold: #f39c12;
+            --accent-gold-dark: #e67e22;
+            --text-light: #ecf0f1;
+            --text-muted: #95a5a6;
+            --border-gold: rgba(243, 156, 18, 0.3);
+            --shadow-glow: 0 0 20px rgba(243, 156, 18, 0.3);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Palatino', 'Times New Roman', serif;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 50%, #0f3460 100%);
+            background-attachment: fixed;
+            color: var(--text-light);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        
+        .page-wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* SIDEBAR */
+        .sidebar {
+            width: 300px;
+            background: linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, rgba(22, 33, 62, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            border-right: 2px solid var(--border-gold);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 25px 18px;
+            z-index: 1000;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .sidebar::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb {
+            background: var(--accent-gold);
+            border-radius: 4px;
+        }
+        
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-gold);
+        }
+        
+        .sidebar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+            letter-spacing: 1px;
+        }
+        
+        .sidebar-version {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        .menu-section {
+            margin-bottom: 25px;
+        }
+        
+        .menu-title {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            padding-left: 8px;
+            border-left: 3px solid var(--accent-gold);
+        }
+        
+        .menu-items {
+            list-style: none;
+        }
+        
+        .menu-items li {
+            margin-bottom: 5px;
+        }
+        
+        .menu-items a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 13px;
+            display: block;
+            padding: 7px 10px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .menu-items a:hover {
+            background: rgba(243, 156, 18, 0.1);
+            border-left-color: var(--accent-gold);
+            padding-left: 15px;
+            color: var(--accent-gold);
+        }
+        
+        .menu-items a.active {
+            background: rgba(243, 156, 18, 0.2);
+            border-left-color: var(--accent-gold);
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        /* CONTENUTO */
+        .main-content {
+            margin-left: 300px;
+            flex: 1;
+            padding: 50px 70px;
+            max-width: 1400px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(5px);
+            min-height: 100vh;
+        }
+        
+        /* TIPOGRAFIA */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Palatino', 'Georgia', serif;
+            color: var(--accent-gold);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 46px;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 18px;
+            margin-bottom: 40px;
+            text-shadow: 0 0 20px rgba(243, 156, 18, 0.4);
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            font-size: 34px;
+            margin-top: 55px;
+            padding-left: 18px;
+            border-left: 5px solid var(--accent-gold);
+        }
+        
+        h3 {
+            font-size: 26px;
+            color: var(--accent-gold-dark);
+        }
+        
+        h4 {
+            font-size: 20px;
+            color: var(--text-light);
+        }
+        
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            line-height: 1.9;
+            font-size: 16px;
+        }
+        
+        strong {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        em {
+            font-style: italic;
+            color: var(--accent-gold-dark);
+        }
+        
+        ul, ol {
+            margin-left: 32px;
+            margin-bottom: 18px;
+        }
+        
+        ul li, ol li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        ul li::marker {
+            color: var(--accent-gold);
+        }
+        
+        ol li::marker {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        /* INFO BOX */
+        .info-box {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.05), rgba(243, 156, 18, 0.1));
+            border: 2px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .info-box h3, .info-box h4 {
+            margin-top: 0;
+            color: var(--accent-gold);
+        }
+        
+        /* EXAMPLE BOX */
+        .example-box {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.08), rgba(41, 128, 185, 0.12));
+            border: 2px solid rgba(52, 152, 219, 0.4);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+        }
+        
+        .example-box h4 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        
+        /* WARNING BOX */
+        .warning-box {
+            background: linear-gradient(135deg, rgba(231, 76, 60, 0.08), rgba(192, 57, 43, 0.12));
+            border: 3px solid rgba(231, 76, 60, 0.5);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            box-shadow: 0 0 20px rgba(231, 76, 60, 0.3);
+        }
+        
+        .warning-box h4 {
+            color: #e74c3c;
+            margin-top: 0;
+        }
+        
+        /* TABELLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 28px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        table thead {
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: var(--primary-dark);
+        }
+        
+        table th {
+            padding: 16px;
+            text-align: left;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 13px;
+        }
+        
+        table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        table tbody tr {
+            transition: background 0.3s ease;
+        }
+        
+        table tbody tr:hover {
+            background: rgba(243, 156, 18, 0.1);
+        }
+        
+        table tbody tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        
+        /* NAVIGAZIONE */
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+        
+        a:hover {
+            color: var(--accent-gold);
+            border-bottom-color: var(--accent-gold);
+        }
+        
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 70px;
+            padding-top: 35px;
+            border-top: 2px solid var(--border-gold);
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+            border: none;
+            font-size: 15px;
+        }
+        
+        .nav-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(243, 156, 18, 0.6);
+            color: white;
+            border: none;
+        }
+        
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+            margin: 45px 0;
+        }
+        
+        .separator {
+            text-align: center;
+            font-size: 28px;
+            color: var(--accent-gold);
+            margin: 50px 0;
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 260px;
+            }
+            
+            .main-content {
+                margin-left: 260px;
+                padding: 40px 45px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 2px solid var(--border-gold);
+            }
+            
+            .main-content {
+                margin-left: 0;
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 34px;
+            }
+            
+            h2 {
+                font-size: 26px;
+            }
+            
+            .page-navigation {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">⟡ MYTHIC RINGS ⟡</div>
+                <div class="sidebar-version">Versione 2.1 - FINALE</div>
+            </div>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Navigazione</div>
+                <ul class="menu-items">
+                    <li><a href="index.html">🏠 Homepage</a></li>
+                    <li><a href="parte2.html">← Parte II</a></li>
+                    <li><a href="parte4.html">Parte IV →</a></li>
+                </ul>
+            </nav>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Parte III - Questa Sezione</div>
+                <ul class="menu-items">
+                    <li><a href="#cap12" class="active">Cap 12: Combattimento Base</a></li>
+                    <li><a href="#cap13">Cap 13: Iniziativa & Ordine</a></li>
+                    <li><a href="#cap14">Cap 14: Attacco & Difesa</a></li>
+                    <li><a href="#cap15">Cap 15: Danno & Armatura</a></li>
+                    <li><a href="#cap16">Cap 16: Situazioni Speciali</a></li>
+                    <li><a href="#cap17">Cap 17: Ultimo Respiro</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- CONTENUTO PRINCIPALE -->
+        <main class="main-content">
+            
+            <h1>Parte III: Combattimento e Morte</h1>
+            
+            <p style="font-size: 18px; font-style: italic; color: var(--accent-gold-dark);">
+                "Il combattimento non è scacchi. È caos controllato."
+            </p>
+            
+            <!-- CAPITOLO 12 -->
+            <section id="cap12">
+                <h2>Capitolo 12: Combattimento Base</h2>
+                
+                <p>Mythic Rings non usa griglia tattica O miniature. Combattimento è <strong>teatro della mente</strong> — descrizioni verbali + dadi.</p>
+                
+                <h3>Filosofia Combat</h3>
+                
+                <div class="info-box">
+                    <h4>Principi Fondamentali</h4>
+                    <ul>
+                        <li><strong>Narrativo Prima:</strong> Descrivi azione, poi tiri. Mai "tiro attacco" — dici "salto e affondo con spada al collo".</li>
+                        <li><strong>Cinematico:</strong> Incoraggia azioni cool. Saltare da tetto, scivolare sotto gambe, usare ambiente.</li>
+                        <li><strong>Mortale:</strong> Combattimento è pericoloso. PF scendono veloci. Non sei invincibile.</li>
+                        <li><strong>Veloce:</strong> Round dovrebbe durare 2-3 minuti real-time. Niente analisi paralisi.</li>
+                    </ul>
+                </div>
+                
+                <h3>Quando Inizia Combattimento</h3>
+                
+                <p>Combattimento inizia quando:</p>
+                <ul>
+                    <li>Violenza è inevitabile (parole falliscono, nemico attacca)</li>
+                    <li>Custode dice "Roll for initiative" (O equivalente)</li>
+                    <li>Prima azione combattiva avviene (qualcuno attacca)</li>
+                </ul>
+                
+                <p><strong>Nota:</strong> Non TUTTE confrontazioni sono combattimento formale. Singolo pugno = mossa. Scazzottata 5-secondi = mossa. COMBATTIMENTO vero = conflitto prolungato con scambi multipli.</p>
+                
+                <h3>Anatomia di un Round</h3>
+                
+                <p>Combattimento si divide in <strong>Round</strong>. Ogni round = ~6 secondi tempo-gioco.</p>
+                
+                <div class="info-box">
+                    <h4>Struttura Round</h4>
+                    <ol>
+                        <li><strong>Iniziativa:</strong> Determina ordine azioni (solo primo round)</li>
+                        <li><strong>Turni PG:</strong> Ogni PG agisce in ordine</li>
+                        <li><strong>Turni Nemici:</strong> Nemici reagiscono/agiscono</li>
+                        <li><strong>Fine Round:</strong> Effetti temporanei avanzano, conta round</li>
+                        <li><strong>Nuovo Round:</strong> Ripeti finché combattimento finisce</li>
+                    </ol>
+                </div>
+                
+                <h3>Azioni nel Tuo Turno</h3>
+                
+                <p>Nel tuo turno puoi fare:</p>
+                
+                <p><strong>1 Azione Principale:</strong></p>
+                <ul>
+                    <li>Attaccare (corpo-a-corpo O distanza)</li>
+                    <li>Usare potere magico</li>
+                    <li>Aiutare/Ostacolare alleato/nemico</li>
+                    <li>Leggere Situazione (studiare campo battaglia)</li>
+                    <li>Sfidare Pericolo (azione rischiosa)</li>
+                </ul>
+                
+                <p><strong>1 Movimento:</strong></p>
+                <ul>
+                    <li>Muoverti "vicino" → "medio" O "medio" → "lontano"</li>
+                    <li>Alzarti da terra (se prono)</li>
+                    <li>Estrarre/riporre arma</li>
+                </ul>
+                
+                <p><strong>Azione Gratuita (illimitate, ragionevolmente):</strong></p>
+                <ul>
+                    <li>Parlare brevemente (1-2 frasi)</li>
+                    <li>Urlare warning</li>
+                    <li>Lasciare cadere oggetto</li>
+                </ul>
+                
+                <div class="info-box">
+                    <h4>⚠️ Distanze Astratte</h4>
+                    <p>Mythic non usa metri precisi. Distanze sono:</p>
+                    <ul>
+                        <li><strong>Vicino:</strong> Arm's length, mischia possibile</li>
+                        <li><strong>Medio:</strong> ~5-10m, bisogna muoversi per mischia O tirare</li>
+                        <li><strong>Lontano:</strong> ~20-50m, solo armi distanza</li>
+                        <li><strong>Oltre:</strong> Troppo lontano per combattimento</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- CAPITOLO 13 -->
+            <section id="cap13">
+                <h2>Capitolo 13: Iniziativa e Ordine</h2>
+                
+                <p>Chi agisce per primo? Mythic usa sistema <strong>fiction-first</strong> + tiro se necessario.</p>
+                
+                <h3>Determinare Iniziativa</h3>
+                
+                <p><strong>Metodo 1: Narrativo (Preferito)</strong></p>
+                <p>Custode decide basandosi su fiction:</p>
+                <ul>
+                    <li>Chi ha vantaggio tattico? (surprise, posizione alta, preparazione)</li>
+                    <li>Chi è più veloce narrativamente?</li>
+                    <li>Chi ha dichiarato azione per primo?</li>
+                </ul>
+                
+                <p><strong>Esempio:</strong> Marco e Sofia imboscano vampiro. Hanno vantaggio. Agiscono prima automaticamente.</p>
+                
+                <p><strong>Metodo 2: Tiro (Se Incerto)</strong></p>
+                <p>Se situazione è paritaria O confusa:</p>
+                <ul>
+                    <li>Ogni PG tira <strong>+CUO</strong></li>
+                    <li>Ordine dal più alto al più basso</li>
+                    <li>Nemici agiscono a metà (dopo PG più veloci, prima più lenti)</li>
+                </ul>
+                
+                <div class="example-box">
+                    <h4>Esempio: Iniziativa Tiro</h4>
+                    <p>Gruppo entra stanza, 3 cultisti già dentro. Nessuno sorpreso. Paritario.</p>
+                    <ul>
+                        <li>Marco tira +CUO (+1): 2d6+1 = 8</li>
+                        <li>Sofia tira +CUO (+2): 2d6+2 = 11</li>
+                        <li>Luca tira +CUO (0): 2d6+0 = 6</li>
+                        <li>Elena tira +CUO (+1): 2d6+1 = 9</li>
+                    </ul>
+                    <p><strong>Ordine:</strong> Sofia (11) → Elena (9) → <em>Cultisti</em> → Marco (8) → Luca (6)</p>
+                </div>
+                
+                <h3>Quando Nemici Agiscono</h3>
+                
+                <p>Nemici NON hanno "turno" fisso. Agiscono quando:</p>
+                <ul>
+                    <li><strong>PG tira 6-:</strong> Custode fa mossa = nemico attacca/agisce</li>
+                    <li><strong>PG esita/non sa che fare:</strong> Custode può dire "Mentre indecidi, vampiro balza. Cosa fai?"</li>
+                    <li><strong>Fine turno tutti PG:</strong> Nemici ancora vivi agiscono (reazione a ciò che PG hanno fatto)</li>
+                </ul>
+                
+                <div class="info-box">
+                    <h4>💡 Nemici Sono Reattivi</h4>
+                    <p>Non pensare "turno nemico". Pensa "nemici rispondono a PG". Questo mantiene focus su giocatori.</p>
+                </div>
+                
+                <h3>Cambiare Ordine</h3>
+                
+                <p>Dopo primo round, ordine rimane FINCHÉ fiction cambia. Esempi:</p>
+                <ul>
+                    <li>PG usa potere velocità → agisce prima temporaneamente</li>
+                    <li>PG rallentato (ferita gamba) → agisce dopo</li>
+                    <li>Nuovo nemico entra combattimento → Custode decide dove si inserisce</li>
+                </ul>
+                
+                <h3>Sorpresa</h3>
+                
+                <p>Se PG sorprendono nemici (imboscata riuscita):</p>
+                <ul>
+                    <li>PG agiscono prima automaticamente</li>
+                    <li>Nemici NON possono Difendere primo round (colti alla sprovvista)</li>
+                    <li>Dopo primo round, combattimento normale</li>
+                </ul>
+                
+                <p>Se NEMICI sorprendono PG:</p>
+                <ul>
+                    <li>Nemici infliggono danno automaticamente (PG non possono Difendere)</li>
+                    <li>PG possono reagire da round 2 in poi</li>
+                </ul>
+            </section>
+            
+            <!-- CAPITOLO 14 -->
+            <section id="cap14">
+                <h2>Capitolo 14: Attacco e Difesa</h2>
+                
+                <h3>Mossa: Attaccare</h3>
+                
+                <p><strong>Quando usi:</strong> Infliggi danno con violenza (spada, pugno, magia offensiva).</p>
+                
+                <p><strong>Come funziona:</strong></p>
+                <ul>
+                    <li><strong>Mischia:</strong> Tira +FOR</li>
+                    <li><strong>Distanza:</strong> Tira +CUO</li>
+                    <li><strong>Magia:</strong> Dipende da potere (di solito +FAT O +CAR)</li>
+                </ul>
+                
+                <p><strong>Risultati:</strong></p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tiro</th>
+                            <th>Risultato</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>10+</strong></td>
+                            <td>Colpisci. Infliggi danno arma/potere. Scegli 1 bonus:
+                                <ul style="margin-top: 8px;">
+                                    <li>+1d6 danno extra</li>
+                                    <li>Crei opportunità (alleato ha +1 prossimo vs questo nemico)</li>
+                                    <li>Eviti contrattacco (non subisci danno reazione)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>7-9</strong></td>
+                            <td>Colpisci MA esposto. Infliggi danno MA Custode sceglie 1:
+                                <ul style="margin-top: 8px;">
+                                    <li>Subisci danno contrattacco</li>
+                                    <li>Ti metti in posizione pericolosa</li>
+                                    <li>Danno ridotto (tira metà dadi)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>6-</strong></td>
+                            <td>Manchi O colpo inefficace. Custode fa mossa (probabilmente nemico contrattacca)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="example-box">
+                    <h4>Esempio: Attacco Mischia</h4>
+                    <p>Marco (FOR +1) carica vampiro con spada d'argento (1d8 danno).</p>
+                    <p><strong>Tira +FOR:</strong> 2d6+1 = 10</p>
+                    <p><strong>Successo 10+!</strong> Colpisce. Tira danno: 1d8 = 6. Vampiro ha Armatura 1 → subisce 5 danno.</p>
+                    <p>Marco sceglie bonus: <em>"Evito contrattacco"</em>. Spada affonda, vampiro urla MA Marco si ritrae prima che artigli lo afferrino.</p>
+                </div>
+                
+                <div class="example-box">
+                    <h4>Esempio: Attacco Fallito</h4>
+                    <p>Luca (FOR 0) tenta colpire demone con bastone (1d6 danno).</p>
+                    <p><strong>Tira +FOR:</strong> 2d6+0 = 5</p>
+                    <p><strong>Fallimento 6-!</strong> Bastone passa accanto a demone, mancando. Demone ghigna, afferra bastone, tira. Luca vola 3 metri, atterra dolorosamente. Subisce 1d6 danno + prono.</p>
+                </div>
+                
+                <h3>Mossa: Difendere</h3>
+                
+                <p><strong>Quando usi:</strong> Proteggi te stesso O alleato da attacco imminente.</p>
+                
+                <p><strong>Come funziona:</strong></p>
+                <ul>
+                    <li><strong>Parare/Bloccare:</strong> Tira +FOR (scudo, arma, corpo)</li>
+                    <li><strong>Schivare:</strong> Tira +CUO (agilità, tuffo, rotolata)</li>
+                </ul>
+                
+                <p><strong>Risultati:</strong></p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tiro</th>
+                            <th>Risultato</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>10+</strong></td>
+                            <td>Difesa perfetta. Scegli 1:
+                                <ul style="margin-top: 8px;">
+                                    <li>Eviti danno completamente</li>
+                                    <li>Riduci danno metà E contrattacchi (infliggi danno base arma)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>7-9</strong></td>
+                            <td>Difesa parziale. Scegli 1:
+                                <ul style="margin-top: 8px;">
+                                    <li>Eviti danno MA ti metti in posizione brutta</li>
+                                    <li>Riduci danno metà</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>6-</strong></td>
+                            <td>Difesa fallisce. Subisci danno pieno + Custode fa mossa (situazione peggiora)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="example-box">
+                    <h4>Esempio: Difesa con Successo</h4>
+                    <p>Sofia (CUO +2) vede vampiro balzare verso di lei, artigli tesi (2d6 danno).</p>
+                    <p><strong>Tira +CUO per schivare:</strong> 2d6+2 = 11</p>
+                    <p><strong>Successo 10+!</strong> Sceglie: <em>"Evito completamente"</em>. Si tuffa sotto vampiro, rotola, si rialza dietro di lui. Illesa, vantaggio posizione.</p>
+                </div>
+                
+                <h3>Difendere Altri</h3>
+                
+                <p>Puoi usare Difendere per proteggere alleato SE sei <strong>Vicino</strong> a lui.</p>
+                <p>Funziona identico MA <strong>TU</strong> subisci conseguenze (danno, posizione brutta) invece dell'alleato.</p>
+                
+                <div class="example-box">
+                    <h4>Esempio: Proteggere Alleato</h4>
+                    <p>Demone sta per colpire Luca (ferito). Marco si interpone con scudo.</p>
+                    <p><strong>Marco tira Difendere +FOR:</strong> 2d6+1 = 8</p>
+                    <p><strong>7-9.</strong> Sceglie: <em>"Riduco danno metà"</em>. Scudo assorbe parte impatto MA Marco subisce 1d6/2 = 2 danno (arrotonda giù). Luca illeso.</p>
+                </div>
+            </section>
+            
+            <!-- CAPITOLO 15 -->
+            <section id="cap15">
+                <h2>Capitolo 15: Danno e Armatura Dettagliati</h2>
+                
+                <h3>Calcolare Danno</h3>
+                
+                <p>Formula completa:</p>
+                
+                <div style="text-align: center; font-size: 22px; font-weight: bold; color: var(--accent-gold); margin: 30px 0; padding: 20px; border: 2px solid var(--border-gold); border-radius: 10px;">
+                    DANNO SUBITO = (DANNO BASE - ARMATURA) - RIDUZIONI MAGICHE
+                </div>
+                
+                <h3>Danno Base Armi</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Arma</th>
+                            <th>Danno</th>
+                            <th>Tags</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pugno/Calcio</strong></td>
+                            <td>1d4</td>
+                            <td>Mischia, Non-Letale</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Coltello/Pugnale</strong></td>
+                            <td>1d6</td>
+                            <td>Mischia, Nascondibile</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Spada/Ascia</strong></td>
+                            <td>1d8</td>
+                            <td>Mischia</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Spada Grande/Martello</strong></td>
+                            <td>1d10</td>
+                            <td>Mischia, Due Mani, Lento</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pistola (9mm)</strong></td>
+                            <td>2d6</td>
+                            <td>Distanza, Rumoroso</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fucile/Shotgun</strong></td>
+                            <td>2d8</td>
+                            <td>Distanza, Due Mani, Molto Rumoroso</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Arco/Balestra</strong></td>
+                            <td>1d8</td>
+                            <td>Distanza, Silenzioso, Lento</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><strong>Tags Spiegati:</strong></p>
+                <ul>
+                    <li><strong>Mischia:</strong> Richiede essere Vicino</li>
+                    <li><strong>Distanza:</strong> Funziona Medio/Lontano</li>
+                    <li><strong>Due Mani:</strong> Non puoi usare scudo O seconda arma</li>
+                    <li><strong>Lento:</strong> -1 a iniziativa quando usi</li>
+                    <li><strong>Rumoroso:</strong> Attira attenzione</li>
+                    <li><strong>Non-Letale:</strong> A 0 PF = incosciente, non morente</li>
+                </ul>
+                
+                <h3>Armatura Dettagliata</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Armatura</th>
+                            <th>Valore</th>
+                            <th>Descrizione</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Nessuna</strong></td>
+                            <td>0</td>
+                            <td>Vestiti civili, nudo</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Leggera</strong></td>
+                            <td>1</td>
+                            <td>Giacca pelle spessa, giubbotto antiproiettile leggero</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Media</strong></td>
+                            <td>2</td>
+                            <td>Giubbotto antiproiettile tattico, cotta maglia</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pesante</strong></td>
+                            <td>3</td>
+                            <td>Armatura completa moderna O medievale</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Corazza</strong></td>
+                            <td>4</td>
+                            <td>Armatura rinforzata, piastre spesse</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Magica</strong></td>
+                            <td>+1-3</td>
+                            <td>Barriere, incantesimi protezione (stack con fisica)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><strong>Nota:</strong> Armatura Magica si somma a fisica. Es: Giubbotto (2) + Barriera Luce (2) = Armatura 4 totale.</p>
+                
+                <h3>Danno Massiccio</h3>
+                
+                <p>Se attacco singolo infligge <strong>15+ danno dopo Armatura</strong>, è <strong>Danno Massiccio</strong>.</p>
+                
+                <p><strong>Effetti:</strong></p>
+                <ul>
+                    <li>Oltre a danno normale, tira +FOR</li>
+                    <li><strong>10+:</strong> Reggi, resisti shock</li>
+                    <li><strong>7-9:</strong> Trauma severo. Scegli: -1 ongoing finché guarito, O perdi coscienza 1d6 minuti</li>
+                    <li><strong>6-:</strong> Sistema shock. Perdi coscienza, possibile morte se non curato rapidamente</li>
+                </ul>
+                
+                <div class="example-box">
+                    <h4>Esempio: Danno Massiccio</h4>
+                    <p>Marco (22 PF, Armatura 2) subisce esplosione magica: 4d6 = 18 danno.</p>
+                    <p>18 - 2 (Armatura) = <strong>16 danno</strong> (Massiccio!)</p>
+                    <p>PF: 22 - 16 = 6 PF rimanenti (gravemente ferito).</p>
+                    <p>Tira +FOR (+1) per resistere shock: 2d6+1 = 7.</p>
+                    <p><strong>7-9.</strong> Sceglie: <em>"-1 ongoing"</em>. Resta cosciente MA corpo bruciato, ogni movimento agonia. -1 a tutti tiri finché non curato.</p>
+                </div>
+                
+                <h3>Danno Ambientale</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fonte</th>
+                            <th>Danno</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Caduta (per 3m)</td>
+                            <td>1d6</td>
+                        </tr>
+                        <tr>
+                            <td>Fuoco (per round esposto)</td>
+                            <td>1d6 (ignora Armatura)</td>
+                        </tr>
+                        <tr>
+                            <td>Acido/Veleno</td>
+                            <td>1d8 (ignora Armatura)</td>
+                        </tr>
+                        <tr>
+                            <td>Elettricità</td>
+                            <td>2d6 (ignora Armatura)</td>
+                        </tr>
+                        <tr>
+                            <td>Freddo Estremo</td>
+                            <td>1d4 per ora</td>
+                        </tr>
+                        <tr>
+                            <td>Annegamento</td>
+                            <td>1d6 per round senza aria</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- CAPITOLO 16 -->
+            <section id="cap16">
+                <h2>Capitolo 16: Situazioni Speciali Combattimento</h2>
+                
+                <h3>Copertura</h3>
+                
+                <p>Se sei dietro copertura (muro, auto, mobili):</p>
+                <ul>
+                    <li><strong>Copertura Parziale:</strong> +1 Armatura vs attacchi distanza</li>
+                    <li><strong>Copertura Totale:</strong> +2 Armatura vs distanza, MA non puoi attaccare senza uscire</li>
+                </ul>
+                
+                <h3>Combattere al Buio</h3>
+                
+                <p>Senza luce:</p>
+                <ul>
+                    <li><strong>Nemici visibili (hanno luce/magia):</strong> -1 a attacchi distanza</li>
+                    <li><strong>Nemici invisibili (buio totale):</strong> -2 a tutti attacchi</li>
+                    <li><strong>Tu invisibile:</strong> Nemici -2 vs te</li>
+                </ul>
+                
+                <p><strong>Poteri Avalon (luce) annullano penalità buio completamente.</strong></p>
+                
+                <h3>Terreno Difficile</h3>
+                
+                <p>Ghiaccio, macerie, scale:</p>
+                <ul>
+                    <li>Movimento costa doppio (Vicino → Medio = azione completa)</li>
+                    <li>Correre richiede Sfidare Pericolo +CUO (6- = cadi prono)</li>
+                </ul>
+                
+                <h3>Combattimento Montato</h3>
+                
+                <p>Se su cavallo/moto/veicolo:</p>
+                <ul>
+                    <li><strong>Vantaggio:</strong> +1 danno carica, movimento molto veloce</li>
+                    <li><strong>Svantaggio:</strong> -1 Difendere (meno agile), se smontato forzatamente = 1d6 danno</li>
+                </ul>
+                
+                <h3>Combattimento Sottomarino</h3>
+                
+                <p>Sott'acqua:</p>
+                <ul>
+                    <li>Armi taglienti: danno dimezzato</li>
+                    <li>Armi contundenti: danno normale</li>
+                    <li>Armi fuoco: non funzionano</li>
+                    <li>Magia: funziona normale (a meno che fuoco-based)</li>
+                    <li>Ogni round: tira +FOR O perdi 1 PF (affogamento)</li>
+                </ul>
+                
+                <h3>Condizioni di Status</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Condizione</th>
+                            <th>Effetto</th>
+                            <th>Durata</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Prono</strong></td>
+                            <td>-2 Difendere, movimento dimezzato. Alzarsi = 1 azione movimento</td>
+                            <td>Finché ti alzi</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Accecato</strong></td>
+                            <td>-3 a tutti attacchi, Difendere solo +FOR (non schivi)</td>
+                            <td>Finché guarisci O effetto finisce</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stordito</strong></td>
+                            <td>-2 a tutti tiri, non puoi usare poteri</td>
+                            <td>1d4 round</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Immobilizzato</strong></td>
+                            <td>Non puoi muoverti O schivare. Attacchi vs te hanno +2</td>
+                            <td>Finché liberato</td>
+                        </tr>
+                        <tr>
+                            <td><strong>In Fiamme</strong></td>
+                            <td>1d6 danno inizio ogni round. Azione completa per spegnere (tira +CUO)</td>
+                            <td>Finché spento</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Avvelenato</strong></td>
+                            <td>1d4 danno inizio ogni round, -1 a tutti tiri</td>
+                            <td>Finché curato O 1d6 round</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Fuggire da Combattimento</h3>
+                
+                <p>Per fuggire:</p>
+                <ol>
+                    <li>Dichiara "Fuggo!"</li>
+                    <li>Tira <strong>Sfidare Pericolo +CUO</strong></li>
+                    <li><strong>10+:</strong> Fuggi pulito</li>
+                    <li><strong>7-9:</strong> Fuggi MA lasci qualcosa (equipaggiamento, O subisci 1 attacco gratis, O nemico ti insegue)</li>
+                    <li><strong>6-:</strong> Nemico ti blocca, subisci danno, O situazione peggiora</li>
+                </ol>
+                
+                <p><strong>Gruppo Fugge:</strong> Ogni PG tira separatamente. Chi fallisce = rallenta gruppo O catturato.</p>
+            </section>
+            
+            <!-- CAPITOLO 17 -->
+            <section id="cap17">
+                <h2>Capitolo 17: Ultimo Respiro e Morte</h2>
+                
+                <p>Quando PF scendono a <strong>0</strong>, non muori immediatamente. Sei <strong>Morente</strong>.</p>
+                
+                <h3>Mossa: Ultimo Respiro</h3>
+                
+                <div class="warning-box">
+                    <h4>☠️ QUANDO PF = 0</h4>
+                    <p>Tiri immediatamente <strong>Ultimo Respiro</strong>. Questo tiro determina se vivi O muori.</p>
+                    <p><strong>TIRA 2d6 + NULLA (no caratteristica).</strong></p>
+                </div>
+                
+                <p><strong>Risultati:</strong></p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tiro</th>
+                            <th>Risultato</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>12+</strong></td>
+                            <td><strong>Miracolo.</strong> Sopravvivi, torni a 1 PF. Sta a te spiegare come (volontà sovrumana, destino, intervento divino). Puoi continuare agire questo round.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>10-11</strong></td>
+                            <td><strong>Stabilizzato.</strong> Non muori MA sei incosciente, 0 PF. Richiedi cure mediche/magia per tornare cosciente. Se non curato entro 1 ora = morte.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>7-9</strong></td>
+                            <td><strong>Scelta Difficile.</strong> Morte ti offre patto. Custode presenta 2 opzioni, scegli 1:
+                                <ul style="margin-top: 8px;">
+                                    <li>Sopravvivi MA perdi qualcosa (arto, senso, ricordi, Legame)</li>
+                                    <li>Sopravvivi MA devi compito per Morte (restituire favore, portare anima sostitutiva, etc)</li>
+                                    <li>Allungi morte MA sarai debole (torna 1 PF, -2 a tutto per 1 giorno)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>6-</strong></td>
+                            <td><strong>Morte.</strong> Spirito lascia corpo. PG è morto. Devi creare nuovo personaggio.<br><br>
+                            <strong>Eccezione:</strong> Alleati possono tentare resurrezione (Avalon L5 O Mictlan L5) MA è rituale difficile, raro, costoso.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="example-box">
+                    <h4>Esempio: Ultimo Respiro - Successo</h4>
+                    <p>Marco scende a 0 PF dopo colpo demone. Tira Ultimo Respiro: 2d6 = <strong>11</strong>.</p>
+                    <p><strong>10-11: Stabilizzato.</strong></p>
+                    <p>Custode: "Marco, tutto diventa nero. Senti freddo. Corpo non risponde. Sei al confine. MA respiro torna, flebile. Sei vivo, a malapena. Incosciente, 0 PF. Qualcuno deve curarti."</p>
+                    <p>Sofia usa medikit: recupera 1d6 = 4 PF. Marco torna cosciente, 4 PF, debole MA vivo.</p>
+                </div>
+                
+                <div class="example-box">
+                    <h4>Esempio: Ultimo Respiro - Scelta Difficile</h4>
+                    <p>Elena scende a 0 PF. Tira Ultimo Respiro: 2d6 = <strong>8</strong>.</p>
+                    <p><strong>7-9: Scelta Difficile.</strong></p>
+                    <p>Custode: "Elena, attraversi Velo. Regno Morti ti accoglie. Mictlantecuhtli, Signore Morti, appare. 'Troppo presto, piccola. MA nulla è gratis.' Offre scelta:"</p>
+                    <ul>
+                        <li><strong>Opzione A:</strong> "Vivi MA dimentichi persona più cara (Legame azzerato permanentemente)"</li>
+                        <li><strong>Opzione B:</strong> "Vivi MA mi devi debito. Quando chiamerò, verrai. No domande."</li>
+                    </ul>
+                    <p>Elena sceglie B. Torna a 1 PF. Custode annota: <em>"Elena deve favore a Morte. Sarà riscosso momento peggiore."</em></p>
+                </div>
+                
+                <div class="example-box">
+                    <h4>Esempio: Ultimo Respiro - Morte</h4>
+                    <p>Luca scende a 0 PF contro vampiro antico. Tira Ultimo Respiro: 2d6 = <strong>4</strong>.</p>
+                    <p><strong>6-: Morte.</strong></p>
+                    <p>Custode: "Luca, vampiro affonda zanne nel collo. Sangue drena, troppo veloce. Vedi luce, poi oscurità. Spirito lascia corpo. Ultimi pensieri: 'Scusate, amici...' Sei morto."</p>
+                    <p>Gruppo è devastato. Luca diventa PNG (spirito? ricordo?). Giocatore crea nuovo PG per prossima sessione.</p>
+                </div>
+                
+                <h3>Dopo Ultimo Respiro</h3>
+                
+                <p><strong>Se sopravvivi (10+, 7-9 con scelta):</strong></p>
+                <ul>
+                    <li>Torni a 1 PF minimo (O specificato)</li>
+                    <li>Sei cosciente MA debole</li>
+                    <li>Cicatrice permanente (narrativa + forse meccanica)</li>
+                    <li>Trauma psicologico (+1 Stress)</li>
+                </ul>
+                
+                <p><strong>Se muori (6-):</strong></p>
+                <ul>
+                    <li>Corpo resta. Gruppo può portare via, seppellire, etc</li>
+                    <li>Anello Custodia lascia cadavere, inizia cercare nuovo portatore</li>
+                    <li>Giocatore crea nuovo PG (stessa Casata O diversa)</li>
+                    <li>Nuovo PG può essere introdotto prossima sessione O immediato se fiction permette</li>
+                </ul>
+                
+                <h3>Resurrezione</h3>
+                
+                <p>Morte può essere invertita MA è <strong>estremamente difficile</strong>:</p>
+                
+                <div class="warning-box">
+                    <h4>Requisiti Resurrezione</h4>
+                    <ul>
+                        <li><strong>Tempo:</strong> Massimo 24 ore dalla morte (dopo = anima troppo lontana)</li>
+                        <li><strong>Corpo:</strong> Intatto (almeno 75%). Decapitazione/incenerimento = impossibile</li>
+                        <li><strong>Rituale:</strong> Avalon L5 "Resurrezione" O Mictlan L5 "Riportare Spirito"</li>
+                        <li><strong>Costo:</strong>
+                            <ul>
+                                <li>Chi lancia: 5 Stress (Avalon) O 10 PF (Mictlan)</li>
+                                <li>Sacrificio: Artefatto leggendario O vita animale grande (cavallo, etc)</li>
+                                <li>Chi resuscita: Perde 1 caratteristica permanentemente (-1 a una stat)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Tiro:</strong> Chi lancia tira +FAT (Mictlan) O +CAR (Avalon)
+                            <ul>
+                                <li><strong>10+:</strong> Rituale riesce. Morto torna, 1 PF, -1 stat permanente</li>
+                                <li><strong>7-9:</strong> Torna MA complicazione severa (posseduto? memoria danneggiata? debito con entità?)</li>
+                                <li><strong>6-:</strong> Rituale fallisce. Sacrificio consumato, chi lancia paga costo comunque, morto resta morto</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <p><strong>Importante:</strong> Resurrezione dovrebbe essere rara, momento climax campagna. Non "reset button" facile.</p>
+                
+                <h3>Creare Nuovo PG Dopo Morte</h3>
+                
+                <p>Se PG muore permanentemente:</p>
+                <ol>
+                    <li><strong>Lutto:</strong> Gruppo ha scena lutto (funerale, ricordo, vendetta giurata)</li>
+                    <li><strong>Creazione:</strong> Giocatore crea nuovo PG (Parte I processo)</li>
+                    <li><strong>Introduzione:</strong> Custode introduce nuovo PG naturalmente:
+                        <ul>
+                            <li>Recluta Custodi</li>
+                            <li>Alleato conosciuto da tempo</li>
+                            <li>Arrivo improvviso (nuovo Guardiano appena scelto da Anello)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Legami:</strong> Nuovo PG crea 1-2 Legami con gruppo esistente</li>
+                </ol>
+                
+                <p><strong>XP Nuovo PG:</strong> Inizia con XP pari a <strong>metà</strong> PG morto (arrotonda giù). Questo mantiene bilanciamento senza punire giocatore eccessivamente.</p>
+            </section>
+            
+            <hr>
+            
+            <div class="info-box" style="text-align: center; margin-top: 60px;">
+                <h3>✅ Fine Parte III</h3>
+                <p>Ora conosci combattimento completo:</p>
+                <ul style="list-style: none; margin: 20px 0;">
+                    <li>✅ Struttura combattimento (round, turni, iniziativa)</li>
+                    <li>✅ Attacco e Difesa (mosse core)</li>
+                    <li>✅ Danno e Armatura (calcoli dettagliati)</li>
+                    <li>✅ Situazioni speciali (terreno, condizioni, fuga)</li>
+                    <li>✅ Ultimo Respiro (morte e resurrezione)</li>
+                </ul>
+                <p style="margin-top: 30px; font-size: 18px; color: var(--accent-gold);">
+                    <strong>Prossimo passo:</strong> Parte IV per Mosse complete e TUTTI i 60 Poteri!
+                </p>
+            </div>
+            
+            <!-- NAVIGAZIONE -->
+            <div class="page-navigation">
+                <a href="parte2.html" class="nav-button">← Parte II</a>
+                <a href="parte4.html" class="nav-button">Parte IV: Mosse & Poteri →</a>
+            </div>
+            
+        </main>
+    </div>
+</body>
+</html>
