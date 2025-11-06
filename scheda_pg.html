@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythic Rings - Scheda Personaggio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .character-sheet {
+            width: 21cm;
+            min-height: 29.7cm;
+            background: white;
+            margin: 0 auto;
+            padding: 1.5cm;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            page-break-after: always;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #f39c12;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            color: #1a1a2e;
+            margin-bottom: 5px;
+        }
+        
+        .header .subtitle {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+            border: 2px solid #f39c12;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #f39c12;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #f39c12;
+            padding-bottom: 5px;
+        }
+        
+        .field {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        
+        .field-label {
+            font-weight: bold;
+            width: 150px;
+            color: #333;
+        }
+        
+        .field-value {
+            flex: 1;
+            border-bottom: 1px solid #ccc;
+            min-height: 20px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .stat-box {
+            border: 2px solid #f39c12;
+            border-radius: 6px;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .stat-name {
+            font-weight: bold;
+            font-size: 12px;
+            color: #f39c12;
+            margin-bottom: 5px;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a1a2e;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            line-height: 36px;
+            margin: 0 auto;
+        }
+        
+        .powers-list {
+            min-height: 200px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 10px;
+            background: #fafafa;
+        }
+        
+        .checkboxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            min-width: 150px;
+        }
+        
+        .checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #f39c12;
+            border-radius: 3px;
+            margin-right: 8px;
+        }
+        
+        @media print {
+            body { background: white; padding: 0; }
+            .character-sheet { box-shadow: none; margin: 0; }
+            .no-print { display: none; }
+        }
+        
+        .print-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 15px 30px;
+            background: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+        }
+        
+        .print-button:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+        }
+        
+        .resources-track {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        
+        .resource-box {
+            width: 25px;
+            height: 25px;
+            border: 2px solid #f39c12;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button no-print" onclick="window.print()">🖨️ Stampa Scheda</button>
+    
+    <div class="character-sheet">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>⟡ MYTHIC RINGS ⟡</h1>
+            <div class="subtitle">Scheda Personaggio v2.1</div>
+        </div>
+        
+        <!-- INFO BASE -->
+        <div class="section">
+            <div class="section-title">📋 INFORMAZIONI BASE</div>
+            <div class="field">
+                <div class="field-label">Nome:</div>
+                <div class="field-value"></div>
+            </div>
+            <div class="field">
+                <div class="field-label">Casata:</div>
+                <div class="field-value"></div>
+            </div>
+            <div class="field">
+                <div class="field-label">Concetto:</div>
+                <div class="field-value"></div>
+            </div>
+            <div class="field">
+                <div class="field-label">Livello:</div>
+                <div class="field-value"></div>
+            </div>
+        </div>
+        
+        <!-- CARATTERISTICHE -->
+        <div class="section">
+            <div class="section-title">💪 CARATTERISTICHE</div>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-name">FOR</div>
+                    <div class="stat-value"></div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-name">CUO</div>
+                    <div class="stat-value"></div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-name">MEN</div>
+                    <div class="stat-value"></div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-name">CAR</div>
+                    <div class="stat-value"></div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-name">FAT</div>
+                    <div class="stat-value"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- RISORSE -->
+        <div class="section">
+            <div class="section-title">❤️ RISORSE</div>
+            <div class="field">
+                <div class="field-label">PF Massimi:</div>
+                <div class="field-value"></div>
+            </div>
+            <div class="field">
+                <div class="field-label">PF Attuali:</div>
+                <div class="field-value"></div>
+            </div>
+            <div class="field">
+                <div class="field-label">Armatura:</div>
+                <div class="field-value"></div>
+            </div>
+            
+            <div style="margin-top: 15px;">
+                <strong>Stress / Corruzione:</strong>
+                <div class="resources-track">
+                    <div class="resource-box"></div>
+                    <div class="resource-box"></div>
+                    <div class="resource-box"></div>
+                    <div class="resource-box"></div>
+                    <div class="resource-box"></div>
+                    <div class="resource-box"></div>
+                    <div class="resource-box"></div>
+                    <div class="resource-box"></div>
+                    <div class="resource-box"></div>
+                    <div class="resource-box"></div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 10px;">
+                <strong>Punti Fato:</strong>
+                <div class="resources-track">
+                    <div class="resource-box"></div>
+                    <div class="resource-box"></div>
+                    <div class="resource-box"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- LEGAMI -->
+        <div class="section">
+            <div class="section-title">💞 LEGAMI</div>
+            <div class="field">
+                <div class="field-label">Legame 1:</div>
+                <div class="field-value"></div>
+            </div>
+            <div class="field">
+                <div class="field-label">Livello:</div>
+                <div class="field-value" style="width: 50px;"></div>
+            </div>
+            <div class="field">
+                <div class="field-label">Legame 2:</div>
+                <div class="field-value"></div>
+            </div>
+            <div class="field">
+                <div class="field-label">Livello:</div>
+                <div class="field-value" style="width: 50px;"></div>
+            </div>
+            <div class="field">
+                <div class="field-label">Legame 3:</div>
+                <div class="field-value"></div>
+            </div>
+            <div class="field">
+                <div class="field-label">Livello:</div>
+                <div class="field-value" style="width: 50px;"></div>
+            </div>
+        </div>
+        
+        <!-- POTERI -->
+        <div class="section">
+            <div class="section-title">✨ POTERI CONOSCIUTI</div>
+            <div class="powers-list">
+                <!-- Spazio per scrivere poteri -->
+            </div>
+        </div>
+        
+        <!-- EQUIPAGGIAMENTO -->
+        <div class="section">
+            <div class="section-title">🎒 EQUIPAGGIAMENTO</div>
+            <div class="powers-list" style="min-height: 120px;">
+                <!-- Spazio per equipaggiamento -->
+            </div>
+        </div>
+        
+        <!-- XP -->
+        <div class="section">
+            <div class="section-title">⭐ ESPERIENZA</div>
+            <div class="field">
+                <div class="field-label">XP Attuali:</div>
+                <div class="field-value"></div>
+            </div>
+            <div class="checkboxes" style="margin-top: 10px;">
+                <div class="checkbox-item"><div class="checkbox"></div> Pericolo</div>
+                <div class="checkbox-item"><div class="checkbox"></div> Imparato</div>
+                <div class="checkbox-item"><div class="checkbox"></div> Risolto</div>
+                <div class="checkbox-item"><div class="checkbox"></div> Legame</div>
+                <div class="checkbox-item"><div class="checkbox"></div> Casata</div>
+            </div>
+        </div>
+        
+        <!-- NOTE -->
+        <div class="section">
+            <div class="section-title">📝 NOTE</div>
+            <div class="powers-list" style="min-height: 100px;">
+                <!-- Spazio note -->
+            </div>
+        </div>
+    </div>
+    
+    <div style="text-align: center; padding: 20px; color: #666; font-size: 12px;" class="no-print">
+        <p>Mythic Rings v2.1 - © 2025 ilgiocointavolo.it</p>
+        <p style="margin-top: 10px;">
+            <a href="index.html" style="color: #f39c12; text-decoration: none;">← Torna Homepage</a> |
+            <a href="scheda_custode.html" style="color: #f39c12; text-decoration: none;">Scheda Custode →</a>
+        </p>
+    </div>
+</body>
+</html>
