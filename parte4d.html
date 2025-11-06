@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythic Rings v2.1 - Poteri Mictlan</title>
+    <style>
+        /* [STESSO CSS BASE] */
+        :root {
+            --primary-dark: #1a1a2e;
+            --secondary-dark: #16213e;
+            --accent-gold: #f39c12;
+            --accent-gold-dark: #e67e22;
+            --text-light: #ecf0f1;
+            --text-muted: #95a5a6;
+            --border-gold: rgba(243, 156, 18, 0.3);
+            --shadow-glow: 0 0 20px rgba(243, 156, 18, 0.3);
+            --mictlan-color: #95a5a6;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Georgia', 'Palatino', 'Times New Roman', serif;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 50%, #0f3460 100%);
+            background-attachment: fixed;
+            color: var(--text-light);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        
+        .page-wrapper { display: flex; min-height: 100vh; }
+        
+        .sidebar {
+            width: 300px;
+            background: linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, rgba(22, 33, 62, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            border-right: 2px solid var(--border-gold);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 25px 18px;
+            z-index: 1000;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .sidebar::-webkit-scrollbar { width: 8px; }
+        .sidebar::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.3); }
+        .sidebar::-webkit-scrollbar-thumb { background: var(--accent-gold); border-radius: 4px; }
+        
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-gold);
+        }
+        
+        .sidebar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+            letter-spacing: 1px;
+        }
+        
+        .sidebar-version { font-size: 11px; color: var(--text-muted); font-style: italic; }
+        .menu-section { margin-bottom: 25px; }
+        
+        .menu-title {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            padding-left: 8px;
+            border-left: 3px solid var(--accent-gold);
+        }
+        
+        .menu-items { list-style: none; }
+        .menu-items li { margin-bottom: 5px; }
+        
+        .menu-items a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 13px;
+            display: block;
+            padding: 7px 10px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .menu-items a:hover {
+            background: rgba(243, 156, 18, 0.1);
+            border-left-color: var(--accent-gold);
+            padding-left: 15px;
+            color: var(--accent-gold);
+        }
+        
+        .menu-items a.active {
+            background: rgba(243, 156, 18, 0.2);
+            border-left-color: var(--accent-gold);
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        .main-content {
+            margin-left: 300px;
+            flex: 1;
+            padding: 50px 70px;
+            max-width: 1400px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(5px);
+            min-height: 100vh;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Palatino', 'Georgia', serif;
+            color: var(--accent-gold);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 46px;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 18px;
+            margin-bottom: 40px;
+            text-shadow: 0 0 20px rgba(243, 156, 18, 0.4);
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            font-size: 34px;
+            margin-top: 55px;
+            padding-left: 18px;
+            border-left: 5px solid var(--accent-gold);
+        }
+        
+        h3 { font-size: 26px; color: var(--accent-gold-dark); }
+        h4 { font-size: 20px; color: var(--text-light); }
+        
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            line-height: 1.9;
+            font-size: 16px;
+        }
+        
+        strong { color: var(--accent-gold); font-weight: bold; }
+        em { font-style: italic; color: var(--accent-gold-dark); }
+        
+        ul, ol { margin-left: 32px; margin-bottom: 18px; }
+        ul li, ol li { margin-bottom: 10px; line-height: 1.7; }
+        ul li::marker { color: var(--accent-gold); }
+        ol li::marker { color: var(--accent-gold); font-weight: bold; }
+        
+        .power-box {
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.08), rgba(44, 62, 80, 0.15));
+            border: 3px solid rgba(149, 165, 166, 0.5);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 0 20px rgba(44, 62, 80, 0.4);
+        }
+        
+        .power-box h4 {
+            margin-top: 0;
+            color: var(--mictlan-color);
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+        
+        .power-level {
+            display: inline-block;
+            background: var(--mictlan-color);
+            color: var(--primary-dark);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        
+        .power-cost {
+            background: rgba(231, 76, 60, 0.2);
+            border: 2px solid #e74c3c;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 12px 0;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.05), rgba(243, 156, 18, 0.1));
+            border: 2px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .info-box h3, .info-box h4 { margin-top: 0; color: var(--accent-gold); }
+        
+        .separator {
+            text-align: center;
+            font-size: 28px;
+            color: var(--accent-gold);
+            margin: 50px 0;
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+        
+        a:hover { color: var(--accent-gold); border-bottom-color: var(--accent-gold); }
+        
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 70px;
+            padding-top: 35px;
+            border-top: 2px solid var(--border-gold);
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+            border: none;
+            font-size: 15px;
+        }
+        
+        .nav-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(243, 156, 18, 0.6);
+            color: white;
+            border: none;
+        }
+        
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+            margin: 45px 0;
+        }
+        
+        @media (max-width: 1024px) {
+            .sidebar { width: 260px; }
+            .main-content { margin-left: 260px; padding: 40px 45px; }
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 2px solid var(--border-gold);
+            }
+            .main-content { margin-left: 0; padding: 30px 20px; }
+            h1 { font-size: 34px; }
+            h2 { font-size: 26px; }
+            .page-navigation { flex-direction: column; gap: 12px; }
+            .nav-button { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">⟡ MYTHIC RINGS ⟡</div>
+                <div class="sidebar-version">Versione 2.1 - FINALE</div>
+            </div>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Navigazione</div>
+                <ul class="menu-items">
+                    <li><a href="index.html">🏠 Homepage</a></li>
+                    <li><a href="parte4c.html">← Ife</a></li>
+                    <li><a href="parte5.html">Parte V: Milano →</a></li>
+                </ul>
+            </nav>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Mictlan - Questa Sezione</div>
+                <ul class="menu-items">
+                    <li><a href="#mictlan-l1" class="active">Livello 1 (Base)</a></li>
+                    <li><a href="#mictlan-l2">Livello 2</a></li>
+                    <li><a href="#mictlan-l3">Livello 3</a></li>
+                    <li><a href="#mictlan-l4">Livello 4</a></li>
+                    <li><a href="#mictlan-l5">Livello 5 (Leggendari)</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            
+            <h1>Capitolo 23: Poteri Mictlan</h1>
+            
+            <div class="info-box" style="background: linear-gradient(135deg, rgba(44, 62, 80, 0.05), rgba(44, 62, 80, 0.1)); border-color: rgba(149, 165, 166, 0.5);">
+                <h3 style="color: #95a5a6;">💀 Filosofia Mictlan</h3>
+                <p><strong>Essenza:</strong> Morte, spiriti, confine, transizione, memento mori. Mictlan sono psicopompi, medium, guardiani soglia vita/morte.</p>
+                <p><strong>Risorsa:</strong> Punti Ferita (PF). UNICA Casata che paga con vita propria. Nessun limite superiore MA rischi morte.</p>
+                <p><strong>Caratteristica Poteri:</strong> +FAT</p>
+                <p><strong>Temi Poteri:</strong> Parlare morti, evocare spiriti, vedere invisibile, drain vitale, necromanzia limitata, attraversare Velo, danno necrotic.</p>
+                <p><strong>⚠️ PERICOLO:</strong> Ogni potere ti avvicina a morte. Mictlan vivono equilibrio precario.</p>
+            </div>
+            
+            <section id="mictlan-l1">
+                <h2>Mictlan Livello 1</h2>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 1</span>
+                    <h4>👻 VEDERE OLTRE VELO</h4>
+                    
+                    <div class="power-cost">COSTO: 2 PF</div>
+                    
+                    <p><strong>DURATA:</strong> 10 minuti</p>
+                    
+                    <p><strong>EFFETTO:</strong> Occhi percepiscono Piano Spirituale sovrapposto a realtà. Vedi spiriti, fantasmi, aure morte.</p>
+                    
+                    <p><strong>VEDI:</strong></p>
+                    <ul>
+                        <li>Spiriti/Fantasmi (invisibili a occhio normale)</li>
+                        <li>Tracce morte recente (sangue splende argenteo, orme spiriti)</li>
+                        <li>Aura necrotic (magie morte, non-morti, oggetti maledetti = brillano nero)</li>
+                        <li>Persone vicine a morte (aura pallida, sbiadita)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Automatico (no tiro richiesto)</p>
+                    
+                    <p><strong>MALUS:</strong> Vedere troppo = disturbante. Mentre attivo, -1 a interazioni sociali normali (distratto da spiriti, sembri fissare vuoto).</p>
+                    
+                    <p><strong>NOTE:</strong> Potere signature Mictlan. Investigazione sovrannaturale. Elena lo usa costantemente (paga 2 PF ogni scena).</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 1</span>
+                    <h4>💬 PARLARE CON MORTI</h4>
+                    
+                    <div class="power-cost">COSTO: 3 PF</div>
+                    
+                    <p><strong>RANGE:</strong> Tocco (cadavere O spirito visibile)</p>
+                    <p><strong>DURATA:</strong> Conversazione (max 10 minuti)</p>
+                    
+                    <p><strong>EFFETTO:</strong> Evochi spirito morto. Appare come forma spettrale trasparente. Puoi conversare.</p>
+                    
+                    <p><strong>REQUISITI:</strong></p>
+                    <ul>
+                        <li>Corpo presente O morto entro Vicino (spirito ancora vicino)</li>
+                        <li>Morte entro 1 settimana (spirito non ancora andato oltre)</li>
+                        <li>Spirito deve voler rispondere (non puoi forzare)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Spirito appare chiaramente, collaborativo. Risponde 3 domande onestamente. Ricorda morte + eventi recenti vita.</li>
+                        <li><strong>7-9:</strong> Spirito confuso O riluttante. Risponde 1 domanda MA:
+                            <ul>
+                                <li>Ricordi frammentati (info parziale/vaga)</li>
+                                <li>Spirito arrabbiato/spaventato (comunicazione difficile)</li>
+                                <li>Conversazione attira altri spiriti Vicino (disturbano)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Spirito non risponde O peggio: spirito ostile/mentitore. PF pagati. Info falsa O spirito attacca (1d6 danno psichico).</li>
+                    </ul>
+                    
+                    <p><strong>LIMITAZIONI:</strong></p>
+                    <ul>
+                        <li>Spiriti possono mentire (se hanno motivo)</li>
+                        <li>Spiriti non sono onniscienti (sanno solo ciò che sapevano vivi)</li>
+                        <li>Morti molto tempo fa: spirito già andato oltre (impossibile richiamare senza rituale L5)</li>
+                    </ul>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 1</span>
+                    <h4>☠️ TOCCO GELO</h4>
+                    
+                    <div class="power-cost">COSTO: 2 PF</div>
+                    
+                    <p><strong>RANGE:</strong> Tocco</p>
+                    
+                    <p><strong>EFFETTO:</strong> Tocco infligge freddo morte. Energia vitale drenata.</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT (+ Attaccare se combattimento)</p>
+                    <ul>
+                        <li><strong>10+:</strong> <strong>2d6 danno necrotic</strong> (ignora Armatura fisica). Bersaglio rallentato: -1 CUO fino fine scena (freddo penetrante).</li>
+                        <li><strong>7-9:</strong> <strong>1d6 danno necrotic</strong>. No rallentamento. </li>
+                        <li><strong>6-:</strong> Manchi O tocco inefficace. PF pagati comunque. Energia dispersa.</li>
+                    </ul>
+                    
+                    <p><strong>EXTRA vs NON-MORTI:</strong> Danni ridotto metà (non-morti = già morti, resistono necrotic). MA vs viventi = efficace.</p>
+                    
+                    <p><strong>DESCRIZIONE:</strong> Mano diventa fredda come ghiaccio, dita pallide cadaveriche. Tocco lascia brina temporanea su pelle bersaglio.</p>
+                </div>
+            </section>
+            
+            <div class="separator">⟡</div>
+            
+            <section id="mictlan-l2">
+                <h2>Mictlan Livello 2</h2>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 2</span>
+                    <h4>👤 FORMA SPETTRALE</h4>
+                    
+                    <div class="power-cost">COSTO: 4 PF</div>
+                    
+                    <p><strong>DURATA:</strong> 10 minuti</p>
+                    
+                    <p><strong>EFFETTO:</strong> Corpo diventa semi-intangibile come fantasma. Attraversi oggetti solidi.</p>
+                    
+                    <p><strong>ABILITÀ:</strong></p>
+                    <ul>
+                        <li><strong>Intangibile:</strong> Puoi attraversare muri/porte (max 1m spessore). Non puoi attraversare sale consacrate/barriere magiche.</li>
+                        <li><strong>Immunità Fisica:</strong> Armi/proiettili normali passano attraverso (Armatura effettiva = infinita vs fisico). Magia colpisce normale.</li>
+                        <li><strong>Volo Lento:</strong> Leviti, ignori gravità. Velocità metà normale.</li>
+                        <li><strong>Silenzioso:</strong> Passi non fanno rumore.</li>
+                        <li><strong>Aspetto Spettrale:</strong> Semi-trasparente, brillamento debole. PNG vedono = spaventati.</li>
+                    </ul>
+                    
+                    <p><strong>LIMITAZIONI:</strong></p>
+                    <ul>
+                        <li>Non puoi toccare oggetti fisici (no aprire porte, no prendere chiavi)</li>
+                        <li>Non puoi attaccare corpo-a-corpo (mani passano attraverso)</li>
+                        <li>Magia funziona normale (puoi lanciare poteri)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Forma stabile. 10 minuti, controllo perfetto, trasforma avanti/indietro a volontà.</li>
+                        <li><strong>7-9:</strong> Forma instabile. Funziona MA scegli 1:
+                            <ul>
+                                <li>Dura solo 5 minuti</li>
+                                <li>Ogni volta attraversi muro = 1d4 danno (strain)</li>
+                                <li>Forma vacilla se subisci danno magico (tira +FAT O termina)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Trasformazione fallisce. PF pagati. Corpo diventa freddo doloroso (subisci -1 a tutto per 10 min).</li>
+                    </ul>
+                    
+                    <p><strong>TATTICO:</strong> Infiltrazione perfetta. Through-wall reconnaissance. Escape tool (nemici non possono colpire).</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 2</span>
+                    <h4>⚰️ EVOCARE SPIRITO</h4>
+                    
+                    <div class="power-cost">COSTO: 4 PF</div>
+                    
+                    <p><strong>DURATA:</strong> 10 minuti O finché distrutto</p>
+                    
+                    <p><strong>EFFETTO:</strong> Evochi spirito servitore da Piano Morti. Obbedisce comandi semplici.</p>
+                    
+                    <p><strong>SPIRITO SERVITORE:</strong></p>
+                    <ul>
+                        <li><strong>PF:</strong> 10</li>
+                        <li><strong>Armatura:</strong> N/A (intangibile vs fisico, vulnerabile vs magia)</li>
+                        <li><strong>Attacco:</strong> Tocco spettrale +4, 1d6 danno necrotic</li>
+                        <li><strong>Movimento:</strong> Volo lento, attraversa muri</li>
+                        <li><strong>Intelligenza:</strong> Animale (comandi 1-2 parole: "attacca", "esplora", "segui")</li>
+                        <li><strong>Aspetto:</strong> Forma umanoide nebbiosa, volto indistinto</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Spirito obbediente. 10 minuti, esegue comandi precisamente.</li>
+                        <li><strong>7-9:</strong> Spirito riluttante. Funziona MA scegli 1:
+                            <ul>
+                                <li>Dura solo 5 minuti</li>
+                                <li>Stats ridotti (PF 5, danno 1d4)</li>
+                                <li>Spirito lento eseguire comandi (agisce ultimo in iniziativa)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Spirito ostile. Appare MA ignora te, attacca casuale (alleati O nemici). PF pagati, devi disperdere O scappa.</li>
+                    </ul>
+                    
+                    <p><strong>COMBO:</strong> Scout (manda attraverso muro esplorare). Distrazione (nemici devono decidere: ignorare spirito O combatterlo). Assistente combattimento.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 2</span>
+                    <h4>🩸 DRAIN VITALE</h4>
+                    
+                    <div class="power-cost">COSTO: 0 PF (si autofinanzia)</div>
+                    
+                    <p><strong>RANGE:</strong> Tocco</p>
+                    
+                    <p><strong>EFFETTO:</strong> Succhi energia vitale da creatura vivente. Guarisci te trasferendo vita.</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Drain efficace. Bersaglio subisce <strong>2d6 danno necrotic</strong>. TU recuperi <strong>metà danno inflitto</strong> (arrotonda giù) come PF.</li>
+                        <li><strong>7-9:</strong> Drain parziale. Bersaglio subisce <strong>1d6 danno</strong>. Tu recuperi <strong>1d4 PF</strong> (disconnesso da danno inflitto).</li>
+                        <li><strong>6-:</strong> Drain fallisce. Nessun danno, nessun recupero. Feedback negativo: TU subisci 1d4 danno (energia rigettata).</li>
+                    </ul>
+                    
+                    <p><strong>LIMITAZIONI:</strong></p>
+                    <ul>
+                        <li>Funziona solo su creature VIVENTI (no non-morti, no costrutti, no spiriti)</li>
+                        <li>Non puoi superare PF massimi (recupero limitato a max PF)</li>
+                        <li>Moralmente discutibile (drain da innocente = atto malvagio)</li>
+                    </ul>
+                    
+                    <p><strong>USI ACCETTABILI:</strong></p>
+                    <ul>
+                        <li>Durante combattimento vs nemici (OK, stanno attaccando te)</li>
+                        <li>Da animali grandi consenzienti (cavallo, bue — sopravvivono)</li>
+                        <li>Da te stesso verso alleato (trasferisci TUA vita, invertendo effetto)</li>
+                    </ul>
+                    
+                    <p><strong>USI PROBLEMATICI:</strong></p>
+                    <ul>
+                        <li>Da civili inconsapevoli (vampirismo sociale)</li>
+                        <li>Da prigionieri indifesi (tortura)</li>
+                        <li>Abuso ripetuto (dipendenza drain)</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <div class="separator">⟡</div>
+            
+            <section id="mictlan-l3">
+                <h2>Mictlan Livello 3</h2>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 3</span>
+                    <h4>⚰️👥 LEGIONE SPETTRI</h4>
+                    
+                    <div class="power-cost">COSTO: 6 PF</div>
+                    
+                    <p><strong>DURATA:</strong> 10 minuti</p>
+                    
+                    <p><strong>EFFETTO:</strong> Evochi 6 spiriti guerrieri. Versione potenziata Evocare Spirito L2.</p>
+                    
+                    <p><strong>SPETTRI GUERRIERI (ciascuno):</strong></p>
+                    <ul>
+                        <li><strong>PF:</strong> 12</li>
+                        <li><strong>Armatura:</strong> Intangibile (immune fisico, vulnerabile magia)</li>
+                        <li><strong>Attacco:</strong> Arma spettrale +5, 1d8 danno necrotic</li>
+                        <li><strong>Movimento:</strong> Volo medio, attraversano ostacoli</li>
+                        <li><strong>Intelligenza:</strong> Tattica base (fiancheggiano, focus fire)</li>
+                        <li><strong>Aspetto:</strong> Soldati fantasma armatura antica, volti cavi</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Legione disciplinata. 6 spettri, obbediscono, 10 minuti.</li>
+                        <li><strong>7-9:</strong> Legione imperfetta. Solo 4 spettri. E scegli 1:
+                            <ul>
+                                <li>Dura solo 5 minuti</li>
+                                <li>Stats ridotti (PF 8, danno 1d6)</li>
+                                <li>Spettri attaccano nemico più vicino (no tattica)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Legione ribelle. 6 spettri appaiono MA ostili. Attaccano TUTTI viventi (te incluso). PF pagati, devi fuggire O disperderli.</li>
+                    </ul>
+                    
+                    <p><strong>TATTICO:</strong> Army in a can. 6v1 diventa 7v1 (tu + 6 spettri). Boss fight diventa gestibile. Visivamente: horror army emerge da terra.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 3</span>
+                    <h4>💀 MALEDIZIONE MORTE</h4>
+                    
+                    <div class="power-cost">COSTO: 5 PF</div>
+                    
+                    <p><strong>RANGE:</strong> Vicino</p>
+                    <p><strong>DURATA:</strong> 24 ore O finché dispelso</p>
+                    
+                    <p><strong>EFFETTO:</strong> Marchi bersaglio con simbolo morte. Lentamente decade.</p>
+                    
+                    <p><strong>MALEDIZIONE:</strong></p>
+                    <ul>
+                        <li><strong>Immediato:</strong> 2d6 danno necrotic</li>
+                        <li><strong>Persistente:</strong> Ogni 6 ore, bersaglio subisce 1d6 danno automatico (non resistibile)</li>
+                        <li><strong>Debilitante:</strong> -2 a FOR e CUO (corpo decade lentamente)</li>
+                        <li><strong>Visibile:</strong> Simbolo teschio nero appare su fronte bersaglio (tutti vedono)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT (VS Resistere +FOR bersaglio)</p>
+                    <ul>
+                        <li><strong>10+:</strong> Maledizione piena. Tutti effetti, 24 ore.</li>
+                        <li><strong>7-9:</strong> Maledizione ridotta. Solo danno immediato (2d6) + debilitazione (-1 FOR/CUO) per 12 ore. No danno persistente.</li>
+                        <li><strong>6-:</strong> Maledizione rigettata. PF pagati. Bersaglio immune per 24 ore. Energia maledetta torna: TU subisci 1d6 danno.</li>
+                    </ul>
+                    
+                    <p><strong>RIMOZIONE:</strong></p>
+                    <ul>
+                        <li>Purificazione Suprema Avalon L4</li>
+                        <li>Tu stesso puoi revocare (azione gratuita, a distanza)</li>
+                        <li>Bersaglio muore = maledizione consuma anima (complicazione resurrezione)</li>
+                    </ul>
+                    
+                    <p><strong>MORALE:</strong> Maledizione = atto aggressivo serio. Usala solo vs nemici meritevoli. Maledire innocente = atto malvagio (conseguenze narrative).</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 3</span>
+                    <h4>🌫️ CAMMINARE CONFINE</h4>
+                    
+                    <div class="power-cost">COSTO: 5 PF</div>
+                    
+                    <p><strong>DURATA:</strong> 10 minuti</p>
+                    
+                    <p><strong>EFFETTO:</strong> Entri Piano Spiriti fisicamente. Esisti in entrambi mondi simultaneamente.</p>
+                    
+                    <p><strong>ABILITÀ:</strong></p>
+                    <ul>
+                        <li><strong>Vedi Entrambi:</strong> Mondo fisico + Piano Spiriti sovrapposti</li>
+                        <li><strong>Interazione:</strong> Puoi toccare spiriti (attaccare, parlare fisicamente) E oggetti fisici</li>
+                        <li><strong>Semi-Intangibile:</strong> Attacchi fisici hanno -2 colpirti (tra mondi). Magia colpisce normale.</li>
+                        <li><strong>Volo Spirito:</strong> Leviti, ignori ostacoli fisici parzialmente (attraversi con sforzo)</li>
+                        <li><strong>Presenza:</strong> Spiriti ti vedono, possono comunicare direttamente</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Transizione fluida. Controllo perfetto, 10 minuti, torni quando vuoi (azione gratuita).</li>
+                        <li><strong>7-9:</strong> Transizione instabile. Funziona MA scegli 1:
+                            <ul>
+                                <li>Dura solo 5 minuti</li>
+                                <li>Ogni minuto = 1d4 danno (strain essere in due piani)</li>
+                                <li>Quando torni = disorientato (-1 forward)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Transizione fallisce. PF pagati. Intrappolato tra mondi (10 secondi terrificanti, vedi entrambi MA non puoi agire). Subisci 2d6 danno psichico.</li>
+                    </ul>
+                    
+                    <p><strong>UTILITY:</strong> Parlare spiriti complessi. Combattere spettri (ora possono colpirti MA tu puoi colpirli). Esplorare Piano Spiriti (pericoloso MA info uniche).</p>
+                </div>
+            </section>
+            
+            <div class="separator">⟡</div>
+            
+            <section id="mictlan-l4">
+                <h2>Mictlan Livello 4</h2>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 4</span>
+                    <h4>☠️💀 TOCCO MORTE</h4>
+                    
+                    <div class="power-cost">COSTO: 8 PF</div>
+                    
+                    <p><strong>RANGE:</strong> Tocco</p>
+                    
+                    <p><strong>EFFETTO:</strong> Canalizzi essenza morte pura. Tocco può uccidere istantaneamente.</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT (VS Resistere +FOR bersaglio)</p>
+                    <ul>
+                        <li><strong>10+:</strong> Morte istantanea. Bersaglio crolla, spirito lascia corpo. Funziona su creature LS 6- automaticamente. Creature LS 7+:
+                            <ul>
+                                <li>Se PF attuali ≤ 30% massimo → morte</li>
+                                <li>Se PF > 30% → subisce 6d6 danno necrotic invece morte</li>
+                            </ul>
+                        </li>
+                        <li><strong>7-9:</strong> Tocco severo. Bersaglio subisce <strong>4d6 danno necrotic</strong> + condizione Morente (come se fosse a 0 PF, deve tirare Ultimo Respiro SE scende a 0 da questo danno).</li>
+                        <li><strong>6-:</strong> Tocco fallisce. PF pagati. Energia morte rigettata: TU subisci 3d6 danno necrotic (feedback).</li>
+                    </ul>
+                    
+                    <p><strong>LIMITAZIONI:</strong></p>
+                    <ul>
+                        <li>Non funziona su non-morti (già morti)</li>
+                        <li>Non funziona su costrutti/elementali (no forza vitale)</li>
+                        <li>Boss leggendari (LS 10+) immuni a morte istantanea (subiscono solo danno)</li>
+                    </ul>
+                    
+                    <p><strong>MORALE:</strong> Potere più letale Mictlan. Instant kill tool. Usalo solo quando giustificato (nemico impossibile, situazione disperata). Abuso = corruzione morale.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 4</span>
+                    <h4>⚰️ ANIMARE CADAVERE</h4>
+                    
+                    <div class="power-cost">COSTO: 6 PF</div>
+                    
+                    <p><strong>RANGE:</strong> Tocco (cadavere)</p>
+                    <p><strong>DURATA:</strong> 1 ora O finché distrutto</p>
+                    
+                    <p><strong>EFFETTO:</strong> Cadavere si alza come non-morto sotto tuo controllo. Zombie O scheletro (dipende da condizione corpo).</p>
+                    
+                    <p><strong>NON-MORTO SERVITORE:</strong></p>
+                    <ul>
+                        <li><strong>PF:</strong> 20</li>
+                        <li><strong>Armatura:</strong> 2</li>
+                        <li><strong>Attacco:</strong> Artigli/Morso +4, 1d8 danno</li>
+                        <li><strong>Movimento:</strong> Lento (metà normale)</li>
+                        <li><strong>Intelligenza:</strong> Nessuna (obbedisce comandi semplici ciecamente)</li>
+                        <li><strong>Immunità:</strong> Dolore, paura, veleni, stanchezza</li>
+                        <li><strong>Debolezza:</strong> Fuoco (danno × 1.5), acqua santa (2d6 danno)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Animazione perfetta. Zombie obbediente, 1 ora, stats pieni.</li>
+                        <li><strong>7-9:</strong> Animazione imperfetta. Funziona MA scegli 1:
+                            <ul>
+                                <li>Dura solo 30 minuti</li>
+                                <li>Stats ridotti (PF 15, Armatura 1)</li>
+                                <li>Zombie goffo (movimento molto lento, -2 attacco)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Animazione fallisce O peggio: cadavere si alza MA posseduto da spirito ostile (Custode controlla). Attacca tutti viventi. PF pagati.</li>
+                    </ul>
+                    
+                    <p><strong>ETICA:</strong></p>
+                    <ul>
+                        <li>Animare nemico caduto = accettabile (guerra)</li>
+                        <li>Animare sconosciuto senza permesso = moralmente grigio</li>
+                        <li>Animare amico/familiare defunto = PROFANAZIONE grave (a meno che consenso pre-morte)</li>
+                    </ul>
+                    
+                    <p><strong>UTILITY:</strong> Lavoro fisico (zombie trasporta, scava). Combattimento (tank usa-e-getta). Distrazione. Esca.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 4</span>
+                    <h4>👻 POSSESSIONE</h4>
+                    
+                    <div class="power-cost">COSTO: 7 PF</div>
+                    
+                    <p><strong>RANGE:</strong> Vicino</p>
+                    <p><strong>DURATA:</strong> 10 minuti O finché espulso</p>
+                    
+                    <p><strong>EFFETTO:</strong> Spirito lascia corpo tuo, possiede corpo altrui. Controlli bersaglio.</p>
+                    
+                    <p><strong>PROCESSO:</strong></p>
+                    <ol>
+                        <li>Tuo corpo crolla (incosciente, vulnerabile)</li>
+                        <li>Spirito tuo entra corpo bersaglio</li>
+                        <li>Controlli corpo bersaglio (usi sue stats, tue conoscenze)</li>
+                        <li>Dopo 10 min O se espulso → torni corpo tuo</li>
+                    </ol>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT (VS Resistere +MEN bersaglio)</p>
+                    <ul>
+                        <li><strong>10+:</strong> Possessione completa. Controllo totale bersaglio, 10 minuti, bersaglio inconsapevole (ricorda nulla).</li>
+                        <li><strong>7-9:</strong> Possessione parziale. Controlli MA scegli 1:
+                            <ul>
+                                <li>Dura solo 5 minuti</li>
+                                <li>Bersaglio lotta (ogni azione importante = Resistere +MEN O perdi controllo 1 round)</li>
+                                <li>Controllo goffo (usi sue stats -2 a tutto, non familiare con corpo)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Possessione rigettata. PF pagati. Spirito tuo espulso dolorosamente: torni corpo tuo MA subisci 3d6 danno psichico + stordito 1 round.</li>
+                    </ul>
+                    
+                    <p><strong>DURANTE POSSESSIONE:</strong></p>
+                    <ul>
+                        <li>Corpo tuo = vulnerabile (0 difese, chiunque può ucciderlo)</li>
+                        <li>Se corpo tuo subisce danno → tira +FOR O espulso forzatamente</li>
+                        <li>Se corpo posseduto muore → TU subisci 4d6 danno psichico MA torni corpo tuo</li>
+                        <li>Se corpo tuo muore mentre possiedi → intrappolato corpo bersaglio permanente (divent bersaglio, PG perso)</li>
+                    </ul>
+                    
+                    <p><strong>UTILITY:</strong> Infiltrazione (possiedi guardia, attraversi checkpoint). Info (possiedi nemico, scopri segreti). Sabotaggio (possiedi leader, dai ordini errati).</p>
+                    
+                    <p><strong>RISCHIO:</strong> Corpo tuo indifeso. Se alleati non proteggono = morte possibile.</p>
+                </div>
+            </section>
+            
+            <div class="separator">⟡</div>
+            
+            <section id="mictlan-l5">
+                <h2>Mictlan Livello 5 (Leggendari)</h2>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 5</span>
+                    <h4>💀🌟 AVATAR MORTE</h4>
+                    
+                    <div class="power-cost">COSTO: 10 PF</div>
+                    
+                    <p><strong>DURATA:</strong> 10 minuti</p>
+                    
+                    <p><strong>EFFETTO:</strong> Trascendi mortalità, diventi avatar Morte stessa. Forma finale Mictlan.</p>
+                    
+                    <p><strong>TRASFORMAZIONE:</strong></p>
+                    <ul>
+                        <li>Altezza: 2.5m</li>
+                        <li>Corpo: Scheletro coperto veli neri fluttuanti</li>
+                        <li>Occhi: Vuoti brillanti blu ghiaccio</li>
+                        <li>Arma: Falce spettrale 2m (automatica)</li>
+                        <li>Aura: Freddo penetrante (temperatura cala 10°C Vicino)</li>
+                    </ul>
+                    
+                    <p><strong>ABILITÀ:</strong></p>
+                    <ul>
+                        <li><strong>+3 a TUTTE caratteristiche</strong></li>
+                        <li><strong>Intangibile:</strong> Immune danno fisico (solo magia ferisce)</li>
+                        <li><strong>Volo:</strong> Velocità normale, ignori gravità</li>
+                        <li><strong>Falce Morte:</strong> Attacco +8, 3d8 danno necrotic, Medio range</li>
+                        <li><strong>Aura Morte:</strong> Nemici Vicini -2 a tutti tiri + 1d4 danno necrotic inizio loro turno (presenza drenante)</li>
+                        <li><strong>Vedere Anime:</strong> Vedi PF esatti ogni creatura (sanno quanto vita hanno)</li>
+                        <li><strong>Presenza Terrificante:</strong> PNG LS 6- devono Resistere +CUO O fuggono terrorizzati</li>
+                        <li><strong>Immunità:</strong> Paura, dolore, veleni, fatica, charme</li>
+                        <li>Tutti poteri Mictlan costano -5 PF (min 1)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Avatar perfetto. Controllo completo, 10 minuti pieni.</li>
+                        <li><strong>7-9:</strong> Avatar instabile. Bonus funzionano MA Morte sussurra: ogni turno vedi "momento morte" ogni creatura Vicina. Difficile distinguere chi DEVE morire da chi vivi. Resistere +MEN ogni turno O attacchi alleato (confusione).</li>
+                        <li><strong>6-:</strong> Trasformazione rigettata. PF pagati. Morte rifiuta: corpo collassa, scendi a 0 PF (devi tirare Ultimo Respiro immediatamente).</li>
+                    </ul>
+                    
+                    <p><strong>DOPO AVATAR:</strong> Quando termina, -3 a tutto per 24 ore (vicinanza Morte lascia segno). Aspetto cambia permanentemente: capelli bianchi alle tempie, occhi riflesso blu pallido.</p>
+                    
+                    <p><strong>NOTE:</strong> "Final form" Mictlan. Incarnazione Morte. Elena userebbe solo vs minacce esistenziali.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 5</span>
+                    <h4>👻💫 RIPORTARE SPIRITO</h4>
+                    
+                    <div class="power-cost">COSTO: 15 PF + Sacrificio (oggetto significato emotivo profondo per morto)</div>
+                    
+                    <p><strong>RANGE:</strong> Tocco (corpo)</p>
+                    <p><strong>RITUALE:</strong> 1 ora, cerchio anime, candele, incenso, preghiere</p>
+                    
+                    <p><strong>REQUISITI:</strong></p>
+                    <ul>
+                        <li>Corpo intatto (almeno 75%)</li>
+                        <li>Morte entro 24 ore</li>
+                        <li>Spirito non vincolato da patti</li>
+                        <li>Spirito deve voler tornare</li>
+                        <li>Sacrificio: oggetto amato da morto (anello matrimonio, foto famiglia, reliquia)</li>
+                    </ul>
+                    
+                    <p><strong>EFFETTO:</strong> Viaggi Piano Spiriti, trovi anima morto, lo riporti.</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Resurrezione riuscita. Morto torna a 1 PF. Conserva:
+                            <ul>
+                                <li>Tutte caratteristiche</li>
+                                <li>Memoria completa</li>
+                                <li>Personalità intatta</li>
+                            </ul>
+                            MA: -1 caratteristica permanente (casuale) + connessione Piano Spiriti (vede spiriti debolmente sempre).
+                        </li>
+                        <li><strong>7-9:</strong> Resurrezione complicata. Torna MA scegli 1:
+                            <ul>
+                                <li>Perde 2 caratteristiche permanentemente</li>
+                                <li>Ricordi danneggiati (amnesia parziale: dimentica 1 Legame)</li>
+                                <li>Parte anima resta oltre: ogni notte sogna Piano Morti (disturbante, -1 Stress recovery)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Resurrezione fallisce. PF consumati, sacrificio perso. Spirito non trovato O rifiuta tornare. Possibile: spirito tornato MA cambiato (personalità alterata, Custode controlla come PNG).</li>
+                    </ul>
+                    
+                    <p><strong>DIFFERENZA vs RESURREZIONE AVALON/IFE:</strong></p>
+                    <ul>
+                        <li>Mictlan: Viaggia Piano Spiriti, persuade anima tornare. Consenso spirito necessario. Connessione morte permanente.</li>
+                        <li>Avalon: Forza luce divina. Richiede artefatto. Purezza.</li>
+                        <li>Ife: Ciclo naturale. Richiede sacrificio vivente. Legame natura.</li>
+                    </ul>
+                    
+                    <p><strong>NOTE:</strong> Versione Mictlan è più "rispettosa" (chiede permesso spirito) MA lascia cicatrici profonde (connessione Piano Morti).</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 5</span>
+                    <h4>💀🌊 MAREMOTO ANIME</h4>
+                    
+                    <div class="power-cost">COSTO: 20 PF (TUTTO rimanente, min 20) — PROBABILMENTE TI UCCIDE</div>
+                    
+                    <p><strong>RANGE:</strong> Vista (punto epicentro)</p>
+                    <p><strong>AREA:</strong> 50m raggio</p>
+                    
+                    <p><strong>EFFETTO:</strong> Squarci Velo tra vita/morte. Ondata spiriti emerge, travolge viventi.</p>
+                    
+                    <p><strong>DEVASTAZIONE:</strong></p>
+                    <ul>
+                        <li><strong>Ondata Spettrale:</strong> Migliaia spiriti urlanti emergono, attraversano area. Tutti viventi in area subiscono <strong>6d8 danno necrotic</strong></li>
+                        <li><strong>Terrore:</strong> Tutti (alleati + nemici) devono Resistere +CUO O fuggono terrorizzati 10 minuti</li>
+                        <li><strong>Drain Vitale:</strong> Temperatura cala 20°C. Piante appassiscono. Piccoli animali muoiono.</li>
+                        <li><strong>Spiriti Persistenti:</strong> 2d6 spiriti ostili restano materializzati, attaccano casuale (LS 4 ciascuno)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Maremoto controllato. Puoi escludere alleati (spiriti riconoscono). Danno pieno nemici, tu immune.</li>
+                        <li><strong>7-9:</strong> Maremoto indiscriminato. Colpisce TUTTI in area (alleati inclusi). Tu subisci metà danno (3d8). Spiriti restanti attaccano casuale (non distingui amico/nemico).</li>
+                        <li><strong>6-:</strong> Maremoto fuori controllo. Esplode centrato su TE. Danno pieno tutti Lontano. Squarcio Velo permanente (zona 20m maledetta: spiriti filtrano costantemente, pericolosa). Tu scendi a 0 PF automaticamente (devi tirare Ultimo Respiro). PF consumati.</li>
+                    </ul>
+                    
+                    <p><strong>DOPO MAREMOTO:</strong></p>
+                    <ul>
+                        <li>Scendi a 0 PF (usato tutto = autolesionista)</li>
+                        <li>Devi tirare Ultimo Respiro IMMEDIATAMENTE</li>
+                        <li>Se sopravvivi: connessione Piano Morti permanente. Spiriti ti seguono ovunque (visibili solo a te). -1 a sonno (incubi costanti).</li>
+                    </ul>
+                    
+                    <p><strong>CONSEGUENZE:</strong></p>
+                    <ul>
+                        <li><strong>Ambientali:</strong> Zona maledetta creata. Velo sottile permanentemente. Spiriti infestano area.</li>
+                        <li><strong>Politiche:</strong> Velo infranto totalmente (evento visibile tutta Milano + oltre)</li>
+                        <li><strong>Personali:</strong> Morte ti ha toccato profondamente. Sei cambiato. Parte di te resta Piano Spiriti sempre.</li>
+                    </ul>
+                    
+                    <p><strong>NOTE:</strong> "Nuke" Mictlan. Potere più pericoloso PER TE nel gioco. Usarlo = accetti morire probabilmente. Solo atto finale disperato. Elena userebbe solo per salvare mondo, sapendo è suicidio. Momento eroico tragico.</p>
+                </div>
+            </section>
+            
+            <hr style="margin: 80px 0;">
+            
+            <div class="info-box" style="text-align: center; margin-top: 60px; background: linear-gradient(135deg, rgba(243, 156, 18, 0.1), rgba(243, 156, 18, 0.2)); border: 3px solid var(--accent-gold); padding: 50px;">
+                <h2 style="color: var(--accent-gold); font-size: 42px; margin-bottom: 30px;">⟡ TUTTI I 60 POTERI COMPLETATI! ⟡</h2>
+                
+                <p style="font-size: 20px; line-height: 2; margin-bottom: 25px;">
+                    <strong>15 Poteri × 4 Casate = 60 Poteri Totali</strong><br>
+                    Sistema magia completo documentato!
+                </p>
+                
+                <div style="border-top: 2px solid var(--accent-gold); padding-top: 30px; margin-top: 30px;">
+                    <p style="font-size: 18px; margin-bottom: 15px;"><strong>Riepilogo Casate:</strong></p>
+                    <ul style="list-style: none; margin: 0; padding: 0; font-size: 16px;">
+                        <li style="margin: 8px 0;">✅ <strong style="color: #ffd700;">Avalon:</strong> 15 Poteri (Luce, Guarigione, Protezione)</li>
+                        <li style="margin: 8px 0;">✅ <strong style="color: #8b00ff;">Umbra:</strong> 15 Poteri (Ombre, Inganno, Controllo)</li>
+                        <li style="margin: 8px 0;">✅ <strong style="color: #2ecc71;">Ife:</strong> 15 Poteri (Vita, Natura, Trasformazione)</li>
+                        <li style="margin: 8px 0;">✅ <strong style="color: #95a5a6;">Mictlan:</strong> 15 Poteri (Morte, Spiriti, Necromanzia)</li>
+                    </ul>
+                </div>
+                
+                <p style="margin-top: 40px; font-size: 18px; color: var(--accent-gold);">
+                    <strong>Prossimo:</strong> Parte V (Milano) + Parte VI (Custode) + Parte VII (Bestiari) + Schede!
+                </p>
+            </div>
+            
+            <div class="page-navigation">
+                <a href="parte4c.html" class="nav-button">← Ife</a>
+                <a href="parte5.html" class="nav-button">Parte V: Milano Mitica →</a>
+            </div>
+            
+        </main>
+    </div>
+</body>
+</html>
