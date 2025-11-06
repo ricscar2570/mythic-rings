@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythic Rings v2.1 - Poteri Umbra</title>
+    <style>
+        /* [USA STESSO CSS DI parte4.html - copia identico] */
+        :root {
+            --primary-dark: #1a1a2e;
+            --secondary-dark: #16213e;
+            --accent-gold: #f39c12;
+            --accent-gold-dark: #e67e22;
+            --text-light: #ecf0f1;
+            --text-muted: #95a5a6;
+            --border-gold: rgba(243, 156, 18, 0.3);
+            --shadow-glow: 0 0 20px rgba(243, 156, 18, 0.3);
+            --umbra-color: #8b00ff;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Georgia', 'Palatino', 'Times New Roman', serif;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 50%, #0f3460 100%);
+            background-attachment: fixed;
+            color: var(--text-light);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        
+        .page-wrapper { display: flex; min-height: 100vh; }
+        
+        .sidebar {
+            width: 300px;
+            background: linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, rgba(22, 33, 62, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            border-right: 2px solid var(--border-gold);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 25px 18px;
+            z-index: 1000;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .sidebar::-webkit-scrollbar { width: 8px; }
+        .sidebar::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.3); }
+        .sidebar::-webkit-scrollbar-thumb { background: var(--accent-gold); border-radius: 4px; }
+        
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-gold);
+        }
+        
+        .sidebar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+            letter-spacing: 1px;
+        }
+        
+        .sidebar-version {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        .menu-section { margin-bottom: 25px; }
+        
+        .menu-title {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            padding-left: 8px;
+            border-left: 3px solid var(--accent-gold);
+        }
+        
+        .menu-items { list-style: none; }
+        .menu-items li { margin-bottom: 5px; }
+        
+        .menu-items a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 13px;
+            display: block;
+            padding: 7px 10px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .menu-items a:hover {
+            background: rgba(243, 156, 18, 0.1);
+            border-left-color: var(--accent-gold);
+            padding-left: 15px;
+            color: var(--accent-gold);
+        }
+        
+        .menu-items a.active {
+            background: rgba(243, 156, 18, 0.2);
+            border-left-color: var(--accent-gold);
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        .main-content {
+            margin-left: 300px;
+            flex: 1;
+            padding: 50px 70px;
+            max-width: 1400px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(5px);
+            min-height: 100vh;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Palatino', 'Georgia', serif;
+            color: var(--accent-gold);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 46px;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 18px;
+            margin-bottom: 40px;
+            text-shadow: 0 0 20px rgba(243, 156, 18, 0.4);
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            font-size: 34px;
+            margin-top: 55px;
+            padding-left: 18px;
+            border-left: 5px solid var(--accent-gold);
+        }
+        
+        h3 { font-size: 26px; color: var(--accent-gold-dark); }
+        h4 { font-size: 20px; color: var(--text-light); }
+        
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            line-height: 1.9;
+            font-size: 16px;
+        }
+        
+        strong { color: var(--accent-gold); font-weight: bold; }
+        em { font-style: italic; color: var(--accent-gold-dark); }
+        
+        ul, ol { margin-left: 32px; margin-bottom: 18px; }
+        ul li, ol li { margin-bottom: 10px; line-height: 1.7; }
+        ul li::marker { color: var(--accent-gold); }
+        ol li::marker { color: var(--accent-gold); font-weight: bold; }
+        
+        .power-box {
+            background: linear-gradient(135deg, rgba(139, 0, 255, 0.08), rgba(139, 0, 255, 0.15));
+            border: 3px solid rgba(139, 0, 255, 0.5);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 0 20px rgba(139, 0, 255, 0.4);
+        }
+        
+        .power-box h4 {
+            margin-top: 0;
+            color: var(--umbra-color);
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+        
+        .power-level {
+            display: inline-block;
+            background: var(--umbra-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        
+        .power-cost {
+            background: rgba(139, 0, 255, 0.2);
+            border: 2px solid var(--umbra-color);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 12px 0;
+            font-weight: bold;
+            color: var(--umbra-color);
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.05), rgba(243, 156, 18, 0.1));
+            border: 2px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .info-box h3, .info-box h4 {
+            margin-top: 0;
+            color: var(--accent-gold);
+        }
+        
+        .separator {
+            text-align: center;
+            font-size: 28px;
+            color: var(--accent-gold);
+            margin: 50px 0;
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+        
+        a:hover {
+            color: var(--accent-gold);
+            border-bottom-color: var(--accent-gold);
+        }
+        
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 70px;
+            padding-top: 35px;
+            border-top: 2px solid var(--border-gold);
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+            border: none;
+            font-size: 15px;
+        }
+        
+        .nav-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(243, 156, 18, 0.6);
+            color: white;
+            border: none;
+        }
+        
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+            margin: 45px 0;
+        }
+        
+        @media (max-width: 1024px) {
+            .sidebar { width: 260px; }
+            .main-content { margin-left: 260px; padding: 40px 45px; }
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 2px solid var(--border-gold);
+            }
+            .main-content { margin-left: 0; padding: 30px 20px; }
+            h1 { font-size: 34px; }
+            h2 { font-size: 26px; }
+            .page-navigation { flex-direction: column; gap: 12px; }
+            .nav-button { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">⟡ MYTHIC RINGS ⟡</div>
+                <div class="sidebar-version">Versione 2.1 - FINALE</div>
+            </div>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Navigazione</div>
+                <ul class="menu-items">
+                    <li><a href="index.html">🏠 Homepage</a></li>
+                    <li><a href="parte4.html">← Parte IV (Mosse Base)</a></li>
+                    <li><a href="parte4c.html">Prossimo: Ife →</a></li>
+                </ul>
+            </nav>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Umbra - Questa Sezione</div>
+                <ul class="menu-items">
+                    <li><a href="#umbra-l1" class="active">Livello 1 (Base)</a></li>
+                    <li><a href="#umbra-l2">Livello 2</a></li>
+                    <li><a href="#umbra-l3">Livello 3</a></li>
+                    <li><a href="#umbra-l4">Livello 4</a></li>
+                    <li><a href="#umbra-l5">Livello 5 (Leggendari)</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            
+            <h1>Capitolo 21: Poteri Umbra</h1>
+            
+            <div class="info-box" style="background: linear-gradient(135deg, rgba(139, 0, 255, 0.05), rgba(139, 0, 255, 0.1)); border-color: rgba(139, 0, 255, 0.5);">
+                <h3 style="color: #8b00ff;">🌑 Filosofia Umbra</h3>
+                <p><strong>Essenza:</strong> Ombre, inganno, infiltrazione, controllo, manipolazione. Umbra sono agenti nell'oscurità, assassini silenziosi, maestri segreti.</p>
+                <p><strong>Risorsa:</strong> Corruzione (0-5). Ogni potere contamina anima. A 5 = trasformazione in creatura ombra (PERDITA PG).</p>
+                <p><strong>Caratteristica Poteri:</strong> +FAT</p>
+                <p><strong>Temi Poteri:</strong> Invisibilità, teletrasporto ombre, veleni, controllo mentale, illusioni, danno psichico, spionaggio.</p>
+                <p><strong>⚠️ PERICOLO:</strong> Umbra vive sul filo. Corruzione NON si riduce facilmente. Ogni potere usato = passo verso abisso.</p>
+            </div>
+            
+            <section id="umbra-l1">
+                <h2>Umbra Livello 1</h2>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 1</span>
+                    <h4>🌑 FONDERSI NELLE OMBRE</h4>
+                    
+                    <div class="power-cost">COSTO: +1 Corruzione</div>
+                    
+                    <p><strong>DURATA:</strong> Concentrazione (max 10 minuti)</p>
+                    <p><strong>REQUISITO:</strong> Devi essere in area buia/ombreggiata (no luce diretta)</p>
+                    
+                    <p><strong>EFFETTO:</strong> Ti fondi letteralmente nelle ombre. Diventi invisibile finché resti in oscurità.</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Invisibilità perfetta. Nessuno ti vede/sente. Puoi muoverti lento senza rivelare posizione.</li>
+                        <li><strong>7-9:</strong> Invisibile MA imperfetto. Scegli 1:
+                            <ul>
+                                <li>Sagoma vaga visibile se ti muovi (fermi = invisibile)</li>
+                                <li>Dura solo 5 minuti</li>
+                                <li>Se entri luce diretta, dissolvi istantaneamente (no graduale)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Fusione fallisce. +1 Corruzione MA nessun effetto. Ombre ti rigettano, lasciandoti esposto + disorientato (-1 forward).</li>
+                    </ul>
+                    
+                    <p><strong>INTERROMPE SE:</strong> Attacchi, usi altro potere, entri luce forte, subisci danno.</p>
+                    
+                    <p><strong>NOTE:</strong> Potere signature Umbra. Infiltrazione perfetta. Sofia lo usa costantemente (accumula Corruzione velocemente).</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 1</span>
+                    <h4>🗡️ LAMA OMBRA</h4>
+                    
+                    <div class="power-cost">COSTO: +1 Corruzione</div>
+                    
+                    <p><strong>DURATA:</strong> Scena</p>
+                    
+                    <p><strong>EFFETTO:</strong> Ombre solidificano in lama oscura. Materializzi pugnale/spada corta fatta oscurità pura.</p>
+                    
+                    <p><strong>STATISTICHE:</strong></p>
+                    <ul>
+                        <li><strong>Danno:</strong> 1d8 + veleno ombra (1d4 danno/round per 3 round)</li>
+                        <li><strong>Tag:</strong> Mischia, Silenzioso, Ignora Armatura Leggera (1-2)</li>
+                        <li>Peso zero, passa attraverso materiali non-magici sottili</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Lama perfetta. Dura scena completa, danno pieno.</li>
+                        <li><strong>7-9:</strong> Lama instabile. Funziona MA scegli 1:
+                            <ul>
+                                <li>Danno ridotto (1d6 invece 1d8, no veleno)</li>
+                                <li>Dura solo 10 minuti</li>
+                                <li>Ogni colpo inflitto, risucchia 1 PF da TE (lama affamata)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Lama non si forma. Corruzione pagata. Ombre avvolgono mano dolorosamente (1d4 danno psichico).</li>
+                    </ul>
+                    
+                    <p><strong>BONUS vs LUCE:</strong> Se colpisci creatura luce (Avalon, angeli, etc), danno +1d6 (ombra corrode luce).</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 1</span>
+                    <h4>👁️ OCCHI NOTTURNI</h4>
+                    
+                    <div class="power-cost">COSTO: +1 Corruzione</div>
+                    
+                    <p><strong>DURATA:</strong> 1 ora</p>
+                    
+                    <p><strong>EFFETTO:</strong> Occhi diventano completamente neri (inquietante). Vedi perfettamente al buio come fosse giorno.</p>
+                    
+                    <p><strong>BONUS:</strong></p>
+                    <ul>
+                        <li>Visione oscurità totale (come visione notturna + infrarossi)</li>
+                        <li>Vedi aure magiche (brillano debolmente)</li>
+                        <li>Percepisci movimento anche dietro ostacoli (+2 MEN notare imboscate)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Automatico (no tiro richiesto)</p>
+                    
+                    <p><strong>MALUS SOCIALE:</strong> Occhi neri totali. PNG normali -1 reazioni (inquietante). Bambini/animali spaventati.</p>
+                    
+                    <p><strong>NOTE:</strong> Utility costante. Umbra spesso mantiene attivo preventivamente (+1 Corruzione per missione notturna). Occhi ritornano normali quando finisce.</p>
+                </div>
+            </section>
+            
+            <div class="separator">⟡</div>
+            
+            <section id="umbra-l2">
+                <h2>Umbra Livello 2</h2>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 2</span>
+                    <h4>🌀 PASSO OMBRA</h4>
+                    
+                    <div class="power-cost">COSTO: +1 Corruzione</div>
+                    
+                    <p><strong>RANGE:</strong> Lontano (devi vedere destinazione)</p>
+                    <p><strong>REQUISITO:</strong> Punto partenza E destinazione devono essere in ombra</p>
+                    
+                    <p><strong>EFFETTO:</strong> Teletrasporto istantaneo attraverso Piano Ombre. Dissolvi in ombra punto A, riapparisci punto B.</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Teletrasporto pulito. Arrivi esattamente dove volevi, orientato corretto, pronto agire.</li>
+                        <li><strong>7-9:</strong> Teletrasporto riesce MA complicato. Scegli 1:
+                            <ul>
+                                <li>Arrivi disorientato (-1 forward)</li>
+                                <li>Lasci scia ombra visibile (tutti sanno dove sei andato)</li>
+                                <li>Piano Ombre ti "morde" durante passaggio (1d6 danno psichico)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Teletrasporto fallisce. Corruzione pagata MA resti fermo. O peggio: finisci location random entro Medio (Custode sceglie dove, spesso brutto).</li>
+                    </ul>
+                    
+                    <p><strong>TATTICO:</strong> Eccellente per attacchi surprise, fuga rapida, attraversare ostacoli. Combinato con Fondersi = assassino perfetto.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 2</span>
+                    <h4>🕷️ VELENO PSICHICO</h4>
+                    
+                    <div class="power-cost">COSTO: +2 Corruzione</div>
+                    
+                    <p><strong>RANGE:</strong> Tocco</p>
+                    
+                    <p><strong>EFFETTO:</strong> Infliggi veleno che attacca mente invece corpo. Tocchi bersaglio, ombre entrano pelle.</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Bersaglio avvelenato. Effetti immediati:
+                            <ul>
+                                <li><strong>2d6 danno psichico</strong> (ignora Armatura fisica)</li>
+                                <li><strong>Afflizione:</strong> -2 a MEN e CUO per 1 ora (mente offuscata)</li>
+                                <li><strong>Paura:</strong> Bersaglio vede ombre minacciose ovunque (paranoia)</li>
+                            </ul>
+                        </li>
+                        <li><strong>7-9:</strong> Veleno funziona MA ridotto. 1d6 danno psichico + solo -1 a MEN/CUO per 10 minuti. No paura.</li>
+                        <li><strong>6-:</strong> Veleno non attecchisce. Corruzione pagata. Bersaglio sente contatto freddo MA immune per resto scena.</li>
+                    </ul>
+                    
+                    <p><strong>CURA:</strong> Magia purificazione (Avalon L3+) O riposo completo (8 ore annulla).</p>
+                    
+                    <p><strong>COMBO:</strong> Eccellente pre-combattimento (debuffa nemico forte) O assassinio silenzioso (veleno = kill silenziosa su PNG normale).</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 2</span>
+                    <h4>🎭 VELO ILLUSIONE</h4>
+                    
+                    <div class="power-cost">COSTO: +2 Corruzione</div>
+                    
+                    <p><strong>DURATA:</strong> Concentrazione (max 1 ora)</p>
+                    
+                    <p><strong>EFFETTO:</strong> Crei illusione visiva complessa. Può essere: camuffare aspetto tuo, creare immagine fantasma, nascondere oggetto.</p>
+                    
+                    <p><strong>LIMITAZIONI:</strong></p>
+                    <ul>
+                        <li>Solo visuale (no suono, no tatto, no odore)</li>
+                        <li>Max dimensione: creatura umanoide O oggetto 3m cubo</li>
+                        <li>Statica O movimento semplice (camminare, no combattimento complesso)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Illusione convincente. Osservatori devono Leggere Situazione +MEN (10+) per dubitare. Se toccano = dissolve MA credono fino a quel punto.</li>
+                        <li><strong>7-9:</strong> Illusione parziale. Funziona MA imperfezioni. Osservatori attenti (+MEN 2+) notano anomalie (bordi sfocati, colori sbagliati). Dura solo 30 min.</li>
+                        <li><strong>6-:</strong> Illusione fallisce immediatamente O peggio: appare grottesca/distorta (opposto intento). Tutti capiscono è falsa + sanno qualcuno ha usato magia.</li>
+                    </ul>
+                    
+                    <p><strong>USI CREATIVI:</strong></p>
+                    <ul>
+                        <li>Camuffare come guardia per infiltrazione</li>
+                        <li>Creare "te stesso" fantasma come esca mentre fuggi</li>
+                        <li>Nascondere porta/tesoro</li>
+                        <li>Far sembrare cadavere "vivo" brevemente</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <div class="separator">⟡</div>
+            
+            <section id="umbra-l3">
+                <h2>Umbra Livello 3</h2>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 3</span>
+                    <h4>🧠 SUSSURRO MENTE</h4>
+                    
+                    <div class="power-cost">COSTO: +2 Corruzione</div>
+                    
+                    <p><strong>RANGE:</strong> Vicino</p>
+                    <p><strong>DURATA:</strong> Conversazione (finché parli mentalmente)</p>
+                    
+                    <p><strong>EFFETTO:</strong> Suggestione telepatica. Pianti pensiero nella mente bersaglio. Lui crede sia idea propria.</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT (opposto da Resistere +MEN bersaglio)</p>
+                    <ul>
+                        <li><strong>10+:</strong> Suggestione prende completamente. Bersaglio agisce su pensiero piantato come se fosse idea propria. Dura finché azione completata O 1 ora.</li>
+                        <li><strong>7-9:</strong> Suggestione parziale. Bersaglio esita, sente qualcosa "off" MA probabilmente obbedisce se suggestione non troppo contraria natura. Dura 10 min.</li>
+                        <li><strong>6-:</strong> Bersaglio resiste completamente. Sente intrusione mentale, sa qualcuno ha tentato manipolare. Diventa ostile/sospettoso.</li>
+                    </ul>
+                    
+                    <p><strong>LIMITAZIONI:</strong></p>
+                    <ul>
+                        <li>Non può forzare azioni suicide/contrarie a istinto sopravvivenza base</li>
+                        <li>Più suggestione è "naturale" per bersaglio, più probabile successo</li>
+                        <li>Bersagli con MEN +2 hanno +1 resistere</li>
+                        <li>Creautere intelligenza animale O meno: immune</li>
+                    </ul>
+                    
+                    <p><strong>ESEMPI SUGGESTIONI:</strong></p>
+                    <ul>
+                        <li>"Lascia quella porta aperta stasera" (guardia)</li>
+                        <li>"Forse dovresti rivelare segreto a tua moglie" (PNG con info)</li>
+                        <li>"Quel rumore? Probabilmente niente" (sentinella che sente te infiltrare)</li>
+                    </ul>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 3</span>
+                    <h4>👥 CLONI OMBRA</h4>
+                    
+                    <div class="power-cost">COSTO: +3 Corruzione</div>
+                    
+                    <p><strong>DURATA:</strong> 1 minuto (combattimento)</p>
+                    
+                    <p><strong>EFFETTO:</strong> Crei 3 duplicati illusori di te fatti ombre semi-solide. Si muovono, attaccano, sembrano reali.</p>
+                    
+                    <p><strong>CLONI:</strong></p>
+                    <ul>
+                        <li>Mimano movimenti tuoi esattamente</li>
+                        <li>Se attaccati, dissolvono (1 colpo qualsiasi = dissolve)</li>
+                        <li>Possono "attaccare" MA danno 0 (sembrano ferire MA è illusione)</li>
+                        <li>Tu controlla quali cloni attaccano quale bersaglio (confonde nemico)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Cloni perfetti. Nemici non possono distinguere quale sei tu (devono indovinare casuale: 1 su 4 possibilità colpire te vero). Dura 1 minuto completo.</li>
+                        <li><strong>7-9:</strong> Cloni imperfetti. Funzionano MA scegli 1:
+                            <ul>
+                                <li>Solo 2 cloni invece 3</li>
+                                <li>Dura solo 30 secondi (~5 round)</li>
+                                <li>Cloni leggermente sfocati (PNG attenti MEN +2 possono identificare vero con azione)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Cloni non si formano O appaiono grotteschi (ovviamente falsi). Corruzione pagata, nessun beneficio.</li>
+                    </ul>
+                    
+                    <p><strong>TATTICO:</strong> Eccellente vs boss singolo (confonde targeting). Combo con Passo Ombra = imposs localizzare.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 3</span>
+                    <h4>🕳️ POZZO OMBRA</h4>
+                    
+                    <div class="power-cost">COSTO: +3 Corruzione</div>
+                    
+                    <p><strong>RANGE:</strong> Medio</p>
+                    <p><strong>AREA:</strong> Cerchio raggio 3m</p>
+                    <p><strong>DURATA:</strong> Concentrazione (max 10 minuti)</p>
+                    
+                    <p><strong>EFFETTO:</strong> Crei zona oscurità assoluta. Luce non penetra. Interno = buio totale anche con torcia.</p>
+                    
+                    <p><strong>DENTRO POZZO:</strong></p>
+                    <ul>
+                        <li>Creature senza visione oscurità: <strong>-3 a tutti tiri</strong> (cieche)</li>
+                        <li>Tu (Umbra): vedi perfettamente (hai Occhi Notturni automatico dentro)</li>
+                        <li>Ombre tangibili: muoversi = difficile (Sfidare Pericolo +CUO O movimento dimezzato)</li>
+                        <li>Suoni attutiti (comunicazione -2)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Pozzo stabile. Dura 10 minuti, area piena. Puoi muovere Pozzo lentamente (azione movimento).</li>
+                        <li><strong>7-9:</strong> Pozzo instabile. Funziona MA scegli 1:
+                            <ul>
+                                <li>Dura solo 5 minuti</li>
+                                <li>Area ridotta (raggio 2m)</li>
+                                <li>Non puoi muovere pozzo</li>
+                                <li>Bordi sfumati (creature ai margini hanno solo -1 invece -3)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Pozzo collassa immediatamente. Corruzione pagata. Ombra esplode (tutti Vicini, incluso te: 1d6 danno psichico).</li>
+                    </ul>
+                    
+                    <p><strong>TATTICO:</strong> Controllo campo battaglia. Isola nemico forte. Copre ritirata. Combo Fondersi Ombre = invisibile perfetto.</p>
+                </div>
+            </section>
+            
+            <div class="separator">⟡</div>
+            
+            <section id="umbra-l4">
+                <h2>Umbra Livello 4</h2>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 4</span>
+                    <h4>👤 FORMA OMBRA</h4>
+                    
+                    <div class="power-cost">COSTO: +3 Corruzione</div>
+                    
+                    <p><strong>DURATA:</strong> 10 minuti</p>
+                    
+                    <p><strong>EFFETTO:</strong> Corpo diventa ombra vivente. Semi-intangibile, oscuro, terrificante.</p>
+                    
+                    <p><strong>TRASFORMAZIONE:</strong></p>
+                    <ul>
+                        <li>Corpo = oscurità fluida (simile fumo nero denso)</li>
+                        <li>Occhi brillano viola</li>
+                        <li>Peso = quasi zero (leviti 10cm sopra suolo)</li>
+                        <li>Voce sussurro echeggiante inquietante</li>
+                    </ul>
+                    
+                    <p><strong>ABILITÀ:</strong></p>
+                    <ul>
+                        <li><strong>Semi-Intangibile:</strong> Armatura +5 vs attacchi fisici (proiettili/spade passano attraverso parzialmente). Magia colpisce normale.</li>
+                        <li><strong>Passapareti:</strong> Puoi filtrare attraverso crepe/buchi (minimo 5cm). Non porte solide.</li>
+                        <li><strong>Volo Lento:</strong> Leviti, movimento orizzontale lento (metà velocità normale)</li>
+                        <li><strong>Terrore:</strong> PNG LS 4- devono Resistere +CUO O fuggire spaventati</li>
+                        <li><strong>Attacchi Ombra:</strong> Colpi mani = 2d6 danno psichico (ignora Armatura fisica)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Trasformazione perfetta. Tutti benefici, 10 minuti pieni.</li>
+                        <li><strong>7-9:</strong> Trasformazione instabile. Benefici funzionano MA scegli 1:
+                            <ul>
+                                <li>Dura solo 5 minuti</li>
+                                <li>Forma vacilla se subisci danno (ogni danno = tira +FAT, 6- = termina)</li>
+                                <li>Attacchi ridotti (1d6 invece 2d6)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Trasformazione fallisce dolorosamente. Corruzione pagata + subisci 2d6 danno (corpo rigetta mutazione). Ombre ti segnano (cicatrici oscure permanenti).</li>
+                    </ul>
+                    
+                    <p><strong>DOPO FORMA:</strong> Quando termina, sei affaticato: -1 a tutto per 1 ora.</p>
+                    
+                    <p><strong>NOTE:</strong> "Boss mode" Umbra. Visivamente terrificante. Sofia lo usa solo emergenze disperate.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 4</span>
+                    <h4>🧩 FRAMMENTARE MENTE</h4>
+                    
+                    <div class="power-cost">COSTO: +4 Corruzione</div>
+                    
+                    <p><strong>RANGE:</strong> Vicino</p>
+                    
+                    <p><strong>EFFETTO:</strong> Attacco psichico devastante. Frantumi mente bersaglio con ombre.</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT (VS Resistere +MEN bersaglio)</p>
+                    <ul>
+                        <li><strong>10+:</strong> Mente frantumata. Scegli 2 effetti:
+                            <ul>
+                                <li><strong>Amnesia:</strong> Dimentica ultime 24 ore completamente</li>
+                                <li><strong>Confusione:</strong> -3 a MEN per 1 giorno (non distingue realtà/illusione)</li>
+                                <li><strong>Dolore Psichico:</strong> 4d6 danno psichico immediato</li>
+                                <li><strong>Paura:</strong> Deve fuggire da te, terrorizzato (dura 1 ora)</li>
+                                <li><strong>Sottomissione:</strong> Obbedisce 1 comando semplice senza domande</li>
+                            </ul>
+                        </li>
+                        <li><strong>7-9:</strong> Attacco parziale. Scegli 1 effetto sopra MA bersaglio soffre molto (urla dolore, collassa). Attiri attenzione.</li>
+                        <li><strong>6-:</strong> Bersaglio resiste. Nessun effetto. Corruzione pagata MA bersaglio ora MOLTO arrabbiato + immune per resto scena.</li>
+                    </ul>
+                    
+                    <p><strong>LIMITAZIONI:</strong></p>
+                    <ul>
+                        <li>Bersagli LS 8+ hanno +2 resistere (mente forte)</li>
+                        <li>Creature senza intelligenza: immune</li>
+                        <li>Non funziona su bersagli già sotto controllo mentale (conflitto)</li>
+                    </ul>
+                    
+                    <p><strong>MORALE:</strong> Potere brutale. Viola mente vittima. Conseguenze etiche pesanti. Umbra che abusa = scivolano verso oscurità totale.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 4</span>
+                    <h4>🌌 PORTALE OMBRA</h4>
+                    
+                    <div class="power-cost">COSTO: +4 Corruzione</div>
+                    
+                    <p><strong>RANGE:</strong> Tocco (crei 2 portali collegati)</p>
+                    <p><strong>DURATA:</strong> 10 minuti</p>
+                    
+                    <p><strong>EFFETTO:</strong> Crei due portali oscurità. Entri uno, esci altro istantaneamente. Entrambi devono essere in ombra.</p>
+                    
+                    <p><strong>PORTALE:</strong></p>
+                    <ul>
+                        <li>Dimensione: 2m × 2m (porta standard)</li>
+                        <li>Appaiono come ovale oscurità vorticante</li>
+                        <li>Chiunque può attraversare (alleati + nemici)</li>
+                        <li>Distanza max tra portali: <strong>1 km</strong></li>
+                        <li>Devi aver visto location destinazione (no teletrasporto cieco)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Portali stabili. Durano 10 minuti, passaggio sicuro, illimitati attraversamenti.</li>
+                        <li><strong>7-9:</strong> Portali instabili. Funzionano MA scegli 1:
+                            <ul>
+                                <li>Durano solo 5 minuti</li>
+                                <li>Ogni attraversamento = 1d4 danno psichico (Piano Ombre morde)</li>
+                                <li>Portali "scivolosi": chi attraversa arriva disorientato (-1 forward)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Portali collassano aprendo. Corruzione pagata. Energia dispersa O peggio: apri squarcio instabile verso Piano Ombre (entità ostile può uscire).</li>
+                    </ul>
+                    
+                    <p><strong>TATTICO:</strong></p>
+                    <ul>
+                        <li>Evacuazione rapida gruppo (porta 1 = qui, porta 2 = base sicura)</li>
+                        <li>Infiltrazione (porta 1 = esterno palazzo, porta 2 = interno)</li>
+                        <li>Trappola (nemico insegue attraverso porta, chiudi = separato da alleati)</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <div class="separator">⟡</div>
+            
+            <section id="umbra-l5">
+                <h2>Umbra Livello 5 (Leggendari)</h2>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 5</span>
+                    <h4>🌑💀 AVATAR OSCURITÀ</h4>
+                    
+                    <div class="power-cost">COSTO: +4 Corruzione (PERICOLO: può portare a 5 totali!)</div>
+                    
+                    <p><strong>DURATA:</strong> 10 minuti</p>
+                    
+                    <p><strong>EFFETTO:</strong> Trascendi mortalità, diventi avatar Piano Ombre. Forma finale Umbra.</p>
+                    
+                    <p><strong>TRASFORMAZIONE:</strong></p>
+                    <ul>
+                        <li>Corpo = oscurità pura vivente (3m altezza)</li>
+                        <li>Occhi rossi brillanti</li>
+                        <li>Tentacoli ombra (6) da schiena</li>
+                        <li>Aura oscurità (Vicino area buia totale)</li>
+                        <li>Voce echeggia da ovunque</li>
+                    </ul>
+                    
+                    <p><strong>ABILITÀ:</strong></p>
+                    <ul>
+                        <li><strong>+3 a TUTTE caratteristiche</strong></li>
+                        <li><strong>Intangibilità:</strong> Immuni danno fisico (solo magia ferisce)</li>
+                        <li><strong>Volo:</strong> Velocità normale, ignora gravità</li>
+                        <li><strong>Tentacoli:</strong> 6 attacchi/turno (1d8 ciascuno, Medio range)</li>
+                        <li><strong>Aura Terrore:</strong> Tutti nemici Vicini -2 a tutti tiri</li>
+                        <li><strong>Rigenerazione Ombra:</strong> Inizio turno recuperi 2d6 PF se in oscurità</li>
+                        <li>Tutti poteri Umbra costano -2 Corruzione (min 1)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Trasformazione perfetta. Controllo completo, 10 minuti.</li>
+                        <li><strong>7-9:</strong> Trasformazione MA lotta controllo. Tutti benefici MA ogni round tira +FAT:
+                            <ul>
+                                <li><strong>10+:</strong> Mantieni controllo</li>
+                                <li><strong>7-9:</strong> Oscurità sussurra tentazioni (-1 ongoing cumulative)</li>
+                                <li><strong>6-:</strong> Perdi controllo 1 round (Custode controlla, attacca casuale)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Trasformazione fallisce O peggio: oscurità prende controllo COMPLETO. Diventi PNG ostile (Custode controlla) per 10 minuti. Dopo = Corruzione automatica 5 (trasformazione permanente).</li>
+                    </ul>
+                    
+                    <p><strong>DOPO AVATAR:</strong> Quando termina, -2 a tutto per 24 ore (esaurimento spirituale). <strong>Tira +FAT:</strong></p>
+                    <ul>
+                        <li><strong>10+:</strong> Recuperi, ok</li>
+                        <li><strong>7-9:</strong> Ombre lasciano marca (cicatrice oscura permanente visibile)</li>
+                        <li><strong>6-:</strong> +1 Corruzione aggiuntiva (oscurità non ti lascia)</li>
+                    </ul>
+                    
+                    <p><strong>⚠️ PERICOLO MASSIMO:</strong> Se usi Avatar a Corruzione 1+, rischi raggiungere 5 (trasformazione permanente). Solo emergenza assoluta.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 5</span>
+                    <h4>🕳️🌀 VUOTO DIMENSIONALE</h4>
+                    
+                    <div class="power-cost">COSTO: +5 Corruzione (TUTTO rimanente, min 5)</div>
+                    
+                    <p><strong>RANGE:</strong> Lontano</p>
+                    <p><strong>AREA:</strong> Sfera raggio 10m</p>
+                    
+                    <p><strong>EFFETTO:</strong> Apri portale verso Piano Ombre. Vortice oscurità aspira tutto dentro.</p>
+                    
+                    <p><strong>MECCANICA:</strong></p>
+                    <p>Tutte creature/oggetti in area devono <strong>Sfidare Pericolo +FOR</strong> O venire risucchiate.</p>
+                    <ul>
+                        <li><strong>10+:</strong> Resistono, ancorati</li>
+                        <li><strong>7-9:</strong> Resistono MA trascinati verso centro (Medio → Vicino vuoto)</li>
+                        <li><strong>6-:</strong> Risucchiati dentro Piano Ombre</li>
+                    </ul>
+                    
+                    <p><strong>DENTRO PIANO OMBRE:</strong></p>
+                    <ul>
+                        <li>Oscurità assoluta, freddo penetrante</li>
+                        <li>Ogni round: 2d6 danno psichico (ambiente ostile)</li>
+                        <li>Disorientamento totale (impossibile capire direzioni)</li>
+                        <li>Entità ombra possono attaccare (Custode decide)</li>
+                    </ul>
+                    
+                    <p><strong>USCITA:</strong> Portale rimane aperto 1 minuto. Dopo, chi dentro = intrappolato (serve portale esterno per salvare).</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Vuoto controllato. Puoi scegliere chi/cosa risucchiare (alleati immuni). Portale stabile 1 minuto.</li>
+                        <li><strong>7-9:</strong> Vuoto incontrollato. Aspira TUTTO in area (amici + nemici). Portale instabile: chiude dopo 30 secondi. Scegli 1 complicazione:
+                            <ul>
+                                <li>Anche TU risucchiato (devi Sfidare Pericolo)</li>
+                                <li>Vuoto attira entità Piano Ombre (3d4 creature ombra emergono)</li>
+                                <li>Squarcio permanente (fessura 1m resta, ombre filtrano lentamente)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Vuoto esplode fuori controllo. Aspira casuale (tira d6 per ogni creatura, 1-3 = risucchiata). Portale collassa violentemente: tutti Lontano area subiscono 3d8 danno (shockwave oscurità). Tu subisci 4d6 + Corruzione immediata 5 (trasformazione).</li>
+                    </ul>
+                    
+                    <p><strong>DOPO VUOTO:</strong> Corruzione massima (5 se non eri già). Rischi trasformazione permanente. Necessita purificazione IMMEDIATA O perdi PG.</p>
+                    
+                    <p><strong>NOTE:</strong> "Nuke" Umbra. Potere più pericoloso gioco (per te E nemici). Solo disperazione finale campagna. Conseguenze sempre catastrofiche. Sofia probabilmente userà 1 volta, poi ritiro.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 5</span>
+                    <h4>👥🎭 LEGIONE OMBRE</h4>
+                    
+                    <div class="power-cost">COSTO: +4 Corruzione</div>
+                    
+                    <p><strong>DURATA:</strong> 10 minuti</p>
+                    
+                    <p><strong>EFFETTO:</strong> Evochi esercito ombre. 12 guerrieri ombra obbediscono comandi.</p>
+                    
+                    <p><strong>GUERRIERI OMBRA (ciascuno):</strong></p>
+                    <ul>
+                        <li><strong>PF:</strong> 15</li>
+                        <li><strong>Armatura:</strong> 2</li>
+                        <li><strong>Attacco:</strong> +6, 1d8 danno (arma ombra)</li>
+                        <li><strong>Movimento:</strong> Veloce, possono fondersi ombre per riposizionare</li>
+                        <li><strong>Immunità:</strong> Paura, veleni, stanchezza</li>
+                        <li><strong>Intelligenza:</strong> Obbediscono comandi semplici (1-2 parole: "attacca", "difendi", "insegui")</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Legione completa. 12 guerrieri, obbediscono perfettamente, 10 min durata.</li>
+                        <li><strong>7-9:</strong> Legione parziale. Solo 8 guerrieri. E scegli 1:
+                            <ul>
+                                <li>Durano solo 5 minuti</li>
+                                <li>Stats ridotti (PF 10, danno 1d6)</li>
+                                <li>Obbediscono MA lenti (agiscono dopo tutti altri in iniziativa)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Evocazione fallisce. Corruzione pagata. Ombre appaiono MA ostili (6 guerrieri ombra NEMICI materializzano, attaccano te).</li>
+                    </ul>
+                    
+                    <p><strong>TATTICO:</strong></p>
+                    <ul>
+                        <li><strong>Schermo:</strong> 12 corpi tra te e nemici</li>
+                        <li><strong>Flanking:</strong> Circondano nemico (vantaggio numerico)</li>
+                        <li><strong>Distrazione:</strong> Nemici devono scegliere: ignorare legione O combatterla</li>
+                        <li><strong>Ricognizione:</strong> Mandi scouts ombra esplorare (intelligenza limitata MA occhi tuoi)</li>
+                    </ul>
+                    
+                    <p><strong>NOTE:</strong> Potere esercito. Trasforma combattimento 1v1 in 13v1. Boss battles diventano gestibili. Visivamente impressionante: 12 figure oscure materializzano contemporaneamente.</p>
+                </div>
+            </section>
+            
+            <hr style="margin: 80px 0;">
+            
+            <div class="info-box" style="text-align: center; margin-top: 60px;">
+                <h3>✅ Fine Capitolo 21 - Poteri Umbra Completi</h3>
+                <p>15 poteri Umbra (L1-L5) documentati. Oscurità completa.</p>
+                <p style="margin-top: 30px; font-size: 18px; color: var(--accent-gold);">
+                    <strong>Prossimo:</strong> Poteri Ife (Casata Vita) →
+                </p>
+            </div>
+            
+            <div class="page-navigation">
+                <a href="parte4.html" class="nav-button">← Mosse Base</a>
+                <a href="parte4c.html" class="nav-button">Cap 22: Poteri Ife →</a>
+            </div>
+            
+        </main>
+    </div>
+</body>
+</html>
