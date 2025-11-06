@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythic Rings - Scheda Custode</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .gm-sheet {
+            width: 21cm;
+            background: white;
+            margin: 0 auto;
+            padding: 1.5cm;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            color: #1a1a2e;
+        }
+        
+        .section {
+            margin-bottom: 15px;
+            border: 2px solid #e74c3c;
+            border-radius: 8px;
+            padding: 12px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e74c3c;
+            padding-bottom: 3px;
+        }
+        
+        ul { margin-left: 20px; font-size: 13px; }
+        li { margin-bottom: 4px; }
+        
+        .quick-ref {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 12px;
+        }
+        
+        .ref-box {
+            border: 1px solid #ddd;
+            padding: 8px;
+            border-radius: 4px;
+            background: #fafafa;
+        }
+        
+        strong { color: #e74c3c; }
+        
+        .print-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 15px 30px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .print-button:hover { background: #c0392b; }
+        
+        @media print {
+            body { background: white; padding: 0; }
+            .gm-sheet { box-shadow: none; }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button no-print" onclick="window.print()">🖨️ Stampa</button>
+    
+    <div class="gm-sheet">
+        <div class="header">
+            <h1>⟡ MYTHIC RINGS ⟡</h1>
+            <div style="font-size: 14px; color: #666;">Scheda Custode - Quick Reference</div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">🎭 PRINCIPI DEL CUSTODE</div>
+            <ul>
+                <li>Descrivi mondo vivo (esiste senza PG)</li>
+                <li>Gioca per scoprire (improvvisa)</li>
+                <li>Sii fan dei PG (tifa per loro)</li>
+                <li>Fai domande oneste</li>
+                <li>Usa nomi sempre</li>
+                <li>Fallimenti = opportunità narrative</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">⚠️ MOSSE CUSTODE</div>
+            <div class="quick-ref">
+                <div class="ref-box"><strong>Infliggi danno</strong> (diretto/indiretto)</div>
+                <div class="ref-box"><strong>Metti in pericolo</strong> (minaccia incombente)</div>
+                <div class="ref-box"><strong>Consuma risorse</strong> (PF, Stress, tempo)</div>
+                <div class="ref-box"><strong>Offri scelta difficile</strong> (dilemma)</div>
+                <div class="ref-box"><strong>Rivela verità</strong> (scomoda)</div>
+                <div class="ref-box"><strong>Introduci minaccia</strong> (complicazione)</div>
+                <div class="ref-box"><strong>Separa gruppo</strong> (divide et impera)</div>
+                <div class="ref-box"><strong>Cattura</strong> (ostaggio)</div>
+            </div>
+            <p style="margin-top: 10px; font-size: 12px;"><strong>Quando:</strong> Su 6-, quando PG ti guarda, quando fiction richiede.</p>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">🎲 TIRI & RISULTATI</div>
+            <ul>
+                <li><strong>10+:</strong> Successo pieno (cosa volevano)</li>
+                <li><strong>7-9:</strong> Successo parziale (+ costo/complicazione)</li>
+                <li><strong>6-:</strong> Fallimento (fai mossa DURA)</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">💀 BILANCIAMENTO COMBATTIMENTO</div>
+            <ul style="font-size: 12px;">
+                <li><strong>Facile:</strong> LS totale = livello gruppo</li>
+                <li><strong>Medio:</strong> LS totale = livello +2</li>
+                <li><strong>Difficile:</strong> LS totale = livello +4</li>
+                <li><strong>Mortale:</strong> LS totale = livello +6</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">⭐ XP FINE SESSIONE</div>
+            <p style="font-size: 12px; margin-bottom: 8px;">Ogni PG risponde (1 XP per SÌ):</p>
+            <ul style="font-size: 12px;">
+                <li>Affrontato pericolo significativo?</li>
+                <li>Imparato qualcosa nuovo?</li>
+                <li>Risolto problema importante?</li>
+                <li>Sviluppato Legame?</li>
+                <li>Agito secondo Casata?</li>
+            </ul>
+            <p style="margin-top: 8px; font-size: 11px;"><strong>Bonus Custode:</strong> +1 XP per momento eccezionale.</p>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">🎯 STRUTTURA SESSIONE</div>
+            <ol style="font-size: 12px;">
+                <li><strong>Recap</strong> (5 min) - Riassunto scorsa</li>
+                <li><strong>Hook</strong> (10 min) - Presenta missione</li>
+                <li><strong>Investigazione</strong> (45 min) - Indizi</li>
+                <li><strong>Complicazione</strong> (30 min) - Twist</li>
+                <li><strong>Climax</strong> (60 min) - Confronto</li>
+                <li><strong>Risoluzione</strong> (15 min) - XP + downtime</li>
+            </ol>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">🛡️ SAFETY TOOLS</div>
+            <ul style="font-size: 12px;">
+                <li><strong>X-Card:</strong> Chiunque tocca = skip scena (no domande)</li>
+                <li><strong>Lines:</strong> Content NO assoluto</li>
+                <li><strong>Veils:</strong> Content ok off-screen</li>
+                <li><strong>Pause:</strong> Sempre ok chiedere break</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">📋 REGOLA 3 INDIZI</div>
+            <p style="font-size: 12px;">Mai bloccare progressione su 1 tiro. Offri 3+ modi ottenere info cruciale. Se falliscono tutti = info comunque MA con costo.</p>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">💡 IMPROVVISAZIONE PNG</div>
+            <ul style="font-size: 12px;">
+                <li><strong>Aspetto distintivo</strong> (cicatrice, eleganza)</li>
+                <li><strong>Personalità</strong> (nervoso, arrogante)</li>
+                <li><strong>Obiettivo</strong> (proteggere segreto, vendetta)</li>
+                <li><strong>Nome</strong> (sempre, anche guardia random)</li>
+            </ul>
+        </div>
+        
+        <div class="section" style="background: #fff3cd; border-color: #f39c12;">
+            <div class="section-title" style="color: #f39c12; border-color: #f39c12;">⚡ NOTA CRITICA</div>
+            <p style="font-size: 12px;"><strong>Custode NON è antagonista.</strong> Non "vinci" se PG muoiono. Presenti sfide MA vuoi che abbiano possibilità reale successo. Sei arbitro + narratore + fan.</p>
+        </div>
+    </div>
+    
+    <div style="text-align: center; padding: 20px; color: #666; font-size: 12px;" class="no-print">
+        <p>Mythic Rings v2.1 - © 2025 ilgiocointavolo.it</p>
+        <p style="margin-top: 10px;">
+            <a href="scheda_pg.html" style="color: #e74c3c; text-decoration: none;">← Scheda PG</a> |
+            <a href="index.html" style="color: #e74c3c; text-decoration: none;">Homepage →</a>
+        </p>
+    </div>
+</body>
+</html>
