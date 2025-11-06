@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythic Rings v2.1 - Parte V: Milano Mitica</title>
+    <style>
+        /* [USA STESSO CSS STANDARD] */
+        :root {
+            --primary-dark: #1a1a2e;
+            --secondary-dark: #16213e;
+            --accent-gold: #f39c12;
+            --accent-gold-dark: #e67e22;
+            --text-light: #ecf0f1;
+            --text-muted: #95a5a6;
+            --border-gold: rgba(243, 156, 18, 0.3);
+            --shadow-glow: 0 0 20px rgba(243, 156, 18, 0.3);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Georgia', 'Palatino', 'Times New Roman', serif;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 50%, #0f3460 100%);
+            background-attachment: fixed;
+            color: var(--text-light);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        
+        .page-wrapper { display: flex; min-height: 100vh; }
+        
+        .sidebar {
+            width: 300px;
+            background: linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, rgba(22, 33, 62, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            border-right: 2px solid var(--border-gold);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 25px 18px;
+            z-index: 1000;
+        }
+        
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-gold);
+        }
+        
+        .sidebar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-gold);
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+        }
+        
+        .menu-items { list-style: none; }
+        .menu-items a {
+            color: var(--text-light);
+            text-decoration: none;
+            display: block;
+            padding: 7px 10px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-items a:hover { background: rgba(243, 156, 18, 0.1); color: var(--accent-gold); }
+        
+        .main-content {
+            margin-left: 300px;
+            flex: 1;
+            padding: 50px 70px;
+            max-width: 1400px;
+            min-height: 100vh;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Palatino', 'Georgia', serif;
+            color: var(--accent-gold);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 46px;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 18px;
+            margin-bottom: 40px;
+        }
+        
+        h2 { font-size: 34px; padding-left: 18px; border-left: 5px solid var(--accent-gold); }
+        h3 { font-size: 26px; }
+        
+        p { margin-bottom: 16px; text-align: justify; line-height: 1.9; font-size: 16px; }
+        strong { color: var(--accent-gold); font-weight: bold; }
+        
+        ul, ol { margin-left: 32px; margin-bottom: 18px; }
+        ul li, ol li { margin-bottom: 10px; line-height: 1.7; }
+        
+        .info-box {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.05), rgba(243, 156, 18, 0.1));
+            border: 2px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .info-box h3 { margin-top: 0; color: var(--accent-gold); }
+        
+        .location-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 4px solid var(--accent-gold);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .location-box h4 {
+            color: var(--accent-gold);
+            margin-top: 0;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        
+        a { color: #3498db; text-decoration: none; transition: all 0.3s ease; }
+        a:hover { color: var(--accent-gold); }
+        
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 70px;
+            padding-top: 35px;
+            border-top: 2px solid var(--border-gold);
+        }
+        
+        .nav-button {
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-button:hover { transform: translateY(-3px); }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">⟡ MYTHIC RINGS ⟡</div>
+            </div>
+            
+            <ul class="menu-items">
+                <li><a href="index.html">🏠 Homepage</a></li>
+                <li><a href="parte4d.html">← Mictlan</a></li>
+                <li><a href="parte6.html">Parte VI →</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <h1>Parte V: Milano Mitica</h1>
+            
+            <p><em>Questa sezione fornisce framework base per Milano occulta. Il Custode dovrebbe espandere con dettagli propri.</em></p>
+            
+            <h2>Capitolo 24: La Milano Sotterranea</h2>
+            
+            <div class="info-box">
+                <h3>🏛️ Nexus del Potere</h3>
+                <p><strong>Location:</strong> Sotto Piazza Duomo, 30m profondità</p>
+                <p><strong>Cosa:</strong> 5 Linee Ley si incrociano. Centro energetico assoluto Italia. Territorio neutrale (patto antico tra fazioni).</p>
+                <p><strong>Accesso:</strong> Cripta segreta sotto Duomo, chiave tenuta da Cerchia Anziani.</p>
+                <p><strong>Atmosfera:</strong> Pietra antica, simboli Casate incisi, aria carica magia.</p>
+            </div>
+            
+            <h3>Quartieri Chiave</h3>
+            
+            <div class="location-box">
+                <h4>📍 Navigli (Zona Umbra)</h4>
+                <p><strong>Vibe:</strong> Canali, ombre lunghe, bar underground.</p>
+                <p><strong>Attività Occulta:</strong> Mercato Notturno (venerdì sera, location ruota). Informatori ombre. Contrabbando artefatti.</p>
+                <p><strong>PNG Chiave:</strong> Valentina "La Volpe" - mercante info, Umbra neutrale.</p>
+            </div>
+            
+            <div class="location-box">
+                <h4>📍 Parco Sempione (Zona Ife)</h4>
+                <p><strong>Vibe:</strong> Verde urbano, antica energia natura.</p>
+                <p><strong>Attività Occulta:</strong> Rituali natura, spiriti bosco dormono sotto suolo.</p>
+                <p><strong>PNG Chiave:</strong> Nonna Rosa - Ife anziana, guardiana albero sacro (quercia 400 anni).</p>
+            </div>
+            
+            <div class="location-box">
+                <h4>📍 Cimitero Monumentale (Zona Mictlan)</h4>
+                <p><strong>Vibe:</strong> Statue, silenzio, rispetto.</p>
+                <p><strong>Attività Occulta:</strong> Spiriti conversano notte. Passaggio Piano Morti debole qui.</p>
+                <p><strong>PNG Chiave:</strong> Custode Anselmo - Mictlan, vive cripta famiglia da 40 anni.</p>
+            </div>
+            
+            <h2>Capitolo 25: Fazioni Milano</h2>
+            
+            <div class="info-box">
+                <h3>⚔️ Custodi Milano</h3>
+                <p><strong>Leader:</strong> Cerchia 5 Anziani</p>
+                <p><strong>Obiettivo:</strong> Mantenere Velo, proteggere civili, neutralizzare minacce</p>
+                <p><strong>Membri:</strong> ~40 Guardiani attivi + 100 supporto (Società Velo)</p>
+                <p><strong>Base:</strong> Palazzo nascosto Brera</p>
+            </div>
+            
+            <div class="info-box">
+                <h3>💀 Fratellanza dei Caduti</h3>
+                <p><strong>Leader:</strong> Vincenzo "Il Primo Caduto"</p>
+                <p><strong>Chi:</strong> Ex-Guardiani espulsi O fuggiti</p>
+                <p><strong>Obiettivo:</strong> Distruggere Velo, rivelare magia mondo</p>
+                <p><strong>Metodi:</strong> Terrorismo magico, sabotaggi, reclutamento forzato</p>
+                <p><strong>Nota:</strong> Antagonisti principali campagna standard</p>
+            </div>
+            
+            <h2>Capitolo 26: Hook Avventure</h2>
+            
+            <p><strong>10 Hook Veloci:</strong></p>
+            <ol>
+                <li><strong>Vampiro Navigli:</strong> Sparizioni notturne. Indaga bar underground.</li>
+                <li><strong>Spirito Duomo:</strong> Fantasma turista terrorizza visitatori. Esorcizza.</li>
+                <li><strong>Rituale Parco:</strong> Cultisti tentano evocare demone. Ferma prima completamento.</li>
+                <li><strong>Artefatto Rubato:</strong> Amuleto potente sparito Mercato. Recupera prima nemici usano.</li>
+                <li><strong>Portale Instabile:</strong> Squarcio verso Piano Ombre. Chiudi prima creature emergono.</li>
+                <li><strong>Testimone Velo:</strong> Civile vede troppo. Convince dimenticare O applica amnesia.</li>
+                <li><strong>Rinnegato:</strong> Ex-collega tradisce Custodi. Cattura O uccidi.</li>
+                <li><strong>Linea Ley:</strong> Una delle 5 linee contaminata. Purifica fonte.</li>
+                <li><strong>Alleanza:</strong> Negozia tregua tra Custodi e fazione neutrale (streghe milanesi).</li>
+                <li><strong>Mistero Personale:</strong> Info su passato PG emerge. Indaga origini Anello.</li>
+            </ol>
+            
+            <hr style="margin: 60px 0; border: none; height: 2px; background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);">
+            
+            <div class="info-box" style="text-align: center;">
+                <h3>✅ Parte V Completa</h3>
+                <p>Framework Milano fornito. Custode espande con dettagli campagna.</p>
+                <p style="margin-top: 20px; color: var(--accent-gold);"><strong>Prossimo:</strong> Parte VI (Guida Custode)</p>
+            </div>
+            
+            <div class="page-navigation">
+                <a href="parte4d.html" class="nav-button">← Mictlan</a>
+                <a href="parte6.html" class="nav-button">Parte VI: Guida Custode →</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
