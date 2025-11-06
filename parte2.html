@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mythic Rings - Parte II: Regole Base. Meccaniche core, caratteristiche, tiri dado.">
+    <title>Mythic Rings v2.1 - Parte II: Regole Base</title>
+    <style>
+        /* [USA STESSO CSS DI PARTE1] */
+        :root {
+            --primary-dark: #1a1a2e;
+            --secondary-dark: #16213e;
+            --accent-gold: #f39c12;
+            --accent-gold-dark: #e67e22;
+            --text-light: #ecf0f1;
+            --text-muted: #95a5a6;
+            --border-gold: rgba(243, 156, 18, 0.3);
+            --shadow-glow: 0 0 20px rgba(243, 156, 18, 0.3);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Palatino', 'Times New Roman', serif;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 50%, #0f3460 100%);
+            background-attachment: fixed;
+            color: var(--text-light);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        
+        .page-wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* SIDEBAR */
+        .sidebar {
+            width: 300px;
+            background: linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, rgba(22, 33, 62, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            border-right: 2px solid var(--border-gold);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 25px 18px;
+            z-index: 1000;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .sidebar::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb {
+            background: var(--accent-gold);
+            border-radius: 4px;
+        }
+        
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-gold);
+        }
+        
+        .sidebar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+            letter-spacing: 1px;
+        }
+        
+        .sidebar-version {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        .menu-section {
+            margin-bottom: 25px;
+        }
+        
+        .menu-title {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            padding-left: 8px;
+            border-left: 3px solid var(--accent-gold);
+        }
+        
+        .menu-items {
+            list-style: none;
+        }
+        
+        .menu-items li {
+            margin-bottom: 5px;
+        }
+        
+        .menu-items a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 13px;
+            display: block;
+            padding: 7px 10px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .menu-items a:hover {
+            background: rgba(243, 156, 18, 0.1);
+            border-left-color: var(--accent-gold);
+            padding-left: 15px;
+            color: var(--accent-gold);
+        }
+        
+        .menu-items a.active {
+            background: rgba(243, 156, 18, 0.2);
+            border-left-color: var(--accent-gold);
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        /* CONTENUTO */
+        .main-content {
+            margin-left: 300px;
+            flex: 1;
+            padding: 50px 70px;
+            max-width: 1400px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(5px);
+            min-height: 100vh;
+        }
+        
+        /* TIPOGRAFIA */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Palatino', 'Georgia', serif;
+            color: var(--accent-gold);
+
+            margin-top: 40px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 46px;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 18px;
+            margin-bottom: 40px;
+            text-shadow: 0 0 20px rgba(243, 156, 18, 0.4);
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            font-size: 34px;
+            margin-top: 55px;
+            padding-left: 18px;
+            border-left: 5px solid var(--accent-gold);
+        }
+        
+        h3 {
+            font-size: 26px;
+            color: var(--accent-gold-dark);
+        }
+        
+        h4 {
+            font-size: 20px;
+            color: var(--text-light);
+        }
+        
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            line-height: 1.9;
+            font-size: 16px;
+        }
+        
+        strong {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        em {
+            font-style: italic;
+            color: var(--accent-gold-dark);
+        }
+        
+        ul, ol {
+            margin-left: 32px;
+            margin-bottom: 18px;
+        }
+        
+        ul li, ol li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        ul li::marker {
+            color: var(--accent-gold);
+        }
+        
+        ol li::marker {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        /* INFO BOX */
+        .info-box {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.05), rgba(243, 156, 18, 0.1));
+            border: 2px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .info-box h3, .info-box h4 {
+            margin-top: 0;
+            color: var(--accent-gold);
+        }
+        
+        /* EXAMPLE BOX */
+        .example-box {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.08), rgba(41, 128, 185, 0.12));
+            border: 2px solid rgba(52, 152, 219, 0.4);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+        }
+        
+        .example-box h4 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        
+        /* DICE BOX */
+        .dice-box {
+            background: linear-gradient(135deg, rgba(230, 126, 34, 0.08), rgba(211, 84, 0, 0.12));
+            border: 3px solid rgba(230, 126, 34, 0.4);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-gold);
+        }
+        
+        /* TABELLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 28px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        table thead {
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: var(--primary-dark);
+        }
+        
+        table th {
+            padding: 16px;
+            text-align: left;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 13px;
+        }
+        
+        table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        table tbody tr {
+            transition: background 0.3s ease;
+        }
+        
+        table tbody tr:hover {
+            background: rgba(243, 156, 18, 0.1);
+        }
+        
+        table tbody tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        
+        /* NAVIGAZIONE */
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+        
+        a:hover {
+            color: var(--accent-gold);
+            border-bottom-color: var(--accent-gold);
+        }
+        
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 70px;
+            padding-top: 35px;
+            border-top: 2px solid var(--border-gold);
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+            border: none;
+            font-size: 15px;
+        }
+        
+        .nav-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(243, 156, 18, 0.6);
+            color: white;
+            border: none;
+        }
+        
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+            margin: 45px 0;
+        }
+        
+        .separator {
+            text-align: center;
+            font-size: 28px;
+            color: var(--accent-gold);
+            margin: 50px 0;
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 260px;
+            }
+            
+            .main-content {
+                margin-left: 260px;
+                padding: 40px 45px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 2px solid var(--border-gold);
+            }
+            
+            .main-content {
+                margin-left: 0;
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 34px;
+            }
+            
+            h2 {
+                font-size: 26px;
+            }
+            
+            .page-navigation {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">⟡ MYTHIC RINGS ⟡</div>
+                <div class="sidebar-version">Versione 2.1 - FINALE</div>
+            </div>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Navigazione</div>
+                <ul class="menu-items">
+                    <li><a href="index.html">🏠 Homepage</a></li>
+                    <li><a href="parte1.html">← Parte I</a></li>
+                    <li><a href="parte3.html">Parte III →</a></li>
+                </ul>
+            </nav>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Parte II - Questa Sezione</div>
+                <ul class="menu-items">
+                    <li><a href="#cap6" class="active">Cap 6: Come Si Gioca</a></li>
+                    <li><a href="#cap7">Cap 7: Caratteristiche</a></li>
+                    <li><a href="#cap8">Cap 8: Tiri Dado</a></li>
+                    <li><a href="#cap9">Cap 9: Punti Ferita</a></li>
+                    <li><a href="#cap10">Cap 10: Legami</a></li>
+                    <li><a href="#cap11">Cap 11: Stress & Corruzione</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- CONTENUTO PRINCIPALE -->
+        <main class="main-content">
+            
+            <h1>Parte II: Regole Base</h1>
+            
+            <p style="font-size: 18px; font-style: italic; color: var(--accent-gold-dark);">
+                "Le regole sono semplici. La vita è complessa."
+            </p>
+            
+            <!-- CAPITOLO 6 -->
+            <section id="cap6">
+                <h2>Capitolo 6: Come Si Gioca</h2>
+                
+                <p>Mythic Rings è un <strong>gioco di conversazione</strong>. Non c'è tabellone, non ci sono pedine. Solo voi, i dadi, e l'immaginazione collettiva.</p>
+                
+                <h3>La Struttura Base</h3>
+                
+                <p>Il gioco segue questo loop:</p>
+                
+                <div class="dice-box">
+                    CUSTODE DESCRIVE → GIOCATORI DICHIARANO AZIONI → TIRI DADO → RISOLUZIONE → REPEAT
+                </div>
+                
+                <div class="example-box">
+                    <h4>Esempio: Loop di Gioco</h4>
+                    <p><strong>Custode:</strong> "Entrate nel magazzino abbandonato. È buio, odore di muffa. Sentite respirazione pesante dal secondo piano."</p>
+                    
+                    <p><strong>Marco (Avalon):</strong> "Accendo luce del mio Anello, illumino scala."</p>
+                    
+                    <p><strong>Custode:</strong> "Ok, luce dorata emana dall'Anello. Vedi scala pericolante, metà gradini marci. Respirazione si interrompe. Silenzio."</p>
+                    
+                    <p><strong>Sofia (Umbra):</strong> "Io mi fondo nelle ombre, salgo invisibile." (Attiva potere)</p>
+                    
+                    <p><strong>Custode:</strong> "Bene, costa 1 Corruzione. Tira +FAT per vedere quanto bene funziona."</p>
+                    
+                    <p><strong>Sofia:</strong> <em>Tira 2d6+1 = 8</em> "Ottengo 8."</p>
+                    
+                    <p><strong>Custode:</strong> "7-9, successo parziale. Sei invisibile MA scala scricchiola sotto peso tuo. Chi è sopra SA che qualcuno sta salendo. Cosa fai?"</p>
+                    
+                    <p><em>...e il gioco continua.</em></p>
+                </div>
+                
+                <h3>Principi Fondamentali</h3>
+                
+                <div class="info-box">
+                    <h4>1. La Fiction Guida</h4>
+                    <p>Prima di tirare dadi, descrivi cosa fai. Azioni derivano da narrativa, non da statistiche.</p>
+                    <p><strong>Sbagliato:</strong> "Uso mio +2 FOR per attaccare."</p>
+                    <p><strong>Giusto:</strong> "Carico con spada, miro al collo del demone."</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>2. Le Mosse Innescano Tiri</h4>
+                    <p>Non tiri "perché sì". Tiri quando azione corrisponde a <strong>Mossa</strong> (vedi Parte IV). Mosse hanno trigger specifici.</p>
+                    <p><strong>Esempio:</strong> "Attaccare" innesca quando infliggi danno con violenza. "Leggere Situazione" innesca quando studi attentamente scena.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>3. Fallimenti Sono Interessanti</h4>
+                    <p>Tirare 6- non significa "non succede nulla". Significa "succede qualcosa DIVERSO da ciò che volevi — e peggiore."</p>
+                    <p>Fallimenti guidano narrativa tanto quanto successi. Non temere rotolare male!</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>4. Dici Ciò Che Fai, Non Ciò Che Vuoi Ottenere</h4>
+                    <p><strong>Sbagliato:</strong> "Voglio convincerlo."</p>
+                    <p><strong>Giusto:</strong> "Gli dico: 'Tua figlia sarebbe orgogliosa se aiutassi.' mentre mostro foto."</p>
+                    <p>Descrivi AZIONE concreta, non risultato desiderato. Dadi decidono risultato.</p>
+                </div>
+                
+                <h3>Ruoli al Tavolo</h3>
+                
+                <p><strong>Giocatori:</strong></p>
+                <ul>
+                    <li>Descrivono azioni PG</li>
+                    <li>Tirano dadi quando Custode chiede</li>
+                    <li>Interpretano personaggi</li>
+                    <li>Reagiscono a situazioni</li>
+                    <li>Fanno domande quando confusi</li>
+                </ul>
+                
+                <p><strong>Custode:</strong></p>
+                <ul>
+                    <li>Descrive mondo, PNG, situazioni</li>
+                    <li>Applica regole meccaniche</li>
+                    <li>Fa domande oneste a giocatori</li>
+                    <li>Interpreta PNG</li>
+                    <li>Fa mosse quando appropriato (specialmente su 6-)</li>
+                    <li>È <strong>fan dei PG</strong> (tifa per loro, non contro)</li>
+                </ul>
+                
+                <div class="info-box">
+                    <h4>⚠️ Custode NON È Antagonista</h4>
+                    <p>Custode non "vince" se PG muoiono. Non nasconde informazioni per sadismo. Non "combatte" contro giocatori.</p>
+                    <p>Custode presenta sfide MA vuole che PG abbiano possibilità reale successo. Sei arbitro imparziale + narratore + fan.</p>
+                </div>
+            </section>
+            
+            <!-- CAPITOLO 7 -->
+            <section id="cap7">
+                <h2>Capitolo 7: Le Cinque Caratteristiche</h2>
+                
+                <p>Ogni PG ha 5 caratteristiche che definiscono capacità. Valori vanno da <strong>-1 (debole)</strong> a <strong>+3 (eccezionale)</strong>.</p>
+                
+                <h3>FOR - Forza</h3>
+                
+                <p><strong>Cosa rappresenta:</strong> Potenza fisica, muscolatura, resistenza corporea, salute.</p>
+                
+                <p><strong>Usi FOR per:</strong></p>
+                <ul>
+                    <li>Attacchi corpo-a-corpo (spada, pugno, martello)</li>
+                    <li>Sollevare/spingere/sfondare cose pesanti</li>
+                    <li>Resistere veleni, malattie, fatica</li>
+                    <li>Reggere dolore fisico</li>
+                    <li>Wrestling/lotta corpo-a-corpo</li>
+                </ul>
+                
+                <p><strong>PF dipendono da FOR:</strong> PF = 20 + (FOR × 2). FOR alta = più resistente.</p>
+                
+                <div class="example-box">
+                    <h4>FOR in Azione</h4>
+                    <p><strong>FOR +2:</strong> Luca (Ife) solleva auto ribaltata per liberare vittima intrappolata. Tira +FOR, successo.</p>
+                    <p><strong>FOR -1:</strong> Elena (Mictlan) tenta sfondare porta. Tira +FOR, fallisce. Spalla dolorante, porta intatta.</p>
+                </div>
+                
+                <h3>CUO - Cuore</h3>
+                
+                <p><strong>Cosa rappresenta:</strong> Coraggio, istinto, riflessi, agilità, intuito emotivo.</p>
+                
+                <p><strong>Usi CUO per:</strong></p>
+                <ul>
+                    <li>Attacchi a distanza (pistola, arco, magia proiettile)</li>
+                    <li>Schivare, saltare, acrobazie</li>
+                    <li>Agire d'istinto (reazione veloce)</li>
+                    <li>Resistere paura, terrore magico</li>
+                    <li>Leggere emozioni altrui istintivamente</li>
+                </ul>
+                
+                <div class="example-box">
+                    <h4>CUO in Azione</h4>
+                    <p><strong>CUO +2:</strong> Marco (Avalon) vede bomba sta per esplodere. Istinto dice "CORRI". Tira +CUO, salta fuori finestra appena in tempo.</p>
+                    <p><strong>CUO 0:</strong> Sofia (Umbra) spara a vampiro in fuga. Tira +CUO, risultato medio. Colpisce MA non fatale.</p>
+                </div>
+                
+                <h3>MEN - Mente</h3>
+                
+                <p><strong>Cosa rappresenta:</strong> Intelligenza, percezione, memoria, analisi, conoscenze.</p>
+                
+                <p><strong>Usi MEN per:</strong></p>
+                <ul>
+                    <li>Notare dettagli nascosti (investigazione)</li>
+                    <li>Ricordare informazioni (storia, occultismo, scienza)</li>
+                    <li>Analizzare situazioni logicamente</li>
+                    <li>Resistere illusioni mentali</li>
+                    <li>Decifrare codici, risolvere puzzle</li>
+                </ul>
+                
+                <div class="example-box">
+                    <h4>MEN in Azione</h4>
+                    <p><strong>MEN +3:</strong> Sofia (Umbra) studia scena crimine. Tira +MEN, nota dettaglio minuscolo (simbolo cultista su muro nascosto). Svolta caso.</p>
+                    <p><strong>MEN -1:</strong> Luca (Ife) cerca ricordare rituale antico. Tira +MEN, confuso. Ricorda solo vagamente.</p>
+                </div>
+                
+                <h3>CAR - Carisma</h3>
+                
+                <p><strong>Cosa rappresenta:</strong> Fascino, persuasione, presenza, leadership, forza personalità.</p>
+                
+                <p><strong>Usi CAR per:</strong></p>
+                <ul>
+                    <li>Convincere, persuadere, negoziare</li>
+                    <li>Intimidire (con presenza, non forza)</li>
+                    <li>Comandare, ispirare alleati</li>
+                    <li>Sedurre, affascinare</li>
+                    <li><strong>Poteri Avalon</strong> (unica Casata usa CAR invece FAT)</li>
+                </ul>
+                
+                <div class="example-box">
+                    <h4>CAR in Azione</h4>
+                    <p><strong>CAR +2:</strong> Marco (Avalon) parla a folla terrorizzata. "CALMA! Siete al sicuro!" Tira +CAR, folla si tranquillizza, obbedisce.</p>
+                    <p><strong>CAR 0:</strong> Elena (Mictlan) tenta convincere vampiro collaborare. Tira +CAR, vampiro scettico MA ascolta offerta.</p>
+                </div>
+                
+                <h3>FAT - Fato</h3>
+                
+                <p><strong>Cosa rappresenta:</strong> Fortuna, destino, connessione magica, sincronicità.</p>
+                
+                <p><strong>Usi FAT per:</strong></p>
+                <ul>
+                    <li><strong>TUTTI poteri magici</strong> (eccetto Avalon che usa CAR)</li>
+                    <li>Colpi di fortuna</li>
+                    <li>Trovare cose al momento giusto</li>
+                    <li>Sopravvivere situazioni impossibili</li>
+                    <li>Intuizione mistica</li>
+                </ul>
+                
+                <p><strong>Nota Importante:</strong> FAT è caratteristica più "magica". Alta FAT = forte connessione occulto.</p>
+                
+                <div class="example-box">
+                    <h4>FAT in Azione</h4>
+                    <p><strong>FAT +2:</strong> Sofia (Umbra) attiva "Fondersi Ombre". Tira +FAT, perfetto. Invisibile totale.</p>
+                    <p><strong>FAT +1:</strong> Luca (Ife) cerca componente rituale raro. Tira +FAT, trova ESATTAMENTE ciò che serve in negozio random. Destino aiuta.</p>
+                    <p><strong>FAT -1:</strong> Elena (Mictlan) evoca spirito. Tira +FAT, spirito appare MA arrabbiato, poco collaborativo.</p>
+                </div>
+                
+                <h3>Distribuzione Iniziale</h3>
+                
+                <p>A creazione PG, distribuisci questi valori tra 5 caratteristiche:</p>
+                
+                <div class="dice-box">
+                    +2, +1, +1, 0, -1
+                </div>
+                
+                <p><strong>Ogni caratteristica può avere SOLO uno di questi valori.</strong></p>
+                
+                <p><strong>Raccomandazioni:</strong></p>
+                <ul>
+                    <li>Metti <strong>+2</strong> in caratteristica principale (quella usi più spesso)</li>
+                    <li>Per Avalon: +2 CAR (poteri)</li>
+                    <li>Per Umbra/Ife/Mictlan: +2 FAT (poteri)</li>
+                    <li>Metti <strong>-1</strong> in qualcosa che definisce debolezza PG (narrativamente interessante)</li>
+                </ul>
+                
+                <div class="example-box">
+                    <h4>Esempio: Marco (Avalon Detective)</h4>
+                    <p>Marco è leader carismatico MA non super-forte. Intelligente MA non genio. Riflessivo.</p>
+                    <ul>
+                        <li><strong>FOR +1:</strong> Forma decente (ex-poliziotto allenato)</li>
+                        <li><strong>CUO +1:</strong> Riflessi buoni (addestramento combattimento)</li>
+                        <li><strong>MEN 0:</strong> Intelligente media (detective competente)</li>
+                        <li><strong>CAR +2:</strong> Molto carismatico (leader naturale) ← Principale</li>
+                        <li><strong>FAT -1:</strong> Sfortunato (costante tema narrativo)</li>
+                    </ul>
+                </div>
+                
+                <h3>Migliorare Caratteristiche</h3>
+                
+                <p>Durante gioco, spendendo XP, puoi aumentare caratteristiche. Limiti:</p>
+                <ul>
+                    <li>Massimo <strong>+3</strong> in qualsiasi caratteristica (umano limite)</li>
+                    <li>Costa <strong>5 XP</strong> per +1</li>
+                    <li>Richiede giustificazione narrativa (addestramento, epifania, etc)</li>
+                </ul>
+            </section>
+            
+            <!-- CAPITOLO 8 -->
+            <section id="cap8">
+                <h2>Capitolo 8: Tiri Dado e Meccanica Core</h2>
+                
+                <p>Mythic Rings usa sistema <strong>2d6</strong>. Sempre. Mai altri dadi per test (solo per danno).</p>
+                
+                <h3>Quando Tiri</h3>
+                
+                <p>Tiri dado quando:</p>
+                <ol>
+                    <li>La tua azione corrisponde a <strong>Mossa</strong> (Parte IV ha lista)</li>
+                    <li>Il risultato è <strong>incerto</strong> (se automatico successo, non tiri)</li>
+                    <li>Il fallimento ha <strong>conseguenze</strong> (se fallimento = solo noia, non tiri)</li>
+                </ol>
+                
+                <div class="info-box">
+                    <h4>⚠️ Non Tiri Per Tutto</h4>
+                    <p><strong>NON tiri per:</strong></p>
+                    <ul>
+                        <li>Azioni banali ("Attraverso strada" — ok, fatto)</li>
+                        <li>Azioni automatiche ("Ricarico pistola" — 3 secondi, fatto)</li>
+                        <li>Quando non c'è pressione ("Cerchi libro in biblioteca, hai 3 ore" — trovi, nessun tiro)</li>
+                    </ul>
+                    <p><strong>Tiri SOLO quando tensione esiste.</strong></p>
+                </div>
+                
+                <h3>Come Tirare</h3>
+                
+                <div class="dice-box">
+                    TIRA 2d6 + CARATTERISTICA APPROPRIATA
+                </div>
+                
+                <p><strong>Risultati:</strong></p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Risultato</th>
+                            <th>Interpretazione</th>
+                            <th>Cosa Succede</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>10+</strong></td>
+                            <td>Successo Pieno</td>
+                            <td>Ottieni ciò che vuoi, nessuna complicazione</td>
+                        </tr>
+                        <tr>
+                            <td><strong>7-9</strong></td>
+                            <td>Successo Parziale</td>
+                            <td>Ottieni ciò che vuoi MA con costo/complicazione</td>
+                        </tr>
+                        <tr>
+                            <td><strong>6-</strong></td>
+                            <td>Fallimento</td>
+                            <td>Non ottieni, E Custode fa mossa dura</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="example-box">
+                    <h4>Esempio: Tre Risultati Possibili</h4>
+                    <p><strong>Situazione:</strong> Marco tenta scavalcare muro alto 3m mentre inseguito da demone. Tira +CUO (+1).</p>
+                    
+                    <p><strong>Risultato 10+ (tira 6+5 = 11):</strong></p>
+                    <p>"Corri, salti, ti aggrappi bordo, ti tiri su in un movimento fluido. Sei oltre muro. Demone dietro urla frustrato, troppo lento."</p>
+                    
+                    <p><strong>Risultato 7-9 (tira 3+4 = 7):</strong></p>
+                    <p>"Salti MA atterraggio è goffo. Scavalchi muro MA caviglia si torce. -1 ongoing finché non riposi. E senti demone arrampicarsi dietro — hai 10 secondi vantaggio."</p>
+                    
+                    <p><strong>Risultato 6- (tira 2+2 = 4):</strong></p>
+                    <p>"Salti MA mano scivola. Cadi pesantemente, 1d6 danno. Demone ti raggiunge. Attacca con artigli (tira difendere ORA O subisci danno)."</p>
+                </div>
+                
+                <h3>Modificatori Situazionali</h3>
+                
+                <p>Normalmente tiri solo 2d6 + caratteristica. MA Custode può dare bonus/malus:</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Situazione</th>
+                            <th>Modificatore</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Condizioni perfette, preparazione eccellente</td>
+                            <td>+1</td>
+                        </tr>
+                        <tr>
+                            <td>Aiuto da alleato (mossa Aiutare)</td>
+                            <td>+1</td>
+                        </tr>
+                        <tr>
+                            <td>Legame rilevante con PNG</td>
+                            <td>+1 per livello Legame</td>
+                        </tr>
+                        <tr>
+                            <td>Condizioni difficili (buio, ferito, etc)</td>
+                            <td>-1</td>
+                        </tr>
+                        <tr>
+                            <td>Condizioni estreme (quasi impossibile)</td>
+                            <td>-2</td>
+                        </tr>
+                        <tr>
+                            <td>Ostacolato da nemico (mossa Ostacolare)</td>
+                            <td>-1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><strong>Limite:</strong> Modificatori NON dovrebbero mai superare ±3 totali. Se task è così impossibile, forse non dovrebbe essere tiro (narrativamente impossibile).</p>
+                
+                <h3>Risultati Speciali</h3>
+                
+                <div class="info-box">
+                    <h4>🎲 Doppio 6 (Snake Eyes Positivo)</h4>
+                    <p>Se tiri naturale 12 (doppio 6), è <strong>successo critico</strong>:</p>
+                    <ul>
+                        <li>Ottieni risultato 10+ PLUS beneficio extra</li>
+                        <li>Esempi: danno × 1.5, info bonus, eviti completamente costo</li>
+                        <li>Narrativamente: azione spettacolare, cinematica</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <h4>🎲 Doppio 1 (Snake Eyes Negativo)</h4>
+                    <p>Se tiri naturale 2 (doppio 1), è <strong>fallimento critico</strong>:</p>
+                    <ul>
+                        <li>Conta come 6- MA peggio</li>
+                        <li>Custode fa mossa DURA (conseguenza severa)</li>
+                        <li>Narrativamente: disastro epico, umiliante</li>
+                    </ul>
+                </div>
+                
+                <h3>Chi Tira?</h3>
+                
+                <p><strong>Regola Generale: Solo Giocatori tirano.</strong></p>
+                
+                <p>Custode NON tira per PNG/mostri. Quando PNG attacca:</p>
+                <ul>
+                    <li>Se PG reagisce → PG tira Difendere</li>
+                    <li>Se PG non può reagire → PNG infligge danno automaticamente (no tiro)</li>
+                </ul>
+                
+                <p><strong>Perché?</strong> Tiene focus su PG, accelera gioco, aumenta tensione.</p>
+                
+                <div class="example-box">
+                    <h4>Esempio: PNG Non Tira</h4>
+                    <p><strong>Sbagliato (old school):</strong></p>
+                    <p>Custode: "Vampiro attacca Marco. Tiro d20... 18! Colpisce. Marco subisce 2d6 danno."</p>
+                    
+                    <p><strong>Giusto (Mythic Rings):</strong></p>
+                    <p>Custode: "Vampiro balza verso di te, artigli tesi. Cosa fai?"</p>
+                    <p>Marco: "Paro con spada!" (Tira Difendere +FOR)</p>
+                    <p><em>Marco decide reazione, tira, controlla esito.</em></p>
+                </div>
+            </section>
+            
+            <!-- CAPITOLO 9 -->
+            <section id="cap9">
+                <h2>Capitolo 9: Punti Ferita e Danno</h2>
+                
+                <h3>Punti Ferita (PF)</h3>
+                
+                <p><strong>PF rappresentano:</strong> Salute fisica, resistenza, capacità assorbire trauma.</p>
+                
+                <p><strong>PF Iniziali:</strong></p>
+                
+                <div class="dice-box">
+                    20 + (FOR × 2)
+                </div>
+                
+                <p><strong>Esempi:</strong></p>
+                <ul>
+                    <li>FOR -1 → PF = 20 - 2 = <strong>18</strong> (fragile)</li>
+                    <li>FOR 0 → PF = 20 + 0 = <strong>20</strong> (media)</li>
+                    <li>FOR +1 → PF = 20 + 2 = <strong>22</strong></li>
+                    <li>FOR +2 → PF = 20 + 4 = <strong>24</strong></li>
+                    <li>FOR +3 → PF = 20 + 6 = <strong>26</strong> (tank)</li>
+                </ul>
+                
+                <h3>Subire Danno</h3>
+                
+                <p>Quando qualcosa ti ferisce, subisci <strong>danno</strong>. Formula:</p>
+                
+                <div class="dice-box">
+                    DANNO SUBITO = DANNO BASE - ARMATURA
+                </div>
+                
+                <p><strong>Armatura</strong> è valore fisso che riduce danno. Va da 0 (nudo) a 5+ (corazza pesante).</p>
+                
+                <div class="example-box">
+                    <h4>Esempio: Calcolo Danno</h4>
+                    <p>Marco (22 PF, Armatura 2) subisce attacco demone.</p>
+                    <p>Demone infligge 2d6 danno. Custode tira: 4+5 = 9 danno base.</p>
+                    <p>9 - 2 (Armatura) = <strong>7 danno effettivo</strong></p>
+                    <p>Marco: 22 - 7 = <strong>15 PF rimanenti</strong></p>
+                </div>
+                
+                <h3>Tipi di Danno</h3>
+                
+                <p>Esistono 3 tipi danno:</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Descrizione</th>
+                            <th>Armatura Protegge?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Fisico</strong></td>
+                            <td>Spade, proiettili, artigli, cadute</td>
+                            <td>✅ Sì</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Magico</strong></td>
+                            <td>Fuoco mistico, fulmini, energia arcana</td>
+                            <td>⚠️ Solo Armatura Magica</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Puro</strong></td>
+                            <td>Psichico, necrotic, drain vitale</td>
+                            <td>❌ No (ignora sempre)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><strong>Nota:</strong> Armatura fisica (giubbotto, scudo) protegge solo vs fisico. Armatura magica (amuleti, barriere) protegge vs fisico E magico.</p>
+                
+                <h3>Recuperare PF</h3>
+                
+                <p><strong>Riposo Breve (10 minuti):</strong> Nessun recupero naturale. Puoi usare medikit (1d6 PF) O potere guarigione.</p>
+                
+                <p><strong>Riposo Notturno (8 ore sicure):</strong> Recuperi <strong>1d4 PF</strong>. Tira dado ogni mattina.</p>
+                
+                <p><strong>Riposo Lungo (24 ore relax):</strong> Recuperi <strong>2d6 PF</strong>.</p>
+                
+                <p><strong>Guarigione Magica:</strong> Poteri Avalon/Ife guariscono immediatamente (vedi Parte IV).</p>
+                
+                <p><strong>Cure Mediche:</strong> Ospedale/medico esperto: 1d6 PF al giorno per settimana.</p>
+                
+                <h3>Ferite e Penalità</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PF Rimanenti</th>
+                            <th>Condizione</th>
+                            <th>Effetto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>50%+ massimo</td>
+                            <td>Sano</td>
+                            <td>Nessuna penalità</td>
+                        </tr>
+                        <tr>
+                            <td>25-49% massimo</td>
+                            <td>Ferito</td>
+                            <td>Descrivi ferite (sangue, lividi). Nessuna penalità meccanica MA narrativa.</td>
+                        </tr>
+                        <tr>
+                            <td>1-24% massimo</td>
+                            <td>Gravemente Ferito</td>
+                            <td>-1 a tutti tiri. Movimento ridotto. Descrivi: zoppichi, respiro affannoso.</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>Morente</td>
+                            <td>Tira <strong>Ultimo Respiro</strong> (vedi Parte III)</td>
+                        </tr>
+                        <tr>
+                            <td>Negativo</td>
+                            <td>Morto</td>
+                            <td>Game over (a meno che resurrezione)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="info-box">
+                    <h4>⚠️ PF Non Sono Solo "Salute"</h4>
+                    <p>PF rappresentano anche: stamina, fortuna, volontà vivere, schivate last-second.</p>
+                    <p>Perdere 10 PF non significa "10 tagli". Significa "colpo che QUASI ti uccide MA schivi, però sei esausto".</p>
+                    <p>Solo quando arrivi 0 PF = ferita VERA potenzialmente fatale.</p>
+                </div>
+            </section>
+            
+            <!-- CAPITOLO 10 -->
+            <section id="cap10">
+                <h2>Capitolo 10: Legami</h2>
+                
+                <p><strong>Legami</strong> rappresentano connessioni emotive profonde con PNG (O altri PG). Meccanicamente importanti + narrativamente ricchi.</p>
+                
+                <h3>Cos'è un Legame</h3>
+                
+                <p>Legame è relazione significativa con persona specifica. Non semplice conoscenza — deve esserci storia emotiva.</p>
+                
+                <p><strong>Esempi Legami:</strong></p>
+                <ul>
+                    <li>Famiglia (genitore, fratello, figlio, partner romantico)</li>
+                    <li>Amicizia profonda (anni insieme, fiducia reciproca)</li>
+                    <li>Mentore/Allievo (chi ti ha insegnato, chi insegni)</li>
+                    <li>Rivale/Nemesi (odio intenso MA connessione forte)</li>
+                    <li>Debito (salvato vita, O devi salvare)</li>
+                </ul>
+                
+                <h3>Livelli Legame</h3>
+                
+                <p>Legami hanno livello da <strong>0 a 3</strong>:</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Livello</th>
+                            <th>Relazione</th>
+                            <th>Bonus Meccanico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>0</strong></td>
+                            <td>Conoscente, contatto casuale</td>
+                            <td>Nessuno (non è Legame vero)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1</strong></td>
+                            <td>Amico, collega fidato, familiare distante</td>
+                            <td>+1 quando PNG direttamente coinvolto</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2</strong></td>
+                            <td>Amico stretto, familiare prossimo, partner</td>
+                            <td>+2 quando PNG direttamente coinvolto</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3</strong></td>
+                            <td>Amore vita, genitore/figlio, gemello anima</td>
+                            <td>+3 quando PNG direttamente coinvolto</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="example-box">
+                    <h4>Bonus Legame in Azione</h4>
+                    <p><strong>Situazione:</strong> Marco ha Legame 2 con Sofia (collega detective). Sofia è rapita da cultisti.</p>
+                    
+                    <p>Marco sta interrogando testimone per trovare dove tenuta. Tira +CAR per Persuadere.</p>
+                    
+                    <p><strong>Normalmente:</strong> 2d6 + CAR (+2) = 2d6+2</p>
+                    <p><strong>Con Legame:</strong> 2d6 + CAR (+2) + Legame Sofia (2) = <strong>2d6+4</strong></p>
+                    
+                    <p><em>Motivazione emotiva (salvare amica) dà bonus meccanico.</em></p>
+                </div>
+                
+                <h3>Quando Applicare Bonus Legame</h3>
+                
+                <p>Bonus Legame si applica quando:</p>
+                <ul>
+                    <li>PNG è <strong>direttamente</strong> coinvolto in azione</li>
+                    <li>Stai agendo <strong>per/con/contro</strong> PNG</li>
+                    <li>Situazione ha <strong>stake emotivo</strong> per relazione</li>
+                </ul>
+                
+                <p><strong>NON si applica quando:</strong></p>
+                <ul>
+                    <li>PNG non ha nulla a che fare con situazione</li>
+                    <li>Azione è generica (combatti random demone, PNG non presente)</li>
+                    <li>Connessione emotiva non rilevante</li>
+                </ul>
+                
+                <h3>Creare e Sviluppare Legami</h3>
+                
+                <p><strong>Inizio Gioco:</strong> Ogni PG inizia con <strong>2 Legami livello 1</strong>. Scegli PNG (O altro PG) + descrivi relazione.</p>
+                
+                <p><strong>Durante Gioco:</strong> Legami possono:</p>
+                <ul>
+                    <li><strong>Aumentare:</strong> Spendi tempo con PNG, vivi esperienze condivise, superi conflitti. Custode dice quando Legame sale livello.</li>
+                    <li><strong>Diminuire:</strong> Tradimenti, conflitti non risolti, abbandono. Custode può ridurre livello.</li>
+                    <li><strong>Rompersi:</strong> Morte PNG, tradimento imperdonabile, scelta impossibile. Legame diventa 0 (permanente).</li>
+                </ul>
+                
+                <div class="info-box">
+                    <h4>💔 Legami Rotti</h4>
+                    <p>Quando Legame si rompe (scende a 0 permanentemente), è momento narrativo importante. Spesso trigger arco personale, vendetta, O crescita personaggio.</p>
+                    <p><strong>Esempio:</strong> Legame Marco-Sofia rompe quando Sofia muore in missione. Marco spende resto campagna cercando vendetta contro chi l'ha uccisa.</p>
+                </div>
+                
+                <h3>Legami tra PG</h3>
+                
+                <p>Puoi (anzi, DOVRESTI) avere Legami con altri PG. Creano dinamiche gruppo interessanti.</p>
+                
+                <p><strong>A Session Zero:</strong> Ogni PG crea almeno 1 Legame verso altro PG. Questo garantisce gruppo coeso sin da inizio.</p>
+                
+                <div class="example-box">
+                    <h4>Esempio: Legami Gruppo</h4>
+                    <ul>
+                        <li><strong>Marco → Sofia:</strong> Legame 2. "Sofia è unica che capisce peso segreti porto. Mi fido ciecamente."</li>
+                        <li><strong>Sofia → Luca:</strong> Legame 1. "Luca mi ha curato dopo missione quasi-fatale. Gli devo vita."</li>
+                        <li><strong>Luca → Elena:</strong> Legame 1. "Elena mi inquieta (parla coi morti) MA rispetto sua saggezza."</li>
+                        <li><strong>Elena → Marco:</strong> Legame 1. "Marco è troppo rigido, MA ammiro suo senso giustizia."</li>
+                    </ul>
+                    <p><em>Tutti connessi, gruppo solido.</em></p>
+                </div>
+                
+                <h3>Massimo Legami</h3>
+                
+                <p><strong>Limite suggerito:</strong> 4-6 Legami totali per PG. Più di 6 = difficile gestire narrativamente.</p>
+                
+                <p><strong>Qualità > Quantità:</strong> Meglio 3 Legami profondi (livello 2-3) che 10 superficiali (livello 1).</p>
+            </section>
+            
+            <!-- CAPITOLO 11 -->
+            <section id="cap11">
+                <h2>Capitolo 11: Stress e Corruzione</h2>
+                
+                <p>Oltre a PF, ci sono due risorse mentali/spirituali che gestisci: <strong>Stress</strong> e <strong>Corruzione</strong>.</p>
+                
+                <h3>Stress (Avalon & Ife)</h3>
+                
+                <p><strong>Cos'è:</strong> Affaticamento mentale, burnout emotivo, strain spirituale. Canalizzare magia "pura" (luce O vita) brucia psiche.</p>
+                
+                <p><strong>Chi lo usa:</strong> Solo Avalon e Ife. Poteri costano Stress.</p>
+                
+                <p><strong>Range:</strong> 0 (fresco) → 10 (burnout totale)</p>
+                
+                <div class="info-box">
+                    <h4>⚠️ A Stress 10: Burnout</h4>
+                    <p>Quando raggiungi 10 Stress, subisci <strong>Burnout</strong>:</p>
+                    <ul>
+                        <li>Non puoi usare poteri finché non riduci sotto 10</li>
+                        <li>-2 a tutti tiri (esausto mentalmente)</li>
+                        <li>Custode sceglie 1 conseguenza narrativa:
+                            <ul>
+                                <li>Crollo emotivo (piangi incontrollabile, panico)</li>
+                                <li>Dissociazione (ti senti vuoto, distaccato)</li>
+                                <li>Rabbia esplosiva (perdi controllo, attacchi alleato)</li>
+                                <li>Shutdown (catatonia temporanea 10 minuti)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <h4>Accumulare Stress</h4>
+                
+                <p><strong>Guadagni Stress quando:</strong></p>
+                <ul>
+                    <li>Usi potere Avalon/Ife (costo specificato in potere)</li>
+                    <li>Testimoni orrore estremo (strage, tortura, etc) — tira +MEN, su 6- = +1 Stress</li>
+                    <li>Fallisci salvare qualcuno importante (Custode può dare +1 Stress)</li>
+                    <li>Esci zona comfort emotiva (es: Avalon costretto uccidere innocente per male minore)</li>
+                </ul>
+                
+                <h4>Ridurre Stress</h4>
+                
+                <p><strong>Riduci Stress tramite:</strong></p>
+                <ul>
+                    <li><strong>Riposo Notturno:</strong> -1 Stress per notte (8 ore sicure)</li>
+                    <li><strong>Downtime Attività:</strong> (Parte VI ha lista)
+                        <ul>
+                            <li>Meditazione/Yoga: -1d3 Stress</li>
+                            <li>Terapia/Confessione: -1d4 Stress</li>
+                            <li>Hobby rilassante: -1 Stress</li>
+                            <li>Tempo con Legame: -1d3 Stress</li>
+                        </ul>
+                    </li>
+                    <li><strong>Momento Catartico:</strong> Sfogo emotivo importante (pianto, confessione, etc). Custode può dare -2 Stress se narrativamente forte.</li>
+                </ul>
+                
+                <p><strong>Nota:</strong> Stress NON sparisce veloce. Forza pause, self-care. Tema centrale.</p>
+                
+                <div class="example-box">
+                    <h4>Stress in Gioco: Marco (Avalon)</h4>
+                    <p><strong>Sessione 1:</strong> Marco usa 3 poteri (costo 1 Stress ciascuno). Stress = 3.</p>
+                    <p><strong>Sessione 2:</strong> Testimonia cultista sacrificare bambino. Tira +MEN, fallisce. +1 Stress. Ora 4. Poi usa 2 poteri. Ora 6.</p>
+                    <p><strong>Downtime:</strong> Marco va a confessione con Padre Giovanni (Legame). Racconta orrori visti. Piange. -1d4 Stress (tira 3). Ora 3.</p>
+                    <p><strong>Sessione 3:</strong> Inizia fresco (3 Stress). Può usare poteri MA deve gestire economia.</p>
+                </div>
+                
+                <h3>Corruzione (Solo Umbra)</h3>
+                
+                <p><strong>Cos'è:</strong> Contaminazione da Piano Ombre. Ogni volta usi poteri Umbra, frammento oscurità entra in te. Accumula.</p>
+                
+                <p><strong>Chi lo usa:</strong> SOLO Umbra. Nessun'altra Casata accumula Corruzione.</p>
+                
+                <p><strong>Range:</strong> 0 (puro) → 5 (trasformato)</p>
+                
+                <div class="info-box" style="border-color: #8e44ad;">
+                    <h4>💀 A Corruzione 5: Trasformazione</h4>
+                    <p>Quando raggiungi 5 Corruzione, subisci <strong>Trasformazione Irreversibile</strong>:</p>
+                    <ul>
+                        <li>Diventi creatura ombra pura (perdi umanità)</li>
+                        <li>PG diventa PNG (Custode controlla)</li>
+                        <li><strong>Devi creare nuovo PG</strong></li>
+                        <li>Vecchio PG diventa antagonista ricorrente (tragico)</li>
+                    </ul>
+                    <p><strong>Eccezione:</strong> Se gruppo intraprende quest epica (rituale L5 Avalon/Ife + artefatto leggendario + sacrificio enorme), possibile salvare MA con cicatrici permanenti.</p>
+                </div>
+                
+                <h4>Accumulare Corruzione</h4>
+                
+                <p><strong>Guadagni Corruzione quando:</strong></p>
+                <ul>
+                    <li>Usi potere Umbra (costo specificato in potere, di solito +1)</li>
+                    <li>Fai scelta moralmente oscura (tradisci alleato, uccidi innocente per vantaggio) — Custode può dare +1</li>
+                    <li>Resti troppo a lungo Piano Ombre (1+ ora) — +1 per ora</li>
+                </ul>
+                
+                <h4>Ridurre Corruzione</h4>
+                
+                <p><strong>Riduci Corruzione tramite (MOLTO PIÙ DIFFICILE CHE STRESS):</strong></p>
+                <ul>
+                    <li><strong>Riposo:</strong> NON riduce Corruzione (a differenza Stress)</li>
+                    <li><strong>Rituale Purificazione:</strong>
+                        <ul>
+                            <li>Richiede Guardiano Avalon L3+ O Ife L4+</li>
+                            <li>Dura 1 ora</li>
+                            <li>Costo: 3 Stress per chi esegue</li>
+                            <li>Risultato: -1 Corruzione</li>
+                        </ul>
+                    </li>
+                    <li><strong>Atto Redenzione Maggiore:</strong> Sacrificio personale significativo (salvi 100 vite, ti arrendi per salvare gruppo, etc). Custode può dare -1 Corruzione se narrativamente potente.</li>
+                    <li><strong>Artefatti Rari:</strong> Alcuni artefatti leggendari purificano Corruzione (vedi Parte VII)</li>
+                </ul>
+                
+                <p><strong>Importante:</strong> Corruzione è <em>quasi</em> permanente. Umbra vivono con essa costantemente. È peso del potere.</p>
+                
+                <div class="example-box">
+                    <h4>Corruzione in Gioco: Sofia (Umbra)</h4>
+                    <p><strong>Sessione 1-3:</strong> Sofia usa poteri con parsimonia. Corruzione sale lentamente: 0 → 1 → 2. Ancora sicura.</p>
+                    <p><strong>Sessione 4:</strong> Missione disperata. Usa 3 poteri in rapida successione. Corruzione = 5. <strong>TRASFORMAZIONE</strong>.</p>
+                    <p><strong>Momento Tragico:</strong> Sofia sente oscurità consumarla. Occhi diventano neri. Ombre la avvolgono. "Marco... scappa." Diventa creatura ombra, attacca gruppo.</p>
+                    <p><strong>Resto Campagna:</strong> Gruppo cerca modo salvarla. Quest artefatto "Luce Primordiale". Climax emotivo: riescono purificarla MA Sofia perde memoria ultimo anno (prezzo).</p>
+                </div>
+                
+                <h3>Tabella Riferimento Rapido</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Risorsa</th>
+                            <th>Casate</th>
+                            <th>Max</th>
+                            <th>A Max</th>
+                            <th>Recupero</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>PF</strong></td>
+                            <td>Tutti</td>
+                            <td>20+(FOR×2)</td>
+                            <td>Morente</td>
+                            <td>1d4/notte, poteri, cure</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stress</strong></td>
+                            <td>Avalon, Ife</td>
+                            <td>10</td>
+                            <td>Burnout</td>
+                            <td>-1/notte, downtime</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Corruzione</strong></td>
+                            <td>Umbra</td>
+                            <td>5</td>
+                            <td>Trasformazione</td>
+                            <td>Rituale difficile, atti redenzione</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <hr>
+            
+            <div class="info-box" style="text-align: center; margin-top: 60px;">
+                <h3>✅ Fine Parte II</h3>
+                <p>Ora conosci meccaniche core:</p>
+                <ul style="list-style: none; margin: 20px 0;">
+                    <li>✅ Come funziona gioco (conversazione + dadi)</li>
+                    <li>✅ Caratteristiche (FOR, CUO, MEN, CAR, FAT)</li>
+                    <li>✅ Sistema 2d6 (10+, 7-9, 6-)</li>
+                    <li>✅ PF e Danno</li>
+                    <li>✅ Legami emotivi</li>
+                    <li>✅ Stress e Corruzione</li>
+                </ul>
+                <p style="margin-top: 30px; font-size: 18px; color: var(--accent-gold);">
+                    <strong>Prossimo passo:</strong> Parte III per combattimento dettagliato + morte.
+                </p>
+            </div>
+            
+            <!-- NAVIGAZIONE -->
+            <div class="page-navigation">
+                <a href="parte1.html" class="nav-button">← Parte I</a>
+                <a href="parte3.html" class="nav-button">Parte III: Combattimento →</a>
+            </div>
+            
+        </main>
+    </div>
+</body>
+</html>
