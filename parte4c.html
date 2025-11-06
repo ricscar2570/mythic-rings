@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythic Rings v2.1 - Poteri Ife</title>
+    <style>
+        /* [STESSO CSS BASE - identico a parte4b.html] */
+        :root {
+            --primary-dark: #1a1a2e;
+            --secondary-dark: #16213e;
+            --accent-gold: #f39c12;
+            --accent-gold-dark: #e67e22;
+            --text-light: #ecf0f1;
+            --text-muted: #95a5a6;
+            --border-gold: rgba(243, 156, 18, 0.3);
+            --shadow-glow: 0 0 20px rgba(243, 156, 18, 0.3);
+            --ife-color: #2ecc71;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Georgia', 'Palatino', 'Times New Roman', serif;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 50%, #0f3460 100%);
+            background-attachment: fixed;
+            color: var(--text-light);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        
+        .page-wrapper { display: flex; min-height: 100vh; }
+        
+        .sidebar {
+            width: 300px;
+            background: linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, rgba(22, 33, 62, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            border-right: 2px solid var(--border-gold);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 25px 18px;
+            z-index: 1000;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .sidebar::-webkit-scrollbar { width: 8px; }
+        .sidebar::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.3); }
+        .sidebar::-webkit-scrollbar-thumb { background: var(--accent-gold); border-radius: 4px; }
+        
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-gold);
+        }
+        
+        .sidebar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+            letter-spacing: 1px;
+        }
+        
+        .sidebar-version { font-size: 11px; color: var(--text-muted); font-style: italic; }
+        .menu-section { margin-bottom: 25px; }
+        
+        .menu-title {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            padding-left: 8px;
+            border-left: 3px solid var(--accent-gold);
+        }
+        
+        .menu-items { list-style: none; }
+        .menu-items li { margin-bottom: 5px; }
+        
+        .menu-items a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 13px;
+            display: block;
+            padding: 7px 10px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .menu-items a:hover {
+            background: rgba(243, 156, 18, 0.1);
+            border-left-color: var(--accent-gold);
+            padding-left: 15px;
+            color: var(--accent-gold);
+        }
+        
+        .menu-items a.active {
+            background: rgba(243, 156, 18, 0.2);
+            border-left-color: var(--accent-gold);
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        .main-content {
+            margin-left: 300px;
+            flex: 1;
+            padding: 50px 70px;
+            max-width: 1400px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(5px);
+            min-height: 100vh;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Palatino', 'Georgia', serif;
+            color: var(--accent-gold);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 46px;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 18px;
+            margin-bottom: 40px;
+            text-shadow: 0 0 20px rgba(243, 156, 18, 0.4);
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            font-size: 34px;
+            margin-top: 55px;
+            padding-left: 18px;
+            border-left: 5px solid var(--accent-gold);
+        }
+        
+        h3 { font-size: 26px; color: var(--accent-gold-dark); }
+        h4 { font-size: 20px; color: var(--text-light); }
+        
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            line-height: 1.9;
+            font-size: 16px;
+        }
+        
+        strong { color: var(--accent-gold); font-weight: bold; }
+        em { font-style: italic; color: var(--accent-gold-dark); }
+        
+        ul, ol { margin-left: 32px; margin-bottom: 18px; }
+        ul li, ol li { margin-bottom: 10px; line-height: 1.7; }
+        ul li::marker { color: var(--accent-gold); }
+        ol li::marker { color: var(--accent-gold); font-weight: bold; }
+        
+        .power-box {
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.08), rgba(46, 204, 113, 0.15));
+            border: 3px solid rgba(46, 204, 113, 0.5);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 0 20px rgba(46, 204, 113, 0.4);
+        }
+        
+        .power-box h4 {
+            margin-top: 0;
+            color: var(--ife-color);
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+        
+        .power-level {
+            display: inline-block;
+            background: var(--ife-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        
+        .power-cost {
+            background: rgba(46, 204, 113, 0.2);
+            border: 2px solid var(--ife-color);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 12px 0;
+            font-weight: bold;
+            color: var(--ife-color);
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.05), rgba(243, 156, 18, 0.1));
+            border: 2px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .info-box h3, .info-box h4 { margin-top: 0; color: var(--accent-gold); }
+        
+        .separator {
+            text-align: center;
+            font-size: 28px;
+            color: var(--accent-gold);
+            margin: 50px 0;
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+        
+        a:hover { color: var(--accent-gold); border-bottom-color: var(--accent-gold); }
+        
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 70px;
+            padding-top: 35px;
+            border-top: 2px solid var(--border-gold);
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+            border: none;
+            font-size: 15px;
+        }
+        
+        .nav-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(243, 156, 18, 0.6);
+            color: white;
+            border: none;
+        }
+        
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+            margin: 45px 0;
+        }
+        
+        @media (max-width: 1024px) {
+            .sidebar { width: 260px; }
+            .main-content { margin-left: 260px; padding: 40px 45px; }
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 2px solid var(--border-gold);
+            }
+            .main-content { margin-left: 0; padding: 30px 20px; }
+            h1 { font-size: 34px; }
+            h2 { font-size: 26px; }
+            .page-navigation { flex-direction: column; gap: 12px; }
+            .nav-button { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">⟡ MYTHIC RINGS ⟡</div>
+                <div class="sidebar-version">Versione 2.1 - FINALE</div>
+            </div>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Navigazione</div>
+                <ul class="menu-items">
+                    <li><a href="index.html">🏠 Homepage</a></li>
+                    <li><a href="parte4b.html">← Umbra</a></li>
+                    <li><a href="parte4d.html">Prossimo: Mictlan →</a></li>
+                </ul>
+            </nav>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Ife - Questa Sezione</div>
+                <ul class="menu-items">
+                    <li><a href="#ife-l1" class="active">Livello 1 (Base)</a></li>
+                    <li><a href="#ife-l2">Livello 2</a></li>
+                    <li><a href="#ife-l3">Livello 3</a></li>
+                    <li><a href="#ife-l4">Livello 4</a></li>
+                    <li><a href="#ife-l5">Livello 5 (Leggendari)</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            
+            <h1>Capitolo 22: Poteri Ife</h1>
+            
+            <div class="info-box" style="background: linear-gradient(135deg, rgba(46, 204, 113, 0.05), rgba(46, 204, 113, 0.1)); border-color: rgba(46, 204, 113, 0.5);">
+                <h3 style="color: #2ecc71;">🌿 Filosofia Ife</h3>
+                <p><strong>Essenza:</strong> Vita, natura, crescita, guarigione, ciclo naturale. Ife sono druidi urbani, guaritori compassionevoli, protettori ecosistema.</p>
+                <p><strong>Risorsa:</strong> Stress (0-10). Come Avalon. Canalizzare forza vitale esaurisce spirito.</p>
+                <p><strong>Caratteristica Poteri:</strong> +FAT</p>
+                <p><strong>Temi Poteri:</strong> Guarigione potenziata, controllo piante, potenziamento fisico, forma animale, purificazione veleni, connessione natura.</p>
+            </div>
+            
+            <section id="ife-l1">
+                <h2>Ife Livello 1</h2>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 1</span>
+                    <h4>🌱 TOCCO VITALE</h4>
+                    
+                    <div class="power-cost">COSTO: 1 Stress</div>
+                    
+                    <p><strong>RANGE:</strong> Tocco</p>
+                    
+                    <p><strong>EFFETTO:</strong> Guarigione rapida base. Canalizzi energia vitale pura.</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Bersaglio recupera <strong>2d6 PF</strong>. Ferite superficiali chiudono visibilmente (pelle ricresce, ossa scricchiolano riposizionandosi).</li>
+                        <li><strong>7-9:</strong> Recupera <strong>1d6 PF</strong> MA strain. Scegli 1:
+                            <ul>
+                                <li>Bersaglio ha -1 FOR fino riposo (corpo affaticato da rigenerazione rapida)</li>
+                                <li>Tu subisci 1d4 danno (feedback energia)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Guarigione fallisce. Stress pagato. Energia dispersa O assorbita da qualcosa vicino (pianta cresce selvaggiamente, animale attratto, etc).</li>
+                    </ul>
+                    
+                    <p><strong>BONUS:</strong> Funziona anche su animali/piante. Può far germogliare seme istantaneamente O guarire animale ferito.</p>
+                    
+                    <p><strong>NOTE:</strong> Simile a Avalon Guarigione Minore MA Ife versione è più "organica" (pelle che ricresce vs luce divina).</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 1</span>
+                    <h4>🌿 CRESCITA RAPIDA</h4>
+                    
+                    <div class="power-cost">COSTO: 1 Stress</div>
+                    
+                    <p><strong>RANGE:</strong> Vicino</p>
+                    <p><strong>AREA:</strong> Piante in zona 3m raggio</p>
+                    
+                    <p><strong>EFFETTO:</strong> Acceleri crescita vegetazione. Piante crescono settimane in secondi.</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Controllo perfetto. Scegli 1 effetto:
+                            <ul>
+                                <li><strong>Barriera:</strong> Rovi/rampicanti creano muro 3m alto × 5m largo (PF 20, Armatura 3, blocca passaggio)</li>
+                                <li><strong>Ostacolo:</strong> Radici emergono, intralciano nemici (area Vicina = terreno difficile, movimento dimezzato)</li>
+                                <li><strong>Copertura:</strong> Fogliame denso oscura area (+2 nascondersi)</li>
+                                <li><strong>Frutto Guaritore:</strong> Pianta produce 1d4 frutti (ogni frutto = recupera 1d4 PF se mangiato)</li>
+                            </ul>
+                        </li>
+                        <li><strong>7-9:</strong> Crescita incontrollata. Effetto funziona MA piante crescono caoticamente. Scegli 1:
+                            <ul>
+                                <li>Blocca alleati troppo (anche voi intralciati)</li>
+                                <li>Piante sono aggressive (spine feriscono chiunque tocca: 1d4 danno)</li>
+                                <li>Dura solo 10 minuti poi appassisce</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Crescita fallisce. Stress pagato. Piante non rispondono O marciscono istantaneamente (odore orribile).</li>
+                    </ul>
+                    
+                    <p><strong>LIMITAZIONE:</strong> Richiede vegetazione esistente (anche minima: muschio, erbacce). In deserto/cemento puro = impossibile.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 1</span>
+                    <h4>🦅 SENSI ANIMALI</h4>
+                    
+                    <div class="power-cost">COSTO: 1 Stress</div>
+                    
+                    <p><strong>DURATA:</strong> 1 ora</p>
+                    
+                    <p><strong>EFFETTO:</strong> Potenzi sensi a livello animale. Scegli 1 senso da amplificare:</p>
+                    <ul>
+                        <li><strong>Vista (Aquila):</strong> Vedi dettagli minuti 100m distanza, +2 MEN notare cose lontane</li>
+                        <li><strong>Udito (Lupo):</strong> Senti conversazioni sussurrate 50m, distingui battiti cardiaci Vicino</li>
+                        <li><strong>Olfatto (Orso):</strong> Segui tracce odore 24h vecchie, riconosci persone da odore corporeo</li>
+                        <li><strong>Tatto (Serpente):</strong> Percepisci vibrazioni (senti passi 20m attraverso suolo)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Automatico (no tiro)</p>
+                    
+                    <p><strong>MALUS:</strong> Senso amplificato = vulnerabile sovraccarico sensoriale. Rumore forte/luce intensa/odore pungente = Sfidare Pericolo +FOR O stordito 1 round.</p>
+                    
+                    <p><strong>NOTE:</strong> Investigazione naturale. Combo con altri poteri tracking/survival.</p>
+                </div>
+            </section>
+            
+            <div class="separator">⟡</div>
+            
+            <section id="ife-l2">
+                <h2>Ife Livello 2</h2>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 2</span>
+                    <h4>💪 VIGORE BESTIALE</h4>
+                    
+                    <div class="power-cost">COSTO: 2 Stress</div>
+                    
+                    <p><strong>RANGE:</strong> Tocco (te stesso O alleato)</p>
+                    <p><strong>DURATA:</strong> Scena</p>
+                    
+                    <p><strong>EFFETTO:</strong> Infudi forza animale. Muscoli si gonfiano, riflessi accelerano.</p>
+                    
+                    <p><strong>BONUS:</strong></p>
+                    <ul>
+                        <li><strong>+2 FOR</strong> (temporaneo)</li>
+                        <li><strong>+2 CUO</strong> (temporaneo)</li>
+                        <li>Danno corpo-a-corpo +1d4</li>
+                        <li>Salti raddoppiati (6m orizzontale, 3m verticale)</li>
+                        <li>Velocità corsa × 1.5</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Vigore perfetto. Tutti bonus, dura scena completa, nessun malus.</li>
+                        <li><strong>7-9:</strong> Vigore instabile. Bonus funzionano MA scegli 1:
+                            <ul>
+                                <li>Dura solo 10 minuti</li>
+                                <li>Quando finisce, crash: -1 FOR/CUO per 1 ora (esaurimento muscolare)</li>
+                                <li>Aspetto bestiale visibile (occhi gialli, canini allungati) — PNG -1 reazioni</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Vigore fallisce dolorosamente. Stress pagato. Muscoli crampo: 1d6 danno + -1 FOR fino riposo.</li>
+                    </ul>
+                    
+                    <p><strong>COMBO:</strong> Su alleato combattente = trasforma in tank temporaneo. Su te stesso = diventi predatore.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 2</span>
+                    <h4>🐍 PURGA TOSSINE</h4>
+                    
+                    <div class="power-cost">COSTO: 2 Stress</div>
+                    
+                    <p><strong>RANGE:</strong> Tocco</p>
+                    
+                    <p><strong>EFFETTO:</strong> Purifichi corpo da veleni, malattie, droghe, alcool. Sistema immunitario potenziato espelle tossine.</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Purificazione completa. Rimuovi TUTTI effetti:
+                            <ul>
+                                <li>Veleni (qualsiasi, anche magici)</li>
+                                <li>Malattie (non-magiche)</li>
+                                <li>Droghe/Alcool (sbronzo istantaneo, intossicazione)</li>
+                                <li>Afflizioni corpo (febbre, nausea, paralisi temporanea)</li>
+                            </ul>
+                            Bersaglio recupera 1d6 PF (tossine espulse = sollievo).
+                        </li>
+                        <li><strong>7-9:</strong> Purificazione parziale. Riduci effetti 50% (danno veleno dimezzato, malattia rallentata). Richiede 2° applicazione per pulizia completa.</li>
+                        <li><strong>6-:</strong> Purificazione fallisce. Stress pagato. Tossine resistono O peggiorano temporaneamente (reazione sistema immunitario).</li>
+                    </ul>
+                    
+                    <p><strong>LIMITAZIONI:</strong></p>
+                    <ul>
+                        <li>Maledizioni magiche: non funziona (serve Purificazione Suprema Avalon L4)</li>
+                        <li>Malattie magiche (zombificazione, licantropia): riduce sintomi MA non cura radice</li>
+                    </ul>
+                    
+                    <p><strong>UTILITY:</strong> Salva-vita vs veleni mortali. Utile anche socialmente (sobrio amico ubriaco prima incontro importante).</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 2</span>
+                    <h4>🌳 PELLE CORTECCIA</h4>
+                    
+                    <div class="power-cost">COSTO: 2 Stress</div>
+                    
+                    <p><strong>RANGE:</strong> Tocco (te O alleato)</p>
+                    <p><strong>DURATA:</strong> Scena</p>
+                    
+                    <p><strong>EFFETTO:</strong> Pelle indurisce, assume texture corteccia d'albero. Protezione naturale.</p>
+                    
+                    <p><strong>BONUS:</strong></p>
+                    <ul>
+                        <li><strong>Armatura +3</strong> (stack con armatura fisica)</li>
+                        <li>Resistenza elementi: metà danno da fuoco/freddo/elettricità</li>
+                        <li>Stabilità: +2 FOR resistere spinte/trip</li>
+                    </ul>
+                    
+                    <p><strong>MALUS:</strong></p>
+                    <ul>
+                        <li>Movimento -1 (rigido)</li>
+                        <li>CUO -1 (schivare difficile)</li>
+                        <li>Aspetto ovvio (pelle marrone legnosa, fessure) — PNG reagiscono sorpresi</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Corteccia perfetta. Tutti bonus, dura scena, malus ridotti (solo -0.5 movimento/CUO, arrotonda).</li>
+                        <li><strong>7-9:</strong> Corteccia imperfetta. Bonus funzionano MA scegli 1:
+                            <ul>
+                                <li>Armatura solo +2 invece +3</li>
+                                <li>Dura solo 10 minuti</li>
+                                <li>Corteccia crepa se subisci 10+ danno singolo colpo (si dissolve)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Corteccia non si forma. Stress pagato. Pelle irritata: -1 Armatura fino guarita (sensibile).</li>
+                    </ul>
+                    
+                    <p><strong>COMBO:</strong> + Vigore Bestiale = tank inarrestabile (FOR alta, Armatura alta, danno alto).</p>
+                </div>
+            </section>
+            
+            <div class="separator">⟡</div>
+            
+            <section id="ife-l3">
+                <h2>Ife Livello 3</h2>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 3</span>
+                    <h4>🐺 FORMA ANIMALE</h4>
+                    
+                    <div class="power-cost">COSTO: 3 Stress</div>
+                    
+                    <p><strong>DURATA:</strong> 1 ora</p>
+                    
+                    <p><strong>EFFETTO:</strong> Trasformi in animale a scelta (taglia media: lupo, pantera, aquila, orso, serpente). Corpo rimodella completamente.</p>
+                    
+                    <p><strong>FORMA ANIMALE:</strong></p>
+                    <ul>
+                        <li><strong>Statistiche:</strong> Adotti stats animale (velocità, attacchi naturali, sensi)</li>
+                        <li><strong>PF:</strong> Mantieni PF umani</li>
+                        <li><strong>Equipaggiamento:</strong> Fonde in forma (riappare quando torni umano)</li>
+                        <li><strong>Comunicazione:</strong> Capisci/parli lingua animale (con quella specie)</li>
+                        <li><strong>Mente:</strong> Mantieni intelligenza/personalità MA istinti animali forti</li>
+                    </ul>
+                    
+                    <p><strong>ESEMPI FORME:</strong></p>
+                    <ul>
+                        <li><strong>Lupo:</strong> Veloce (×2), morso 1d8, traccia odori, lavoro squadra</li>
+                        <li><strong>Aquila:</strong> Volo rapido, artigli 1d6, vista acuta (+3 MEN notare), piccola</li>
+                        <li><strong>Orso:</strong> Forte (FOR +2), artigli 1d10, +5 PF temporanei, lento</li>
+                        <li><strong>Serpente:</strong> Piccolo (infiltrazione), morso veleno (1d4 + 1d4/round × 3), nuoto</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Trasformazione fluida. Controllo perfetto, 1 ora piena, trasforma avanti/indietro a volontà (azione gratuita).</li>
+                        <li><strong>7-9:</strong> Trasformazione difficile. Funziona MA scegli 1:
+                            <ul>
+                                <li>Dura solo 30 minuti</li>
+                                <li>Istinti animali forti: ogni situazione stressante = Resistere +CUO O agisci da animale (attacchi minacce, fuggi predatori, etc)</li>
+                                <li>Trasformazione dolorosa: 1d6 danno quando trasformi + quando ritorni</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Trasformazione fallisce O peggio: trasformi MA perdi controllo. Diventi animale completo (Custode controlla) per 1 ora. Quando ritorni = confuso, ricordi vaghi.</li>
+                    </ul>
+                    
+                    <p><strong>UTILITY:</strong> Infiltrazione (aquila sorvola, serpente striscia), combattimento (orso/lupo), fuga (aquila vola via). Versatilissimo.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 3</span>
+                    <h4>🌺 RIGENERAZIONE</h4>
+                    
+                    <div class="power-cost">COSTO: 4 Stress</div>
+                    
+                    <p><strong>RANGE:</strong> Tocco (te O alleato)</p>
+                    <p><strong>DURATA:</strong> 10 minuti</p>
+                    
+                    <p><strong>EFFETTO:</strong> Attivi rigenerazione cellulare accelerata. Corpo guarisce continuamente.</p>
+                    
+                    <p><strong>MECCANICA:</strong></p>
+                    <ul>
+                        <li><strong>Inizio ogni turno bersaglio:</strong> Recupera <strong>1d6 PF</strong> automaticamente</li>
+                        <li>Ferite chiudono visibilmente (anche profonde)</li>
+                        <li>Ossa rotte si risaldano (doloroso MA funzionale)</li>
+                        <li>Sanguinamento si ferma immediatamente</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Rigenerazione potente. 1d6 PF/turno, 10 minuti pieni, nessun malus.</li>
+                        <li><strong>7-9:</strong> Rigenerazione imperfetta. Funziona MA scegli 1:
+                            <ul>
+                                <li>Recupero ridotto (1d4 PF/turno invece 1d6)</li>
+                                <li>Dura solo 5 minuti</li>
+                                <li>Rigenerazione dolorosa: bersaglio ha -1 a tutti tiri mentre attiva (dolore costante)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Rigenerazione fuori controllo. Stress pagato MA:
+                            <ul>
+                                <li>Cellule crescono caoticamente: recupera 2d6 PF MA sviluppa escrescenze temporanee (tumori benigni, pelle extra). -2 CAR per 24h (aspetto grottesco). Spariscono lentamente.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <p><strong>TATTICO:</strong> Su tank = inarrestabile (10 turni × 1d6 = ~35 PF recupero medio). Su PG morente = salva-vita garantito.</p>
+                    
+                    <p><strong>LIMITAZIONE:</strong> Non rigenera arti/organi completamente persi (serve Resurrezione Avalon L5 per quello).</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 3</span>
+                    <h4>🦟 SCIAME</h4>
+                    
+                    <div class="power-cost">COSTO: 3 Stress</div>
+                    
+                    <p><strong>RANGE:</strong> Medio</p>
+                    <p><strong>AREA:</strong> Vicino raggio attorno punto scelto</p>
+                    <p><strong>DURATA:</strong> Concentrazione (max 10 minuti)</p>
+                    
+                    <p><strong>EFFETTO:</strong> Evochi sciame insetti (api, vespe, mosche, scarafaggi). Nube vivente aggressiva.</p>
+                    
+                    <p><strong>SCIAME:</strong></p>
+                    <ul>
+                        <li>Oscura visuale (area Vicino = -2 a tiri attacco/percezione)</li>
+                        <li>Creature dentro: <strong>1d4 danno/round</strong> (morsi/punture)</li>
+                        <li>Movimento lento (puoi spostare sciame Vicino per round)</li>
+                        <li>Immuni danno armi normali (troppo piccoli)</li>
+                        <li>Vulnerabili: fuoco (dissolve), vento forte (disperso), freddo (letargo)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Sciame obbediente. Controllo completo, attacca chi vuoi, ignora alleati, 10 minuti.</li>
+                        <li><strong>7-9:</strong> Sciame indisciplinato. Funziona MA scegli 1:
+                            <ul>
+                                <li>Dura solo 5 minuti</li>
+                                <li>Attacca TUTTI in area (alleati inclusi, no distinzione)</li>
+                                <li>Sciame si disperde se subisce fuoco/vento (vulnerabile)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Sciame ostile. Appare MA ignora comandi, attacca TE + tutti Vicini. Stress pagato, devi disperdere (fuoco/fuga).</li>
+                    </ul>
+                    
+                    <p><strong>TATTICO:</strong> Controllo area, distrazione, danno persistente. Ottimo vs nemici multipli raggruppati.</p>
+                </div>
+            </section>
+            
+            <div class="separator">⟡</div>
+            
+            <section id="ife-l4">
+                <h2>Ife Livello 4</h2>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 4</span>
+                    <h4>🌍 CHIAMATA DELLA TERRA</h4>
+                    
+                    <div class="power-cost">COSTO: 5 Stress</div>
+                    
+                    <p><strong>RANGE:</strong> Lontano</p>
+                    <p><strong>AREA:</strong> 10m raggio</p>
+                    
+                    <p><strong>EFFETTO:</strong> Terra risponde chiamata. Terremoto localizzato, radici emergono, terreno rimodella.</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Controllo geologico. Scegli 2 effetti:
+                            <ul>
+                                <li><strong>Terremoto:</strong> Tutti in area Sfidare Pericolo +CUO O cadono proni + 2d6 danno</li>
+                                <li><strong>Radici:</strong> Radici gigantesche emergono, immobilizzano 1d4 bersagli (Sfidare Pericolo +FOR per liberarsi)</li>
+                                <li><strong>Muro Terra:</strong> Muro 5m alto × 10m largo emerge (PF 40, Armatura 4, blocca passaggio)</li>
+                                <li><strong>Voragine:</strong> Apertura 3m profonda forma sotto 1 bersaglio (cade, 3d6 danno + intrappolato)</li>
+                            </ul>
+                        </li>
+                        <li><strong>7-9:</strong> Potere incontrollato. Scegli 1 effetto sopra MA terra risponde violentemente: anche alleati Vicino devono Sfidare Pericolo +CUO O cadono proni.</li>
+                        <li><strong>6-:</strong> Terra rifiuta chiamata. Stress pagato. Possibile complicazione: terremoto minore casuale (strutture instabili, tutti disorientati).</li>
+                    </ul>
+                    
+                    <p><strong>LIMITAZIONE:</strong> Richiede terreno naturale (terra, pietra). Su asfalto/cemento spesso = -2 al tiro. In edificio = rischio crollo strutturale.</p>
+                    
+                    <p><strong>NOTE:</strong> Potere più distruttivo Ife. Campo battaglia rimodellato. Conseguenze ambientali permanenti.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 4</span>
+                    <h4>🌟 RINASCITA</h4>
+                    
+                    <div class="power-cost">COSTO: 6 Stress</div>
+                    
+                    <p><strong>RANGE:</strong> Tocco</p>
+                    <p><strong>RITUALE:</strong> 1 minuto concentrazione</p>
+                    
+                    <p><strong>EFFETTO:</strong> Guarigione massima. Ripristini corpo a condizione ottimale.</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Rinascita completa. Bersaglio:
+                            <ul>
+                                <li>Recupera <strong>TUTTI PF</strong> (max)</li>
+                                <li>Rimuovi TUTTE condizioni (stordito, accecato, avvelenato, malato, maledetto non-maggiore)</li>
+                                <li>Rigenera 1 arto/organo perso recentemente (entro 24h)</li>
+                                <li>Rimuovi 1d4 Stress (se ha)</li>
+                                <li>Cicatrici spariscono</li>
+                            </ul>
+                        </li>
+                        <li><strong>7-9:</strong> Rinascita parziale. Recupera tutti PF + rimuovi 2 condizioni a scelta. MA bersaglio debole: -1 a tutto per 1 ora (corpo assimila cambiamenti).</li>
+                        <li><strong>6-:</strong> Rinascita fallisce. Stress pagato. Energia vitale dispersa. Bersaglio subisce 1d6 danno (shock sistema).</li>
+                    </ul>
+                    
+                    <p><strong>LIMITAZIONI:</strong></p>
+                    <ul>
+                        <li>Non funziona su morti (serve Resurrezione Avalon L5)</li>
+                        <li>Maledizioni maggiori: richiede Purificazione Suprema prima</li>
+                        <li>Non può rigenerare arti persi da più 24h (tessuto troppo vecchio)</li>
+                    </ul>
+                    
+                    <p><strong>NOTE:</strong> Guarigione più potente Ife. "Full heal" + rimuovi debuff. Salva-vita finale.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 4</span>
+                    <h4>🦖 FORMA PREDATORE</h4>
+                    
+                    <div class="power-cost">COSTO: 5 Stress</div>
+                    
+                    <p><strong>DURATA:</strong> 10 minuti</p>
+                    
+                    <p><strong>EFFETTO:</strong> Trasformi in predatore apicale (tigre, orso grizzly, coccodrillo). Versione potenziata Forma Animale L3.</p>
+                    
+                    <p><strong>TRASFORMAZIONE:</strong></p>
+                    <ul>
+                        <li>Taglia: Grande (3m+ lunghezza)</li>
+                        <li><strong>+3 FOR, +2 CUO</strong></li>
+                        <li><strong>PF +10 temporanei</strong></li>
+                        <li><strong>Armatura +2</strong></li>
+                        <li><strong>Attacchi:</strong> Artigli/Morso 2d8 danno, 2 attacchi/turno</li>
+                        <li><strong>Velocità:</strong> ×2 umano</li>
+                        <li><strong>Presenza Terrificante:</strong> PNG LS 5- devono Resistere +CUO O fuggono</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Predatore perfetto. Controllo completo, 10 minuti, tutti bonus.</li>
+                        <li><strong>7-9:</strong> Predatore instabile. Bonus funzionano MA istinti feroci: ogni turno combattimento = Resistere +CUO O devi attaccare bersaglio più vicino (alleato O nemico, istinto predatore).</li>
+                        <li><strong>6-:</strong> Trasformazione fuori controllo. Diventi predatore MA bestia pura (Custode controlla). Attacchi minacce percepite (spesso alleati). Dura 10 minuti poi torni, confuso + Stress 10 (burnout).</li>
+                    </ul>
+                    
+                    <p><strong>DOPO FORMA:</strong> Quando termina, -2 a tutto per 1 ora (esaurimento fisico).</p>
+                    
+                    <p><strong>NOTE:</strong> "Boss mode" Ife. Combattimento puro. Visivamente impressionante: trasformazione da umano a bestia 3m in 3 secondi.</p>
+                </div>
+            </section>
+            
+            <div class="separator">⟡</div>
+            
+            <section id="ife-l5">
+                <h2>Ife Livello 5 (Leggendari)</h2>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 5</span>
+                    <h4>🌳💚 AVATAR NATURA</h4>
+                    
+                    <div class="power-cost">COSTO: 8 Stress</div>
+                    
+                    <p><strong>DURATA:</strong> 10 minuti</p>
+                    
+                    <p><strong>EFFETTO:</strong> Trascendi, diventi avatar forza vitale. Forma ibrida elementale-vegetale.</p>
+                    
+                    <p><strong>TRASFORMAZIONE:</strong></p>
+                    <ul>
+                        <li>Altezza: 4m</li>
+                        <li>Corpo: Legno vivente + muscoli verdi</li>
+                        <li>Capelli: Rampicanti con fiori</li>
+                        <li>Occhi: Verde brillante</li>
+                        <li>Radici: Emergono da piedi, ancorano</li>
+                    </ul>
+                    
+                    <p><strong>ABILITÀ:</strong></p>
+                    <ul>
+                        <li><strong>+3 a TUTTE caratteristiche</strong></li>
+                        <li><strong>PF +20 temporanei</strong></li>
+                        <li><strong>Armatura +4</strong></li>
+                        <li><strong>Rigenerazione:</strong> Inizio turno recuperi 2d6 PF (se su terra naturale)</li>
+                        <li><strong>Aura Vita:</strong> Alleati Vicini recuperano 1d4 PF inizio loro turno</li>
+                        <li><strong>Controllo Flora:</strong> Tutti poteri piante (Crescita Rapida, etc) automatici (no costo, no tiro)</li>
+                        <li><strong>Attacchi Rampicanti:</strong> 4 attacchi/turno, Medio range, 1d10 ciascuno</li>
+                        <li><strong>Immunità:</strong> Veleni, malattie, fatica</li>
+                        <li>Tutti poteri Ife costano -3 Stress (min 1)</li>
+                    </ul>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Avatar perfetto. Controllo completo, 10 minuti pieni.</li>
+                        <li><strong>7-9:</strong> Avatar instabile. Tutti bonus MA natura ti chiama: difficile distinguere alleati da "intrusi". Ogni round = Resistere +MEN O confusione (attacchi casuale 1 turno).</li>
+                        <li><strong>6-:</strong> Trasformazione rigettata. Stress pagato. Corpo non regge energia vitale: subisci 3d8 danno + Burnout (Stress 10).</li>
+                    </ul>
+                    
+                    <p><strong>DOPO AVATAR:</strong> Quando termina, -2 a tutto per 24 ore (esaurimento spirituale profondo). Necessita riposo completo.</p>
+                    
+                    <p><strong>NOTE:</strong> "Final form" Ife. Potere assoluto vita. Luca lo userebbe solo vs minacce apocalittiche ambientali.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 5</span>
+                    <h4>🌱💀 CICLO ETERNO</h4>
+                    
+                    <div class="power-cost">COSTO: 10 Stress + Sacrificio (creatura vivente taglia media+)</div>
+                    
+                    <p><strong>RANGE:</strong> Tocco</p>
+                    <p><strong>RITUALE:</strong> 1 ora, cerchio vitale, componenti naturali</p>
+                    
+                    <p><strong>REQUISITI:</strong></p>
+                    <ul>
+                        <li>Corpo morto intatto (almeno 75%)</li>
+                        <li>Morte entro 7 giorni</li>
+                        <li>Sacrificio: creatura vivente (animale grande O persona consenziente)</li>
+                        <li>Location naturale (foresta, campo, fiume)</li>
+                    </ul>
+                    
+                    <p><strong>EFFETTO:</strong> Riporti morto alla vita tramite ciclo naturale. Vita per vita.</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Resurrezione naturale. Morto torna a 1 PF. Sacrificio muore pacificamente (essenza trasferita). Resuscitato:
+                            <ul>
+                                <li>Mantiene caratteristiche</li>
+                                <li>Mantiene memoria (vaga sensazione "oltre")</li>
+                                <li>Connessione natura permanente (+1 FAT permanente)</li>
+                                <li>Cicatrice foglia verde dove ferita mortale era</li>
+                            </ul>
+                        </li>
+                        <li><strong>7-9:</strong> Resurrezione complicata. Torna a vita MA scegli 1:
+                            <ul>
+                                <li>Perde 1 caratteristica permanentemente (-1 a stat casuale)</li>
+                                <li>Legato alla natura: deve passare almeno 1 ora/giorno in natura O subisce 1d4 danno/giorno (dipendenza)</li>
+                                <li>Ricordi confusi (amnesia parziale ultime settimane)</li>
+                            </ul>
+                        </li>
+                        <li><strong>6-:</strong> Ciclo fallisce. Sacrificio muore MA morto non torna. Stress consumato. Possibile complicazione: anima morto diventa spirito natura tormentato (PNG ostile futuro).</li>
+                    </ul>
+                    
+                    <p><strong>DIFFERENZA vs RESURREZIONE AVALON:</strong></p>
+                    <ul>
+                        <li>Ife: Usa ciclo naturale (vita→morte→vita). Richiede sacrificio vivente. Legame natura permanente.</li>
+                        <li>Avalon: Usa luce divina. Richiede artefatto. -1 stat MA no legami permanenti.</li>
+                    </ul>
+                    
+                    <p><strong>MORALE:</strong> Sacrificio consenziente animale = accettabile (ciclo naturale). Sacrificio persona = controverso (omicidio rituale?). Ife dovrebbe avere ragione MOLTO buona.</p>
+                </div>
+                
+                <div class="power-box">
+                    <span class="power-level">Livello 5</span>
+                    <h4>🌍🌊 FURIA PRIMORDIALE</h4>
+                    
+                    <div class="power-cost">COSTO: 10 Stress (TUTTO rimanente, min 10)</div>
+                    
+                    <p><strong>RANGE:</strong> Vista (punto epicentro)</p>
+                    <p><strong>AREA:</strong> 50m raggio</p>
+                    
+                    <p><strong>EFFETTO:</strong> Scateni ira natura. Tutti elementi convergono: terremoto + tempesta + crescita esplosiva.</p>
+                    
+                    <p><strong>DEVASTAZIONE:</strong></p>
+                    <ul>
+                        <li><strong>Terremoto:</strong> Tutti in area 4d6 danno + Sfidare Pericolo +CUO O proni</li>
+                        <li><strong>Crescita:</strong> Piante crescono violente (rampicanti 10m, alberi istantanei). Area diventa foresta densa impenetrabile</li>
+                        <li><strong>Tempesta:</strong> Vento forte, pioggia torrenziale, fulmini casuali (1d4 bersagli casuali 3d8 danno elettrico)</li>
+                        <li><strong>Sciami:</strong> Insetti/animali emergono, attaccano intrusi (1d6 danno/round tutti in area per 10 minuti)</li>
+                    </ul>
+                    
+                    <p><strong>DURATA EFFETTI:</strong> Devastazione istantanea. Tempesta dura 10 minuti. Foresta creata = permanente.</p>
+                    
+                    <p><strong>TIRO:</strong> Usare Potere +FAT</p>
+                    <ul>
+                        <li><strong>10+:</strong> Furia controllata. Puoi escludere alleati (natura riconosce). Devastazione piena MA tu immune.</li>
+                        <li><strong>7-9:</strong> Furia indiscriminata. Colpisce TUTTI in area (alleati inclusi). Tu subisci metà danno (4d6 → 2d6). Foresta creata ha zone instabili (crolli, rami aggressivi).</li>
+                        <li><strong>6-:</strong> Furia fuori controllo. Devastazione esplode centrata su TE. Subisci danno pieno + tutti entro Lontano 3d8. Area 100m diventa desolazione: piante morte, terra sterile, tempesta perpetua minore (1 settimana). Stress consumato + Burnout.</li>
+                    </ul>
+                    
+                    <p><strong>DOPO FURIA:</strong> Stress massimo (10 burnout). Collassi esausto (0 PF). Necessita cure immediate O morte.</p>
+                    
+                    <p><strong>CONSEGUENZE:</strong></p>
+                    <ul>
+                        <li><strong>Ambientali:</strong> Foresta permanente creata (rimodella geografia Milano)</li>
+                        <li><strong>Politiche:</strong> Velo infranto (evento visibile tutta città)</li>
+                        <li><strong>Personali:</strong> Natura ti marca. Animali sempre ti riconoscono. Piante crescono spontaneamente attorno a te. Occhi hanno riflesso verde permanente.</li>
+                    </ul>
+                    
+                    <p><strong>NOTE:</strong> "Nuke" Ife. Potere più distruttivo E creativo gioco (distrugge + crea foresta). Solo finale campagna apocalittico. Luca probabilmente muore dopo uso (0 PF, Burnout, esausto). Atto finale eroico.</p>
+                </div>
+            </section>
+            
+            <hr style="margin: 80px 0;">
+            
+            <div class="info-box" style="text-align: center; margin-top: 60px;">
+                <h3>✅ Fine Capitolo 22 - Poteri Ife Completi</h3>
+                <p>15 poteri Ife (L1-L5) documentati. Ciclo vita completo.</p>
+                <p style="margin-top: 30px; font-size: 18px; color: var(--accent-gold);">
+                    <strong>Prossimo:</strong> Poteri Mictlan (Casata Morte) → ULTIMA Casata!
+                </p>
+            </div>
+            
+            <div class="page-navigation">
+                <a href="parte4b.html" class="nav-button">← Umbra</a>
+                <a href="parte4d.html" class="nav-button">Cap 23: Poteri Mictlan →</a>
+            </div>
+            
+        </main>
+    </div>
+</body>
+</html>
