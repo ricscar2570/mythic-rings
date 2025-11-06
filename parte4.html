@@ -1,0 +1,2096 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mythic Rings - Parte IV: Mosse Base e Sistema Poteri">
+    <title>Mythic Rings v2.1 - Parte IV: Mosse & Poteri</title>
+    <style>
+        /* [STESSO CSS BASE] */
+        :root {
+            --primary-dark: #1a1a2e;
+            --secondary-dark: #16213e;
+            --accent-gold: #f39c12;
+            --accent-gold-dark: #e67e22;
+            --text-light: #ecf0f1;
+            --text-muted: #95a5a6;
+            --border-gold: rgba(243, 156, 18, 0.3);
+            --shadow-glow: 0 0 20px rgba(243, 156, 18, 0.3);
+            --avalon-color: #ffd700;
+            --umbra-color: #8b00ff;
+            --ife-color: #2ecc71;
+            --mictlan-color: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Palatino', 'Times New Roman', serif;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 50%, #0f3460 100%);
+            background-attachment: fixed;
+            color: var(--text-light);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        
+        .page-wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* SIDEBAR */
+        .sidebar {
+            width: 300px;
+            background: linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, rgba(22, 33, 62, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            border-right: 2px solid var(--border-gold);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 25px 18px;
+            z-index: 1000;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .sidebar::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb {
+            background: var(--accent-gold);
+            border-radius: 4px;
+        }
+        
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-gold);
+        }
+        
+        .sidebar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+            letter-spacing: 1px;
+        }
+        
+        .sidebar-version {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        .menu-section {
+            margin-bottom: 25px;
+        }
+        
+        .menu-title {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            padding-left: 8px;
+            border-left: 3px solid var(--accent-gold);
+        }
+        
+        .menu-items {
+            list-style: none;
+        }
+        
+        .menu-items li {
+            margin-bottom: 5px;
+        }
+        
+        .menu-items a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 13px;
+            display: block;
+            padding: 7px 10px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .menu-items a:hover {
+            background: rgba(243, 156, 18, 0.1);
+            border-left-color: var(--accent-gold);
+            padding-left: 15px;
+            color: var(--accent-gold);
+        }
+        
+        .menu-items a.active {
+            background: rgba(243, 156, 18, 0.2);
+            border-left-color: var(--accent-gold);
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        /* CONTENUTO */
+        .main-content {
+            margin-left: 300px;
+            flex: 1;
+            padding: 50px 70px;
+            max-width: 1400px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(5px);
+            min-height: 100vh;
+        }
+        
+        /* TIPOGRAFIA */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Palatino', 'Georgia', serif;
+            color: var(--accent-gold);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 46px;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 18px;
+            margin-bottom: 40px;
+            text-shadow: 0 0 20px rgba(243, 156, 18, 0.4);
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            font-size: 34px;
+            margin-top: 55px;
+            padding-left: 18px;
+            border-left: 5px solid var(--accent-gold);
+        }
+        
+        h3 {
+            font-size: 26px;
+            color: var(--accent-gold-dark);
+        }
+        
+        h4 {
+            font-size: 20px;
+            color: var(--text-light);
+        }
+        
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            line-height: 1.9;
+            font-size: 16px;
+        }
+        
+        strong {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        em {
+            font-style: italic;
+            color: var(--accent-gold-dark);
+        }
+        
+        ul, ol {
+            margin-left: 32px;
+            margin-bottom: 18px;
+        }
+        
+        ul li, ol li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        ul li::marker {
+            color: var(--accent-gold);
+        }
+        
+        ol li::marker {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        /* MOVE BOX */
+        .move-box {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.08), rgba(243, 156, 18, 0.15));
+            border: 3px solid var(--border-gold);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .move-box h3 {
+            margin-top: 0;
+            color: var(--accent-gold);
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .move-trigger {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 12px 18px;
+            border-left: 4px solid var(--accent-gold);
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+        
+        .move-trigger strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .move-results {
+            margin-top: 20px;
+        }
+        
+        .move-results ul {
+            margin-left: 25px;
+        }
+        
+        .result-10, .result-79, .result-6 {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+        
+        .result-10 {
+            border-left-color: #2ecc71;
+        }
+        
+        .result-79 {
+            border-left-color: #f39c12;
+        }
+        
+        .result-6 {
+            border-left-color: #e74c3c;
+        }
+        
+        /* POWER BOX */
+        .power-box {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.08), rgba(41, 128, 185, 0.12));
+            border: 3px solid rgba(52, 152, 219, 0.5);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+        }
+        
+        .power-box h4 {
+            margin-top: 0;
+            color: #3498db;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+        
+        .power-level {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        
+        .power-cost {
+            background: rgba(231, 76, 60, 0.2);
+            border: 2px solid #e74c3c;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 12px 0;
+            font-weight: bold;
+        }
+        
+        /* AVALON STYLE */
+        .avalon-box {
+            border-color: rgba(255, 215, 0, 0.5);
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 215, 0, 0.1));
+        }
+        
+        .avalon-box h4 {
+            color: var(--avalon-color);
+        }
+        
+        /* INFO BOX */
+        .info-box {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.05), rgba(243, 156, 18, 0.1));
+            border: 2px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .info-box h3, .info-box h4 {
+            margin-top: 0;
+            color: var(--accent-gold);
+        }
+        
+        /* EXAMPLE BOX */
+        .example-box {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.08), rgba(41, 128, 185, 0.12));
+            border: 2px solid rgba(52, 152, 219, 0.4);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 28px 0;
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+        }
+        
+        .example-box h4 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        
+        /* TABELLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 28px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        table thead {
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: var(--primary-dark);
+        }
+        
+        table th {
+            padding: 16px;
+            text-align: left;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 13px;
+        }
+        
+        table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        table tbody tr {
+            transition: background 0.3s ease;
+        }
+        
+        table tbody tr:hover {
+            background: rgba(243, 156, 18, 0.1);
+        }
+        
+        table tbody tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        
+        /* NAVIGAZIONE */
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+        
+        a:hover {
+            color: var(--accent-gold);
+            border-bottom-color: var(--accent-gold);
+        }
+        
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 70px;
+            padding-top: 35px;
+            border-top: 2px solid var(--border-gold);
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+            border: none;
+            font-size: 15px;
+        }
+        
+        .nav-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(243, 156, 18, 0.6);
+            color: white;
+            border: none;
+        }
+        
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+            margin: 45px 0;
+        }
+        
+        .separator {
+            text-align: center;
+            font-size: 28px;
+            color: var(--accent-gold);
+            margin: 50px 0;
+            text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 260px;
+            }
+            
+            .main-content {
+                margin-left: 260px;
+                padding: 40px 45px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 2px solid var(--border-gold);
+            }
+            
+            .main-content {
+                margin-left: 0;
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 34px;
+            }
+            
+            h2 {
+                font-size: 26px;
+            }
+            
+            .page-navigation {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">⟡ MYTHIC RINGS ⟡</div>
+                <div class="sidebar-version">Versione 2.1 - FINALE</div>
+            </div>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Navigazione</div>
+                <ul class="menu-items">
+                    <li><a href="index.html">🏠 Homepage</a></li>
+                    <li><a href="parte3.html">← Parte III</a></li>
+                    <li><a href="parte5.html">Parte V →</a></li>
+                </ul>
+            </nav>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Parte IV - Questa Sezione</div>
+                <ul class="menu-items">
+                    <li><a href="#cap18" class="active">Cap 18: Mosse Base</a></li>
+                    <li><a href="#cap19">Cap 19: Sistema Poteri</a></li>
+                    <li><a href="#cap20">Cap 20: Avalon (15 Poteri)</a></li>
+                </ul>
+            </nav>
+            
+            <nav class="menu-section">
+                <div class="menu-title">Poteri per Casata</div>
+                <ul class="menu-items">
+                    <li><a href="parte4a.html">Avalon (dettagli)</a></li>
+                    <li><a href="parte4b.html">Umbra (15 Poteri)</a></li>
+                    <li><a href="parte4c.html">Ife (15 Poteri)</a></li>
+                    <li><a href="parte4d.html">Mictlan (15 Poteri)</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- CONTENUTO PRINCIPALE -->
+        <main class="main-content">
+            
+            <h1>Parte IV: Mosse e Poteri</h1>
+            
+            <p style="font-size: 18px; font-style: italic; color: var(--accent-gold-dark);">
+                "L'azione definisce il Guardiano. I poteri sono solo strumenti."
+            </p>
+            
+            <!-- CAPITOLO 18: MOSSE BASE -->
+            <section id="cap18">
+                <h2>Capitolo 18: Le 12 Mosse Base</h2>
+                
+                <p>Ogni PG può usare queste 12 mosse, indipendentemente da Casata. Sono il vocabolario azioni condiviso.</p>
+                
+                <div class="info-box">
+                    <h4>📋 Come Leggere una Mossa</h4>
+                    <ul>
+                        <li><strong>Nome:</strong> Identificativo breve</li>
+                        <li><strong>Trigger:</strong> Quando la usi (frase fiction)</li>
+                        <li><strong>Tiro:</strong> Quale caratteristica aggiungi a 2d6</li>
+                        <li><strong>10+:</strong> Successo pieno (cosa ottieni)</li>
+                        <li><strong>7-9:</strong> Successo parziale (cosa ottieni + costo/complicazione)</li>
+                        <li><strong>6-:</strong> Fallimento (Custode fa mossa)</li>
+                    </ul>
+                </div>
+                
+                <h3>1. Attaccare</h3>
+                
+                <div class="move-box">
+                    <h3>⚔️ ATTACCARE</h3>
+                    
+                    <div class="move-trigger">
+                        <strong>QUANDO:</strong>
+                        <p>Infliggi danno con violenza (mischia, distanza, magia offensiva)</p>
+                    </div>
+                    
+                    <p><strong>TIRA:</strong> +FOR (mischia) O +CUO (distanza) O +caratteristica potere (magia)</p>
+                    
+                    <div class="move-results">
+                        <div class="result-10">
+                            <strong>🎯 10+: Colpo Pulito</strong>
+                            <p>Infliggi danno arma/potere. Scegli 1 bonus:</p>
+                            <ul>
+                                <li><strong>Danno Extra:</strong> +1d6 danno</li>
+                                <li><strong>Apertura:</strong> Alleato vicino ha +1 forward vs questo nemico</li>
+                                <li><strong>Eviti Contrattacco:</strong> Non subisci danno reazione</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="result-79">
+                            <strong>⚠️ 7-9: Colpo Rischioso</strong>
+                            <p>Infliggi danno arma/potere MA esposto. Custode sceglie 1:</p>
+                            <ul>
+                                <li>Subisci danno contrattacco nemico</li>
+                                <li>Ti metti posizione pericolosa (prono, disarmato, circondato)</li>
+                                <li>Danno ridotto (tira metà dadi, arrotonda giù)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="result-6">
+                            <strong>❌ 6-: Fallimento</strong>
+                            <p>Manchi, O colpo inefficace. Custode fa mossa (probabilmente: nemico contrattacca duro, O complicazione aggiuntiva).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="example-box">
+                    <h4>Esempio: Attacco Mischia</h4>
+                    <p><strong>Marco (FOR +1):</strong> "Carico vampiro, affondo spada al cuore!"</p>
+                    <p><strong>Custode:</strong> "Tira Attaccare +FOR."</p>
+                    <p><strong>Marco tira:</strong> 2d6+1 = 9 (7-9)</p>
+                    <p><strong>Custode:</strong> "Spada affonda petto vampiro (infliggi 1d8 danno) MA artigli ti graffiano braccio mentre ti avvicini. Subisci 1d6 danno contrattacco."</p>
+                </div>
+                
+                <h3>2. Difendere</h3>
+                
+                <div class="move-box">
+                    <h3>🛡️ DIFENDERE</h3>
+                    
+                    <div class="move-trigger">
+                        <strong>QUANDO:</strong>
+                        <p>Proteggi te stesso O alleato da attacco/pericolo imminente</p>
+                    </div>
+                    
+                    <p><strong>TIRA:</strong> +FOR (bloccare, parare) O +CUO (schivare, tuffarsi)</p>
+                    
+                    <div class="move-results">
+                        <div class="result-10">
+                            <strong>🎯 10+: Difesa Perfetta</strong>
+                            <p>Scegli 1:</p>
+                            <ul>
+                                <li><strong>Evita Completamente:</strong> Nessun danno, mantieni posizione</li>
+                                <li><strong>Difesa Offensiva:</strong> Riduci danno metà E contrattacchi (infliggi danno base arma)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="result-79">
+                            <strong>⚠️ 7-9: Difesa Parziale</strong>
+                            <p>Scegli 1:</p>
+                            <ul>
+                                <li>Eviti danno MA ti metti posizione brutta (prono, esposto, etc)</li>
+                                <li>Riduci danno metà (MA subisci)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="result-6">
+                            <strong>❌ 6-: Difesa Fallita</strong>
+                            <p>Subisci danno pieno + Custode fa mossa (situazione peggiora: disarmato, circondato, alleato ferito, etc).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box" style="margin-top: 20px;">
+                        <h4>🛡️ Difendere Altri</h4>
+                        <p>Se difendi ALLEATO (invece di te), funziona identico MA <strong>TU</strong> subisci conseguenze al posto suo. Devi essere Vicino ad alleato.</p>
+                    </div>
+                </div>
+                
+                <div class="example-box">
+                    <h4>Esempio: Difesa Schivata</h4>
+                    <p><strong>Sofia (CUO +2):</strong> Vampiro balza verso di lei, artigli tesi.</p>
+                    <p><strong>Custode:</strong> "Vampiro attacca, 2d6 danno. Cosa fai?"</p>
+                    <p><strong>Sofia:</strong> "Schivo! Mi tuffo laterale." (Tira Difendere +CUO)</p>
+                    <p><strong>Sofia tira:</strong> 2d6+2 = 11 (10+)</p>
+                    <p><strong>Sofia sceglie:</strong> "Evito completamente."</p>
+                    <p><strong>Custode:</strong> "Ti tuffi, rotoli, artigli sfiorano aria. Sei dietro vampiro, lui disorientato. Hai vantaggio (+1 forward prossimo attacco)."</p>
+                </div>
+                
+                <h3>3. Sfidare Pericolo</h3>
+                
+                <div class="move-box">
+                    <h3>🎲 SFIDARE PERICOLO</h3>
+                    
+                    <div class="move-trigger">
+                        <strong>QUANDO:</strong>
+                        <p>Agisci sotto minaccia/pressione, O tenti azione rischiosa che non corrisponde ad altra mossa specifica</p>
+                    </div>
+                    
+                    <p><strong>TIRA:</strong> +Caratteristica appropriata (Custode decide quale si applica)</p>
+                    <ul>
+                        <li><strong>+FOR:</strong> Forza bruta, resistenza, reggere peso/dolore</li>
+                        <li><strong>+CUO:</strong> Agilità, riflessi, schivare, agire rapido</li>
+                        <li><strong>+MEN:</strong> Pensiero veloce, percezione, ricordare sotto stress</li>
+                        <li><strong>+CAR:</strong> Presenza mente, mantenere calma, comandare</li>
+                        <li><strong>+FAT:</strong> Fortuna pura, sincronicità</li>
+                    </ul>
+                    
+                    <div class="move-results">
+                        <div class="result-10">
+                            <strong>🎯 10+: Successo</strong>
+                            <p>Fai ciò che volevi, nessuna complicazione.</p>
+                        </div>
+                        
+                        <div class="result-79">
+                            <strong>⚠️ 7-9: Successo con Costo</strong>
+                            <p>Custode offre scelta difficile O complicazione:</p>
+                            <ul>
+                                <li>Riesci MA lasci qualcosa (equipaggiamento, posizione, tempo)</li>
+                                <li>Riesci MA subisci danno/stress</li>
+                                <li>Riesci MA attiri attenzione indesiderata</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="result-6">
+                            <strong>❌ 6-: Fallimento</strong>
+                            <p>Pericolo si realizza. Custode fa mossa dura.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="example-box">
+                    <h4>Esempi Sfidare Pericolo</h4>
+                    <p><strong>Esempio 1 (+CUO):</strong> "Salto da tetto a tetto mentre inseguito da demone." → Tira +CUO per vedere se atterri bene.</p>
+                    <p><strong>Esempio 2 (+FOR):</strong> "Reggo porta chiusa mentre gruppo fugge." → Tira +FOR per resistere pressione nemici.</p>
+                    <p><strong>Esempio 3 (+MEN):</strong> "Ricordo combinazione cassaforte sotto fuoco incrociato." → Tira +MEN per pensare chiaro sotto stress.</p>
+                </div>
+                
+                <h3>4. Leggere Situazione</h3>
+                
+                <div class="move-box">
+                    <h3>🔍 LEGGERE SITUAZIONE</h3>
+                    
+                    <div class="move-trigger">
+                        <strong>QUANDO:</strong>
+                        <p>Osservi attentamente situazione/ambiente/persona per capire meglio</p>
+                    </div>
+                    
+                    <p><strong>TIRA:</strong> +MEN</p>
+                    
+                    <div class="move-results">
+                        <div class="result-10">
+                            <strong>🎯 10+: Percezione Acuta</strong>
+                            <p>Fai 3 domande da lista sotto. Custode risponde onestamente.</p>
+                        </div>
+                        
+                        <div class="result-79">
+                            <strong>⚠️ 7-9: Percezione Parziale</strong>
+                            <p>Fai 1 domanda da lista.</p>
+                        </div>
+                        
+                        <div class="result-6">
+                            <strong>❌ 6-: Percezione Fallita</strong>
+                            <p>Perdi tempo, O trai conclusione errata, O attiri attenzione.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box" style="margin-top: 20px;">
+                        <h4>📋 Lista Domande (Scegli da questa)</h4>
+                        <ul>
+                            <li>Qual è minaccia più immediata qui?</li>
+                            <li>Cosa è successo qui recentemente?</li>
+                            <li>Cosa sta per succedere?</li>
+                            <li>Cosa qui è utile/prezioso per me?</li>
+                            <li>Chi ha controllo reale qui?</li>
+                            <li>Qual è via uscita migliore?</li>
+                            <li>Come posso ___ (ottenere vantaggio, evitare pericolo, etc)?</li>
+                        </ul>
+                        <p><strong>Nota:</strong> Risposta dà +1 forward quando agisci su info ricevuta.</p>
+                    </div>
+                </div>
+                
+                <div class="example-box">
+                    <h4>Esempio: Leggere Situazione</h4>
+                    <p><strong>Sofia (MEN +2):</strong> Entra magazzino abbandonato. "Studio ambiente attentamente prima muovermi."</p>
+                    <p><strong>Custode:</strong> "Tira Leggere Situazione +MEN."</p>
+                    <p><strong>Sofia tira:</strong> 2d6+2 = 10 (10+)</p>
+                    <p><strong>Sofia fa 3 domande:</strong></p>
+                    <ol>
+                        <li>"Qual è minaccia più immediata?" → <em>"Trappola: filo invisibile collegato a esplosivo vicino porta nord."</em></li>
+                        <li>"Cosa successo recentemente?" → <em>"Qualcuno ha combattuto qui (sangue fresco, proiettili sparsi). Circa 1 ora fa."</em></li>
+                        <li>"Cosa qui utile per me?" → <em>"Cassetta pronto soccorso appesa muro, intatta."</em></li>
+                    </ol>
+                    <p><strong>Sofia ora ha +1 forward quando agisce su queste info.</strong></p>
+                </div>
+                
+                <h3>5. Persuadere / Raggirare</h3>
+                
+                <div class="move-box">
+                    <h3>💬 PERSUADERE / RAGGIRARE</h3>
+                    
+                    <div class="move-trigger">
+                        <strong>QUANDO:</strong>
+                        <p>Tenti convincere PNG fare qualcosa, O credere qualcosa, tramite parole</p>
+                    </div>
+                    
+                    <p><strong>TIRA:</strong> +CAR</p>
+                    
+                    <div class="move-results">
+                        <div class="result-10">
+                            <strong>🎯 10+: Convincente</strong>
+                            <p>PNG fa ciò che chiedi, O crede ciò che dici, a meno che contrario a istinto sopravvivenza.</p>
+                        </div>
+                        
+                        <div class="result-79">
+                            <strong>⚠️ 7-9: Parzialmente Convinto</strong>
+                            <p>PNG fa ciò che chiedi MA Custode sceglie 1:</p>
+                            <ul>
+                                <li>Richiede prova concreta prima</li>
+                                <li>Richiede pagamento/favore</li>
+                                <li>Sospetta qualcosa (-1 ongoing rapporti futuri)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="result-6">
+                            <strong>❌ 6-: Non Convinto</strong>
+                            <p>PNG rifiuta, O si offende, O capisce che menti. Situazione peggiora.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box" style="margin-top: 20px;">
+                        <h4>💡 Quando NON Funziona</h4>
+                        <p>Questa mossa NON può:</p>
+                        <ul>
+                            <li>Convincere PNG suicidarsi O fare azione totalmente contraria a natura</li>
+                            <li>Funzionare su creature senza intelligenza (zombi, animali ferali)</li>
+                            <li>Sostituire Legame (se vuoi help da amico, usa Legame + chiedi diretto)</li>
+                        </ul>
+                        <p><strong>Bonus Legame:</strong> +1 per livello Legame se PNG è Legame tuo.</p>
+                    </div>
+                </div>
+                
+                <div class="example-box">
+                    <h4>Esempio: Persuadere Testimone</h4>
+                    <p><strong>Marco (CAR +2):</strong> Testimone terrorizzato rifiuta parlare. "Guardi, signora. Capisco paura. MA se non mi aiuta, chi ha fatto questo colpirà ancora. Sua figlia potrebbe essere prossima. Per favore."</p>
+                    <p><strong>Custode:</strong> "Potente. Tira Persuadere +CAR."</p>
+                    <p><strong>Marco tira:</strong> 2d6+2 = 8 (7-9)</p>
+                    <p><strong>Custode sceglie:</strong> "Richiede prova concreta prima."</p>
+                    <p><strong>Custode:</strong> "Donna esita. 'Come so che siete davvero polizia? Mostratemi badge. E promettete protezione.' Vuole garanzie."</p>
+                </div>
+                
+                <h3>6. Aiutare / Ostacolare</h3>
+                
+                <div class="move-box">
+                    <h3>🤝 AIUTARE / OSTACOLARE</h3>
+                    
+                    <div class="move-trigger">
+                        <strong>QUANDO:</strong>
+                        <p>Aiuti alleato (O ostacoli nemico) che sta per tirare per mossa</p>
+                    </div>
+                    
+                    <p><strong>TIRA:</strong> +Legame con bersaglio (se alleato) O +caratteristica appropriata (se nemico)</p>
+                    
+                    <div class="move-results">
+                        <div class="result-10">
+                            <strong>🎯 10+: Aiuto/Ostacolo Efficace</strong>
+                            <p><strong>Se aiuti:</strong> Alleato ha +2 al prossimo tiro</p>
+                            <p><strong>Se ostacoli:</strong> Nemico ha -2 al prossimo tiro</p>
+                        </div>
+                        
+                        <div class="result-79">
+                            <strong>⚠️ 7-9: Aiuto/Ostacolo Rischioso</strong>
+                            <p><strong>Se aiuti:</strong> Alleato ha +1 MA ti esponi a pericolo</p>
+                            <p><strong>Se ostacoli:</strong> Nemico ha -1 MA ti esponi a contrattacco</p>
+                        </div>
+                        
+                        <div class="result-6">
+                            <strong>❌ 6-: Aiuto/Ostacolo Fallito</strong>
+                            <p>Nessun bonus/malus E ti metti situazione brutta. Custode fa mossa.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box" style="margin-top: 20px;">
+                        <h4>📋 Come Funziona</h4>
+                        <ul>
+                            <li><strong>Timing:</strong> Dichiari aiuto/ostacolo PRIMA che bersaglio tiri</li>
+                            <li><strong>Descrizione:</strong> Devi narrare COME aiuti/ostacoli</li>
+                            <li><strong>Limite:</strong> Solo 1 persona può aiutare/ostacolare per tiro</li>
+                            <li><strong>Legame:</strong> Se aiuti alleato con cui hai Legame, tira +Legame invece caratteristica</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="example-box">
+                    <h4>Esempio: Aiutare Alleato</h4>
+                    <p><strong>Marco (Legame 2 con Sofia):</strong> Sofia sta per hackerare sistema sicurezza.</p>
+                    <p><strong>Marco:</strong> "Le copro spalle, tengo guardia su monitors. Se qualcuno arriva, avviso subito." (Aiuta)</p>
+                    <p><strong>Marco tira:</strong> +Legame Sofia (2) = 2d6+2 = 9 (7-9)</p>
+                    <p><strong>Custode:</strong> "Sofia ha +1 al tiro hack MA Marco, vedi guardia avvicinarsi. Devi gestire ADESSO O ti scopre."</p>
+                </div>
+                
+                <h3>7. Investigare</h3>
+                
+                <div class="move-box">
+                    <h3>🕵️ INVESTIGARE</h3>
+                    
+                    <div class="move-trigger">
+                        <strong>QUANDO:</strong>
+                        <p>Cerchi indizi, esamini scena crimine, ricerchi informazioni (biblioteche, archivi, web)</p>
+                    </div>
+                    
+                    <p><strong>TIRA:</strong> +MEN</p>
+                    
+                    <div class="move-results">
+                        <div class="result-10">
+                            <strong>🎯 10+: Scoperta Solida</strong>
+                            <p>Trovi 2 indizi significativi. Custode ti dice cosa hai scoperto chiaramente.</p>
+                        </div>
+                        
+                        <div class="result-79">
+                            <strong>⚠️ 7-9: Scoperta Parziale</strong>
+                            <p>Scegli 1:</p>
+                            <ul>
+                                <li>Trovi 1 indizio MA impieghi tempo eccessivo (complicazione temporale)</li>
+                                <li>Trovi 2 indizi MA uno è fuorviante/incompleto</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="result-6">
+                            <strong>❌ 6-: Investigazione Fallita</strong>
+                            <p>Nessun indizio utile, O trovi info falsa, O attiri attenzione indesiderata.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box" style="margin-top: 20px;">
+                        <h4>🔍 Cosa Conta come Indizio</h4>
+                        <p><strong>Indizio Significativo:</strong> Info concreta che avanza investigazione. Esempi:</p>
+                        <ul>
+                            <li>Identificazione sospetto/vittima</li>
+                            <li>Location prossimo evento</li>
+                            <li>Metodo usato (arma, rituale, etc)</li>
+                            <li>Movente</li>
+                            <li>Connessione tra eventi apparentemente slegati</li>
+                        </ul>
+                        <p><strong>Regola 3 Indizi:</strong> Dopo 3 indizi trovati, gruppo dovrebbe avere abbastanza info per agire.</p>
+                    </div>
+                </div>
+                
+                <div class="example-box">
+                    <h4>Esempio: Investigare Scena Crimine</h4>
+                    <p><strong>Sofia (MEN +2):</strong> "Esamino corpo vittima, cerco segni magici O anomalie."</p>
+                    <p><strong>Custode:</strong> "Tira Investigare +MEN."</p>
+                    <p><strong>Sofia tira:</strong> 2d6+2 = 11 (10+)</p>
+                    <p><strong>Custode (2 indizi):</strong></p>
+                    <ol>
+                        <li>"Trovi simbolo cultista inciso sotto lingua vittima. Riconosci: Fratellanza Caduti."</li>
+                        <li>"Noti polline raro su scarpe. Proviene solo da Parco Sempione, zona vecchia cappella."</li>
+                    </ol>
+                    <p><em>Sofia ora sa CHI (Fratellanza) e DOVE (Parco Sempione).</em></p>
+                </div>
+                
+                <h3>8. Usare Potere</h3>
+                
+                <div class="move-box">
+                    <h3>✨ USARE POTERE</h3>
+                    
+                    <div class="move-trigger">
+                        <strong>QUANDO:</strong>
+                        <p>Attivi potere magico della tua Casata</p>
+                    </div>
+                    
+                    <p><strong>TIRA:</strong> +FAT (Umbra, Ife, Mictlan) O +CAR (solo Avalon)</p>
+                    
+                    <div class="move-results">
+                        <div class="result-10">
+                            <strong>🎯 10+: Potere Perfetto</strong>
+                            <p>Potere funziona esattamente come descritto. Paghi costo normale.</p>
+                        </div>
+                        
+                        <div class="result-79">
+                            <strong>⚠️ 7-9: Potere Instabile</strong>
+                            <p>Potere funziona MA Custode sceglie 1:</p>
+                            <ul>
+                                <li>Costo raddoppiato (×2 Stress/Corruzione/PF)</li>
+                                <li>Effetto ridotto (durata metà, O potenza minore)</li>
+                                <li>Attiri attenzione indesiderata (nemici sentono magia, O Velo vacilla)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="result-6">
+                            <strong>❌ 6-: Potere Fallito</strong>
+                            <p>Potere fallisce completamente MA paghi costo comunque. Custode fa mossa (spesso: magia fuori controllo, O effetto opposto).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box" style="margin-top: 20px;">
+                        <h4>⚡ Processo Attivazione</h4>
+                        <ol>
+                            <li><strong>Dichiara potere:</strong> "Attivo [nome potere]"</li>
+                            <li><strong>Narrativa:</strong> Descrivi come appare (gesto, parola, visualizzazione)</li>
+                            <li><strong>Tira:</strong> +FAT O +CAR (Avalon)</li>
+                            <li><strong>Risolvi:</strong> Applica effetto + paga costo</li>
+                        </ol>
+                        <p><strong>Nota:</strong> Alcuni poteri non richiedono tiro (specificato). Quelli sono automatici MA paghi costo sempre.</p>
+                    </div>
+                </div>
+                
+                <p><em>(60 Poteri dettagliati in Cap 20-23 sotto)</em></p>
+                
+                <h3>9. Ultimo Respiro</h3>
+                
+                <div class="move-box">
+                    <h3>💀 ULTIMO RESPIRO</h3>
+                    
+                    <div class="move-trigger">
+                        <strong>QUANDO:</strong>
+                        <p>I tuoi PF scendono a 0 (O meno)</p>
+                    </div>
+                    
+                    <p><strong>TIRA:</strong> 2d6 + NULLA (nessuna caratteristica, solo dadi puri)</p>
+                    
+                    <div class="move-results">
+                        <div class="result-10">
+                            <strong>🎯 12: Miracolo</strong>
+                            <p>Sopravvivi. Torni a 1 PF. Puoi continuare agire questo round. Narrativa: volontà indomabile, destino, intervento divino.</p>
+                        </div>
+                        
+                        <div class="result-10" style="border-left-color: #f39c12;">
+                            <strong>⚠️ 10-11: Stabilizzato</strong>
+                            <p>Non muori MA sei incosciente, 0 PF. Richiedi cure (medikit O guarigione magica) per tornare cosciente. Se non curato entro 1 ora = morte.</p>
+                        </div>
+                        
+                        <div class="result-79">
+                            <strong>⚠️ 7-9: Scelta Difficile</strong>
+                            <p>Morte ti offre patto. Custode presenta 2 opzioni, scegli 1:</p>
+                            <ul>
+                                <li>Sopravvivi (1 PF) MA perdi qualcosa permanentemente (arto, senso, ricordi, Legame)</li>
+                                <li>Sopravvivi MA devi compito per Morte (favore futuro, portare anima sostitutiva)</li>
+                                <li>Sopravvivi MA debilitato (1 PF, -2 ongoing per 24 ore)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="result-6">
+                            <strong>❌ 6-: Morte</strong>
+                            <p>Spirito lascia corpo. PG è morto. Devi creare nuovo personaggio. Eccezione: alleati possono tentare resurrezione (Avalon L5 O Mictlan L5) MA difficilissimo.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p><em>(Dettagli completi morte/resurrezione in Parte III, Cap 17)</em></p>
+                
+                <h3>10. Riprendersi</h3>
+                
+                <div class="move-box">
+                    <h3>🩹 RIPRENDERSI</h3>
+                    
+                    <div class="move-trigger">
+                        <strong>QUANDO:</strong>
+                        <p>Ti prendi pausa sicura (10+ minuti) per recuperare fiato, curare ferite, ricomporre</p>
+                    </div>
+                    
+                    <p><strong>TIRA:</strong> +FOR</p>
+                    
+                    <div class="move-results">
+                        <div class="result-10">
+                            <strong>🎯 10+: Recupero Solido</strong>
+                            <p>Recuperi 1d6 PF. Se usi medikit/bende: +2 PF bonus.</p>
+                        </div>
+                        
+                        <div class="result-79">
+                            <strong>⚠️ 7-9: Recupero Parziale</strong>
+                            <p>Recuperi 1d4 PF. MA tempo/situazione peggiora (nemici si avvicinano, O condizioni degradano).</p>
+                        </div>
+                        
+                        <div class="result-6">
+                            <strong>❌ 6-: Recupero Interrotto</strong>
+                            <p>Nessun recupero. Situazione precipita (attacco surprise, O ferita si infetta = -1 ongoing).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box" style="margin-top: 20px;">
+                        <h4>⏰ Requisiti</h4>
+                        <ul>
+                            <li><strong>Tempo:</strong> Minimo 10 minuti ininterrotti</li>
+                            <li><strong>Sicurezza:</strong> Location relativamente sicura (non sotto fuoco attivo)</li>
+                            <li><strong>Frequenza:</strong> Max 1 volta per scena combattimento. Durante downtime, illimitato.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>11. Resistere</h3>
+                
+                <div class="move-box">
+                    <h3>💪 RESISTERE</h3>
+                    
+                    <div class="move-trigger">
+                        <strong>QUANDO:</strong>
+                        <p>Resisti effetto sovrannaturale (magia mentale, possessione, corruzione, terrore magico)</p>
+                    </div>
+                    
+                    <p><strong>TIRA:</strong> +Caratteristica appropriata</p>
+                    <ul>
+                        <li><strong>+FOR:</strong> Effetti fisici (veleno, malattia, trasformazione)</li>
+                        <li><strong>+CUO:</strong> Effetti emotivi (paura magica, charme)</li>
+                        <li><strong>+MEN:</strong> Effetti mentali (controllo mente, illusioni)</li>
+                        <li><strong>+FAT:</strong> Effetti spirituali (possessione, drain anima)</li>
+                    </ul>
+                    
+                    <div class="move-results">
+                        <div class="result-10">
+                            <strong>🎯 10+: Resistenza Totale</strong>
+                            <p>Scuoti effetto completamente. Immune per resto scena.</p>
+                        </div>
+                        
+                        <div class="result-79">
+                            <strong>⚠️ 7-9: Resistenza Parziale</strong>
+                            <p>Scegli 1:</p>
+                            <ul>
+                                <li>Resisti MA subisci 1d6 danno (strain)</li>
+                                <li>Resisti MA effetto ridotto ti colpisce (metà durata/potenza)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="result-6">
+                            <strong>❌ 6-: Resistenza Fallita</strong>
+                            <p>Effetto ti colpisce pienamente + Custode fa mossa (spesso: effetto è peggiore del previsto).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="example-box">
+                    <h4>Esempio: Resistere Charme</h4>
+                    <p><strong>Luca:</strong> Vampiro glamour cerca charmare lui. "Vieni... Fidati di me..."</p>
+                    <p><strong>Custode:</strong> "Tira Resistere +CUO (effetto emotivo)."</p>
+                    <p><strong>Luca (CUO 0) tira:</strong> 2d6+0 = 7 (7-9)</p>
+                    <p><strong>Luca sceglie:</strong> "Resisto MA subisco 1d6 danno." (Tira 3 danno psichico)</p>
+                    <p><strong>Custode:</strong> "Mente brucia resistendo. Vampiro sibila frustrato: 'Forte... MA non abbastanza.' Attacca fisicamente adesso."</p>
+                </div>
+                
+                <h3>12. Forzare Fortuna</h3>
+                
+                <div class="move-box">
+                    <h3>🍀 FORZARE FORTUNA</h3>
+                    
+                    <div class="move-trigger">
+                        <strong>QUANDO:</strong>
+                        <p>Appena finito tirare (DOPO vedere risultato) MA prima applicare conseguenze</p>
+                    </div>
+                    
+                    <p><strong>COSTO:</strong> 1 Punto Fato (risorsa limitata, vedi sotto)</p>
+                    
+                    <p><strong>EFFETTO:</strong> Ritira TUTTI dadi. Prendi risultato nuovo (anche se peggiore).</p>
+                    
+                    <div class="info-box" style="margin-top: 20px;">
+                        <h4>🎲 Punti Fato</h4>
+                        <p><strong>Inizio Sessione:</strong> Ogni PG inizia con <strong>1 Punto Fato</strong>.</p>
+                        <p><strong>Guadagno Durante Gioco:</strong></p>
+                        <ul>
+                            <li>Custode può dare Punto Fato quando accetti complicazione (es: attivi tratto negativo PG per dramatic effect)</li>
+                            <li>Atto eroico/sacrificio (discrezione Custode)</li>
+                        </ul>
+                        <p><strong>Massimo:</strong> 3 Punti Fato per PG. Non accumulabili tra sessioni (reset ogni sessione a 1).</p>
+                    </div>
+                </div>
+                
+                <div class="example-box">
+                    <h4>Esempio: Forzare Fortuna</h4>
+                    <p><strong>Marco (FOR +1):</strong> Attacca boss finale. Tira 2d6+1 = 5 (6-, fallimento critico).</p>
+                    <p><strong>Marco:</strong> "NO! Spendo Punto Fato, ritiro!"</p>
+                    <p><strong>Marco ritira:</strong> 2d6+1 = 9 (7-9, successo parziale!)</p>
+                    <p><strong>Narrativa:</strong> "Nel momento in cui spada sta per mancare, tempo rallenta. Ricordi perché combatti. Raddrizzi colpo. Affonda."</p>
+                    <p><em>Marco ora ha 0 Punti Fato rimanenti questa sessione.</em></p>
+                </div>
+                
+                <div class="separator">⟡ ⟡ ⟡</div>
+                
+                <h3>Riepilogo Mosse Base</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mossa</th>
+                            <th>Trigger</th>
+                            <th>Tiro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Attaccare</strong></td>
+                            <td>Infliggi danno con violenza</td>
+                            <td>+FOR/CUO</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Difendere</strong></td>
+                            <td>Proteggi da attacco</td>
+                            <td>+FOR/CUO</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sfidare Pericolo</strong></td>
+                            <td>Agisci sotto minaccia</td>
+                            <td>+Appropriata</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Leggere Situazione</strong></td>
+                            <td>Osservi attentamente</td>
+                            <td>+MEN</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Persuadere</strong></td>
+                            <td>Convinci con parole</td>
+                            <td>+CAR</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Aiutare/Ostacolare</strong></td>
+                            <td>Aiuti alleato O ostacoli nemico</td>
+                            <td>+Legame/Appropriata</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Investigare</strong></td>
+                            <td>Cerchi indizi</td>
+                            <td>+MEN</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Usare Potere</strong></td>
+                            <td>Attivi magia Casata</td>
+                            <td>+FAT/CAR</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ultimo Respiro</strong></td>
+                            <td>Scendi a 0 PF</td>
+                            <td>+Nulla</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Riprendersi</strong></td>
+                            <td>Pausa sicura 10+ min</td>
+                            <td>+FOR</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Resistere</strong></td>
+                            <td>Resisti magia</td>
+                            <td>+Appropriata</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Forzare Fortuna</strong></td>
+                            <td>Ritiri dado (dopo tiro)</td>
+                            <td>-1 Punto Fato</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <hr style="margin: 60px 0;">
+            
+            <!-- CAPITOLO 19: SISTEMA POTERI -->
+            <section id="cap19">
+                <h2>Capitolo 19: Sistema Poteri - Come Funzionano</h2>
+                
+                <p>Ogni Casata ha <strong>15 poteri unici</strong> (3 per livello, L1-L5). Totale: <strong>60 poteri</strong> nel gioco.</p>
+                
+                <h3>Struttura Livelli</h3>
+                
+                <table>
+                  <thead>
+<tr>
+<th>Livello</th>
+<th>Quando Accessibile</th>
+<th>Potenza</th>
+<th>Numero Poteri</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1</strong></td>
+<td>Inizio gioco (scegli 2)</td>
+<td>Base, utilità quotidiana</td>
+<td>3 per Casata</td>
+</tr>
+<tr>
+<td><strong>L2</strong></td>
+<td>Dopo 1-2 avanzamenti</td>
+<td>Combattimento/investigazione efficace</td>
+<td>3 per Casata</td>
+</tr>
+<tr>
+<td><strong>L3</strong></td>
+<td>Mid-game (5-10 sessioni)</td>
+<td>Significativo, game-changing</td>
+<td>3 per Casata</td>
+</tr>
+<tr>
+<td><strong>L4</strong></td>
+<td>Late-game (10-15 sessioni)</td>
+<td>Potente, effetti maggiori</td>
+<td>3 per Casata</td>
+</tr>
+<tr>
+<td><strong>L5</strong></td>
+<td>End-game (15+ sessioni)</td>
+<td>Leggendario, world-altering</td>
+<td>3 per Casata</td>
+</tr>
+</tbody>
+</table>
+
+              <h3>Imparare Nuovi Poteri</h3>
+            
+            <div class="info-box">
+                <h4>📚 Progressione Poteri</h4>
+                
+                <p><strong>Inizio Gioco (Livello 1):</strong></p>
+                <ul>
+                    <li>Scegli <strong>2 poteri L1</strong> dalla tua Casata</li>
+                    <li>Questi sono poteri "innati" che Anello ti conferisce subito</li>
+                </ul>
+                
+                <p><strong>Avanzamento (Spendi XP):</strong></p>
+                <ul>
+                    <li><strong>Costo:</strong> 5 XP per imparare nuovo potere</li>
+                    <li><strong>Requisito:</strong> Puoi imparare solo poteri del livello che hai raggiunto O inferiore</li>
+                    <li><strong>Esempio:</strong> PG livello 3 può imparare qualsiasi potere L1, L2, L3 (non ancora L4-5)</li>
+                </ul>
+                
+                <p><strong>Livello PG:</strong></p>
+                <ul>
+                    <li>Inizi Livello 1</li>
+                    <li>Ogni 10 XP spesi = sali livello successivo</li>
+                    <li>Livello massimo: 5 (dopo ~50 XP totali)</li>
+                </ul>
+            </div>
+            
+            <div class="example-box">
+                <h4>Esempio Progressione: Marco (Avalon)</h4>
+                
+                <p><strong>Inizio Gioco (0 XP, Livello 1):</strong></p>
+                <ul>
+                    <li>Sceglie 2 poteri L1: "Luce Guida" + "Scudo Radiante"</li>
+                </ul>
+                
+                <p><strong>Dopo 5 sessioni (15 XP, Livello 2):</strong></p>
+                <ul>
+                    <li>Spende 5 XP → impara "Guarigione Minore" (L1)</li>
+                    <li>Spende 5 XP → impara "Fiamma Purificatrice" (L2)</li>
+                    <li>Ora ha 4 poteri: 3×L1, 1×L2</li>
+                </ul>
+                
+                <p><strong>Dopo 12 sessioni (40 XP, Livello 4):</strong></p>
+                <ul>
+                    <li>Ha imparato vari poteri L1-L4</li>
+                    <li>Totale poteri: ~8-10 (a discrezione)</li>
+                    <li>Può ora accedere poteri L4 potenti</li>
+                </ul>
+            </div>
+            
+            <h3>Costi Poteri per Casata</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Casata</th>
+                        <th>Risorsa Usata</th>
+                        <th>Max Risorsa</th>
+                        <th>Recupero</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(255, 215, 0, 0.05);">
+                        <td><strong>Avalon</strong></td>
+                        <td>Stress</td>
+                        <td>0-10</td>
+                        <td>-1/notte, downtime attività</td>
+                    </tr>
+                    <tr style="background: rgba(139, 0, 255, 0.05);">
+                        <td><strong>Umbra</strong></td>
+                        <td>Corruzione</td>
+                        <td>0-5 (a 5 = trasformazione!)</td>
+                        <td>Rituale purificazione difficile</td>
+                    </tr>
+                    <tr style="background: rgba(46, 204, 113, 0.05);">
+                        <td><strong>Ife</strong></td>
+                        <td>Stress</td>
+                        <td>0-10</td>
+                        <td>-1/notte, downtime attività</td>
+                    </tr>
+                    <tr style="background: rgba(44, 62, 80, 0.05);">
+                        <td><strong>Mictlan</strong></td>
+                        <td>Punti Ferita (PF)</td>
+                        <td>20+(FOR×2)</td>
+                        <td>1d4/notte, guarigione normale</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="info-box">
+                <h4>💡 Filosofia Costi</h4>
+                
+                <p><strong>Avalon (Stress):</strong> Luce pura brucia psiche. Burnout a 10 = crollo emotivo. Recupero medio.</p>
+                
+                <p><strong>Umbra (Corruzione):</strong> Ombre contaminano anima. A 5 = perdita PG (trasformazione). Recupero difficilissimo. Umbra vivono bilico costante.</p>
+                
+                <p><strong>Ife (Stress):</strong> Canalizzare vita costa energia spirituale. Identico Avalon (Stress 0-10, burnout).</p>
+                
+                <p><strong>Mictlan (PF):</strong> Morte richiede sangue. Letteralmente paghi con vita. Nessun limite superiore (puoi usare poteri finché hai PF) MA rischi morte.</p>
+            </div>
+            
+            <h3>Attivazione Poteri</h3>
+            
+            <div class="info-box">
+                <h4>⚡ Processo Standard</h4>
+                <ol>
+                    <li><strong>Dichiarazione:</strong> "Attivo [nome potere]"</li>
+                    <li><strong>Verifica Risorsa:</strong> Hai abbastanza Stress/Corruzione/PF per costo?</li>
+                    <li><strong>Narrazione:</strong> Descrivi come potere si manifesta (gesto, parola, visualizzazione)</li>
+                    <li><strong>Tiro (se richiesto):</strong> Mossa "Usare Potere" +FAT (o +CAR per Avalon)</li>
+                    <li><strong>Risoluzione:</strong> Applica effetto + paga costo</li>
+                </ol>
+                
+                <p><strong>Eccezioni:</strong> Alcuni poteri sono "automatici" (no tiro richiesto). Specificato nella descrizione potere.</p>
+            </div>
+            
+            <h3>Durata e Range</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Termine</th>
+                        <th>Significato</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Istantaneo</strong></td>
+                        <td>Effetto immediato, poi finisce</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Concentrazione</strong></td>
+                        <td>Dura finché ti concentri (no altre azioni complesse). Max 10 min</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scena</strong></td>
+                        <td>~10-30 minuti, O finché situazione cambia drasticamente</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Giorno</strong></td>
+                        <td>24 ore</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Permanente</strong></td>
+                        <td>Effetto non scade (raro, solo poteri L4-5)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table style="margin-top: 20px;">
+                <thead>
+                    <tr>
+                        <th>Range</th>
+                        <th>Distanza</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Tocco</strong></td>
+                        <td>Devi toccare fisicamente bersaglio</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vicino</strong></td>
+                        <td>~3-5 metri (stessa stanza piccola)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medio</strong></td>
+                        <td>~10-20 metri (attraverso stanza grande)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lontano</strong></td>
+                        <td>~50-100 metri (campo calcio)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vista</strong></td>
+                        <td>Qualsiasi cosa puoi vedere chiaramente</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Interruzione Poteri</h3>
+            
+            <div class="info-box">
+                <h4>⚠️ Quando Potere Si Interrompe</h4>
+                
+                <p>Poteri con durata "Concentrazione" O "Scena" terminano se:</p>
+                <ul>
+                    <li><strong>Perdi Coscienza:</strong> KO, sonno, morte</li>
+                    <li><strong>Danno Massiccio:</strong> Subisci 10+ danno singolo colpo → tira +FOR, 6- = concentrazione spezzata</li>
+                    <li><strong>Condizione Severa:</strong> Stordito, paralizzato, posseduto</li>
+                    <li><strong>Scegli Terminare:</strong> Azione gratuita, puoi interrompere volontariamente</li>
+                </ul>
+                
+                <p><strong>Nota:</strong> Costo già pagato NON si recupera se potere interrotto prematuramente.</p>
+            </div>
+            
+            <h3>Combinare Poteri</h3>
+            
+            <div class="info-box">
+                <h4>🔗 Sinergie e Limitazioni</h4>
+                
+                <p><strong>Limite Simultaneo:</strong> Massimo <strong>3 poteri attivi contemporaneamente</strong> (quelli con durata non-istantanea).</p>
+                
+                <p><strong>Stesso Turno:</strong> Puoi usare solo <strong>1 potere per turno</strong> (azione principale). Eccezione: poteri "reazione" O "gratuiti".</p>
+                
+                <p><strong>Stack Effetti:</strong></p>
+                <ul>
+                    <li><strong>Stesso potere:</strong> NO stack (es: non puoi lanciare "Scudo" 2 volte per raddoppiare Armatura)</li>
+                    <li><strong>Poteri diversi:</strong> Sì, se logico (es: "Velocità" + "Forza" = corri veloce E colpisci forte)</li>
+                </ul>
+                
+                <p><strong>Combo Gruppo:</strong> PG diversi possono coordinare poteri per effetto maggiore. Custode arbitro finale su risultato.</p>
+            </div>
+            
+            <div class="example-box">
+                <h4>Esempio: Combo Gruppo</h4>
+                <p><strong>Marco (Avalon):</strong> "Creo muro luce (Barriera L2) davanti a demone!"</p>
+                <p><strong>Sofia (Umbra):</strong> "Io mi fondo nelle ombre dietro muro, appaio dietro demone per attacco sorpresa (Passo Ombra L1)!"</p>
+                <p><strong>Custode:</strong> "Eccellente coordinazione. Marco, tira Usare Potere. Sofia, se Marco riesce, hai +2 al tuo attacco (vantaggio tattico)."</p>
+            </div>
+        </section>
+        
+        <hr style="margin: 60px 0;">
+        
+        <!-- CAPITOLO 20: POTERI AVALON -->
+        <section id="cap20">
+            <h2>Capitolo 20: Poteri Avalon - Casata della Luce</h2>
+            
+            <div class="info-box" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 215, 0, 0.1)); border-color: rgba(255, 215, 0, 0.5);">
+                <h3 style="color: #ffd700;">✨ Filosofia Avalon</h3>
+                <p><strong>Essenza:</strong> Luce, giustizia, protezione, ispirazione. Avalon sono fari nella notte, guardiani inflessibili, leader carismatici.</p>
+                <p><strong>Risorsa:</strong> Stress (0-10). Luce pura brucia psiche. A 10 = Burnout.</p>
+                <p><strong>Caratteristica Poteri:</strong> +CAR (unica Casata che usa Carisma invece Fato)</p>
+                <p><strong>Temi Poteri:</strong> Guarigione, scudi, danno radiante, ispirare alleati, rivelare verità, purificare male.</p>
+            </div>
+            
+            <h3>Avalon Livello 1 (Poteri Base)</h3>
+            
+            <!-- POTERE 1: LUCE GUIDA -->
+            <div class="power-box avalon-box">
+                <span class="power-level">Livello 1</span>
+                <h4>✨ LUCE GUIDA</h4>
+                
+                <div class="power-cost">
+                    <strong>COSTO:</strong> 1 Stress
+                </div>
+                
+                <p><strong>EFFETTO:</strong> Anello emana luce dorata brillante (equivalente torcia potente). Illumina area Vicina. Dura Concentrazione (max 1 ora).</p>
+                
+                <p><strong>BONUS:</strong></p>
+                <ul>
+                    <li>Nessuna penalità buio per te e alleati in area</li>
+                    <li>Creature ombra/non-morti hanno -1 quando dentro luce</li>
+                    <li>Puoi "puntare" luce come faretto (50m portata stretta)</li>
+                </ul>
+                
+                <p><strong>TIRO:</strong> Nessuno (automatico)</p>
+                
+                <p><strong>NOTE:</strong> Luce è visibilmente magica (dorata, mai tremola). Non può essere spenta da vento/acqua normale. Potere iconico Avalon, simbolo presenza.</p>
+            </div>
+            
+            <!-- POTERE 2: SCUDO RADIANTE -->
+            <div class="power-box avalon-box">
+                <span class="power-level">Livello 1</span>
+                <h4>🛡️ SCUDO RADIANTE</h4>
+                
+                <div class="power-cost">
+                    <strong>COSTO:</strong> 1 Stress
+                </div>
+                
+                <p><strong>EFFETTO:</strong> Crei scudo energia dorata attorno a te O alleato Vicino. Dura Scena O finché distrutto.</p>
+                
+                <p><strong>MECCANICA:</strong> Bersaglio guadagna <strong>+2 Armatura temporanea</strong> (stack con Armatura fisica). Quando scudo assorbe danno, brilla intensamente.</p>
+                
+                <p><strong>TIRO:</strong> Usare Potere +CAR</p>
+                <ul>
+                    <li><strong>10+:</strong> Scudo tiene perfettamente. +2 Armatura fino fine scena.</li>
+                    <li><strong>7-9:</strong> Scudo funziona MA instabile. +2 Armatura MA si dissolve dopo aver assorbito 10 danno totali.</li>
+                    <li><strong>6-:</strong> Scudo non si forma. Paghi Stress comunque. Custode fa mossa.</li>
+                </ul>
+                
+                <p><strong>NOTE:</strong> Puoi avere solo 1 Scudo Radiante attivo per volta. Lanciare su nuovo bersaglio dissolve precedente.</p>
+            </div>
+            
+            <!-- POTERE 3: GUARIGIONE MINORE -->
+            <div class="power-box avalon-box">
+                <span class="power-level">Livello 1</span>
+                <h4>💚 GUARIGIONE MINORE</h4>
+                
+                <div class="power-cost">
+                    <strong>COSTO:</strong> 2 Stress
+                </div>
+                
+                <p><strong>RANGE:</strong> Tocco</p>
+                <p><strong>EFFETTO:</strong> Tocchi creatura vivente, canalizzi energia vitale. Bersaglio recupera PF.</p>
+                
+                <p><strong>TIRO:</strong> Usare Potere +CAR</p>
+                <ul>
+                    <li><strong>10+:</strong> Bersaglio recupera <strong>2d6 PF</strong>. Ferite superficiali si chiudono istantaneamente.</li>
+                    <li><strong>7-9:</strong> Bersaglio recupera <strong>1d6 PF</strong> MA guarigione incompleta (cicatrici, O -1 ongoing finché riposo completo).</li>
+                    <li><strong>6-:</strong> Nessuna guarigione. Paghi Stress. Energia dispersa O assorbita da qualcos'altro (Custode decide).</li>
+                </ul>
+                
+                <p><strong>LIMITAZIONI:</strong></p>
+                <ul>
+                    <li>Non funziona su non-morti O costrutti</li>
+                    <li>Non rigenera arti persi (serve Resurrezione L5)</li>
+                    <li>Non cura veleni/malattie (solo danno fisico)</li>
+                    <li>Max 1 volta per bersaglio per scena (corpo ha limite assorbimento energia)</li>
+                </ul>
+            </div>
+            
+            <div class="separator">⟡</div>
+            
+            <h3>Avalon Livello 2 (Poteri Intermedi)</h3>
+            
+            <!-- POTERE 4: FIAMMA PURIFICATRICE -->
+            <div class="power-box avalon-box">
+                <span class="power-level">Livello 2</span>
+                <h4>🔥 FIAMMA PURIFICATRICE</h4>
+                
+                <div class="power-cost">
+                    <strong>COSTO:</strong> 2 Stress
+                </div>
+                
+                <p><strong>RANGE:</strong> Medio</p>
+                <p><strong>EFFETTO:</strong> Scagli raggio fuoco sacro dorato contro bersaglio. Danno radiante.</p>
+                
+                <p><strong>TIRO:</strong> Usare Potere +CAR (conta come Attacco)</p>
+                <ul>
+                    <li><strong>10+:</strong> <strong>2d8 danno radiante</strong> (ignora Armatura fisica, solo magica protegge). Scegli 1 bonus:
+                        <ul>
+                            <li>+1d6 danno extra</li>
+                            <li>Bersaglio prende fuoco (1d6/round finché spento)</li>
+                            <li>Purifica corruzione (se bersaglio corrotto, -1 Corruzione)</li>
+                        </ul>
+                    </li>
+                    <li><strong>7-9:</strong> <strong>1d8 danno radiante</strong> MA fiamma instabile. Scegli 1 complicazione:
+                        <ul>
+                            <li>Attiri attenzione (luce brillante visibile 1km)</li>
+                            <li>Costi raddoppiato (4 Stress invece 2)</li>
+                            <li>Colpisci anche alleato Vicino a bersaglio (1d6 danno)</li>
+                        </ul>
+                    </li>
+                    <li><strong>6-:</strong> Manchi. Paghi Stress. Fiamma esplode prematura (subisci 1d6 danno) O altro effetto negativo.</li>
+                </ul>
+                
+                <p><strong>EXTRA vs NON-MORTI:</strong> Danno raddoppiato (4d8 su 10+, 2d8 su 7-9). Luce sacra è anatema ai morti viventi.</p>
+            </div>
+            
+            <!-- POTERE 5: AURA CORAGGIO -->
+            <div class="power-box avalon-box">
+                <span class="power-level">Livello 2</span>
+                <h4>⚔️ AURA CORAGGIO</h4>
+                
+                <div class="power-cost">
+                    <strong>COSTO:</strong> 2 Stress
+                </div>
+                
+                <p><strong>RANGE:</strong> Vicino (aura centrata su te)</p>
+                <p><strong>DURATA:</strong> Scena</p>
+                
+                <p><strong>EFFETTO:</strong> Emani presenza ispirante. Alleati dentro aura sentono coraggio rinnovato.</p>
+                
+                <p><strong>BONUS ALLEATI:</strong></p>
+                <ul>
+                    <li><strong>+1 a tutti tiri</strong> contro paura/intimidazione</li>
+                    <li>Immuni a effetti paura magica (charme, terrore)</li>
+                    <li>Quando alleato subisce danno, puoi usare reazione per dargli incoraggiamento verbale → recupera 1d4 PF (1 volta per alleato per scena)</li>
+                </ul>
+                
+                <p><strong>TIRO:</strong> Usare Potere +CAR</p>
+                <ul>
+                    <li><strong>10+:</strong> Aura piena potenza. Effetti durano fino fine combattimento.</li>
+                    <li><strong>7-9:</strong> Aura funziona MA affaticante. Effetti durano MA prendi -1 ongoing mentre aura attiva (strain mantenere).</li>
+                    <li><strong>6-:</strong> Aura non si manifesta. Stress sprecato. Alleati delusi (morale cala).</li>
+                </ul>
+                
+                <p><strong>NOTE:</strong> Potere di leadership. Marco lo usa spesso pre-combattimento per preparare squadra.</p>
+            </div>
+            
+            <!-- POTERE 6: BARRIERA LUCE -->
+            <div class="power-box avalon-box">
+                <span class="power-level">Livello 2</span>
+                <h4>🧱 BARRIERA LUCE</h4>
+                
+                <div class="power-cost">
+                    <strong>COSTO:</strong> 3 Stress
+                </div>
+                
+                <p><strong>RANGE:</strong> Medio</p>
+                <p><strong>DURATA:</strong> Concentrazione (max 10 minuti)</p>
+                
+                <p><strong>EFFETTO:</strong> Crei muro luce solida dorata. Dimensioni: 3m largo × 3m alto × 10cm spesso. Puoi formare forma (rettangolo, cupola, etc).</p>
+                
+                <p><strong>RESISTENZA BARRIERA:</strong></p>
+                <ul>
+                    <li>Barriera ha <strong>30 PF</strong></li>
+                    <li><strong>Armatura 5</strong> (molto resistente)</li>
+                    <li>Attacchi fisici: danno ridotto normalmente</li>
+                    <li>Magia oscura: danno raddoppiato (debolezza)</li>
+                    <li>Se PF barriera → 0, si frantuma</li>
+                </ul>
+                
+                <p><strong>TIRO:</strong> Usare Potere +CAR</p>
+                <ul>
+                    <li><strong>10+:</strong> Barriera solida, trasparente. Blocca tutto (creature, proiettili, magie). Tu e alleati potete attraversare toccandola (riconosce amici).</li>
+                    <li><strong>7-9:</strong> Barriera funziona MA imperfezioni. Scegli 1:
+                        <ul>
+                            <li>Barriera semi-trasparente (-2 MEN vedere attraverso chiaramente)</li>
+                            <li>PF ridotti (20 invece 30)</li>
+                            <li>Dura solo 5 minuti invece 10</li>
+                        </ul>
+                    </li>
+                    <li><strong>6-:</strong> Barriera collassa appena formata. Stress sprecato. Onda energia disorienta tutti Vicino (amici + nemici = -1 forward).</li>
+                </ul>
+                
+                <p><strong>NOTE:</strong> Tattico. Ottimo per creare copertura, dividere nemici, O proteggere civili. Limitazione: solo 1 barriera attiva per volta.</p>
+            </div>
+            
+            <div class="separator">⟡</div>
+            
+            <h3>Avalon Livello 3 (Poteri Avanzati)</h3>
+            
+            <!-- POTERE 7: GUARIGIONE MAGGIORE -->
+            <div class="power-box avalon-box">
+                <span class="power-level">Livello 3</span>
+                <h4>💚💚 GUARIGIONE MAGGIORE</h4>
+                
+                <div class="power-cost">
+                    <strong>COSTO:</strong> 4 Stress
+                </div>
+                
+                <p><strong>RANGE:</strong> Tocco</p>
+                <p><strong>EFFETTO:</strong> Versione potenziata Guarigione Minore. Cura ferite gravi, veleni, malattie.</p>
+                
+                <p><strong>TIRO:</strong> Usare Potere +CAR</p>
+                <ul>
+                    <li><strong>10+:</strong> Bersaglio recupera <strong>4d6 PF</strong>. Inoltre scegli 2:
+                        <ul>
+                            <li>Purifica veleno/malattia non-magica</li>
+                            <li>Rigenera osso rotto/organo danneggiato (non arti completi)</li>
+                            <li>Rimuove 1 condizione (Accecato, Stordito, etc)</li>
+                            <li>Rimuove cicatrici/trauma permanente minore</li>
+                        </ul>
+                    </li>
+                    <li><strong>7-9:</strong> Recupera <strong>2d6 PF</strong> + scegli 1 opzione sopra. MA guarigione ha costo: bersaglio debole (-1 FOR fino riposo completo).</li>
+                    <li><strong>6-:</strong> Guarigione fallisce. Stress sprecato. Energia vitale dispersa O bersaglio ha reazione negativa (dolore intenso, shock).</li>
+                </ul>
+                
+                <p><strong>LIMITAZIONI:</strong> Non rigenera arti/organi completi (serve Resurrezione L5). Non cura maledizioni magiche (serve Purificazione Suprema L4).</p>
+            </div>
+            
+            <!-- POTERE 8: LAMA RADIANTE -->
+            <div class="power-box avalon-box">
+                <span class="power-level">Livello 3</span>
+                <h4>⚔️✨ LAMA RADIANTE</h4>
+                
+                <div class="power-cost">
+                    <strong>COSTO:</strong> 3 Stress
+                </div>
+                
+                <p><strong>DURATA:</strong> Scena</p>
+                
+                <p><strong>EFFETTO:</strong> Evochi spada fatta luce pura. Solidifica da Anello, impugni come arma normale.</p>
+                
+                <p><strong>STATISTICHE ARMA:</strong></p>
+                <ul>
+                    <li><strong>Danno:</strong> 2d8 radiante (ignora Armatura fisica)</li>
+                    <li><strong>Tag:</strong> Mischia, Magica, Indistruttibile</li>
+                    <li><strong>Peso:</strong> Zero (fatta luce)</li>
+                    <li>Brilla intensamente (illumina area Vicina)</li>
+                </ul>
+                
+                <p><strong>TIRO:</strong> Usare Potere +CAR</p>
+                <ul>
+                    <li><strong>10+:</strong> Lama perfetta. Dura tutta scena, mai tremola.</li>
+                    <li><strong>7-9:</strong> Lama funziona MA instabile. Scegli 1:
+                        <ul>
+                            <li>Danno ridotto (1d8 invece 2d8)</li>
+                            <li>Dura solo 10 minuti</li>
+                            <li>Vacilla se subisci danno (tira +CAR per mantenerla, 6- = si dissolve)</li>
+                        </ul>
+                    </li>
+                    <li><strong>6-:</strong> Lama non si forma. Stress sprecato. Energia esplode (1d6 danno a te).</li>
+                </ul>
+                
+                <p><strong>EXTRA:</strong> Contro creature oscurità (ombre, non-morti), danno diventa 3d8. Lama può tagliare sostanze immateriali (spiriti, nebbia magica).</p>
+                
+                <p><strong>NOTE:</strong> Iconico. Avalon con Lama Radiante è vista spettacolare. Può evocare anche altre forme (martello, lancia) con stesse stats.</p>
+            </div>
+            
+            <!-- POTERE 9: RAGGIO ESILIO -->
+            <div class="power-box avalon-box">
+                <span class="power-level">Livello 3</span>
+                <h4>🌟 RAGGIO ESILIO</h4>
+                
+                <div class="power-cost">
+                    <strong>COSTO:</strong> 4 Stress
+                </div>
+                
+                <p><strong>RANGE:</strong> Lontano</p>
+                <p><strong>EFFETTO:</strong> Canalizzi luce purissima verso creatura extra-planare (demone, spirito, elementale, entità evocata).</p>
+                
+                <p><strong>TIRO:</strong> Usare Potere +CAR</p>
+                <ul>
+                    <li><strong>10+:</strong> Creatura viene <strong>bandita</strong> immediatamente al piano origine. Non può tornare per 1 anno+1 giorno. Se evocata, legame con evocatore spezzato.</li>
+                    <li><strong>7-9:</strong> Funziona MA imperfetto. Scegli 1:
+                        <ul>
+                            <li>Creatura bandita MA può tornare dopo 24 ore</li>
+                            <li>Creatura resiste parzialmente: subisce 3d8 danno radiante MA NON bandita</li>
+                            <li>Bandita MA ha 1 azione finale prima sparire (attacco disperato O maledizione)</li>
+                        </ul>
+                    </li>
+                    <li><strong>6-:</strong> Esilio fallisce. Creatura immune per resto scena. Stress sprecato. Creatura ARRABBIATA (attacca te con furia).</li>
+                </ul>
+                
+                <p><strong>LIMITAZIONI:</strong></p>
+                <ul>
+                    <li>Funziona SOLO su creature extra-planari (non su umani, vampiri, lupi mannari)</li>
+                    <li>Se creatura ha LS 8+, ha +2 a resistere (molto potente)</li>
+                    <li>Entità leggendarie (LS 10+) immuni (troppo antiche/potenti)</li>
+                </ul>
+                
+                <p><strong>NOTE:</strong> Ottimo vs demoni/spiriti evocati. Termina combattimento istantaneamente se funziona. Avalon specialty vs extra-planari.</p>
+            </div>
+            
+            <div class="separator">⟡</div>
+            
+            <h3>Avalon Livello 4 (Poteri Potenti)</h3>
+            
+            <!-- POTERE 10: PURIFICAZIONE SUPREMA -->
+            <div class="power-box avalon-box">
+                <span class="power-level">Livello 4</span>
+                <h4>✨🔥 PURIFICAZIONE SUPREMA</h4>
+                
+                <div class="power-cost">
+                    <strong>COSTO:</strong> 5 Stress
+                </div>
+                
+                <p><strong>RANGE:</strong> Tocco</p>
+                <p><strong>RITUALE:</strong> 1 minuto concentrazione ininterrotta</p>
+                
+                <p><strong>EFFETTO:</strong> Purifichi bersaglio da qualsiasi contaminazione oscura: maledizioni, possessioni, corruzione, malattie magiche.</p>
+                
+                <p><strong>TIRO:</strong> Usare Potere +CAR</p>
+                <ul>
+                    <li><strong>10+:</strong> Purificazione completa. Scegli TUTTI che applicano:
+                        <ul>
+                            <li>Rimuovi maledizione (qualsiasi livello)</li>
+                            <li>Espelli spirito possessore</li>
+                            <li>Riduci Corruzione -2 (se bersaglio Umbra)</li>
+                            <li>Cura malattia magica/veleno magico</li>
+                            <li>Dissolvi marca oscura (simbolo cultista, patto demone, etc)</li>
+                        </ul>
+                    </li>
+                    <li><strong>7-9:</strong> Purificazione parziale. Scegli 2 opzioni sopra. MA purificazione dolorosa: bersaglio subisce 2d6 danno (luce brucia contaminazione).</li>
+                    <li><strong>6-:</strong> Purificazione fallisce. Contaminazione resiste. Stress sprecato. Possibile reazione negativa (contaminazione si rafforza temporaneamente).</li>
+                </ul>
+                
+                <p><strong>CASI SPECIALI:</strong></p>
+                <ul>
+                    <li><strong>Umbra a Corruzione 5:</strong> Richiede Purificazione Suprema 10+ + sacrificio artefatto leggendario. Anche così, bersaglio perde -1 caratteristica permanente.</li>
+                    <li><strong>Possessione Maggiore:</strong> Se entità LS 8+, richiede tiro 10+ O fallisce.</li>
+                </ul>
+                
+                <p><strong>NOTE:</strong> Potere chiave Avalon. Unico modo affidabile salvare Umbra da Corruzione alta. Richiesto per molte quest.</p>
+            </div>
+            
+            <!-- POTERE 11: GIUDIZIO DIVINO -->
+            <div class="power-box avalon-box">
+                <span class="power-level">Livello 4</span>
+                <h4>⚖️⚔️ GIUDIZIO DIVINO</h4>
+                
+                <div class="power-cost">
+                    <strong>COSTO:</strong> 6 Stress
+                </div>
+                
+                <p><strong>RANGE:</strong> Vista</p>
+                <p><strong>EFFETTO:</strong> Invochi giudizio divino su creatura malvagia. Pilastro luce dorata scende dal cielo, investe bersaglio.</p>
+                
+                <p><strong>REQUISITO:</strong> Bersaglio deve essere <strong>oggettivamente malvagio</strong> (ha commesso atrocità, ucciso innocenti, servito male consapevolmente). Giudizio sa. Se usi su innocente → automatico 6- + conseguenze severe.</p>
+                
+                <p><strong>TIRO:</strong> Usare Potere +CAR</p>
+                <ul>
+                    <li><strong>10+:</strong> <strong>6d8 danno radiante</strong> (ignora Armatura completamente). Bersaglio è <strong>Marcato</strong> (brillamento visibile 24 ore, tutti sanno è malvagio, -2 a ingannare/nascondersi).</li>
+                    <li><strong>7-9:</strong> <strong>3d8 danno radiante</strong>. Bersaglio Marcato MA solo 1 ora. Inoltre, scegli 1 complicazione:
+                        <ul>
+                            <li>Costo raddoppiato (12 Stress totali)</li>
+                            <li>Pilastro luce attira TUTTA attenzione (nemici + civili + autorità entro 1km vedono)</li>
+                            <li>Giudizio colpisce anche te (subisci 1d8 danno, luce giudica anche tue colpe)</li>
+                        </ul>
+                    </li>
+                    <li><strong>6-:</strong> Giudizio rifiuta chiamata (bersaglio non abbastanza malvagio O tu non degno). Nessun effetto. Stress sprecato. Senti disapprovazione divina (-2 ongoing fino espiazione).</li>
+                </ul>
+                
+                <p><strong>NOTE:</strong> Potere più drammatico Avalon. Spettacolare visivamente. Limiti morali chiari: solo contro male vero. Marco lo usa raramente, troppo severo.</p>
+            </div>
+            
+            <!-- POTERE 12: AEGIS GLORIA -->
+            <div class="power-box avalon-box">
+                <span class="power-level">Livello 4</span>
+                <h4>🛡️✨ AEGIS GLORIA</h4>
+                
+                <div class="power-cost">
+                    <strong>COSTO:</strong> 5 Stress
+                </div>
+                
+                <p><strong>DURATA:</strong> Scena</p>
+                
+                <p><strong>EFFETTO:</strong> Evochi armatura completa fatta luce solidificata. Copre tutto corpo, peso zero, brilla magnificamente.</p>
+                
+                <p><strong>STATISTICHE:</strong></p>
+                <ul>
+                    <li><strong>Armatura: +4</strong> (stack con Armatura fisica)</li>
+                    <li><strong>Immunità:</strong> Paura magica, veleni, malattie</li>
+                    <li><strong>Aura:</strong> Alleati Vicini hanno +1 morale</li>
+                    <li><strong>Rigenerazione:</strong> Inizio ogni tuo turno, recuperi 1d4 PF</li>
+                </ul>
+                
+                <p><strong>TIRO:</strong> Usare Potere +CAR</p>
+                <ul>
+                    <li><strong>10+:</strong> Aegis piena potenza. Tutti benefici durano fino fine scena.</li>
+                    <li><strong>7-9:</strong> Aegis funziona MA imperfetto. Scegli 1 limitazione:
+                        <ul>
+                            <li>Armatura solo +3 invece +4</li>
+                            <li>Nessuna rigenerazione</li>
+                            <li>Dura solo 10 minuti invece scena completa</li>
+                        </ul>
+                    </li>
+                    <li><strong>6-:</strong> Aegis non si forma. Stress sprecato. Energia dispersa, ti lascia vulnerabile (-1 Armatura fino fine scena).</li>
+                </ul>
+                
+                <p><strong>NOTA:</strong> "Boss mode" Avalon. Quando attivi Aegis, tutti sanno: battaglia è seria. Aspetto visivo incredibile (cavaliere dorato brillante).</p>
+            </div>
+            
+            <div class="separator">⟡</div>
+            
+            <h3>Avalon Livello 5 (Poteri Leggendari)</h3>
+            
+            <!-- POTERE 13: RESURREZIONE -->
+            <div class="power-box avalon-box">
+                <span class="power-level">Livello 5</span>
+                <h4>💫☀️ RESURREZIONE</h4>
+                
+                <div class="power-cost">
+                    <strong>COSTO:</strong> 10 Stress + Sacrificio (artefatto leggendario O vita animale grande)
+                </div>
+                
+                <p><strong>RANGE:</strong> Tocco</p>
+                <p><strong>RITUALE:</strong> 1 ora concentrazione totale, cerchio sacro, componenti rari</p>
+                
+                <p><strong>REQUISITI:</strong></p>
+                <ul>
+                    <li>Corpo intatto (almeno 75%)</li>
+                    <li>Morte entro 24 ore</li>
+                    <li>Anima non vincolata da patto/maledizione</li>
+                    <li>Morto deve volere tornare (consenso anima)</li>
+                </ul>
+                
+                <p><strong>EFFETTO:</strong> Riporti morto alla vita.</p>
+                
+                <p><strong>TIRO:</strong> Usare Potere +CAR</p>
+                <ul>
+                    <li><strong>10+:</strong> Resurrezione riuscita. Morto torna a 1 PF. MA costo permanente: <strong>-1 a caratteristica casuale</strong> (tira d6: 1=FOR, 2=CUO, 3=MEN, 4=CAR, 5=FAT, 6=scelta morto). Corpo porta cicatrici morte.</li>
+                    <li><strong>7-9:</strong> Resurrezione riuscita MA complicata. Torna a 1 PF, -1 caratteristica E scegli 1 complicazione:
+                        <ul>
+                            <li>Amnesia parziale (dimentica eventi recenti, alcuni Legami indeboliti)</li>
+                            <li>Debito spirituale (deve favore a entità morte, riscosso futuro)</li>
+                            <li>Vulnerabilità permanente (prende +2 danno da 1 tipo specifico)</li>
+                        </ul>
+                    </li>
+                    <li><strong>6-:</strong> Resurrezione fallisce. Sacrificio consumato, Stress pagato, corpo resta morto. Possibile complicazione: anima intrappolata tra mondi, diventa spettro tormentato.</li>
+                </ul>
+                
+                <p><strong>NOTE:</strong> Potere più sacro Avalon. Usato raramente (costo altissimo). Momento climax campagna. Richiede preparazione, location sacra, alleati supporto.</p>
+            </div>
+            
+            <!-- POTERE 14: AVATAR LUCE -->
+            <div class="power-box avalon-box">
+                <span class="power-level">Livello 5</span>
+                <h4>👼✨ AVATAR LUCE</h4>
+                
+                <div class="power-cost">
+                    <strong>COSTO:</strong> 8 Stress
+                </div>
+                
+                <p><strong>DURATA:</strong> 10 minuti (combattimento boss)</p>
+                
+                <p><strong>EFFETTO:</strong> Trascendi forma mortale temporaneamente. Diventi avatar puro di luce, semi-angelico.</p>
+                
+                <p><strong>TRASFORMAZIONE:</strong></p>
+                <ul>
+                    <li>Ali luce (volo veloce, manovrabilità perfetta)</li>
+                    <li>Corpo brilla intensamente (illumina area Lontana)</li>
+                    <li>Occhi dorati puri</li>
+                    <li>Voce risuona autorità divina</li>
+                </ul>
+                
+                <p><strong>BONUS:</strong></p>
+                <ul>
+                    <li><strong>+2 a TUTTE caratteristiche</strong></li>
+                    <li><strong>Armatura +3</strong></li>
+                    <li>Tutti poteri Avalon costano -1 Stress (min 1)</li>
+                    <li><strong>Presenza Terrificante:</strong> Nemici LS 5- devono Resistere +CUO O fuggire terrorizzati</li>
+                    <li>Rigenerazione: Inizio turno recuperi 1d6 PF</li>
+                    <li>Immune: Veleni, malattie, paura, charme</li>
+                </ul>
+                
+                <p><strong>TIRO:</strong> Usare Potere +CAR</p>
+                <ul>
+                    <li><strong>10+:</strong> Trasformazione perfetta. Tutti bonus, 10 min durata.</li>
+                    <li><strong>7-9:</strong> Trasformazione instabile. Tutti bonus MA scegli 1:
+                        <ul>
+                            <li>Dura solo 5 minuti</li>
+                            <li>Quando finisce, collassi esausto (0 Stress, -2 a tutto per 1 ora)</li>
+                            <li>Forma tremola: ogni volta subisci danno, tira +CAR, 6- = trasformazione termina</li>
+                        </ul>
+                    </li>
+                    <li><strong>6-:</strong> Trasformazione fallisce. Stress sprecato. Corpo rigetta energia divina: subisci 2d8 danno, burnout immediato (Stress = 10).</li>
+                </ul>
+                
+                <p><strong>DOPO TRASFORMAZIONE:</strong> Quando Avatar termina (durata finita O interrotta), subisci crash: -1 a tutti tiri per 1 ora (esaurimento mortale). Necessita riposo.</p>
+                
+                <p><strong>NOTE:</strong> "Final form" Avalon. Usato solo contro boss leggendari O minacce apocalittiche. Visivamente: spettacolo celestiale, tutti presenti ricordano per sempre.</p>
+            </div>
+            
+            <!-- POTERE 15: NOVA SACRA -->
+            <div class="power-box avalon-box">
+                <span class="power-level">Livello 5</span>
+                <h4>☀️💥 NOVA SACRA</h4>
+                
+                <div class="power-cost">
+                    <strong>COSTO:</strong> 10 Stress (tutti rimanenti, min 10)
+                </div>
+                
+                <p><strong>RANGE:</strong> Lontano (esplosione centrata su punto scelto)</p>
+                <p><strong>AREA:</strong> Sfera raggio 20m</p>
+                
+                <p><strong>EFFETTO:</strong> Invochi esplosione luce solare. Pilastro energia scende, detona in nova accecante.</p>
+                
+                <p><strong>DANNO:</strong></p>
+                <ul>
+                    <li><strong>Nemici in area:</strong> 8d8 danno radiante (ignora Armatura completamente)</li>
+                    <li><strong>Creature oscurità (non-morti, ombre, demoni):</strong> 12d8 danno radiante</li>
+                    <li><strong>Alleati in area:</strong> Immuni (luce riconosce amici)</li>
+                </ul>
+                
+                <p><strong>EFFETTI SECONDARI:</strong></p>
+                <ul>
+                    <li>Purifica area (dissolve magie oscure, maledizioni ambientali)</li>
+                    <li>Illumina area per 10 minuti (impossibile nascondersi, ombre dissolte)</li>
+                    <li>Visibile da km (tutti vedono pilastro luce)</li>
+                </ul>
+                
+                <p><strong>TIRO:</strong> Usare Potere +CAR</p>
+                <ul>
+                    <li><strong>10+:</strong> Nova perfetta. Danno pieno, tutti effetti secondari.</li>
+                    <li><strong>7-9:</strong> Nova instabile. Danno pieno MA scegli 2 complicazioni:
+                        <ul>
+                            <li>Anche alleati in area subiscono 3d8 danno (troppo potente)</li>
+                            <li>Esplosione distrugge ambiente (edifici crollano, incendi)</li>
+                            <li>Ti lascia completamente esausto (Burnout + 0 PF, quasi morte)</li>
+                            <li>Attrai attenzione TUTTE fazioni Milano (tutti sanno qualcosa successo)</li>
+                        </ul>
+                    </li>
+                    <li><strong>6-:</strong> Nova fuori controllo. Esplode prematura, centrata su TE. Subisci 6d8 danno, tutti Vicini (amici + nemici) 4d8. Stress consumato. Velo vacilla gravemente.</li>
+                </ul>
+                
+                <p><strong>DOPO NOVA:</strong> Indipendentemente da risultato, vai a Burnout automatico (Stress = 10). Necessita downtime recupero.</p>
+                
+                <p><strong>NOTE:</strong> Potere più distruttivo Avalon. "Nuke button". Usato solo disperazione assoluta O finale campagna. Conseguenze politiche enormi (Velo, Custodi, fazioni). Marco dovrebbe usare solo 1-2 volte intera campagna.</p>
+            </div>
+            
+        </section>
+        
+        <hr style="margin: 80px 0;">
+        
+        <!-- CHIUSURA PARTE IV -->
+        <div class="info-box" style="text-align: center; margin-top: 60px;">
+            <h3>✅ Fine Capitolo 20 - Poteri Avalon Completi</h3>
+            <p>Hai ora TUTTI i 15 poteri Avalon, da L1 a L5.</p>
+            <p style="margin-top: 30px; font-size: 18px; color: var(--accent-gold);">
+                <strong>Prossimi Capitoli:</strong><br>
+                Cap 21: Poteri Umbra (15) → <a href="parte4b.html">parte4b.html</a><br>
+                Cap 22: Poteri Ife (15) → <a href="parte4c.html">parte4c.html</a><br>
+                Cap 23: Poteri Mictlan (15) → <a href="parte4d.html">parte4d.html</a>
+            </p>
+        </div>
+        
+        <!-- NAVIGAZIONE -->
+        <div class="page-navigation">
+            <a href="parte3.html" class="nav-button">← Parte III</a>
+            <a href="parte4b.html" class="nav-button">Cap 21: Poteri Umbra →</a>
+        </div>
+        
+    </main>
+</div>
+  </body>
+</html>
