@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythic Rings v2.1 - Parte VII: Bestiari</title>
+    <style>
+        :root {
+            --primary-dark: #1a1a2e;
+            --accent-gold: #f39c12;
+            --text-light: #ecf0f1;
+            --border-gold: rgba(243, 156, 18, 0.3);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            background-attachment: fixed;
+            color: var(--text-light);
+            line-height: 1.8;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 46px;
+            color: var(--accent-gold);
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 18px;
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            font-size: 34px;
+            color: var(--accent-gold);
+            margin-top: 55px;
+            padding-left: 18px;
+            border-left: 5px solid var(--accent-gold);
+        }
+        
+        h3 { font-size: 26px; color: var(--accent-gold); margin-top: 30px; }
+        p { margin-bottom: 16px; line-height: 1.9; }
+        strong { color: var(--accent-gold); }
+        
+        .creature-box {
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .creature-box h4 {
+            color: var(--accent-gold);
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+        
+        .stat-item { padding: 8px; background: rgba(0, 0, 0, 0.3); border-radius: 6px; }
+        
+        ul { margin-left: 32px; margin-bottom: 18px; }
+        li { margin-bottom: 10px; }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--accent-gold), #e67e22);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        
+        .nav-button:hover { transform: translateY(-3px); }
+        
+        a { color: #3498db; text-decoration: none; }
+        a:hover { color: var(--accent-gold); }
+    </style>
+</head>
+<body>
+    <h1>Parte VII: Bestiari & Avventure</h1>
+    
+    <p><em>Creature comuni Milano occulta + 3 one-shot pronti.</em></p>
+    
+    <h2>Bestiario Base</h2>
+    
+    <div class="creature-box">
+        <h4>🧛 VAMPIRO (Comune)</h4>
+        <div class="stats">
+            <div class="stat-item"><strong>LS:</strong> 4</div>
+            <div class="stat-item"><strong>PF:</strong> 35</div>
+            <div class="stat-item"><strong>Armatura:</strong> 1</div>
+            <div class="stat-item"><strong>Attacco:</strong> Artigli +6, 2d6 danno</div>
+        </div>
+        <p><strong>Abilità Speciali:</strong></p>
+        <ul>
+            <li><strong>Glamour:</strong> Charme (Resistere +CUO O affascinato)</li>
+            <li><strong>Rigenerazione:</strong> +1d6 PF inizio turno (solo se non luce solare/fuoco)</li>
+            <li><strong>Velocità:</strong> ×2 umano</li>
+        </ul>
+        <p><strong>Debolezze:</strong> Luce solare (4d8 danno/round), argento (danno ×1.5), invito (non entra casa senza permesso).</p>
+    </div>
+    
+    <div class="creature-box">
+        <h4>👻 SPETTRO</h4>
+        <div class="stats">
+            <div class="stat-item"><strong>LS:</strong> 3</div>
+            <div class="stat-item"><strong>PF:</strong> 20</div>
+            <div class="stat-item"><strong>Armatura:</strong> Intangibile (immune fisico)</div>
+            <div class="stat-item"><strong>Attacco:</strong> Tocco +5, 1d8 necrotic</div>
+        </div>
+        <p><strong>Abilità:</strong> Volo, attraversa muri, invisibile (a volontà).</p>
+        <p><strong>Debolezze:</strong> Magia (danno normale), sale consacrato (barriera), esorcismo.</p>
+    </div>
+    
+    <div class="creature-box">
+        <h4>🐺 LUPO MANNARO</h4>
+        <div class="stats">
+            <div class="stat-item"><strong>LS:</strong> 5</div>
+            <div class="stat-item"><strong>PF:</strong> 45</div>
+            <div class="stat-item"><strong>Armatura:</strong> 2</div>
+            <div class="stat-item"><strong>Attacco:</strong> Morso +7, 2d8 danno</div>
+        </div>
+        <p><strong>Abilità:</strong> Rigenerazione (1d6/turno), Velocità ×2, Olfatto acuto.</p>
+        <p><strong>Debolezze:</strong> Argento (danno ×2, blocca rigenerazione), luna nuova (debole, stats -2).</p>
+    </div>
+    
+    <div class="creature-box">
+        <h4>😈 DEMONE MINORE</h4>
+        <div class="stats">
+            <div class="stat-item"><strong>LS:</strong> 6</div>
+            <div class="stat-item"><strong>PF:</strong> 50</div>
+            <div class="stat-item"><strong>Armatura:</strong> 3</div>
+            <div class="stat-item"><strong>Attacco:</strong> Artigli +8, 2d6+2 danno</div>
+        </div>
+        <p><strong>Abilità:</strong> Volo, Fuoco infernale (2d8 danno area Vicino), Terrore (Resistere +CUO O fuga).</p>
+        <p><strong>Debolezze:</strong> Simboli sacri (malus -2), esorcismo (Avalon L3 Raggio Esilio).</p>
+    </div>
+    
+    <div class="creature-box">
+        <h4>🧟 ZOMBIE</h4>
+        <div class="stats">
+            <div class="stat-item"><strong>LS:</strong> 1</div>
+            <div class="stat-item"><strong>PF:</strong> 15</div>
+            <div class="stat-item"><strong>Armatura:</strong> 1</div>
+            <div class="stat-item"><strong>Attacco:</strong> Morso +3, 1d6 danno</div>
+        </div>
+        <p><strong>Abilità:</strong> Immune paura/dolore, Lento (movimento metà).</p>
+        <p><strong>Debolezze:</strong> Fuoco (danno ×1.5), decapitazione (instant kill).</p>
+    </div>
+    
+    <h2>One-Shot: "Notte al Monumentale"</h2>
+    
+    <p><strong>Setup:</strong> Cimitero Monumentale. Spiriti irrequieti. Qualcosa li disturba.</p>
+    <p><strong>Durata:</strong> 3 ore</p>
+    
+    <h3>Atto 1: Il Richiamo (45 min)</h3>
+    <p><strong>Hook:</strong> Custodi ricevono chiamata: custode cimitero vede "ombre muoversi" tra tombe. PG investigate.</p>
+    <p><strong>Scena 1:</strong> Arrivo cimitero notte. Atmosfera inquietante. Custode terrorizzato racconta: ultime 3 notti, statue "si muovono", voci sussurrano.</p>
+    <p><strong>Investigazione:</strong> Leggere Situazione rivela: energia necrotic forte, epicentro cripta antica famiglia Visconti.</p>
+    <p><strong>Incontro:</strong> 4 spettri ostili attaccano. LS 3 ciascuno. Combattimento introduttivo.</p>
+    
+    <h3>Atto 2: La Cripta (60 min)</h3>
+    <p><strong>Discesa:</strong> PG entrano cripta. Scale umide, aria fredda. Simboli oscuri incisi muri.</p>
+    <p><strong>Puzzle:</strong> Porta sigillata richiede 3 chiavi (nascoste cripta, trovabili con Investigare).</p>
+    <p><strong>Complicazione:</strong> Ogni chiave trovata = ondata zombi (3-4 zombi LS 1).</p>
+    <p><strong>Rivelazione:</strong> Dietro porta: necromante rinnegato (ex-Custode) tenta rituale evocare Signore Non-Morti.</p>
+    
+    <h3>Atto 3: Il Rituale (60 min)</h3>
+    <p><strong>Boss Fight:</strong> Necromante (LS 6) + 6 zombi + 2 spettri. Arena: cripta grande, pilastri copertura.</p>
+    <p><strong>Meccanica Speciale:</strong> Ogni 3 round, rituale progredisce: Doom Clock avanza. A 12 = Signore emerge (TPK probabile). PG devono interrompere rituale (distruggere 3 candele maledette sparse arena).</p>
+    <p><strong>Climax:</strong> Necromante sconfitto O rituale interrotto. Cripta collassa parzialmente.</p>
+    
+    <h3>Risoluzione (15 min)</h3>
+    <p><strong>Vittoria:</strong> Spiriti pacificati. Custode cimitero grato. Custodi promuovono PG (se prima missione).</p>
+    <p><strong>XP:</strong> 3-4 XP (pericolo affrontato, mistero risolto, rituale fermato).</p>
+    <p><strong>Cliffhanger:</strong> Necromante mormora ultime parole: "Fratellanza... saprà... vendicarvi..." (introduce fazione antagonista).</p>
+    
+    <h2>One-Shot: "Il Mercante d'Ombre"</h2>
+    
+    <p><strong>Setup:</strong> Mercato Notturno Navigli. Artefatto maledetto venduto. Compratore impazzisce.</p>
+    <p><strong>Durata:</strong> 3 ore</p>
+    <p><strong>Tono:</strong> Investigazione urban fantasy + morale grigia.</p>
+    
+    <p><strong>Hook:</strong> Uomo trovato morto appartamento. Simboli folli scritti sangue muri: "LO VEDO LO VEDO LO VEDE ME".</p>
+    <p><strong>Investigazione:</strong> Vittima aveva comprato "Specchio Verità" da mercante ambulante Mercato Notturno.</p>
+    <p><strong>Twist:</strong> Specchio mostra verità scomoda (peccati nascosti, bugie). Vittima vide qualcosa insopportabile → suicidio.</p>
+    <p><strong>Climax:</strong> PG trovano mercante (Umbra neutrale nome Corvo). Lui difende: "Mostro solo verità. Cosa fanno dopo = scelta loro." Dilemma: arrestare O lasciare? Non ha tecnicamente infranto leggi.</p>
+    <p><strong>Conclusione:</strong> Nessuna risposta perfetta. Decisione gruppo definisce tono campagna futura.</p>
+    
+    <h2>One-Shot: "Sangue sul Duomo"</h2>
+    
+    <p><strong>Setup:</strong> Vampiro antico svegliato, nidifica sotto Duomo. Minaccia Nexus.</p>
+    <p><strong>Durata:</strong> 4 ore</p>
+    <p><strong>Difficoltà:</strong> Alta (per gruppo esperto)</p>
+    
+    <p><strong>Atto 1:</strong> Serie sparizioni turisti zona Duomo. Custodi investigate. Tracce portano catacombe dimenticate.</p>
+    <p><strong>Atto 2:</strong> Esplorazione catacombe (dungeon crawl). Incontri: zombi servitori, trappole antiche, indizi vampiro (bare vuota 800 anni).</p>
+    <p><strong>Atto 3:</strong> Boss fight vampiro antico (LS 8). Battaglia epica multi-fase. Vampiro può evocare sciame pipistrelli, charme PG, rigenerazione potente. Arena: cripta sotto Nexus (magia amplificata, poteri PG costano -1 risorsa).</p>
+    <p><strong>Stakes:</strong> Se vampiro vince, contamina Nexus = Milano intera in pericolo.</p>
+    <p><strong>Ricompensa:</strong> Accesso permanente Nexus per PG (base operativa). Rispetto Cerchia Anziani. 5 XP ciascuno.</p>
+    
+    <hr style="margin: 60px 0; border: none; height: 2px; background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);">
+    
+    <div style="background: linear-gradient(135deg, rgba(243, 156, 18, 0.1), rgba(243, 156, 18, 0.2)); border: 3px solid var(--accent-gold); border-radius: 12px; padding: 40px; text-align: center; margin-top: 60px;">
+        <h2 style="color: var(--accent-gold); margin-bottom: 20px;">✅ Parte VII Completa</h2>
+        <p style="font-size: 18px;">Bestiari base + 3 avventure pronte. Custode ha materiale immediato!</p>
+        <p style="margin-top: 30px; color: var(--accent-gold);"><strong>Prossimo:</strong> Schede Personaggio stampabili!</p>
+    </div>
+    
+    <a href="parte6.html" class="nav-button">← Parte VI</a>
+    <a href="scheda_pg.html" class="nav-button" style="margin-left: 20px;">Scheda PG →</a>
+</body>
+</html>
