@@ -1,0 +1,229 @@
+name: Build Mythic Rings Manual
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'chapters/**'
+      - 'build/**'
+      - 'assets/**'
+      - 'package.json'
+  pull_request:
+    branches: [ main ]
+  release:
+    types: [ created ]
+  workflow_dispatch:    # build manuale da GitHub UI
+
+# ─── Permessi ─────────────────────────────────────────────
+permissions:
+  contents: write
+  packages: read
+
+jobs:
+  # ══════════════════════════════════════════════════════
+  # JOB 1 — Validazione Markdown
+  # ══════════════════════════════════════════════════════
+  validate:
+    name: Validate chapters
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate frontmatter & syntax
+        run: node scripts/validate.js chapters/
+
+      - name: Count chapters
+        run: |
+          COUNT=$(ls chapters/*.md 2>/dev/null | wc -l)
+          echo "Capitoli trovati: $COUNT"
+          echo "CHAPTER_COUNT=$COUNT" >> $GITHUB_ENV
+          if [ "$COUNT" -lt 1 ]; then
+            echo "::error::Nessun capitolo trovato!"
+            exit 1
+          fi
+
+  # ══════════════════════════════════════════════════════
+  # JOB 2 — Build DOCX
+  # ══════════════════════════════════════════════════════
+  build-docx:
+    name: Build DOCX
+    needs: validate
+    runs-on: ubuntu-latest
+    outputs:
+      docx-path: ${{ steps.build.outputs.docx-path }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Clean chapters
+        run: python3 scripts/clean_chapters.py
+
+      - name: Build DOCX
+        id: build
+        run: |
+          node build/engine.js chapters/ dist/
+          DOCX_PATH=$(ls dist/*.docx | head -1)
+          echo "docx-path=$DOCX_PATH" >> $GITHUB_OUTPUT
+          echo "DOCX generato: $DOCX_PATH"
+          ls -lh dist/
+
+      - name: Upload DOCX artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mythic-rings-docx
+          path: dist/*.docx
+          retention-days: 30
+
+  # ══════════════════════════════════════════════════════
+  # JOB 3 — Build PDF professionale (WeasyPrint)
+  # ══════════════════════════════════════════════════════
+  build-pdf:
+    name: Build PDF
+    needs: validate
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Install WeasyPrint + fonts
+        run: |
+          pip install weasyprint --break-system-packages -q
+          sudo apt-get install -y fonts-liberation2 --fix-missing -qq || true
+          weasyprint --version
+
+      - name: Clean chapters
+        run: python3 scripts/clean_chapters.py
+
+      - name: Generate HTML
+        run: node build/pdf-renderer.js chapters/ dist/
+
+      - name: Build PDF
+        run: python3 build/pdf-builder.py dist/
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mythic-rings-pdf
+          path: dist/*.pdf
+          retention-days: 30
+
+  # ══════════════════════════════════════════════════════
+  # JOB 4 — Release (solo su tag o release GitHub)
+  # ══════════════════════════════════════════════════════
+  release:
+    name: Publish Release
+    needs: [ build-docx, build-pdf ]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release' || startsWith(github.ref, 'refs/tags/v')
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download DOCX
+        uses: actions/download-artifact@v4
+        with:
+          name: mythic-rings-docx
+          path: dist/
+
+      - name: Download PDF
+        uses: actions/download-artifact@v4
+        with:
+          name: mythic-rings-pdf
+          path: dist/pdf/
+
+      - name: Get version from tag
+        id: version
+        run: |
+          TAG="${GITHUB_REF#refs/tags/}"
+          echo "version=$TAG" >> $GITHUB_OUTPUT
+          echo "Versione: $TAG"
+
+      - name: Rename files with version
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          mv dist/*.docx "dist/Mythic_Rings_${VERSION}.docx" 2>/dev/null || true
+          mv dist/pdf/*.pdf "dist/pdf/Mythic_Rings_${VERSION}.pdf" 2>/dev/null || true
+
+      - name: Generate release notes
+        id: notes
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          COUNT=$(ls chapters/*.md | wc -l)
+          cat > release_notes.md << EOF
+          ## Mythic Rings $VERSION
+
+          ### Manuale completo
+          - **$COUNT capitoli** compilati automaticamente dai sorgenti Markdown
+          - Layout A5, due colonne, tipografia Georgia
+          - Formattazione professionale per stampa e digitale
+
+          ### File inclusi
+          | File | Formato | Uso |
+          |------|---------|-----|
+          | \`Mythic_Rings_${VERSION}.docx\` | Word | Editing, revisione |
+          | \`Mythic_Rings_${VERSION}.pdf\` | PDF | Distribuzione, stampa |
+
+          ### Build info
+          - Commit: \`${{ github.sha }}\`
+          - Branch: \`${{ github.ref_name }}\`
+          - Data: $(date -u '+%Y-%m-%d %H:%M UTC')
+          EOF
+
+      - name: Upload to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: release_notes.md
+          files: |
+            dist/*.docx
+            dist/pdf/*.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # ══════════════════════════════════════════════════════
+  # JOB 5 — Build Summary (sempre)
+  # ══════════════════════════════════════════════════════
+  summary:
+    name: Build Summary
+    needs: [ validate, build-docx, build-pdf ]
+    runs-on: ubuntu-latest
+    if: always()
+
+    steps:
+      - name: Write summary
+        run: |
+          echo "## 🎲 Mythic Rings Build Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Step | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Validazione | ${{ needs.validate.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Build DOCX | ${{ needs.build-docx.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Build PDF | ${{ needs.build-pdf.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Trigger: \`${{ github.event_name }}\` su \`${{ github.ref_name }}\`" >> $GITHUB_STEP_SUMMARY

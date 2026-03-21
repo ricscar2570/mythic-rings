@@ -1,0 +1,579 @@
+/* ═══════════════════════════════════════════════════════════════
+   MYTHIC RINGS v3 — PDF Stylesheet
+   Standard moderno GdR PbtA: A5, due colonne, tipografia
+   elegante, palette cromatica dark-fantasy professionale
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── @font-face ──────────────────────────────────────────────── */
+@font-face {
+  font-family: 'EBGaramond';
+  src: url('../assets/fonts/EBGaramond-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal;
+}
+@font-face {
+  font-family: 'EBGaramond';
+  src: url('../assets/fonts/EBGaramond-Italic.woff2') format('woff2');
+  font-weight: 400; font-style: italic;
+}
+@font-face {
+  font-family: 'EBGaramond';
+  src: url('../assets/fonts/EBGaramond-Bold.woff2') format('woff2');
+  font-weight: 700; font-style: normal;
+}
+@font-face {
+  font-family: 'Cinzel';
+  src: url('../assets/fonts/Cinzel-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal;
+}
+@font-face {
+  font-family: 'Cinzel';
+  src: url('../assets/fonts/Cinzel-Bold.woff2') format('woff2');
+  font-weight: 700; font-style: normal;
+}
+@font-face {
+  font-family: 'CinzelDecorative';
+  src: url('../assets/fonts/CinzelDecorative.woff2') format('woff2');
+  font-weight: 400; font-style: normal;
+}
+
+/* ── Variabili palette ───────────────────────────────────────── */
+:root {
+  --crimson:      #7A0B14;
+  --crimson-dark: #4A0008;
+  --gold:         #B8860B;
+  --gold-light:   #D4A830;
+  --midnight:     #111827;
+  --ink:          #1C1C1C;
+  --gray-dark:    #3D3D3D;
+  --gray-mid:     #6B6B6B;
+  --gray-light:   #AAAAAA;
+  --parchment:    #F7F2EA;
+  --parchment-2:  #EDE5D8;
+  --white:        #FFFFFF;
+
+  /* Box backgrounds */
+  --box-warn:     #FFF8E8;
+  --box-info:     #EEF4FF;
+  --box-tip:      #EDFDED;
+  --box-danger:   #FFE8E8;
+  --box-example:  #F3EEFF;
+  --box-rule:     #FFF0F5;
+  --box-avalon:   #EEF4FF;
+  --box-umbra:    #F3EEFF;
+  --box-ife:      #EDFDED;
+  --box-mictlan:  #EEF0FF;
+
+  /* Box accent borders */
+  --acc-warn:     #C8901A;
+  --acc-info:     #1A3A6A;
+  --acc-tip:      #1A5E1A;
+  --acc-danger:   #7A0B14;
+  --acc-example:  #4A1A7A;
+  --acc-rule:     #7A0B14;
+  --acc-avalon:   #1A3A6A;
+  --acc-umbra:    #4A1A7A;
+  --acc-ife:      #1A5E1A;
+  --acc-mictlan:  #0A1A4A;
+}
+
+/* ── Pagina A5 ───────────────────────────────────────────────── */
+@page {
+  size: A5;
+  margin: 14mm 13mm 16mm 13mm;
+
+  @top-center {
+    content: string(chapter-title);
+    font-family: 'Cinzel', serif;
+    font-size: 7pt;
+    color: var(--gray-mid);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-bottom: 0.4pt solid var(--gray-light);
+    padding-bottom: 2mm;
+  }
+
+  @bottom-center {
+    content: counter(page);
+    font-family: 'EBGaramond', serif;
+    font-size: 8pt;
+    color: var(--crimson);
+    font-weight: 700;
+  }
+}
+
+@page :first {
+  margin: 0;
+  @top-center { content: none; }
+  @bottom-center { content: none; }
+}
+
+/* ── Reset base ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 10pt; }
+
+body {
+  font-family: 'EBGaramond', 'Liberation Serif', serif;
+  font-size: 10pt;
+  line-height: 1.52;
+  color: var(--ink);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ── String per header corrente ─────────────────────────────── */
+.chapter-title-marker {
+  string-set: chapter-title content();
+  display: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   COVER PAGE
+   ═══════════════════════════════════════════════════════════════ */
+.cover-page {
+  page: cover;
+  width: 148mm;
+  height: 210mm;
+  background: var(--midnight);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  page-break-after: always;
+  padding: 20mm 16mm;
+  position: relative;
+}
+
+@page cover {
+  margin: 0;
+  @top-center { content: none; }
+  @bottom-center { content: none; }
+}
+
+.cover-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 7pt;
+  letter-spacing: 0.3em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: 6mm;
+  text-align: center;
+}
+
+.cover-title {
+  font-family: 'CinzelDecorative', 'Cinzel', serif;
+  font-size: 28pt;
+  font-weight: 400;
+  color: var(--white);
+  text-align: center;
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+  margin-bottom: 3mm;
+}
+
+.cover-version {
+  font-family: 'Cinzel', serif;
+  font-size: 11pt;
+  color: var(--gold);
+  text-align: center;
+  letter-spacing: 0.2em;
+  margin-bottom: 8mm;
+}
+
+.cover-rule {
+  width: 60mm;
+  height: 0.5pt;
+  background: var(--gold);
+  margin: 0 auto 8mm;
+}
+
+.cover-subtitle {
+  font-family: 'EBGaramond', serif;
+  font-size: 10pt;
+  font-style: italic;
+  color: var(--parchment-2);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.cover-tagline {
+  font-family: 'Cinzel', serif;
+  font-size: 7pt;
+  letter-spacing: 0.2em;
+  color: var(--gray-mid);
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10mm;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PAGINA BIANCA + TOC
+   ═══════════════════════════════════════════════════════════════ */
+.blank-page {
+  page-break-after: always;
+  height: 182mm; /* A5 - margins */
+}
+
+.toc-page {
+  page-break-after: always;
+  columns: 1;
+}
+
+.toc-page h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 16pt;
+  color: var(--crimson);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 2pt solid var(--crimson);
+  padding-bottom: 3mm;
+  margin-bottom: 5mm;
+}
+
+.toc-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: 'EBGaramond', serif;
+  font-size: 9.5pt;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.toc-entry::after {
+  content: leader('.');
+  color: var(--gray-light);
+  flex: 1;
+  margin: 0 2mm;
+}
+
+.toc-entry .toc-page-num {
+  color: var(--crimson);
+  font-weight: 700;
+  min-width: 8mm;
+  text-align: right;
+}
+
+.toc-part {
+  font-family: 'Cinzel', serif;
+  font-size: 8pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  margin-top: 4mm;
+  margin-bottom: 1mm;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   INTESTAZIONE CAPITOLO (1 colonna, sfondo scuro)
+   ═══════════════════════════════════════════════════════════════ */
+.chapter-header {
+  background: var(--midnight);
+  padding: 8mm 0 6mm;
+  margin-left: -13mm;
+  margin-right: -13mm;
+  padding-left: 13mm;
+  padding-right: 13mm;
+  page-break-after: avoid;
+  column-span: all;
+}
+
+.chapter-part-label {
+  font-family: 'Cinzel', serif;
+  font-size: 6.5pt;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 2mm;
+}
+
+.chapter-number {
+  font-family: 'EBGaramond', serif;
+  font-size: 8pt;
+  font-style: italic;
+  color: var(--gray-light);
+  margin-bottom: 1.5mm;
+}
+
+.chapter-title {
+  font-family: 'Cinzel', serif;
+  font-size: 18pt;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+  border-bottom: 1.5pt solid var(--gold);
+  padding-bottom: 3mm;
+  margin-bottom: 0;
+  page-break-after: avoid;
+}
+
+.chapter-epigraph {
+  font-family: 'EBGaramond', serif;
+  font-size: 9pt;
+  font-style: italic;
+  color: var(--parchment-2);
+  text-align: center;
+  margin-top: 3.5mm;
+  padding: 0 8mm;
+  line-height: 1.5;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LAYOUT DUE COLONNE
+   ═══════════════════════════════════════════════════════════════ */
+.chapter-body {
+  columns: 2;
+  column-gap: 5.5mm;
+  column-rule: 0.3pt solid var(--parchment-2);
+  text-align: justify;
+  orphans: 3;
+  widows: 3;
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+}
+
+/* Tabelle wide e stat block escono dalle colonne */
+.table-wide, .stat-block {
+  column-span: all;
+  break-inside: avoid;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TIPOGRAFIA CORPO
+   ═══════════════════════════════════════════════════════════════ */
+p {
+  font-size: 9.5pt;
+  line-height: 1.54;
+  margin-bottom: 2.5mm;
+  text-align: justify;
+  hanging-punctuation: first last;
+}
+
+/* Prima riga dopo heading senza indent */
+h1 + p, h2 + p, h3 + p, h4 + p,
+.chapter-header + .chapter-body > p:first-child {
+  text-indent: 0;
+}
+
+/* Prima riga dei paragrafi seguenti con indent */
+p + p { text-indent: 3mm; }
+
+strong { font-weight: 700; color: var(--ink); }
+em     { font-style: italic; }
+code   { font-family: 'Liberation Mono', monospace; font-size: 8pt;
+         background: var(--parchment); padding: 0 1.5pt; }
+
+/* ── Headings ────────────────────────────────────────────────── */
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: var(--crimson);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  margin-top: 5mm;
+  margin-bottom: 2.5mm;
+  padding-bottom: 1.5mm;
+  border-bottom: 1.5pt solid var(--crimson);
+  break-after: avoid;
+  column-span: all;
+}
+
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 10.5pt;
+  font-weight: 700;
+  color: var(--midnight);
+  letter-spacing: 0.04em;
+  margin-top: 4mm;
+  margin-bottom: 2mm;
+  break-after: avoid;
+}
+
+h3 {
+  font-family: 'EBGaramond', serif;
+  font-size: 10pt;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--crimson);
+  margin-top: 3mm;
+  margin-bottom: 1.5mm;
+  break-after: avoid;
+}
+
+h4 {
+  font-family: 'EBGaramond', serif;
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: var(--gray-dark);
+  margin-top: 2.5mm;
+  margin-bottom: 1mm;
+  break-after: avoid;
+}
+
+/* ── HR ─────────────────────────────────────────────────────── */
+hr {
+  border: none;
+  border-top: 0.5pt solid var(--parchment-2);
+  margin: 4mm 0;
+}
+
+/* ── Liste ──────────────────────────────────────────────────── */
+ul, ol {
+  margin: 2mm 0 2.5mm 4mm;
+  padding-left: 4mm;
+}
+
+li {
+  font-size: 9.5pt;
+  line-height: 1.5;
+  margin-bottom: 1mm;
+}
+
+ul li::marker { color: var(--crimson); }
+ol li::marker { color: var(--crimson); font-weight: 700; }
+
+/* ═══════════════════════════════════════════════════════════════
+   TABELLE
+   ═══════════════════════════════════════════════════════════════ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 8.5pt;
+  margin: 3mm 0;
+  break-inside: avoid;
+}
+
+thead tr {
+  background: var(--midnight);
+}
+
+thead th {
+  font-family: 'Cinzel', serif;
+  font-size: 7.5pt;
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+  padding: 2mm 2.5mm;
+  letter-spacing: 0.04em;
+  border-top: 1.5pt solid var(--crimson);
+  border-bottom: 1.5pt solid var(--crimson);
+}
+
+tbody tr:nth-child(even) { background: var(--parchment); }
+tbody tr:nth-child(odd)  { background: var(--white); }
+
+tbody td {
+  font-family: 'EBGaramond', serif;
+  font-size: 8.5pt;
+  color: var(--ink);
+  padding: 1.5mm 2.5mm;
+  vertical-align: top;
+  border-bottom: 0.3pt solid var(--parchment-2);
+  line-height: 1.4;
+}
+
+tbody td:first-child { font-weight: 700; }
+
+/* Tabelle wide: span su entrambe le colonne */
+.table-wide { column-span: all; }
+
+/* ═══════════════════════════════════════════════════════════════
+   CALLOUT BOXES
+   ═══════════════════════════════════════════════════════════════ */
+.box {
+  border-radius: 1pt;
+  padding: 3mm 3.5mm;
+  margin: 3mm 0;
+  break-inside: avoid;
+  font-size: 9pt;
+  line-height: 1.48;
+  border-left: 3pt solid;
+}
+
+.box p { margin-bottom: 1.5mm; font-size: 9pt; text-indent: 0 !important; }
+.box p:last-child { margin-bottom: 0; }
+.box-title {
+  font-family: 'Cinzel', serif;
+  font-size: 8.5pt;
+  font-weight: 700;
+  margin-bottom: 1.5mm;
+  display: block;
+}
+
+/* Tipi box */
+.box-warn    { background: var(--box-warn);    border-color: var(--acc-warn);    }
+.box-info    { background: var(--box-info);    border-color: var(--acc-info);    }
+.box-tip     { background: var(--box-tip);     border-color: var(--acc-tip);     }
+.box-danger  { background: var(--box-danger);  border-color: var(--acc-danger);  }
+.box-example { background: var(--box-example); border-color: var(--acc-example); }
+.box-rule    { background: var(--box-rule);    border-color: var(--acc-rule);    }
+.box-casata-avalon  { background: var(--box-avalon);  border-color: var(--acc-avalon);  }
+.box-casata-umbra   { background: var(--box-umbra);   border-color: var(--acc-umbra);   }
+.box-casata-ife     { background: var(--box-ife);     border-color: var(--acc-ife);     }
+.box-casata-mictlan { background: var(--box-mictlan); border-color: var(--acc-mictlan); }
+
+.box-warn    .box-title { color: var(--acc-warn);    }
+.box-info    .box-title { color: var(--acc-info);    }
+.box-tip     .box-title { color: var(--acc-tip);     }
+.box-danger  .box-title { color: var(--acc-danger);  }
+.box-example .box-title { color: var(--acc-example); }
+.box-rule    .box-title { color: var(--acc-rule);    }
+.box-casata-avalon  .box-title { color: var(--acc-avalon);  }
+.box-casata-umbra   .box-title { color: var(--acc-umbra);   }
+.box-casata-ife     .box-title { color: var(--acc-ife);     }
+.box-casata-mictlan .box-title { color: var(--acc-mictlan); }
+
+/* ═══════════════════════════════════════════════════════════════
+   CITAZIONI (:::quote)
+   ═══════════════════════════════════════════════════════════════ */
+blockquote {
+  border-left: 2pt solid var(--gold);
+  padding: 2mm 4mm;
+  margin: 3mm 0;
+  font-style: italic;
+  color: var(--gray-dark);
+  break-inside: avoid;
+}
+
+blockquote p { font-size: 9.5pt; text-indent: 0; }
+
+/* ═══════════════════════════════════════════════════════════════
+   STAT BLOCK (bestiario)
+   ═══════════════════════════════════════════════════════════════ */
+.stat-block {
+  background: var(--midnight);
+  color: var(--white);
+  padding: 3mm 4mm;
+  margin: 4mm 0;
+  break-inside: avoid;
+  column-span: all;
+}
+
+.stat-block .stat-name {
+  font-family: 'Cinzel', serif;
+  font-size: 10pt;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 2mm;
+  letter-spacing: 0.05em;
+}
+
+.stat-block p   { font-size: 8.5pt; color: var(--parchment-2); text-indent: 0; margin-bottom: 1mm; }
+.stat-block td  { color: var(--parchment-2); background: transparent; border-color: #333; }
+.stat-block th  { background: #0A0F1A; color: var(--gold); font-size: 7pt; border-color: #444; }
+.stat-block strong { color: var(--gold-light); }
+
+/* ═══════════════════════════════════════════════════════════════
+   PAGE BREAKS
+   ═══════════════════════════════════════════════════════════════ */
+.page-break  { break-before: page; }
+.col-break   { break-before: column; }
+.avoid-break { break-inside: avoid; }
+
+/* ── Fine foglio stili ───────────────────────────────────────── */

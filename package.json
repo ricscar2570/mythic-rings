@@ -1,0 +1,37 @@
+{
+  "name": "mythic-rings-v3",
+  "version": "3.1.0",
+  "description": "Mythic Rings v3 — Build pipeline for the professional manual",
+  "main": "build/engine.js",
+  "scripts": {
+    "build": "node build/engine.js chapters/ dist/",
+    "build:chapter": "node build/engine.js --chapter",
+    "build:pdf": "node build/pdf-renderer.js chapters/ dist/ && python3 build/pdf-builder.py dist/",
+    "build:all": "python3 scripts/clean_chapters.py && node build/engine.js chapters/ dist/ && node build/pdf-renderer.js chapters/ dist/ && python3 build/pdf-builder.py dist/",
+    "watch": "nodemon --watch chapters --ext md --exec \"node build/engine.js chapters/ dist/\"",
+    "validate": "node scripts/validate.js",
+    "clean": "node scripts/clean_chapters.py 2>/dev/null || python3 scripts/clean_chapters.py",
+    "clean:dry": "python3 scripts/clean_chapters.py --dry-run",
+    "build:html": "node build/pdf-renderer.js chapters/ dist/"
+  },
+  "dependencies": {
+    "@fontsource/cinzel": "^5.2.8",
+    "@fontsource/cinzel-decorative": "^5.2.8",
+    "@fontsource/eb-garamond": "^5.2.7",
+    "chalk": "^4.1.2",
+    "docx": "^8.5.0",
+    "glob": "^10.3.0",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^14.0.0",
+    "markdown-it-attrs": "^4.2.0",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-table-of-contents": "^0.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
