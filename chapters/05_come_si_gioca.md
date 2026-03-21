@@ -1119,10 +1119,3 @@ che definiscono il vocabolario d'azione di ogni Guardiano, e il
 Sistema Poteri con tutti i 60 poteri delle quattro Casate.
 :::
 
-## MYTHIC RINGS
-
-Versione 3.0
-
-## PARTE IV
-
-Le 12 Mosse Base e Sistema Poteri
