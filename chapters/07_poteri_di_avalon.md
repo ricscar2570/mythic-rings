@@ -4,7 +4,7 @@ chapter: 7
 part: "Parte IV — Le Quattro Casate"
 epigraph: "La luce non illumina solo la strada. Illumina anche chi ti segue."
 status: complete
-version: 3.1
+version: 3.2
 ---
 
 ## Poteri di Avalon — La Luce Indomabile
@@ -154,7 +154,7 @@ Purifichi un bersaglio da qualsiasi contaminazione oscura: maledizioni, possessi
 **7-9** Purificazione parziale: rimuovi 1 contaminazione a scelta, le altre restano.
 **6-** Purificazione fallisce: nessun effetto, 5 Stress sprecati.
 
-*Umbra a Corruzione 10: richiede 10+ + sacrificio artefatto leggendario. Possessione maggiore (LS 8+): richiede 10+ obbligatorio.*
+*Umbra a Corruzione 7+ con poteri già costosi (penalità progressiva attiva): considera di aggiungere un secondo Guardiano al rituale. Umbra in Trasformazione imminente (Corruzione 7): richiede 10+ obbligatorio + sacrificio artefatto leggendario. Possessione maggiore (LS 8+): richiede 10+ obbligatorio.*
 :::
 
 :::box[Giudizio Divino]{type=casata_avalon}

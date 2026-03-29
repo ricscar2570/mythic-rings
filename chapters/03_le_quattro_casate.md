@@ -677,8 +677,7 @@ debolezza, sangue dal naso, tosse, svenimenti nei casi estremi. È un
 sacrificio letterale e volontario. I Mictlan lo accettano con la stessa
 serenità con cui accettano la morte: fa parte del prezzo.
 
-I Mictlan iniziano con più PF degli altri Guardiani: **PF = 24 + (FOR ×
-2)** invece di 20 + (FOR × 2). Inoltre, i costi dei poteri sono stati
+I Mictlan iniziano con più PF degli altri Guardiani: **PF = 28 + (FOR × 1)** invece di 20 + (FOR × 2) per le altre Casate. La formula è stata aggiornata nella v3.2 per ridurre la dipendenza obbligatoria da FOR: il floor di base è più alto (+28 vs +24 precedente), ma il moltiplicatore è dimezzato. Inoltre, i costi dei poteri sono stati
 dimezzati rispetto alle versioni precedenti per allineare il rischio con
 le altre Casate.
 

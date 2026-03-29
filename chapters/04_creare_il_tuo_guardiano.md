@@ -6,7 +6,7 @@ section: "Il Mondo di Mythic Rings"
 epigraph: "Non sei chi eri prima dell'Anello. Non sei ancora chi diventerai."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## Creare il Tuo Guardiano
@@ -178,7 +178,7 @@ muscoli - è carburante.
 **PF Iniziali = 20 + (FOR × 2)** per Avalon, Umbra e Ife. Esempio: FOR
 +1 → PF = 20 + 2 = 22.
 
-**PF Iniziali Mictlan = 24 + (FOR × 2)**. I Mictlan hanno un bonus di +4
+**PF Iniziali Mictlan = 28 + (FOR × 1)**. I Mictlan hanno un bonus di +4 sul floor di base rispetto alle altre Casate, ma il moltiplicatore di FOR è dimezzato: questo riduce la dipendenza obbligatoria da FOR e garantisce maggiore PF a baseline anche con caratteristica fisica bassa
 PF che riflette la loro connessione con il confine tra vita e morte.
 Sono più resistenti perché i loro poteri consumano la loro stessa vita.
 Esempio: Mictlan con FOR +1 → PF = 24 + 2 = 26.

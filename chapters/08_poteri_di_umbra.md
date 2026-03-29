@@ -4,7 +4,7 @@ chapter: 8
 part: "Parte IV — Le Quattro Casate"
 epigraph: "Le ombre non mentono. Mostrano solo ciò che la luce non vuole vedere."
 status: complete
-version: 3.1
+version: 3.2
 ---
 
 ## Poteri di Umbra — L'Abisso che Sussurra
@@ -16,7 +16,14 @@ Ombre, inganno, infiltrazione, controllo. Gli Umbra sono fantasmi urbani, manipo
 **Caratteristica Poteri:** +FAT.
 
 :::box[Regola v3.1 — Corruzione Umbra]{type=danger}
-I poteri **L1 sono gratuiti** (nessun costo Corruzione). Da L2 in su il costo è indicato nel box del potere. Con **Corruzione 7+**, i poteri che costano Corruzione sono **bloccati** — solo i poteri L1 rimangono disponibili. La Trasformazione a Corruzione 8 è automatica e immediata.
+I poteri **L1 sono sempre gratuiti** (nessun costo Corruzione). Da L2 in su il costo è indicato nel box del potere.
+
+**Penalità Progressiva Corruzione** *(v3.2)*:
+- **Corruzione 6:** I poteri L3+ costano +1 Corruzione aggiuntiva.
+- **Corruzione 7:** I poteri L2+ costano +1 Corruzione aggiuntiva. I poteri L1 restano al costo normale.
+- **Corruzione 8 — Trasformazione:** Automatica e immediata. Il personaggio è perduto.
+
+*L'Umbra non viene bloccata — viene resa più costosa man mano che si avvicina al limite. Ogni uso è una scelta drammatica consapevole.*
 
 Per ridurre la Corruzione: vedi Capitolo 11 (Riposo Vigile, Rituale Purificazione, Atto di Redenzione).
 :::

@@ -6,15 +6,22 @@ section: "Regole Base"
 epigraph: "Le regole sono semplici. La vita è complessa."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 :::box[Aggiornamenti v3.1  -  Regole Corrette dal Chaos Testing]{type=danger}
 Le seguenti regole sono state chiarite in v3.1 dopo 300.000 sessioni di chaos testing:
 
-**Stress Overflow:** A Stress 10 i poteri sono BLOCCATI. Non puoi usare nessun potere che costi Stress finché non scendi sotto 8. Il personaggio perde 1 azione per round finché il Burnout non si risolve.
+**Stress Overflow — Penalità Progressiva** *(v3.2)*
+- **Stress 8-9:** I poteri costano +1 risorsa aggiuntiva. La magia è instabile.
+- **Stress 10 — Burnout:** I poteri sono SOSPESI (non bloccati). Puoi ancora usarli, ma ogni attivazione costa il doppio E richiede un tiro su Sfidare Pericolo +FAT: su 6- il potere esplode (danno 1d6 al Guardiano, scena interrotta). Il personaggio è chiaramente al limite — usarlo è una scelta drammatica consapevole, non un muro. Finché lo Stress rimane a 10, non recuperi PF naturalmente.
 
-**Corruzione Overflow:** Con Corruzione 7+, non puoi usare poteri che costano Corruzione. Solo i poteri L1 gratuiti restano disponibili. La Trasformazione a 8 è automatica e immediata  -  non aspettare fine scena.
+**Corruzione Overflow — Penalità Progressiva** *(v3.2)*
+- **Corruzione 6:** I poteri L3+ costano +1 Corruzione aggiuntiva.
+- **Corruzione 7:** I poteri L2+ costano +1 Corruzione aggiuntiva. I poteri L1 restano al costo normale.
+- **Corruzione 8 — Trasformazione:** Automatica e immediata. Non aspettare fine scena. Il giocatore perde il controllo del personaggio.
+
+*Rationale design: in un sistema PbtA i personaggi devono poter agire anche al limite — il dramma nasce da scelte rischiose, non da blocchi totali. La penalità progressiva mantiene la tensione senza rendere il personaggio passivo.*
 
 **Resurrezione Limite:** Un personaggio può essere ressurrezzato al massimo una volta per sessione. La seconda morte nella stessa sessione è definitiva.
 :::
@@ -355,7 +362,7 @@ quasi schivato, l'adrenalina che crolla, la paura che ti paralizza un
 istante. Solo quando arrivi a 0 PF subisci una ferita vera,
 potenzialmente fatale.
 
-**PF Iniziali:** 20 + (FOR × 2) per Avalon, Umbra e Ife. 24 + (FOR × 2)
+**PF Iniziali:** 20 + (FOR × 2) per Avalon, Umbra e Ife. 28 + (FOR × 1)
 per Mictlan.
 
 ## Subire Danno
@@ -403,11 +410,19 @@ rompere i Legami.
 
 ## Quando Si Applica il Bonus Legame
 
-Il bonus del Legame si applica quando sono vere tutte queste condizioni:
-il PNG è direttamente coinvolto nell'azione, stai agendo per, con o
-contro quel PNG, la situazione ha uno stake emotivo rilevante per la
-relazione, e il Tipo del Legame corrisponde all'azione (Protettore
-quando difendi, Confidente quando ti riprendi, eccetera).
+Il bonus del Legame si applica quando sono vere tutte queste condizioni: il PNG è direttamente coinvolto nell'azione, stai agendo per, con o contro quel PNG, la situazione ha uno stake emotivo rilevante per la relazione, e il Tipo del Legame corrisponde all'azione.
+
+**NON si applica quando:** il PNG non ha nulla a che fare con la situazione, l'azione è generica, o la connessione emotiva non è rilevante.
+
+**Tetto meccanico *(v3.2)*:** Il bonus Legame applicabile a un singolo tiro è **massimo +2**, indipendentemente dal livello del Legame. Questo mantiene la tensione del 7-9 anche con relazioni profonde.
+
+Il livello L3 di un Legame non viene "sprecato" — conferisce accesso a benefici narrativi esclusivi (vedi sotto) e al bonus morale 1/sessione, ma non aumenta il bonus meccanico oltre +2.
+
+| Livello Legame | Bonus meccanico (tiro) | Bonus narrativo |
+|---|---|---|
+| L1 — Conoscente | +1 | Accesso, informazioni |
+| L2 — Alleato | +2 | +1 ongoing in scene dedicate |
+| L3 — Legame Profondo | +2 (cap) | Risorsa morale 1/sess + beneficio esclusivo |
 
 **NON si applica quando:** il PNG non ha nulla a che fare con la
 situazione, l'azione è generica (combatti un demone random, il PNG non è
@@ -448,14 +463,16 @@ Legami profondi (L2--L3) valgono più di dieci superficiali.
 
 ## La Mossa Riprendersi
 
-:::box[Riprendersi (aggiornata)]{type=info}
-**Trigger:** Quando ti prendi un momento per respirare, curare le
-ferite minori e ritrovare la calma.
-**Tira +FOR.** Se un PNG con cui hai un Legame è presente e ti
-assiste, +1 al tiro.
+:::box[Riprendersi (v3.2)]{type=info}
+**Trigger:** Quando ti prendi almeno 10 minuti ininterrotti in una location relativamente sicura per respirare, curare ferite minori, ritrovare la calma.
+
+**Condizione di location:** Il Custode deve confermare che la location è "relativamente sicura". In combattimento attivo o con nemici vicini: non è attivabile. In zona controllata ma non ideale (es. vicolo con pericolo potenziale): il Custode può imporre -1 al tiro.
+
+**Tira +FOR.** Se un PNG con cui hai un Legame L2+ è presente e ti assiste attivamente (non solo "è nella stessa stanza"): +1 al tiro. Questo bonus si applica una sola volta per sessione per PNG.
+
 **10+:** Recuperi 1d6 PF e -1 Stress.
-**7--9:** Scegli uno: recuperi 1d4 PF OPPURE -1 Stress.
-**6--:** Non riesci a rilassarti. Il Custode fa una mossa morbida: un
+**7-9:** Scegli uno: recuperi 1d4 PF OPPURE -1 Stress.
+**6-:** Non riesci a rilassarti. Il Custode fa una mossa morbida: un
 rumore, un ricordo, un'urgenza.
 :::
 
@@ -558,18 +575,21 @@ ogni ora oltre la prima).
 
 ## Ridurre Corruzione
 
-**Atto di Redenzione:** L'Umbra può ridurre la Corruzione di 1 punto
-compiendo un atto significativamente altruista che contrasta
-direttamente la natura oscura dell'ombra. Proteggere un innocente a
-rischio personale, rinunciare a un vantaggio ottenuto con l'inganno,
-confessare una verità dolorosa. Il Custode conferma se l'atto qualifica.
-Massimo 1 Atto di Redenzione per sessione.
+Esistono **quattro percorsi** per ridurre la Corruzione Umbra — bilanciati tra accessibilità e costo narrativo:
 
-**Rituale di Purificazione:** Richiede un Guardiano Avalon L3+ o Ife
-L4+. Dura 1 ora, costa 3 Stress a chi lo esegue. Risultato: -1
-Corruzione.
+**1. Atto di Redenzione** *(1/sessione, -1 Corruzione)*
+Compiere un atto significativamente altruista che contrasta la natura oscura dell'ombra: proteggere un innocente a rischio personale, rinunciare a un vantaggio ottenuto con l'inganno, confessare una verità dolorosa. Il Custode conferma se l'atto qualifica. Massimo 1 per sessione.
 
-**Importante:** La Corruzione è quasi permanente. A differenza dello
+**2. Riposo Vigile** *(1/sessione, -1 Corruzione)*
+L'Umbra trascorre un'intera sessione senza usare poteri a pagamento (L2+). Alla fine della sessione, se la condizione è stata rispettata, la Corruzione scende di 1. Non richiede tiro. Questo percorso è sempre disponibile ma ha un costo tattico reale.
+
+**3. Rituale di Purificazione** *(-1 o -2 Corruzione, costo esterno)*
+Richiede un Guardiano Avalon L3+ o Ife L4+. Dura 1 ora. Costo: **2 Stress** a chi lo esegue (ridotto dalla v3.1). Risultato: -1 Corruzione. Con un 10+ su Usare Potere: -2 Corruzione.
+
+**4. Atto di Redenzione Profondo** *(raro, -2 o -3 Corruzione)*
+Un sacrificio narrativo maggiore: salvare una vita a rischio della propria, rivelare pubblicamente un segreto che costa caro, abbandonare un vantaggio fondamentale. Il Custode lo propone, il giocatore lo accetta. Rimuove 2-3 Corruzione. Non è un percorso "attivabile" — emerge dalla fiction.
+
+**Importante:** La Corruzione non è permanente ma è *lenta* da ridurre. A differenza dello
 Stress, il riposo non la riduce. L'Umbra vive con il peso del proprio
 potere come arco narrativo lungo - non come punizione meccanica.
 

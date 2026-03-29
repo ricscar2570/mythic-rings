@@ -6,7 +6,7 @@ section: "Milano Mitica"
 epigraph: "Milano è costruita sopra se stessa. Strato su strato, segreto su segreto."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## La Milano Sotterranea
@@ -89,3 +89,24 @@ morti, troppi spiriti), la Stazione Centrale nelle ore notturne (portale
 dimensionale instabile), i tunnel della metropolitana (specialmente la
 linea M2 tra Loreto e Piola, costruita sopra un antico cimitero della
 peste del 1630).
+
+---
+
+## Nexus Secondari — Decentralizzare Milano
+
+Il Nexus del Duomo è il centro del sistema magico, ma non è l'unico nodo di potere. Milano ha **cinque Nexus Secondari** — punti dove le Linee Ley si incrociano o si concentrano abbastanza da creare effetti magici locali permanenti. Questi nodi rendono ogni quartiere narrativamente autonomo.
+
+| Nexus | Quartiere | Tipo di Energia | Effetto Meccanico Locale |
+|---|---|---|---|
+| Colonne di San Lorenzo | Porta Ticinese | Protezione antica, confine | Il Velo è più spesso: +1 ai tiri per nascondere eventi magici in zona |
+| Cimitero Monumentale | Monumentale | Morte, spiriti, confine | I Mictlan recuperano +1d4 PF aggiuntivi da Resilienza della Soglia in questa area |
+| Castello Sforzesco (Segrete) | Sempione | Natura primordiale, antico | Gli Ife possono usare Crescita Rapida senza terreno esistente — il muschio delle fondamenta basta |
+| Bosco Verticale | Isola | Vita artificiale, tecnologia magica | Tutti i poteri di guarigione (Avalon e Ife) recuperano +1 PF aggiuntivo per tiro |
+| Naviglio Grande (nodo sotterraneo) | Navigli | Ombra mobile, transizione | Gli Umbra riducono di 1 il costo Corruzione dei poteri di movimento (Passo Ombra, Portale) |
+
+**Regola del Nexus Secondario:** Un PG che si trova in un Nexus Secondario durante un Downtime può spendere l'attività "Meditazione" per ottenere il bonus specifico del nodo per l'intera sessione successiva — invece del normale -1 Stress.
+
+:::box[Consiglio per il Custode — Distribuire le Missioni]{type=tip}
+Usate i Nexus Secondari per ancorare le missioni ai quartieri specifici. Un problema al Cimitero riguarda i Mictlan. Una perturbazione al Bosco Verticale chiama gli Ife. Le Colonne sono territorio di tutti ma sentinelle Avalon ci pattugliano. Questo evita il "torna al Duomo" come soluzione di default.
+:::
+

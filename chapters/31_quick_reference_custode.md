@@ -3,7 +3,7 @@ title: "Quick Reference Custode"
 chapter: 31
 part: "Parte VIII — Riferimenti"
 status: complete
-version: 3.1
+version: 3.2
 ---
 
 ## Quick Reference — Custode
@@ -40,7 +40,7 @@ Attiva la Casata • (+ qualsiasi mossa che segua dalla fiction)
 | Difficile | Boss + 2-3 minion | = livello +4 | 6-8 |
 | Mortale | Boss + rinforzi | = livello +6 | 8+ |
 
-**Escalation Die:** Round 4: +1, Round 5: +2, Round 6+: +3 a Attaccare.
+**Escalation Die v3.2:** R3: +1 tiro | R4: +1 tiro +1 danno | R5: +1 tiro +1d4 danno | R6+: +2 tiro +1d6 danno.
 
 **Boss:** Armatura max 2. **Gruppi piccoli:** 2 PG -40% nemici, 3 PG -25%.
 :::
@@ -59,6 +59,18 @@ Complicazione (30 min) → Climax (60 min) → Risoluzione + XP (15 min)
 **+1:** fine sessione senza azione / 6- su tiro collegato.
 
 **-1:** missione riuscita. **-2:** colpo decisivo alla minaccia principale.
+:::
+
+:::box[VELO TRACKER]{type=warn}
+Clock globale e permanente. Misura quanto i civili sospettano della magia.
+
+**0→3:** Voci. **3→6:** Sospetto (-1 tiri sociali). **6→9:** Crisi (no poteri pubblici). **9→12:** Velo Squarciato.
+
+**+1/sessione** se: poteri visibili in pubblico, danni materiali evidenti, creature viste da civili.
+
+**-1** per missione di copertura riuscita. Non scende mai sotto la soglia già raggiunta.
+
+*Doom Clock 9+ → automatico +1 Velo Tracker.*
 :::
 
 :::box[SAFETY TOOLS]{type=tip}
@@ -82,15 +94,15 @@ Complicazione (30 min) → Climax (60 min) → Risoluzione + XP (15 min)
 **5 XP = Level Up.** Scelte: +1 Caratteristica (max +3) • Nuovo Potere • +5 PF • Nuovo Legame L1 • Talento Speciale • 1 Mossa Avanzata (Liv. 3+).
 :::
 
-:::box[SCALE RISORSE]{type=info}
-| Casata | Risorsa | Limite | Conseguenza |
+:::box[SCALE RISORSE v3.2]{type=info}
+| Casata | Risorsa | Penalità parziale | Limite |
 |---|---|---|---|
-| Avalon | Stress | 0-10 | Burnout a 10 |
-| Umbra | Corruzione | 0-8 | Trasformazione a 8 |
-| Ife | Stress | 0-10 | Burnout a 10 |
-| Mictlan | PF | 0-max | Morte a 0 |
+| Avalon | Stress | S8-9: poteri +1 costo | S10: doppio costo + Sfidare Pericolo |
+| Umbra | Corruzione | C6: L3+ +1 Corr. / C7: L2+ +1 Corr. | C8: Trasformazione |
+| Ife | Stress | S8-9: poteri +1 costo | S10: doppio costo + Sfidare Pericolo |
+| Mictlan | PF | — | PF 0: Ultimo Respiro |
 
-**Regola v3.1:** A Stress 10 o Corruzione 7+, poteri a pagamento bloccati.
+**Mictlan PF = 28 + (FOR × 1).** Recupera 1d4 PF post-scontro (Resilienza della Soglia).
 :::
 
 :::box[LEGAMI — SCALA]{type=info}

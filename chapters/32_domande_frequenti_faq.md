@@ -6,7 +6,7 @@ section: "Appendici"
 epigraph: "Nessuna domanda è stupida. Solo alcune risposte lo sono."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## Domande Frequenti (FAQ)
@@ -18,7 +18,7 @@ narrativo traumatico può permettere una 'conversione' con il consenso
 del Custode + arco personale di 3-5 sessioni. Il PG perde tutti i poteri
 della vecchia Casata e inizia da 0 con la nuova.
 
-## 2. Cosa succede a Corruzione 10?
+## 2. Cosa succede a Corruzione 8 (Trasformazione)?
 
 Trasformazione irreversibile in creatura ombra - il giocatore perde il
 controllo del PG, che diventa un PNG antagonista. Va creato un nuovo
@@ -103,3 +103,28 @@ reputazione con un'altra. Determina accesso a risorse e alleanze.
 Sì, con azioni dei PG: -1 per missione riuscita, -2 per colpo decisivo.
 Non scende mai sotto 0. Ma se raggiunge 12, la catastrofe avviene e il
 mondo cambia permanentemente.
+
+---
+
+## Domande Frequenti — Aggiornamenti v3.2
+
+**16. Come funziona la penalità progressiva invece del blocco?**
+
+A Stress 8-9 i poteri costano 1 risorsa in più. A Stress 10 (Burnout) puoi ancora usare i poteri, ma il costo è raddoppiato e devi Sfidare Pericolo +FAT: su 6- il potere esplode (1d6 danno a te, scena interrotta). Per la Corruzione Umbra: a 6 i poteri L3+ costano +1, a 7 i poteri L2+ costano +1. A 8 è Trasformazione automatica. Non c'è più un blocco totale — c'è sempre una scelta drammatica disponibile.
+
+**17. Perché la formula PF del Mictlan è cambiata?**
+
+La v3.1 usava `24 + (FOR × 2)`, che creava una pressione implicita fortissima ad investire in FOR. Con `28 + (FOR × 1)` il floor garantito è più alto (+28 invece di +24 con FOR 0), ma il moltiplicatore è dimezzato. Un Mictlan con FOR -1 ora ha 27 PF invece di 22 — abbastanza per usare più poteri senza rischio costante di Ultimo Respiro. Un Mictlan con FOR +3 ha 31 PF invece di 30 — praticamente invariato per chi già investiva in FOR.
+
+**18. Il bonus Legame è sempre +2 massimo?**
+
+Per i tiri meccanici sì — il cap è +2 indipendentemente dal livello del Legame. Un Legame L3 non dà +3 al dado: dà +2 come L2 più i benefici narrativi esclusivi (risorsa morale 1/sessione, accesso speciale, beneficio co-creato con il Custode). Questo mantiene la tensione del 7-9 anche con relazioni profonde.
+
+**19. Cosa sono i Nexus Secondari?**
+
+Cinque punti di potere distribuiti per Milano (Colonne di San Lorenzo, Cimitero Monumentale, Segrete del Castello, Bosco Verticale, Naviglio Grande) con effetti meccanici specifici per quartiere. Riducono la dipendenza narrativa dal Nexus del Duomo e danno a ogni Casata un territorio "di casa" con bonus locali. Vedi Capitolo 11.
+
+**20. Come funziona la nuova curva Escalation Die?**
+
+La progressione inizia al Round 3 (non più al 4) ed è più graduale: R3 +1 tiro, R4 +1 tiro +1 danno fisso, R5 +1 tiro +1d4 danno, R6+ +2 tiro +1d6 danno. Il danno separato dal tiro significa che un 7-9 al Round 5 fa comunque più male di un 10+ al Round 1 — eliminando lo stallo dei round iniziali e la risoluzione improvvisa che caratterizzava la v3.1.
+

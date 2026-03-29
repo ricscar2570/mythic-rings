@@ -4,19 +4,33 @@ chapter: 10
 part: "Parte IV — Le Quattro Casate"
 epigraph: "La morte non è la fine. È una porta. E alcune porte si aprono dall'altro lato."
 status: complete
-version: 3.1
+version: 3.2
 ---
 
 ## Poteri di Mictlan — La Soglia Eterna
 
 Morte, spiriti, confine, transizione. I Mictlan sono psicopompi, medium, guardiani della soglia vita/morte. I loro poteri attraversano il Velo, evocano i morti, drenano la vita.
 
-**Risorsa:** Punti Ferita. UNICA Casata che paga con la vita propria. **PF iniziali = 24 + (FOR × 2)** (bonus +4 rispetto alle altre Casate).
+**Risorsa:** Punti Ferita. UNICA Casata che paga con la vita propria. **PF iniziali = 28 + (FOR × 1)** (bonus +4 rispetto alle altre Casate).
 
 **Caratteristica Poteri:** +FAT.
 
 :::box[Sangue Tenace — Potere Passivo Gratuito]{type=casata_mictlan}
 Quando il costo in PF di un potere ti porterebbe sotto il **40% dei PF massimi**, puoi scegliere di convertire metà del costo PF (arrotondato per difetto, minimo 1) in **+2 Stress**. Dichiaralo prima di pagare il costo. Questo potere è sempre attivo, nessun tiro richiesto.
+:::
+
+:::box[Resilienza della Soglia — Potere Passivo Gratuito]{type=casata_mictlan}
+**Progettato per campagne ad alto combattimento senza guaritore.**
+
+Il Mictlan esiste sul confine tra vita e morte: impara a drenare energia anche dallo sforzo del combattimento stesso.
+
+**Attivazione:** Alla fine di ogni scontro in cui hai ucciso o incapacitato almeno 1 avversario, recupera automaticamente **1d4 PF** senza tiro. Se nello scontro hai usato Drain (Livello 2), recupera invece **1d6 PF**.
+
+**Limite di sessione:** Massimo **3 attivazioni per sessione**. Questo previene che il potere diventi banale nei party composti da soli Mictlan o in campagne ad altissimo volume di combattimento.
+
+**Limite di contesto:** Non funziona se nella scena è presente un guaritore attivo (Avalon o Ife) — il corpo impara a cavarsela da solo solo quando non ha alternative.
+
+**Controindicazione narrativa:** il Custode può segnalare che un uso frequente di questa meccanica rende il personaggio progressivamente più a suo agio con la morte altrui — utile come spunto per l'arco personale.
 :::
 
 :::box[Regola v3.1 — Costi Mictlan Corretti]{type=danger}
@@ -97,6 +111,8 @@ Succhi energia vitale. I PF drenati ti curano (non superi PF massimi). Solo su c
 **6-** Drain fallisce: nessun effetto, Custode fa mossa.
 
 *Usi accettabili: combattimento, animali consenzienti, trasferire la tua vita a un alleato. Usi problematici: civili inconsapevoli (conseguenze narrative gravi).*
+
+*Sinergia con Resilienza della Soglia: se usi Drain durante uno scontro in cui poi sconfiggi un avversario, il recupero post-combattimento sale a 1d6 PF invece di 1d4.*
 :::
 
 ## Livello 3 — Veterano
