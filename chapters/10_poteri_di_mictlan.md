@@ -20,6 +20,18 @@ Morte, spiriti, confine, transizione. I Mictlan sono psicopompi, medium, guardia
 Quando il costo in PF di un potere ti porterebbe sotto il **40% dei PF massimi**, puoi scegliere di convertire metà del costo PF (arrotondato per difetto, minimo 1) in **+2 Stress**. Dichiaralo prima di pagare il costo. Questo potere è sempre attivo, nessun tiro richiesto.
 :::
 
+:::box[Soglia 40%: già calcolata, non si tira mai a tavolo]{type=casata_mictlan}
+La soglia del 40% dipende solo dalla FOR, che non cambia durante uno scontro. Calcolala una volta in creazione e **segna quella casella sul tracker dei PF**: in gioco guardi solo dove sta il segnalino, senza aritmetica. La tabella qui sotto ti dà il valore già pronto.
+:::
+
+| FOR | PF massimi | Soglia (segna questa casella) |
+|---|---|---|
+| -1 | 27 | 11 |
+| 0 | 28 | 11 |
+| +1 | 29 | 12 |
+| +2 | 30 | 12 |
+| +3 | 31 | 12 |
+
 :::box[Resilienza della Soglia: Potere Passivo Gratuito]{type=casata_mictlan}
 **Progettato per campagne ad alto combattimento senza guaritore.**
 

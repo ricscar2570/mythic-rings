@@ -55,9 +55,17 @@ version: 3.2
 
 :::box[POTERI - COSTI]{type=info}
 **Avalon:** +Stress (max 10). Tira +CAR.
-**Umbra:** +Corruzione (max 10). Tira +FAT.
+**Umbra:** +Corruzione (max 8). Tira +FAT.
 **Ife:** +Stress (max 10). Tira +FAT.
 **Mictlan:** -PF (variabile). Tira +FAT.
+:::
+
+:::box[COSA TRACCI A TAVOLO (per Casata)]{type=tip}
+Nessun giocatore segue tutti i tracker del gioco: i Clock globali (Doom Clock, Velo), la Reputazione delle fazioni e l'Escalation Die sono del Custode. Tu segui solo i tuoi:
+**Avalon / Ife:** PF · Armatura · Stress (0-10) · Punti Fato (0-2)
+**Umbra:** PF · Armatura · Stress (0-10) · Corruzione (0-8) · Punti Fato (0-2)
+**Mictlan:** PF (con la soglia Sangue Tenace già segnata) · Armatura · Stress (0-10) · Punti Fato (0-2)
+Lo Stress è il costo dei poteri per Avalon e Ife; per Umbra il costo è la Corruzione; per Mictlan è la vita (PF). Tutti possono comunque accumulare Stress da fonti narrative.
 :::
 
 :::box[XP & AVANZAMENTO]{type=info}
