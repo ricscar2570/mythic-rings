@@ -388,11 +388,11 @@ function parseTableTokens(tokens, startIdx) {
         currentRow = null;
       }
     }
-    if ((t.type === 'th' || t.type === 'td') && currentRow !== null) {
+    if ((t.type === 'th_open' || t.type === 'td_open') && currentRow !== null) {
       const inline = tokens[i + 1];
       const text = inline && inline.type === 'inline'
         ? renderInline(inline.children || []) : '';
-      const align = (t.attrGet('style') || '').replace('text-align:', '').trim() || 'left';
+      const align = ((t.attrGet && t.attrGet('style')) || '').replace('text-align:', '').trim() || 'left';
       currentRow.push({ runs: parseInlineRuns(text), align });
       i++; // salta l'inline
     }

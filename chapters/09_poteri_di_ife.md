@@ -1,13 +1,14 @@
 ---
 title: "Poteri di Ife"
 chapter: 9
-part: "Parte IV — Le Quattro Casate"
+part: "Parte III: Le Quattro Casate"
+section: "Le Quattro Casate"
 epigraph: "La vita non ha inizio né fine. Ha solo trasformazioni."
 status: complete
 version: 3.2
 ---
 
-## Poteri di Ife — Il Ciclo della Vita
+## Poteri di Ife: Il Ciclo della Vita
 
 Vita, natura, trasformazione, equilibrio. Gli Ife sono guaritori del corpo e dell'anima, shapeshifter, custodi del ciclo naturale. I loro poteri curano, trasformano, connettono con il mondo vivente.
 
@@ -17,7 +18,7 @@ Vita, natura, trasformazione, equilibrio. Gli Ife sono guaritori del corpo e del
 
 **Temi:** Guarigione organica, trasformazione, natura urbana, sciami, ciclo vita/morte.
 
-## Livello 1 — Iniziato
+## Livello 1: Iniziato
 
 :::box[Tocco Vitale]{type=casata_ife}
 **【 Livello 1 】**
@@ -58,7 +59,7 @@ Potenzi un senso a livello animale. Scegli 1:
 *Combinare due sensi nella stessa ora richiede 2 Stress. Il senso potenziato può essere sopraffatto da odori/suoni estremi.*
 :::
 
-## Livello 2 — Guardiano
+## Livello 2: Guardiano
 
 :::box[Vigore]{type=casata_ife}
 **【 Livello 2 】**
@@ -100,7 +101,7 @@ La pelle indurisce, assume texture di corteccia. **Armatura +3** (cumula). Resis
 **6-** Corteccia fragile: Armatura +1, cade al primo danno subito.
 :::
 
-## Livello 3 — Veterano
+## Livello 3: Veterano
 
 :::box[Forma Animale]{type=casata_ife}
 **【 Livello 3 】**
@@ -143,7 +144,7 @@ Evochi uno sciame di insetti aggressivi. Oscura visuale (-2 attacco/percezione).
 **6-** Sciame incontrollato: attacca tutti (amici inclusi).
 :::
 
-## Livello 4 — Maestro
+## Livello 4: Maestro
 
 :::box[Furia della Terra]{type=casata_ife}
 **【 Livello 4 】**
@@ -181,7 +182,7 @@ Trasformi in predatore apicale (tigre, grizzly, coccodrillo). **+3 FOR, +2 CUO, 
 **6-** Predatore frenetico: tutti gli effetti ma devi attaccare ogni round o prendere 1d4 danno da istinto soppresso.
 :::
 
-## Livello 5 — Leggenda
+## Livello 5: Leggenda
 
 :::box[Avatar della Vita]{type=casata_ife}
 **【 Livello 5 】**

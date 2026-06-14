@@ -1,7 +1,7 @@
 ---
 title: "Creare il Tuo Guardiano"
 chapter: 4
-part: "Parte I"
+part: "Parte I: Il Mondo di Mythic Rings"
 section: "Il Mondo di Mythic Rings"
 epigraph: "Non sei chi eri prima dell'Anello. Non sei ancora chi diventerai."
 tags: []
@@ -151,6 +151,7 @@ l'esperienza.
 | MEN | Mente | Intelligenza, percezione, memoria, analisi. Usato per investigare, leggere situazioni, ricordare informazioni cruciali. |
 | CAR | Carisma | Fascino, leadership, presenza, persuasione. Usato per convincere, ispirare, manipolare, comandare. Stat primaria Avalon. |
 | FAT | Fato | Fortuna, destino, connessione magica con l'Anello. Usato per canalizzare i poteri della Casata. Stat primaria Umbra, Ife, Mictlan. |
+
 ## Distribuzioni Consigliate per Casata
 
 Queste distribuzioni sono consigli, non obblighi. Ma se è la tua prima
@@ -163,6 +164,7 @@ partita, seguirle ti garantisce un personaggio meccanicamente solido:
 | Umbra | -1 | +1 | +1 | 0 | +2 | FAT per poteri e Leggere le Ombre. CUO per Colpo dall'Ombra e schivare. MEN per investigare. |
 | Ife | 0 | +1 | -1 | +1 | +2 | FAT per poteri e Sentire la Vita. CAR per mediare e relazioni. CUO per situazioni d'emergenza. |
 | Mictlan | +1 | +1 | 0 | -1 | +2 | FAT per poteri e Interrogare i Morti. FOR importante: più PF = più carburante per i poteri. |
+
 :::box[Perché FOR è Importante per Mictlan]{type=warn}
 I Mictlan pagano i poteri in Punti Ferita. FOR determina i PF
 iniziali. Un Mictlan con FOR +1 ha 29 PF (28 + 1), contro i 27 di uno
@@ -196,6 +198,7 @@ Esempio: Mictlan con FOR +1 → PF = 28 + 1 = 29.
 | 0 | 20 | 24 | Nella media. Sopravvivi con cautela. |
 | +1 | 22 | 26 | Solido. Puoi permetterti qualche rischio. |
 | +2 | 24 | 28 | Robusto. Puoi incassare colpi e alimentare poteri. |
+
 ## Risorse Iniziali
 
 
@@ -205,6 +208,7 @@ Esempio: Mictlan con FOR +1 → PF = 28 + 1 = 29.
 | Corruzione | 0 (max 8) | Solo Umbra. Sale usando poteri L2+. Soglie: 3 (Occhi Neri), 5 (Sussurri), 7 (Forma Instabile), 8 (Trasformazione = perdita PG). |
 | Punti Fato | 2 per sessione | Si rigenerano all'inizio di ogni sessione. Usali per Forzare la Fortuna (ritira un dado) o attivare effetti speciali. |
 | Armatura | 0 | Acquisibile con equipaggiamento. Riduce il danno subito. Massimo 3 con equipaggiamento avanzato. |
+
 Scegli **3 poteri di Livello 1** dalla lista della tua Casata
 (dettagliata nel Capitolo dei Poteri). Il Livello 1 rappresenta le
 abilità base: il primo contatto con il Piano della tua Casata, i gesti
@@ -283,6 +287,7 @@ Legame:
 | Rivale | +1 Sfidare | Quando agisci per superare/impressionare questo PNG | Rivalità Costruttiva: ritira un dado (1/sessione) |
 | Mentore | +1 Investigare | Quando cerchi consiglio o conoscenza da questo PNG | Saggezza Antica: auto-successo su Investigare (1/sessione) |
 | Amato | +1 Ultimo Respiro | Sempre (questa persona ti tiene in vita) | Forza dell'Amore: quando a 0 PF, torna a 1d6 PF (1/campagna) |
+
 I Legami possono essere con chiunque: familiari (genitore, fratello,
 partner), amici (compagno di università, collega, vicino), altri Custodi
 (un altro PG o un PNG dell'Organizzazione), o contatti utili (un
@@ -577,5 +582,3 @@ esempi completi e sai come organizzare una Session Zero efficace.
 le mosse, cosa succede con un 10+, un 7--9 e un 6--. Il cuore
 meccanico di Mythic Rings.
 :::
-
-**

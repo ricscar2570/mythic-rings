@@ -1,13 +1,14 @@
 ---
 title: "Poteri di Avalon"
 chapter: 7
-part: "Parte IV — Le Quattro Casate"
+part: "Parte III: Le Quattro Casate"
+section: "Le Quattro Casate"
 epigraph: "La luce non illumina solo la strada. Illumina anche chi ti segue."
 status: complete
 version: 3.2
 ---
 
-## Poteri di Avalon — La Luce Indomabile
+## Poteri di Avalon: La Luce Indomabile
 
 Luce, giustizia, protezione, ispirazione. Gli Avalon sono fari nella notte, guardiani inflessibili, leader carismatici. I loro poteri guariscono, proteggono, purificano e devastano il male con fuoco sacro.
 
@@ -17,7 +18,7 @@ Luce, giustizia, protezione, ispirazione. Gli Avalon sono fari nella notte, guar
 
 **Temi:** Guarigione, scudi, danno radiante, ispirare alleati, rivelare verità, purificare il male.
 
-## Livello 1 — Iniziato
+## Livello 1: Iniziato
 
 :::box[Luce Guida]{type=casata_avalon}
 **【 Livello 1 】**
@@ -55,7 +56,7 @@ Tocchi una creatura vivente, canalizzi energia vitale. Il bersaglio recupera PF.
 **6-** Guarigione fallisce: nessun PF recuperato, 2 Stress sprecati.
 :::
 
-## Livello 2 — Guardiano
+## Livello 2: Guardiano
 
 :::box[Fiamma Purificatrice]{type=casata_avalon}
 **【 Livello 2 】**
@@ -99,7 +100,7 @@ Crei un muro di luce solida dorata (3m × 3m × 10cm). Barriera ha **30 PF, Arma
 *Solo 1 barriera attiva per volta. Ottima per dividere nemici o proteggere civili.*
 :::
 
-## Livello 3 — Veterano
+## Livello 3: Veterano
 
 :::box[Guarigione Maggiore]{type=casata_avalon}
 **【 Livello 3 】**
@@ -141,14 +142,14 @@ Canalizzi luce purissima verso una creatura extra-planare (demone, spirito, elem
 *Termina il combattimento istantaneamente se funziona. Specialità Avalon vs extra-planari.*
 :::
 
-## Livello 4 — Maestro
+## Livello 4: Maestro
 
 :::box[Purificazione Suprema]{type=casata_avalon}
 **【 Livello 4 】**
 
 **Costo:** 5 Stress | **Range:** Tocco | **Durata:** Rituale (1 min concentrazione) | **Tiro:** Usare Potere +CAR
 
-Purifichi un bersaglio da qualsiasi contaminazione oscura: maledizioni, possessioni, corruzione, malattie magiche. Potere chiave Avalon — unico modo affidabile per salvare un Umbra da Corruzione alta.
+Purifichi un bersaglio da qualsiasi contaminazione oscura: maledizioni, possessioni, corruzione, malattie magiche. Potere chiave Avalon, unico modo affidabile per salvare un Umbra da Corruzione alta.
 
 **10+** Purificazione completa: rimuovi TUTTE le contaminazioni.
 **7-9** Purificazione parziale: rimuovi 1 contaminazione a scelta, le altre restano.
@@ -168,7 +169,7 @@ Invochi giudizio divino. Un pilastro di luce dorata scende dal cielo e investe i
 **7-9** 4d8 danno radiante + abbagliato 1d4 round.
 **6-** Custode fa mossa grave.
 
-*Il potere più drammatico di Avalon. Usare raramente — il peso morale è immenso.*
+*Il potere più drammatico di Avalon. Usare raramente, il peso morale è immenso.*
 :::
 
 :::box[Aegis Gloria]{type=casata_avalon}
@@ -185,7 +186,7 @@ Evochi armatura completa di luce solidificata. Copre tutto il corpo, peso zero, 
 *"Boss mode" Avalon. Quando attivi Aegis, tutti sanno: la battaglia è seria.*
 :::
 
-## Livello 5 — Leggenda
+## Livello 5: Leggenda
 
 :::box[Resurrezione]{type=casata_avalon}
 **【 Livello 5 】**

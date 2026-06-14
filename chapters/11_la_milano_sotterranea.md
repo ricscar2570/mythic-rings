@@ -1,7 +1,7 @@
 ---
 title: "La Milano Sotterranea"
 chapter: 11
-part: "Parte IV"
+part: "Parte IV: Milano Mitica"
 section: "Milano Mitica"
 epigraph: "Milano è costruita sopra se stessa. Strato su strato, segreto su segreto."
 tags: []
@@ -11,22 +11,13 @@ version: 3.2
 
 ## La Milano Sotterranea
 
-| *La prima cosa che ogni Guardiano impara è che Milano ha due volti. |
-| C'è la Milano che tutti conoscono - la moda, il Duomo, l'aperitivo |
-| ai Navigli, i grattacieli di Porta Nuova. E poi c'è la Milano Mitica. |
-
 :::quote
-Quella sotto. Quella oltre il Velo.*
-*Le due città coesistono nello stesso spazio, sovrapposte come due
-lucidi su una lavagna luminosa. Un turista vede una crepa nel muro di
-una chiesa. Un Guardiano vede un sigillo antico che tiene chiuso un
-portale. Un pendolare aspetta la metro alle undici di sera. Un
-Guardiano vede lo spettro del minatore che morì scavando quel tunnel
-nel 1959.*
-*Milano Mitica è un organismo. Respira attraverso le Linee Ley, pulsa
-attraverso il Nexus sotto il Duomo, e sussurra attraverso i fantasmi
-che camminano tra i vivi. Ogni quartiere ha una personalità,
-un'affiliazione, e segreti che aspettano solo di essere scoperti.*
+La prima cosa che ogni Guardiano impara è che Milano ha due volti. C'è la Milano che tutti conoscono - la moda, il Duomo, l'aperitivo ai Navigli, i grattacieli di Porta Nuova. E poi c'è la Milano Mitica. Quella sotto. Quella oltre il Velo.
+
+Le due città coesistono nello stesso spazio, sovrapposte come due lucidi su una lavagna luminosa. Un turista vede una crepa nel muro di una chiesa. Un Guardiano vede un sigillo antico che tiene chiuso un portale. Un pendolare aspetta la metro alle undici di sera. Un Guardiano vede lo spettro del minatore che morì scavando quel tunnel nel 1959.
+
+Milano Mitica è un organismo. Respira attraverso le Linee Ley, pulsa attraverso il Nexus sotto il Duomo, e sussurra attraverso i fantasmi che camminano tra i vivi. Ogni quartiere ha una personalità, un'affiliazione, e segreti che aspettano solo di essere scoperti.
+:::
 
 
 Il Nexus del Duomo
@@ -68,6 +59,7 @@ Potere**.
 | Terza (Sud) | Viola | Ombra / Inganno | Navigli → Porta Ticinese → Duomo |
 | Quarta (Ovest) | Grigio | Morte / Transizione | San Siro → City Life → Duomo |
 | Quinta (Centro) | Bianco | Equilibrio / Fato | Verticale - dal cielo al sottosuolo, ancorata al Nexus |
+
 **Linee Ley Corrotte:** Quando una Linea Ley viene contaminata (rituale
 oscuro, morte di massa, squarcio nel Velo), il bonus +1 diventa un
 **malus -1** e la zona attraversata subisce effetti collaterali: incubi
@@ -92,21 +84,21 @@ peste del 1630).
 
 ---
 
-## Nexus Secondari — Decentralizzare Milano
+## Nexus Secondari: Decentralizzare Milano
 
-Il Nexus del Duomo è il centro del sistema magico, ma non è l'unico nodo di potere. Milano ha **cinque Nexus Secondari** — punti dove le Linee Ley si incrociano o si concentrano abbastanza da creare effetti magici locali permanenti. Questi nodi rendono ogni quartiere narrativamente autonomo.
+Il Nexus del Duomo è il centro del sistema magico, ma non è l'unico nodo di potere. Milano ha **cinque Nexus Secondari**, punti dove le Linee Ley si incrociano o si concentrano abbastanza da creare effetti magici locali permanenti. Questi nodi rendono ogni quartiere narrativamente autonomo.
 
 | Nexus | Quartiere | Tipo di Energia | Effetto Meccanico Locale |
 |---|---|---|---|
 | Colonne di San Lorenzo | Porta Ticinese | Protezione antica, confine | Il Velo è più spesso: +1 ai tiri per nascondere eventi magici in zona |
 | Cimitero Monumentale | Monumentale | Morte, spiriti, confine | I Mictlan recuperano +1d4 PF aggiuntivi da Resilienza della Soglia in questa area |
-| Castello Sforzesco (Segrete) | Sempione | Natura primordiale, antico | Gli Ife possono usare Crescita Rapida senza terreno esistente — il muschio delle fondamenta basta |
+| Castello Sforzesco (Segrete) | Sempione | Natura primordiale, antico | Gli Ife possono usare Crescita Rapida senza terreno esistente, il muschio delle fondamenta basta |
 | Bosco Verticale | Isola | Vita artificiale, tecnologia magica | Tutti i poteri di guarigione (Avalon e Ife) recuperano +1 PF aggiuntivo per tiro |
 | Naviglio Grande (nodo sotterraneo) | Navigli | Ombra mobile, transizione | Gli Umbra riducono di 1 il costo Corruzione dei poteri di movimento (Passo Ombra, Portale) |
 
-**Regola del Nexus Secondario:** Un PG che si trova in un Nexus Secondario durante un Downtime può spendere l'attività "Meditazione" per ottenere il bonus specifico del nodo per l'intera sessione successiva — invece del normale -1 Stress.
+**Regola del Nexus Secondario:** Un PG che si trova in un Nexus Secondario durante un Downtime può spendere l'attività "Meditazione" per ottenere il bonus specifico del nodo per l'intera sessione successiva, invece del normale -1 Stress.
 
-:::box[Consiglio per il Custode — Distribuire le Missioni]{type=tip}
+:::box[Consiglio per il Custode: Distribuire le Missioni]{type=tip}
 Usate i Nexus Secondari per ancorare le missioni ai quartieri specifici. Un problema al Cimitero riguarda i Mictlan. Una perturbazione al Bosco Verticale chiama gli Ife. Le Colonne sono territorio di tutti ma sentinelle Avalon ci pattugliano. Questo evita il "torna al Duomo" come soluzione di default.
 :::
 

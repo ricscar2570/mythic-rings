@@ -1,7 +1,7 @@
 ---
 title: "20 Hook per Avventure"
 chapter: 14
-part: "Parte IV"
+part: "Parte IV: Milano Mitica"
 section: "Milano Mitica"
 epigraph: "Ogni storia ha un inizio. Trova il tuo."
 tags: []
@@ -39,15 +39,16 @@ di sfida** suggerito.
 | 18 | Il Consiglio Chiama | Monumentale (Medio) | Il Consiglio dei Morti ha un messaggio per i Custodi: \"Uno dei vostri ci ha raggiunti ieri notte. Non per scelta.\" Un Guardiano attivo è morto senza che nessuno lo sappia. Chi? Come? |
 | 19 | La Quinta Colonna | Brera (Difficile) | Un infiltrato della Fratellanza è tra i Custodi. Non si sa chi sia, ma sta sabotando missioni dall'interno. Il sospetto avvelena il gruppo. I PG devono trovare la talpa prima che sia troppo tardi. |
 | 20 | Il Crepuscolo del Velo | Tutta Milano (Epica) | La Fratellanza ha trovato il modo di squarciare il Velo permanentemente. L'evento è previsto tra 7 giorni. I PG devono scoprire il piano, infiltrarsi, e decidere: salvare il Velo a ogni costo, o lasciare che il mondo scopra la verità? |
+
 *Le strade di Milano ti aspettano.*
 
 *Il Velo nasconde segreti antichi.*
 
 ## *Il tuo Anello brilla nella notte.*
 
-## ⟡ MYTHIC RINGS v3.0 ⟡
+## ⟡ MYTHIC RINGS v3.2 ⟡
 
-PARTE VI
+PARTE V
 
 *Guida per il Custode*
 

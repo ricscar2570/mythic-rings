@@ -1,7 +1,7 @@
 ---
 title: "I Principi del Custode"
 chapter: 16
-part: "Parte V"
+part: "Parte V: Guida per il Custode"
 section: "Guida per il Custode"
 epigraph: "Il Custode non vince quando i PG muoiono. Il Custode vince quando tutti si divertono."
 tags: []

@@ -10,7 +10,7 @@ const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
   PageBreak, AlignmentType, HeadingLevel,
   BorderStyle, WidthType, ShadingType, VerticalAlign, LevelFormat,
-  TableOfContents, LineRuleType,
+  TableOfContents, LineRuleType, SectionType,
   Header, Footer, PageNumber,
 } = require('docx');
 
@@ -69,6 +69,31 @@ function dividerPara(color = COLORS.crimson) {
 // ── Heading ─────────────────────────────────────────────
 function renderHeading(node) {
   const level = node.level;
+
+  // Fregi decorativi di fine parte: NON sono titoli di sezione e non devono
+  // entrare nel TOC. Riconosciuti da: contengono "⟡" oppure sono interamente
+  // in corsivo. Resi come paragrafo centrato stilizzato (senza stile Heading).
+  const txt = node.runs.map(r => r.text || '').join('');
+  const hasOrnament = txt.includes('\u27E1');
+  const allItalic = node.runs.length > 0 &&
+    node.runs.every(r => r.italic || !(r.text || '').trim());
+  if (hasOrnament || allItalic) {
+    return new Paragraph({
+      alignment: AlignmentType.CENTER,
+      spacing: { before: 220, after: 140 },
+      keepLines: true,
+      children: node.runs.map(r => new TextRun({
+        text: r.text,
+        font: FONTS.serif,
+        size: hasOrnament ? SIZE.h3 : SIZE.bodyL,
+        bold: hasOrnament,
+        italics: !hasOrnament,
+        color: COLORS.crimson,
+        allCaps: false,
+      })),
+    });
+  }
+
   const headingLevel = [
     HeadingLevel.HEADING_1,
     HeadingLevel.HEADING_2,
@@ -92,6 +117,9 @@ function renderHeading(node) {
 
   return new Paragraph({
     heading: headingLevel,
+    keepNext: true,
+    keepLines: true,
+    widowControl: true,
     children: node.runs.map(r => new TextRun({
       text:    r.text,
       font:    FONTS.serif,
@@ -112,6 +140,7 @@ function renderParagraph(node, opts = {}) {
   return new Paragraph({
     children: node.runs.map(r => makeRun(r, { size: opts.size || SIZE.body, color: opts.color })),
     spacing: { before: 60, after: 60, line: 276, lineRule: LineRuleType.AUTO },
+    widowControl: true,
     alignment: opts.align || AlignmentType.JUSTIFIED,
     ...(opts.indent ? { indent: opts.indent } : {}),
   });
@@ -163,10 +192,26 @@ function renderTable(node, tableWidth) {
     headers.length,
     ...(rows.length ? rows.map(r => r.length) : [1])
   ) || 1;
-  const colW  = Math.floor(W / nCols);
-  const widths = Array(nCols).fill(colW);
-  // Aggiusta l'ultimo per riempire esattamente
-  widths[nCols - 1] += W - colW * nCols;
+  // Larghezza colonne PROPORZIONALE al contenuto, espressa in percentuale.
+  // La tabella riempie sempre il 100% del contenitore (colonna o pagina piena).
+  const cellChars = (cell) => ((cell && cell.runs ? cell.runs : []).map(r => r.text || '').join('')).length;
+  const colChars = Array(nCols).fill(1);
+  for (const row of [headers, ...rows]) {
+    (row || []).forEach((cell, ci) => {
+      const len = cellChars(cell);
+      if (len > colChars[ci]) colChars[ci] = len;
+    });
+  }
+  // Peso ~ radice quadrata dei caratteri: comprime gli estremi, così le
+  // colonne corte non diventano troppo strette e quelle lunghe non dominano.
+  const weights = colChars.map(c => Math.sqrt(Math.max(2, Math.min(c, 80))));
+  const totW = weights.reduce((a, b) => a + b, 0) || 1;
+  const pct = weights.map(w => Math.max(8, Math.round((w / totW) * 100)));
+  // Normalizza a 100 esatto
+  let pctSum = pct.reduce((a, b) => a + b, 0);
+  pct[nCols - 1] += 100 - pctSum;
+  // Griglia DXA proporzionale (hint per tblGrid), base = larghezza piena pagina
+  const widths = pct.map(p => Math.round((PAGE.CONTENT_W * p) / 100));
 
   const thinBorder = borderSingle(COLORS.gray300, 2);
   const cellBorders = { top: thinBorder, bottom: thinBorder,
@@ -175,12 +220,13 @@ function renderTable(node, tableWidth) {
   const headerRow = headers.length
     ? new TableRow({
         tableHeader: true,
+        cantSplit: true,
         children: headers.map((cell, ci) => new TableCell({
-          width:    { size: widths[ci], type: WidthType.DXA },
+          width:    { size: pct[ci], type: WidthType.PERCENTAGE },
           borders:  { top: borderThick(COLORS.crimson, 6), bottom: borderThick(COLORS.crimson, 6),
                       left: thinBorder, right: thinBorder },
           shading:  { fill: COLORS.midnight, type: ShadingType.CLEAR },
-          margins:  { top: 70, bottom: 70, left: 100, right: 100 },
+          margins:  { top: 70, bottom: 70, left: 60, right: 60 },
           verticalAlign: VerticalAlign.CENTER,
           children: [new Paragraph({
             alignment: AlignmentType.CENTER,
@@ -196,11 +242,12 @@ function renderTable(node, tableWidth) {
 
   const dataRows = rows.map((row, ridx) =>
     new TableRow({
+      cantSplit: true,
       children: row.map((cell, ci) => new TableCell({
-        width:   { size: widths[ci] || colW, type: WidthType.DXA },
+        width:   { size: pct[ci], type: WidthType.PERCENTAGE },
         borders: cellBorders,
         shading: { fill: ridx % 2 === 0 ? COLORS.white : COLORS.rowAlt, type: ShadingType.CLEAR },
-        margins: { top: 55, bottom: 55, left: 90, right: 90 },
+        margins: { top: 55, bottom: 55, left: 60, right: 60 },
         verticalAlign: VerticalAlign.CENTER,
         children: [new Paragraph({
           alignment: cell.align === 'center' ? AlignmentType.CENTER
@@ -214,7 +261,7 @@ function renderTable(node, tableWidth) {
   );
 
   return new Table({
-    width:        { size: W, type: WidthType.DXA },
+    width:        { size: 100, type: WidthType.PERCENTAGE },
     columnWidths: widths,
     rows: [
       ...(headerRow ? [headerRow] : []),
@@ -239,7 +286,7 @@ const BOX_STYLES = {
   casata_mictlan: { bg: COLORS.mictlanLight, border: COLORS.mictlan, icon: '💀 ' },
 };
 
-function renderBox(node, colWidth) {
+function renderBox(node, colWidth, keepTogether = false) {
   const W   = colWidth || PAGE.CONTENT_W;
   const sty = BOX_STYLES[node.boxType] || BOX_STYLES.info;
 
@@ -275,6 +322,7 @@ function renderBox(node, colWidth) {
     width: { size: W, type: WidthType.DXA },
     columnWidths: [W],
     rows: [new TableRow({
+      cantSplit: keepTogether,
       children: [new TableCell({
         width: { size: W, type: WidthType.DXA },
         borders: {
@@ -409,18 +457,50 @@ function renderChapterSection(ast, frontmatter, isFirstChapter = false) {
     }
   }
 
+  // Una tabella normale viene promossa a piena pagina se in una colonna
+  // risulterebbe troppo ammassata: molte colonne, molte righe, o celle lunghe.
+  function isCrampedTable(n) {
+    if (n.type !== NODE.TABLE) return false;
+    const headers = n.headers || [];
+    const rows = n.rows || [];
+    const nCols = Math.max(headers.length, ...(rows.length ? rows.map(r => r.length) : [1])) || 1;
+    if (nCols >= 4) return true;
+    if (rows.length > 8) return true;
+    const maxCell = Math.max(0, ...[headers, ...rows].flatMap(r =>
+      (r || []).map(c => ((c && c.runs ? c.runs : []).map(x => x.text || '').join('')).length)));
+    if (nCols >= 3 && maxCell >= 40) return true;
+    if (maxCell >= 70) return true;
+    return false;
+  }
+
+  function boxHasCrampedTable(n) {
+    if (n.type !== NODE.BOX || !n.children) return false;
+    return n.children.some(c => isCrampedTable(c));
+  }
+
+  let wideBlock = [];
+  function flushWide() {
+    if (wideBlock.length) {
+      sections.push({ wide: true, nodes: wideBlock });
+      wideBlock = [];
+    }
+  }
+
   for (const node of nodes) {
     // I nodi wide rompono il flusso a 2 colonne
     const isWide = node.type === NODE.TABLE_WIDE
-                || (node.type === NODE.TABLE && node.rows && node.rows.length > 8)
-                || node.type === NODE.STAT_BLOCK;
+                || node.type === NODE.STAT_BLOCK
+                || isCrampedTable(node)
+                || boxHasCrampedTable(node);
     if (isWide) {
-      flushBlock(false);
-      sections.push({ wide: true, nodes: [node] });
+      flushBlock(false);   // chiude il blocco a 2 colonne
+      wideBlock.push(node); // accumula i wide consecutivi in un'unica sezione piena
     } else {
+      flushWide();         // chiude la sezione piena
       currentBlock.push(node);
     }
   }
+  flushWide();
   flushBlock(false);
 
   return { sections, frontmatter };
@@ -432,7 +512,7 @@ function renderChapterSection(ast, frontmatter, isFirstChapter = false) {
 // HELPER: Header e Footer ricorrenti
 // ═══════════════════════════════════════════════════════
 function makeHeader(chapterTitle) {
-  const title = chapterTitle ? chapterTitle.toUpperCase() : 'MYTHIC RINGS v3';
+  const title = chapterTitle ? chapterTitle.toUpperCase() : 'MYTHIC RINGS v3.2';
   return new Header({
     children: [new Paragraph({
       children: [
@@ -453,7 +533,7 @@ function makeFooter() {
   return new Footer({
     children: [new Paragraph({
       children: [new TextRun({
-        text: 'Mythic Rings v3  ·  Milano Occulta  ·  Powered by the Apocalypse',
+        text: 'Mythic Rings v3.2  ·  Milano Occulta  ·  Powered by the Apocalypse',
         font: FONTS.serif, size: SIZE.xs, color: COLORS.gray500, italics: true,
       })],
       border: { top: { style: BorderStyle.SINGLE, size: 2, color: COLORS.gray300, space: 4 } },
@@ -574,6 +654,7 @@ function buildDocument(chapters) {
     );
     docSections.push({
       properties: {
+        type: SectionType.NEXT_PAGE,
         page: {
           size: { width: PAGE.WIDTH, height: PAGE.HEIGHT },
           margin: PAGE.MARGIN,
@@ -594,6 +675,7 @@ function buildDocument(chapters) {
         // Tabelle wide → 1 colonna, larghezza piena
         docSections.push({
           properties: {
+            type: SectionType.CONTINUOUS,
             page: { size: { width: PAGE.WIDTH, height: PAGE.HEIGHT }, margin: PAGE.MARGIN },
             column: { count: 1, space: 0 },
           },
@@ -605,6 +687,7 @@ function buildDocument(chapters) {
         // Corpo normale → 2 colonne
         docSections.push({
           properties: {
+            type: SectionType.CONTINUOUS,
             page: { size: { width: PAGE.WIDTH, height: PAGE.HEIGHT }, margin: PAGE.MARGIN },
             column: { count: 2, space: PAGE.COL_GAP, equalWidth: true },
           },
@@ -618,6 +701,7 @@ function buildDocument(chapters) {
 
   // ── Document finale ──────────────────────────────────
   return new Document({
+    features: { updateFields: true },
     styles: {
       default: {
         document: { run: { font: FONTS.serif, size: SIZE.body, color: COLORS.ink } },
@@ -667,7 +751,7 @@ function renderNode(node, wideContext = false) {
     })];
     case NODE.LIST:       return renderList(node);
     case NODE.QUOTE:      return renderQuote(node);
-    case NODE.BOX:        return [spacerPara(30), renderBox(node, colW), spacerPara(30)];
+    case NODE.BOX:        return [spacerPara(30), renderBox(node, colW, wideContext), spacerPara(30)];
     case NODE.TABLE:
     case NODE.TABLE_WIDE: return [spacerPara(40), renderTable(node, wideContext ? PAGE.CONTENT_W : colW), spacerPara(40)];
     case NODE.STAT_BLOCK: return [spacerPara(40), renderStatBlock(node, colW), spacerPara(40)];
@@ -686,7 +770,7 @@ function buildCoverPage() {
     }),
     new Paragraph({
       alignment: AlignmentType.CENTER,
-      children: [textRun('v3.1', { size: 40, color: COLORS.gold })],
+      children: [textRun('v3.2', { size: 40, color: COLORS.gold })],
       spacing: { before: 0, after: 120 },
     }),
     new Paragraph({
@@ -705,7 +789,7 @@ function buildCoverPage() {
       alignment: AlignmentType.CENTER,
       children: [textRun(
         'Un gioco di ruolo di investigazione soprannaturale\n'
-        + 'nel cuore di Milano — Powered by the Apocalypse',
+        + 'nel cuore di Milano · Powered by the Apocalypse',
         { size: SIZE.body, color: COLORS.gray300, italic: true }
       )],
     }),

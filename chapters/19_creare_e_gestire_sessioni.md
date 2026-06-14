@@ -1,7 +1,7 @@
 ---
 title: "Creare e Gestire Sessioni"
 chapter: 19
-part: "Parte V"
+part: "Parte V: Guida per il Custode"
 section: "Guida per il Custode"
 epigraph: "Una buona sessione inizia prima che i dadi rotolino."
 tags: []
@@ -22,6 +22,7 @@ Struttura Standard (3-4 ore)
 | Complicazione | 30 min | Il piano cambia. Rivelazione inaspettata, scontro minore, tradimento, errore con conseguenze. |
 | Climax | 60 min | Confronto finale: boss fight, rituale da fermare, negoziazione ad alta tensione. Qui si decide l'esito. |
 | Risoluzione | 15 min | Conseguenze, Downtime, XP, cliffhanger per la prossima sessione. |
+
 La Regola dei 3 Indizi
 
 Mai bloccare la progressione su un singolo tiro di dado. Se
@@ -49,6 +50,7 @@ sessione:
 | 4 | Negoziazione / Diplomazia | Due fazioni in conflitto. I PG devono mediare o scegliere un lato. |
 | 5 | Infiltrazione / Furto | I PG devono entrare in un luogo protetto e ottenere qualcosa. |
 | 6 | Crisi Velo | Il Velo è a rischio in un'area. Contieni, copri, gestisci conseguenze. |
+
 ## Tabella 2: Complicazione (1d6)
 
 
@@ -60,6 +62,7 @@ sessione:
 | 4 | Conto alla rovescia: un timer reale (es. 30 minuti di gioco) prima della catastrofe. |
 | 5 | Dilemma morale: la soluzione più efficace è moralmente discutibile. |
 | 6 | Risorse limitate: i PG iniziano già feriti, senza equipaggiamento, o in debito con qualcuno. |
+
 ## Tabella 3: PNG Coinvolto (1d6)
 
 
@@ -71,6 +74,7 @@ sessione:
 | 4 | Un membro della Fratellanza che vuole defezionare. Sincero o trappola? |
 | 5 | Un PNG legato al Legame di un PG - la missione diventa personale. |
 | 6 | Una creatura soprannaturale non ostile che chiede aiuto. |
+
 ## Tabella 4: Location (1d6)
 
 

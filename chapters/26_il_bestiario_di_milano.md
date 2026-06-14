@@ -1,7 +1,7 @@
 ---
 title: "Il Bestiario di Milano"
 chapter: 26
-part: "Parte VI"
+part: "Parte VI: Bestiario e Avventure"
 section: "Bestiario e Avventure"
 epigraph: "Milano ha i suoi mostri. Alcuni li conosci già."
 tags: []
@@ -31,10 +31,12 @@ Indice Rapido per LS
 Schede Creature
 
 :::box[Zombie]{type=info}
-*Non-morto lento, resistente al dolore. Comune nelle zone Mictlan.
+*Non-morto lento, resistente al dolore. Comune nelle zone Mictlan.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 8 | 0 | +FOR | 1d6 | 1 | Non-morto / Minion |
+
 **Abilità:** Immune paura e dolore. Lento (metà movimento).
 Afferrare: su attacco riuscito, bersaglio è trattenuto (Sfidare
 Pericolo +FOR per liberarsi).
@@ -53,6 +55,7 @@ a City Life. Non hanno un padrone visibile.*
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 6 | 1 | +CUO | 1d4+veleno | 1 | Ombra / Minion |
+
 **Abilità:** Mimetismo nelle ombre (invisibile al buio). Veleno: su
 danno inflitto, bersaglio tira +FOR o -1 ongoing per 10 minuti. Tela
 d'ombra: area Vicino, Sfidare Pericolo +FOR o immobilizzato.
@@ -66,10 +69,12 @@ senzatetto è stato trovato avvolto in seta nera.*
 
 :::box[Imp]{type=info}
 *Diavoletto minore, dispettoso e codardo. Alto 40cm, ali da
-pipistrello.
+pipistrello.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 5 | 0 | +CUO | 1d4+fuoco | 1 | Demoniaco / Minion |
+
 **Abilità:** Volo. Fuoco minore: fiammata 1d4, può incendiare
 oggetti. Invisibilità breve: 1 round, ricarica dopo 3 round.
 Linguaccia infernale: insulti che distraggono (-1 al prossimo tiro
@@ -84,10 +89,12 @@ nascondono telefoni, terrorizzano gatti.*
 
 :::box[Ratto Spettrale]{type=info}
 *Ratto trasparente dalle dimensioni di un gatto. Occhi rossi
-luminosi.
+luminosi.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 3 | 0 | +CUO | 1d4 | 1 | Spirito / Minion |
+
 **Abilità:** Incorporeo (attraversa muri, immune danno fisico
 non-magico). Sciame: quando 5+ ratti sono insieme, agiscono come
 singola entità (PF 15, danno 2d4 area). Contagio spettrale: morso
@@ -100,10 +107,12 @@ rosse' sui binari di notte.*
 :::
 
 :::box[Folletto di Sempione]{type=info}
-*Spirito naturale minuscolo, luminescente, con ali da libellula.
+*Spirito naturale minuscolo, luminescente, con ali da libellula.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 4 | 0 | +FAT | 1d4 | 2 | Fatato / Minion psichico |
+
 **Abilità:** Volo. Illusione minore: crea immagini/suoni per
 distrarre (Leggere Situazione +MEN per riconoscere). Polline
 sonnifero: area Vicino, Resistere +FOR o sonnolenza (-2 ai tiri per 5
@@ -117,10 +126,12 @@ Offrono aiuto a chi indaga.*
 :::
 
 :::box[Spettro]{type=info}
-*Spirito umano intrappolato tra i mondi. Semi-trasparente, freddo.
+*Spirito umano intrappolato tra i mondi. Semi-trasparente, freddo.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 15 | 1 (incorporeo) +FAT | 1d8 freddo | 3 | Non-morto / Comune |  |
+
 **Abilità:** Incorporeo (immune danno fisico, vulnerabile a magia).
 Volo, attraversa muri. Tocco gelido: 1d8 danno freddo + Resistere
 +CUO o -1 ongoing (terrore). Invisibilità a volontà. Urlo spettrale:
@@ -135,10 +146,12 @@ vendetta su un discendente del suo assassino.*
 :::
 
 :::box[Lupo Mannaro]{type=info}
-*Umano maledetto. Di notte si trasforma in bestia. Enorme, feroce.
+*Umano maledetto. Di notte si trasforma in bestia. Enorme, feroce.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 22 | 1 | +FOR | 2d6 artigli 4 | Mutaforma / Comune |  |
+
 **Abilità:** Rigenerazione: +1d6 PF a inizio turno (non se danno da
 argento). Velocità ×2. Olfatto acuto: +2 a Leggere Situazione basate
 su odori. Morso maledetto: su 10+ danno, bersaglio tira +FOR o
@@ -155,10 +168,12 @@ Parco Sempione. Non lo sa. I Custodi lo cercano.*
 
 :::box[Gargoyle del Duomo]{type=info}
 *Statua animata del Duomo. Pietra viva, ali funzionanti, artigli
-affilati.
+affilati.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 20 | 2 | +FOR | 2d6 | 4 | Costrutto / Comune |
+
 **Abilità:** Volo. Mimetismo pietra: immobile, indistinguibile da
 statua normale. Resistenza: immune veleno, sonno, charme. Ruggito di
 pietra: area Vicino, Resistere +CUO o stordito 1 round. Artigli
@@ -174,10 +189,12 @@ pattuglia i tetti del centro. Sta proteggendo qualcosa? O cacciando?*
 
 :::box[Strega dei Navigli]{type=info}
 *Praticante di magia popolare. Vecchia ma potente. Vive sola ai
-margini.
+margini.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 18 | 0 +FAT | 2d6 magico | 4 | Umano magico / Comune |  |
+
 **Abilità:** Malocchio: bersaglio Vicino, Resistere +FAT o subisce -1
 ongoing per scena. Pozione velenosa: 2d8 danno nel tempo (1d4/round
 per 2 round). Famiglio (gatto nero): spia, +1 a Leggere Situazione
@@ -194,10 +211,12 @@ che ha aperto accanto a casa sua. Vendetta o difesa?*
 
 :::box[Doppelgänger]{type=info}
 *Mutaforma che copia perfettamente aspetto, voce e manierismo di
-chiunque.
+chiunque.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 16 | 0 | +CAR | 1d6 | 4 | Mutaforma / Comune |
+
 **Abilità:** Copia perfetta: assume l'aspetto di chiunque abbia
 toccato (dura finché non cambia). Leggi mente superficiale: +2 a
 imitare il bersaglio. Scivoloso: +2 a Sfidare Pericolo per fuggire.
@@ -220,6 +239,7 @@ Servitore fedele.*
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 8 | 0 | +MEN | 1d4+veleno | 3 | Costrutto / Comune |
+
 **Abilità:** Legame telepatico con il creatore (raggio 1km). Veleno
 debilitante: Resistere +FOR o -1 FOR per 1 ora. Piccolo e veloce:
 difficile da colpire (-1 ai tiri per attaccarlo). Autodistruzione:
@@ -234,10 +254,12 @@ crea? E cosa ha scoperto?*
 
 :::box[Poltergeist]{type=info}
 *Spirito furioso che manipola oggetti. Invisibile, rumoroso,
-distruttivo.
+distruttivo.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 12 | 1 (incorporeo) +FAT | 2d4 | 3 | Spirito / Comune (oggetti) |  |
+
 **Abilità:** Invisibile permanente (percepibile solo con magia o
 Leggere Situazione 10+). Telecinesi: lancia oggetti (2d4 danno),
 sbatte porte, rompe vetri. Possessione oggetto: prende il controllo
@@ -259,6 +281,7 @@ progressivamente.*
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 10 | 0 +FAT | \- | 3 | Maledizione / Comune (parassita) |  |
+
 **Abilità:** Invisibile (solo percepibile da Guardiani con Vedere
 Oltre il Velo). Maledizione progressiva: Giorno 1: sfortuna (-1 a un
 tiro/giorno). Giorno 3: incubi (+1 Stress/notte). Giorno 7: malattia
@@ -276,10 +299,12 @@ non trovano nulla. Un Guardiano percepisce qualcosa attaccato a lui.*
 
 :::box[Demone Minore]{type=info}
 *Entità infernale media. Ali membranose, pelle rossa, zoccoli. 2
-metri.
+metri.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 25 | 1 | +FOR | 2d8 | 5 | Demoniaco / Forte |
+
 **Abilità:** Volo. Fuoco infernale: 2d8 danno area Vicino (Sfidare
 Pericolo +CUO per dimezzare). Terrore: Resistere +CUO o fuga 1 round.
 Pelle infernale: immune fuoco, resistenza freddo.
@@ -295,10 +320,12 @@ Custodi devono esorcizzarlo senza rivelare il Velo.*
 
 :::box[Banshee]{type=info}
 *Spirito femminile dal grido letale. Appare come donna pallida con
-capelli fluenti.
+capelli fluenti.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 20 | 1 (incorporeo) +FAT | 2d6 | 5 | Non-morto / Forte psichico |  |
+
 **Abilità:** Incorporea. Grido della Banshee: area Medio, tutti
 tirano Resistere +CUO: 6- = 3d6 danno psichico, 7-9 = 1d6, 10+ =
 resisti. Ricarica 3 round. Presagio di morte: chi la vede sa che
@@ -315,10 +342,12 @@ Chi sta per morire tra i Custodi?*
 
 :::box[Revenant Partigiano]{type=info}
 *Non-morto corporeo di un partigiano della Resistenza. Determinato,
-inarrestabile.
+inarrestabile.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 22 | 1 | +FOR | 2d6 | 5 | Non-morto / Forte |
+
 **Abilità:** Inarrestabile: non può essere fermato dalla paura, dal
 dolore, o dalla persuasione. Rigenerazione lenta: +1d4 PF/round (non
 se fuoco). Missione: ha un obiettivo specifico (vendetta, protezione,
@@ -336,10 +365,12 @@ interferisce. Può comunicare brevemente. Determinazione terrificante.
 
 :::box[Cavaliere d'Ombra]{type=info}
 *Guerriero del Piano delle Ombre. Armatura nera, spada fumante,
-cavallo d'ombra.
+cavallo d'ombra.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 28 | 2 | +FOR | 2d8+1 | 6 | Ombra / Forte |
+
 **Abilità:** Viaggio d'ombra: si teletrasporta tra ombre nel raggio
 Lontano. Spada Fumante: danno 2d8+1, ignora 1 Armatura. Aura di
 oscurità: luce ridotta nel raggio Vicino. Cavalcatura: cavallo
@@ -356,10 +387,12 @@ Centrale. Cerca qualcuno. Chi, e perché il suo signore lo vuole?*
 
 :::box[Golem di Marmo]{type=info}
 *Statua animata di marmo bianco. 3 metri, pesantissimo, quasi
-indistruttibile.
+indistruttibile.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 30 | 2 | +FOR | 3d6 | 6 | Costrutto / Forte |
+
 **Abilità:** Resistenza enorme: immune veleno, sonno, charme, freddo.
 Pugno devastante: 3d6 danno, bersaglio sbalzato Vicino→Medio. Carica:
 movimento doppio + attacco, +1d6 danno ma -1 a colpire. Lento: agisce
@@ -376,10 +409,12 @@ notte. Difende la Pinacoteca. Ma da cosa?*
 
 :::box[Arpia]{type=info}
 *Creatura alata con corpo di rapace e volto di donna. Urla
-laceranti.
+laceranti.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 18 | 0 | +CUO | 2d6 artigli 5 | Mostro / Forte |  |
+
 **Abilità:** Volo rapido (×3 umano). Urlo lacerante: area Medio,
 Resistere +CUO o stordito 1 round + 1d4 danno. Artigli avvelenati: su
 danno, Resistere +FOR o nausea (-1 ongoing, 10 min). Picchiata:
@@ -394,10 +429,12 @@ sorveglianza e ha ferito un operaio. Volo di notte su Milano.*
 
 :::box[Sirena del Naviglio]{type=info}
 *Creatura acquatica che attira le vittime con il canto. Bella e
-letale.
+letale.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 20 | 0 | +CAR | 2d6 + | 5 | Acquatica / Forte risucchio |
+
 **Abilità:** Canto ammaliante: area Lontano, Resistere +MEN o
 attratto irresistibilmente verso l'acqua. Forma acquatica: nel
 Naviglio, +2 a tutti i tiri, rigenerazione 1d4/round. Bacio del
@@ -415,10 +452,12 @@ qualcosa di più profondo nell'acqua?*
 
 :::box[Golem Tech]{type=info}
 *Costrutto moderno. Assemblato da componenti elettronici e magia.
-Robot magico.
+Robot magico.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 25 | 2 | +MEN | 2d6 | 5 | Costrutto / Forte elettrico |
+
 **Abilità:** Scarica elettrica: 2d6 area Vicino, dispositivi
 elettronici in zona si spengono. Scudo EM: una volta per
 combattimento, nega 1 attacco completamente. Hacking: prende
@@ -435,10 +474,12 @@ magia cinese e tecnologia italiana. Per quale scopo?*
 
 :::box[Wendigo Urbano]{type=info}
 *Fame incarnata. Creatura magra, alta, con corna di cervo e bocca
-troppo larga.
+troppo larga.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 24 | 1 | +FOR | 2d8 | 6 | Mostro / Forte |
+
 **Abilità:** Fame infinita: chi è Vicino deve Resistere +MEN o è
 paralizzato da fame insaziabile (1 round). Morso divorante: 2d8
 danno, guarisce metà del danno inflitto. Velocità innaturale: agisce
@@ -455,10 +496,12 @@ indaga. Ma i numeri sono troppo alti.*
 
 :::box[Dullahan Milanese]{type=info}
 *Cavaliere senza testa su moto nera. Porta la propria testa sotto il
-braccio.
+braccio.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 32 | 2 | +FOR | 2d10 | 7 | Non-morto / Elite |
+
 **Abilità:** Moto infernale: velocità ×4, immune a traffico (passa
 attraverso). Frusta di spina dorsale: raggio Medio, 2d10 danno.
 Sguardo della morte: chi incrocia gli occhi della testa tira
@@ -482,6 +525,7 @@ Milano.*
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 35 | 2 | +FOR | 2d8+veleno | 7 | Mostro / Elite |
+
 **Abilità:** Sguardo pietrificante: Vicino, Resistere +FOR o
 pietrificazione progressiva (1 round: -1 FOR, 2 round: -2, 3 round:
 statua). Reversibile se Basilisco muore entro 1 ora. Veleno letale:
@@ -504,6 +548,7 @@ volto.*
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 28 | 1 +FAT | 2d8 | 7 | Interdimensionale / dimensionale | Elite |
+
 **Abilità:** Passo dimensionale: si teletrasporta ovunque nel raggio
 Lontano ogni round. Tocco dissolvente: 2d8 danno, oggetto toccato ha
 50% di svanire temporaneamente. Immune a danno fisico non-magico.
@@ -524,10 +569,12 @@ Non attacca i civili. Attacca i Guardiani. Perché?*
 
 :::box[Mummia Egizia]{type=info}
 *Non-morto antico dalla collezione egizia del Castello Sforzesco.
-Bendato, potente.
+Bendato, potente.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 30 | 1 | +FAT | 2d8 | 7 | Non-morto / Elite necrotico |
+
 **Abilità:** Maledizione della Mummia: chi la danneggia tira +FAT o
 subisce maledizione (sfortuna crescente, -1 cumulativo/giorno, max
 -3). Polvere del deserto: area Medio, 2d6 danno + cieca 1 round.
@@ -545,10 +592,12 @@ L'ultima è in possesso di un collezionista privato a Brera.*
 
 :::box[Drago d'Acqua Maggiore]{type=info}
 *Serpente acquatico di 8 metri, scaglie iridescenti, criniera di
-alghe.
+alghe.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 35 | 2 | +FOR | 3d6 | 8 | Acquatico / Elite |
+
 **Abilità:** Soffio d'acqua: cono Medio, 3d6 danno + sbalzo Lontano.
 Ricarica 2 round. Armatura di scaglie. Nel proprio elemento (acqua):
 +2 a tutti i tiri, rigenerazione 1d6/round. Senso della corrente:
@@ -568,10 +617,12 @@ aiuto.*
 
 :::box[Angelo Caduto]{type=info}
 *Ex servo divino. Ali spezzate, armatura incrinata, occhi come stelle
-morenti. 3 metri.
+morenti. 3 metri.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |  |
 |---|---|---|---|---|---|---|
 | 40 | 2 (max) | +FAT | 3d8 | 9 | Celestiale corrotto / radiante | Leggendario |
+
 **Abilità:** Volo. Spada di luce corrotta: 3d8 danno, ignora tutta
 l'Armatura. Grido del Paradiso Perduto: area Lontano, tutti tirano
 Resistere +CUO: 6- = 2d8 danno psichico + pianto incontrollabile 1
@@ -589,10 +640,12 @@ Madonnina lo contiene\... per ora. I Guardiani hanno 3 giorni.*
 :::
 
 :::box[Vampiro Antico (Contessa Adriana)]{type=info}
-*400+ anni. Potere immenso. Elegante, letale, politica.
+*400+ anni. Potere immenso. Elegante, letale, politica.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 45 | 2 (m ax) | +CAR o +FOR | 3d6 | 9 | Non-morto / Leggendario |
+
 **Abilità:** Glamour: Resistere +MEN a -2 o completamente affascinato
 (obbedisce a 1 ordine). Forma di nebbia: incorporea, volo, passa
 sotto le porte. Rigenerazione: +2d6 PF/round (non con luce
@@ -612,10 +665,12 @@ condizioni. E il prezzo è sempre più alto di quanto sembra.*
 
 :::box[Lich (Il Primo Necromante)]{type=info}
 *Mago non-morto antichissimo. Scheletro in abiti regali. Filacteria
-nascosta.
+nascosta.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 40 | 1 +FAT | 3d8 | 10 | Non-morto / Leggendario necrotico |  |
+
 **Abilità:** Magia suprema: lancia qualsiasi potere Mictlan L1-L5
 senza costo PF. Filacteria: non può morire finché la filacteria
 esiste (si riforma in 1d4 giorni). Comando non-morti: controlla tutti
@@ -635,10 +690,12 @@ definitiva.*
 
 :::box[Fantasma della Metro (La Signora Bianca)]{type=info}
 *Entità unica, legata alla rete metropolitana. Appare come donna in
-bianco. Potere immenso.
+bianco. Potere immenso.*
+
 | PF | Armatura | Attacco | Danno | LS | Tipo |
 |---|---|---|---|---|---|
 | 35 | 2 (incorporeo) +FAT | 3d6 | 9 | Spirito / Leggendario psichico |  |
+
 **Abilità:** Onnipresente nella metro: può apparire in qualsiasi
 stazione istantaneamente. Incorporea totale: immune a tutto tranne
 magia pura. Treno fantasma: evoca un treno spettrale che percorre i

@@ -1,8 +1,8 @@
 ---
 title: "Come Si Gioca"
 chapter: 5
-part: "Parte II"
-section: "Regole Base"
+part: "Parte II: Le Regole"
+section: "Le Regole"
 epigraph: "Le regole sono semplici. La vita è complessa."
 tags: []
 status: finale
@@ -12,16 +12,16 @@ version: 3.2
 :::box[Aggiornamenti v3.2 - Regole Affinate]{type=danger}
 Le seguenti regole sono state affinate tramite test di simulazione (Monte Carlo) e playtest:
 
-**Stress Overflow — Penalità Progressiva** *(v3.2)*
+**Stress Overflow, Penalità Progressiva** *(v3.2)*
 - **Stress 8-9:** I poteri costano +1 risorsa aggiuntiva. La magia è instabile.
-- **Stress 10 — Burnout:** I poteri sono SOSPESI (non bloccati). Puoi ancora usarli, ma ogni attivazione costa il doppio E richiede un tiro su Sfidare Pericolo +FAT: su 6- il potere esplode (danno 1d6 al Guardiano, scena interrotta). Il personaggio è chiaramente al limite — usarlo è una scelta drammatica consapevole, non un muro. Finché lo Stress rimane a 10, non recuperi PF naturalmente.
+- **Stress 10, Burnout:** I poteri sono SOSPESI (non bloccati). Puoi ancora usarli, ma ogni attivazione costa il doppio E richiede un tiro su Sfidare Pericolo +FAT: su 6- il potere esplode (danno 1d6 al Guardiano, scena interrotta). Il personaggio è chiaramente al limite, usarlo è una scelta drammatica consapevole, non un muro. Finché lo Stress rimane a 10, non recuperi PF naturalmente.
 
-**Corruzione Overflow — Penalità Progressiva** *(v3.2)*
+**Corruzione Overflow, Penalità Progressiva** *(v3.2)*
 - **Corruzione 6:** I poteri L3+ costano +1 Corruzione aggiuntiva.
 - **Corruzione 7:** I poteri L2+ costano +1 Corruzione aggiuntiva. I poteri L1 restano al costo normale.
-- **Corruzione 8 — Trasformazione:** Automatica e immediata. Non aspettare fine scena. Il giocatore perde il controllo del personaggio.
+- **Corruzione 8, Trasformazione:** Automatica e immediata. Non aspettare fine scena. Il giocatore perde il controllo del personaggio.
 
-*Rationale design: in un sistema PbtA i personaggi devono poter agire anche al limite — il dramma nasce da scelte rischiose, non da blocchi totali. La penalità progressiva mantiene la tensione senza rendere il personaggio passivo.*
+*Rationale design: in un sistema PbtA i personaggi devono poter agire anche al limite: il dramma nasce da scelte rischiose, non da blocchi totali. La penalità progressiva mantiene la tensione senza rendere il personaggio passivo.*
 
 **Resurrezione Limite:** Un personaggio può essere ressurrezzato al massimo una volta per sessione. La seconda morte nella stessa sessione è definitiva.
 :::
@@ -289,6 +289,7 @@ quando hai tre ore. Tiri solo quando la tensione esiste.
 | 10+ | Successo Pieno | Ottieni ciò che vuoi, nessuna complicazione. Il miglior risultato possibile per l'azione descritta. |
 | 7--9 | Successo Parziale | Ottieni ciò che vuoi, MA con un costo, una complicazione o una scelta difficile. Il Custode offre un dilemma. |
 | 6-- | Fallimento | Non ottieni ciò che vuoi, E il Custode fa una mossa dura: introduce un pericolo, infligge danno, separa il gruppo, rivela una brutta verità. |
+
 :::box[Esempio: Tre Risultati dalla Stessa Azione]{type=info}
 **Situazione:** Marco tenta di scavalcare un muro alto 3 metri mentre
 è inseguito da un demone. Tira +CUO (+1).
@@ -318,6 +319,7 @@ modificatori basati sulle circostanze:
 | Condizioni difficili (buio, ferito, sotto pressione) | -1 |
 | Condizioni estreme (quasi impossibile) | -2 |
 | Ostacolato da nemico (mossa Ostacolare) | -1 |
+
 **Limite:** I modificatori totali non dovrebbero mai superare ±3. Se
 un'azione richiede più di +3 per avere senso, è automatica. Se richiede
 meno di -3, è narrativamente impossibile.
@@ -378,6 +380,7 @@ danno:
 | Fisico | Spade, proiettili, artigli, cadute, esplosioni | Sì - qualsiasi tipo di Armatura |
 | Magico | Fuoco mistico, fulmini, energia arcana, maledizioni | Solo Armatura Magica (amuleti, barriere) |
 | Puro | Psichico, necromantico, drenaggio vitale | No - ignora sempre l'Armatura |
+
 ## Condizioni e Ferite
 
 
@@ -387,6 +390,7 @@ danno:
 | 25--49% | Ferito | Nessuna penalità meccanica, ma descrivi le ferite: sangue, lividi, dolore. |
 | 1--24% | Gravemente Ferito | -1 a tutti i tiri. Movimento ridotto. Zoppichi, respiro affannoso. |
 | 0 | Morente | Tira Ultimo Respiro (vedi Capitolo Combattimento). |
+
 ## Recuperare PF
 
 **Riposo Notturno (8 ore sicure):** Recuperi 1d4 PF.
@@ -416,13 +420,13 @@ Il bonus del Legame si applica quando sono vere tutte queste condizioni: il PNG 
 
 **Tetto meccanico *(v3.2)*:** Il bonus Legame applicabile a un singolo tiro è **massimo +2**, indipendentemente dal livello del Legame. Questo mantiene la tensione del 7-9 anche con relazioni profonde.
 
-Il livello L3 di un Legame non viene "sprecato" — conferisce accesso a benefici narrativi esclusivi (vedi sotto) e al bonus morale 1/sessione, ma non aumenta il bonus meccanico oltre +2.
+Il livello L3 di un Legame non viene "sprecato": conferisce accesso a benefici narrativi esclusivi (vedi sotto) e al bonus morale 1/sessione, ma non aumenta il bonus meccanico oltre +2.
 
 | Livello Legame | Bonus meccanico (tiro) | Bonus narrativo |
 |---|---|---|
-| L1 — Conoscente | +1 | Accesso, informazioni |
-| L2 — Alleato | +2 | +1 ongoing in scene dedicate |
-| L3 — Legame Profondo | +2 (cap) | Risorsa morale 1/sess + beneficio esclusivo |
+| L1: Conoscente | +1 | Accesso, informazioni |
+| L2: Alleato | +2 | +1 ongoing in scene dedicate |
+| L3: Legame Profondo | +2 (cap) | Risorsa morale 1/sess + beneficio esclusivo |
 
 **NON si applica quando:** il PNG non ha nulla a che fare con la
 situazione, l'azione è generica (combatti un demone random, il PNG non è
@@ -571,6 +575,7 @@ padroneggia senza rischio, come respirare nelle ombre.
 | 5 | Sussurri dell'Ombra | L'Umbra sente voci che suggeriscono azioni moralmente ambigue. Il Custode offre una tentazione per scena: accettarla dà un vantaggio ma costa un prezzo. |
 | 7 | Forma Instabile | L'ombra del PG si muove indipendentemente. -1 ongoing a CAR: le persone percepiscono qualcosa di sbagliato, un freddo innaturale. |
 | 8 | Trasformazione | Irreversibile. L'Umbra diventa creatura ombra pura: perde l'umanità, diventa PNG controllato dal Custode. Il giocatore crea un nuovo PG. Il vecchio PG diventa un antagonista ricorrente. |
+
 ## Accumulare Corruzione
 
 Guadagni Corruzione quando usi un potere Umbra L2+ (il costo è
@@ -582,7 +587,7 @@ ogni ora oltre la prima).
 
 ## Ridurre Corruzione
 
-Esistono **quattro percorsi** per ridurre la Corruzione Umbra — bilanciati tra accessibilità e costo narrativo:
+Esistono **quattro percorsi** per ridurre la Corruzione Umbra, bilanciati tra accessibilità e costo narrativo:
 
 **1. Atto di Redenzione** *(1/sessione, -1 Corruzione)*
 Compiere un atto significativamente altruista che contrasta la natura oscura dell'ombra: proteggere un innocente a rischio personale, rinunciare a un vantaggio ottenuto con l'inganno, confessare una verità dolorosa. Il Custode conferma se l'atto qualifica. Massimo 1 per sessione.
@@ -594,7 +599,7 @@ L'Umbra trascorre un'intera sessione senza usare poteri a pagamento (L2+). Alla 
 Richiede un Guardiano Avalon L3+ o Ife L4+. Dura 1 ora. Costo: **2 Stress** a chi lo esegue (ridotto dalla v3.1). Risultato: -1 Corruzione. Con un 10+ su Usare Potere: -2 Corruzione.
 
 **4. Atto di Redenzione Profondo** *(raro, -2 o -3 Corruzione)*
-Un sacrificio narrativo maggiore: salvare una vita a rischio della propria, rivelare pubblicamente un segreto che costa caro, abbandonare un vantaggio fondamentale. Il Custode lo propone, il giocatore lo accetta. Rimuove 2-3 Corruzione. Non è un percorso "attivabile" — emerge dalla fiction.
+Un sacrificio narrativo maggiore: salvare una vita a rischio della propria, rivelare pubblicamente un segreto che costa caro, abbandonare un vantaggio fondamentale. Il Custode lo propone, il giocatore lo accetta. Rimuove 2-3 Corruzione. Non è un percorso "attivabile", emerge dalla fiction.
 
 **Importante:** La Corruzione non è permanente ma è *lenta* da ridurre. A differenza dello
 Stress, il riposo non la riduce. L'Umbra vive con il peso del proprio
@@ -626,6 +631,7 @@ Tabella Riferimento Rapido
 | Stress | Avalon, Ife | 10 | Burnout | -1/notte, downtime, Legami |
 | Corruzione | Umbra | 8 | Trasformazione | Atti Redenzione, Rituale |
 | Punti Fato | Tutti | 2/sessione | - | Si rigenerano ogni sessione |
+
 :::box[Fine Parte II - Regole Base]{type=tip}
 Ora conosci le meccaniche core di Mythic Rings: la conversazione al
 tavolo, le cinque caratteristiche, il sistema 2d6 con i suoi tre
@@ -691,6 +697,7 @@ che determinano cosa puoi fare:
 | Medio | \~5--10 metri | Armi a distanza, poteri proiettile, urlare. Un movimento per entrare in mischia |
 | Lontano | \~20--50 metri | Solo armi a distanza e poteri a lungo raggio. Due movimenti per entrare in mischia |
 | Oltre | Più di 50 metri | Troppo lontano per combattimento diretto. Serve riposizionamento completo |
+
 Anatomia di un Round
 
 Il combattimento si divide in round. Ogni round corrisponde a circa 6
@@ -774,6 +781,7 @@ magia offensiva.
 | 10+ | Colpisci. Infliggi danno arma/potere. Scegli 1 bonus: danno extra (+1d6), apertura (alleato vicino ha +1 forward vs questo nemico), oppure eviti il contrattacco (non subisci danno reazione). |
 | 7--9 | Colpisci MA sei esposto. Infliggi danno, MA il Custode sceglie 1 complicazione: subisci danno contrattacco dal nemico, ti metti in posizione pericolosa (prono, disarmato, circondato), oppure il tuo danno è ridotto (tira metà dadi, arrotonda per difetto). |
 | 6-- | Manchi, oppure il colpo è inefficace. Il Custode fa una mossa dura: il nemico contrattacca duramente, la situazione peggiora, o succede qualcosa che non avevi previsto. |
+
 :::box[Esempio: Attacco in Mischia]{type=info}
 **Marco (FOR +1)** carica il vampiro con la spada d'argento (1d8
 danno). «Tira Attaccare +FOR.»
@@ -804,6 +812,7 @@ pericolo imminente.
 | 10+ | Difesa perfetta. Scegli 1: eviti il danno completamente e mantieni la posizione, oppure riduci il danno a metà E contrattacchi (infliggi danno base della tua arma al nemico). |
 | 7--9 | Difesa parziale. Scegli 1: eviti il danno MA ti metti in posizione brutta (prono, esposto, spalle al muro), oppure riduci il danno a metà (ma lo subisci). |
 | 6-- | La difesa fallisce. Subisci il danno pieno e il Custode fa una mossa dura: la situazione peggiora (disarmato, circondato, alleato ferito, qualcosa di peggio). |
+
 **Difendere Altri:** Puoi usare Difendere per proteggere un alleato,
 purché tu sia Vicino a lui. Funziona in modo identico, ma sei TU a
 subire le conseguenze (danno, posizione brutta) al posto dell'alleato.
@@ -832,6 +841,7 @@ Danno Base delle Armi
 | Pistola (9mm) | 2d6 | Distanza, Rumoroso |
 | Fucile / Shotgun | 2d8 | Distanza, Due Mani, Molto Rumoroso |
 | Arco / Balestra | 1d8 | Distanza, Silenzioso, Lento |
+
 **Tag Spiegati:** Mischia = richiede essere Vicino. Distanza = funziona
 a Medio e Lontano. Due Mani = non puoi usare scudo o seconda arma. Lento
 = -1 iniziativa quando usi. Rumoroso = attira attenzione (polizia,
@@ -849,6 +859,7 @@ Armatura Dettagliata
 | Pesante | 3 | Armatura completa moderna o medievale. Ingombrante e visibile. |
 | Corazza | 4 | Armatura rinforzata, piastre spesse. Molto rara. |
 | Magica | +1 a +3 | Barriere, incantesimi di protezione. Si somma alla fisica. |
+
 **Ricorda:** L'Armatura fisica (giubbotto, scudo) protegge solo dal
 danno Fisico. L'Armatura magica (amuleti, barriere di Luce) protegge dal
 Fisico e dal Magico. Il danno Puro (psichico, necromantico) ignora
@@ -874,6 +885,7 @@ Danno Ambientale
 | Elettricità | 2d6, ignora Armatura |
 | Freddo estremo (per ora) | 1d4 |
 | Annegamento (per round senza aria) | 1d6 |
+
 I combattimenti più pericolosi non sono quelli esplosivi - sono quelli
 che si trascinano troppo a lungo. Quando un nemico con Armatura alta e
 PF elevati assorbe colpo dopo colpo, il gioco rallenta: round dopo round
@@ -894,6 +906,7 @@ crescente: prima al tiro di Attaccare, poi anche al danno.
 | 4 | +1 al tiro e +1 danno | L'energia sale, i colpi si fanno più pesanti. |
 | 5 | +1 al tiro e +1d4 danno | Stanchezza e adrenalina cambiano tutto. |
 | 6+ | +2 al tiro e +1d6 danno | Fase finale: chi è ancora in piedi dà tutto. |
+
 :::box[Perché Solo i PG?]{type=info}
 I nemici NON ottengono il bonus Escalation. Il vantaggio è esclusivo
 dei Guardiani - coerente con il principio PbtA «sii fan dei PG».
@@ -977,6 +990,7 @@ catturato.
 | Immobilizzato | Non puoi muoverti o schivare. Attacchi contro di te hanno +2. | Finché liberato |
 | In Fiamme | 1d6 danni a inizio round. Azione completa per spegnerti (tira +CUO). | Finché spento |
 | Avvelenato | 1d4 danni a inizio round, -1 a tutti i tiri. | Finché curato o 1d6 round |
+
 Quando i tuoi PF scendono a 0, non muori immediatamente. Sei Morente -
 sospeso tra la vita e ciò che c'è dopo. In quel momento, tiri l'Ultimo
 Respiro: il tiro più importante del gioco.
@@ -1000,6 +1014,7 @@ sfortuna.
 | Hai un Legame L2+ con qualcuno presente | +1 | Il pensiero di chi ami ti richiama indietro |
 | Hai Punti Fato disponibili (ne consumi 1) | +1 | Il destino non ha finito con te |
 | È la prima volta a 0 PF nella campagna | +1 | La morte non ti conosce ancora |
+
 **Bonus massimo: +4.** Con +4 il tasso di successo (10+) sale al 72,2%.
 Con +2 (caso tipico: un alleato vicino e un Legame forte) è del 41,7%.
 La morte rimane possibile, ma diventa più rara quando il gruppo è coeso
@@ -1016,6 +1031,7 @@ e preparato.
 | 10--11 | Stabilizzato. Non muori, ma sei incosciente a 0 PF. Richiedi cure mediche o magia per tornare cosciente. Se non curato entro 1 ora = morte. |
 | 7--9 | Scelta Difficile. La Morte ti offre un patto. Il Custode presenta 2 opzioni: sopravvivi MA perdi qualcosa (un arto, un senso, dei ricordi, un Legame azzerato permanentemente) OPPURE sopravvivi MA devi un debito alla Morte (un compito, un'anima sostitutiva, un favore da riscuotere nel momento peggiore). |
 | 6-- | Morte. Lo spirito lascia il corpo. Il PG è morto. Il giocatore deve creare un nuovo personaggio. Eccezione: gli alleati possono tentare la resurrezione (Avalon L5 o Mictlan L5), ma è un rituale difficile, raro e costoso. |
+
 :::box[Esempio: Ultimo Respiro - La Scelta di Elena]{type=info}
 Elena (Mictlan, 29 PF) scende a 0 PF dopo il colpo del vampiro
 antico. Tira Ultimo Respiro.

@@ -1,7 +1,7 @@
 ---
 title: "Indice Completo"
 chapter: 33
-part: "Parte VIII"
+part: "Parte VII: Appendici"
 section: "Appendici"
 epigraph: "Ogni indice è una mappa. Ogni mappa è una promessa."
 tags: []
@@ -12,50 +12,50 @@ version: 3.2
 ## Indice Completo del Manuale v3.2
 
 
-| Argomento | Sezione | Capitolo |
+| Argomento | Parte | Capitolo |
 |---|---|---|
-| Ambientazione Milano | Parte I | Cap. 1 |
-| Anelli di Custodia | Parte I | Cap. 2 |
-| Avalon (Casata) | Parte II | Cap. 3 |
-| Umbra (Casata) | Parte II | Cap. 3 |
-| Ife (Casata) | Parte II | Cap. 3 |
-| Mictlan (Casata) | Parte II | Cap. 3 |
-| Corruzione Espansa (M1) | Parte II | Cap. 3 |
-| Mossa Esclusiva per Casata | Parte II | Cap. 3 |
-| Creazione Personaggio (9 Passi) | Parte II | Cap. 4 |
-| Caratteristiche | Parte III | Cap. 5 |
-| Tiro 2d6 Core | Parte III | Cap. 5 |
-| 12 Mosse Base | Parte III | Cap. 6 |
-| 60 Poteri (15 per Casata) | Parte IV | Cap. 7-10 |
-| Combattimento (M3, M3b) | Parte III | Cap. 5 |
-| Escalation Die (M4) | Parte VI | Cap. 5, 20 |
-| La Milano Sotterranea | Parte V | Cap. 11 |
-| Nexus del Duomo | Parte V | Cap. 11 |
-| Le 5 Linee Ley | Parte V | Cap. 11 |
-| 12 Quartieri Dettagliati (M13) | Parte V | Cap. 12 |
-| 5 Fazioni + Reputazione (M18) | Parte V | Cap. 13, 24 |
-| 20 Hook Avventure | Parte V | Cap. 14 |
-| Session Zero (M24) | Parte VI | Cap. 15 |
-| Principi del Custode | Parte VI | Cap. 16 |
-| Mosse del Custode | Parte VI | Cap. 17 |
-| Doom Clock Espanso (M21) | Parte VI | Cap. 18 |
-| Creare Sessioni + Generatore (M20) | Parte VI | Cap. 19 |
-| Bilanciamento Combattimento (M10) | Parte VI | Cap. 20 |
-| Gruppi Piccoli (M7) | Parte VI | Cap. 15, 20 |
-| XP e Avanzamento (M8) | Parte VI | Cap. 21 |
-| Milestone Personali (M17) | Parte VI | Cap. 21 |
-| 6 Mosse Avanzate (M19) | Parte VI | Cap. 22 |
-| 12 Attività Downtime (M16) | Parte VI | Cap. 23 |
-| Sistema Reputazione (M18) | Parte VI | Cap. 24 |
-| Safety Tools Completi | Parte VI | Cap. 25 |
-| Bestiario 30 Creature (M14) | Parte VII | Cap. 26 |
-| Campagna 8 Sessioni (M15) | Parte VII | Cap. 27 |
-| 3 One-Shot | Parte VII | Cap. 28 |
-| Glossario | Parte VIII | Cap. 29 |
-| Quick Reference Giocatori | Parte VIII | Cap. 30 |
-| Quick Reference Custode | Parte VIII | Cap. 31 |
-| FAQ | Parte VIII | Cap. 32 |
-| Indice Completo | Parte VIII | Cap. 33 |
+| Ambientazione Milano | Parte I | Cap. 1  |
+| Anelli di Custodia | Parte I | Cap. 2  |
+| Avalon (Casata) | Parte I | Cap. 3  |
+| Umbra (Casata) | Parte I | Cap. 3  |
+| Ife (Casata) | Parte I | Cap. 3  |
+| Mictlan (Casata) | Parte I | Cap. 3  |
+| Corruzione Espansa (M1) | Parte I | Cap. 3  |
+| Mossa Esclusiva per Casata | Parte I | Cap. 3  |
+| Creazione Personaggio (9 Passi) | Parte I | Cap. 4  |
+| Caratteristiche | Parte II | Cap. 5  |
+| Tiro 2d6 Core | Parte II | Cap. 5  |
+| 12 Mosse Base | Parte II | Cap. 6  |
+| 60 Poteri (15 per Casata) | Parte III | Cap. 7-10  |
+| Combattimento (M3, M3b) | Parte II | Cap. 5  |
+| Escalation Die (M4) | Parte II | Cap. 5, 20  |
+| La Milano Sotterranea | Parte IV | Cap. 11  |
+| Nexus del Duomo | Parte IV | Cap. 11  |
+| Le 5 Linee Ley | Parte IV | Cap. 11  |
+| 12 Quartieri Dettagliati (M13) | Parte IV | Cap. 12  |
+| 5 Fazioni + Reputazione (M18) | Parte IV | Cap. 13, 24  |
+| 20 Hook Avventure | Parte IV | Cap. 14  |
+| Session Zero (M24) | Parte V | Cap. 15  |
+| Principi del Custode | Parte V | Cap. 16  |
+| Mosse del Custode | Parte V | Cap. 17  |
+| Doom Clock Espanso (M21) | Parte V | Cap. 18  |
+| Creare Sessioni + Generatore (M20) | Parte V | Cap. 19  |
+| Bilanciamento Combattimento (M10) | Parte V | Cap. 20  |
+| Gruppi Piccoli (M7) | Parte V | Cap. 15, 20  |
+| XP e Avanzamento (M8) | Parte V | Cap. 21  |
+| Milestone Personali (M17) | Parte V | Cap. 21  |
+| 6 Mosse Avanzate (M19) | Parte V | Cap. 22  |
+| 12 Attività Downtime (M16) | Parte V | Cap. 23  |
+| Sistema Reputazione (M18) | Parte V | Cap. 24  |
+| Safety Tools Completi | Parte V | Cap. 25  |
+| Bestiario 30 Creature (M14) | Parte VI | Cap. 26  |
+| Campagna 8 Sessioni (M15) | Parte VI | Cap. 27  |
+| 3 One-Shot | Parte VI | Cap. 28  |
+| Glossario | Parte VII | Cap. 29  |
+| Quick Reference Giocatori | Parte VII | Cap. 30  |
+| Quick Reference Custode | Parte VII | Cap. 31  |
+| FAQ | Parte VII | Cap. 32  |
+| Indice Completo | Parte VII | Cap. 33  |
 
 ### Tracker Modifiche (storico, fino a v3.2)
 

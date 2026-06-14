@@ -1,7 +1,8 @@
 ---
 title: "Le 12 Attività di Downtime"
 chapter: 23
-part: "Parte VI — Gestire la Campagna"
+part: "Parte V: Guida per il Custode"
+section: "Guida per il Custode"
 epigraph: "Milano non smette mai di muoversi. Nemmeno i suoi guardiani."
 status: complete
 version: 3.2
@@ -9,7 +10,7 @@ version: 3.2
 
 ## Le 12 Attività di Downtime
 
-Tra una missione e l'altra, i Guardiani vivono. Il **Downtime** è il tempo tra le avventure — giorni, settimane o mesi dove i PG si riposano, si preparano e coltivano la propria vita.
+Tra una missione e l'altra, i Guardiani vivono. Il **Downtime** è il tempo tra le avventure, giorni, settimane o mesi dove i PG si riposano, si preparano e coltivano la propria vita.
 
 Ogni PG può scegliere **1 attività di Downtime** per ogni periodo tra sessioni (il Custode decide quanto tempo passa). Alcune attività richiedono un tiro; altre hanno effetti automatici.
 
@@ -59,7 +60,7 @@ Ogni PG può scegliere **1 attività di Downtime** per ogni periodo tra sessioni
 
 Guadagni denaro. Copertura mantenuta. Nessun beneficio meccanico ma il PG mantiene la propria vita profana.
 
-*Richiesto 1 volta ogni 3 sessioni o la copertura salta — con conseguenze narrative.*
+*Richiesto 1 volta ogni 3 sessioni o la copertura salta, con conseguenze narrative.*
 :::
 
 :::box[5. Meditazione]{type=info}
@@ -93,7 +94,7 @@ Guadagni denaro. Copertura mantenuta. Nessun beneficio meccanico ma il PG mantie
 
 **10+** Un Legame a scelta sale di 1 livello (max L3).
 **7-9** Il Legame non sale ma il PNG è grato (+1 forward alla prossima interazione).
-**6-** Qualcosa va storto — il Legame è messo alla prova narrativamente.
+**6-** Qualcosa va storto: il Legame è messo alla prova narrativamente.
 :::
 
 :::box[9. Creare Artefatto]{type=info}

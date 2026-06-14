@@ -1,12 +1,13 @@
 ---
 title: "Quick Reference Custode"
 chapter: 31
-part: "Parte VIII — Riferimenti"
+part: "Parte VII: Appendici"
+section: "Appendici"
 status: complete
 version: 3.2
 ---
 
-## Quick Reference — Custode
+## Quick Reference: Custode
 
 *Stampabile. Una pagina con tutto il necessario per arbitrare.*
 
@@ -33,6 +34,7 @@ Attiva la Casata • (+ qualsiasi mossa che segua dalla fiction)
 :::
 
 :::box[BILANCIAMENTO COMBATTIMENTO]{type=warn}
+
 | Difficoltà | Setup | LS Totale | Round Attesi |
 |---|---|---|---|
 | Facile | 3-4 deboli (LS 1-2) | = livello gruppo | 2-3 |
@@ -95,17 +97,19 @@ Clock globale e permanente. Misura quanto i civili sospettano della magia.
 :::
 
 :::box[SCALE RISORSE v3.2]{type=info}
+
 | Casata | Risorsa | Penalità parziale | Limite |
 |---|---|---|---|
 | Avalon | Stress | S8-9: poteri +1 costo | S10: doppio costo + Sfidare Pericolo |
 | Umbra | Corruzione | C6: L3+ +1 Corr. / C7: L2+ +1 Corr. | C8: Trasformazione |
 | Ife | Stress | S8-9: poteri +1 costo | S10: doppio costo + Sfidare Pericolo |
-| Mictlan | PF | — | PF 0: Ultimo Respiro |
+| Mictlan | PF | - | PF 0: Ultimo Respiro |
 
 **Mictlan PF = 28 + (FOR × 1).** Recupera 1d4 PF post-scontro (Resilienza della Soglia).
 :::
 
-:::box[LEGAMI — SCALA]{type=info}
+:::box[LEGAMI: SCALA]{type=info}
+
 | Livello | Nome | Bonus |
 |---|---|---|
 | L1 | Conoscente | +1 a tiri di Aiutare quel PNG |

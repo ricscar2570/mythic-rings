@@ -1,7 +1,8 @@
 ---
 title: "Mosse Base"
 chapter: 6
-part: "Parte III — Le Regole"
+part: "Parte II: Le Regole"
+section: "Le Regole"
 epigraph: "Le mosse non sono regole. Sono il linguaggio con cui la storia risponde alle tue scelte."
 status: complete
 version: 3.2
@@ -9,7 +10,7 @@ version: 3.2
 
 ## La Filosofia delle Mosse
 
-Le mosse non sono semplicemente meccaniche — sono strumenti narrativi. Un **7-9** non è un "mezzo successo": è un successo con complicazioni che rendono la storia più interessante. Un **6-** non è "hai fallito": è "qualcosa di inaspettato accade" che spinge la narrazione in direzioni imprevedibili.
+Le mosse non sono semplicemente meccaniche, sono strumenti narrativi. Un **7-9** non è un "mezzo successo": è un successo con complicazioni che rendono la storia più interessante. Un **6-** non è "hai fallito": è "qualcosa di inaspettato accade" che spinge la narrazione in direzioni imprevedibili.
 
 Il Custode non chiama mai una mossa per nome. I giocatori descrivono azioni, e le mosse emergono dalla fiction. "Esamino la scena del crimine" attiva Investigare. "Gli pianto un pugno" attiva Attaccare. **La narrazione viene sempre prima della meccanica.**
 
@@ -49,14 +50,14 @@ Il Custode non chiama mai una mossa per nome. I giocatori descrivono azioni, e l
 *Il danno base dipende dall'arma. Il bonus +1d6 del 10+ si aggiunge al danno dell'arma.*
 :::
 
-:::box[💡 *Esempio: Attacco in Mischia*]{type=example}
+:::box[💡 Esempio: Attacco in Mischia]{type=example}
 *Marco (FOR +2): "Carico il ghoul con la mazza da baseball, mirando alla testa!"*
 
 *Custode: "Ghoul ti vede arrivare, ti ringhia contro. Tira Attaccare +FOR."*
 
 *Marco tira: 2d6+2 = 9 (7-9)*
 
-*Custode: "Colpisci in pieno — 1d8 danno, il cranio scricchiola. Ma il ghoul ti afferra il braccio prima che tu possa ritirarti. I suoi artigli affondano nella spalla: 1d6 danno a te. Sei ancora faccia a faccia con lui."*
+*Custode: "Colpisci in pieno, 1d8 danno, il cranio scricchiola. Ma il ghoul ti afferra il braccio prima che tu possa ritirarti. I suoi artigli affondano nella spalla: 1d6 danno a te. Sei ancora faccia a faccia con lui."*
 :::
 
 ## 2. Difendere
@@ -102,12 +103,12 @@ Il Custode non chiama mai una mossa per nome. I giocatori descrivono azioni, e l
 **6-** Il pericolo si realizza pienamente. Il Custode fa una mossa dura.
 :::
 
-:::box[💡 *Sfidare Pericolo — Tre Esempi Rapidi*]{type=example}
-*Sofia scala un edificio sotto il fuoco: "Sfidare Pericolo +CUO" — riflessi per schivare.*
+:::box[💡 Sfidare Pericolo: Tre Esempi Rapidi]{type=example}
+*Sofia scala un edificio sotto il fuoco: "Sfidare Pericolo +CUO", riflessi per schivare.*
 
-*Luca mantiene la concentrazione mentre un demone urla: "Sfidare Pericolo +MEN" — resistere al panico.*
+*Luca mantiene la concentrazione mentre un demone urla: "Sfidare Pericolo +MEN", resistere al panico.*
 
-*Amara convince il suo anello a non bruciare: "Sfidare Pericolo +FAT" — intuizione magica.*
+*Amara convince il suo anello a non bruciare: "Sfidare Pericolo +FAT", intuizione magica.*
 :::
 
 ## 4. Leggere Situazione
@@ -201,7 +202,7 @@ Il Custode non chiama mai una mossa per nome. I giocatori descrivono azioni, e l
 
 **6-** Il potere fallisce completamente MA paghi il costo comunque. Il Custode fa una mossa (spesso: la magia va fuori controllo o produce l'effetto opposto).
 
-*Regola v3.2: a Stress 10 e ad alta Corruzione i poteri non sono bloccati ma diventano progressivamente più costosi e rischiosi (vedi Cap. 5 — Stress e Corruzione). I poteri L1 gratuiti Umbra e l'Ultimo Respiro restano sempre disponibili.*
+*Regola v3.2: a Stress 10 e ad alta Corruzione i poteri non sono bloccati ma diventano progressivamente più costosi e rischiosi (vedi Cap. 5, Stress e Corruzione). I poteri L1 gratuiti Umbra e l'Ultimo Respiro restano sempre disponibili.*
 :::
 
 :::box[Armi Magiche in Mischia]{type=rule}

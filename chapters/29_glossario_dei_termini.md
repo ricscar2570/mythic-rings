@@ -1,7 +1,7 @@
 ---
 title: "Glossario dei Termini"
 chapter: 29
-part: "Parte VII"
+part: "Parte VII: Appendici"
 section: "Appendici"
 epigraph: "Le parole hanno peso. Usatele con cura."
 tags: []

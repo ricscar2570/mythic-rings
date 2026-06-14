@@ -1,7 +1,7 @@
 ---
 title: "Safety Tools"
 chapter: 25
-part: "Parte V"
+part: "Parte V: Guida per il Custode"
 section: "Guida per il Custode"
 epigraph: "Un gioco sicuro è un gioco migliore."
 tags: []
@@ -51,9 +51,9 @@ evoca.
 
 ## *Ora vai. Milano ha bisogno del suo Custode.*
 
-## ⟡ MYTHIC RINGS v3.0 ⟡
+## ⟡ MYTHIC RINGS v3.2 ⟡
 
-PARTE VII
+PARTE VI
 
 *Bestiario & Avventure*
 

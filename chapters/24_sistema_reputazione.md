@@ -1,7 +1,7 @@
 ---
 title: "Sistema Reputazione"
 chapter: 24
-part: "Parte V"
+part: "Parte V: Guida per il Custode"
 section: "Guida per il Custode"
 epigraph: "La reputazione è ciò che la gente dice di te quando non ci sei."
 tags: []
@@ -26,6 +26,7 @@ Società del Velo). Inizia a **0 (Sconosciuto)**.
 | +1 / +2 | Rispettato | La fazione è cordiale. Accesso a informazioni base, prezzi equi. |
 | +3 / +4 | Fidato | Accesso alle risorse della fazione. Aiuto attivo in missioni. PNG alleati disponibili. |
 | +5 | Campione | Eroe della fazione. Influenza sulle loro decisioni. Accesso a segreti, artefatti, missioni speciali. |
+
 ## Modificare la Reputazione
 
 **Azioni dirette:** completare una missione per/contro una fazione:

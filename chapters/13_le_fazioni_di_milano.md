@@ -1,7 +1,7 @@
 ---
 title: "Le Fazioni di Milano"
 chapter: 13
-part: "Parte IV"
+part: "Parte IV: Milano Mitica"
 section: "Milano Mitica"
 epigraph: "In guerra, non sai chi sono i tuoi nemici finché non ti sparano alle spalle."
 tags: []
@@ -34,6 +34,7 @@ ostile.
 | Corte dei Vampiri | Contessa Adriana | Sopravvivenza e influenza | Manipolazione sociale, ricchezza | Contatti profani, finanziamenti |
 | Cerchio delle Streghe | Nessuno (democratico) | Libertà magica | Rituali collettivi, protezione reciproca | Rituali, ingredienti, profezie |
 | Società del Velo | Dottor Massimiliano Sforza | Mantenere il Velo (lato profano) | Cover-up, disinformazione, media | Copertura, identità false, media |
+
 Custodi di Milano
 
 Circa **40 Guardiani attivi** organizzati in celle da 3-5, supportati da

@@ -1,7 +1,7 @@
 ---
 title: "I Custodi e gli Anelli di Custodia"
 chapter: 2
-part: "Parte I"
+part: "Parte I: Il Mondo di Mythic Rings"
 section: "Il Mondo di Mythic Rings"
 epigraph: "Un Anello non si sceglie. Ti sceglie."
 tags: []
@@ -145,6 +145,7 @@ sulle attitudini naturali di ciascun Guardiano:
 | Mediatore | Diplomazia, negoziazione, gestione Consapevoli | Avalon, Ife | Negoziare tregua con vampiri, calmare un Consapevole |
 | Sigillatore | Chiusura Porte Dimensionali, rituali di contenimento | Ife, Mictlan | Sigillare una Porta in metro Loreto |
 | Ombra | Infiltrazione, spionaggio, operazioni coperte | Umbra | Infiltrarsi nella Fratellanza dei Caduti |
+
 Questi ruoli sono informali e flessibili. Un Guardiano può ricoprire più
 ruoli in momenti diversi, e le missioni più complesse richiedono squadre
 miste. I PG non devono scegliere un ruolo alla creazione del personaggio
@@ -406,6 +407,7 @@ nessuno è mai riuscito a spezzare.
 | Anello di Umbra | Onice nero opaco, superficie liscia | Assorbe la luce. Non riflette nulla. Le dita intorno ad esso sembrano più scure, come se l'ombra fosse più densa. | Freddo leggero, costante. Come indossare un frammento di notte. Nei momenti di pericolo, il freddo diventa gelido - un avvertimento. Quando il portatore è nascosto, l'anello sembra quasi scomparire. |
 | Anello di Ife | Giada viva, verde intenso | La superficie ha una texture organica, come corteccia. Pulsa visibilmente - un battito lento, regolare, come un cuore vegetale. A volte sembra crescere piccoli germogli. | Vibrazione costante, come tenere un uccellino nel palmo. Nei pressi di piante e animali, la vibrazione si intensifica. In luoghi morti o contaminati, si affievolisce fino a sembrare un grido silenzioso. |
 | Anello di Mictlan | Ossidiana nera lucida, bordi taglienti | Superficie liscia come uno specchio nero. Chi ci guarda dentro vede per un istante il proprio riflesso invecchiato - o il volto di qualcuno che non c'è più. | Peso. Non è pesante fisicamente, ma il portatore sente un peso esistenziale - la consapevolezza costante della mortalità. Vicino ai morti o ai morenti, l'anello sussurra. Non parole - impressioni. Nomi. Ultimi pensieri. |
+
 Il Prezzo del Potere
 
 Ogni Anello conferisce poteri straordinari, ma ogni potere ha un costo.
@@ -420,6 +422,7 @@ filosofia profonda di ciascun Anello.
 | Umbra | Corruzione | 0 - 8 | Trasformazione in creatura d'ombra (PERDITA PG) | Atti di Redenzione (max 1/sessione), Rituale di Purificazione durante downtime |
 | Ife | Stress | 0 - 10 | Burnout: come Avalon | Come Avalon. In più: contatto con natura riduce -1 Stress aggiuntivo |
 | Mictlan | Punti Ferita | 28+(FOR×1) | Morente: tira Ultimo Respiro | 1d4 per notte, guarigione magica, mossa Riprendersi. Sangue Tenace: può convertire parte del costo PF in Stress |
+
 :::box[La Filosofia del Costo]{type=info}
 Ogni costo racconta una storia.
 **Avalon e Ife** pagano in Stress perché canalizzare la Luce pura o
@@ -572,6 +575,7 @@ decidere cosa l'umanità può sapere?
 | Filosofia | L'ignoranza protegge | La conoscenza libera | Entrambe le posizioni hanno merito |
 | Metodi | Difesa, segretezza, ordine | Attacco, esposizione, caos | I metodi della Fratellanza sono pericolosi e irresponsabili |
 | Debolezza | Rigidi, segreti, a volte autoritari | Fanatici, violenti, disposti a sacrificare innocenti | Entrambi hanno punti ciechi morali |
+
 :::box[Nota per il Custode: La Fratellanza Come Antagonista]{type=info}
 La Fratellanza funziona meglio come antagonista quando i PG possono
 capire le loro ragioni, anche se non le condividono. Evita di

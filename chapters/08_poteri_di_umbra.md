@@ -1,13 +1,14 @@
 ---
 title: "Poteri di Umbra"
 chapter: 8
-part: "Parte IV — Le Quattro Casate"
+part: "Parte III: Le Quattro Casate"
+section: "Le Quattro Casate"
 epigraph: "Le ombre non mentono. Mostrano solo ciò che la luce non vuole vedere."
 status: complete
 version: 3.2
 ---
 
-## Poteri di Umbra — L'Abisso che Sussurra
+## Poteri di Umbra: L'Abisso che Sussurra
 
 Ombre, inganno, infiltrazione, controllo. Gli Umbra sono fantasmi urbani, manipolatori di percezioni, tessitori di paura. I loro poteri nascondono, ingannano, feriscono nell'oscurità.
 
@@ -15,20 +16,20 @@ Ombre, inganno, infiltrazione, controllo. Gli Umbra sono fantasmi urbani, manipo
 
 **Caratteristica Poteri:** +FAT.
 
-:::box[Regola v3.2 — Corruzione Umbra]{type=danger}
+:::box[Regola v3.2: Corruzione Umbra]{type=danger}
 I poteri **L1 sono sempre gratuiti** (nessun costo Corruzione). Da L2 in su il costo è indicato nel box del potere.
 
 **Penalità Progressiva Corruzione** *(v3.2)*:
 - **Corruzione 6:** I poteri L3+ costano +1 Corruzione aggiuntiva.
 - **Corruzione 7:** I poteri L2+ costano +1 Corruzione aggiuntiva. I poteri L1 restano al costo normale.
-- **Corruzione 8 — Trasformazione:** Automatica e immediata. Il personaggio è perduto.
+- **Corruzione 8, Trasformazione:** Automatica e immediata. Il personaggio è perduto.
 
-*L'Umbra non viene bloccata — viene resa più costosa man mano che si avvicina al limite. Ogni uso è una scelta drammatica consapevole.*
+*L'Umbra non viene bloccata, viene resa più costosa man mano che si avvicina al limite. Ogni uso è una scelta drammatica consapevole.*
 
 Per ridurre la Corruzione: vedi Capitolo 11 (Riposo Vigile, Rituale Purificazione, Atto di Redenzione).
 :::
 
-## Livello 1 — Iniziato
+## Livello 1: Iniziato
 
 :::box[Fondersi nelle Ombre]{type=casata_umbra}
 **【 Livello 1 】**
@@ -66,7 +67,7 @@ Occhi diventano completamente neri (inquietante). Vedi perfettamente al buio com
 *Potere sempre utile. Il malus sociale è narrativo, non meccanico.*
 :::
 
-## Livello 2 — Guardiano
+## Livello 2: Guardiano
 
 :::box[Passo Ombra]{type=casata_umbra}
 **【 Livello 2 】**
@@ -106,14 +107,14 @@ Crei un'illusione visiva complessa: camuffa il tuo aspetto, crea un'immagine fan
 **6-** Velo traballante: evidente ad occhio attento, -1 a ingannare.
 :::
 
-## Livello 3 — Veterano
+## Livello 3: Veterano
 
 :::box[Suggestione]{type=casata_umbra}
 **【 Livello 3 】**
 
 **Costo:** +3 Corruzione | **Range:** Vicino | **Durata:** Conversazione | **Tiro:** Usare Potere +FAT (VS Resistere +MEN bersaglio)
 
-Suggestione telepatica. Pianti un pensiero nella mente del bersaglio — lui crede sia idea propria. Non può forzare azioni suicide o contro la natura profonda del bersaglio. Più è "naturale", più è probabile il successo.
+Suggestione telepatica. Pianti un pensiero nella mente del bersaglio, lui crede sia idea propria. Non può forzare azioni suicide o contro la natura profonda del bersaglio. Più è "naturale", più è probabile il successo.
 
 **10+** Suggestione piena: il pensiero attecchisce, il bersaglio agisce come se fosse sua idea.
 **7-9** Suggestione parziale: agisce ma con esitazione, +1 tiro successivo per resistere.
@@ -146,7 +147,7 @@ Crei una zona di **oscurità assoluta**. La luce non penetra. Creature senza vis
 **6-** Pozzo debole: penombra (-1), non vera oscurità.
 :::
 
-## Livello 4 — Maestro
+## Livello 4: Maestro
 
 :::box[Frammentare]{type=casata_umbra}
 **【 Livello 4 】**
@@ -184,7 +185,7 @@ Il corpo diventa ombra vivente. Semi-intangibile, terrificante. Corpo = fumo ner
 **6-** Forma parziale: solo +2 Armatura e semi-trasparenza.
 :::
 
-## Livello 5 — Leggenda
+## Livello 5: Leggenda
 
 :::box[Legione]{type=casata_umbra}
 **【 Livello 5 】**

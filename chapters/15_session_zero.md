@@ -1,7 +1,7 @@
 ---
 title: "Session Zero"
 chapter: 15
-part: "Parte V"
+part: "Parte V: Guida per il Custode"
 section: "Guida per il Custode"
 epigraph: "Prima di giocare, parlate. Dopo aver parlato, giocate."
 tags: []
@@ -33,6 +33,7 @@ le opzioni e discutete insieme:
 | Horror | L'orrore è reale e pericoloso. PF bassi, minacce letali, tensione costante. Nessuno è al sicuro. |
 | Indagine | Focus su misteri, indizi, deduzione. Combattimento è raro e come ultima risorsa. |
 | Misto (consigliato) | Combina elementi. Sessioni eroiche, sessioni noir, momenti horror. Varietà naturale. |
+
 ## Passo 2: Aspettative e Limiti
 
 Discutete apertamente di cosa volete e cosa **non** volete nel gioco.
@@ -121,15 +122,17 @@ costruire subito.
 Fai a ogni giocatore queste domande e annota le risposte. Diventeranno
 materiale per le sessioni future:
 
-| *Qual è la cosa più spaventosa che il tuo personaggio ha visto da |
-
 :::quote
-quando è diventato Guardiano?*
-*C'è qualcuno nel mondo profano che sai di dover proteggere, anche a
-costo della vita?*
-*Cosa pensi del Velo? È giusto nascondere la verità ai profani?*
-*Se potessi cambiare una cosa dei Custodi, cosa cambieresti?*
-*Qual è il tuo luogo preferito a Milano? E il luogo che eviti?*
+Qual è la cosa più spaventosa che il tuo personaggio ha visto da quando è diventato Guardiano?
+
+C'è qualcuno nel mondo profano che sai di dover proteggere, anche a costo della vita?
+
+Cosa pensi del Velo? È giusto nascondere la verità ai profani?
+
+Se potessi cambiare una cosa dei Custodi, cosa cambieresti?
+
+Qual è il tuo luogo preferito a Milano? E il luogo che eviti?
+:::
 
 
 ## Passo 10: Il Patto del Tavolo

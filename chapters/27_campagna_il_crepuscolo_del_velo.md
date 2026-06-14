@@ -1,7 +1,7 @@
 ---
-title: "Campagna — Il Crepuscolo del Velo"
+title: "Campagna: Il Crepuscolo del Velo"
 chapter: 27
-part: "Parte VI"
+part: "Parte VI: Bestiario e Avventure"
 section: "Bestiario e Avventure"
 epigraph: "Il Velo sta cadendo. La domanda non è se, ma quando."
 tags: []
@@ -11,14 +11,11 @@ version: 3.2
 
 ## Campagna - Il Crepuscolo del Velo
 
-| *Una campagna in 8 sessioni. La Fratellanza dei Caduti ha trovato il |
-| modo di squarciare il Velo permanentemente. I Guardiani devono |
-| scoprire il piano, infiltrarsi, e affrontare una scelta che cambierà |
-
 :::quote
-Milano per sempre.*
-*Struttura: Richiamo → Indagine → Rivelazione → Tradimento → Punto di
-Non Ritorno → Discesa → Scelta → Climax / Epilogo.*
+Una campagna in 8 sessioni. La Fratellanza dei Caduti ha trovato il modo di squarciare il Velo permanentemente. I Guardiani devono scoprire il piano, infiltrarsi, e affrontare una scelta che cambierà Milano per sempre.
+
+Struttura: Richiamo → Indagine → Rivelazione → Tradimento → Punto di Non Ritorno → Discesa → Scelta → Climax / Epilogo.
+:::
 
 
 | \# | Titolo | Riassunto |
@@ -31,6 +28,7 @@ Non Ritorno → Discesa → Scelta → Climax / Epilogo.*
 | 6 | La Discesa | Sessione diversa in base alla scelta della Sessione 5. Se attacco: dungeon crawl nella base della Fratellanza. Trappole, Rinnegati, e scoperta che Vincenzo non è un semplice fanatico - ha un motivo personale (il Velo ha ucciso qualcuno che amava). Se rituale: corsa contro il tempo per radunare ingredienti e alleati. Negoziazione tesa con la Contessa Adriana. |
 | 7 | La Scelta | Il rituale inizia. Il Nexus trema. Il Velo si assottiglia visibilmente: i profani iniziano a vedere le creature, i fantasmi, le ombre. Il caos dilaga. I PG devono raggiungere il Nexus. Vincenzo offre una scelta: 'Unitevi a me. Il Velo è una prigione. L'umanità merita la verità.' Ha ragione? Ha torto? I PG decidono. |
 | 8 | Climax / Epilogo | L'esito dipende dalle scelte dei PG. Tre finali possibili: 1) Il Velo è salvo ma a un costo (sacrificio, perdite). 2) Il Velo è caduto e il mondo è cambiato per sempre. 3) Un compromesso: il Velo è diverso, più permeabile, e il mondo deve adattarsi. Epilogo: cosa succede ai PG, ai PNG, a Milano. |
+
 ## Sessione 1: Il Richiamo
 
 **Doom Clock:** 0→3
@@ -165,9 +163,11 @@ tempo reale.
 :::box[Vincenzo "Il Primo Caduto"]{type=info}
 *Ex Guardiano Avalon. Leader della Fratellanza dei Caduti. Motivato
 da dolore e ideali distorti.*
-**PF**     **Armatura**   **Attacco**   **Danno**   **LS**   **Tipo**
-45         2
-(max)        +CAR o +FAT   3d8         8        Umano / Boss Campagna
+
+| PF | Armatura | Attacco | Danno | LS | Tipo |
+|---|---|---|---|---|---|
+| 45 (max) | 2 | +CAR o +FAT | 3d8 | 8 | Umano / Boss Campagna |
+
 **Abilità:** Squarcio del Velo: 3d8 danno area Medio + breccia
 dimensionale (entità casuali emergono). Richiamo dei Caduti: evoca
 1d4 Rinnegati spettrali per round (LS 2 ciascuno). Campo Anti-Magia:

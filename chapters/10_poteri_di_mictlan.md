@@ -1,13 +1,14 @@
 ---
 title: "Poteri di Mictlan"
 chapter: 10
-part: "Parte IV — Le Quattro Casate"
+part: "Parte III: Le Quattro Casate"
+section: "Le Quattro Casate"
 epigraph: "La morte non è la fine. È una porta. E alcune porte si aprono dall'altro lato."
 status: complete
 version: 3.2
 ---
 
-## Poteri di Mictlan — La Soglia Eterna
+## Poteri di Mictlan: La Soglia Eterna
 
 Morte, spiriti, confine, transizione. I Mictlan sono psicopompi, medium, guardiani della soglia vita/morte. I loro poteri attraversano il Velo, evocano i morti, drenano la vita.
 
@@ -15,11 +16,11 @@ Morte, spiriti, confine, transizione. I Mictlan sono psicopompi, medium, guardia
 
 **Caratteristica Poteri:** +FAT.
 
-:::box[Sangue Tenace — Potere Passivo Gratuito]{type=casata_mictlan}
+:::box[Sangue Tenace: Potere Passivo Gratuito]{type=casata_mictlan}
 Quando il costo in PF di un potere ti porterebbe sotto il **40% dei PF massimi**, puoi scegliere di convertire metà del costo PF (arrotondato per difetto, minimo 1) in **+2 Stress**. Dichiaralo prima di pagare il costo. Questo potere è sempre attivo, nessun tiro richiesto.
 :::
 
-:::box[Resilienza della Soglia — Potere Passivo Gratuito]{type=casata_mictlan}
+:::box[Resilienza della Soglia: Potere Passivo Gratuito]{type=casata_mictlan}
 **Progettato per campagne ad alto combattimento senza guaritore.**
 
 Il Mictlan esiste sul confine tra vita e morte: impara a drenare energia anche dallo sforzo del combattimento stesso.
@@ -28,16 +29,16 @@ Il Mictlan esiste sul confine tra vita e morte: impara a drenare energia anche d
 
 **Limite di sessione:** Massimo **3 attivazioni per sessione**. Questo previene che il potere diventi banale nei party composti da soli Mictlan o in campagne ad altissimo volume di combattimento.
 
-**Limite di contesto:** Non funziona se nella scena è presente un guaritore attivo (Avalon o Ife) — il corpo impara a cavarsela da solo solo quando non ha alternative.
+**Limite di contesto:** Non funziona se nella scena è presente un guaritore attivo (Avalon o Ife), il corpo impara a cavarsela da solo solo quando non ha alternative.
 
-**Controindicazione narrativa:** il Custode può segnalare che un uso frequente di questa meccanica rende il personaggio progressivamente più a suo agio con la morte altrui — utile come spunto per l'arco personale.
+**Controindicazione narrativa:** il Custode può segnalare che un uso frequente di questa meccanica rende il personaggio progressivamente più a suo agio con la morte altrui, utile come spunto per l'arco personale.
 :::
 
-:::box[Regola v3.2 — Costi Mictlan]{type=danger}
+:::box[Regola v3.2: Costi Mictlan]{type=danger}
 **L1:** costo 1-3 PF (non 2-3 come nel manuale base). **Vedere Oltre il Velo:** 2 PF. **Parlare con i Morti:** 1 PF. **Tocco Gelo:** 2 PF. Questi valori sostituiscono quelli del manuale base e sono stati calibrati nel playtest v3.1.
 :::
 
-## Livello 1 — Iniziato
+## Livello 1: Iniziato
 
 :::box[Vedere Oltre il Velo]{type=casata_mictlan}
 **【 Livello 1 】**
@@ -73,7 +74,7 @@ Tocco che infligge il freddo della morte. Mano pallida cadaverica, brina sulla p
 **6-** 1d4 danno necrotico, Custode fa mossa.
 :::
 
-## Livello 2 — Guardiano
+## Livello 2: Guardiano
 
 :::box[Forma Spettrale]{type=casata_mictlan}
 **【 Livello 2 】**
@@ -115,7 +116,7 @@ Succhi energia vitale. I PF drenati ti curano (non superi PF massimi). Solo su c
 *Sinergia con Resilienza della Soglia: se usi Drain durante uno scontro in cui poi sconfiggi un avversario, il recupero post-combattimento sale a 1d6 PF invece di 1d4.*
 :::
 
-## Livello 3 — Veterano
+## Livello 3: Veterano
 
 :::box[Esercito]{type=casata_mictlan}
 **【 Livello 3 】**
@@ -153,7 +154,7 @@ Entri fisicamente nel Piano Spiriti. Esisti in entrambi i mondi simultaneamente.
 **6-** Confine instabile: funziona 1 round, poi ti espelle nel piano fisico.
 :::
 
-## Livello 4 — Maestro
+## Livello 4: Maestro
 
 :::box[Tocco della Morte]{type=casata_mictlan}
 **【 Livello 4 】**
@@ -191,7 +192,7 @@ Il tuo spirito lascia il corpo e possiede un bersaglio. Controlli il suo corpo (
 **6-** Possessione fallisce: espulso, bersaglio sa del tentativo.
 :::
 
-## Livello 5 — Leggenda
+## Livello 5: Leggenda
 
 :::box[Avatar della Morte]{type=casata_mictlan}
 **【 Livello 5 】**
@@ -220,7 +221,7 @@ Viaggi nel Piano Spiriti, trovi l'anima del morto, la riporti indietro. **Requis
 :::box[Maremoto]{type=casata_mictlan}
 **【 Livello 5 】**
 
-**Costo:** 20 PF (TUTTO rimanente, min 20) — probabilmente ti uccide | **Range:** Vista (raggio 50m) | **Durata:** Istantaneo | **Tiro:** Usare Potere +FAT
+**Costo:** 20 PF (TUTTO rimanente, min 20), probabilmente ti uccide | **Range:** Vista (raggio 50m) | **Durata:** Istantaneo | **Tiro:** Usare Potere +FAT
 
 Squarci il Velo tra vita e morte. Un'ondata di migliaia di spiriti urlanti emerge e travolge i viventi. **6d8 danno necrotico a tutti.** Terrore: tutti (amici + nemici) devono Resistere +MEN o fuggire per 1d4 round. Spiriti persistono per 1 ora (zona pericolosa).
 

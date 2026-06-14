@@ -1,7 +1,7 @@
 ---
 title: "Tre One-Shot"
 chapter: 28
-part: "Parte VI"
+part: "Parte VI: Bestiario e Avventure"
 section: "Bestiario e Avventure"
 epigraph: "Una notte può cambiare tutto."
 tags: []
@@ -110,9 +110,7 @@ affamato si è svegliato.
 
 Boss fight multi-fase: Vampiro Antico (LS 9, PF 45, Arm 2). Arena:
 cripta sotto il Nexus (magia amplificata, poteri PG costano -1 risorsa).
-## Fase 1:** forma umana, elegante, tenta di charmmare i PG. **Fase 2:
-forma bestiale, artigli e zanne, feroce. **Fase 3:** forma di nebbia, si
-rigenera e evoca sciami.
+**Fase 1:** forma umana, elegante, tenta di charmmare i PG. **Fase 2:** forma bestiale, artigli e zanne, feroce. **Fase 3:** forma di nebbia, si rigenera e evoca sciami.
 
 ## Risoluzione
 
@@ -124,9 +122,9 @@ vampiro vince, contamina il Nexus. Milano intera in pericolo.
 
 ## *Cosa incontreranno stasera i tuoi Guardiani?*
 
-## ⟡ MYTHIC RINGS v3.0 ⟡
+## ⟡ MYTHIC RINGS v3.2 ⟡
 
-PARTE VIII
+PARTE VII
 
 *Appendici*
 

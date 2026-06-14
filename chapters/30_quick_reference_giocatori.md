@@ -1,7 +1,7 @@
 ---
 title: "Quick Reference Giocatori"
 chapter: 30
-part: "Parte VII"
+part: "Parte VII: Appendici"
 section: "Appendici"
 epigraph: "Tutto ciò che serve, in una pagina."
 tags: []
@@ -45,6 +45,7 @@ version: 3.2
 | Investigare | +MEN | 10+: indizio chiaro + dettaglio. 7-9: indizio vago. |
 | Resistere | +variabile | 10+: resisti. 7-9: effetto ridotto. Reazione. |
 | Ultimo Respiro | +nulla | 10+: 1 PF. 7-9: scelta. 6-: morte. |
+
 :::box[DANNO & SALUTE]{type=info}
 **PF Iniziali:** 20 + (FOR × 2)
 **Armatura:** Riduce danno subito (max 2 per boss)

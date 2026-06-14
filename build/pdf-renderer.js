@@ -172,7 +172,7 @@ function buildCover() {
 <div class="cover-page">
   <div class="cover-eyebrow">Urban Fantasy · Milano Occulta</div>
   <div class="cover-title">Mythic<br>Rings</div>
-  <div class="cover-version">v 3.1</div>
+  <div class="cover-version">v3.2</div>
   <div class="cover-rule"></div>
   <div class="cover-subtitle">
     Guardiani di Milano<br>
@@ -244,7 +244,7 @@ function buildFullHTML(chaptersDir, cssPath) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
-  <title>Mythic Rings v3.1</title>
+  <title>Mythic Rings v3.2</title>
   <style>
 ${cssText}
   </style>

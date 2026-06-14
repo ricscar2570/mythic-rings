@@ -1,7 +1,7 @@
 ---
 title: "I Dodici Quartieri di Milano"
 chapter: 12
-part: "Parte IV"
+part: "Parte IV: Milano Mitica"
 section: "Milano Mitica"
 epigraph: "Ogni quartiere ha la sua anima. Alcuni ce l'hanno letteralmente."
 tags: []
@@ -33,6 +33,7 @@ improvvisare incontri.
 | Centrale / Pirelli | Avalon | Crocevia, portali, sorveglianza | Portale dimensionale instabile |
 | Chinatown / Via Sarpi | Neutrale | Commercio occulto internazionale | Draghi d'acqua nei canali sotterranei |
 | San Siro | Neutrale | Stadio come nexus emotivo | Entità che si nutre dell'euforia |
+
 :::box[🏛️ Duomo / Centro]{type=info}
 Casata Dominante: Neutrale (Territorio del Nexus)
 *\"Qui convergono tutte le strade. E tutte le ombre.\"*
@@ -120,6 +121,7 @@ approvazione di Don Aurelio.
 | 10 | Un senzatetto nella piazza è in realtà un Guardiano caduto. Ha informazioni vitali ma è incoerente. |
 | 11 | Il deposito della Rinascente è stato violato. Manca un artefatto specifico. |
 | 12 | Le cinque Linee Ley brillano simultaneamente. Nella Cripta, la pietra nera si è spaccata. |
+
 :::box[🎨 Brera]{type=info}
 Casata Dominante: Avalon (Luce, Giustizia, Arte)
 *\"La verità si nasconde nei quadri. Basta saper guardare.\"*
@@ -207,6 +209,7 @@ consultazione.
 | 10 | Un giovane artista di strada disegna simboli Umbra sul marciapiede. Incosciente o agente? |
 | 11 | L'Anello di un Guardiano reagisce nella Pinacoteca, vibrando davanti a un quadro specifico. |
 | 12 | Due Anziani sono in disaccordo pubblico. La Cerchia rischia la spaccatura. |
+
 :::box[🌙 Navigli]{type=info}
 Casata Dominante: Umbra (Ombra, Inganno, Segreti)
 *\"Le acque dei Navigli riflettono tutto tranne la verità.\"*
@@ -296,6 +299,7 @@ Tira Persuadere/Raggirare: su 10+ ottieni l'informazione completa, su
 | 10 | Un artefatto rubato viene messo in vendita al Mercato. Il proprietario è un Anziano. |
 | 11 | Le luci lungo i Navigli si spengono tutte contemporaneamente. Nell'oscurità, sussurri. |
 | 12 | Un Rinnegato emerge dall'acqua del canale, ferito e terrorizzato. Qualcosa lo insegue. |
+
 :::box[⚪ Porta Ticinese]{type=info}
 Casata Dominante: Umbra (Segreti, Sottocultura, Ribellione)
 *\"Le colonne di San Lorenzo hanno visto tutto. E non parlano.\"*
@@ -377,6 +381,7 @@ Un viaggio sotterraneo richiede 30 minuti e un tiro di Sfidare Pericolo
 | 10 | Un adolescente del Culto manifesta poteri magici spontanei durante una cerimonia. |
 | 11 | Urla dalle Colonne a mezzanotte. Quando i PG arrivano, trovano solo segni di bruciatura sull'erba. |
 | 12 | Qualcosa sotto le Colonne parla. Parole che solo chi ha Corruzione 3+ può sentire. |
+
 :::box[🌳 Parco Sempione]{type=info}
 Casata Dominante: Ife (Vita, Natura, Crescita)
 *\"Il verde è solo la superficie. Le radici vanno molto più in
@@ -464,6 +469,7 @@ sessione. Guardiani Ife recuperano 1d6 PF.
 | 10 | Il Castello Sforzesco viene chiuso per \"problemi strutturali\". In realtà le radici nelle Segrete si muovono. |
 | 11 | Un'ondata di polline innaturale dal parco copre il quartiere. Effetto: sogni vividi per tutti i residenti. |
 | 12 | La Grande Quercia brucia spontaneamente. Le fiamme sono verdi. Non è fuoco normale. |
+
 :::box[🏗️ Isola / Garibaldi]{type=info}
 Casata Dominante: Ife (Rinascita, Comunità, Memoria Verde)
 *\"Dove c'era la fabbrica, ora cresce il bosco. Ma la fabbrica
@@ -539,6 +545,7 @@ attività soprannaturali nell'area. Automatico, 1 volta per sessione.
 | 10 | Una pianta del Bosco Verticale cresce fino a invadere un appartamento occupato. Non è ostile - protegge qualcosa lì dentro. |
 | 11 | Black-out nell'intero quartiere. Le uniche luci: le piante del Bosco che brillano di verde. |
 | 12 | Un grattacielo in costruzione crolla parzialmente di notte. Nessun ferito, ma segni di artigli sul cemento. |
+
 :::box[🌺 Porta Venezia]{type=info}
 Casata Dominante: Ife (Guarigione, Diversità, Santuario)
 *\"Qui ogni ferita può guarire. Anche quelle dell'anima.\"*
@@ -621,6 +628,7 @@ negativa. 1 volta per sessione.
 | 10 | Un turista trova un libro della Libreria dell'Aldilà e inizia a vedere attraverso il Velo. |
 | 11 | La mutaforma del bar di Via Lecco viene ricattata: qualcuno conosce la sua vera identità. |
 | 12 | Le piante dei giardini si organizzano in una barricata durante la notte. Proteggono qualcosa. |
+
 :::box[⚓ Cimitero Monumentale]{type=info}
 Casata Dominante: Mictlan (Morte, Spiriti, Memoria)
 *\"I morti di Milano hanno molto da dire. Basta saper ascoltare.\"*
@@ -701,6 +709,7 @@ Morti con +1. Utilizzabile 1 volta per sessione.
 | 10 | Un turista fotografa un fantasma perfettamente visibile. La foto circola su Reddit. |
 | 11 | Un Rinnegato Mictlan tenta di usare la Cripta Visconti per un rituale proibito. |
 | 12 | Il Giardino delle Ossa si anima di giorno. Centinaia di scheletri. In pieno sole. |
+
 :::box[🏙️ City Life / Fiera]{type=casata_ife}
 Casata Dominante: Mictlan (Morte Sepolta, Progresso, Oblio)
 *\"Hanno costruito il futuro sulla tomba del passato. Il passato non
@@ -779,6 +788,7 @@ in tutta Milano. Richiede 10 minuti di concentrazione.
 | 10 | Il riscaldamento delle Tre Torri si spegne improvvisamente. Temperatura interna: -5°C in 10 minuti. |
 | 11 | Un giornalista indaga sulle \"presenze\" di City Life. Ha troppe informazioni per essere un profano. |
 | 12 | I morti sotto City Life si calmano improvvisamente. Silenzio totale. Questo è peggio. |
+
 :::box[🚂 Centrale / Pirelli]{type=info}
 Casata Dominante: Avalon (Sorveglianza, Portali, Giustizia)
 *\"La Stazione non è solo un punto di partenza. È anche un punto di
@@ -862,6 +872,7 @@ minacce attive in città.
 | 10 | Un biglietto del Treno Fantasma viene trovato in tasca a un PG. Nessuno sa come ci sia arrivato. |
 | 11 | I treni reali ritardano tutti di esattamente 7 minuti. È successo anche 7 anni fa. E 7 prima. |
 | 12 | Il portale si stabilizza brevemente. Dall'altra parte: Milano, ma diversa. Molto diversa. |
+
 :::box[🏮 Chinatown / Via Sarpi]{type=info}
 Casata Dominante: Neutrale (Commercio Occulto, Tradizioni Miste)
 *\"Ogni cultura ha i suoi mostri. Qui si incontrano tutti.\"*
@@ -942,6 +953,7 @@ all'Erboristeria. 1 acquisto per visita, max 2 visite per sessione.
 | 10 | Una delegazione magica giapponese arriva a Milano. Cercano Kenji. |
 | 11 | L'acqua nei canali sotto Chinatown diventa calda. Bollente. I Draghi fuggono. |
 | 12 | Nonna Chen chiede a un PG un favore personale. È la prima volta che chiede qualcosa a qualcuno. |
+
 :::box[⚽ San Siro]{type=info}
 Casata Dominante: Neutrale (Emozione Collettiva, Energia Grezza)
 *\"80.000 persone che urlano creano magia. Che lo sappiano o no.\"*

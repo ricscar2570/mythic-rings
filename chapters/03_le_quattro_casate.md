@@ -1,7 +1,7 @@
 ---
 title: "Le Quattro Casate"
 chapter: 3
-part: "Parte I"
+part: "Parte I: Il Mondo di Mythic Rings"
 section: "Il Mondo di Mythic Rings"
 epigraph: "Quattro Casate, quattro vie verso la verità. Nessuna è completamente giusta."
 tags: []
@@ -287,6 +287,7 @@ prezzo sale.
 | 5 | Sussurri dell'Ombra: il PG sente voci che suggeriscono azioni moralmente ambigue. Il Custode offre una tentazione per scena: se il PG la accetta, guadagna +1 forward ma la tentazione ha sempre un costo nascosto. | Tentazione 1/scena |
 | 7 | Forma Instabile: l'ombra del PG si muove indipendentemente - a volte fa gesti che il PG non sta facendo. -1 ongoing a CAR (le persone percepiscono qualcosa di sbagliato). | -1 ongoing CAR |
 | 8 | Trasformazione: il Guardiano diventa una Creatura d'Ombra. Perdita del PG. Il personaggio diventa un antagonista sotto il controllo del Custode. | PERDITA PG |
+
 **Recupero: Atto di Redenzione.** L'Umbra può ridurre la Corruzione di 1
 punto compiendo un atto significativamente altruista che contraddice
 direttamente la natura oscura dell'Ombra. Proteggere un innocente a
@@ -690,6 +691,7 @@ le altre Casate.
 | L3 | 3 PF | (2 PF + 2 Stress) | Poteri significativi. Il sangue dal naso è un segnale. |
 | L4 | 4 PF | (2 PF + 2 Stress) | Il corpo protesta. Pallore, tremori, vista sfocata. |
 | L5 | 6 PF | (3 PF + 2 Stress) | Poteri devastanti. Rischio reale di morte. |
+
 :::box[Sangue Tenace (Potere Passivo L1, Gratuito)]{type=info}
 **Quando usi un potere e il costo in PF ti porterebbe sotto il 40%
 dei PF massimi**, puoi scegliere di convertire metà del costo PF
@@ -847,6 +849,7 @@ gioco dovrebbe conoscere:
 | Umbra | Ife | Complementarità improbabile. L'empatia Ife vede oltre il cinismo Umbra; il pragmatismo Umbra protegge l'ingenuità Ife. Funzionano bene in coppia operativa. |
 | Umbra | Mictlan | Rispetto reciproco tra outsider. Entrambi capiscono cosa significhi essere temuti dagli altri. Spesso lavorano insieme nelle missioni più oscure che le altre Casate preferirebbero non conoscere. |
 | Ife | Mictlan | Vita e Morte: opposti che si completano. La tensione è filosofica, non personale. Gli Ife curano, i Mictlan accompagnano alla fine. Insieme, coprono l'intero ciclo dell'esistenza. |
+
 :::box[Nota per il Custode: Le Tensioni tra Casate]{type=info}
 Le tensioni tra Casate sono carburante narrativo, non ostacoli. Usale
 per creare scene memorabili: il momento in cui l'Avalon e l'Umbra

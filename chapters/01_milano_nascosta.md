@@ -1,7 +1,7 @@
 ---
 title: "Milano Nascosta"
 chapter: 1
-part: "Parte I"
+part: "Parte I: Il Mondo di Mythic Rings"
 section: "Il Mondo di Mythic Rings"
 epigraph: "Sotto ogni grande città dorme un orrore. Sopra ogni orrore vegliano gli eroi."
 tags: []
@@ -216,6 +216,7 @@ dei Caduti, vampiri, culti - desidera controllarlo.
 | Linea della Vita | Da Nord (Sempione) al Duomo | Natura, crescita, trasformazione. Risuona con la Casata Ife. | Le piante crescono più rigogliose, gli animali sono più attivi. |
 | Linea dei Morti | Da Sud (Monumentale) al Duomo | Morte, spiriti, confine. Risuona con la Casata Mictlan. | Il confine tra i vivi e i morti è più sottile. |
 | Linea del Fato | Da Sud-Est (Porta Romana) al Duomo | Destino, casualità, cambiamento. Non associata a nessuna Casata. | Eventi improbabili accadono più spesso. Coincidenze significative. |
+
 :::box[⚡ Il Nexus]{type=info}
 **Posizione:** Sotto Piazza Duomo, 30 metri di profondità.
 **Accesso:** Cripta segreta sotto il Duomo. Chiave custodita dalla

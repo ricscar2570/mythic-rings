@@ -1,7 +1,7 @@
 ---
 title: "Le Mosse del Custode"
 chapter: 17
-part: "Parte V"
+part: "Parte V: Guida per il Custode"
 section: "Guida per il Custode"
 epigraph: "Le mosse del Custode non sono punizioni. Sono conseguenze."
 tags: []
@@ -29,6 +29,7 @@ danno tempo per reagire) e **Mosse Hard** (conseguenze immediate).
 | Cattura qualcuno | PG o PNG preso ostaggio | \"Quando ti riprendi, sei in una stanza buia. Legato.\" |
 | Avanza il Doom Clock | Il piano nemico progredisce, il tempo stringe | \"Sentite un boato lontano. Il rituale è al secondo stadio.\" |
 | Attiva la Casata | L'ambiente reagisce alla Casata del PG | \"Umbra, le ombre qui ti sussurrano. Vuoi ascoltare?\" |
+
 Mosse Soft vs Hard
 
 :::box[Mossa Soft (Minaccia)]{type=info}
