@@ -15,7 +15,7 @@ Ombre, inganno, infiltrazione, controllo. Gli Umbra sono fantasmi urbani, manipo
 
 **Caratteristica Poteri:** +FAT.
 
-:::box[Regola v3.1 — Corruzione Umbra]{type=danger}
+:::box[Regola v3.2 — Corruzione Umbra]{type=danger}
 I poteri **L1 sono sempre gratuiti** (nessun costo Corruzione). Da L2 in su il costo è indicato nel box del potere.
 
 **Penalità Progressiva Corruzione** *(v3.2)*:

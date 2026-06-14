@@ -4,7 +4,7 @@ chapter: 21
 part: "Parte VI — Gestire la Campagna"
 epigraph: "Ogni cicatrice racconta una storia. Ogni storia ti cambia."
 status: complete
-version: 3.1
+version: 3.2
 ---
 
 ## XP e Avanzamento
@@ -37,7 +37,7 @@ A 5 XP, il PG sceglie **1** dei seguenti miglioramenti:
 - **Talento Speciale** (abilità custom, richiede approvazione Custode)
 - **1 Mossa Avanzata** (richiede Livello 3+, vedi Capitolo 22)
 
-:::box[Regola v3.1 — Nuovo Potere Casata]{type=info}
+:::box[Regola v3.2 — Nuovo Potere Casata]{type=info}
 I poteri si apprendono in ordine di livello: non puoi prendere un L3 se non hai tutti i L1 e L2. Eccezione: il Custode può permettere un salto narrativo (es. evento traumatico che sblocca potere più alto) con conseguenze storywise adeguate.
 :::
 

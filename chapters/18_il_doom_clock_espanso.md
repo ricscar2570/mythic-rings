@@ -6,7 +6,7 @@ section: "Guida per il Custode"
 epigraph: "Il tempo non aspetta. L'apocalisse nemmeno."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## Il Doom Clock Espanso

@@ -6,7 +6,7 @@ section: "Appendici"
 epigraph: "Tutto ciò che serve, in una pagina."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## Quick Reference - Giocatori

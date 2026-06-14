@@ -77,7 +77,65 @@ for (const f of files) {
   if (words < 100) warn(name, `Capitolo molto breve: ${words} parole`);
   if (words > 8000) warn(name, `Capitolo molto lungo: ${words} parole — considera di dividerlo`);
 
-  ok(name, `OK (${words} parole)`);
+  // ---- INVARIANTI DI CONTENUTO v3.2 (anti-regressione) ----
+  const C = fm.content;
+  const lines = C.split('\n');
+
+  // Tabelle: corruzione da reflow a larghezza fissa (spazi multipli dentro le celle)
+  lines.forEach((line, i) => {
+    if (/^\s*\|/.test(line) && /\|[^|]*\S {3,}\S[^|]*\|/.test(line)) {
+      err(name, `Riga ${i+1}: tabella corrotta (cella con spazi multipli interni)`);
+    }
+  });
+
+  // Tabelle: coerenza numero di pipe (header vs righe dati)
+  {
+    let hdr = null, inT = false;
+    for (let i = 0; i < lines.length; i++) {
+      const s = lines[i].trim();
+      if (/^\|?[\s:]*-{2,}.*\|/.test(s) && (s.match(/\|/g) || []).length >= 2) {
+        for (let j = i - 1; j >= 0; j--) {
+          const p = lines[j].trim();
+          if (p.startsWith('|')) { hdr = (p.match(/\|/g) || []).length; break; }
+          if (p === '') continue; else { hdr = null; break; }
+        }
+        inT = true; continue;
+      }
+      if (inT) {
+        if (s.startsWith('|')) {
+          const c = (s.match(/\|/g) || []).length;
+          if (hdr && c !== hdr) err(name, `Riga ${i + 1}: colonne tabella incoerenti (${c} pipe vs ${hdr})`);
+        } else { inT = false; hdr = null; }
+      }
+    }
+  }
+
+  // Mictlan PF: formula v3.1 vietata fuori dalla FAQ (che la cita come storia)
+  if (!/faq/i.test(name) && /24\s*\+\s*\(?\s*FOR\s*[×x]\s*2/i.test(C)) {
+    err(name, `Formula PF Mictlan obsoleta "24+(FOR×2)" — canonico v3.2: 28+(FOR×1)`);
+  }
+
+  // Stress 10 / Corruzione: modello "bloccato" vietato (v3.2 = poteri "sospesi")
+  if (/incapace di agire per 24/i.test(C) || /poteri a pagamento sono BLOCCATI/i.test(C)) {
+    err(name, `Modello Stress/Corruzione obsoleto (bloccato) — v3.2 usa "sospesi"`);
+  }
+
+  // Escalation Die: avvio al round 4 vietato (v3.2 parte dal round 3)
+  if (/round 4 in poi/i.test(C)) {
+    err(name, `Escalation Die obsoleto ("round 4 in poi") — v3.2 parte dal round 3`);
+  }
+
+  // Corruzione: scala 0-10 obsoleta (v3.2 = 0-8)
+  if (/Corruzione\s*\(scala\s*0-10\)/i.test(C) || /Corruzione[^.]{0,40}\b0 a 10\b/i.test(C)) {
+    err(name, `Scala Corruzione obsoleta "0-10" — v3.2 = 0-8`);
+  }
+
+  // Versione prodotto
+  if (fm.data.version && String(fm.data.version) !== '3.2') {
+    warn(name, `version: ${fm.data.version} (atteso 3.2)`);
+  }
+
+  if (errors === 0 || true) ok(name, `OK (${words} parole)`);
 }
 
 console.log('');

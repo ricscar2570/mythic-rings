@@ -6,7 +6,7 @@ section: "Milano Mitica"
 epigraph: "Ogni quartiere ha la sua anima. Alcuni ce l'hanno letteralmente."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## I Dodici Quartieri di Milano
@@ -20,19 +20,19 @@ improvvisare incontri.
 
 
 | Quartiere | Casata | Tema | Minaccia |
-|---| ---|---| ---|
-| Duomo / Centro | Neutrale | Nexus, poter occulta | e, politica Equilibrio instabile tra fazioni |
-| Brera | Avalon | Arte, cultur Custodi | a, HQ       Quadri maledetti nel museo |
-| Navigli | Umbra | Canali, ombr nero | e, mercato  Sparizioni notturne |
-| Porta Ticinese | Umbra | Vita notturn contrabbando | a,          Culto sotterraneo nelle Colonne |
-| Parco Sempione | Ife | Verde urbano antichi | , spiriti   Risveglio alberi furiosi |
-| Isola / Garibaldi | Ife | Comunità, ri verde | nascita     Spiriti del vecchio quartiere operaio |
-| Porta Venezia | Ife | Giardini, di guarigione | versità,    Piante senzienti nel Giardino Montanelli |
-| Cimitero Monumentale | Mictlan | Morte, spiri | ti, memoria Velo sottilissimo, spiriti emergono |
-| City Life / Fiera | Mictlan | Vecchio cimi i grattaciel | tero sotto  Revenant i           costruttori emergono di notte |
-| Centrale / Pirelli | Avalon | Crocevia, po sorveglianza | rtali,      Portale dimensionale instabile |
-| Chinatown / Via Sarpi | Neutrale | Commercio oc internaziona | culto       Draghi d'acqua nei le          canali sotterranei |
-| San Siro | Neutrale | Stadio come emotivo | nexus       Entità che si nutre dell'euforia |
+|---|---|---|---|
+| Duomo / Centro | Neutrale | Nexus, potere, politica occulta | Equilibrio instabile tra fazioni |
+| Brera | Avalon | Arte, cultura, HQ Custodi | Quadri maledetti nel museo |
+| Navigli | Umbra | Canali, ombre, mercato nero | Sparizioni notturne |
+| Porta Ticinese | Umbra | Vita notturna, contrabbando | Culto sotterraneo nelle Colonne |
+| Parco Sempione | Ife | Verde urbano, spiriti antichi | Risveglio alberi furiosi |
+| Isola / Garibaldi | Ife | Comunità, rinascita verde | Spiriti del vecchio quartiere operaio |
+| Porta Venezia | Ife | Giardini, diversità, guarigione | Piante senzienti nel Giardino Montanelli |
+| Cimitero Monumentale | Mictlan | Morte, spiriti, memoria | Velo sottilissimo, spiriti emergono |
+| City Life / Fiera | Mictlan | Vecchio cimitero sotto i grattacieli | Revenant costruttori emergono di notte |
+| Centrale / Pirelli | Avalon | Crocevia, portali, sorveglianza | Portale dimensionale instabile |
+| Chinatown / Via Sarpi | Neutrale | Commercio occulto internazionale | Draghi d'acqua nei canali sotterranei |
+| San Siro | Neutrale | Stadio come nexus emotivo | Entità che si nutre dell'euforia |
 :::box[🏛️ Duomo / Centro]{type=info}
 Casata Dominante: Neutrale (Territorio del Nexus)
 *\"Qui convergono tutte le strade. E tutte le ombre.\"*

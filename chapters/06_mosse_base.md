@@ -4,7 +4,7 @@ chapter: 6
 part: "Parte III — Le Regole"
 epigraph: "Le mosse non sono regole. Sono il linguaggio con cui la storia risponde alle tue scelte."
 status: complete
-version: 3.1
+version: 3.2
 ---
 
 ## La Filosofia delle Mosse
@@ -201,7 +201,7 @@ Il Custode non chiama mai una mossa per nome. I giocatori descrivono azioni, e l
 
 **6-** Il potere fallisce completamente MA paghi il costo comunque. Il Custode fa una mossa (spesso: la magia va fuori controllo o produce l'effetto opposto).
 
-*Regola v3.1: A Stress 10 o Corruzione 7+, i poteri a pagamento sono BLOCCATI. Puoi ancora usare i poteri L1 gratuiti Umbra e l'Ultimo Respiro.*
+*Regola v3.2: a Stress 10 e ad alta Corruzione i poteri non sono bloccati ma diventano progressivamente più costosi e rischiosi (vedi Cap. 5 — Stress e Corruzione). I poteri L1 gratuiti Umbra e l'Ultimo Respiro restano sempre disponibili.*
 :::
 
 ## 9. Ultimo Respiro

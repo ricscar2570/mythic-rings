@@ -6,7 +6,7 @@ section: "Bestiario e Avventure"
 epigraph: "Una notte può cambiare tutto."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## Tre One-Shot

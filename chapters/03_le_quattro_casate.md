@@ -6,7 +6,7 @@ section: "Il Mondo di Mythic Rings"
 epigraph: "Quattro Casate, quattro vie verso la verità. Nessuna è completamente giusta."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## Le Quattro Casate
@@ -91,8 +91,9 @@ I poteri Avalon costano **Stress** (scala 0--10). Canalizzare la luce
 pura del Piano della Luce è come guardare il sole: bellissimo, ma la
 psiche umana non è progettata per contenere tanta perfezione. Ogni uso
 dei poteri erode la stabilità mentale del Guardiano. A Stress 10, il
-Guardiano subisce un **Burnout**: un crollo emotivo completo che lo
-rende incapace di agire per 24 ore. Il recupero avviene naturalmente (-1
+Guardiano subisce un **Burnout**: i poteri non si bloccano ma diventano
+sospesi - costano il doppio e richiedono un tiro su Sfidare Pericolo +FAT
+(vedi Cap. 5) - accompagnati da un crollo emotivo. Il recupero avviene naturalmente (-1
 per notte di riposo), attraverso attività di downtime rilassanti, o
 tramite un Atto di Catarsi con un Confidente (Legame livello 2+).
 
@@ -685,23 +686,23 @@ le altre Casate.
 | Livello | Costo PF | Stress Alt. | Nota |
 |---| ---|---| ---|
 | L1 | 1 PF | - | Costo minimo. Anche un Mictlan ferito può usarli. |
-| L2 | 2 PF | (1 PF + 2 Stress) | Con Sangue Tenace, se scendi sotto 50% PF puoi convertire. |
-| L3 | 3 PF | (1 PF + 2 Stress) | Poteri significativi. Il sangue dal naso è un segnale. |
+| L2 | 2 PF | (1 PF + 2 Stress) | Con Sangue Tenace, se scendi sotto 40% PF puoi convertire. |
+| L3 | 3 PF | (2 PF + 2 Stress) | Poteri significativi. Il sangue dal naso è un segnale. |
 | L4 | 4 PF | (2 PF + 2 Stress) | Il corpo protesta. Pallore, tremori, vista sfocata. |
 | L5 | 6 PF | (3 PF + 2 Stress) | Poteri devastanti. Rischio reale di morte. |
 :::box[Sangue Tenace (Potere Passivo L1, Gratuito)]{type=info}
-**Quando usi un potere e il costo in PF ti porterebbe sotto il 50%
+**Quando usi un potere e il costo in PF ti porterebbe sotto il 40%
 dei PF massimi**, puoi scegliere di convertire metà del costo PF
 (arrotondato per difetto) in +2 Stress.
 Questo crea un punto decisionale interessante ad ogni uso: paghi in
 sangue o in stanchezza? Il corpo o la mente? Sangue Tenace è la
 valvola di sicurezza che permette ai Mictlan di essere audaci senza
 essere suicidi.
-*Esempio:* Elena, Mictlan con 28 PF massimi (soglia 50% = 14 PF), è a
-16 PF e vuole usare un potere L3 (costo 3 PF). Scendrebbe a 13, sotto
+*Esempio:* Elena, Mictlan con 29 PF massimi (soglia 40% ≈ 12 PF), è a
+14 PF e vuole usare un potere L3 (costo 3 PF). Scendrebbe a 11, sotto
 la soglia. Può attivare Sangue Tenace: paga 2 PF (invece di 3) e
-prende +2 Stress. Scende a 14 PF invece di 13, restando sopra la
-soglia.
+prende +2 Stress. Scende a 12 PF invece di 11, restando alla soglia
+invece di scendere sotto.
 :::
 
 Mosse Esclusive

@@ -6,7 +6,7 @@ section: "Guida per il Custode"
 epigraph: "Un gioco sicuro è un gioco migliore."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## Safety Tools e Gestione del Tavolo

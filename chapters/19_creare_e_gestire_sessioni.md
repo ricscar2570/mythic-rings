@@ -6,7 +6,7 @@ section: "Guida per il Custode"
 epigraph: "Una buona sessione inizia prima che i dadi rotolino."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## Creare e Gestire Sessioni

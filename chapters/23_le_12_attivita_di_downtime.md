@@ -4,7 +4,7 @@ chapter: 23
 part: "Parte VI — Gestire la Campagna"
 epigraph: "Milano non smette mai di muoversi. Nemmeno i suoi guardiani."
 status: complete
-version: 3.1
+version: 3.2
 ---
 
 ## Le 12 Attività di Downtime

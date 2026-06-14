@@ -6,7 +6,7 @@ section: "Bestiario e Avventure"
 epigraph: "Il Velo sta cadendo. La domanda non è se, ma quando."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## Campagna - Il Crepuscolo del Velo

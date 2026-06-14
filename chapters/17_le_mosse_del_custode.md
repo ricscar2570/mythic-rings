@@ -6,7 +6,7 @@ section: "Guida per il Custode"
 epigraph: "Le mosse del Custode non sono punizioni. Sono conseguenze."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## Le Mosse del Custode

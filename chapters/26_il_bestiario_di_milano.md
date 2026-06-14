@@ -6,7 +6,7 @@ section: "Bestiario e Avventure"
 epigraph: "Milano ha i suoi mostri. Alcuni li conosci già."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## Il Bestiario di Milano

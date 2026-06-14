@@ -165,7 +165,7 @@ partita, seguirle ti garantisce un personaggio meccanicamente solido:
 | Mictlan | +1 | +1 | 0 | -1 | +2 | FAT per poteri e Interrogare i Morti. FOR importante: più PF = più carburante per i poteri. |
 :::box[Perché FOR è Importante per Mictlan]{type=warn}
 I Mictlan pagano i poteri in Punti Ferita. FOR determina i PF
-iniziali. Un Mictlan con FOR +1 ha 26 PF (24 + 2), contro i 22 di uno
+iniziali. Un Mictlan con FOR +1 ha 29 PF (28 + 1), contro i 22 di uno
 con FOR -1 (24 - 2). Quei 4 PF di differenza sono 2 poteri L2 in più
 prima di entrare in zona critica. Per un Mictlan, la Forza non è solo
 muscoli - è carburante.
@@ -181,7 +181,7 @@ muscoli - è carburante.
 **PF Iniziali Mictlan = 28 + (FOR × 1)**. I Mictlan hanno un bonus di +4 sul floor di base rispetto alle altre Casate, ma il moltiplicatore di FOR è dimezzato: questo riduce la dipendenza obbligatoria da FOR e garantisce maggiore PF a baseline anche con caratteristica fisica bassa
 PF che riflette la loro connessione con il confine tra vita e morte.
 Sono più resistenti perché i loro poteri consumano la loro stessa vita.
-Esempio: Mictlan con FOR +1 → PF = 24 + 2 = 26.
+Esempio: Mictlan con FOR +1 → PF = 28 + 1 = 29.
 
 
 | FOR | PF Standard | PF Mictlan | Nota |
@@ -428,9 +428,9 @@ sull'avambraccio sinistro, anello di ossidiana al medio. Veste sempre
 di nero - non per scelta estetica, ma perché i colori la
 distraggono.
 **Caratteristiche:** FOR +1, CUO +1, MEN 0, CAR -1, FAT +2
-**PF:** 26 (24 + 2) \| Stress: 0/10 \| Punti Fato: 2
-**Potere Passivo:** Sangue Tenace (gratuito, attivo quando sotto 50%
-PF = 13 PF)
+**PF:** 29 (28 + 1) \| Stress: 0/10 \| Punti Fato: 2
+**Potere Passivo:** Sangue Tenace (gratuito, attivo quando sotto 40%
+PF ≈ 12 PF)
 **Poteri L1:** Vista degli Spiriti (vede fantasmi e tracce di morte),
 Tocco Frigido (offensivo, drenaggio minore), Voce dei Caduti
 (comunicazione base con spiriti recenti).

@@ -6,7 +6,7 @@ section: "Guida per il Custode"
 epigraph: "Il Custode non vince quando i PG muoiono. Il Custode vince quando tutti si divertono."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## I Principi del Custode

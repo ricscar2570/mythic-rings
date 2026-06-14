@@ -6,7 +6,7 @@ section: "Guida per il Custode"
 epigraph: "La reputazione è ciò che la gente dice di te quando non ci sei."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## Sistema Reputazione

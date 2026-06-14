@@ -33,7 +33,7 @@ Il Mictlan esiste sul confine tra vita e morte: impara a drenare energia anche d
 **Controindicazione narrativa:** il Custode può segnalare che un uso frequente di questa meccanica rende il personaggio progressivamente più a suo agio con la morte altrui — utile come spunto per l'arco personale.
 :::
 
-:::box[Regola v3.1 — Costi Mictlan Corretti]{type=danger}
+:::box[Regola v3.2 — Costi Mictlan]{type=danger}
 **L1:** costo 1-3 PF (non 2-3 come nel manuale base). **Vedere Oltre il Velo:** 2 PF. **Parlare con i Morti:** 1 PF. **Tocco Gelo:** 2 PF. Questi valori sostituiscono quelli del manuale base e sono stati calibrati nel playtest v3.1.
 :::
 

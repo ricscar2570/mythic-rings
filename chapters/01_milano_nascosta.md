@@ -6,7 +6,7 @@ section: "Il Mondo di Mythic Rings"
 epigraph: "Sotto ogni grande città dorme un orrore. Sopra ogni orrore vegliano gli eroi."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## Milano Nascosta

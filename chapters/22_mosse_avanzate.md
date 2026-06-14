@@ -6,7 +6,7 @@ section: "Guida per il Custode"
 epigraph: "I Veterani non sono più forti. Sono più consapevoli."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## Mosse Avanzate (Livello 3+)

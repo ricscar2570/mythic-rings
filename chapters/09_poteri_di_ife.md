@@ -4,7 +4,7 @@ chapter: 9
 part: "Parte IV — Le Quattro Casate"
 epigraph: "La vita non ha inizio né fine. Ha solo trasformazioni."
 status: complete
-version: 3.1
+version: 3.2
 ---
 
 ## Poteri di Ife — Il Ciclo della Vita

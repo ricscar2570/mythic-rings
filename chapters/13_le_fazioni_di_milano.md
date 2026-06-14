@@ -6,7 +6,7 @@ section: "Milano Mitica"
 epigraph: "In guerra, non sai chi sono i tuoi nemici finché non ti sparano alle spalle."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## Le Fazioni di Milano

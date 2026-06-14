@@ -1,6 +1,6 @@
 {
   "name": "mythic-rings-v3",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Mythic Rings v3 — Build pipeline for the professional manual",
   "main": "build/engine.js",
   "scripts": {

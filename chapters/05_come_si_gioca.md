@@ -9,8 +9,8 @@ status: finale
 version: 3.2
 ---
 
-:::box[Aggiornamenti v3.1  -  Regole Corrette dal Chaos Testing]{type=danger}
-Le seguenti regole sono state chiarite in v3.1 dopo 300.000 sessioni di chaos testing:
+:::box[Aggiornamenti v3.2 - Regole Affinate]{type=danger}
+Le seguenti regole sono state affinate tramite test di simulazione (Monte Carlo) e playtest:
 
 **Stress Overflow — Penalità Progressiva** *(v3.2)*
 - **Stress 8-9:** I poteri costano +1 risorsa aggiuntiva. La magia è instabile.
@@ -373,11 +373,11 @@ danno (da 0 a 5+ con equipaggiamento avanzato). Esistono tre tipi di
 danno:
 
 
-| Tipo | Descrizion | e             L'Armatura Protegge? |
-|---| ---|---|
-| Fisico | Spade, proie cadute, espl | ttili, artigli, Sì - qualsiasi tipo di osioni          Armatura |
-| Magico | Fuoco mistic energia arca | o, fulmini,     Solo Armatura Magica na, maledizioni (amuleti, barriere) |
-| Puro | Psichico, ne drenaggio vi | cromantico,     No - ignora sempre tale            l'Armatura |
+| Tipo | Descrizione | L'Armatura Protegge? |
+|---|---|---|
+| Fisico | Spade, proiettili, artigli, cadute, esplosioni | Sì - qualsiasi tipo di Armatura |
+| Magico | Fuoco mistico, fulmini, energia arcana, maledizioni | Solo Armatura Magica (amuleti, barriere) |
+| Puro | Psichico, necromantico, drenaggio vitale | No - ignora sempre l'Armatura |
 ## Condizioni e Ferite
 
 
@@ -504,14 +504,17 @@ uccide un innocente per il «male minore», un Ife che distrugge un
 ecosistema).
 
 :::box[A Stress 10: Burnout]{type=warn}
-Quando raggiungi 10 Stress, subisci il Burnout:
-Non puoi usare poteri finché non riduci lo Stress sotto 10. Subisci
--2 a tutti i tiri (esausto mentalmente). Il Custode sceglie una
-conseguenza narrativa tra: crollo emotivo (piangi
-incontrollabilmente, panico), dissociazione (ti senti vuoto,
-distaccato dal mondo), rabbia esplosiva (perdi il controllo, attacchi
-chi ti è vicino), o shutdown (catatonia temporanea, 10 minuti).
-Il Burnout è temporaneo - ma le conseguenze possono essere
+A 10 Stress sei in Burnout, ma i poteri NON sono bloccati: sono
+**sospesi**. Puoi ancora usarli, ma ogni attivazione costa il doppio E
+richiede un tiro su Sfidare Pericolo +FAT: su 6- il potere esplode (1d6
+danno al Guardiano, scena interrotta). Usarlo al limite è una scelta
+drammatica consapevole, non un muro. Finché lo Stress resta a 10 non
+recuperi PF naturalmente.
+Il Custode sceglie inoltre una manifestazione narrativa del Burnout:
+crollo emotivo (piangi incontrollabilmente, panico), dissociazione (ti
+senti vuoto, distaccato dal mondo), rabbia esplosiva (perdi il
+controllo, attacchi chi ti è vicino), o shutdown (catatonia temporanea,
+10 minuti). Il Burnout è temporaneo - ma le conseguenze possono essere
 durature.
 :::
 
@@ -615,9 +618,9 @@ Tabella Riferimento Rapido
 
 | Risorsa | Casate | Max | A Max | Recupero |
 |---| ---|---| ---|---|
-| PF | Tutti | 20+(FOR×2) / 24+(FOR×2) | Morente → U Respiro | ltimo 1d4/notte, poteri, cure |
+| PF | Tutti | 20+(FOR×2) / 28+(FOR×1) | Morente → Ultimo Respiro | 1d4/notte, poteri, cure |
 | Stress | Avalon, Ife | 10 | Burnout | -1/notte, downtime, Legami |
-| Corruzione | Umbra | 8 | Trasformazi | one   Atti Redenzione, Rituale |
+| Corruzione | Umbra | 8 | Trasformazione | Atti Redenzione, Rituale |
 | Punti Fato | Tutti | 2/sessione | - | Si rigenerano ogni sessione |
 :::box[Fine Parte II - Regole Base]{type=tip}
 Ora conosci le meccaniche core di Mythic Rings: la conversazione al
@@ -872,16 +875,17 @@ trasformando la durata del combattimento in un'arma dei Guardiani.
 
 ## Come Funziona
 
-Dal **round 4 in poi**, tutti i PG ottengono un bonus cumulativo ai tiri
-di Attaccare:
+Dal **round 3 in poi**, tutti i PG ottengono un bonus cumulativo e
+crescente: prima al tiro di Attaccare, poi anche al danno.
 
 
-| Round | Bonus Attacco PG | Descrizione Narrativa |
+| Round | Bonus Escalation PG (cumulativo) | Descrizione Narrativa |
 |---| ---|---|
-| 1--3 | Nessuno | Combattimento standard. I PG studiano il nemico, prendono le misure. |
-| 4 | +1 | L'adrenalina sale. I movimenti diventano più istintivi, meno calcolati. |
-| 5 | +2 | Disperazione. I PG combattono con tutto ciò che hanno. Colpi più rischiosi ma più potenti. |
-| 6+ | +3 (cap) | Adattamento completo. I PG hanno trovato i punti deboli. Ora o mai più. |
+| 1--2 | Nessuno | Tattiche iniziali. I PG studiano il nemico, prendono le misure. |
+| 3 | +1 al tiro di Attaccare | Il combattimento si intensifica. |
+| 4 | +1 al tiro e +1 danno | L'energia sale, i colpi si fanno più pesanti. |
+| 5 | +1 al tiro e +1d4 danno | Stanchezza e adrenalina cambiano tutto. |
+| 6+ | +2 al tiro e +1d6 danno | Fase finale: chi è ancora in piedi dà tutto. |
 :::box[Perché Solo i PG?]{type=info}
 I nemici NON ottengono il bonus Escalation. Il vantaggio è esclusivo
 dei Guardiani - coerente con il principio PbtA «sii fan dei PG».
@@ -894,18 +898,21 @@ conclusione cinematica.
 :::
 
 :::box[Esempio: Dado Escalation in Azione]{type=info}
-**Round 1--3:** Il gruppo combatte un Divoratore d'Ombre (30 PF,
+**Round 1--2:** Il gruppo combatte un Divoratore d'Ombre (30 PF,
 Armatura 2). I colpi si scambiano, ma il danno netto è basso: le armi
 fisiche fanno poco contro l'Armatura e i 7--9 complicano tutto.
-**Round 4 (Escalation +1):** Elena tira Attaccare +FAT (+2) +
-Escalation (+1) = 2d6+3. Ora ha il 72% di probabilità di 10+ invece
-del 58%. Il suo Tocco Frigido perfora la barriera.
-**Round 5 (Escalation +2):** Marco carica con la spada: +FOR (+1) +
-Escalation (+2) = 2d6+3. Critico! +1d6 danno bonus. Il Divoratore
-barcolla.
-**Round 6 (Escalation +3):** Leila emerge dalle ombre con Lama
-d'Ombra: +FAT (+2) + Escalation (+3) = 2d6+5. Praticamente successo
-garantito. Il colpo finale squarcia il Divoratore.
+**Round 3 (Escalation: +1 al tiro):** Elena tira Attaccare +FAT (+2) +
+Escalation (+1) = 2d6+3. La probabilità di 10+ sale dal 41,7% (a +2) al
+58,3% (a +3). Il suo Tocco Frigido perfora la barriera.
+**Round 4 (Escalation: +1 al tiro, +1 danno):** Marco carica con la
+spada: +FOR (+1) + Escalation (+1) = 2d6+2, e il colpo infligge +1 danno
+fisso. Il Divoratore barcolla.
+**Round 5 (Escalation: +1 al tiro, +1d4 danno):** Marco insiste: +FOR
+(+1) + Escalation (+1) = 2d6+2, con +1d4 danno bonus a segno.
+**Round 6 (Escalation: +2 al tiro, +1d6 danno):** Leila emerge dalle
+ombre con Lama d'Ombra: +FAT (+2) + Escalation (+2) = 2d6+4 - a +4 la
+probabilità di 10+ è 72,2% - e con +1d6 danno bonus il colpo finale
+squarcia il Divoratore.
 :::
 
 ## SITUAZIONI SPECIALI
@@ -985,9 +992,9 @@ sfortuna.
 | Hai un Legame L2+ con qualcuno presente | +1 | Il pensiero di chi ami ti richiama indietro |
 | Hai Punti Fato disponibili (ne consumi 1) | +1 | Il destino non ha finito con te |
 | È la prima volta a 0 PF nella campagna | +1 | La morte non ti conosce ancora |
-**Bonus massimo: +4.** Con +4 il tasso di successo (10+) sale a circa
-l'83%. Con +2 (caso tipico: un alleato vicino e un Legame forte) sale al
-72%. La morte rimane possibile, ma diventa rara quando il gruppo è coeso
+**Bonus massimo: +4.** Con +4 il tasso di successo (10+) sale al 72,2%.
+Con +2 (caso tipico: un alleato vicino e un Legame forte) è del 41,7%.
+La morte rimane possibile, ma diventa più rara quando il gruppo è coeso
 e preparato.
 
 ## Risultati dell'Ultimo Respiro
@@ -1002,7 +1009,7 @@ e preparato.
 | 7--9 | Scelta Difficile. La Morte ti offre un patto. Il Custode presenta 2 opzioni: sopravvivi MA perdi qualcosa (un arto, un senso, dei ricordi, un Legame azzerato permanentemente) OPPURE sopravvivi MA devi un debito alla Morte (un compito, un'anima sostitutiva, un favore da riscuotere nel momento peggiore). |
 | 6-- | Morte. Lo spirito lascia il corpo. Il PG è morto. Il giocatore deve creare un nuovo personaggio. Eccezione: gli alleati possono tentare la resurrezione (Avalon L5 o Mictlan L5), ma è un rituale difficile, raro e costoso. |
 :::box[Esempio: Ultimo Respiro - La Scelta di Elena]{type=info}
-Elena (Mictlan, 26 PF) scende a 0 PF dopo il colpo del vampiro
+Elena (Mictlan, 29 PF) scende a 0 PF dopo il colpo del vampiro
 antico. Tira Ultimo Respiro.
 **Bonus:** Marco è Vicino e la sostiene (+1), Elena ha un Legame L2
 con Nonna Lucia, il cui spirito è presente (+1). Totale: 2d6+2.

@@ -6,7 +6,7 @@ section: "Guida per il Custode"
 epigraph: "Prima di giocare, parlate. Dopo aver parlato, giocate."
 tags: []
 status: finale
-version: 3.1
+version: 3.2
 ---
 
 ## Session Zero
