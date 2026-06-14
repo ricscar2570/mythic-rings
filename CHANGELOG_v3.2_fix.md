@@ -84,3 +84,19 @@ spezzava le celle multi-riga a larghezza fissa. Tabelle ricostruite:
 - `npm run validate`: **0 errori** (5 avvisi preesistenti non correlati).
 - `npm run build`: DOCX completo generato (33 capitoli).
 - Detector corruzione su tutto il libro: **0 tabelle corrotte**.
+
+---
+
+## Passata di design (criticità meccaniche + prep stampa)
+
+- **#1 Economia delle azioni** — aggiunto box "La Finzione Guida le Azioni" (cap. 5):
+  l'economia d'azione resta ma è dichiarata subordinata alla finzione, non una griglia a turni.
+- **#2 FAT "god-stat"** — *scelta: nessun cambio di caratteristica di lancio* (Umbra/Ife/Mictlan
+  restano +FAT). Aggiunto box "FAT è la Stat di Lancio - ed è una Scelta, non uno Sbilanciamento"
+  (cap. 4) che documenta la contromisura (difesa/attacco/indagine su FOR/CUO/MEN) e il fatto che
+  la formula PF v3.2 attenua già il MAD di Mictlan.
+- **#3 Loop di guarigione** — aggiunto invariante "Nessuna Cura a Guadagno Netto" (cap. 5).
+- **#4 Attaccare vs Usare Potere** — aggiunto box "Armi Magiche in Mischia" (cap. 6).
+- **Bug residuo FIX 1** — corretto un leftover v3.1 nel box "Perché FOR è Importante per Mictlan"
+  (cap. 4): "22 (24-2)" → "27 (28-1)", "4 PF / 2 poteri L2" → "2 PF / 1 potere L2". Sfuggito alla
+  prima passata perché scritto "24 - 2" anziché "24+(FOR×2)".

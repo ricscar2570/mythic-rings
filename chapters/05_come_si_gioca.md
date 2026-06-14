@@ -518,6 +518,10 @@ controllo, attacchi chi ti è vicino), o shutdown (catatonia temporanea,
 durature.
 :::
 
+:::box[Regola: Nessuna Cura a Guadagno Netto]{type=rule}
+Nessuna combinazione di poteri può produrre un guadagno netto di risorse. Curare PF o rimuovere Stress/Corruzione costa sempre almeno quanto rimuove: due Guardiani non possono curarsi a vicenda all'infinito, perché ogni cura accumula Stress su chi la lancia. Le risorse si recuperano solo con il tempo narrativo (riposo, Downtime, mossa Riprendersi), mai in un loop a costo zero dentro una scena.
+:::
+
 ## Ridurre Stress
 
 **Riposo Notturno:** -1 Stress per notte (8 ore sicure).
@@ -730,6 +734,10 @@ viceversa), alzarti da terra, estrarre o riporre un'arma.
 
 **Azioni Gratuite:** Parlare brevemente (1--2 frasi), urlare un
 avvertimento, lasciare cadere un oggetto. Ragionevolmente illimitate.
+
+:::box[La Finzione Guida le Azioni]{type=info}
+Questa lista è un limite di *quante cose distinte* tenti prima che il Custode reagisca, non una griglia a turni. Una Mossa copre tutto ciò che la finzione racchiude in un gesto continuo: se "scivolo sotto il demone e lo colpisco" è un solo movimento fluido, è una sola Mossa (Attaccare) e lo spostamento è incluso. Separi le azioni solo quando il personaggio tenta cose realmente distinte (es. correre al riparo E poi sparare). Nel dubbio: la descrizione viene prima, l'economia delle azioni serve solo a tenere il ritmo.
+:::
 
 ## Quando Agiscono i Nemici
 

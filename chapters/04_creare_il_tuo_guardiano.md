@@ -165,10 +165,16 @@ partita, seguirle ti garantisce un personaggio meccanicamente solido:
 | Mictlan | +1 | +1 | 0 | -1 | +2 | FAT per poteri e Interrogare i Morti. FOR importante: più PF = più carburante per i poteri. |
 :::box[Perché FOR è Importante per Mictlan]{type=warn}
 I Mictlan pagano i poteri in Punti Ferita. FOR determina i PF
-iniziali. Un Mictlan con FOR +1 ha 29 PF (28 + 1), contro i 22 di uno
-con FOR -1 (24 - 2). Quei 4 PF di differenza sono 2 poteri L2 in più
+iniziali. Un Mictlan con FOR +1 ha 29 PF (28 + 1), contro i 27 di uno
+con FOR -1 (28 - 1). Quei 2 PF di differenza valgono un potere L2 in più
 prima di entrare in zona critica. Per un Mictlan, la Forza non è solo
 muscoli - è carburante.
+:::
+
+:::box[FAT è la Stat di Lancio - ed è una Scelta, non uno Sbilanciamento]{type=info}
+FAT canalizza i poteri di Umbra, Ife e Mictlan (Avalon usa CAR). Sembra una "stat divina", ma non lo è: FAT non difende, non schiva, non colpisce in mischia e non investiga. Difendere e Attaccare usano FOR/CUO, Sfidare Pericolo usa CUO/MEN, l'indagine usa MEN. Un Guardiano tutto-FAT ha poteri eccellenti ma è fragile e goffo in combattimento - un glass cannon: scaricare FOR, CUO o MEN ha sempre un prezzo concreto.
+
+Il caso a parte è Mictlan, che vorrebbe FAT (poteri) e FOR (PF): la formula v3.2 28+(FOR×1) alza il floor a 28 e dimezza il peso di FOR proprio per ridurre questa doppia dipendenza. Un Mictlan può puntare su FAT e restare comunque resistente.
 :::
 
 ## PASSO 5: PUNTI FERITA E RISORSE
@@ -178,9 +184,9 @@ muscoli - è carburante.
 **PF Iniziali = 20 + (FOR × 2)** per Avalon, Umbra e Ife. Esempio: FOR
 +1 → PF = 20 + 2 = 22.
 
-**PF Iniziali Mictlan = 28 + (FOR × 1)**. I Mictlan hanno un bonus di +4 sul floor di base rispetto alle altre Casate, ma il moltiplicatore di FOR è dimezzato: questo riduce la dipendenza obbligatoria da FOR e garantisce maggiore PF a baseline anche con caratteristica fisica bassa
-PF che riflette la loro connessione con il confine tra vita e morte.
-Sono più resistenti perché i loro poteri consumano la loro stessa vita.
+**PF Iniziali Mictlan = 28 + (FOR × 1)**. I Mictlan hanno un bonus di +4 sul floor di base rispetto alle altre Casate, ma il moltiplicatore di FOR è dimezzato: questo riduce la dipendenza obbligatoria da FOR e garantisce maggiore PF a baseline anche con caratteristica fisica bassa.
+Questa resistenza riflette la loro connessione con il confine tra vita e
+morte: i loro poteri consumano la loro stessa vita.
 Esempio: Mictlan con FOR +1 → PF = 28 + 1 = 29.
 
 

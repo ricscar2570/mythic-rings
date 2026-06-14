@@ -204,6 +204,12 @@ Il Custode non chiama mai una mossa per nome. I giocatori descrivono azioni, e l
 *Regola v3.2: a Stress 10 e ad alta Corruzione i poteri non sono bloccati ma diventano progressivamente più costosi e rischiosi (vedi Cap. 5 — Stress e Corruzione). I poteri L1 gratuiti Umbra e l'Ultimo Respiro restano sempre disponibili.*
 :::
 
+:::box[Armi Magiche in Mischia]{type=rule}
+Se un potere dice "(conta come Attacco)", l'attivazione È l'attacco: un solo tiro di Usare Potere risolve anche il danno.
+
+Altrimenti, un'arma magica evocata si gestisce in due tempi: **evocarla** è Usare Potere (la fai apparire, 1 Azione Principale); **colpirci** nei round successivi è Attaccare, con la caratteristica indicata dall'arma (es. Lama Radiante: +FOR). Evocazione e primo colpo stanno nella stessa Azione solo se il potere lo dichiara esplicitamente.
+:::
+
 ## 9. Ultimo Respiro
 
 :::box[💀 Ultimo Respiro]{type=danger}
