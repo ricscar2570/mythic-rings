@@ -56,22 +56,15 @@ sia la verità, il Velo c'è, funziona, e mantenerlo intatto è la missione
 primaria dei Custodi.
 
 :::box[Esempio: Il Velo in Azione]{type=info}
-Un Guardiano combatte un demone in Piazza Duomo alle 2 di notte. Lame
-di luce sacra contro artigli d'ombra. Il demone urla, un suono che
-farebbe impazzire chiunque lo sentisse per quello che è veramente. Un
-passante ubriaco osserva la scena dall'altro lato della piazza.
-**Cosa vede il Guardiano:** Una battaglia disperata contro una
-creatura soprannaturale alta tre metri, con pelle di ossidiana e
-occhi come braci. L'aria puzza di zolfo. Ogni colpo dell'Anello
-emette lampi dorati.
-**Cosa vede il passante:** «Due tizi con costumi fighi che fanno
-parkour. Forse stanno girando un film? O è un flash mob? Boh, vado a
-casa.»
-Il mattino dopo, se interrogato, il passante dirà: «Non ricordo bene,
-ero troppo ubriaco.» Se insistono, si irriterà. Se gli mostrano le
-foto del selciato rovinato, dirà che è un lavoro in corso del Comune.
-Il suo cervello non accetterà la verità, nemmeno di fronte
-all'evidenza.
+Un Guardiano combatte un demone in Piazza Duomo alle 2 di notte. Lame di luce sacra contro artigli d'ombra. Il demone urla, un suono che farebbe impazzire chiunque lo sentisse per quello che è veramente. Un passante ubriaco osserva la scena dall'altro lato della piazza.
+:::
+
+:::box[Esempio: Il Velo in Azione (segue)]{type=info}
+**Cosa vede il Guardiano:** Una battaglia disperata contro una creatura soprannaturale alta tre metri, con pelle di ossidiana e occhi come braci. L'aria puzza di zolfo. Ogni colpo dell'Anello emette lampi dorati. **Cosa vede il passante:** «Due tizi con costumi fighi che fanno parkour. Forse stanno girando un film? O è un flash mob? Boh, vado a casa.» Il mattino dopo, se interrogato, il passante dirà:
+:::
+
+:::box[Esempio: Il Velo in Azione (segue)]{type=info}
+«Non ricordo bene, ero troppo ubriaco.» Se insistono, si irriterà. Se gli mostrano le foto del selciato rovinato, dirà che è un lavoro in corso del Comune. Il suo cervello non accetterà la verità, nemmeno di fronte all'evidenza.
 :::
 
 ## Limiti del Velo
@@ -117,16 +110,11 @@ Incidente del Velo non contenuto può creare centinaia di Consapevoli in
 pochi minuti.
 
 :::box[Nota per il Custode: Usare il Velo nel Gioco]{type=info}
-Il Velo non è solo lore - è uno strumento narrativo potentissimo.
-Crea tensione naturale: i PG devono combattere minacce soprannaturali
-senza farsi scoprire dal mondo ordinario. Ogni battaglia in pubblico
-è un rischio. Ogni potere usato troppo vistosamente potrebbe causare
-un Incidente del Velo. Usa il Velo per creare complicazioni nei
-risultati 7-9: «Il tuo potere funziona, ma un passante ha visto
-qualcosa. Ha il telefono in mano. Cosa fai?»
-Il Velo è anche una metafora: i PG vivono in un mondo che la gente
-ordinaria non può capire. Questo crea isolamento, incomprensione, e
-rende i Legami tra Guardiani ancora più preziosi.
+Il Velo non è solo lore - è uno strumento narrativo potentissimo. Crea tensione naturale: i PG devono combattere minacce soprannaturali senza farsi scoprire dal mondo ordinario. Ogni battaglia in pubblico è un rischio. Ogni potere usato troppo vistosamente potrebbe causare un Incidente del Velo. Usa il Velo per creare complicazioni nei risultati 7-9:
+:::
+
+:::box[Nota per il Custode: Usare il Velo nel Gioco (segue)]{type=info}
+«Il tuo potere funziona, ma un passante ha visto qualcosa. Ha il telefono in mano. Cosa fai?» Il Velo è anche una metafora: i PG vivono in un mondo che la gente ordinaria non può capire. Questo crea isolamento, incomprensione, e rende i Legami tra Guardiani ancora più preziosi.
 :::
 
 Le Due Milano
@@ -170,19 +158,15 @@ più profondo che nessun treno raggiunge, qualcosa dorme. Qualcosa di
 molto, molto grande.
 
 :::box[Esempio: Due Milano, Una Notte]{type=info}
-**Ore 23:00 - Navigli, Ripa di Porta Ticinese.**
-**Milano Ordinaria:** Un gruppo di universitari ride davanti a un
-bar, spritz in mano. Una coppia passeggia lungo il canale. Un
-tassista aspetta clienti. Tutto normale.
-**Milano Mitica:** Nell'acqua del Naviglio Grande nuota una creatura
-serpentiforme lunga sei metri - un Drago d'Acqua, ultimo della sua
-specie in Italia. Sul tetto del palazzo di fronte al bar, un Umbra in
-ricognizione osserva un uomo seduto da solo a un tavolo: Valentina
-«La Volpe», la più famosa mercante di informazioni della Milano
-Mitica, sta per incontrare un cliente che non sa essere un agente
-della Fratellanza dei Caduti. Tra venti minuti, in questo vicolo
-tranquillo, ci sarà un combattimento. I Custodi sono già in
-posizione. Gli universitari non si accorgeranno di nulla.
+**Ore 23:00 - Navigli, Ripa di Porta Ticinese.** **Milano Ordinaria:** Un gruppo di universitari ride davanti a un bar, spritz in mano. Una coppia passeggia lungo il canale. Un tassista aspetta clienti. Tutto normale. **Milano Mitica:** Nell'acqua del Naviglio Grande nuota una creatura serpentiforme lunga sei metri - un Drago d'Acqua, ultimo della sua specie in Italia.
+:::
+
+:::box[Esempio: Due Milano, Una Notte (segue)]{type=info}
+Sul tetto del palazzo di fronte al bar, un Umbra in ricognizione osserva un uomo seduto da solo a un tavolo: Valentina «La Volpe», la più famosa mercante di informazioni della Milano Mitica, sta per incontrare un cliente che non sa essere un agente della Fratellanza dei Caduti. Tra venti minuti, in questo vicolo tranquillo, ci sarà un combattimento. I Custodi sono già in posizione.
+:::
+
+:::box[Esempio: Due Milano, Una Notte (segue)]{type=info}
+Gli universitari non si accorgeranno di nulla.
 :::
 
 Le Linee Ley
@@ -218,21 +202,15 @@ dei Caduti, vampiri, culti - desidera controllarlo.
 | Linea del Fato | Da Sud-Est (Porta Romana) al Duomo | Destino, casualità, cambiamento. Non associata a nessuna Casata. | Eventi improbabili accadono più spesso. Coincidenze significative. |
 
 :::box[⚡ Il Nexus]{type=info}
-**Posizione:** Sotto Piazza Duomo, 30 metri di profondità.
-**Accesso:** Cripta segreta sotto il Duomo. Chiave custodita dalla
-Cerchia degli Anziani.
-**Territorio:** Neutrale per patto antico tra tutte le fazioni.
-Nessun combattimento permesso entro 50 metri dal Nexus.
-**Atmosfera:** Pietra antica, i simboli delle quattro Casate incisi
-nel pavimento, l'aria è satura di energia magica al punto che i
-capelli si rizzano e la pelle formicola. Qui anche i non-magici
-sentirebbero qualcosa.
-Il Nexus non è solo un punto di potere. È un luogo sacro, un crocevia
-tra mondi, e il cuore battente della Milano Mitica. Le decisioni più
-importanti dei Custodi vengono prese qui. I rituali più potenti
-richiedono la sua energia. E se qualcuno riuscisse a corrompere il
-Nexus, le conseguenze sarebbero catastrofiche - non solo per
-Milano, ma per tutta l'Europa.
+**Posizione:** Sotto Piazza Duomo, 30 metri di profondità. **Accesso:** Cripta segreta sotto il Duomo. Chiave custodita dalla Cerchia degli Anziani. **Territorio:** Neutrale per patto antico tra tutte le fazioni. Nessun combattimento permesso entro 50 metri dal Nexus.
+:::
+
+:::box[⚡ Il Nexus (segue)]{type=info}
+**Atmosfera:** Pietra antica, i simboli delle quattro Casate incisi nel pavimento, l'aria è satura di energia magica al punto che i capelli si rizzano e la pelle formicola. Qui anche i non-magici sentirebbero qualcosa. Il Nexus non è solo un punto di potere. È un luogo sacro, un crocevia tra mondi, e il cuore battente della Milano Mitica. Le decisioni più importanti dei Custodi vengono prese qui.
+:::
+
+:::box[⚡ Il Nexus (segue)]{type=info}
+I rituali più potenti richiedono la sua energia. E se qualcuno riuscisse a corrompere il Nexus, le conseguenze sarebbero catastrofiche - non solo per Milano, ma per tutta l'Europa.
 :::
 
 ## Effetti delle Linee Ley nel Gioco
@@ -327,20 +305,11 @@ più sensibile: dopo mezzanotte, le anime irrequiete conversano tra le
 statue di marmo. Di solito sono innocue. Di solito.
 
 :::box[Nota per il Custode: Gerarchie di Minaccia]{type=info}
-Non tutte le minacce sono uguali. Ecco una scala approssimativa di
-pericolosità per aiutarti a calibrare le sessioni:
-**Minaccia Comune (LS 1-3):** Creature d'Ombra minori, zombie,
-spiriti deboli, cultisti umani. Un singolo Guardiano può gestirle.
-Perfette per le prime sessioni.
-**Minaccia Seria (LS 4-6):** Demoni medi, vampiri giovani, Rinnegati
-solitari, Porte instabili. Richiedono un gruppo di 2-3 Guardiani
-coordinati.
-**Minaccia Grave (LS 7-9):** Vampiri antichi, leader cultisti con
-poteri, Porte stabili con flusso costante, demoni maggiori.
-Richiedono preparazione, strategia e un gruppo completo.
-**Minaccia Catastrofica (LS 10+):** Entità ultraplanari, il Primo
-Caduto in persona, rottura massiccia del Velo. Climax di campagna. I
-PG potrebbero non sopravvivere tutti.
+Non tutte le minacce sono uguali. Ecco una scala approssimativa di pericolosità per aiutarti a calibrare le sessioni: **Minaccia Comune (LS 1-3):** Creature d'Ombra minori, zombie, spiriti deboli, cultisti umani. Un singolo Guardiano può gestirle. Perfette per le prime sessioni. **Minaccia Seria (LS 4-6):** Demoni medi, vampiri giovani, Rinnegati solitari, Porte instabili.
+:::
+
+:::box[Nota per il Custode: Gerarchie di Minaccia (segue)]{type=info}
+Richiedono un gruppo di 2-3 Guardiani coordinati. **Minaccia Grave (LS 7-9):** Vampiri antichi, leader cultisti con poteri, Porte stabili con flusso costante, demoni maggiori. Richiedono preparazione, strategia e un gruppo completo. **Minaccia Catastrofica (LS 10+):** Entità ultraplanari, il Primo Caduto in persona, rottura massiccia del Velo. Climax di campagna. I PG potrebbero non sopravvivere tutti.
 :::
 
 Perché Milano?

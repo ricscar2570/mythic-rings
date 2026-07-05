@@ -11,19 +11,27 @@ version: 3.2
 
 :::box[Aggiornamenti v3.2 - Regole Affinate]{type=danger}
 Le seguenti regole sono state affinate tramite test di simulazione (Monte Carlo) e playtest:
+:::
 
-**Stress Overflow, Penalità Progressiva** *(v3.2)*
-- **Stress 8-9:** I poteri costano +1 risorsa aggiuntiva. La magia è instabile.
-- **Stress 10, Burnout:** I poteri sono SOSPESI (non bloccati). Puoi ancora usarli, ma ogni attivazione costa il doppio E richiede un tiro su Sfidare Pericolo +FAT: su 6- il potere esplode (danno 1d6 al Guardiano, scena interrotta). Il personaggio è chiaramente al limite, usarlo è una scelta drammatica consapevole, non un muro. Finché lo Stress rimane a 10, non recuperi PF naturalmente.
+:::box[Aggiornamenti v3.2 - Regole Affinate (segue)]{type=danger}
+**Stress Overflow, Penalità Progressiva** *(v3.2)* - **Stress 8-9:** I poteri costano +1 risorsa aggiuntiva. La magia è instabile. - **Stress 10, Burnout:** I poteri sono SOSPESI (non bloccati). Puoi ancora usarli, ma ogni attivazione costa il doppio E richiede un tiro su Sfidare Pericolo +FAT: su 6- il potere esplode (danno 1d6 al Guardiano, scena interrotta).
+:::
 
+:::box[Aggiornamenti v3.2 - Regole Affinate (segue)]{type=danger}
+Il personaggio è chiaramente al limite, usarlo è una scelta drammatica consapevole, non un muro. Finché lo Stress rimane a 10, non recuperi PF naturalmente.
+:::
+
+:::box[Aggiornamenti v3.2 - Regole Affinate (segue)]{type=danger}
 **Corruzione Overflow, Penalità Progressiva** *(v3.2)*
 - **Corruzione 6:** I poteri L3+ costano +1 Corruzione aggiuntiva.
 - **Corruzione 7:** I poteri L2+ costano +1 Corruzione aggiuntiva. I poteri L1 restano al costo normale.
 - **Corruzione 8, Trasformazione:** Automatica e immediata. Non aspettare fine scena. Il giocatore perde il controllo del personaggio.
+:::
 
+:::box[Aggiornamenti v3.2 - Regole Affinate (segue)]{type=danger}
 *Rationale design: in un sistema PbtA i personaggi devono poter agire anche al limite: il dramma nasce da scelte rischiose, non da blocchi totali. La penalità progressiva mantiene la tensione senza rendere il personaggio passivo.*
 
-**Resurrezione Limite:** Un personaggio può essere ressurrezzato al massimo una volta per sessione. La seconda morte nella stessa sessione è definitiva.
+**Resurrezione Limite:** Un personaggio può essere riportato in vita al massimo una volta per sessione. La seconda morte nella stessa sessione è definitiva.
 :::
 
 
@@ -56,22 +64,11 @@ loop si ripete per tutta la sessione, accelerando nei momenti di azione
 e rallentando nelle scene di dialogo e investigazione.
 
 :::box[Esempio: Il Loop di Gioco]{type=info}
-**Custode:** «Entrate nel magazzino abbandonato di Lambrate. È buio,
-odore di muffa e qualcosa di metallico - sangue, forse. Sentite una
-respirazione pesante dal secondo piano.»
-**Marco (Avalon):** «Accendo la luce del mio Anello. Illumino la
-scala.»
-**Custode:** «Una luce dorata emana dall'Anello. Vedi una scala
-pericolante, metà dei gradini sono marci. La respirazione si
-interrompe. Silenzio.»
-**Leila (Umbra):** «Mi fondo nelle ombre. Salgo invisibile.»
-**Custode:** «Bene - è un potere L1, quindi nessun costo
-Corruzione. Tira +FAT per vedere quanto funziona.»
-**Leila:** Tira 2d6+2 = 8. «Ottengo 8.»
-**Custode:** «7--9, successo parziale. Sei invisibile, MA la scala
-scricchiola sotto il tuo peso. Chi è sopra sa che qualcuno sta
-salendo. Cosa fai?»
-\...e il gioco continua.
+**Custode:** «Entrate nel magazzino abbandonato di Lambrate. È buio, odore di muffa e qualcosa di metallico - sangue, forse. Sentite una respirazione pesante dal secondo piano.» **Marco (Avalon):** «Accendo la luce del mio Anello. Illumino la scala.» **Custode:** «Una luce dorata emana dall'Anello. Vedi una scala pericolante, metà dei gradini sono marci. La respirazione si interrompe. Silenzio.»
+:::
+
+:::box[Esempio: Il Loop di Gioco (segue)]{type=info}
+**Leila (Umbra):** «Mi fondo nelle ombre. Salgo invisibile.» **Custode:** «Bene - è un potere L1, quindi nessun costo Corruzione. Tira +FAT per vedere quanto funziona.» **Leila:** Tira 2d6+2 = 8. «Ottengo 8.» **Custode:** «7--9, successo parziale. Sei invisibile, MA la scala scricchiola sotto il tuo peso. Chi è sopra sa che qualcuno sta salendo. Cosa fai?» \...e il gioco continua.
 :::
 
 I Quattro Principi Fondamentali
@@ -252,15 +249,11 @@ situazioni impossibili, intuizione mistica. FAT è la caratteristica
 primaria di Umbra, Ife e Mictlan.
 
 :::box[FAT in Azione]{type=info}
-**FAT +2:** Leila (Umbra) attiva Invisibilità Parziale. Tira +FAT:
-11. Perfetto. Scompare completamente nelle ombre, senza suono, senza
-traccia.
-**FAT +1:** Kwame (Ife) cerca un componente rituale raro nella
-bottega di via Sarpi. Tira +FAT: 9. Lo trova, MA il proprietario
-vuole qualcosa in cambio - non denaro.
-**FAT -1:** Elena (Mictlan) evoca lo spirito del testimone
-assassinato. Tira +FAT: 5. Lo spirito appare, MA è furioso e confuso.
-Urla. I bicchieri nel bar esplodono.
+**FAT +2:** Leila (Umbra) attiva Invisibilità Parziale. Tira +FAT: 11. Perfetto. Scompare completamente nelle ombre, senza suono, senza traccia. **FAT +1:** Kwame (Ife) cerca un componente rituale raro nella bottega di via Sarpi. Tira +FAT: 9. Lo trova, MA il proprietario vuole qualcosa in cambio - non denaro. **FAT -1:** Elena (Mictlan) evoca lo spirito del testimone assassinato. Tira +FAT: 5.
+:::
+
+:::box[FAT in Azione (segue)]{type=info}
+Lo spirito appare, MA è furioso e confuso. Urla. I bicchieri nel bar esplodono.
 :::
 
 ## DADI E MECCANICA CORE
@@ -291,15 +284,11 @@ quando hai tre ore. Tiri solo quando la tensione esiste.
 | 6-- | Fallimento | Non ottieni ciò che vuoi, E il Custode fa una mossa dura: introduce un pericolo, infligge danno, separa il gruppo, rivela una brutta verità. |
 
 :::box[Esempio: Tre Risultati dalla Stessa Azione]{type=info}
-**Situazione:** Marco tenta di scavalcare un muro alto 3 metri mentre
-è inseguito da un demone. Tira +CUO (+1).
-**10+ (tira 6+5 = 12):** «Corri, salti, ti aggrappi al bordo, ti tiri
-su in un movimento fluido. Sei oltre il muro. Il demone dietro urla
-frustrato - troppo lento.»
-**7--9 (tira 3+4 = 8):** «Scavalchi il muro, MA l'atterraggio è
-goffo. La caviglia si torce: -1 ongoing finché non riposi. E senti il
-demone che si arrampica dietro di te - hai 10 secondi di
-vantaggio.»
+**Situazione:** Marco tenta di scavalcare un muro alto 3 metri mentre è inseguito da un demone. Tira +CUO (+1). **10+ (tira 6+5 = 12):** «Corri, salti, ti aggrappi al bordo, ti tiri su in un movimento fluido. Sei oltre il muro. Il demone dietro urla frustrato - troppo lento.» **7--9 (tira 3+4 = 8):** «Scavalchi il muro, MA l'atterraggio è goffo. La caviglia si torce: -1 ongoing finché non riposi.
+:::
+
+:::box[Esempio: Tre Risultati dalla Stessa Azione (segue)]{type=info}
+E senti il demone che si arrampica dietro di te - hai 10 secondi di vantaggio.»
 
 danno. Il demone ti raggiunge. Artigli tesi, sorriso di troppi denti.
 Cosa fai?»
@@ -469,9 +458,13 @@ Legami profondi (L2--L3) valgono più di dieci superficiali.
 
 :::box[Riprendersi (v3.2)]{type=info}
 **Trigger:** Quando ti prendi almeno 10 minuti ininterrotti in una location relativamente sicura per respirare, curare ferite minori, ritrovare la calma.
+:::
 
+:::box[Riprendersi (v3.2) (segue)]{type=info}
 **Condizione di location:** Il Custode deve confermare che la location è "relativamente sicura". In combattimento attivo o con nemici vicini: non è attivabile. In zona controllata ma non ideale (es. vicolo con pericolo potenziale): il Custode può imporre -1 al tiro.
+:::
 
+:::box[Riprendersi (v3.2) (segue)]{type=info}
 **Tira +FOR.** Se un PNG con cui hai un Legame L2+ è presente e ti assiste attivamente (non solo "è nella stessa stanza"): +1 al tiro. Questo bonus si applica una sola volta per sessione per PNG.
 
 **10+:** Recuperi 1d6 PF e -1 Stress.
@@ -508,18 +501,11 @@ uccide un innocente per il «male minore», un Ife che distrugge un
 ecosistema).
 
 :::box[A Stress 10: Burnout]{type=warn}
-A 10 Stress sei in Burnout, ma i poteri NON sono bloccati: sono
-**sospesi**. Puoi ancora usarli, ma ogni attivazione costa il doppio E
-richiede un tiro su Sfidare Pericolo +FAT: su 6- il potere esplode (1d6
-danno al Guardiano, scena interrotta). Usarlo al limite è una scelta
-drammatica consapevole, non un muro. Finché lo Stress resta a 10 non
-recuperi PF naturalmente.
-Il Custode sceglie inoltre una manifestazione narrativa del Burnout:
-crollo emotivo (piangi incontrollabilmente, panico), dissociazione (ti
-senti vuoto, distaccato dal mondo), rabbia esplosiva (perdi il
-controllo, attacchi chi ti è vicino), o shutdown (catatonia temporanea,
-10 minuti). Il Burnout è temporaneo - ma le conseguenze possono essere
-durature.
+A 10 Stress sei in Burnout, ma i poteri NON sono bloccati: sono **sospesi**. Puoi ancora usarli, ma ogni attivazione costa il doppio E richiede un tiro su Sfidare Pericolo +FAT: su 6- il potere esplode (1d6 danno al Guardiano, scena interrotta). Usarlo al limite è una scelta drammatica consapevole, non un muro. Finché lo Stress resta a 10 non recuperi PF naturalmente.
+:::
+
+:::box[A Stress 10: Burnout (segue)]{type=warn}
+Il Custode sceglie inoltre una manifestazione narrativa del Burnout: crollo emotivo (piangi incontrollabilmente, panico), dissociazione (ti senti vuoto, distaccato dal mondo), rabbia esplosiva (perdi il controllo, attacchi chi ti è vicino), o shutdown (catatonia temporanea, 10 minuti). Il Burnout è temporaneo - ma le conseguenze possono essere durature.
 :::
 
 :::box[Regola: Nessuna Cura a Guadagno Netto]{type=rule}
@@ -596,7 +582,7 @@ Compiere un atto significativamente altruista che contrasta la natura oscura del
 L'Umbra trascorre un'intera sessione senza usare poteri a pagamento (L2+). Alla fine della sessione, se la condizione è stata rispettata, la Corruzione scende di 1. Non richiede tiro. Questo percorso è sempre disponibile ma ha un costo tattico reale.
 
 **3. Rituale di Purificazione** *(-1 o -2 Corruzione, costo esterno)*
-Richiede un Guardiano Avalon L3+ o Ife L4+. Dura 1 ora. Costo: **2 Stress** a chi lo esegue (ridotto dalla v3.1). Risultato: -1 Corruzione. Con un 10+ su Usare Potere: -2 Corruzione.
+Richiede un Guardiano Avalon L3+ o Ife L4+. Dura 1 ora. Costo: **2 Stress** a chi lo esegue. Risultato: -1 Corruzione. Con un 10+ su Usare Potere: -2 Corruzione.
 
 **4. Atto di Redenzione Profondo** *(raro, -2 o -3 Corruzione)*
 Un sacrificio narrativo maggiore: salvare una vita a rischio della propria, rivelare pubblicamente un segreto che costa caro, abbandonare un vantaggio fondamentale. Il Custode lo propone, il giocatore lo accetta. Rimuove 2-3 Corruzione. Non è un percorso "attivabile", emerge dalla fiction.
@@ -606,20 +592,15 @@ Stress, il riposo non la riduce. L'Umbra vive con il peso del proprio
 potere come arco narrativo lungo - non come punizione meccanica.
 
 :::box[Corruzione in Gioco: Leila (Umbra)]{type=casata_umbra}
-**Sessioni 1--3:** Leila usa poteri L1 senza costo. Quando serve, usa
-2 poteri L2: Corruzione sale a 2. Ancora sicura.
-**Sessione 4:** Corruzione 3 - Occhi Neri. Marco (Avalon) nota che
-gli occhi di Leila diventano neri quando attiva l'Invisibilità.
-«Leila\... i tuoi occhi.» «Lo so. Non preoccuparti.»
-**Sessione 7:** Corruzione 5 - Sussurri. L'Ombra le sussurra:
-«Uccidi l'informatore. Nessuno lo saprà. E avrai la risposta che
-cerchi.» Il Custode offre: +2 forward se accetta.
-**Sessione 9:** Corruzione 6. Leila compie un Atto di Redenzione: si
-espone per proteggere la figlia di un PNG, rischiando la vita. -1
-Corruzione, torna a 5. Il Custode conferma.
-**Nota:** Leila ha ancora spazio. Con cap a 8, può usare diversi
-poteri L2-L3 prima del punto di non ritorno. L'arco narrativo della
-Corruzione è una maratona, non uno sprint.
+**Sessioni 1--3:** Leila usa poteri L1 senza costo. Quando serve, usa 2 poteri L2: Corruzione sale a 2. Ancora sicura. **Sessione 4:** Corruzione 3 - Occhi Neri. Marco (Avalon) nota che gli occhi di Leila diventano neri quando attiva l'Invisibilità. «Leila\... i tuoi occhi.» «Lo so. Non preoccuparti.» **Sessione 7:** Corruzione 5 - Sussurri. L'Ombra le sussurra: «Uccidi l'informatore. Nessuno lo saprà.
+:::
+
+:::box[Corruzione in Gioco: Leila (Umbra) (segue)]{type=casata_umbra}
+E avrai la risposta che cerchi.» Il Custode offre: +2 forward se accetta. **Sessione 9:** Corruzione 6. Leila compie un Atto di Redenzione: si espone per proteggere la figlia di un PNG, rischiando la vita. -1 Corruzione, torna a 5. Il Custode conferma. **Nota:** Leila ha ancora spazio. Con cap a 8, può usare diversi poteri L2-L3 prima del punto di non ritorno.
+:::
+
+:::box[Corruzione in Gioco: Leila (Umbra) (segue)]{type=casata_umbra}
+L'arco narrativo della Corruzione è una maratona, non uno sprint.
 :::
 
 Tabella Riferimento Rapido
@@ -633,13 +614,11 @@ Tabella Riferimento Rapido
 | Punti Fato | Tutti | 2/sessione | - | Si rigenerano ogni sessione |
 
 :::box[Fine Parte II - Regole Base]{type=tip}
-Ora conosci le meccaniche core di Mythic Rings: la conversazione al
-tavolo, le cinque caratteristiche, il sistema 2d6 con i suoi tre
-risultati, i Punti Ferita e il danno, i Legami come motore narrativo
-e meccanico, lo Stress e la Corruzione come prezzo del potere.
-**Prossimo capitolo:** Combattimento e Morte. Come funziona il
-combattimento dettagliato, le regole per attacco e difesa,
-l'Escalation Die, l'Ultimo Respiro e la Morte Eroica.
+Ora conosci le meccaniche core di Mythic Rings: la conversazione al tavolo, le cinque caratteristiche, il sistema 2d6 con i suoi tre risultati, i Punti Ferita e il danno, i Legami come motore narrativo e meccanico, lo Stress e la Corruzione come prezzo del potere. **Prossimo capitolo:** Combattimento e Morte.
+:::
+
+:::box[Fine Parte II - Regole Base (segue)]{type=tip}
+Come funziona il combattimento dettagliato, le regole per attacco e difesa, l'Escalation Die, l'Ultimo Respiro e la Morte Eroica.
 :::
 
 ## Parte III
@@ -676,7 +655,7 @@ significativa. Quarto: veloce. Ogni round dovrebbe durare 2--3 minuti al
 tavolo. Niente paralisi da analisi.
 
 :::box[Non Tutto è Combattimento]{type=warn}
-Non tutte le confrontazioni richiedono il sistema di combattimento
+Non tutti i confronti richiedono il sistema di combattimento
 completo. Un singolo pugno è una mossa. Una scazzottata da cinque
 secondi è una mossa. Il combattimento formale - con round, turni e
 iniziativa - si usa solo quando il conflitto è prolungato, con
@@ -743,7 +722,11 @@ viceversa), alzarti da terra, estrarre o riporre un'arma.
 avvertimento, lasciare cadere un oggetto. Ragionevolmente illimitate.
 
 :::box[La Finzione Guida le Azioni]{type=info}
-Questa lista è un limite di *quante cose distinte* tenti prima che il Custode reagisca, non una griglia a turni. Una Mossa copre tutto ciò che la finzione racchiude in un gesto continuo: se "scivolo sotto il demone e lo colpisco" è un solo movimento fluido, è una sola Mossa (Attaccare) e lo spostamento è incluso. Separi le azioni solo quando il personaggio tenta cose realmente distinte (es. correre al riparo E poi sparare). Nel dubbio: la descrizione viene prima, l'economia delle azioni serve solo a tenere il ritmo.
+Questa lista è un limite di *quante cose distinte* tenti prima che il Custode reagisca, non una griglia a turni. Una Mossa copre tutto ciò che la finzione racchiude in un gesto continuo: se "scivolo sotto il demone e lo colpisco" è un solo movimento fluido, è una sola Mossa (Attaccare) e lo spostamento è incluso. Separi le azioni solo quando il personaggio tenta cose realmente distinte (es.
+:::
+
+:::box[La Finzione Guida le Azioni (segue)]{type=info}
+correre al riparo E poi sparare). Nel dubbio: la descrizione viene prima, l'economia delle azioni serve solo a tenere il ritmo.
 :::
 
 ## Quando Agiscono i Nemici
@@ -783,19 +766,11 @@ magia offensiva.
 | 6-- | Manchi, oppure il colpo è inefficace. Il Custode fa una mossa dura: il nemico contrattacca duramente, la situazione peggiora, o succede qualcosa che non avevi previsto. |
 
 :::box[Esempio: Attacco in Mischia]{type=info}
-**Marco (FOR +1)** carica il vampiro con la spada d'argento (1d8
-danno). «Tira Attaccare +FOR.»
-**Tira:** 2d6+1 = 10. Successo pieno!
-Infligge danno: 1d8 = 6. Il vampiro ha Armatura 1 → subisce 5 danni.
-Marco sceglie il bonus «Evito contrattacco»: la spada affonda nel
-petto del vampiro, che urla, ma Marco si ritrae prima che gli artigli
-lo afferrino.
-**Se avesse tirato 7--9:** La spada colpisce (1d8 danno) MA il
-vampiro graffia Marco al braccio mentre si avvicina: 1d6 danno
-contrattacco.
-**Se avesse tirato 6--:** Il vampiro schiva all'ultimo istante,
-afferra la lama e tira Marco a sé. Il vampiro è a un palmo dal suo
-collo.
+**Marco (FOR +1)** carica il vampiro con la spada d'argento (1d8 danno). «Tira Attaccare +FOR.» **Tira:** 2d6+1 = 10. Successo pieno! Infligge danno: 1d8 = 6. Il vampiro ha Armatura 1 → subisce 5 danni. Marco sceglie il bonus «Evito contrattacco»: la spada affonda nel petto del vampiro, che urla, ma Marco si ritrae prima che gli artigli lo afferrino.
+:::
+
+:::box[Esempio: Attacco in Mischia (segue)]{type=info}
+**Se avesse tirato 7--9:** La spada colpisce (1d8 danno) MA il vampiro graffia Marco al braccio mentre si avvicina: 1d6 danno contrattacco. **Se avesse tirato 6--:** Il vampiro schiva all'ultimo istante, afferra la lama e tira Marco a sé. Il vampiro è a un palmo dal suo collo.
 :::
 
 Mossa: Difendere
@@ -908,32 +883,23 @@ crescente: prima al tiro di Attaccare, poi anche al danno.
 | 6+ | +2 al tiro e +1d6 danno | Fase finale: chi è ancora in piedi dà tutto. |
 
 :::box[Perché Solo i PG?]{type=info}
-I nemici NON ottengono il bonus Escalation. Il vantaggio è esclusivo
-dei Guardiani - coerente con il principio PbtA «sii fan dei PG».
-Narrativamente, i Guardiani si adattano, imparano, e trovano la forza
-nei momenti disperati. I mostri combattono con la stessa ferocia dal
-primo all'ultimo round.
-Risultato pratico: la maggior parte dei combattimenti si risolve in
-3--5 round. Quelli che superano il round 6 accelerano verso una
-conclusione cinematica.
+I nemici NON ottengono il bonus Escalation. Il vantaggio è esclusivo dei Guardiani - coerente con il principio PbtA «sii fan dei PG». Narrativamente, i Guardiani si adattano, imparano, e trovano la forza nei momenti disperati. I mostri combattono con la stessa ferocia dal primo all'ultimo round. Risultato pratico: la maggior parte dei combattimenti si risolve in 3--5 round.
+:::
+
+:::box[Perché Solo i PG? (segue)]{type=info}
+Quelli che superano il round 6 accelerano verso una conclusione cinematica.
 :::
 
 :::box[Esempio: Dado Escalation in Azione]{type=info}
-**Round 1--2:** Il gruppo combatte un Divoratore d'Ombre (30 PF,
-Armatura 2). I colpi si scambiano, ma il danno netto è basso: le armi
-fisiche fanno poco contro l'Armatura e i 7--9 complicano tutto.
-**Round 3 (Escalation: +1 al tiro):** Elena tira Attaccare +FAT (+2) +
-Escalation (+1) = 2d6+3. La probabilità di 10+ sale dal 41,7% (a +2) al
-58,3% (a +3). Il suo Tocco Frigido perfora la barriera.
-**Round 4 (Escalation: +1 al tiro, +1 danno):** Marco carica con la
-spada: +FOR (+1) + Escalation (+1) = 2d6+2, e il colpo infligge +1 danno
-fisso. Il Divoratore barcolla.
-**Round 5 (Escalation: +1 al tiro, +1d4 danno):** Marco insiste: +FOR
-(+1) + Escalation (+1) = 2d6+2, con +1d4 danno bonus a segno.
-**Round 6 (Escalation: +2 al tiro, +1d6 danno):** Leila emerge dalle
-ombre con Lama d'Ombra: +FAT (+2) + Escalation (+2) = 2d6+4 - a +4 la
-probabilità di 10+ è 72,2% - e con +1d6 danno bonus il colpo finale
-squarcia il Divoratore.
+**Round 1--2:** Il gruppo combatte un Divoratore d'Ombre (30 PF, Armatura 2). I colpi si scambiano, ma il danno netto è basso: le armi fisiche fanno poco contro l'Armatura e i 7--9 complicano tutto. **Round 3 (Escalation: +1 al tiro):** Elena tira Attaccare +FAT (+2) + Escalation (+1) = 2d6+3. La probabilità di 10+ sale dal 41,7% (a +2) al 58,3% (a +3). Il suo Tocco Frigido perfora la barriera.
+:::
+
+:::box[Esempio: Dado Escalation in Azione (segue)]{type=info}
+**Round 4 (Escalation: +1 al tiro, +1 danno):** Marco carica con la spada: +FOR (+1) + Escalation (+1) = 2d6+2, e il colpo infligge +1 danno fisso. Il Divoratore barcolla. **Round 5 (Escalation: +1 al tiro, +1d4 danno):** Marco insiste: +FOR (+1) + Escalation (+1) = 2d6+2, con +1d4 danno bonus a segno. **Round 6 (Escalation: +2 al tiro, +1d6 danno):** Leila emerge dalle ombre con Lama d'Ombra:
+:::
+
+:::box[Esempio: Dado Escalation in Azione (segue)]{type=info}
++FAT (+2) + Escalation (+2) = 2d6+4 - a +4 la probabilità di 10+ è 72,2% - e con +1d6 danno bonus il colpo finale squarcia il Divoratore.
 :::
 
 ## SITUAZIONI SPECIALI
@@ -1000,7 +966,7 @@ Mossa: Ultimo Respiro
 **Trigger:** I tuoi PF scendono a 0 o meno.
 
 Nella versione originale, l'Ultimo Respiro era un tiro nudo: 2d6 senza
-modificatori. Nella v3.0, il tiro ha **bonus condizionali** che premiano
+modificatori. Nella v3.2, il tiro ha **bonus condizionali** che premiano
 il gioco di squadra, i Legami e la gestione delle risorse. La morte
 diventa conseguenza dell'isolamento e dell'imprudenza - non della
 sfortuna.
@@ -1033,21 +999,15 @@ e preparato.
 | 6-- | Morte. Lo spirito lascia il corpo. Il PG è morto. Il giocatore deve creare un nuovo personaggio. Eccezione: gli alleati possono tentare la resurrezione (Avalon L5 o Mictlan L5), ma è un rituale difficile, raro e costoso. |
 
 :::box[Esempio: Ultimo Respiro - La Scelta di Elena]{type=info}
-Elena (Mictlan, 29 PF) scende a 0 PF dopo il colpo del vampiro
-antico. Tira Ultimo Respiro.
-**Bonus:** Marco è Vicino e la sostiene (+1), Elena ha un Legame L2
-con Nonna Lucia, il cui spirito è presente (+1). Totale: 2d6+2.
-**Tira:** 2d6+2 = 9. Scelta Difficile (7--9).
-**Custode:** «Elena, attraversi il Velo. Il Regno dei Morti ti
-accoglie con un freddo familiare. Mictlantecuhtli appare, un sorriso
-che non è un sorriso. 'Troppo presto, piccola. Ma nulla è gratis.' Ti
-offre due opzioni:»
-**Opzione A:** «Vivi, ma dimentichi la persona più cara. Legame Nonna
-Lucia azzerato permanentemente. Non la sentirai più.»
-**Opzione B:** «Vivi, ma mi devi un debito. Quando chiamerò, verrai.
-Nessuna domanda.»
-Elena sceglie B. Torna a 1 PF. Il Custode annota: «Elena deve un
-favore alla Morte. Sarà riscosso nel momento peggiore.»
+Elena (Mictlan, 29 PF) scende a 0 PF dopo il colpo del vampiro antico. Tira Ultimo Respiro. **Bonus:** Marco è Vicino e la sostiene (+1), Elena ha un Legame L2 con Nonna Lucia, il cui spirito è presente (+1). Totale: 2d6+2. **Tira:** 2d6+2 = 9. Scelta Difficile (7--9). **Custode:** «Elena, attraversi il Velo. Il Regno dei Morti ti accoglie con un freddo familiare.
+:::
+
+:::box[Esempio: Ultimo Respiro - La Scelta di Elena (segue)]{type=info}
+Mictlantecuhtli appare, un sorriso che non è un sorriso. 'Troppo presto, piccola. Ma nulla è gratis.' Ti offre due opzioni:» **Opzione A:** «Vivi, ma dimentichi la persona più cara. Legame Nonna Lucia azzerato permanentemente. Non la sentirai più.» **Opzione B:** «Vivi, ma mi devi un debito. Quando chiamerò, verrai. Nessuna domanda.» Elena sceglie B. Torna a 1 PF. Il Custode annota:
+:::
+
+:::box[Esempio: Ultimo Respiro - La Scelta di Elena (segue)]{type=info}
+«Elena deve un favore alla Morte. Sarà riscosso nel momento peggiore.»
 :::
 
 Morte Eroica
@@ -1081,20 +1041,11 @@ un tiro critico. Lo Spirito Guida ha la personalità del PG morto e può
 essere interpretato dal suo giocatore originale.
 
 :::box[Esempio: Morte Eroica - Marco Si Sacrifica]{type=info}
-Il Divoratore d'Ombre sta per aprire il portale permanente sotto il
-Duomo. Serve che qualcuno entri nel vortice per distruggerlo
-dall'interno. Nessuno sopravviverà.
-**Marco (Avalon):** «Ho giurato di proteggere. È questo il momento.»
-Si toglie l'Anello. Lo dà a Leila. «Dillo a Padre Giovanni: non ho
-paura.»
-Marco entra nel vortice. Luce dorata esplode. Il portale si chiude
-per sempre.
-**Beneficio scelto: Spirito Guida.** Da questo momento, il gruppo può
-invocare Marco 1/sessione. Il suo spirito appare brevemente,
-circondato di luce, per offrire un consiglio o un +2 forward quando
-la squadra ne ha più bisogno. Il giocatore di Marco lo interpreta
-ancora - non come PG, ma come presenza. E crea un nuovo Guardiano
-per la prossima sessione.
+Il Divoratore d'Ombre sta per aprire il portale permanente sotto il Duomo. Serve che qualcuno entri nel vortice per distruggerlo dall'interno. Nessuno sopravviverà. **Marco (Avalon):** «Ho giurato di proteggere. È questo il momento.» Si toglie l'Anello. Lo dà a Leila. «Dillo a Padre Giovanni: non ho paura.» Marco entra nel vortice. Luce dorata esplode. Il portale si chiude per sempre. **Beneficio scelto:
+:::
+
+:::box[Esempio: Morte Eroica - Marco Si Sacrifica (segue)]{type=info}
+Spirito Guida.** Da questo momento, il gruppo può invocare Marco 1/sessione. Il suo spirito appare brevemente, circondato di luce, per offrire un consiglio o un +2 forward quando la squadra ne ha più bisogno. Il giocatore di Marco lo interpreta ancora - non come PG, ma come presenza. E crea un nuovo Guardiano per la prossima sessione.
 :::
 
 ## DOPO LA MORTE
@@ -1147,26 +1098,22 @@ più 1 Legame esterno. La continuità narrativa del gruppo viene
 preservata.
 
 :::box[L'Anello Sceglie]{type=info}
-Quando un Guardiano muore, il suo Anello Custodia lascia il cadavere
-e inizia a cercare un nuovo portatore. A volte impiega giorni, a
-volte ore. L'Anello ha una volontà propria - e la sua scelta non è
-mai casuale.
-Questo è un ottimo aggancio narrativo per introdurre un nuovo PG:
-l'Anello del compagno caduto sceglie qualcuno di inaspettato, e il
-gruppo deve decidere se fidarsi di questo nuovo Guardiano che porta
-l'eredità del loro amico.
+Quando un Guardiano muore, il suo Anello Custodia lascia il cadavere e inizia a cercare un nuovo portatore. A volte impiega giorni, a volte ore. L'Anello ha una volontà propria - e la sua scelta non è mai casuale. Questo è un ottimo aggancio narrativo per introdurre un nuovo PG:
+:::
+
+:::box[L'Anello Sceglie (segue)]{type=info}
+l'Anello del compagno caduto sceglie qualcuno di inaspettato, e il gruppo deve decidere se fidarsi di questo nuovo Guardiano che porta l'eredità del loro amico.
 :::
 
 :::box[Fine Parte III - Combattimento e Morte]{type=tip}
-Ora conosci il sistema di combattimento completo di Mythic Rings: la
-struttura dei round con iniziativa narrativa, le mosse Attaccare e
-Difendere con i loro tre risultati, le armi e l'armatura della Milano
-soprannaturale, il Dado Escalation che accelera gli scontri lunghi,
-le situazioni speciali, l'Ultimo Respiro con i suoi modificatori che
-premiano il gioco di squadra, e la Morte Eroica che trasforma il
-sacrificio in eredità.
-**Prossimo capitolo:** Parte IV - Mosse e Poteri. Le 12 Mosse Base
-che definiscono il vocabolario d'azione di ogni Guardiano, e il
-Sistema Poteri con tutti i 60 poteri delle quattro Casate.
+Ora conosci il sistema di combattimento completo di Mythic Rings:
+:::
+
+:::box[Fine Parte III - Combattimento e Morte (segue)]{type=tip}
+la struttura dei round con iniziativa narrativa, le mosse Attaccare e Difendere con i loro tre risultati, le armi e l'armatura della Milano soprannaturale, il Dado Escalation che accelera gli scontri lunghi, le situazioni speciali, l'Ultimo Respiro con i suoi modificatori che premiano il gioco di squadra, e la Morte Eroica che trasforma il sacrificio in eredità.
+:::
+
+:::box[Fine Parte III - Combattimento e Morte (segue)]{type=tip}
+**Prossimo capitolo:** Parte IV - Mosse e Poteri. Le 12 Mosse Base che definiscono il vocabolario d'azione di ogni Guardiano, e il Sistema Poteri con tutti i 60 poteri delle quattro Casate.
 :::
 

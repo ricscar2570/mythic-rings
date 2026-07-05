@@ -36,7 +36,7 @@ improvvisare incontri.
 
 :::box[🏛️ Duomo / Centro]{type=info}
 Casata Dominante: Neutrale (Territorio del Nexus)
-*\"Qui convergono tutte le strade. E tutte le ombre.\"*
+*“Qui convergono tutte le strade. E tutte le ombre.”*
 :::
 
 Il cuore di Milano è il cuore della Milano Mitica. Piazza Duomo non è
@@ -124,7 +124,7 @@ approvazione di Don Aurelio.
 
 :::box[🎨 Brera]{type=info}
 Casata Dominante: Avalon (Luce, Giustizia, Arte)
-*\"La verità si nasconde nei quadri. Basta saper guardare.\"*
+*“La verità si nasconde nei quadri. Basta saper guardare.”*
 :::
 
 Brera è il quartiere degli artisti, degli intellettuali e - senza che
@@ -142,7 +142,7 @@ secoli fa.
 
 **1. Palazzo Brera - La Pinacoteca Incantata.** Il primo piano è un
 museo pubblico. Ma la sala 24 - normalmente chiusa al pubblico per
-\"restauro permanente\" - è il centro operativo dei Custodi. Dietro un
+“restauro permanente” - è il centro operativo dei Custodi. Dietro un
 quadro del Caravaggio c'è una porta che si apre solo con il tocco di un
 Anello Custodia. All'interno: sala riunioni degli Anziani, archivio
 missioni, armeria leggera, e una bacheca delle minacce attive.
@@ -201,7 +201,7 @@ consultazione.
 | 2 | Un quadro nella Pinacoteca piange sangue reale. I restauratori sono confusi. |
 | 3 | Una studentessa dell'Accademia dipinge inconsciamente scene profetiche. Chi è? |
 | 4 | Il Caffè Fiorio viene visitato da un Guardiano sconosciuto, da un'altra città. Porta notizie urgenti. |
-| 5 | Un'asta d'arte privata include un artefatto magico spacciato per \"opera contemporanea\". |
+| 5 | Un'asta d'arte privata include un artefatto magico spacciato per “opera contemporanea”. |
 | 6 | Eleonora Visconti convoca una riunione d'emergenza. Qualcuno ha violato l'archivio. |
 | 7 | Le piante dell'Orto Botanico crescono di un metro in una notte. Qualcosa le agita. |
 | 8 | Un turista fotografa un Guardiano mentre usa un potere. La foto è già online. |
@@ -212,7 +212,7 @@ consultazione.
 
 :::box[🌙 Navigli]{type=info}
 Casata Dominante: Umbra (Ombra, Inganno, Segreti)
-*\"Le acque dei Navigli riflettono tutto tranne la verità.\"*
+*“Le acque dei Navigli riflettono tutto tranne la verità.”*
 :::
 
 I Navigli sono il quartiere più romantico di Milano di giorno - e il
@@ -231,9 +231,9 @@ completamente - il territorio perfetto per chi opera nell'ombra.
 tra i cortili lungo il Naviglio Grande, si tiene il Mercato Notturno: il
 bazaar nero della Milano Mitica. Si compra e si vende di tutto -
 informazioni, artefatti minori, ingredienti per rituali, favori. La
-valuta è il baratto o i \"debiti d'ombra\" (promesse vincolanti
+valuta è il baratto o i “debiti d'ombra” (promesse vincolanti
 magicamente). Regola assoluta: nessuna violenza al Mercato. Valentina
-\"La Volpe\" garantisce la pace con metodi che nessuno vuole
+“La Volpe” garantisce la pace con metodi che nessuno vuole
 sperimentare.
 
 **2. Vicolo Lavandai - Il Passaggio.** Questo vicolo pittoresco
@@ -251,7 +251,7 @@ viaggiano lungo i canali.
 
 ## PNG
 
-**Valentina \"La Volpe\"** - Mercante di informazioni, Umbra neutrale.
+**Valentina “La Volpe”** - Mercante di informazioni, Umbra neutrale.
 Età apparente 35 (età reale sconosciuta). Capelli rosso fuoco, sorriso
 di chi sa qualcosa che tu non sai, abiti vintage impeccabili. Gestisce
 il Mercato Notturno e sa tutto di tutti. Non è alleata di nessuno ma
@@ -259,7 +259,7 @@ nemica di pochi. *Segreto: Valentina è una Rinnegata che ha fatto un
 patto con i Custodi - libertà in cambio di informazioni. Ma la
 Fratellanza lo sa, e la sta cercando.*
 
-**Marco \"Specchio\" Bianchi** - Informatore Umbra, 28 anni. Ragazzo
+**Marco “Specchio” Bianchi** - Informatore Umbra, 28 anni. Ragazzo
 magro, nervoso, con un occhio grigio e uno nero (effetto della
 Corruzione a livello 3). Frequenta il Mercato come procuratore per vari
 clienti. Conosce ogni vicolo dei Navigli. *Segreto: è un doppiogiochista
@@ -295,14 +295,14 @@ Tira Persuadere/Raggirare: su 10+ ottieni l'informazione completa, su
 | 6 | Un artista di strada dipinge murales che mostrano il futuro. I Navigli domani notte. In fiamme. |
 | 7 | Un gruppo di profani ubriachi inciampa nel Passaggio del Vicolo Lavandai. Non ne escono. |
 | 8 | L'acqua del canale diventa nera come inchiostro per 10 minuti. Poi torna normale. |
-| 9 | Marco \"Specchio\" chiede aiuto urgente a un PG. È stato scoperto. |
+| 9 | Marco “Specchio” chiede aiuto urgente a un PG. È stato scoperto. |
 | 10 | Un artefatto rubato viene messo in vendita al Mercato. Il proprietario è un Anziano. |
 | 11 | Le luci lungo i Navigli si spengono tutte contemporaneamente. Nell'oscurità, sussurri. |
 | 12 | Un Rinnegato emerge dall'acqua del canale, ferito e terrorizzato. Qualcosa lo insegue. |
 
 :::box[⚪ Porta Ticinese]{type=info}
 Casata Dominante: Umbra (Segreti, Sottocultura, Ribellione)
-*\"Le colonne di San Lorenzo hanno visto tutto. E non parlano.\"*
+*“Le colonne di San Lorenzo hanno visto tutto. E non parlano.”*
 :::
 
 Porta Ticinese è la Milano alternativa: locali underground, graffiti che
@@ -319,7 +319,7 @@ vanno da un demone maggiore a un frammento del Piano delle Ombre stesso.
 **1. Colonne di San Lorenzo - Il Cerchio.** Area aperta ma carica di
 energia. I Guardiani Umbra vengono qui per meditare e contattare entità
 del Piano delle Ombre in modo relativamente sicuro (le colonne
-funzionano come \"firewall\"). Un rituale condotto tra le colonne ha +1
+funzionano come “firewall”). Un rituale condotto tra le colonne ha +1
 al tiro. Ma disturbare i sigilli è pericolosissimo.
 
 **2. Il Sotterraneo del Ticinese.** Un locale underground il cui
@@ -353,7 +353,7 @@ accedere a quello che è sigillato sotto le Colonne. Non per liberarlo
 
 **Il Culto delle Colonne.** Un gruppo di profani, inconsapevoli della
 vera natura delle Colonne, le venera come sito di potere. Le loro
-\"cerimonie\" new age sono per lo più innocue, ma stanno accidentalmente
+“cerimonie” new age sono per lo più innocue, ma stanno accidentalmente
 indebolendo i sigilli. Il problema: sono persone comuni, non malvagie.
 Fermarli richiede diplomazia, non forza. E il culto cresce - un
 influencer con 200.000 follower è appena diventato membro.
@@ -384,8 +384,8 @@ Un viaggio sotterraneo richiede 30 minuti e un tiro di Sfidare Pericolo
 
 :::box[🌳 Parco Sempione]{type=info}
 Casata Dominante: Ife (Vita, Natura, Crescita)
-*\"Il verde è solo la superficie. Le radici vanno molto più in
-profondità.\"*
+*“Il verde è solo la superficie. Le radici vanno molto più in
+profondità.”*
 :::
 
 Parco Sempione è il polmone verde di Milano - 47 ettari di alberi,
@@ -396,7 +396,7 @@ più forte. Gli alberi qui sono antichi e *consapevoli*. Non nel modo in
 cui un umano è consapevole - ma sentono, ricordano e, quando
 necessario, agiscono. La Grande Quercia vicino all'Acquario Civico ha
 400 anni e le sue radici raggiungono una Linea Ley. È il membro più
-anziano del \"Consiglio Verde\" - una rete di alberi senzienti che
+anziano del “Consiglio Verde” - una rete di alberi senzienti che
 comunica attraverso le radici.
 
 ## Location
@@ -418,7 +418,7 @@ della natura.
 
 **3. Castello Sforzesco - Le Segrete.** Il castello medievale ha
 sotterranei che non compaiono in nessuna mappa. Alcune celle contengono
-prigionieri dimenticati - non umani, ma entità naturali corruotte,
+prigionieri dimenticati - non umani, ma entità naturali corrotte,
 imprigionate qui secoli fa. Le piante del parco le tengono addormentate
 con un intreccio di radici. Se le radici venissero tagliate\...
 
@@ -431,10 +431,10 @@ ufficialmente destinata al giardinaggio comunale. *Segreto: Nonna Rosa è
 la guardiana delle Segrete del Castello. Sa cosa c'è dentro - e sa che
 un giorno le radici non basteranno più.*
 
-**Tommaso \"Muschio\" Ferretti** - Giovane Guardiano Ife, 22 anni.
+**Tommaso “Muschio” Ferretti** - Giovane Guardiano Ife, 22 anni.
 Studente di biologia, capelli arruffati, jeans sporchi di terra, zaino
 pieno di semi. Entusiasta ma imprudente. *Segreto: Tommaso ha scoperto
-che le piante del parco possono essere \"programmate\" con la magia per
+che le piante del parco possono essere “programmate” con la magia per
 eseguire azioni complesse. Sta sperimentando da solo. I risultati non
 sono sempre controllabili.*
 
@@ -442,7 +442,7 @@ sono sempre controllabili.*
 
 **Il Risveglio degli Alberi.** Gli alberi di Sempione stanno diventando
 più aggressivi. Rami che crescono durante la notte bloccano sentieri.
-Radici che sollevano asfalto. Un jogger è stato \"gentilmente\"
+Radici che sollevano asfalto. Un jogger è stato “gentilmente”
 intrappolato per 3 ore da un tronco che si è piegato. La causa è
 sconosciuta: forse inquinamento magico, forse l'avvicinarsi di un evento
 naturale ciclico, forse qualcosa nelle Segrete si sta svegliando.
@@ -463,17 +463,17 @@ sessione. Guardiani Ife recuperano 1d6 PF.
 | 4 | Un cane da passeggio abbaia furiosamente a un punto vuoto del parco. Non è vuoto. |
 | 5 | Nonna Rosa non risponde da 2 giorni. La sua casetta è chiusa e le piante intorno sono appassite. |
 | 6 | Un gruppo di ragazzini trova un cerchio di funghi e ci gioca dentro. Spariscono per 3 ore. |
-| 7 | Le radici della Grande Quercia emergono dal terreno formando una parola: \"SCAPPATE\". |
+| 7 | Le radici della Grande Quercia emergono dal terreno formando una parola: “SCAPPATE”. |
 | 8 | Un guardiano del parco (profano) denuncia atti di vandalismo notturno. Ma sono le piante stesse. |
 | 9 | Tommaso ha creato qualcosa nella Radura. Non sa come fermarlo. |
-| 10 | Il Castello Sforzesco viene chiuso per \"problemi strutturali\". In realtà le radici nelle Segrete si muovono. |
+| 10 | Il Castello Sforzesco viene chiuso per “problemi strutturali”. In realtà le radici nelle Segrete si muovono. |
 | 11 | Un'ondata di polline innaturale dal parco copre il quartiere. Effetto: sogni vividi per tutti i residenti. |
 | 12 | La Grande Quercia brucia spontaneamente. Le fiamme sono verdi. Non è fuoco normale. |
 
 :::box[🏗️ Isola / Garibaldi]{type=info}
 Casata Dominante: Ife (Rinascita, Comunità, Memoria Verde)
-*\"Dove c'era la fabbrica, ora cresce il bosco. Ma la fabbrica
-ricorda.\"*
+*“Dove c'era la fabbrica, ora cresce il bosco. Ma la fabbrica
+ricorda.”*
 :::
 
 L'Isola è il quartiere della rinascita: da zona operaia e degradata a
@@ -510,7 +510,7 @@ per lo studio di architettura, segretamente per i Custodi. *Segreto: le
 piante del Bosco le hanno mostrato una visione di Milano completamente
 ricoperta di vegetazione. Non sa se è profezia o avvertimento.*
 
-**Giorgio \"Nonno\" Beltrame** - Spirito operaio, morto nel 1972.
+**Giorgio “Nonno” Beltrame** - Spirito operaio, morto nel 1972.
 Appare come un uomo robusto in tuta da lavoro, semi-trasparente. Leader
 non ufficiale degli spiriti del quartiere. Non è ostile ma vuole che
 qualcuno *ricordi*. Parla volentieri con i Mictlan.
@@ -539,24 +539,24 @@ attività soprannaturali nell'area. Automatico, 1 volta per sessione.
 | 4 | Le fontane di Piazza Gae Aulenti zampillano acqua verde brillante per 5 minuti. |
 | 5 | Un cantiere viene chiuso dopo che le fondamenta hanno rivelato un cimitero sconosciuto. |
 | 6 | Mei Lin è preoccupata: le piante del Bosco le inviano messaggi confusi, come se urlassero. |
-| 7 | Un podcast popolare pubblica un episodio sulle \"presenze\" dell'Isola. Troppo accurato per essere coincidenza. |
+| 7 | Un podcast popolare pubblica un episodio sulle “presenze” dell'Isola. Troppo accurato per essere coincidenza. |
 | 8 | I vetri di Piazza Gae Aulenti mostrano tutti la stessa scena: un incendio. |
-| 9 | Giorgio \"Nonno\" chiede ai PG di portare un messaggio alla sua pronipote. Vive ancora a Milano. |
+| 9 | Giorgio “Nonno” chiede ai PG di portare un messaggio alla sua pronipote. Vive ancora a Milano. |
 | 10 | Una pianta del Bosco Verticale cresce fino a invadere un appartamento occupato. Non è ostile - protegge qualcosa lì dentro. |
 | 11 | Black-out nell'intero quartiere. Le uniche luci: le piante del Bosco che brillano di verde. |
 | 12 | Un grattacielo in costruzione crolla parzialmente di notte. Nessun ferito, ma segni di artigli sul cemento. |
 
 :::box[🌺 Porta Venezia]{type=info}
 Casata Dominante: Ife (Guarigione, Diversità, Santuario)
-*\"Qui ogni ferita può guarire. Anche quelle dell'anima.\"*
+*“Qui ogni ferita può guarire. Anche quelle dell'anima.”*
 :::
 
 Porta Venezia è il quartiere della diversità - culturale, sociale, e
 magica. I Giardini Pubblici Indro Montanelli sono un santuario naturale
 dove Guardiani feriti o esausti vengono a recuperare. Le piante qui
 hanno proprietà curative uniche, nutrite da secoli di presenza Ife. Il
-quartiere è anche il più tolerante di Milano: le creature soprannaturali
-pacifiche che vivono \"in vista\" - mimetizzate tra gli umani ma senza
+quartiere è anche il più tollerante di Milano: le creature soprannaturali
+pacifiche che vivono “in vista” - mimetizzate tra gli umani ma senza
 nascondersi attivamente - si trovano qui. Un vampiro che ha rinunciato
 al sangue umano, una mutaforma che si presenta al bar ogni mattina con
 una faccia diversa, uno spirito che gestisce una libreria dell'usato.
@@ -566,12 +566,12 @@ Porta Venezia non giudica.
 
 **1. Giardini Indro Montanelli - Il Santuario.** Le piante qui sono
 senzienti e protettive. Un Guardiano ferito che si addormenta nei
-giardini viene \"curato\" dalla vegetazione: +1d6 PF al risveglio. Ma le
+giardini viene “curato” dalla vegetazione: +1d6 PF al risveglio. Ma le
 piante scelgono chi curare. Chi entra con intenzioni ostili viene
 espulso - gentilmente ma fermamente.
 
 **2. Libreria dell'Aldilà (Via Lecco).** Una libreria dell'usato gestita
-da uno spirito che si fa chiamare \"Il Libraio\". Vende libri normali al
+da uno spirito che si fa chiamare “Il Libraio”. Vende libri normali al
 piano terra, tomi occulti al primo piano (accessibile solo ai
 Consapevoli). Ha un libro su qualsiasi argomento magico, ma il prezzo
 non è sempre denaro.
@@ -584,7 +584,7 @@ tocca una Linea Ley.
 
 ## PNG
 
-**\"Il Libraio\"** - Spirito ancorato, età indeterminata. Appare come
+**“Il Libraio”** - Spirito ancorato, età indeterminata. Appare come
 un signore anziano con occhiali tondi e cardigan. Gentile, erudito,
 leggermente melanconico. Non ricorda il proprio nome o come è morto.
 *Segreto: il Libraio non è un singolo spirito - è un amalgama di tutti
@@ -603,8 +603,8 @@ lo dice a nessuno.*
 sviluppando un'intelligenza inquietante: costruiscono strutture,
 intrappolano piccoli animali, comunicano tra loro con suoni udibili. Non
 è chiaro se stiano evolvendo naturalmente o se qualcuno le stia
-manipolando. Il confine tra \"giardino senziente\" e \"foresta
-predatrice\" si sta assottigliando.
+manipolando. Il confine tra “giardino senziente” e “foresta
+predatrice” si sta assottigliando.
 
 ## Risorsa per i Guardiani
 
@@ -619,7 +619,7 @@ negativa. 1 volta per sessione.
 |---| ---|
 | 2 | Una pianta dei giardini cattura un piccione e lo divora. I custodi del parco sono sconvolti. |
 | 3 | Il Libraio mette in vetrina un libro con il nome di un PG sul dorso. Il contenuto è inquietante. |
-| 4 | Un vampiro \"pacifico\" del quartiere perde il controllo in un ristorante. Il Velo è a rischio. |
+| 4 | Un vampiro “pacifico” del quartiere perde il controllo in un ristorante. Il Velo è a rischio. |
 | 5 | Le piscine dei Bagni Misteriosi diventano di colore rosso sangue per un'ora. Nessuno si è ferito. |
 | 6 | Amara chiede aiuto a un PG: un paziente al Fatebenefratelli è affetto da una malattia magica che non sa curare. |
 | 7 | Una manifestazione nel quartiere viene infiltrata da un agente della Fratellanza. Scopo: reclutamento. |
@@ -631,7 +631,7 @@ negativa. 1 volta per sessione.
 
 :::box[⚓ Cimitero Monumentale]{type=info}
 Casata Dominante: Mictlan (Morte, Spiriti, Memoria)
-*\"I morti di Milano hanno molto da dire. Basta saper ascoltare.\"*
+*“I morti di Milano hanno molto da dire. Basta saper ascoltare.”*
 :::
 
 Il Cimitero Monumentale non è solo un cimitero - è una città nella
@@ -639,8 +639,8 @@ città, con le sue strade, le sue piazze e i suoi abitanti. Le tombe
 monumentali di famiglie nobili milanesi nascondono cripte magiche,
 sigilli antichi e passaggi verso il Piano degli Spiriti. Il Velo qui è
 sottilissimo: anche i profani sensibili possono percepire presenze, e
-non è raro che visitatori riferiscano di \"aver sentito qualcuno
-sussurrare\". Per i Guardiani Mictlan, questo è il luogo più sacro di
+non è raro che visitatori riferiscano di “aver sentito qualcuno
+sussurrare”. Per i Guardiani Mictlan, questo è il luogo più sacro di
 Milano: il confine tra vita e morte è così sottile da poterlo
 attraversare con facilità.
 
@@ -648,7 +648,7 @@ attraversare con facilità.
 
 **1. Il Famedio - La Sala del Consiglio.** Il grande edificio
 all'ingresso ospita le tombe dei milanesi illustri. Di notte, gli
-spiriti dei defunti si riuniscono qui per il \"Consiglio dei Morti\" -
+spiriti dei defunti si riuniscono qui per il “Consiglio dei Morti” -
 un parlamento spettrale che discute le questioni della Milano
 sotterranea. Un Mictlan può partecipare se invitato.
 
@@ -672,8 +672,8 @@ sussurro. Parla più con i morti che con i vivi. *Segreto: Anselmo è
 morto nel 1998, durante un rituale andato storto. È tornato ma qualcosa
 è rimasto dall'altra parte. È più spirito che uomo, ormai.*
 
-**Sofia \"Cenere\" Rinaldi** - Giovane Mictlan, 25 anni. Studia
-thanatologia all'università, capelli neri con ciocche grigie (effetto
+**Sofia “Cenere” Rinaldi** - Giovane Mictlan, 25 anni. Studia
+tanatologia all'università, capelli neri con ciocche grigie (effetto
 collaterale dei poteri), trucco gotico. Irreverente e coraggiosa.
 *Segreto: Sofia riesce a vedere i momenti di morte di ogni persona che
 incontra. Non lo dice a nessuno perché ha visto la propria.*
@@ -712,14 +712,14 @@ Morti con +1. Utilizzabile 1 volta per sessione.
 
 :::box[🏙️ City Life / Fiera]{type=casata_ife}
 Casata Dominante: Mictlan (Morte Sepolta, Progresso, Oblio)
-*\"Hanno costruito il futuro sulla tomba del passato. Il passato non
-è d'accordo.\"*
+*“Hanno costruito il futuro sulla tomba del passato. Il passato non
+è d'accordo.”*
 :::
 
 City Life è il simbolo della Milano che guarda avanti: tre grattacieli
 iconici, un parco moderno, residenze di lusso. Ma sotto le fondamenta
 dei Tre Torri giace il vecchio Cimitero della Fiera - dismesso negli
-anni '60 e \"trasferito\", ma non completamente. Migliaia di resti sono
+anni '60 e “trasferito”, ma non completamente. Migliaia di resti sono
 ancora lì sotto, e i loro spiriti sono furiosi: nessuno li ha avvisati,
 nessuno ha chiesto il permesso, nessuno li ricorda. I Guardiani Mictlan
 sentono le vibrazioni: un'ira fredda e crescente che pulsa sotto i
@@ -755,7 +755,7 @@ Hadid. Non l'ha aperta. Non sa cosa farne.*
 di migliaia di morti dimenticati. Parla attraverso qualsiasi dispositivo
 elettronico nell'area: telefoni, altoparlanti, perfino gli annunci
 automatici della metro. Le parole sono sempre le stesse:
-\"Ricordateci\".
+“Ricordateci”.
 
 ## Minaccia Ricorrente
 
@@ -786,13 +786,13 @@ in tutta Milano. Richiede 10 minuti di concentrazione.
 | 8 | Takeshi Hara contatta un PG: ha trovato qualcosa di nuovo. Non può parlarne per telefono. |
 | 9 | Tre revenant lavorano insieme a costruire qualcosa nel parco di notte. Una struttura con uno scopo. |
 | 10 | Il riscaldamento delle Tre Torri si spegne improvvisamente. Temperatura interna: -5°C in 10 minuti. |
-| 11 | Un giornalista indaga sulle \"presenze\" di City Life. Ha troppe informazioni per essere un profano. |
+| 11 | Un giornalista indaga sulle “presenze” di City Life. Ha troppe informazioni per essere un profano. |
 | 12 | I morti sotto City Life si calmano improvvisamente. Silenzio totale. Questo è peggio. |
 
 :::box[🚂 Centrale / Pirelli]{type=info}
 Casata Dominante: Avalon (Sorveglianza, Portali, Giustizia)
-*\"La Stazione non è solo un punto di partenza. È anche un punto di
-arrivo per cose che non dovrebbero arrivare.\"*
+*“La Stazione non è solo un punto di partenza. È anche un punto di
+arrivo per cose che non dovrebbero arrivare.”*
 :::
 
 La Stazione Centrale è la porta di Milano - e non solo in senso
@@ -875,7 +875,7 @@ minacce attive in città.
 
 :::box[🏮 Chinatown / Via Sarpi]{type=info}
 Casata Dominante: Neutrale (Commercio Occulto, Tradizioni Miste)
-*\"Ogni cultura ha i suoi mostri. Qui si incontrano tutti.\"*
+*“Ogni cultura ha i suoi mostri. Qui si incontrano tutti.”*
 :::
 
 Via Paolo Sarpi è la Chinatown di Milano - un quartiere vivace,
@@ -945,8 +945,8 @@ all'Erboristeria. 1 acquisto per visita, max 2 visite per sessione.
 | 2 | Un Drago d'Acqua emerge da un tombino in pieno giorno. La Società del Velo è in panico. |
 | 3 | Nonna Chen chiude l'erboristeria senza preavviso. Non l'ha mai fatto in 50 anni. |
 | 4 | Un artefatto pericoloso viene messo in vendita nel quartiere. Diverse fazioni lo vogliono. |
-| 5 | Kenji riceve un messaggio dalla sua gilda: verranno a \"reclamarlo\" entro una settimana. |
-| 6 | Il Tempio Nascosto è teatro di un rituale andato storto. Le tradizioni si sono \"mescolate\" con effetti imprevisti. |
+| 5 | Kenji riceve un messaggio dalla sua gilda: verranno a “reclamarlo” entro una settimana. |
+| 6 | Il Tempio Nascosto è teatro di un rituale andato storto. Le tradizioni si sono “mescolate” con effetti imprevisti. |
 | 7 | Un ristorante cinese serve accidentalmente cibo con ingredienti magici a clienti profani. Effetti allucinogeni. |
 | 8 | I Draghi d'Acqua formano un cerchio nei canali sotterranei. Stanno proteggendo qualcosa. O imprigionando. |
 | 9 | Un turista compra un oggetto al mercatino che è in realtà un artefatto maledetto. Dove è finito? |
@@ -956,7 +956,7 @@ all'Erboristeria. 1 acquisto per visita, max 2 visite per sessione.
 
 :::box[⚽ San Siro]{type=info}
 Casata Dominante: Neutrale (Emozione Collettiva, Energia Grezza)
-*\"80.000 persone che urlano creano magia. Che lo sappiano o no.\"*
+*“80.000 persone che urlano creano magia. Che lo sappiano o no.”*
 :::
 
 Lo Stadio di San Siro è un nexus emotivo: non è collegato alle Linee
@@ -964,7 +964,7 @@ Ley, ma l'energia generata da 80.000 persone che provano emozioni
 intense contemporaneamente crea un campo magico temporaneo. Durante le
 partite, il Velo nel quartiere si assottiglia sensibilmente - e
 un'entità sconosciuta si nutre di questa energia. I Custodi la chiamano
-\"L'Affamato\": non l'hanno mai visto, ma sentono la sua fame ogni volta
+“L'Affamato”: non l'hanno mai visto, ma sentono la sua fame ogni volta
 che lo stadio si riempie. Il quartiere residenziale intorno è
 tranquillo, quasi sonnolento - come se l'Affamato drenasse vitalità
 dall'area tra un evento e l'altro.
@@ -984,13 +984,13 @@ solo qui troppo a lungo si sente svuotato - -1 Stress ma anche -1d4 PF
 (l'Affamato prende).
 
 **3. Il Bar degli Ultras.** Un bar vicino allo stadio dove un gruppo di
-ultras è inconsapevolmente diventato una \"coven\" emotiva: le loro
+ultras è inconsapevolmente diventato una “coven” emotiva: le loro
 canzoni e cori generano magia grezza. Il barista, un Consapevole,
 protegge il segreto.
 
 ## PNG
 
-**Massimo \"Bomber\" Rossi** - Barista del Bar degli Ultras, ex
+**Massimo “Bomber” Rossi** - Barista del Bar degli Ultras, ex
 calciatore dilettante, 50 anni. Consapevole da quando ha visto
 l'Affamato 15 anni fa durante un derby. Da allora veglia sul quartiere a
 modo suo. *Segreto: Massimo ha fatto un patto con l'Affamato senza
@@ -1014,7 +1014,7 @@ punto critico.
 ## Risorsa per i Guardiani
 
 **Energia dello Stadio:** durante una partita o concerto, qualsiasi
-Guardiano nell'area può \"attingere\" all'energia emotiva per +1 a un
+Guardiano nell'area può “attingere” all'energia emotiva per +1 a un
 tiro. Ma ogni utilizzo nutre anche l'Affamato.
 
 ## Tabella Eventi Casuali (2d6)
@@ -1024,11 +1024,11 @@ tiro. Ma ogni utilizzo nutre anche l'Affamato.
 |---| ---|
 | 2 | Un calciatore sviene in campo senza motivo. È stato drenato - ma da cosa? |
 | 3 | Gli ultras del bar cantano un coro che non conoscono. Le parole sono in una lingua morta. |
-| 4 | Il parcheggio sotterraneo viene chiuso per \"manutenzione\". Il custode è stato trovato in catatonia. |
+| 4 | Il parcheggio sotterraneo viene chiuso per “manutenzione”. Il custode è stato trovato in catatonia. |
 | 5 | L'Affamato si manifesta visivamente per la prima volta: un'ombra enorme sul campo durante una partita serale. |
 | 6 | Un concerto allo stadio genera più energia del previsto. Il Velo nel quartiere scompare per 10 secondi. |
 | 7 | Massimo chiede aiuto: i suoi clienti stanno morendo. Non sa perché. |
-| 8 | Un Guardiano sente l'Affamato comunicare: una singola parola, ripetuta. \"ANCORA.\" |
+| 8 | Un Guardiano sente l'Affamato comunicare: una singola parola, ripetuta. “ANCORA.” |
 | 9 | I cani del quartiere ululano tutti contemporaneamente durante una partita. Per 90 minuti esatti. |
 | 10 | Un tifoso scatta una foto dove si vede qualcosa di enorme dietro la curva. L'ombra non è umana. |
 | 11 | Il bar degli ultras viene visitato da un membro della Fratellanza. Vuole studiare l'Affamato. |

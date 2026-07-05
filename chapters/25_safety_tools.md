@@ -19,14 +19,14 @@ Checklist di Sicurezza per il Custode
 
 **Prima della sessione:** rileggi le Lines e Veils del gruppo. Se la
 sessione tocca temi sensibili (morte, perdita, tradimento), avvisa i
-giocatori con un breve \"content warning\" all'inizio.
+giocatori con un breve “content warning” all'inizio.
 
 **Durante la sessione:** osserva i giocatori. Se qualcuno sembra a
 disagio, fai un check-in discreto. Se una X-Card viene usata, salta
 avanti senza esitazione e senza chiedere spiegazioni.
 
-**Dopo la sessione:** chiedi brevemente come è andata. \"C'è qualcosa
-che avreste voluto diverso?\" è una domanda potente se posta con
+**Dopo la sessione:** chiedi brevemente come è andata. “C'è qualcosa
+che avreste voluto diverso?” è una domanda potente se posta con
 sincerità.
 
 Gestire Temi Difficili
@@ -40,8 +40,8 @@ colpo di scena - è un momento drammatico che merita spazio.
 Il Debriefing
 
 Dopo sessioni particolarmente intense, dedica 5-10 minuti al
-**debriefing**. Uscite dai personaggi, parlate come persone. \"Come vi
-ha fatto sentire quella scena?\" \"C'è qualcosa che volete elaborare?\"
+**debriefing**. Uscite dai personaggi, parlate come persone. “Come vi
+ha fatto sentire quella scena?” “C'è qualcosa che volete elaborare?”
 Il debriefing non è terapia - è rispetto per le emozioni che il gioco
 evoca.
 

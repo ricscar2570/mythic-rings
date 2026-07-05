@@ -22,17 +22,11 @@ Livelli di Sfida
 | Mortale | Boss (LS livello+4) + rinforzi | = livello gruppo +6 | 6-8 round |
 
 :::box[M10: Armatura Boss Massima 2]{type=rule}
-In v3.0, nessun boss può avere Armatura superiore a 2. Questo
-garantisce che i PG possano sempre infliggere danno significativo,
-evitando combattimenti frustranti dove i colpi rimbalzano senza
-effetto.
-Se hai bisogno di un boss più resistente, aumenta i PF invece
-dell'Armatura. Un boss con 40 PF e Armatura 2 è più divertente di uno
-con 20 PF e Armatura 4.
-**Eccezione narrativa:** creature con protezioni magiche specifiche
-(es. \"immune al danno fisico, vulnerabile solo all'argento\") non
-usano il sistema Armatura - richiedono la soluzione giusta, non più
-danno.
+In v3.2, nessun boss può avere Armatura superiore a 2. Questo garantisce che i PG possano sempre infliggere danno significativo, evitando combattimenti frustranti dove i colpi rimbalzano senza effetto. Se hai bisogno di un boss più resistente, aumenta i PF invece dell'Armatura. Un boss con 40 PF e Armatura 2 è più divertente di uno con 20 PF e Armatura 4.
+:::
+
+:::box[M10: Armatura Boss Massima 2 (segue)]{type=rule}
+**Eccezione narrativa:** creature con protezioni magiche specifiche (es. “immune al danno fisico, vulnerabile solo all'argento”) non usano il sistema Armatura - richiedono la soluzione giusta, non più danno.
 :::
 
 ## L'Escalation Die (v3.2: Curva Graduale)

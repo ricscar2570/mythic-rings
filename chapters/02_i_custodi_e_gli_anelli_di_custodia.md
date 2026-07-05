@@ -63,34 +63,23 @@ espellere un Guardiano, attivare il Protocollo Catena (evacuazione
 civile mascherata) - richiedono unanimità.
 
 :::box[I Cinque Anziani Attuali]{type=info}
-**Presidente - Dottoressa Elisabetta Conti, 67 anni.** Ex-Guardiana
-Avalon, ritirata dopo la perdita di un braccio in battaglia nel 2003.
-Avvocata di giorno, stratega brillante. Fredda, calcolatrice, ma
-profondamente leale ai Custodi. Nasconde un segreto: sta perdendo la
-vista a causa di una maledizione contratta vent'anni fa.
-**Anziano Avalon - Padre Tommaso De Luca, 54 anni.** Prete della
-Basilica di Sant'Ambrogio, Guardiano Avalon attivo. Crede che la
-magia sia un dono divino. Gentile, paterno, ma inesorabile quando si
-tratta di proteggere innocenti. Ha un Legame di livello 3 con Nonna
-Rosa (Ife), che considera una sorella.
-**Anziana Umbra - Leila Ferrara, 41 anni.** La più giovane Anziana
-della storia dei Custodi. Ex-detective della Questura, reclutata dopo
-aver accidentalmente scoperto un nido di vampiri durante un'indagine
-per omicidio. Brillante, sarcastica, paranoica per professione. Non
-si fida di nessuno completamente, nemmeno degli altri Anziani.
-**Anziano Ife - Professor Kwame Asante, 62 anni.** Docente di
-Botanica alla Statale, nato in Ghana, milanese da trent'anni. Il suo
-studio universitario è pieno di piante che non dovrebbero esistere.
-Pacato, riflessivo, preferisce sempre la soluzione diplomatica. È
-l'unico Anziano che mantiene rapporti civili con la Fratellanza dei
-Caduti - cosa che gli altri trovano preoccupante.
-**Anziana Mictlan - Signora Marisol Reyes, 58 anni.** Nata a Città
-del Messico, arrivata a Milano nel 1992 seguendo la traccia del suo
-Anello. Gestisce un'agenzia funebre in zona Monumentale - la
-copertura perfetta per una Guardiana della Morte. Parla con i morti
-come altri parlano al telefono. Ha un senso dell'umorismo macabro che
-mette a disagio chiunque non la conosca bene, e un cuore immenso che
-rivela solo a chi conosce abbastanza bene.
+**Presidente - Dottoressa Elisabetta Conti, 67 anni.** Ex-Guardiana Avalon, ritirata dopo la perdita di un braccio in battaglia nel 2003. Avvocata di giorno, stratega brillante. Fredda, calcolatrice, ma profondamente leale ai Custodi. Nasconde un segreto: sta perdendo la vista a causa di una maledizione contratta vent'anni fa.
+:::
+
+:::box[I Cinque Anziani Attuali (segue)]{type=info}
+**Anziano Avalon - Padre Tommaso De Luca, 54 anni.** Prete della Basilica di Sant'Ambrogio, Guardiano Avalon attivo. Crede che la magia sia un dono divino. Gentile, paterno, ma inesorabile quando si tratta di proteggere innocenti. Ha un Legame di livello 3 con Nonna Rosa (Ife), che considera una sorella. **Anziana Umbra - Leila Ferrara, 41 anni.** La più giovane Anziana della storia dei Custodi.
+:::
+
+:::box[I Cinque Anziani Attuali (segue)]{type=info}
+Ex-detective della Questura, reclutata dopo aver accidentalmente scoperto un nido di vampiri durante un'indagine per omicidio. Brillante, sarcastica, paranoica per professione. Non si fida di nessuno completamente, nemmeno degli altri Anziani. **Anziano Ife - Professor Kwame Asante, 62 anni.** Docente di Botanica alla Statale, nato in Ghana, milanese da trent'anni.
+:::
+
+:::box[I Cinque Anziani Attuali (segue)]{type=info}
+Il suo studio universitario è pieno di piante che non dovrebbero esistere. Pacato, riflessivo, preferisce sempre la soluzione diplomatica. È l'unico Anziano che mantiene rapporti civili con la Fratellanza dei Caduti - cosa che gli altri trovano preoccupante. **Anziana Mictlan - Signora Marisol Reyes, 58 anni.** Nata a Città del Messico, arrivata a Milano nel 1992 seguendo la traccia del suo Anello.
+:::
+
+:::box[I Cinque Anziani Attuali (segue)]{type=info}
+Gestisce un'agenzia funebre in zona Monumentale - la copertura perfetta per una Guardiana della Morte. Parla con i morti come altri parlano al telefono. Ha un senso dell'umorismo macabro che mette a disagio chiunque non la conosca bene, e un cuore immenso che rivela solo a chi conosce abbastanza bene.
 :::
 
 ## I Guardiani Attivi
@@ -114,20 +103,15 @@ rinunciano alla vita ordinaria e si dedicano completamente ai Custodi
 - ma questo ha un costo psicologico enorme.
 
 :::box[Esempio: La Doppia Vita di un Guardiano]{type=info}
-**Lunedì mattina, ore 7:30.** Elena Marchetti, 28 anni, Guardiana
-Mictlan, si sveglia con tre costole incrinate e il sapore del sangue
-in bocca. La notte precedente ha combattuto un Revenant nel
-parcheggio sotterraneo di CityLife. Ha vinto, ma per un soffio.
-L'Anello al dito pulsa debolmente, come un cuore stanco.
-Si alza, si veste, si trucca per coprire il taglio sulla guancia («mi
-sono graffiata con il gatto», dirà ai colleghi), e prende la M5 per
-andare al suo lavoro da graphic designer in uno studio di Porta
-Garibaldi. Alle 9:00 è alla scrivania, sorridente, con un caffè
-americano e un progetto da consegnare entro venerdì.
-Nessuno sospetta nulla. Nessuno sa che la ragazza tranquilla
-dell'open space può parlare con i morti. Nessuno sa che stanotte sarà
-di nuovo là fuori, nell'oscurità, a fare la cosa che deve fare.
-Questa è la vita di un Guardiano.
+**Lunedì mattina, ore 7:30.** Elena Marchetti, 28 anni, Guardiana Mictlan, si sveglia con tre costole incrinate e il sapore del sangue in bocca. La notte precedente ha combattuto un Revenant nel parcheggio sotterraneo di CityLife. Ha vinto, ma per un soffio. L'Anello al dito pulsa debolmente, come un cuore stanco.
+:::
+
+:::box[Esempio: La Doppia Vita di un Guardiano (segue)]{type=info}
+Si alza, si veste, si trucca per coprire il taglio sulla guancia («mi sono graffiata con il gatto», dirà ai colleghi), e prende la M5 per andare al suo lavoro da graphic designer in uno studio di Porta Garibaldi. Alle 9:00 è alla scrivania, sorridente, con un caffè americano e un progetto da consegnare entro venerdì. Nessuno sospetta nulla.
+:::
+
+:::box[Esempio: La Doppia Vita di un Guardiano (segue)]{type=info}
+Nessuno sa che la ragazza tranquilla dell'open space può parlare con i morti. Nessuno sa che stanotte sarà di nuovo là fuori, nell'oscurità, a fare la cosa che deve fare. Questa è la vita di un Guardiano.
 :::
 
 ## Operativi e Ruoli di Campo
@@ -194,18 +178,15 @@ chiedendo rinforzi. Ma ogni organizzazione è gelosa del proprio
 territorio, e la cooperazione non è mai semplice.
 
 :::box[Nota per il Custode: Usare le Organizzazioni Alleate]{type=info}
-La Società del Velo e il Mercato Notturno sono strumenti narrativi
-preziosissimi. La Società del Velo può essere la fonte di missioni
-(«c'è un giornalista che sta indagando troppo, occupatevi di lui
-SENZA fargli del male») o di complicazioni («la copertura non ha
-retto, i social stanno impazzendo»). Il Mercato Notturno è un'ottima
-scena sociale dove i PG possono comprare informazioni, incontrare PNG
-ambigui, e scoprire che il confine tra alleato e nemico non è mai
-netto come vorrebbero.
-I contatti internazionali sono perfetti per avventure speciali: un
-Warden di Londra arriva a Milano chiedendo aiuto, un artefatto rubato
-è stato portato fuori dall'Italia, una minaccia globale richiede
-cooperazione.
+La Società del Velo e il Mercato Notturno sono strumenti narrativi preziosissimi. La Società del Velo può essere la fonte di missioni («c'è un giornalista che sta indagando troppo, occupatevi di lui SENZA fargli del male») o di complicazioni («la copertura non ha retto, i social stanno impazzendo»).
+:::
+
+:::box[Nota per il Custode: Usare le Organizzazioni Alleate (segue)]{type=info}
+Il Mercato Notturno è un'ottima scena sociale dove i PG possono comprare informazioni, incontrare PNG ambigui, e scoprire che il confine tra alleato e nemico non è mai netto come vorrebbero. I contatti internazionali sono perfetti per avventure speciali:
+:::
+
+:::box[Nota per il Custode: Usare le Organizzazioni Alleate (segue)]{type=info}
+un Warden di Londra arriva a Milano chiedendo aiuto, un artefatto rubato è stato portato fuori dall'Italia, una minaccia globale richiede cooperazione.
 :::
 
 Coperture e Risorse
@@ -248,16 +229,11 @@ rituali Mictlan, e accesso riservato al Cimitero Monumentale dopo
 l'orario di chiusura.
 
 :::box[Nota di Design: I Gadget Fisici]{type=info}
-Gli Anelli Custodia sono pensati anche come possibili gadget fisici
-da includere nella confezione del gioco. Quattro anelli in metallo,
-ciascuno con il design della propria Casata: oro inciso per Avalon,
-onice nero per Umbra, giada verde per Ife, ossidiana lucida per
-Mictlan. I giocatori li indossano durante le sessioni per aumentare
-l'immersione. Se non hai gli anelli fisici, qualsiasi oggetto può
-funzionare come sostituto simbolico: un dado colorato, un
-braccialetto, persino un elastico al dito. L'importante è che ogni
-giocatore abbia qualcosa di tangibile che rappresenti il legame con
-il proprio Anello.
+Gli Anelli Custodia sono pensati anche come possibili gadget fisici da includere nella confezione del gioco. Quattro anelli in metallo, ciascuno con il design della propria Casata: oro inciso per Avalon, onice nero per Umbra, giada verde per Ife, ossidiana lucida per Mictlan. I giocatori li indossano durante le sessioni per aumentare l'immersione.
+:::
+
+:::box[Nota di Design: I Gadget Fisici (segue)]{type=info}
+Se non hai gli anelli fisici, qualsiasi oggetto può funzionare come sostituto simbolico: un dado colorato, un braccialetto, persino un elastico al dito. L'importante è che ogni giocatore abbia qualcosa di tangibile che rappresenti il legame con il proprio Anello.
 :::
 
 Gli Anelli Custodia
@@ -335,21 +311,15 @@ ha mai compreso completamente. Quando trova il prescelto, il richiamo è
 inconfondibile.
 
 :::box[Esempio: Il Richiamo]{type=info}
-Marco Bianchi, 24 anni, studente fuori corso di Ingegneria al
-Politecnico, sta tornando a casa dopo un turno al kebabbaro dove
-lavora per pagarsi l'affitto. Sono le 2 di notte. Via Padova è quasi
-deserta.
-Sente qualcosa. Non un suono - qualcosa di più interno. Come un
-formicolio dietro gli occhi, un calore al petto, un'urgenza che non
-ha nome. Sa, con una certezza che non può spiegare, che deve girare a
-sinistra nel prossimo vicolo.
-Lo fa. Nel vicolo, su un gradino sporco, c'è un anello d'oro con
-incisioni che sembrano brillare di luce propria. Marco lo raccoglie.
-Lo infila al dito. E in quell'istante tutto cambia.
-Vede il mondo per quello che è veramente. L'ombra sotto il cassonetto
-ha occhi. Il muro di fronte nasconde un portale. L'aria è piena di
-energie che non aveva mai percepito. L'Anello di Avalon lo ha scelto.
-Marco non sa ancora cosa significhi. Lo scoprirà presto.
+Marco Bianchi, 24 anni, studente fuori corso di Ingegneria al Politecnico, sta tornando a casa dopo un turno al kebabbaro dove lavora per pagarsi l'affitto. Sono le 2 di notte. Via Padova è quasi deserta. Sente qualcosa. Non un suono - qualcosa di più interno. Come un formicolio dietro gli occhi, un calore al petto, un'urgenza che non ha nome.
+:::
+
+:::box[Esempio: Il Richiamo (segue)]{type=info}
+Sa, con una certezza che non può spiegare, che deve girare a sinistra nel prossimo vicolo. Lo fa. Nel vicolo, su un gradino sporco, c'è un anello d'oro con incisioni che sembrano brillare di luce propria. Marco lo raccoglie. Lo infila al dito. E in quell'istante tutto cambia. Vede il mondo per quello che è veramente. L'ombra sotto il cassonetto ha occhi. Il muro di fronte nasconde un portale.
+:::
+
+:::box[Esempio: Il Richiamo (segue)]{type=info}
+L'aria è piena di energie che non aveva mai percepito. L'Anello di Avalon lo ha scelto. Marco non sa ancora cosa significhi. Lo scoprirà presto.
 :::
 
 ## Criteri della Scelta
@@ -424,27 +394,19 @@ filosofia profonda di ciascun Anello.
 | Mictlan | Punti Ferita | 28+(FOR×1) | Morente: tira Ultimo Respiro | 1d4 per notte, guarigione magica, mossa Riprendersi. Sangue Tenace: può convertire parte del costo PF in Stress |
 
 :::box[La Filosofia del Costo]{type=info}
-Ogni costo racconta una storia.
-**Avalon e Ife** pagano in Stress perché canalizzare la Luce pura o
-la Vita selvaggia brucia la psiche umana. È come guardare il sole
-troppo a lungo o sentire troppo intensamente - il corpo umano non è
-progettato per contenere tanta energia. Il burnout non è solo
-meccanico: è un crollo emotivo, lacrime incontrollabili, paralisi,
-terrore. Un Guardiano in burnout ha toccato qualcosa di troppo grande
-per la mente umana.
-**Umbra** paga in Corruzione perché ogni volta che attingi al Piano
-delle Ombre, le Ombre attingono a te. È una contaminazione graduale:
-a Corruzione 3 i tuoi occhi diventano temporaneamente neri. A 5,
-senti Sussurri dell'Ombra che ti tentano. A 7, la tua stessa ombra si
-muove indipendentemente. A 8, diventi ciò che combatti. La Corruzione
-è la storia di un eroe che rischia di diventare mostro.
-**Mictlan** paga in Punti Ferita perché la Morte esige sangue.
-Letteralmente. Ogni potere Mictlan drena la forza vitale del
-portatore - è un sacrificio volontario, un atto di coraggio
-quotidiano. I Mictlan sono i Guardiani che rischiano di più, che
-camminano sul confine più sottile. Ma grazie al passivo Sangue
-Tenace, possono scegliere di convertire parte del costo in Stress -
-perché a volte è meglio essere stanchi che morti.
+Ogni costo racconta una storia. **Avalon e Ife** pagano in Stress perché canalizzare la Luce pura o la Vita selvaggia brucia la psiche umana. È come guardare il sole troppo a lungo o sentire troppo intensamente - il corpo umano non è progettato per contenere tanta energia. Il burnout non è solo meccanico: è un crollo emotivo, lacrime incontrollabili, paralisi, terrore.
+:::
+
+:::box[La Filosofia del Costo (segue)]{type=info}
+Un Guardiano in burnout ha toccato qualcosa di troppo grande per la mente umana. **Umbra** paga in Corruzione perché ogni volta che attingi al Piano delle Ombre, le Ombre attingono a te. È una contaminazione graduale: a Corruzione 3 i tuoi occhi diventano temporaneamente neri. A 5, senti Sussurri dell'Ombra che ti tentano. A 7, la tua stessa ombra si muove indipendentemente.
+:::
+
+:::box[La Filosofia del Costo (segue)]{type=info}
+A 8, diventi ciò che combatti. La Corruzione è la storia di un eroe che rischia di diventare mostro. **Mictlan** paga in Punti Ferita perché la Morte esige sangue. Letteralmente. Ogni potere Mictlan drena la forza vitale del portatore - è un sacrificio volontario, un atto di coraggio quotidiano. I Mictlan sono i Guardiani che rischiano di più, che camminano sul confine più sottile.
+:::
+
+:::box[La Filosofia del Costo (segue)]{type=info}
+Ma grazie al passivo Sangue Tenace, possono scegliere di convertire parte del costo in Stress - perché a volte è meglio essere stanchi che morti.
 :::
 
 Tradizione e Successione
@@ -496,20 +458,15 @@ tradimento. La Cerchia degli Anziani non esprime giudizi ufficiali sulla
 Rinuncia, ma c'è un'attitudine non scritta di disapprovazione.
 
 :::box[Esempio: La Rinuncia di Davide]{type=info}
-Davide Ferretti fu Guardiano Ife per ventitré anni. Uno dei migliori.
-Ma quando nacque sua figlia, qualcosa cambiò. Non riusciva più a
-rischiare la vita sapendo che una bambina lo aspettava a casa. Chiese
-la Rinuncia. La Cerchia gliela concesse, a malincuore.
-Il Rituale di Separazione durò sei ore. Davide urlò per le ultime
-due. Quando finì, l'Anello di Ife cadde dal suo dito e rotolò sul
-pavimento - un pezzo di giada morta. Davide si alzò, guardò il
-mondo con occhi che non vedevano più la magia, e pianse. Non per la
-perdita dei poteri. Per la bellezza che non avrebbe mai più visto.
-Oggi Davide fa il fiorista in Porta Venezia. Non parla mai del
-passato. Ma quando i suoi ex-colleghi passano dal negozio, gli
-lasciano sempre un mazzo di fiori che non dovrebbe esistere in
-natura. E Davide sorride, perché anche se non può più vedere la
-magia, ne sente ancora il profumo.
+Davide Ferretti fu Guardiano Ife per ventitré anni. Uno dei migliori. Ma quando nacque sua figlia, qualcosa cambiò. Non riusciva più a rischiare la vita sapendo che una bambina lo aspettava a casa. Chiese la Rinuncia. La Cerchia gliela concesse, a malincuore. Il Rituale di Separazione durò sei ore. Davide urlò per le ultime due.
+:::
+
+:::box[Esempio: La Rinuncia di Davide (segue)]{type=info}
+Quando finì, l'Anello di Ife cadde dal suo dito e rotolò sul pavimento - un pezzo di giada morta. Davide si alzò, guardò il mondo con occhi che non vedevano più la magia, e pianse. Non per la perdita dei poteri. Per la bellezza che non avrebbe mai più visto. Oggi Davide fa il fiorista in Porta Venezia. Non parla mai del passato.
+:::
+
+:::box[Esempio: La Rinuncia di Davide (segue)]{type=info}
+Ma quando i suoi ex-colleghi passano dal negozio, gli lasciano sempre un mazzo di fiori che non dovrebbe esistere in natura. E Davide sorride, perché anche se non può più vedere la magia, ne sente ancora il profumo.
 :::
 
 I Rinnegati e la Fratellanza dei Caduti
@@ -577,17 +534,11 @@ decidere cosa l'umanità può sapere?
 | Debolezza | Rigidi, segreti, a volte autoritari | Fanatici, violenti, disposti a sacrificare innocenti | Entrambi hanno punti ciechi morali |
 
 :::box[Nota per il Custode: La Fratellanza Come Antagonista]{type=info}
-La Fratellanza funziona meglio come antagonista quando i PG possono
-capire le loro ragioni, anche se non le condividono. Evita di
-renderli cattivi stereotipati. Dai loro membri con motivazioni
-comprensibili: l'ex-Guardiana che ha perso la figlia perché un
-Consapevole impazzito ha causato un incidente. Il giovane idealista
-che crede sinceramente che il Velo sia ingiusto. Il veterano
-amareggiato che è stato tradito dalla Cerchia.
-La domanda finale della campagna dovrebbe essere: i PG difendono il
-Velo così com'è, cercano di riformarlo dall'interno, o - scelta
-radicale - si schierano con la Fratellanza? Non esiste una risposta
-giusta. Questa ambiguità morale è il cuore narrativo di Mythic Rings.
+La Fratellanza funziona meglio come antagonista quando i PG possono capire le loro ragioni, anche se non le condividono. Evita di renderli cattivi stereotipati. Dai loro membri con motivazioni comprensibili: l'ex-Guardiana che ha perso la figlia perché un Consapevole impazzito ha causato un incidente. Il giovane idealista che crede sinceramente che il Velo sia ingiusto.
+:::
+
+:::box[Nota per il Custode: La Fratellanza Come Antagonista (segue)]{type=info}
+Il veterano amareggiato che è stato tradito dalla Cerchia. La domanda finale della campagna dovrebbe essere: i PG difendono il Velo così com'è, cercano di riformarlo dall'interno, o - scelta radicale - si schierano con la Fratellanza? Non esiste una risposta giusta. Questa ambiguità morale è il cuore narrativo di Mythic Rings.
 :::
 
 Diventare Guardiano: Cosa Cambia
@@ -632,14 +583,11 @@ Rings - e i Legami con altri Guardiani e PNG Consapevoli diventano
 l'ancora di salvezza emotiva.
 
 :::box[Fine Capitolo 2 - I Custodi e gli Anelli Custodia]{type=tip}
-Ora conosci l'organizzazione dei Custodi dalla Cerchia degli Anziani
-fino all'ultimo analista della Società del Velo. Sai come funzionano
-gli Anelli Custodia, come scelgono i portatori, e quale prezzo
-richiedono. Conosci la Fratellanza dei Caduti e il conflitto morale
-al cuore del gioco.
-**Prossimo capitolo:** Capitolo 3 - Le Quattro Casate. Scoprirai in
-dettaglio Avalon, Umbra, Ife e Mictlan: la loro filosofia, i loro
-poteri, i loro archetipi e il tipo di storie che raccontano.
+Ora conosci l'organizzazione dei Custodi dalla Cerchia degli Anziani fino all'ultimo analista della Società del Velo. Sai come funzionano gli Anelli Custodia, come scelgono i portatori, e quale prezzo richiedono. Conosci la Fratellanza dei Caduti e il conflitto morale al cuore del gioco. **Prossimo capitolo:** Capitolo 3 - Le Quattro Casate. Scoprirai in dettaglio Avalon, Umbra, Ife e Mictlan:
+:::
+
+:::box[Fine Capitolo 2 - I Custodi e gli Anelli Custodia (segue)]{type=tip}
+la loro filosofia, i loro poteri, i loro archetipi e il tipo di storie che raccontano.
 :::
 
 **In Questo Capitolo:** Scoprirai in dettaglio le quattro Casate che

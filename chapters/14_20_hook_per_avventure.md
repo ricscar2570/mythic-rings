@@ -36,7 +36,7 @@ di sfida** suggerito.
 | 15 | Il Sigillo Spezzato | Porta Ticinese (Difficile) | Una delle Colonne di San Lorenzo si spezza. Il sigillo si indebolisce. Qualcosa da sotto inizia a filtrare. I PG hanno 48 ore per trovare un modo di rinforzare il cerchio. |
 | 16 | La Guaritrice Caduta | Porta Venezia (Medio) | La Dottoressa Amara Diallo perde completamente i poteri durante una guarigione critica. Il paziente muore. Amara è devastata. I PG possono aiutarla a capire perché e recuperare i poteri? |
 | 17 | L'Ombra nel Bosco | Isola (Medio) | Le piante del Bosco Verticale iniziano a morire da un piano specifico. Qualcuno ci ha nascosto un artefatto Umbra che corrompe la vita circostante. |
-| 18 | Il Consiglio Chiama | Monumentale (Medio) | Il Consiglio dei Morti ha un messaggio per i Custodi: \"Uno dei vostri ci ha raggiunti ieri notte. Non per scelta.\" Un Guardiano attivo è morto senza che nessuno lo sappia. Chi? Come? |
+| 18 | Il Consiglio Chiama | Monumentale (Medio) | Il Consiglio dei Morti ha un messaggio per i Custodi: “Uno dei vostri ci ha raggiunti ieri notte. Non per scelta.” Un Guardiano attivo è morto senza che nessuno lo sappia. Chi? Come? |
 | 19 | La Quinta Colonna | Brera (Difficile) | Un infiltrato della Fratellanza è tra i Custodi. Non si sa chi sia, ma sta sabotando missioni dall'interno. Il sospetto avvelena il gruppo. I PG devono trovare la talpa prima che sia troppo tardi. |
 | 20 | Il Crepuscolo del Velo | Tutta Milano (Epica) | La Fratellanza ha trovato il modo di squarciare il Velo permanentemente. L'evento è previsto tra 7 giorni. I PG devono scoprire il piano, infiltrarsi, e decidere: salvare il Velo a ogni costo, o lasciare che il mondo scopra la verità? |
 
@@ -54,5 +54,5 @@ PARTE V
 
 Principi · Mosse · Strumenti · Sessioni
 
-*\"Non racconti una storia. Crei le condizioni perché una storia
-emerga.\"*
+*“Non racconti una storia. Crei le condizioni perché una storia
+emerga.”*

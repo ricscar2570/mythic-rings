@@ -63,7 +63,7 @@ Potere**.
 **Linee Ley Corrotte:** Quando una Linea Ley viene contaminata (rituale
 oscuro, morte di massa, squarcio nel Velo), il bonus +1 diventa un
 **malus -1** e la zona attraversata subisce effetti collaterali: incubi
-nei residenti, animali che fuggono, tecnologia che malfunziona.
+nei residenti, animali che fuggono, tecnologia che funziona male.
 Purificare una Linea Ley è un'avventura in sé.
 
 Il Velo a Milano

@@ -298,6 +298,8 @@ function renderBox(node, colWidth, keepTogether = false) {
           bold: true, color: COLORS.crimson,
         })],
         spacing: { before: 40, after: 30 },
+        keepLines: true,
+        keepNext: true,
       })
     : null;
 
@@ -307,6 +309,8 @@ function renderBox(node, colWidth, keepTogether = false) {
         children: child.runs.map(r => makeRun(r, { size: SIZE.sm })),
         spacing: { before: 30, after: 30, line: 264, lineRule: LineRuleType.AUTO },
         alignment: AlignmentType.JUSTIFIED,
+        keepLines: true,
+        keepNext: true,
       })];
     }
     if (child.type === NODE.TABLE || child.type === NODE.TABLE_WIDE) {
@@ -319,12 +323,11 @@ function renderBox(node, colWidth, keepTogether = false) {
   });
 
   return new Table({
-    width: { size: W, type: WidthType.DXA },
-    columnWidths: [W],
+    width: { size: 100, type: WidthType.PERCENTAGE },
     rows: [new TableRow({
       cantSplit: keepTogether,
       children: [new TableCell({
-        width: { size: W, type: WidthType.DXA },
+        width: { size: 100, type: WidthType.PERCENTAGE },
         borders: {
           top:    borderSingle(sty.border, 6),
           bottom: borderSingle(sty.border, 6),
@@ -371,11 +374,10 @@ function renderStatBlock(node, colWidth) {
   ];
 
   return new Table({
-    width: { size: W, type: WidthType.DXA },
-    columnWidths: [W],
+    width: { size: 100, type: WidthType.PERCENTAGE },
     rows: [new TableRow({
       children: [new TableCell({
-        width: { size: W, type: WidthType.DXA },
+        width: { size: 100, type: WidthType.PERCENTAGE },
         borders: bordersAll(COLORS.midnight, 4),
         shading: { fill: COLORS.midnight, type: ShadingType.CLEAR },
         margins: { top: 80, bottom: 80, left: 120, right: 120 },
@@ -571,11 +573,10 @@ function makeChapterHeaderTable(chapterTitle, chapterNum, partName, epigraph) {
     }));
   }
   return new Table({
-    width: { size: PAGE.CONTENT_W, type: WidthType.DXA },
-    columnWidths: [PAGE.CONTENT_W],
+    width: { size: 100, type: WidthType.PERCENTAGE },
     rows: [new TableRow({
       children: [new TableCell({
-        width: { size: PAGE.CONTENT_W, type: WidthType.DXA },
+        width: { size: 100, type: WidthType.PERCENTAGE },
         shading: { fill: COLORS.midnight, type: ShadingType.CLEAR },
         borders: {
           top: borderNone(), bottom: { style: BorderStyle.SINGLE, size: 6, color: COLORS.crimson },
@@ -699,6 +700,30 @@ function buildDocument(chapters) {
     }
   }
 
+  // ── Back matter: colophon (pagina nuova) ─────────────
+  docSections.push({
+    properties: {
+      type: SectionType.NEXT_PAGE,
+      page: { size: { width: PAGE.WIDTH, height: PAGE.HEIGHT }, margin: PAGE.MARGIN },
+      column: { count: 1, space: 0 },
+    },
+    headers: { default: makeHeader('Colophon') },
+    footers: { default: makeFooter() },
+    children: buildColophonPage(),
+  });
+
+  // ── Back matter: crediti e ringraziamenti (pagina nuova) ──
+  docSections.push({
+    properties: {
+      type: SectionType.NEXT_PAGE,
+      page: { size: { width: PAGE.WIDTH, height: PAGE.HEIGHT }, margin: PAGE.MARGIN },
+      column: { count: 1, space: 0 },
+    },
+    headers: { default: makeHeader('Crediti e Ringraziamenti') },
+    footers: { default: makeFooter() },
+    children: buildCreditsBackMatter(),
+  });
+
   // ── Document finale ──────────────────────────────────
   return new Document({
     features: { updateFields: true },
@@ -733,6 +758,23 @@ function buildDocument(chapters) {
 }
 
 // ── Render singolo nodo ─────────────────────────────────
+
+// Stima grezza del testo contenuto in un box (per decidere cantSplit)
+function boxCharCount(node) {
+  let n = (node.title || '').length;
+  const walk = (c) => {
+    if (!c) return;
+    if (Array.isArray(c)) { c.forEach(walk); return; }
+    if (c.runs) c.runs.forEach(r => { n += (r.text || '').length; });
+    if (c.children) walk(c.children);
+    if (c.items) walk(c.items);
+    if (c.rows) c.rows.forEach(row => (row || []).forEach(cell => walk(cell)));
+    if (c.headers) c.headers.forEach(cell => walk(cell));
+  };
+  walk(node.children);
+  return n;
+}
+
 function renderNode(node, wideContext = false) {
   const colW = wideContext ? PAGE.CONTENT_W : PAGE.COL_W;
 
@@ -751,12 +793,108 @@ function renderNode(node, wideContext = false) {
     })];
     case NODE.LIST:       return renderList(node);
     case NODE.QUOTE:      return renderQuote(node);
-    case NODE.BOX:        return [spacerPara(30), renderBox(node, colW, wideContext), spacerPara(30)];
+    case NODE.BOX: {
+      // Coesione del box affidata a keepLines/keepNext dei paragrafi interni:
+      // cantSplit sulle righe viene troncato da LibreOffice quando la riga
+      // non entra nello spazio residuo della colonna.
+      return [spacerPara(30), renderBox(node, colW, false), spacerPara(30)];
+    }
     case NODE.TABLE:
     case NODE.TABLE_WIDE: return [spacerPara(40), renderTable(node, wideContext ? PAGE.CONTENT_W : colW), spacerPara(40)];
     case NODE.STAT_BLOCK: return [spacerPara(40), renderStatBlock(node, colW), spacerPara(40)];
     default:              return [];
   }
+}
+
+// ── Colophon (verso editoriale, dopo la pagina bianca) ────
+function buildColophonPage() {
+  const dim = (text, o = {}) => new Paragraph({
+    alignment: o.align || AlignmentType.LEFT,
+    spacing: { before: o.before ?? 0, after: o.after ?? 40, line: 264 },
+    children: [textRun(text, { size: o.size || SIZE.sm, color: o.color || COLORS.gray500,
+                               italic: o.italic || false, bold: o.bold || false })],
+  });
+  return [
+    spacerPara(400),
+    new Paragraph({
+      alignment: AlignmentType.LEFT,
+      spacing: { before: 0, after: 30 },
+      children: [textRun('MYTHIC RINGS', { size: SIZE.chap, bold: true, color: COLORS.crimson, caps: true })],
+    }),
+    new Paragraph({
+      alignment: AlignmentType.LEFT,
+      spacing: { before: 0, after: 120 },
+      border: { bottom: borderSingle(COLORS.gold, 4) },
+      children: [textRun('Guardiani di Milano', { size: SIZE.body, italic: true, color: COLORS.gray700 })],
+    }),
+    dim('Edizione v3.2 (2026)', { bold: true, color: COLORS.gray700, size: SIZE.body }),
+    dim('Prima edizione italiana'),
+    spacerPara(60),
+    dim('Ideazione, testo e game design: Riccardo [Cognome]'),
+    dim('Sviluppo del sistema, bilanciamento e impaginazione: Riccardo [Cognome]'),
+    spacerPara(60),
+    dim('Mythic Rings e Guardiani di Milano sono opere di fantasia. Nomi, personaggi,'
+      + ' luoghi ed eventi, per quanto ispirati alla città di Milano, sono usati in modo'
+      + ' fittizio. Qualsiasi somiglianza con fatti o persone reali è puramente casuale.'),
+    spacerPara(40),
+    dim('Questo gioco è Powered by the Apocalypse, un sistema creato da Meguey Baker e'
+      + ' Vincent Baker. Powered by the Apocalypse e i suoi principi sono usati con'
+      + ' riconoscimento agli autori originali.'),
+    spacerPara(80),
+    dim('Copyright \u00A9 2026 Riccardo [Cognome]. Tutti i diritti riservati.', { color: COLORS.gray700 }),
+    dim('Nessuna parte di questo volume può essere riprodotta senza autorizzazione'
+      + ' scritta, salvo brevi citazioni a scopo di recensione.'),
+    spacerPara(60),
+    dim('ISBN: 000-00-00000-00-0', { color: COLORS.gray300 }),
+    dim('www.mythicrings.it   ·   contatto@mythicrings.it', { color: COLORS.gray300 }),
+    new Paragraph({ children: [new PageBreak()] }),
+  ];
+}
+
+// ── Pagina crediti e ringraziamenti (in fondo al volume) ──
+function buildCreditsBackMatter() {
+  const head = (text) => new Paragraph({
+    spacing: { before: 200, after: 80 },
+    keepNext: true,
+    children: [textRun(text, { size: SIZE.h2, bold: true, color: COLORS.midnight })],
+  });
+  const body = (text, o = {}) => new Paragraph({
+    alignment: AlignmentType.JUSTIFIED,
+    spacing: { before: o.before ?? 30, after: o.after ?? 30, line: 276 },
+    children: [textRun(text, { size: SIZE.body, color: COLORS.ink })],
+  });
+  const name = (text) => new Paragraph({
+    spacing: { before: 20, after: 20 },
+    children: [textRun(text, { size: SIZE.body, color: COLORS.gray700 })],
+  });
+  return [
+    new Paragraph({
+      heading: HeadingLevel.HEADING_1,
+      spacing: { before: 0, after: 180 },
+      border: { bottom: borderSingle(COLORS.crimson, 8) },
+      children: [textRun('Crediti e Ringraziamenti', { size: SIZE.chap, bold: true, color: COLORS.crimson, caps: true })],
+    }),
+    head('L\u2019Autore'),
+    body('Mythic Rings nasce da una passione per Milano e per il gioco di ruolo che intreccia'
+      + ' investigazione, dramma personale e il costo del potere. Ogni regola di questo volume'
+      + ' è stata scritta, giocata e riscritta attorno a un unico principio: che il'
+      + ' potere abbia sempre un prezzo, e che quel prezzo racconti una storia.'),
+    head('Ringraziamenti'),
+    body('Un grazie a chi ha reso possibile questo gioco: alle persone che hanno letto le prime'
+      + ' bozze quando erano ancora appunti disordinati, a chi si è seduto al tavolo per provare'
+      + ' regole che non funzionavano ancora, e a chi ha creduto in una Milano occulta prima che'
+      + ' esistesse su carta.'),
+    head('Playtester'),
+    body('Questo volume è stato affinato attraverso il gioco reale. Un ringraziamento particolare'
+      + ' ai tavoli che hanno dato la caccia ai mostri tra i Navigli e il Monumentale:'),
+    name('[Nome playtester]   ·   [Nome playtester]   ·   [Nome playtester]'),
+    name('[Nome playtester]   ·   [Nome playtester]   ·   [Nome playtester]'),
+    body('Se hai partecipato a un tavolo di playtest e il tuo nome non compare qui, scrivici:'
+      + ' la prossima edizione ti renderà merito.', { before: 60 }),
+    head('Un\u2019Ultima Parola'),
+    body('I Custodi vegliano su Milano da secoli, in silenzio, senza chiedere riconoscimento.'
+      + ' Che tu sieda dietro lo schermo o impugni un Anello, ora la città è anche tua. Proteggila.'),
+  ];
 }
 
 // ── Copertina ────────────────────────────────────────────
@@ -801,6 +939,30 @@ function buildCoverPage() {
 // ══════════════════════════════════════════════════════════
 
 // ── Fix fontTable: docx.js omette la relationship fontTable.xml  ──────────
+// ── Abilita margini specchiati (mirror) per stampa rilegata ──
+async function enableMirrorMargins(docxPath) {
+  const { execSync } = require('child_process');
+  const fs2 = require('fs');
+  const tmpDir = docxPath + '_mirror';
+  try {
+    execSync(`rm -rf "${tmpDir}" && unzip -o -q "${docxPath}" -d "${tmpDir}"`, { stdio: 'pipe' });
+    const setPath = path.join(tmpDir, 'word', 'settings.xml');
+    if (fs2.existsSync(setPath)) {
+      let s = fs2.readFileSync(setPath, 'utf8');
+      if (!s.includes('w:mirrorMargins')) {
+        // inserisci subito dopo l'apertura di <w:settings ...>
+        s = s.replace(/(<w:settings[^>]*>)/, '$1<w:mirrorMargins/>');
+        fs2.writeFileSync(setPath, s, 'utf8');
+      }
+    }
+    fs2.unlinkSync(docxPath);
+    execSync(`cd "${tmpDir}" && zip -X -r -q "${docxPath}" .`, { stdio: 'pipe' });
+    execSync(`rm -rf "${tmpDir}"`, { stdio: 'pipe' });
+  } catch (e) {
+    console.warn('  ⚠  mirror margins non applicati:', e.message);
+  }
+}
+
 async function fixFontTableRel(docxPath) {
   const AdmZip = (() => {
     try { return require('adm-zip'); } catch { return null; }
@@ -872,6 +1034,7 @@ async function buildAll(chaptersDir, outputDir) {
   const outPath = path.join(outputDir, 'Mythic_Rings_v3.docx');
   fs.writeFileSync(outPath, buf);
   await fixFontTableRel(outPath);
+  await enableMirrorMargins(outPath);
 
   const kb = Math.round(buf.length / 1024);
   console.log(chalk.bold.green(`\n  ✅  ${outPath}  (${kb} KB)\n`));

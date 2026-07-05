@@ -73,7 +73,7 @@ A differenza del Doom Clock, il Velo Tracker **non si azzera mai** tra gli archi
 Il Velo Tracker avanza quando i Custodi lasciano tracce visibili della magia nel mondo profano:
 
 **+1 automatico** alla fine di ogni sessione in cui almeno uno dei seguenti è accaduto:
-- Un potere visistoso è stato usato in luogo pubblico senza witnesses management
+- Un potere vistoso è stato usato in luogo pubblico senza gestione dei testimoni
 - Uno scontro ha causato danni materiali evidenti (esplosioni, crolli, incendi)
 - Un non-morto o creatura soprannaturale è stata vista da civili
 
@@ -98,7 +98,9 @@ Il Velo Tracker non scende mai sotto la soglia attuale una volta superata: se av
 
 :::box[Consiglio per il Custode: Velo Tracker come Pressione]{type=tip}
 Il Velo Tracker non deve essere un meccanismo punitivo. È uno strumento narrativo per ricordare ai PG che le loro azioni hanno conseguenze nel mondo reale. Usatelo per creare dilemmi: a volte il modo più efficace per fermare una minaccia è anche il più visibile. Lasciate che i giocatori scelgano consapevolmente quando valga la pena alzare il rischio.
+:::
 
+:::box[Consiglio per il Custode: Velo Tracker come Pressione (segue)]{type=tip}
 Idealmente, il Velo Tracker sale lentamente per le prime sessioni, poi accelera nella parte centrale della campagna quando le minacce si intensificano, creando una pressione che si somma al Doom Clock della minaccia principale.
 :::
 

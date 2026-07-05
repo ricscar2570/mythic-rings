@@ -15,7 +15,7 @@ version: 3.2
 | Termine | Definizione |
 |---|---|
 | Anello di Custodia | Artefatto magico che conferisce poteri ai Guardiani. Uno per Casata. Si lega al portatore scelto. Indistruttibile. |
-| Armatura | Valore che riduce il danno subito. Va da 0 a 2 (max per boss). Alcuni attacchi ignorano l'Armatura. |
+| Armatura | Valore che riduce il danno subito. Per i PG va da 0 a 3 (con equipaggiamento avanzato); per i boss il massimo è 2. Alcuni attacchi ignorano l'Armatura. |
 | Avalon | Casata della luce, giustizia, protezione. Poteri costano Stress. Colori: oro e bianco. |
 | Casata | Ordine magico di Guardiani. Quattro totali: Avalon, Umbra, Ife, Mictlan. Ognuna ha filosofia e poteri unici. |
 | Caratteristiche | Attributi base PG: Forza (FOR), Cuore (CUO), Mente (MEN), Carisma (CAR), Fato (FAT). Da -1 a +3. |
@@ -48,7 +48,7 @@ version: 3.2
 | Punti Ferita (PF) | Salute del PG. Inizia a 20 + (FOR × 2) per Avalon/Umbra/Ife; 28 + (FOR × 1) per Mictlan (v3.2). A 0 = morente (Ultimo Respiro). Recupera con riposo/guarigione/poteri. |
 | Reputazione | Punteggio -5/+5 con ciascuna delle 5 fazioni. Determina accesso a risorse e relazioni. |
 | Rinnegato | Ex-Guardiano espulso o fuggito. Spesso antagonista. |
-| Resilienza della Soglia | Potere passivo gratuito Mictlan. Recupera 1d4 PF alla fine di ogni scontro in cui ha sconfitto un avversario, senza guaritore presente. Sinergia con Drain: 1d6 PF se Drain è stato usato. |
+| Resilienza della Soglia | Potere passivo gratuito Mictlan. Recupera 1d4 PF alla fine di ogni scontro in cui ha sconfitto un avversario, senza guaritore presente. Massimo 3 attivazioni per sessione. Sinergia con Drain: 1d6 PF se Drain è stato usato. |
 | Safety Tools | Strumenti sicurezza emotiva: X-Card, Freno, Porta Aperta, Check-In, Lines & Veils. |
 | Session Zero | Sessione preparatoria. 10 passi: tono, limiti, safety tools, Casate, PG, Legami, quartiere, situazione, domande, patto. |
 | Società del Velo | Organizzazione ~100 umani profani Consapevoli. Aiutano Custodi mantenere Velo (cover-up, media). |

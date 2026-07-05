@@ -59,15 +59,11 @@ Curioso. Spezzato. Leale. Vendicativo. Affamato. Gentile. Questa parola
 PG in una situazione, torna a questa parola.
 
 :::box[Consiglio: Il Concept Viene Prima della Casata]{type=info}
-Non scegliere la Casata e poi costruire il personaggio attorno ad
-essa. Fai il contrario: crea una persona vera e poi lascia che la
-Casata la trovi. Un ex-chirurgo potrebbe sembrare un Ife naturale, ma
-se la sua motivazione è la vendetta per un paziente ucciso da un
-demone, forse l'Anello Avalon risuona con la sua rabbia giusta.
-Un'artista di strada potrebbe sembrare una Umbra, ma se la sua arte è
-un modo per processare il lutto, forse Mictlan la chiama.
-I personaggi più interessanti sono quelli in cui il concept e la
-Casata creano una tensione produttiva.
+Non scegliere la Casata e poi costruire il personaggio attorno ad essa. Fai il contrario: crea una persona vera e poi lascia che la Casata la trovi. Un ex-chirurgo potrebbe sembrare un Ife naturale, ma se la sua motivazione è la vendetta per un paziente ucciso da un demone, forse l'Anello Avalon risuona con la sua rabbia giusta.
+:::
+
+:::box[Consiglio: Il Concept Viene Prima della Casata (segue)]{type=info}
+Un'artista di strada potrebbe sembrare una Umbra, ma se la sua arte è un modo per processare il lutto, forse Mictlan la chiama. I personaggi più interessanti sono quelli in cui il concept e la Casata creano una tensione produttiva.
 :::
 
 ## PASSO 2: SCEGLI LA CASATA
@@ -94,12 +90,10 @@ Ombre e Colpo dall'Ombra per Umbra. Sentire la Vita e Simbiosi per Ife.
 Interrogare i Morti e Presagio per Mictlan. Quale stile ti attrae?
 
 :::box[Nota: Mix di Casate nel Gruppo]{type=info}
-Ogni gruppo dovrebbe avere un mix di Casate. Non è obbligatorio -
-quattro Avalon possono funzionare se il Custode adatta la campagna
-- ma la diversità è forza. Un gruppo con quattro Casate diverse
-copre ogni situazione: l'Avalon ispira e protegge, l'Umbra infiltra e
-scopre, l'Ife cura e connette, il Mictlan interroga e accetta. E le
-tensioni tra filosofie diverse generano il drama più autentico.
+Ogni gruppo dovrebbe avere un mix di Casate. Non è obbligatorio - quattro Avalon possono funzionare se il Custode adatta la campagna - ma la diversità è forza. Un gruppo con quattro Casate diverse copre ogni situazione: l'Avalon ispira e protegge, l'Umbra infiltra e scopre, l'Ife cura e connette, il Mictlan interroga e accetta. E le tensioni tra filosofie diverse generano il drama più autentico.
+:::
+
+:::box[Nota: Mix di Casate nel Gruppo (segue)]{type=info}
 Ecco perché il Passo 2 si fa insieme, alla Session Zero.
 :::
 
@@ -174,7 +168,11 @@ muscoli - è carburante.
 :::
 
 :::box[FAT è la Stat di Lancio - ed è una Scelta, non uno Sbilanciamento]{type=info}
-FAT canalizza i poteri di Umbra, Ife e Mictlan (Avalon usa CAR). Sembra una "stat divina", ma non lo è: FAT non difende, non schiva, non colpisce in mischia e non investiga. Difendere e Attaccare usano FOR/CUO, Sfidare Pericolo usa CUO/MEN, l'indagine usa MEN. Un Guardiano tutto-FAT ha poteri eccellenti ma è fragile e goffo in combattimento - un glass cannon: scaricare FOR, CUO o MEN ha sempre un prezzo concreto.
+FAT canalizza i poteri di Umbra, Ife e Mictlan (Avalon usa CAR). Sembra una "stat divina", ma non lo è: FAT non difende, non schiva, non colpisce in mischia e non investiga. Difendere e Attaccare usano FOR/CUO, Sfidare Pericolo usa CUO/MEN, l'indagine usa MEN. Un Guardiano tutto-FAT ha poteri eccellenti ma è fragile e goffo in combattimento - un glass cannon:
+:::
+
+:::box[FAT è la Stat di Lancio - ed è una Scelta, non uno Sbilanciamento (segue)]{type=info}
+scaricare FOR, CUO o MEN ha sempre un prezzo concreto.
 
 Il caso a parte è Mictlan, che vorrebbe FAT (poteri) e FOR (PF): la formula v3.2 28+(FOR×1) alza il floor a 28 e dimezza il peso di FOR proprio per ridurre questa doppia dipendenza. Un Mictlan può puntare su FAT e restare comunque resistente.
 :::
@@ -194,10 +192,10 @@ Esempio: Mictlan con FOR +1 → PF = 28 + 1 = 29.
 
 | FOR | PF Standard | PF Mictlan | Nota |
 |---| ---|---| ---|
-| -1 | 18 | 22 | Fragile. Evita la prima linea. |
-| 0 | 20 | 24 | Nella media. Sopravvivi con cautela. |
-| +1 | 22 | 26 | Solido. Puoi permetterti qualche rischio. |
-| +2 | 24 | 28 | Robusto. Puoi incassare colpi e alimentare poteri. |
+| -1 | 18 | 27 | Fragile. Evita la prima linea. |
+| 0 | 20 | 28 | Nella media. Sopravvivi con cautela. |
+| +1 | 22 | 29 | Solido. Puoi permetterti qualche rischio. |
+| +2 | 24 | 30 | Robusto. Puoi incassare colpi e alimentare poteri. |
 
 ## Risorse Iniziali
 
@@ -295,17 +293,11 @@ informatore, un medico, un hacker). Per ogni Legame, scrivi il nome, la
 relazione, e perché è importante per il tuo personaggio.
 
 :::box[Legami tra PG]{type=info}
-Alla Session Zero, ogni giocatore dovrebbe creare almeno 1 Legame
-verso un altro PG. Questo garantisce coesione di gruppo fin dalla
-prima sessione. Non devono essere amici: un Legame Rivale tra un
-Avalon e un Umbra crea tensione narrativa deliziosa. Un Legame
-Protettore verso un alleato crea scene eroiche. Un Legame Confidente
-tra due personaggi che si sono appena conosciuti racconta la storia
-di una fiducia che cresce.
-**I Legami possono rompersi.** Tradimenti, morti, bugie scoperte -
-tutto può spezzare un Legame. Quando un Legame si rompe, il bonus
-scompare e il PG prende +2 Stress. Ma le storie migliori nascono dai
-Legami che vengono messi alla prova e sopravvivono.
+Alla Session Zero, ogni giocatore dovrebbe creare almeno 1 Legame verso un altro PG. Questo garantisce coesione di gruppo fin dalla prima sessione. Non devono essere amici: un Legame Rivale tra un Avalon e un Umbra crea tensione narrativa deliziosa. Un Legame Protettore verso un alleato crea scene eroiche.
+:::
+
+:::box[Legami tra PG (segue)]{type=info}
+Un Legame Confidente tra due personaggi che si sono appena conosciuti racconta la storia di una fiducia che cresce. **I Legami possono rompersi.** Tradimenti, morti, bugie scoperte - tutto può spezzare un Legame. Quando un Legame si rompe, il bonus scompare e il PG prende +2 Stress. Ma le storie migliori nascono dai Legami che vengono messi alla prova e sopravvivono.
 :::
 
 ## PASSO 9: TOCCHI FINALI
@@ -341,22 +333,14 @@ Quattro Guardiani pronti al gioco - uno per Casata - per mostrarti
 come si assemblano le scelte e per darti ispirazione.
 
 :::box[Marco Ferretti - Avalon, Il Paladino]{type=casata_avalon}
-**Concept:** Ex-poliziotto che ha visto troppo. L'Anello lo scelse
-dopo una sparatoria quasi-fatale contro cultisti in un magazzino di
-Lambrate. Accettò per proteggere altri dagli orrori che aveva
-scoperto.
-**Età: 35 \| Quartiere: Porta Venezia \| Vita Normale:** Detective
-privato (copertura perfetta).
-**Aspetto:** Cicatrice sul collo, capelli grigi prematuri, porta
-sempre il distintivo da ex-poliziotto.
-**Caratteristiche:** FOR +1, CUO +1, MEN 0, CAR +2, FAT -1
-**PF:** 22 (20 + 2) \| Stress: 0/10 \| Punti Fato: 2
-**Poteri L1:** Lama Radiante (offensivo), Scudo di Luce (difensivo),
-Presenza Intimidatoria (utility sociale).
-**Equipaggiamento:** Anello Avalon, smartphone, auricolare, Glock 19,
-manganello, 500€, giacca kevlar leggera.
-**Legami:** Sofia Conti (ex collega detective) - Confidente L1 -
+**Concept:** Ex-poliziotto che ha visto troppo. L'Anello lo scelse dopo una sparatoria quasi-fatale contro cultisti in un magazzino di Lambrate. Accettò per proteggere altri dagli orrori che aveva scoperto. **Età: 35 \| Quartiere: Porta Venezia \| Vita Normale:** Detective privato (copertura perfetta). **Aspetto:** Cicatrice sul collo, capelli grigi prematuri, porta sempre il distintivo da ex-poliziotto.
+:::
 
+:::box[Marco Ferretti - Avalon, Il Paladino (segue)]{type=casata_avalon}
+**Caratteristiche:** FOR +1, CUO +1, MEN 0, CAR +2, FAT -1 **PF:** 22 (20 + 2) \| Stress: 0/10 \| Punti Fato: 2 **Poteri L1:** Lama Radiante (offensivo), Scudo di Luce (difensivo), Presenza Intimidatoria (utility sociale). **Equipaggiamento:** Anello Avalon, smartphone, auricolare, Glock 19, manganello, 500€, giacca kevlar leggera. **Legami:** Sofia Conti (ex collega detective) - Confidente L1 -
+:::
+
+:::box[Marco Ferretti - Avalon, Il Paladino (segue)]{type=casata_avalon}
 - guida spirituale, sa dei Custodi.
 **Citazione:** «Ho giurato di proteggere. Non importa da cosa.»
 **Paura:** Fallire di nuovo. Persone sono morte per colpa sua.
@@ -367,99 +351,59 @@ autodifesa.
 :::
 
 :::box[Leila Ferrara - Umbra, L'Infiltratrice]{type=casata_umbra}
-**Concept:** Ex-detective della Questura, lasciò per «burnout». In
-realtà, il burnout era causato dal vedere cose che nessuno voleva
-credere. L'Anello la trovò durante un'indagine sotto copertura finita
-in un rituale occulto.
-**Età: 41 \| Quartiere: Navigli \| Vita Normale:** Consulente di
-sicurezza freelance.
-**Aspetto:** Capelli neri corti, occhi scuri che non battono mai
-abbastanza, giacca di pelle consumata, anello d'ombra quasi
-invisibile al mignolo.
-**Caratteristiche:** FOR -1, CUO +1, MEN +1, CAR 0, FAT +2
-**PF:** 18 (20 - 2) \| Stress: 0/10 \| Corruzione: 0/8 \| Punti Fato:
-2
-**Poteri L1:** Invisibilità Parziale (furtività), Sussurro d'Ombra
-(inganno sonoro), Lama d'Ombra (offensivo). Tutti a costo 0.
-**Equipaggiamento:** Anello Umbra, smartphone, auricolare, coltello a
-serramanico, grimaldelli, 500€, vestiti scuri.
-**Legami:** Commissario Rossi (ex capo) - Rivale L1 - lui non le
-ha mai creduto, lei vuole dimostrargli che aveva ragione. Sara
-(figlia, 16 anni) - Protettore L1 - la ragione per cui torna
-sempre a casa.
-**Citazione:** «La verità è come un'ombra: più la cerchi, più si
-nasconde.»
-**Paura:** Che la Corruzione la trasformi e Sara la veda per quello
-che sta diventando.
-**Desiderio:** Smantellare il culto che quasi la uccise.
-**Segreto:** Durante l'indagine sotto copertura, uccise un innocente
-scambiandolo per un cultista. Il caso fu insabbiato.
+**Concept:** Ex-detective della Questura, lasciò per «burnout». In realtà, il burnout era causato dal vedere cose che nessuno voleva credere. L'Anello la trovò durante un'indagine sotto copertura finita in un rituale occulto. **Età: 41 \| Quartiere: Navigli \| Vita Normale:** Consulente di sicurezza freelance.
+:::
+
+:::box[Leila Ferrara - Umbra, L'Infiltratrice (segue)]{type=casata_umbra}
+**Aspetto:** Capelli neri corti, occhi scuri che non battono mai abbastanza, giacca di pelle consumata, anello d'ombra quasi invisibile al mignolo. **Caratteristiche:** FOR -1, CUO +1, MEN +1, CAR 0, FAT +2 **PF:** 18 (20 - 2) \| Stress: 0/10 \| Corruzione: 0/8 \| Punti Fato: 2 **Poteri L1:** Invisibilità Parziale (furtività), Sussurro d'Ombra (inganno sonoro), Lama d'Ombra (offensivo). Tutti a costo 0.
+:::
+
+:::box[Leila Ferrara - Umbra, L'Infiltratrice (segue)]{type=casata_umbra}
+**Equipaggiamento:** Anello Umbra, smartphone, auricolare, coltello a serramanico, grimaldelli, 500€, vestiti scuri. **Legami:** Commissario Rossi (ex capo) - Rivale L1 - lui non le ha mai creduto, lei vuole dimostrargli che aveva ragione. Sara (figlia, 16 anni) - Protettore L1 - la ragione per cui torna sempre a casa. **Citazione:** «La verità è come un'ombra: più la cerchi, più si nasconde.»
+:::
+
+:::box[Leila Ferrara - Umbra, L'Infiltratrice (segue)]{type=casata_umbra}
+**Paura:** Che la Corruzione la trasformi e Sara la veda per quello che sta diventando. **Desiderio:** Smantellare il culto che quasi la uccise. **Segreto:** Durante l'indagine sotto copertura, uccise un innocente scambiandolo per un cultista. Il caso fu insabbiato.
 :::
 
 :::box[Professor Kwame Asante - Ife, Il Druido Urbano]{type=casata_ife}
-**Concept:** Docente di Botanica alla Statale di Milano, originario
-del Ghana. Sentiva le piante parlare da sempre - pensava fosse una
-metafora. L'Anello gli ha dimostrato che non lo era.
-**Età: 62 \| Quartiere: Isola \| Vita Normale:** Professore
-universitario, vive solo con un gatto chiamato Yaw.
-**Aspetto:** Alto, capelli bianchi, occhiali rotondi, sempre con un
-rametto verde nella tasca del giacca. Le piante nel suo ufficio
-crescono troppo velocemente.
-**Caratteristiche:** FOR 0, CUO +1, MEN +1, CAR -1, FAT +2
-**PF:** 20 (20 + 0) \| Stress: 0/10 \| Punti Fato: 2
-**Poteri L1:** Rampicanti Obbedienti (controllo piante), Tocco
-Curativo (guarigione base), Vista Naturale (percezione della vita
-nelle vicinanze).
-**Equipaggiamento:** Anello Ife, smartphone, auricolare, bastone da
-passeggio (arma improvvisata), 500€, giacca tweed con tasche piene di
-semi.
-**Legami:** La Grande Quercia del Parco Sempione - Mentore L1 -
-sì, un albero. Ha 400 anni e sa più cose di qualsiasi Custode.
-Dottoressa Yuki Tanaka (collega, Dipartimento di Biologia) -
-Confidente L1 - sospetta qualcosa ma non fa domande.
-**Citazione:** «La natura non affretta. E nemmeno io.»
-**Paura:** Che l'umanità distrugga l'equilibrio naturale prima che
-lui possa proteggerlo.
-**Desiderio:** Trovare il modo di far convivere il mondo occulto e il
-mondo naturale in pace.
-**Segreto:** Nel 2019, durante un esperimento, creò accidentalmente
-una pianta senziente. La tiene nel suo ufficio. Lei è cosciente.
+**Concept:** Docente di Botanica alla Statale di Milano, originario del Ghana. Sentiva le piante parlare da sempre - pensava fosse una metafora. L'Anello gli ha dimostrato che non lo era. **Età: 62 \| Quartiere: Isola \| Vita Normale:** Professore universitario, vive solo con un gatto chiamato Yaw. **Aspetto:** Alto, capelli bianchi, occhiali rotondi, sempre con un rametto verde nella tasca del giacca.
+:::
+
+:::box[Professor Kwame Asante - Ife, Il Druido Urbano (segue)]{type=casata_ife}
+Le piante nel suo ufficio crescono troppo velocemente. **Caratteristiche:** FOR 0, CUO +1, MEN +1, CAR -1, FAT +2 **PF:** 20 (20 + 0) \| Stress: 0/10 \| Punti Fato: 2 **Poteri L1:** Rampicanti Obbedienti (controllo piante), Tocco Curativo (guarigione base), Vista Naturale (percezione della vita nelle vicinanze).
+:::
+
+:::box[Professor Kwame Asante - Ife, Il Druido Urbano (segue)]{type=casata_ife}
+**Equipaggiamento:** Anello Ife, smartphone, auricolare, bastone da passeggio (arma improvvisata), 500€, giacca tweed con tasche piene di semi. **Legami:** La Grande Quercia del Parco Sempione - Mentore L1 - sì, un albero. Ha 400 anni e sa più cose di qualsiasi Custode. Dottoressa Yuki Tanaka (collega, Dipartimento di Biologia) - Confidente L1 - sospetta qualcosa ma non fa domande.
+:::
+
+:::box[Professor Kwame Asante - Ife, Il Druido Urbano (segue)]{type=casata_ife}
+**Citazione:** «La natura non affretta. E nemmeno io.» **Paura:** Che l'umanità distrugga l'equilibrio naturale prima che lui possa proteggerlo. **Desiderio:** Trovare il modo di far convivere il mondo occulto e il mondo naturale in pace. **Segreto:** Nel 2019, durante un esperimento, creò accidentalmente una pianta senziente. La tiene nel suo ufficio. Lei è cosciente.
 :::
 
 :::box[Elena Marchetti - Mictlan, La Medium]{type=casata_mictlan}
-**Concept:** Graphic designer di giorno, medium per necessità di
-notte. Sentiva voci da bambina. I genitori la portarono da psicologi
-per anni. L'Anello arrivò il giorno in cui una voce le salvò la vita
-- la avvertì di non prendere quel treno.
-**Età: 28 \| Quartiere: Porta Ticinese \| Vita Normale:** Graphic
-designer freelance, lavora da casa con cuffie e musica alta per
-coprire le voci.
-**Aspetto:** Magra, occhiaie perenni, tatuaggio di catrina
-sull'avambraccio sinistro, anello di ossidiana al medio. Veste sempre
-di nero - non per scelta estetica, ma perché i colori la
-distraggono.
-**Caratteristiche:** FOR +1, CUO +1, MEN 0, CAR -1, FAT +2
-**PF:** 29 (28 + 1) \| Stress: 0/10 \| Punti Fato: 2
-**Potere Passivo:** Sangue Tenace (gratuito, attivo quando sotto 40%
-PF ≈ 12 PF)
-**Poteri L1:** Vista degli Spiriti (vede fantasmi e tracce di morte),
-Tocco Frigido (offensivo, drenaggio minore), Voce dei Caduti
-(comunicazione base con spiriti recenti).
-**Equipaggiamento:** Anello Mictlan, smartphone, auricolare, coltello
-rituale (arma), 500€, vestiti neri, quaderno per annotare le
-testimonianze degli spiriti.
-**Legami:** Nonna Lucia (spirito) - Mentore L1 - morta 5 anni fa,
-rifiuta di andarsene finché Elena «non impara a vivere». Marco
-Ferretti (Avalon) - Protettore L1 - il PG di un altro giocatore;
-Marco la protegge in combattimento, lei gli parla con i morti che lo
-tormentano.
-**Citazione:** «I morti non mentono. I vivi, sempre.»
-**Paura:** Che le voci non siano spiriti ma segnali che sta perdendo
-la ragione.
-**Desiderio:** Capire perché l'Anello ha scelto lei - e se lo
-merita.
-**Segreto:** Lo spirito di suo padre appare ogni notte. Non le ha mai
-detto come è morto. E lei ha troppa paura di chiedere.
+**Concept:** Graphic designer di giorno, medium per necessità di notte. Sentiva voci da bambina. I genitori la portarono da psicologi per anni. L'Anello arrivò il giorno in cui una voce le salvò la vita - la avvertì di non prendere quel treno. **Età: 28 \| Quartiere: Porta Ticinese \| Vita Normale:** Graphic designer freelance, lavora da casa con cuffie e musica alta per coprire le voci.
+:::
+
+:::box[Elena Marchetti - Mictlan, La Medium (segue)]{type=casata_mictlan}
+**Aspetto:** Magra, occhiaie perenni, tatuaggio di catrina sull'avambraccio sinistro, anello di ossidiana al medio. Veste sempre di nero - non per scelta estetica, ma perché i colori la distraggono. **Caratteristiche:** FOR +1, CUO +1, MEN 0, CAR -1, FAT +2 **PF:** 29 (28 + 1) \| Stress: 0/10 \| Punti Fato:
+:::
+
+:::box[Elena Marchetti - Mictlan, La Medium (segue)]{type=casata_mictlan}
+2 **Potere Passivo:** Sangue Tenace (gratuito, attivo quando sotto 40% PF ≈ 12 PF) **Poteri L1:** Vista degli Spiriti (vede fantasmi e tracce di morte), Tocco Frigido (offensivo, drenaggio minore), Voce dei Caduti (comunicazione base con spiriti recenti).
+:::
+
+:::box[Elena Marchetti - Mictlan, La Medium (segue)]{type=casata_mictlan}
+**Equipaggiamento:** Anello Mictlan, smartphone, auricolare, coltello rituale (arma), 500€, vestiti neri, quaderno per annotare le testimonianze degli spiriti. **Legami:** Nonna Lucia (spirito) - Mentore L1 - morta 5 anni fa, rifiuta di andarsene finché Elena «non impara a vivere».
+:::
+
+:::box[Elena Marchetti - Mictlan, La Medium (segue)]{type=casata_mictlan}
+Marco Ferretti (Avalon) - Protettore L1 - il PG di un altro giocatore; Marco la protegge in combattimento, lei gli parla con i morti che lo tormentano. **Citazione:** «I morti non mentono. I vivi, sempre.» **Paura:** Che le voci non siano spiriti ma segnali che sta perdendo la ragione. **Desiderio:** Capire perché l'Anello ha scelto lei - e se lo merita. **Segreto:** Lo spirito di suo padre appare ogni notte.
+:::
+
+:::box[Elena Marchetti - Mictlan, La Medium (segue)]{type=casata_mictlan}
+Non le ha mai detto come è morto. E lei ha troppa paura di chiedere.
 :::
 
 La Session Zero
@@ -539,29 +483,19 @@ profondità - ma «profondità» non significa «disagio». Usate gli
 strumenti di sicurezza per garantire che **tutti** si divertano.
 
 :::box[🛑 X-Card]{type=info}
-Metti una carta (o un post-it) con una X scritta al centro del
-tavolo. Chiunque, in qualsiasi momento, può toccare la X-Card. Questo
-significa: «Mi sento a disagio, cambiamo scena adesso.»
-Regole: nessuno chiede perché. Nessuno giudica. Il Custode cambia
-scena immediatamente («Ok, saltiamo avanti\...»). Può essere usata
-infinite volte. Non servono spiegazioni - né durante, né dopo.
-Per il gioco online: stabilite una parola chiave in chat (es. «X») o
-un gesto (pollice in giù in webcam) che funzioni come X-Card
-digitale.
+Metti una carta (o un post-it) con una X scritta al centro del tavolo. Chiunque, in qualsiasi momento, può toccare la X-Card. Questo significa: «Mi sento a disagio, cambiamo scena adesso.» Regole: nessuno chiede perché. Nessuno giudica. Il Custode cambia scena immediatamente («Ok, saltiamo avanti\...»). Può essere usata infinite volte. Non servono spiegazioni - né durante, né dopo.
+:::
+
+:::box[🛑 X-Card (segue)]{type=info}
+Per il gioco online: stabilite una parola chiave in chat (es. «X») o un gesto (pollice in giù in webcam) che funzioni come X-Card digitale.
 :::
 
 :::box[Lines & Veils]{type=info}
-**Lines** sono i confini assoluti: temi che NON vengono toccati in
-nessuna circostanza. Non accennati, non implicati, non suggeriti. Se
-qualcuno mette «violenza su animali» come Line, nel vostro gioco
-nessun animale verrà mai ferito, punto.
-**Veils** sono i fade-to-black: temi che possono esistere nella
-fiction ma vengono gestiti «a sipario calato», senza descrizioni
-dettagliate. Se qualcuno mette «tortura» come Veil, un PNG può essere
-torturato nella storia, ma la scena si interrompe prima dei dettagli
-e riprende dopo.
-Compilate Lines & Veils alla Session Zero. Chiunque può aggiungere
-temi in qualsiasi momento della campagna.
+**Lines** sono i confini assoluti: temi che NON vengono toccati in nessuna circostanza. Non accennati, non implicati, non suggeriti. Se qualcuno mette «violenza su animali» come Line, nel vostro gioco nessun animale verrà mai ferito, punto. **Veils** sono i fade-to-black: temi che possono esistere nella fiction ma vengono gestiti «a sipario calato», senza descrizioni dettagliate.
+:::
+
+:::box[Lines & Veils (segue)]{type=info}
+Se qualcuno mette «tortura» come Veil, un PNG può essere torturato nella storia, ma la scena si interrompe prima dei dettagli e riprende dopo. Compilate Lines & Veils alla Session Zero. Chiunque può aggiungere temi in qualsiasi momento della campagna.
 :::
 
 :::box[Il Debriefing]{type=info}
@@ -573,12 +507,9 @@ Se giocate online, considerate un breve modulo anonimo post-sessione.
 :::
 
 :::box[Fine Capitolo 4 - Creare il Tuo Guardiano]{type=tip}
-Ora hai tutti gli strumenti per creare il tuo Guardiano: un concept
-che racconta una storia, una Casata che risuona con la tua visione,
-caratteristiche bilanciate, Legami che ancorano il personaggio al
-mondo, e i tocchi finali che lo rendono unico. Hai visto quattro
-esempi completi e sai come organizzare una Session Zero efficace.
-**Prossimo capitolo:** Le Regole Base. Come si tira, come funzionano
-le mosse, cosa succede con un 10+, un 7--9 e un 6--. Il cuore
-meccanico di Mythic Rings.
+Ora hai tutti gli strumenti per creare il tuo Guardiano: un concept che racconta una storia, una Casata che risuona con la tua visione, caratteristiche bilanciate, Legami che ancorano il personaggio al mondo, e i tocchi finali che lo rendono unico. Hai visto quattro esempi completi e sai come organizzare una Session Zero efficace. **Prossimo capitolo:** Le Regole Base.
+:::
+
+:::box[Fine Capitolo 4 - Creare il Tuo Guardiano (segue)]{type=tip}
+Come si tira, come funzionano le mosse, cosa succede con un 10+, un 7--9 e un 6--. Il cuore meccanico di Mythic Rings.
 :::

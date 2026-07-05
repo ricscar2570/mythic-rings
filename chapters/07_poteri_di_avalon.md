@@ -26,7 +26,9 @@ Luce, giustizia, protezione, ispirazione. Gli Avalon sono fari nella notte, guar
 **Costo:** 1 Stress | **Range:** Sé | **Durata:** Concentrazione (max 1 ora) | **Tiro:** Automatico
 
 L'Anello emana luce dorata brillante (equivalente torcia potente). Illumina area Vicina. Nessuna penalità buio per te e alleati. Creature ombra/non-morti: -1 a tutti i tiri dentro la luce. Puoi puntare la luce come un faretto (50m portata stretta).
+:::
 
+:::box[Luce Guida (segue)]{type=casata_avalon}
 *Luce visibilmente magica, dorata, mai tremola. Non può essere spenta da vento o acqua normale. Potere iconico Avalon, simbolo di presenza.*
 :::
 
@@ -36,7 +38,9 @@ L'Anello emana luce dorata brillante (equivalente torcia potente). Illumina area
 **Costo:** 1 Stress | **Range:** Tocco (te o alleato Vicino) | **Durata:** Scena o finché distrutto | **Tiro:** Usare Potere +CAR
 
 Crei uno scudo di energia dorata. Il bersaglio guadagna **+2 Armatura temporanea** (cumula con Armatura fisica). Quando lo scudo assorbe danno, brilla intensamente.
+:::
 
+:::box[Scudo Radiante (segue)]{type=casata_avalon}
 **10+** Scudo perfetto: +2 Armatura, nessun effetto collaterale.
 **7-9** Scudo instabile: +2 Armatura ma si dissolve dopo aver assorbito il primo colpo.
 **6-** Scudo fallisce: nessun effetto, 1 Stress sprecato.
@@ -50,7 +54,9 @@ Crei uno scudo di energia dorata. Il bersaglio guadagna **+2 Armatura temporanea
 **Costo:** 2 Stress | **Range:** Tocco | **Durata:** Istantaneo | **Tiro:** Usare Potere +CAR
 
 Tocchi una creatura vivente, canalizzi energia vitale. Il bersaglio recupera PF. Non funziona su non-morti o costrutti. Non rigenera arti persi. Non cura veleni/malattie. Max 1 volta per bersaglio per scena.
+:::
 
+:::box[Guarigione Minore (segue)]{type=casata_avalon}
 **10+** Guarigione completa: recupera 2d6+CAR PF.
 **7-9** Guarigione parziale: recupera 1d6 PF.
 **6-** Guarigione fallisce: nessun PF recuperato, 2 Stress sprecati.
@@ -64,7 +70,9 @@ Tocchi una creatura vivente, canalizzi energia vitale. Il bersaglio recupera PF.
 **Costo:** 2 Stress | **Range:** Medio | **Durata:** Istantaneo | **Tiro:** Usare Potere +CAR (conta come Attacco)
 
 Scagli un raggio di fuoco sacro dorato. Danno **radiante** che ignora Armatura fisica (solo magica protegge). Extra vs non-morti: danno raddoppiato.
+:::
 
+:::box[Fiamma Purificatrice (segue)]{type=casata_avalon}
 **10+** 4d8 danno radiante. Scegli 1 bonus: target abbagliato (1 round), fuoco sacro persiste (1d4/round per 2 round), nessun danno collaterale ad alleati vicini.
 **7-9** 2d8 danno radiante. Custode sceglie 1: ti esponi, danno ridotto a 1d8, alleato Vicino subisce 1d4.
 **6-** Custode fa mossa.
@@ -77,8 +85,10 @@ Scagli un raggio di fuoco sacro dorato. Danno **radiante** che ignora Armatura f
 
 **Costo:** 2 Stress | **Range:** Vicino (aura centrata su di te) | **Durata:** Scena | **Tiro:** Usare Potere +CAR
 
-Emani presenza ispirantee. Alleati nell'aura: +1 a tutti i tiri contro paura/intimidazione, immuni a effetti paura magica. Quando un alleato subisce danno puoi dare incoraggiamento verbale (reazione): recupera 1d4 PF (1 volta per alleato per scena).
+Emani presenza ispirante. Alleati nell'aura: +1 a tutti i tiri contro paura/intimidazione, immuni a effetti paura magica. Quando un alleato subisce danno puoi dare incoraggiamento verbale (reazione): recupera 1d4 PF (1 volta per alleato per scena).
+:::
 
+:::box[Aura Coraggio (segue)]{type=casata_avalon}
 **10+** Aura potente: +1 a TUTTI i tiri degli alleati nell'aura, non solo paura.
 **7-9** Aura base: solo bonus paura e reazione PF.
 **6-** Aura instabile: funziona ma si dissolve al primo 6- di qualsiasi alleato.
@@ -92,7 +102,9 @@ Emani presenza ispirantee. Alleati nell'aura: +1 a tutti i tiri contro paura/int
 **Costo:** 3 Stress | **Range:** Medio | **Durata:** Concentrazione (max 10 min) | **Tiro:** Usare Potere +CAR
 
 Crei un muro di luce solida dorata (3m × 3m × 10cm). Barriera ha **30 PF, Armatura 5**. Blocca tutto (creature, proiettili, magie). Tu e alleati potete attraversarla. Debolezza: magia oscura infligge danno raddoppiato.
+:::
 
+:::box[Barriera di Luce (segue)]{type=casata_avalon}
 **10+** Barriera perfetta: 30 PF, Armatura 5, tu puoi abbatterla a piacere come azione libera.
 **7-9** Barriera instabile: 20 PF, Armatura 3.
 **6-** Barriera microscopica: 10 PF, Armatura 1, dura max 1 round.
@@ -108,7 +120,9 @@ Crei un muro di luce solida dorata (3m × 3m × 10cm). Barriera ha **30 PF, Arma
 **Costo:** 4 Stress | **Range:** Tocco | **Durata:** Istantaneo | **Tiro:** Usare Potere +CAR
 
 Versione potenziata di Guarigione Minore. Cura ferite gravi, veleni, malattie. Non rigenera arti completi (serve Resurrezione L5). Non cura maledizioni magiche (serve Purificazione Suprema L4).
+:::
 
+:::box[Guarigione Maggiore (segue)]{type=casata_avalon}
 **10+** Recupera tutti i PF persi + cura 1 veleno/malattia.
 **7-9** Recupera 3d6+CAR PF + cura 1 veleno/malattia ma Custode sceglie 1 effetto collaterale.
 **6-** Guarigione parziale: recupera 1d6 PF, nessuna cura condizioni.
@@ -120,7 +134,9 @@ Versione potenziata di Guarigione Minore. Cura ferite gravi, veleni, malattie. N
 **Costo:** 3 Stress | **Range:** Sé | **Durata:** Scena | **Tiro:** Usare Potere +CAR
 
 Evochi una spada di luce pura dall'Anello. **Danno 2d8 radiante** (ignora Armatura fisica). Tag: Mischia, Magica, Indistruttibile, Peso zero. Illumina area Vicina. Contro creature oscurità: danno 3d8. Può tagliare sostanze immateriali.
+:::
 
+:::box[Lama Radiante (segue)]{type=casata_avalon}
 **10+** Lama perfetta: 2d8 radiante, scegli 1 bonus aggiuntivo.
 **7-9** Lama base: 2d8 radiante, nessun bonus.
 **6-** Lama instabile: 1d8, si dissolve dopo 1 round.
@@ -134,7 +150,9 @@ Evochi una spada di luce pura dall'Anello. **Danno 2d8 radiante** (ignora Armatu
 **Costo:** 4 Stress | **Range:** Lontano | **Durata:** Istantaneo | **Tiro:** Usare Potere +CAR
 
 Canalizzi luce purissima verso una creatura extra-planare (demone, spirito, elementale, entità evocata). Funziona **SOLO** su creature extra-planari. Creature LS 8+: +2 a resistere. Entità leggendarie (LS 10+): immuni.
+:::
 
+:::box[Raggio Esilio (segue)]{type=casata_avalon}
 **10+** Esilio perfetto: creatura rimandata al piano d'origine, non può tornare per 1 anno.
 **7-9** Esilio parziale: creatura rimossa dallo scontro per 1d6 ore, poi può tornare.
 **6-** Esilio fallisce: la creatura non è esiliate, ma subisce 2d8 danno radiante.
@@ -150,11 +168,15 @@ Canalizzi luce purissima verso una creatura extra-planare (demone, spirito, elem
 **Costo:** 5 Stress | **Range:** Tocco | **Durata:** Rituale (1 min concentrazione) | **Tiro:** Usare Potere +CAR
 
 Purifichi un bersaglio da qualsiasi contaminazione oscura: maledizioni, possessioni, corruzione, malattie magiche. Potere chiave Avalon, unico modo affidabile per salvare un Umbra da Corruzione alta.
+:::
 
+:::box[Purificazione Suprema (segue)]{type=casata_avalon}
 **10+** Purificazione completa: rimuovi TUTTE le contaminazioni.
 **7-9** Purificazione parziale: rimuovi 1 contaminazione a scelta, le altre restano.
 **6-** Purificazione fallisce: nessun effetto, 5 Stress sprecati.
+:::
 
+:::box[Purificazione Suprema (segue)]{type=casata_avalon}
 *Umbra a Corruzione 7+ con poteri già costosi (penalità progressiva attiva): considera di aggiungere un secondo Guardiano al rituale. Umbra prossimo alla Trasformazione (Corruzione 7; Trasformazione a 8): richiede 10+ obbligatorio + sacrificio artefatto leggendario. Possessione maggiore (LS 8+): richiede 10+ obbligatorio.*
 :::
 
@@ -164,7 +186,9 @@ Purifichi un bersaglio da qualsiasi contaminazione oscura: maledizioni, possessi
 **Costo:** 6 Stress | **Range:** Vista | **Durata:** Istantaneo | **Tiro:** Usare Potere +CAR
 
 Invochi giudizio divino. Un pilastro di luce dorata scende dal cielo e investe il bersaglio. **Requisito:** bersaglio deve essere oggettivamente malvagio. Se usato su innocente: automatico 6- + conseguenze severe.
+:::
 
+:::box[Giudizio Divino (segue)]{type=casata_avalon}
 **10+** 6d8 danno radiante + bersaglio abbagliato permanente (finché curato magicamente).
 **7-9** 4d8 danno radiante + abbagliato 1d4 round.
 **6-** Custode fa mossa grave.
@@ -178,7 +202,9 @@ Invochi giudizio divino. Un pilastro di luce dorata scende dal cielo e investe i
 **Costo:** 5 Stress | **Range:** Sé | **Durata:** Scena | **Tiro:** Usare Potere +CAR
 
 Evochi armatura completa di luce solidificata. Copre tutto il corpo, peso zero, brilla magnificamente. **Armatura +4** (cumula). Immunità: paura magica, veleni, malattie. Aura: alleati Vicini +1 morale. Rigenerazione: inizio turno recuperi 1d4 PF.
+:::
 
+:::box[Aegis Gloria (segue)]{type=casata_avalon}
 **10+** Armatura perfetta: tutti gli effetti, +4 Armatura.
 **7-9** Armatura base: +3 Armatura, nessuna rigenerazione.
 **6-** Armatura parziale: +2 Armatura, dura solo 1 round.
@@ -194,11 +220,15 @@ Evochi armatura completa di luce solidificata. Copre tutto il corpo, peso zero, 
 **Costo:** 10 Stress + Sacrificio (artefatto leggendario o vita animale grande) | **Range:** Tocco | **Durata:** Rituale (1 ora) | **Tiro:** Usare Potere +CAR
 
 Riporti un morto alla vita. **Requisiti:** corpo intatto (almeno 75%), morte entro 24 ore, anima non vincolata, il morto deve voler tornare.
+:::
 
+:::box[Resurrezione (segue)]{type=casata_avalon}
 **10+** Resurrezione completa: il defunto torna con tutti i PF, nessuna penalità permanente.
 **7-9** Resurrezione parziale: il defunto torna ma con -1 a una caratteristica permanente (scelta del Custode).
 **6-** Resurrezione fallisce: l'anima non risponde, sacrificio e Stress sprecati.
+:::
 
+:::box[Resurrezione (segue)]{type=casata_avalon}
 *Il potere più sacro di Avalon. Usato raramente. Momento climax di campagna. Richiede preparazione, location sacra, alleati di supporto.*
 :::
 
@@ -206,9 +236,13 @@ Riporti un morto alla vita. **Requisiti:** corpo intatto (almeno 75%), morte ent
 **【 Livello 5 】**
 
 **Costo:** 8 Stress | **Range:** Sé | **Durata:** 10 minuti | **Tiro:** Usare Potere +CAR
+:::
 
+:::box[Avatar di Luce (segue)]{type=casata_avalon}
 Trascendi la forma mortale. Diventi un avatar semi-angelico: ali di luce (volo), corpo brillante, occhi dorati, voce di autorità divina. **+2 a TUTTE le caratteristiche.** Armatura +3. Poteri Avalon costano -1 Stress. Nemici LS 5- devono Resistere o fuggire. Rigenerazione 1d6 PF/turno. Immune: veleni, malattie, paura, charme.
+:::
 
+:::box[Avatar di Luce (segue)]{type=casata_avalon}
 **10+** Trasformazione completa: tutti gli effetti.
 **7-9** Trasformazione instabile: tutti gli effetti ma termina anticipatamente su 6-.
 **6-** Trasformazione parziale: solo +1 alle caratteristiche, nessuna immunità.
@@ -222,7 +256,9 @@ Trascendi la forma mortale. Diventi un avatar semi-angelico: ali di luce (volo),
 **Costo:** 10 Stress (tutti rimanenti, min 10) | **Range:** Lontano (sfera raggio 20m) | **Durata:** Istantaneo | **Tiro:** Usare Potere +CAR
 
 Invochi un'esplosione di luce solare. **8d8 danno radiante** a nemici (ignora Armatura). **12d8** a creature oscurità. Alleati in area immuni. Purifica area. Illumina per 10 minuti. Visibile da km.
+:::
 
+:::box[Nova Sacra (segue)]{type=casata_avalon}
 **10+** Esplosione perfetta: danno pieno, nessun effetto collaterale su alleati.
 **7-9** Esplosione potente: danno pieno ma 1d6 danno anche agli alleati nell'area.
 **6-** Esplosione incontrollata: danno a tutti (amici e nemici), Burnout automatico.

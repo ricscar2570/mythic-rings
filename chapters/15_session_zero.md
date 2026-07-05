@@ -40,12 +40,12 @@ Discutete apertamente di cosa volete e cosa **non** volete nel gioco.
 Usate il sistema **Lines & Veils**:
 
 **Lines:** contenuti che non appariranno MAI nel gioco. Non negoziabili.
-Basta che una persona dica \"line\" e l'argomento è escluso, senza
+Basta che una persona dica “line” e l'argomento è escluso, senza
 bisogno di spiegazioni. Esempi comuni: violenza sessuale, abuso su
 minori, self-harm grafico, tortura dettagliata.
 
 **Veils:** contenuti che possono esistere nella fiction ma vengono
-gestiti \"a sipario\". Accadono, ma non vengono descritti in dettaglio.
+gestiti “a sipario”. Accadono, ma non vengono descritti in dettaglio.
 Esempi: scene romantiche esplicite, morte di bambini, dipendenza da
 sostanze.
 
@@ -58,25 +58,18 @@ lista finale senza attribuzioni.
 Introduci gli strumenti di sicurezza che userete durante il gioco:
 
 :::box[Strumenti di Sicurezza Attivi]{type=info}
-**X-Card:** Chiunque può toccare o alzare la carta X (fisica o
-virtuale) per interrompere immediatamente una scena o argomento.
-Nessuna domanda, nessun giudizio. Il Custode salta avanti.
-**Freno:** \"Possiamo rallentare qui?\" - la scena non viene
-interrotta ma il tono si abbassa. Utile per scene intense che il
-giocatore vuole esplorare ma con più delicatezza.
-**Porta Aperta:** Chiunque può alzarsi e uscire dalla stanza in
-qualsiasi momento, senza dover giustificarsi. Il gioco continua, il
-giocatore torna quando vuole.
-**Check-In:** Il Custode può chiedere \"Tutto ok?\" durante scene
-intense. Un pollice in su, di lato, o in giù è sufficiente come
-risposta.
+**X-Card:** Chiunque può toccare o alzare la carta X (fisica o virtuale) per interrompere immediatamente una scena o argomento. Nessuna domanda, nessun giudizio. Il Custode salta avanti. **Freno:** “Possiamo rallentare qui?” - la scena non viene interrotta ma il tono si abbassa. Utile per scene intense che il giocatore vuole esplorare ma con più delicatezza.
+:::
+
+:::box[Strumenti di Sicurezza Attivi (segue)]{type=info}
+**Porta Aperta:** Chiunque può alzarsi e uscire dalla stanza in qualsiasi momento, senza dover giustificarsi. Il gioco continua, il giocatore torna quando vuole. **Check-In:** Il Custode può chiedere “Tutto ok?” durante scene intense. Un pollice in su, di lato, o in giù è sufficiente come risposta.
 :::
 
 ## Passo 4: Distribuzione Casate
 
 Idealmente, il gruppo ha almeno una Casata diversa. Non è obbligatorio
 (un gruppo tutto Umbra può essere fantastico) ma la varietà arricchisce
-il gioco. Discutete le preferenze e negotziate.
+il gioco. Discutete le preferenze e negoziate.
 
 :::box[Suggerimento: Gruppi Piccoli (M7)]{type=info}
 **2 PG:** Il Custode fornisce 1 PNG alleato che colma la Casata
@@ -137,7 +130,7 @@ Qual è il tuo luogo preferito a Milano? E il luogo che eviti?
 
 ## Passo 10: Il Patto del Tavolo
 
-Concludete la Session Zero con un accordo esplicito: \"*Siamo qui per
+Concludete la Session Zero con un accordo esplicito: “*Siamo qui per
 divertirci insieme. Rispettiamo i limiti di tutti. Il Custode è un
-facilitatore, non un avversario. Se qualcosa non va, ne parliamo.*\"
+facilitatore, non un avversario. Se qualcosa non va, ne parliamo.*”
 Sembra ovvio, ma dirlo ad alta voce crea un impegno concreto.

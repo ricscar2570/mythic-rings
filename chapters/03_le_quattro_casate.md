@@ -100,29 +100,19 @@ tramite un Atto di Catarsi con un Confidente (Legame livello 2+).
 Mosse Esclusive
 
 :::box[Voce dell'Autorità]{type=info}
-**Quando dai un ordine in una situazione critica**, tira +CAR.
-**10+:** Tutti gli alleati presenti agiscono immediatamente, fuori
-dal normale ordine di iniziativa. La tua voce taglia il caos come una
-lama di luce. Scegli tu l'ordine in cui agiscono.
-**7--9:** Gli alleati agiscono immediatamente, ma tu sei esposto -
-il prossimo attacco contro di te ha +1 danno. Guidare ha un costo.
-**6--:** Il panico li blocca. Nessuno agisce. Forse le tue parole non
-sono abbastanza, o forse la situazione è più terrificante della tua
-convinzione.
-*Nota:* Questa mossa non costa Stress. È un'espressione naturale
-della leadership Avalon, non un potere magico.
+**Quando dai un ordine in una situazione critica**, tira +CAR. **10+:** Tutti gli alleati presenti agiscono immediatamente, fuori dal normale ordine di iniziativa. La tua voce taglia il caos come una lama di luce. Scegli tu l'ordine in cui agiscono. **7--9:** Gli alleati agiscono immediatamente, ma tu sei esposto - il prossimo attacco contro di te ha +1 danno. Guidare ha un costo. **6--:** Il panico li blocca.
+:::
+
+:::box[Voce dell'Autorità (segue)]{type=info}
+Nessuno agisce. Forse le tue parole non sono abbastanza, o forse la situazione è più terrificante della tua convinzione. *Nota:* Questa mossa non costa Stress. È un'espressione naturale della leadership Avalon, non un potere magico.
 :::
 
 :::box[Luce della Verità]{type=info}
-**Quando guardi qualcuno negli occhi e cerchi la verità**, tira +CAR.
-**10+:** Sai se mente e perché. Non leggi la mente, ma percepisci
-l'intenzione dietro le parole - paura, avidità, disperazione,
-amore. L'Anello pulsa caldo quando la verità emerge.
-**7--9:** Sai se mente, ma non il motivo. Percepisci la dissonanza
-tra parole e intenzione, ma il perché resta oscuro.
-**6--:** La luce ti acceca. Percepisci qualcosa, ma non sai se è vero
-o se è il riflesso dei tuoi pregiudizi. Il Custode può darti
-informazioni fuorvianti.
+**Quando guardi qualcuno negli occhi e cerchi la verità**, tira +CAR. **10+:** Sai se mente e perché. Non leggi la mente, ma percepisci l'intenzione dietro le parole - paura, avidità, disperazione, amore. L'Anello pulsa caldo quando la verità emerge. **7--9:** Sai se mente, ma non il motivo. Percepisci la dissonanza tra parole e intenzione, ma il perché resta oscuro. **6--:** La luce ti acceca.
+:::
+
+:::box[Luce della Verità (segue)]{type=info}
+Percepisci qualcosa, ma non sai se è vero o se è il riflesso dei tuoi pregiudizi. Il Custode può darti informazioni fuorvianti.
 :::
 
 Archetipi di Personaggio
@@ -181,38 +171,23 @@ linea ottengono un bonus narrativo: durata più lunga, area più ampia,
 effetti più spettacolari.
 
 :::box[Esempio: Una Notte da Avalon]{type=info}
-Piazza Sant'Ambrogio, ore 2:47. La basilica è chiusa da ore, ma Padre
-Tommaso ha le chiavi. Dentro, nella cripta, qualcosa si muove.
-Lo sente prima di vederlo. L'Anello al dito diventa rovente - un
-avvertimento. Qualcosa di malvagio, qualcosa che non dovrebbe essere
-qui, sta emergendo dalla pietra stessa della cripta. Una Creatura
-d'Ombra, grande come un cane, con troppi occhi e non abbastanza
-bocca.
-Padre Tommaso non esita. La luce esplode dalle sue mani - calda,
-dorata, assoluta. La creatura strilla, un suono che non è suono ma
-puro terrore compresso in onde sonore. Si dissolve in fumo nero.
-Ma ne arriva un'altra. E un'altra. Stanno emergendo da una crepa nel
-muro della cripta - una micro-Porta Dimensionale, forse aperta dal
-terremoto di ieri sera. Padre Tommaso alza lo scudo di luce e inizia
-a pregare. Non a Dio - non questa volta. Prega che i suoi colleghi
-arrivino in tempo.
-Sente la vibrazione del telefono nella tasca. Leila ha ricevuto il
-segnale. Stanno arrivando. Deve solo resistere.
+Piazza Sant'Ambrogio, ore 2:47. La basilica è chiusa da ore, ma Padre Tommaso ha le chiavi. Dentro, nella cripta, qualcosa si muove. Lo sente prima di vederlo. L'Anello al dito diventa rovente - un avvertimento. Qualcosa di malvagio, qualcosa che non dovrebbe essere qui, sta emergendo dalla pietra stessa della cripta.
+:::
+
+:::box[Esempio: Una Notte da Avalon (segue)]{type=info}
+Una Creatura d'Ombra, grande come un cane, con troppi occhi e non abbastanza bocca. Padre Tommaso non esita. La luce esplode dalle sue mani - calda, dorata, assoluta. La creatura strilla, un suono che non è suono ma puro terrore compresso in onde sonore. Si dissolve in fumo nero. Ma ne arriva un'altra. E un'altra.
+:::
+
+:::box[Esempio: Una Notte da Avalon (segue)]{type=info}
+Stanno emergendo da una crepa nel muro della cripta - una micro-Porta Dimensionale, forse aperta dal terremoto di ieri sera. Padre Tommaso alza lo scudo di luce e inizia a pregare. Non a Dio - non questa volta. Prega che i suoi colleghi arrivino in tempo. Sente la vibrazione del telefono nella tasca. Leila ha ricevuto il segnale. Stanno arrivando. Deve solo resistere.
 :::
 
 :::box[Nota per il Custode: Giocare Avalon]{type=info}
-I giocatori Avalon vogliono sentirsi eroi. Dagliele: scene dove la
-loro luce fa la differenza, momenti dove la loro leadership ispira
-gli altri, situazioni dove la loro guarigione salva una vita. Ma poi
-metti alla prova la loro moralità. Costringili a scegliere chi
-salvare quando non possono salvare tutti. Presenta nemici che hanno
-ragioni comprensibili. Metti il loro codice morale in conflitto con
-la realtà. Un Avalon che non viene mai messo in discussione è un
-Avalon noioso.
-Lo Stress è il tuo strumento narrativo principale. Un Avalon a Stress
-7-8 è un personaggio sull'orlo del crollo - irritabile, insonne,
-con flashback delle persone che non è riuscito a salvare. Giocalo.
-Fai sentire il peso.
+I giocatori Avalon vogliono sentirsi eroi. Dagliele: scene dove la loro luce fa la differenza, momenti dove la loro leadership ispira gli altri, situazioni dove la loro guarigione salva una vita. Ma poi metti alla prova la loro moralità. Costringili a scegliere chi salvare quando non possono salvare tutti. Presenta nemici che hanno ragioni comprensibili.
+:::
+
+:::box[Nota per il Custode: Giocare Avalon (segue)]{type=info}
+Metti il loro codice morale in conflitto con la realtà. Un Avalon che non viene mai messo in discussione è un Avalon noioso. Lo Stress è il tuo strumento narrativo principale. Un Avalon a Stress 7-8 è un personaggio sull'orlo del crollo - irritabile, insonne, con flashback delle persone che non è riuscito a salvare. Giocalo. Fai sentire il peso.
 :::
 
 ## 🌑 UMBRA 🌑
@@ -267,7 +242,7 @@ combattere contro il suo stesso proprietario.
 
 **Passo d'Ombra.** A livelli intermedi e alti, la capacità di viaggiare
 istantaneamente da un'ombra a un'altra, coprendo distanze che vanno da
-pochi metri a intere zone della città. La teleportazione richiede due
+pochi metri a intere zone della città. Il teletrasporto richiede due
 ombre sufficientemente grandi da contenere il corpo del Guardiano, e
 funziona solo di notte o in luoghi bui.
 
@@ -299,27 +274,19 @@ possibile un Rituale di Purificazione che riduce di 1 la Corruzione.
 Mosse Esclusive
 
 :::box[Leggere le Ombre]{type=info}
-**Quando osservi qualcuno senza essere visto**, tira +FAT.
-**10+:** Scopri un segreto, una debolezza o un piano. L'ombra della
-persona ti sussurra ciò che il suo proprietario vorrebbe nascondere.
-**7--9:** Scopri qualcosa di utile, ma la tua presenza è sospettata.
-Non ti hanno visto, ma qualcuno si è girato con un brivido lungo la
-schiena.
-**6--:** Sei scoperto - o peggio, ciò che vedi nell'ombra ti vede.
+**Quando osservi qualcuno senza essere visto**, tira +FAT. **10+:** Scopri un segreto, una debolezza o un piano. L'ombra della persona ti sussurra ciò che il suo proprietario vorrebbe nascondere. **7--9:** Scopri qualcosa di utile, ma la tua presenza è sospettata. Non ti hanno visto, ma qualcuno si è girato con un brivido lungo la schiena. **6--:** Sei scoperto - o peggio, ciò che vedi nell'ombra ti vede.
+:::
+
+:::box[Leggere le Ombre (segue)]{type=info}
 A volte le ombre restituiscono lo sguardo.
 :::
 
 :::box[Colpo dall'Ombra]{type=info}
-**Quando attacchi un nemico completamente inconsapevole della tua
-presenza**:
-Infliggi danno automatico (nessun tiro per colpire) + 1d6 danni
-extra. L'ombra guida la tua mano con precisione chirurgica.
-**Poi tira +CUO per restare nascosto:**
-**10+:** Resti invisibile. Il nemico non sa cosa lo ha colpito. Puoi
-colpire ancora.
-**7--9:** Sei scoperto. Il nemico sa dove sei e reagisce.
-**6--:** Contrattacco immediato. Il nemico era più preparato di
-quanto pensassi, o qualcun altro ti ha visto.
+**Quando attacchi un nemico completamente inconsapevole della tua presenza**: Infliggi danno automatico (nessun tiro per colpire) + 1d6 danni extra. L'ombra guida la tua mano con precisione chirurgica. **Poi tira +CUO per restare nascosto:** **10+:** Resti invisibile. Il nemico non sa cosa lo ha colpito. Puoi colpire ancora. **7--9:** Sei scoperto. Il nemico sa dove sei e reagisce. **6--:** Contrattacco immediato.
+:::
+
+:::box[Colpo dall'Ombra (segue)]{type=info}
+Il nemico era più preparato di quanto pensassi, o qualcun altro ti ha visto.
 :::
 
 Archetipi di Personaggio
@@ -375,41 +342,27 @@ l'invisibilità più facile, e i poteri Umbra hanno un'intensità narrativa
 maggiore.
 
 :::box[Esempio: Una Notte da Umbra]{type=info}
-Via Padova, ore 3:15. Leila Ferrara cammina nell'ombra dei portici.
-Non cammina - scivola. È un'ombra tra le ombre, una macchia di buio
-che si muove controcorrente.
-Il bersaglio è l'uomo al terzo tavolo del bar ancora aperto. Non è un
-uomo, ovviamente. È un vampiro di mezza età che sta reclutando adepti
-per un culto che vuole aprire una Porta Dimensionale sotto il Duomo.
-Leila lo osserva da venti minuti. Ha già memorizzato i volti dei tre
-ragazzi con cui sta parlando. Domani li rintraccerà. Li salverà, se
-può.
-Ma prima, il vampiro. Il Colpo dall'Ombra è pulito, veloce - un
-paletto d'argento materializzato dall'oscurità stessa, piantato tra
-le vertebre cervicali con la precisione di un chirurgo. Il vampiro
-non grida. Si dissolve in cenere prima che il suo drink tocchi il
-tavolo.
-Leila se ne va prima che i tre ragazzi capiscano cosa è successo.
-Domani si sveglieranno con un ricordo confuso di una serata strana.
-Il Velo farà il suo lavoro. Leila farà il suo.
-L'Anello al dito è freddo. Più freddo del solito. Corruzione: 4.
+Via Padova, ore 3:15. Leila Ferrara cammina nell'ombra dei portici. Non cammina - scivola. È un'ombra tra le ombre, una macchia di buio che si muove controcorrente. Il bersaglio è l'uomo al terzo tavolo del bar ancora aperto. Non è un uomo, ovviamente. È un vampiro di mezza età che sta reclutando adepti per un culto che vuole aprire una Porta Dimensionale sotto il Duomo.
+:::
+
+:::box[Esempio: Una Notte da Umbra (segue)]{type=info}
+Leila lo osserva da venti minuti. Ha già memorizzato i volti dei tre ragazzi con cui sta parlando. Domani li rintraccerà. Li salverà, se può. Ma prima, il vampiro. Il Colpo dall'Ombra è pulito, veloce - un paletto d'argento materializzato dall'oscurità stessa, piantato tra le vertebre cervicali con la precisione di un chirurgo. Il vampiro non grida.
+:::
+
+:::box[Esempio: Una Notte da Umbra (segue)]{type=info}
+Si dissolve in cenere prima che il suo drink tocchi il tavolo. Leila se ne va prima che i tre ragazzi capiscano cosa è successo. Domani si sveglieranno con un ricordo confuso di una serata strana. Il Velo farà il suo lavoro. Leila farà il suo. L'Anello al dito è freddo. Più freddo del solito. Corruzione: 4.
 :::
 
 :::box[Nota per il Custode: Giocare Umbra]{type=info}
-I giocatori Umbra vogliono sentirsi furbi, letali, un passo avanti a
-tutti. Daglielo: scene di infiltrazione, missioni dove l'astuzia
-conta più della forza, momenti dove il loro pragmatismo salva la
-situazione quando l'idealismo degli altri fallirebbe. Ma poi metti il
-prezzo davanti ai loro occhi.
-La Corruzione è un arco narrativo, non una punizione. A Corruzione 3,
-descrivi gli occhi neri come un dettaglio inquietante. A 5,
-interpreta i Sussurri come una voce seduttiva che offre soluzioni
-facili («Potresti semplicemente ucciderlo nel sonno. Nessuno
-saprebbe. Nessuno soffrirebbe.»). A 7, l'ombra indipendente è una
-scena horror: il PG si gira e vede la propria ombra che sorride. La
-Corruzione racconta la storia di un eroe che rischia di diventare
-mostro - e la tensione sta nel chiedersi se riuscirà a tornare
-indietro.
+I giocatori Umbra vogliono sentirsi furbi, letali, un passo avanti a tutti. Daglielo: scene di infiltrazione, missioni dove l'astuzia conta più della forza, momenti dove il loro pragmatismo salva la situazione quando l'idealismo degli altri fallirebbe. Ma poi metti il prezzo davanti ai loro occhi. La Corruzione è un arco narrativo, non una punizione.
+:::
+
+:::box[Nota per il Custode: Giocare Umbra (segue)]{type=info}
+A Corruzione 3, descrivi gli occhi neri come un dettaglio inquietante. A 5, interpreta i Sussurri come una voce seduttiva che offre soluzioni facili («Potresti semplicemente ucciderlo nel sonno. Nessuno saprebbe. Nessuno soffrirebbe.»). A 7, l'ombra indipendente è una scena horror: il PG si gira e vede la propria ombra che sorride.
+:::
+
+:::box[Nota per il Custode: Giocare Umbra (segue)]{type=info}
+La Corruzione racconta la storia di un eroe che rischia di diventare mostro - e la tensione sta nel chiedersi se riuscirà a tornare indietro.
 :::
 
 ## 🌳 IFE 🌳
@@ -492,28 +445,19 @@ di cemento.
 Mosse Esclusive
 
 :::box[Sentire la Vita]{type=info}
-**Quando tocchi una creatura vivente o una pianta**, tira +FAT.
-**10+:** Senti il suo stato completo: salute fisica, stato emotivo, e
-intenzioni (se è una creatura senziente). Un albero ti racconta se
-qualcuno è passato di qui recentemente. Un cane ti mostra il volto
-dell'ultima persona che lo ha toccato. Una persona ti rivela
-inconsapevolmente se ha paura, se mente, se sta soffrendo.
-**7--9:** Percepisci qualcosa di vago: un'emozione dominante, una
-sensazione di salute o malattia, una direzione approssimativa. Utile
-ma incompleto.
-**6--:** Il flusso di vita ti travolge. Senti troppo, troppo forte.
-Prendi +1 Stress e il Custode descrive un'emozione o un'immagine che
-non avresti voluto percepire.
+**Quando tocchi una creatura vivente o una pianta**, tira +FAT. **10+:** Senti il suo stato completo: salute fisica, stato emotivo, e intenzioni (se è una creatura senziente). Un albero ti racconta se qualcuno è passato di qui recentemente. Un cane ti mostra il volto dell'ultima persona che lo ha toccato. Una persona ti rivela inconsapevolmente se ha paura, se mente, se sta soffrendo.
+:::
+
+:::box[Sentire la Vita (segue)]{type=info}
+**7--9:** Percepisci qualcosa di vago: un'emozione dominante, una sensazione di salute o malattia, una direzione approssimativa. Utile ma incompleto. **6--:** Il flusso di vita ti travolge. Senti troppo, troppo forte. Prendi +1 Stress e il Custode descrive un'emozione o un'immagine che non avresti voluto percepire.
 :::
 
 :::box[Simbiosi]{type=info}
-**Quando guarisci un alleato con i tuoi poteri**:
-Per ogni 3 PF che guarisci, guadagni 1 PF tu stesso. La vita che doni
-ritorna, in parte, a te. Questo non elimina il costo in Stress della
-guarigione, ma mitiga l'usura fisica e rappresenta la filosofia Ife:
-dare non è mai a senso unico nel ciclo della natura.
-*Nota:* Questa mossa è passiva e automatica. Non richiede un tiro. Si
-attiva ogni volta che usi un potere di guarigione su un alleato.
+**Quando guarisci un alleato con i tuoi poteri**: Per ogni 3 PF che guarisci, guadagni 1 PF tu stesso. La vita che doni ritorna, in parte, a te. Questo non elimina il costo in Stress della guarigione, ma mitiga l'usura fisica e rappresenta la filosofia Ife: dare non è mai a senso unico nel ciclo della natura. *Nota:* Questa mossa è passiva e automatica. Non richiede un tiro.
+:::
+
+:::box[Simbiosi (segue)]{type=info}
+Si attiva ogni volta che usi un potere di guarigione su un alleato.
 :::
 
 Archetipi di Personaggio
@@ -570,43 +514,31 @@ maggiore. La quercia quattrocentenaria nel Parco Sempione è il cuore
 pulsante di questa linea, protetta da un Custode Ife dal 1987.
 
 :::box[Esempio: Una Notte da Ife]{type=info}
-Parco Sempione, ore 1:30. Il professor Asante è seduto sotto la
-grande quercia, con le mani premute contro la corteccia. L'albero gli
-sta parlando.
-Non con parole - gli alberi non parlano con parole. Con immagini,
-sensazioni, ricordi compressi in secoli. La quercia ha visto molto.
-Stanotte ha visto qualcosa che la spaventa: creature che scavano
-sotto le sue radici. Creature che non dovrebbero essere lì.
-Asante si alza. L'Anello verde al dito pulsa forte, quasi
-dolorosamente. Si inginocchia e preme le mani sul terreno. Sente la
-Vita sotto di sé - il formicolare di milioni di organismi nel
-suolo, le radici che si estendono come una rete nervosa, i lombrichi
-e i coleotteri e i funghi. E più in basso, qualcosa che non è vivo
-nel modo in cui dovrebbe esserlo.
-Le radici della quercia si muovono. Non velocemente - la natura non
-affretta - ma inesorabilmente. Si avvolgono attorno a ciò che trova
-sotto terra. Lo stringono. Lo trascinano in superficie.
-È un Homunculus - un costrutto alchemico, un'imitazione grottesca
-della vita. Asante lo guarda con tristezza. Qualcuno ha cercato di
-creare vita senza rispettarne le regole. «Mi dispiace», sussurra, e i
-rampicanti lo avvolgono completamente.
+Parco Sempione, ore 1:30. Il professor Asante è seduto sotto la grande quercia, con le mani premute contro la corteccia. L'albero gli sta parlando. Non con parole - gli alberi non parlano con parole. Con immagini, sensazioni, ricordi compressi in secoli. La quercia ha visto molto. Stanotte ha visto qualcosa che la spaventa: creature che scavano sotto le sue radici.
+:::
+
+:::box[Esempio: Una Notte da Ife (segue)]{type=info}
+Creature che non dovrebbero essere lì. Asante si alza. L'Anello verde al dito pulsa forte, quasi dolorosamente. Si inginocchia e preme le mani sul terreno. Sente la Vita sotto di sé - il formicolare di milioni di organismi nel suolo, le radici che si estendono come una rete nervosa, i lombrichi e i coleotteri e i funghi. E più in basso, qualcosa che non è vivo nel modo in cui dovrebbe esserlo.
+:::
+
+:::box[Esempio: Una Notte da Ife (segue)]{type=info}
+Le radici della quercia si muovono. Non velocemente - la natura non affretta - ma inesorabilmente. Si avvolgono attorno a ciò che trova sotto terra. Lo stringono. Lo trascinano in superficie. È un Homunculus - un costrutto alchemico, un'imitazione grottesca della vita. Asante lo guarda con tristezza. Qualcuno ha cercato di creare vita senza rispettarne le regole.
+:::
+
+:::box[Esempio: Una Notte da Ife (segue)]{type=info}
+«Mi dispiace», sussurra, e i rampicanti lo avvolgono completamente.
 :::
 
 :::box[Nota per il Custode: Giocare Ife]{type=info}
-I giocatori Ife vogliono sentirsi connessi - alla natura, agli
-alleati, alla città. Daglielo: scene dove il loro potere di
-guarigione salva una vita in extremis, momenti dove la natura
-risponde al loro richiamo in modi spettacolari, situazioni dove la
-loro empatia rivela informazioni che nessun altro potrebbe ottenere.
-Ma poi metti in gioco la tensione tra compassione e necessità.
-La sfida narrativa degli Ife è il dilemma tra proteggere la vita e
-proteggere gli innocenti quando le due cose sono in conflitto. Il
-demone ha una famiglia? La Creatura d'Ombra soffre? Il vampiro non ha
-chiesto di essere trasformato? Un buon Custode usa queste domande per
-mettere l'Ife in crisi senza mai fornire risposte facili.
-Simbiosi è una mossa sottile ma potente: ogni volta che il PG
-guarisce qualcuno, descrivi il flusso di vita che ritorna. Fai
-sentire la bellezza del ciclo.
+I giocatori Ife vogliono sentirsi connessi - alla natura, agli alleati, alla città. Daglielo: scene dove il loro potere di guarigione salva una vita in extremis, momenti dove la natura risponde al loro richiamo in modi spettacolari, situazioni dove la loro empatia rivela informazioni che nessun altro potrebbe ottenere. Ma poi metti in gioco la tensione tra compassione e necessità.
+:::
+
+:::box[Nota per il Custode: Giocare Ife (segue)]{type=info}
+La sfida narrativa degli Ife è il dilemma tra proteggere la vita e proteggere gli innocenti quando le due cose sono in conflitto. Il demone ha una famiglia? La Creatura d'Ombra soffre? Il vampiro non ha chiesto di essere trasformato? Un buon Custode usa queste domande per mettere l'Ife in crisi senza mai fornire risposte facili. Simbiosi è una mossa sottile ma potente:
+:::
+
+:::box[Nota per il Custode: Giocare Ife (segue)]{type=info}
+ogni volta che il PG guarisce qualcuno, descrivi il flusso di vita che ritorna. Fai sentire la bellezza del ciclo.
 :::
 
 ## 💀 MICTLAN 💀
@@ -669,7 +601,7 @@ nemici per dare agli alleati.
 fisicamente il Piano degli Spiriti. È il potere più pericoloso: il Piano
 degli Spiriti non è fatto per i vivi, e ogni minuto passato lì erode la
 connessione con il mondo dei vivi. Ma le informazioni e gli artefatti
-che si possono trovare nel regno dei morti sono invaluabili.
+che si possono trovare nel regno dei morti sono inestimabili.
 
 ## Costo del Potere: Punti Ferita
 
@@ -693,52 +625,29 @@ le altre Casate.
 | L5 | 6 PF | (3 PF + 2 Stress) | Poteri devastanti. Rischio reale di morte. |
 
 :::box[Sangue Tenace (Potere Passivo L1, Gratuito)]{type=info}
-**Quando usi un potere e il costo in PF ti porterebbe sotto il 40%
-dei PF massimi**, puoi scegliere di convertire metà del costo PF
-(arrotondato per difetto) in +2 Stress.
-Questo crea un punto decisionale interessante ad ogni uso: paghi in
-sangue o in stanchezza? Il corpo o la mente? Sangue Tenace è la
-valvola di sicurezza che permette ai Mictlan di essere audaci senza
-essere suicidi.
-*Esempio:* Elena, Mictlan con 29 PF massimi (soglia 40% ≈ 12 PF), è a
-14 PF e vuole usare un potere L3 (costo 3 PF). Scendrebbe a 11, sotto
-la soglia. Può attivare Sangue Tenace: paga 2 PF (invece di 3) e
-prende +2 Stress. Scende a 12 PF invece di 11, restando alla soglia
-invece di scendere sotto.
+**Quando usi un potere e il costo in PF ti porterebbe sotto il 40% dei PF massimi**, puoi scegliere di convertire metà del costo PF (arrotondato per difetto) in +2 Stress. Questo crea un punto decisionale interessante ad ogni uso: paghi in sangue o in stanchezza? Il corpo o la mente? Sangue Tenace è la valvola di sicurezza che permette ai Mictlan di essere audaci senza essere suicidi.
+:::
+
+:::box[Sangue Tenace (Potere Passivo L1, Gratuito) (segue)]{type=info}
+*Esempio:* Elena, Mictlan con 29 PF massimi (soglia 40% ≈ 12 PF), è a 14 PF e vuole usare un potere L3 (costo 3 PF). Scendrebbe a 11, sotto la soglia. Può attivare Sangue Tenace: paga 2 PF (invece di 3) e prende +2 Stress. Scende a 12 PF invece di 11, restando alla soglia invece di scendere sotto.
 :::
 
 Mosse Esclusive
 
 :::box[Interrogare i Morti]{type=info}
-**Quando tocchi un cadavere e cerchi di parlare con il suo spirito**,
-tira +FAT.
-**10+:** Lo spirito risponde a 3 domande sinceramente. I morti non
-hanno più nulla da nascondere - la verità scorre da loro come acqua
-da una fonte.
-**7--9:** Lo spirito risponde a 1 domanda, ma vuole qualcosa in
-cambio. Un favore, una promessa, la chiusura di un affare lasciato in
-sospeso. I morti hanno ancora desideri.
-**6--:** Lo spirito è ostile, confuso, o non è chi pensavi. Forse
-mente (i morti più vecchi imparano a farlo). Forse urla - e il suo
-urlo attira qualcosa che non avresti voluto incontrare.
-*Nota:* Questa mossa non costa PF. È un talento naturale del Mictlan,
-non un potere canalizzato. Ma richiede un cadavere ragionevolmente
-intatto e recente (meno di una settimana).
+**Quando tocchi un cadavere e cerchi di parlare con il suo spirito**, tira +FAT. **10+:** Lo spirito risponde a 3 domande sinceramente. I morti non hanno più nulla da nascondere - la verità scorre da loro come acqua da una fonte. **7--9:** Lo spirito risponde a 1 domanda, ma vuole qualcosa in cambio. Un favore, una promessa, la chiusura di un affare lasciato in sospeso. I morti hanno ancora desideri.
+:::
+
+:::box[Interrogare i Morti (segue)]{type=info}
+**6--:** Lo spirito è ostile, confuso, o non è chi pensavi. Forse mente (i morti più vecchi imparano a farlo). Forse urla - e il suo urlo attira qualcosa che non avresti voluto incontrare. *Nota:* Questa mossa non costa PF. È un talento naturale del Mictlan, non un potere canalizzato. Ma richiede un cadavere ragionevolmente intatto e recente (meno di una settimana).
 :::
 
 :::box[Presagio]{type=info}
-**Una volta per sessione**, puoi chiedere al Custode: «Qualcuno qui
-morirà presto?»
-Il Custode risponde onestamente. Sente il brivido della morte che si
-avvicina - non la certezza, ma la probabilità. L'Anello diventa
-pesantissimo per un istante.
-**Se la risposta è sì:** Ottieni +2 forward per ogni azione volta a
-proteggere quella persona. L'Anello guida la tua mano con l'urgenza
-di chi ha visto il futuro e vuole cambiarlo.
-*Nota:* Il Custode non è obbligato a rivelare chi morirà - solo se
-qualcuno è in pericolo mortale. Il Presagio non è infallibile: indica
-il destino più probabile, non quello certo. Le azioni dei PG possono
-cambiarlo.
+**Una volta per sessione**, puoi chiedere al Custode: «Qualcuno qui morirà presto?» Il Custode risponde onestamente. Sente il brivido della morte che si avvicina - non la certezza, ma la probabilità. L'Anello diventa pesantissimo per un istante. **Se la risposta è sì:** Ottieni +2 forward per ogni azione volta a proteggere quella persona.
+:::
+
+:::box[Presagio (segue)]{type=info}
+L'Anello guida la tua mano con l'urgenza di chi ha visto il futuro e vuole cambiarlo. *Nota:* Il Custode non è obbligato a rivelare chi morirà - solo se qualcuno è in pericolo mortale. Il Presagio non è infallibile: indica il destino più probabile, non quello certo. Le azioni dei PG possono cambiarlo.
 :::
 
 Archetipi di Personaggio
@@ -798,40 +707,27 @@ hanno un'efficacia narrativa maggiore. Dopo la mezzanotte, le anime
 inquiete del Monumentale sussurrano a chi sa ascoltare.
 
 :::box[Esempio: Una Notte da Mictlan]{type=info}
-Cimitero Monumentale, ore 00:47. Elena Marchetti siede su una
-panchina di marmo tra le tombe, l'Anello di ossidiana al dito che
-pulsa con il peso di mille ricordi che non sono i suoi.
-Lo spirito è seduto accanto a lei. Un uomo anziano, traslucido, con
-le mani in grembo e lo sguardo perso nel vuoto. È morto tre giorni fa
-- infarto, dicono. Ma lo spirito dice altro.
-«Non è stato un infarto», sussurra. La sua voce è come il fruscio di
-foglie secche. «Mi hanno avvelenato. L'uomo con la cravatta rossa.
-Quello che veniva a trovarmi ogni giovedì. Mi portava il caffè.»
-Elena annota. Non giudica. Non piange. Lo farà dopo, a casa, quando
-sarà sola. Per ora è una professionista del confine tra i mondi, e un
-vecchio ha bisogno che qualcuno ascolti la sua ultima testimonianza.
-«Grazie», dice lo spirito quando ha finito. «Adesso posso andare.»
-Elena gli porge la mano. Non la prende - non può. Ma sorride. E si
-dissolve nella nebbia del Monumentale, che stanotte è più densa del
-solito. Elena resta sola. L'Anello pesa di più. Sempre di più.
+Cimitero Monumentale, ore 00:47. Elena Marchetti siede su una panchina di marmo tra le tombe, l'Anello di ossidiana al dito che pulsa con il peso di mille ricordi che non sono i suoi. Lo spirito è seduto accanto a lei. Un uomo anziano, traslucido, con le mani in grembo e lo sguardo perso nel vuoto. È morto tre giorni fa - infarto, dicono. Ma lo spirito dice altro.
+:::
+
+:::box[Esempio: Una Notte da Mictlan (segue)]{type=info}
+«Non è stato un infarto», sussurra. La sua voce è come il fruscio di foglie secche. «Mi hanno avvelenato. L'uomo con la cravatta rossa. Quello che veniva a trovarmi ogni giovedì. Mi portava il caffè.» Elena annota. Non giudica. Non piange. Lo farà dopo, a casa, quando sarà sola.
+:::
+
+:::box[Esempio: Una Notte da Mictlan (segue)]{type=info}
+Per ora è una professionista del confine tra i mondi, e un vecchio ha bisogno che qualcuno ascolti la sua ultima testimonianza. «Grazie», dice lo spirito quando ha finito. «Adesso posso andare.» Elena gli porge la mano. Non la prende - non può. Ma sorride. E si dissolve nella nebbia del Monumentale, che stanotte è più densa del solito. Elena resta sola. L'Anello pesa di più. Sempre di più.
 :::
 
 :::box[Nota per il Custode: Giocare Mictlan]{type=info}
-I giocatori Mictlan vogliono sentirsi potenti e saggi, con la
-gravitas di chi ha visto l'altra parte. Daglielo: scene con gli
-spiriti che sono toccanti e informative, momenti dove la necromanzia
-è la soluzione più elegante, situazioni dove la loro accettazione
-della morte li rende i più coraggiosi del gruppo.
-Ma il costo in PF è reale. Descrivi fisicamente gli effetti: il
-pallore dopo un potere L3, il sangue dal naso dopo un L4, la
-debolezza nelle gambe. Un Mictlan a metà PF è un personaggio che ha
-letteralmente dato metà della sua vita per la missione - fai
-sentire quel peso.
-Sangue Tenace crea momenti di decisione meravigliosi. Quando il PG
-deve scegliere tra sangue e Stress, descrivi il dilemma: «Senti il
-potere che tira dalla tua carne. Puoi lasciarlo fare, o puoi
-resistere e pagare in stanchezza. Cosa scegli?» Ogni scelta racconta
-qualcosa del personaggio.
+I giocatori Mictlan vogliono sentirsi potenti e saggi, con la gravitas di chi ha visto l'altra parte. Daglielo: scene con gli spiriti che sono toccanti e informative, momenti dove la necromanzia è la soluzione più elegante, situazioni dove la loro accettazione della morte li rende i più coraggiosi del gruppo. Ma il costo in PF è reale. Descrivi fisicamente gli effetti:
+:::
+
+:::box[Nota per il Custode: Giocare Mictlan (segue)]{type=info}
+il pallore dopo un potere L3, il sangue dal naso dopo un L4, la debolezza nelle gambe. Un Mictlan a metà PF è un personaggio che ha letteralmente dato metà della sua vita per la missione - fai sentire quel peso. Sangue Tenace crea momenti di decisione meravigliosi. Quando il PG deve scegliere tra sangue e Stress, descrivi il dilemma: «Senti il potere che tira dalla tua carne.
+:::
+
+:::box[Nota per il Custode: Giocare Mictlan (segue)]{type=info}
+Puoi lasciarlo fare, o puoi resistere e pagare in stanchezza. Cosa scegli?» Ogni scelta racconta qualcosa del personaggio.
 :::
 
 Relazioni tra le Casate
@@ -851,29 +747,19 @@ gioco dovrebbe conoscere:
 | Ife | Mictlan | Vita e Morte: opposti che si completano. La tensione è filosofica, non personale. Gli Ife curano, i Mictlan accompagnano alla fine. Insieme, coprono l'intero ciclo dell'esistenza. |
 
 :::box[Nota per il Custode: Le Tensioni tra Casate]{type=info}
-Le tensioni tra Casate sono carburante narrativo, non ostacoli. Usale
-per creare scene memorabili: il momento in cui l'Avalon e l'Umbra
-discutono su come gestire un prigioniero («Lo interroghiamo con
-rispetto» vs «Lo interroghiamo efficacemente»). Il momento in cui
-l'Ife esita a uccidere e il Mictlan lo fa al suo posto, creando
-tensione e gratitudine mescolate a disagio. Il momento in cui tutti e
-quattro devono mettere da parte le differenze perché la minaccia è
-più grande delle loro filosofie.
-Ma non trasformare mai le tensioni in conflitto distruttivo. I
-Custodi litigano, discutono, si irritano - ma alla fine combattono
-fianco a fianco. Sempre.
+Le tensioni tra Casate sono carburante narrativo, non ostacoli. Usale per creare scene memorabili: il momento in cui l'Avalon e l'Umbra discutono su come gestire un prigioniero («Lo interroghiamo con rispetto» vs «Lo interroghiamo efficacemente»). Il momento in cui l'Ife esita a uccidere e il Mictlan lo fa al suo posto, creando tensione e gratitudine mescolate a disagio.
+:::
+
+:::box[Nota per il Custode: Le Tensioni tra Casate (segue)]{type=info}
+Il momento in cui tutti e quattro devono mettere da parte le differenze perché la minaccia è più grande delle loro filosofie. Ma non trasformare mai le tensioni in conflitto distruttivo. I Custodi litigano, discutono, si irritano - ma alla fine combattono fianco a fianco. Sempre.
 :::
 
 :::box[Fine Capitolo 3 - Le Quattro Casate]{type=tip}
-Ora conosci in profondità le quattro Casate che definiscono
-l'identità di ogni Guardiano. Conosci le loro filosofie, i loro
-poteri, le loro mosse esclusive, i loro punti di forza e le loro
-debolezze. Sai come si relazionano tra loro e come le loro tensioni
-alimentano la narrativa del gioco.
-**Prossimo capitolo:** Capitolo 4 - Creazione del Personaggio.
-Scoprirai come dare vita al tuo Guardiano passo dopo passo: dalla
-scelta della Casata alla definizione dei Legami, dalle
-caratteristiche alle prime esperienze di gioco.
+Ora conosci in profondità le quattro Casate che definiscono l'identità di ogni Guardiano. Conosci le loro filosofie, i loro poteri, le loro mosse esclusive, i loro punti di forza e le loro debolezze. Sai come si relazionano tra loro e come le loro tensioni alimentano la narrativa del gioco. **Prossimo capitolo:** Capitolo 4 - Creazione del Personaggio.
+:::
+
+:::box[Fine Capitolo 3 - Le Quattro Casate (segue)]{type=tip}
+Scoprirai come dare vita al tuo Guardiano passo dopo passo: dalla scelta della Casata alla definizione dei Legami, dalle caratteristiche alle prime esperienze di gioco.
 :::
 
 **In Questo Capitolo:** Creerai il tuo Guardiano passo dopo passo: dal

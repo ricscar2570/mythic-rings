@@ -39,7 +39,9 @@ Il Custode non chiama mai una mossa per nome. I giocatori descrivono azioni, e l
 - +1d6 danno aggiuntivo (colpo devastante)
 - Crei un'apertura: +1 forward al prossimo tiro tuo o di un alleato
 - Eviti completamente il contrattacco nemico
+:::
 
+:::box[⚔️ Attaccare (segue)]{type=rule}
 **7-9** Colpisci, ma sei esposto. Infliggi danno, ma il Custode sceglie 1 conseguenza:
 - Subisci contrattacco (danno nemico)
 - Perdi posizione tattica
@@ -76,7 +78,9 @@ Il Custode non chiama mai una mossa per nome. I giocatori descrivono azioni, e l
 - Subisci metà danno (senza contrattacco)
 
 **6-** Subisci danno pieno + il Custode fa una mossa dura.
+:::
 
+:::box[🛡️ Difendere (segue)]{type=rule}
 *Proteggere Alleato: Puoi Difendere un alleato Vicino, subendo le conseguenze al suo posto. Devi essere a massimo 3-5m.*
 :::
 
@@ -92,7 +96,9 @@ Il Custode non chiama mai una mossa per nome. I giocatori descrivono azioni, e l
 - +MEN: concentrazione, lucidità sotto pressione
 - +CAR: presenza, intimidazione, mantenere la calma
 - +FAT: intuizione, resistenza magica
+:::
 
+:::box[🎲 Sfidare Pericolo (segue)]{type=rule}
 **10+** Fai ciò che volevi, nessuna complicazione.
 
 **7-9** Riesci, ma il Custode offre una scelta difficile o complicazione:
@@ -123,7 +129,9 @@ Il Custode non chiama mai una mossa per nome. I giocatori descrivono azioni, e l
 **7-9** Fai 1 domanda dalla lista. Ottieni +1 forward.
 
 **6-** Perdi tempo, trai una conclusione errata, o attiri attenzione indesiderata.
+:::
 
+:::box[🔍 Leggere Situazione (segue)]{type=rule}
 **Lista Domande:**
 - Qual è la minaccia più immediata qui?
 - Cosa è successo qui recentemente?
@@ -141,7 +149,9 @@ Il Custode non chiama mai una mossa per nome. I giocatori descrivono azioni, e l
 **Tiro:** +CAR (+1 per livello Legame se il PNG è un tuo Legame)
 
 **10+** Il PNG fa ciò che chiedi o crede ciò che dici, a meno che sia contrario al suo istinto di sopravvivenza.
+:::
 
+:::box[💬 Persuadere / Raggirare (segue)]{type=rule}
 **7-9** Il PNG obbedisce, ma il Custode sceglie 1:
 - Richiede una prova concreta prima di agire
 - Richiede pagamento o un favore in cambio
@@ -162,7 +172,9 @@ Il Custode non chiama mai una mossa per nome. I giocatori descrivono azioni, e l
 **10+** Se aiuti: alleato ottiene +2 al prossimo tiro. Se ostacoli: nemico subisce -2 al prossimo tiro.
 
 **7-9** Se aiuti: +1 all'alleato MA ti esponi a pericolo. Se ostacoli: -1 al nemico MA ti esponi a contrattacco.
+:::
 
+:::box[🤝 Aiutare / Ostacolare (segue)]{type=rule}
 **6-** Nessun bonus o malus E ti metti in una brutta situazione. Il Custode fa una mossa.
 
 *Timing: Dichiari aiuto/ostacolo PRIMA che il bersaglio tiri. Non puoi dichiararlo retroattivamente.*
@@ -182,7 +194,9 @@ Il Custode non chiama mai una mossa per nome. I giocatori descrivono azioni, e l
 - Trovi 2 indizi MA uno è fuorviante o incompleto
 
 **6-** Nessun indizio utile, o trovi informazione falsa, o attiri attenzione indesiderata.
+:::
 
+:::box[🕵️ Investigare (segue)]{type=rule}
 *Differenza da Leggere Situazione: Investigare richiede tempo e ricerca attiva. Leggere Situazione è osservazione immediata.*
 :::
 
@@ -194,20 +208,26 @@ Il Custode non chiama mai una mossa per nome. I giocatori descrivono azioni, e l
 **Tiro:** +FAT (Umbra, Ife, Mictlan) o +CAR (solo Avalon)
 
 **10+** Il potere funziona esattamente come descritto. Paghi il costo normale.
+:::
 
+:::box[✨ Usare Potere (segue)]{type=rule}
 **7-9** Il potere funziona, ma il Custode sceglie 1:
 - Costo raddoppiato (×2 Stress/Corruzione/PF)
 - Effetto ridotto (durata dimezzata o potenza minore)
 - Attiri attenzione indesiderata (nemici percepiscono la magia, il Velo vacilla)
 
 **6-** Il potere fallisce completamente MA paghi il costo comunque. Il Custode fa una mossa (spesso: la magia va fuori controllo o produce l'effetto opposto).
+:::
 
+:::box[✨ Usare Potere (segue)]{type=rule}
 *Regola v3.2: a Stress 10 e ad alta Corruzione i poteri non sono bloccati ma diventano progressivamente più costosi e rischiosi (vedi Cap. 5, Stress e Corruzione). I poteri L1 gratuiti Umbra e l'Ultimo Respiro restano sempre disponibili.*
 :::
 
 :::box[Armi Magiche in Mischia]{type=rule}
 Se un potere dice "(conta come Attacco)", l'attivazione È l'attacco: un solo tiro di Usare Potere risolve anche il danno.
+:::
 
+:::box[Armi Magiche in Mischia (segue)]{type=rule}
 Altrimenti, un'arma magica evocata si gestisce in due tempi: **evocarla** è Usare Potere (la fai apparire, 1 Azione Principale); **colpirci** nei round successivi è Attaccare, con la caratteristica indicata dall'arma (es. Lama Radiante: +FOR). Evocazione e primo colpo stanno nella stessa Azione solo se il potere lo dichiara esplicitamente.
 :::
 
@@ -223,16 +243,22 @@ Altrimenti, un'arma magica evocata si gestisce in due tempi: **evocarla** è Usa
 - +1 se hai un Legame L3+ con qualcuno presente
 - +1 se hai compiuto un atto eroico in questa sessione
 - +1 se la tua Casata ha una rilevanza narrativa in questo momento
+:::
 
+:::box[💀 Ultimo Respiro (segue)]{type=danger}
 **12+** Miracolo. Torni a 1 PF, puoi agire questo round. Narrativa: volontà indomabile, destino, intervento divino.
+:::
 
+:::box[💀 Ultimo Respiro (segue)]{type=danger}
 **10-11** La Morte ti offre un patto. Il Custode presenta 2-3 opzioni, scegli 1:
 - Sopravvivi (1 PF) MA perdi qualcosa permanentemente (arto, senso, ricordi, Legame)
 - Sopravvivi MA devi un compito alla Morte (favore futuro, portare un'anima sostitutiva)
 - Sopravvivi MA debilitato (1 PF, -2 ongoing per 24 ore)
 
 **7-9** Sopravvivi (1 PF) MA il Custode sceglie 1 conseguenza grave senza offrirti scelta.
+:::
 
+:::box[💀 Ultimo Respiro (segue)]{type=danger}
 **6-** Lo spirito lascia il corpo. Il PG è morto. Crea un nuovo personaggio. Eccezione: alleati possono tentare di stabilizzarti se agiscono immediatamente (Riprendersi su di te come azione).
 :::
 
@@ -248,7 +274,9 @@ Altrimenti, un'arma magica evocata si gestisce in due tempi: **evocarla** è Usa
 **7-9** Recuperi 1d4 PF, MA il tempo o la situazione peggiora (nemici si avvicinano, condizioni degradano).
 
 **6-** Nessun recupero. La situazione precipita (attacco a sorpresa, la ferita si infetta: -1 ongoing).
+:::
 
+:::box[🩹 Riprendersi (segue)]{type=rule}
 *Requisiti: Almeno 10 minuti ininterrotti in location relativamente sicura. Frequenza: Max 1 volta per scena/location.*
 :::
 
@@ -264,7 +292,9 @@ Altrimenti, un'arma magica evocata si gestisce in due tempi: **evocarla** è Usa
 - +FAT: effetti magici puri (maledizioni, corruzione, drain)
 
 **10+** Scuoti l'effetto completamente. Sei immune per il resto della scena.
+:::
 
+:::box[🔮 Resistere (segue)]{type=rule}
 **7-9** Scegli 1:
 - Resisti, ma subisci 1d6 danno da sforzo (fisico o psichico)
 - L'effetto ti colpisce in forma ridotta (durata dimezzata, potenza dimezzata)
@@ -280,7 +310,9 @@ Altrimenti, un'arma magica evocata si gestisce in due tempi: **evocarla** è Usa
 **Costo:** 1 Punto Fato (nessun tiro richiesto)
 
 **Effetto:** Ritira TUTTI i dadi, accetta il nuovo risultato (anche se peggiore).
+:::
 
+:::box[🎰 Forzare Fortuna (segue)]{type=warn}
 **Punti Fato:**
 - Inizi ogni sessione con 1. Massimo 3. Non si conservano tra sessioni.
 - **Guadagnare Punti Fato in gioco:** Accetta una complicazione narrativa quando il Custode la offre, oppure compi un atto veramente eroico (a discrezione del Custode).

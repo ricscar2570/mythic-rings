@@ -23,7 +23,9 @@ I poteri **L1 sono sempre gratuiti** (nessun costo Corruzione). Da L2 in su il c
 - **Corruzione 6:** I poteri L3+ costano +1 Corruzione aggiuntiva.
 - **Corruzione 7:** I poteri L2+ costano +1 Corruzione aggiuntiva. I poteri L1 restano al costo normale.
 - **Corruzione 8, Trasformazione:** Automatica e immediata. Il personaggio è perduto.
+:::
 
+:::box[Regola v3.2: Corruzione Umbra (segue)]{type=danger}
 *L'Umbra non viene bloccata, viene resa più costosa man mano che si avvicina al limite. Ogni uso è una scelta drammatica consapevole.*
 
 Per ridurre la Corruzione: vedi Capitolo 11 (Riposo Vigile, Rituale Purificazione, Atto di Redenzione).
@@ -37,7 +39,9 @@ Per ridurre la Corruzione: vedi Capitolo 11 (Riposo Vigile, Rituale Purificazion
 **Costo:** +1 Corruzione | **Range:** Sé | **Durata:** Concentrazione (max 10 min) | **Tiro:** Usare Potere +FAT
 
 Ti fondi letteralmente nelle ombre. Diventi **invisibile** finché resti in oscurità. Requisito: area buia/ombreggiata. Si interrompe se: attacchi, usi altro potere, entri in luce forte, subisci danno.
+:::
 
+:::box[Fondersi nelle Ombre (segue)]{type=casata_umbra}
 **10+** Fusione perfetta: invisibile finché scegli di fermarti, puoi muoverti alla velocità normale.
 **7-9** Fusione parziale: invisibile ma movimento dimezzato.
 **6-** Fusione instabile: semi-trasparente (-2 a colpirti), non invisibile.
@@ -51,7 +55,9 @@ Ti fondi letteralmente nelle ombre. Diventi **invisibile** finché resti in oscu
 **Costo:** +1 Corruzione | **Range:** Sé | **Durata:** Scena | **Tiro:** Usare Potere +FAT
 
 Le ombre solidificano in un pugnale/spada corta di oscurità pura. **Danno 1d8 + veleno ombra** (1d4/round per 3 round). Tag: Mischia, Silenziosa, Ignora Armatura Leggera (1-2). Peso zero. Bonus vs creature di luce: +1d6.
+:::
 
+:::box[Lama Ombra (segue)]{type=casata_umbra}
 **10+** Lama perfetta: danno pieno, veleno attivo.
 **7-9** Lama base: danno pieno, ma nessun veleno.
 **6-** Lama instabile: 1d4, nessun veleno, si dissolve dopo il colpo.
@@ -75,7 +81,9 @@ Occhi diventano completamente neri (inquietante). Vedi perfettamente al buio com
 **Costo:** +2 Corruzione | **Range:** Lontano (devi vedere destinazione) | **Durata:** Istantaneo | **Tiro:** Usare Potere +FAT
 
 Teletrasporto istantaneo attraverso il Piano Ombre. Dissolvi in un'ombra, riappari in un'altra. Requisito: punto di partenza E destinazione devono essere in ombra.
+:::
 
+:::box[Passo Ombra (segue)]{type=casata_umbra}
 **10+** Passo perfetto: teletrasporto silenzioso, puoi portare 1 alleato Vicino.
 **7-9** Passo base: teletrasporto riuscito, solo te.
 **6-** Passo sbagliato: arrivi ma in posizione sbagliata scelta dal Custode.
@@ -87,7 +95,9 @@ Teletrasporto istantaneo attraverso il Piano Ombre. Dissolvi in un'ombra, riappa
 **Costo:** +2 Corruzione | **Range:** Tocco | **Durata:** Istantaneo + Afflizione | **Tiro:** Usare Potere +FAT
 
 Infliggi veleno che attacca la mente. Tocchi il bersaglio, le ombre entrano sotto la pelle. **Effetti progressivi:** round 1: -1 a tutti i tiri; round 3: allucinazioni (-2); round 5: incapacitato. Cura: magia purificazione (Avalon L3+) o riposo completo (8 ore).
+:::
 
+:::box[Veleno Psichico (segue)]{type=casata_umbra}
 **10+** Veleno pieno: tutti gli effetti progressivi attivi.
 **7-9** Veleno parziale: solo -1 a tutti i tiri per tutta la scena.
 **6-** Veleno fallisce: bersaglio immune per questa scena.
@@ -101,7 +111,9 @@ Infliggi veleno che attacca la mente. Tocchi il bersaglio, le ombre entrano sott
 **Costo:** +2 Corruzione | **Range:** Vicino | **Durata:** Concentrazione (max 1 ora) | **Tiro:** Usare Potere +FAT
 
 Crei un'illusione visiva complessa: camuffa il tuo aspetto, crea un'immagine fantasma, nascondi un oggetto. Solo visuale (no suono, tatto, odore). Max dimensione: umanoide o oggetto 3m. Stabile: non richiede concentrazione attiva.
+:::
 
+:::box[Velo (segue)]{type=casata_umbra}
 **10+** Velo perfetto: illusione convincente, +3 a ingannare.
 **7-9** Velo parziale: illusione base, chi la osserva attentamente tira MEN vs 10 per notare difetti.
 **6-** Velo traballante: evidente ad occhio attento, -1 a ingannare.
@@ -115,7 +127,9 @@ Crei un'illusione visiva complessa: camuffa il tuo aspetto, crea un'immagine fan
 **Costo:** +3 Corruzione | **Range:** Vicino | **Durata:** Conversazione | **Tiro:** Usare Potere +FAT (VS Resistere +MEN bersaglio)
 
 Suggestione telepatica. Pianti un pensiero nella mente del bersaglio, lui crede sia idea propria. Non può forzare azioni suicide o contro la natura profonda del bersaglio. Più è "naturale", più è probabile il successo.
+:::
 
+:::box[Suggestione (segue)]{type=casata_umbra}
 **10+** Suggestione piena: il pensiero attecchisce, il bersaglio agisce come se fosse sua idea.
 **7-9** Suggestione parziale: agisce ma con esitazione, +1 tiro successivo per resistere.
 **6-** Suggestione fallisce: bersaglio non si accorge del tentativo ma resiste.
@@ -127,7 +141,9 @@ Suggestione telepatica. Pianti un pensiero nella mente del bersaglio, lui crede 
 **Costo:** +3 Corruzione | **Range:** Sé | **Durata:** 1 minuto | **Tiro:** Usare Potere +FAT
 
 Crei **3 duplicati illusori** fatti di ombre semi-solide. Si muovono, mimano i tuoi movimenti. Se colpiti: si dissolvono (1 colpo). Possono "attaccare" ma danno 0 (illusione). Nemici non sanno quale sei tu.
+:::
 
+:::box[Cloni (segue)]{type=casata_umbra}
 **10+** 3 cloni perfetti: nemici devono tirare MEN vs 12 per identificarti.
 **7-9** 3 cloni base: nemici -2 ai tiri per colpirti (1/3 possibilità di colpire clone).
 **6-** 1 solo clone traballante: evidente ma distrae comunque per 1 round.
@@ -141,8 +157,10 @@ Crei **3 duplicati illusori** fatti di ombre semi-solide. Si muovono, mimano i t
 **Costo:** +3 Corruzione | **Range:** Medio (cerchio raggio 3m) | **Durata:** Concentrazione (max 10 min) | **Tiro:** Usare Potere +FAT
 
 Crei una zona di **oscurità assoluta**. La luce non penetra. Creature senza visione notturna: -3 a tutti i tiri. Tu (Umbra) vedi perfettamente dentro. Ombre tangibili: movimento dimezzato per chi non è Umbra.
+:::
 
-**10+** Pozzo profondo: oscurità impenetrabile, movimento quartered per nemici.
+:::box[Pozzo (segue)]{type=casata_umbra}
+**10+** Pozzo profondo: oscurità impenetrabile, movimento ridotto a un quarto per i nemici.
 **7-9** Pozzo base: oscurità completa, penalità -3.
 **6-** Pozzo debole: penombra (-1), non vera oscurità.
 :::
@@ -155,7 +173,9 @@ Crei una zona di **oscurità assoluta**. La luce non penetra. Creature senza vis
 **Costo:** +4 Corruzione | **Range:** Vicino | **Durata:** Istantaneo | **Tiro:** Usare Potere +FAT (VS Resistere +MEN bersaglio)
 
 Attacco psichico devastante. Frantumi la mente del bersaglio con le ombre. Creature LS 8+: +2 a resistere. Creature senza intelligenza: immuni. Non funziona su bersagli già sotto controllo mentale.
+:::
 
+:::box[Frammentare (segue)]{type=casata_umbra}
 **10+** Mente distrutta: bersaglio incapacitato per 1d6 round + -2 MEN permanente.
 **7-9** Mente scossa: bersaglio confuso per 1d4 round (-2 a tutti i tiri).
 **6-** Attacco respinto: nessun effetto, Custode fa mossa.
@@ -167,7 +187,9 @@ Attacco psichico devastante. Frantumi la mente del bersaglio con le ombre. Creat
 **Costo:** +4 Corruzione | **Range:** Tocco (crei 2 portali) | **Durata:** 10 minuti | **Tiro:** Usare Potere +FAT
 
 Crei due portali di oscurità collegati (2m × 2m). Entri in uno, esci dall'altro istantaneamente. Chiunque può attraversarli. Distanza max 1 km. Devi aver visto la destinazione. Entrambi devono essere in ombra.
+:::
 
+:::box[Portale (segue)]{type=casata_umbra}
 **10+** Portali stabili: durano 10 min, puoi spostarli come azione gratuita 1 volta.
 **7-9** Portali instabili: durano 5 min, non spostabili.
 **6-** Un portale deviato: arrivi ma in posizione scelta dal Custode.
@@ -179,7 +201,9 @@ Crei due portali di oscurità collegati (2m × 2m). Entri in uno, esci dall'altr
 **Costo:** +4 Corruzione | **Range:** Sé | **Durata:** 10 minuti | **Tiro:** Usare Potere +FAT
 
 Il corpo diventa ombra vivente. Semi-intangibile, terrificante. Corpo = fumo nero denso, occhi viola, leviti 10cm. **Armatura +5** vs fisico. Passa pareti (crepe min 5 cm). Volo lento. Terrore vs PNG LS 4-. Attacchi ombra: 2d6 + drain 1d4 PF.
+:::
 
+:::box[Forma Ombra (segue)]{type=casata_umbra}
 **10+** Forma perfetta: tutti gli effetti, puoi parlare normalmente.
 **7-9** Forma instabile: tutti gli effetti ma non puoi usare oggetti fisici.
 **6-** Forma parziale: solo +2 Armatura e semi-trasparenza.
@@ -193,7 +217,9 @@ Il corpo diventa ombra vivente. Semi-intangibile, terrificante. Corpo = fumo ner
 **Costo:** +4 Corruzione | **Range:** Sé | **Durata:** 10 minuti | **Tiro:** Usare Potere +FAT
 
 Evochi **12 guerrieri ombra** obbedienti. Ciascuno: PF 15, Armatura 2, Attacco +6 (1d8 arma ombra), movimento veloce, immuni a paura/veleni/stanchezza. Intelligenza: comandi semplici (1-2 parole).
+:::
 
+:::box[Legione (segue)]{type=casata_umbra}
 **10+** Legione perfetta: 12 guerrieri, obbediscono a qualsiasi comando.
 **7-9** Legione ridotta: 8 guerrieri, comandi solo semplici.
 **6-** Legione caotica: 6 guerrieri ma attaccano il bersaglio più vicino (amici inclusi).
@@ -205,7 +231,9 @@ Evochi **12 guerrieri ombra** obbedienti. Ciascuno: PF 15, Armatura 2, Attacco +
 **Costo:** +5 Corruzione | **Range:** Sé | **Durata:** 10 minuti | **Tiro:** Usare Potere +FAT
 
 Trascendi la mortalità, diventi avatar del Piano Ombre. Corpo = oscurità pura (3m), occhi rossi, 6 tentacoli ombra, aura di buio totale. **+3 a TUTTE le caratteristiche.** Intangibilità (immune fisico). Volo. 6 attacchi ombra per turno (2d8 + drain). Aura terrore (LS 6-: fuga automatica).
+:::
 
+:::box[Avatar Ombra (segue)]{type=casata_umbra}
 **10+** Avatar completo: tutti gli effetti.
 **7-9** Avatar ridotto: +2 caratteristiche, 3 attacchi.
 **6-** Avatar instabile: funziona ma termina al primo 6-.
@@ -217,7 +245,9 @@ Trascendi la mortalità, diventi avatar del Piano Ombre. Corpo = oscurità pura 
 **Costo:** +5 Corruzione (TUTTO rimanente, min 5) | **Range:** Lontano (sfera raggio 10m) | **Durata:** Istantaneo | **Tiro:** Usare Potere +FAT
 
 Apri un portale verso il Piano Ombre. Vortice di oscurità che aspira tutto. Tutte le creature in area devono **Sfidare Pericolo +FOR**: 6- = risucchiate nel Piano Ombre. Dense ombre permanenti nell'area per 1 ora.
+:::
 
+:::box[Vuoto (segue)]{type=casata_umbra}
 **10+** Vuoto perfetto: vortice potente, +2 al tiro del Custode contro chi resiste.
 **7-9** Vuoto parziale: vortice base, solo danno 4d8 a chi resiste.
 **6-** Vuoto incontrollato: coinvolge anche te nel tiro.

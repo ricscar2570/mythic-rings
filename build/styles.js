@@ -10,13 +10,17 @@
 const PAGE = {
   WIDTH:  8395,   // 148mm
   HEIGHT: 11906,  // 210mm
+  // Margini SPECCHIATI per stampa rilegata (mirrorMargins).
+  // In modalita mirror: 'left' = interno (verso il dorso), 'right' = esterno.
+  // Interno piu largo per non affogare il testo nella piega.
   MARGIN: {
     top:    1020,  // 18mm
     bottom: 1020,  // 18mm
-    left:   980,   // 17mm — colonna sinistra
-    right:  980,   // 17mm — colonna destra
+    left:   1190,  // 21mm — margine INTERNO (dorso)
+    right:  850,   // 15mm — margine ESTERNO
     gutter: 0,
   },
+  MIRROR: true,
   // Larghezza area contenuto
   get CONTENT_W() { return this.WIDTH - this.MARGIN.left - this.MARGIN.right; }, // ~6435
   // Colonne: due colonne + gap

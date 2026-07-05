@@ -168,22 +168,15 @@ da dolore e ideali distorti.*
 |---|---|---|---|---|---|
 | 45 (max) | 2 | +CAR o +FAT | 3d8 | 8 | Umano / Boss Campagna |
 
-**Abilità:** Squarcio del Velo: 3d8 danno area Medio + breccia
-dimensionale (entità casuali emergono). Richiamo dei Caduti: evoca
-1d4 Rinnegati spettrali per round (LS 2 ciascuno). Campo Anti-Magia:
-poteri costano doppio risorsa nel raggio Vicino. Scudo della
-Convinzione: Armatura 2, +1 contro attacchi di chi dubita della
-propria causa. Lama della Verità: spada magica, 3d8, ignora 1
-Armatura.
-**Debolezze:** Dubbio: se i PG riescono a farlo dubitare (Persuadere
-+CAR a -2), perde lo Scudo per 2 round. Artefatto: distruggere i 4
-frammenti che possiede lo indebolisce (-1d8 danno per frammento). Il
-ricordo di chi ha perso (se i PG scoprono chi era e lo confrontano
-con il suo dolore).
-**Comportamento:** Carismatico, convinto, tragico. Crede davvero che
-il Velo sia una prigione. Non è un cattivo da fumetto - è un
-idealista che ha scelto il percorso sbagliato. In combattimento è
-feroce ma leale.
-**Hook:** *Vincenzo non vuole uccidere i PG. Vuole convincerli. Se ci
-riesce, il finale cambia tutto.*
+:::
+:::box[Vincenzo "Il Primo Caduto" (segue)]{type=info}
+**Abilità:** Squarcio del Velo: 3d8 danno area Medio + breccia dimensionale (entità casuali emergono). Richiamo dei Caduti: evoca 1d4 Rinnegati spettrali per round (LS 2 ciascuno). Campo Anti-Magia: poteri costano doppio risorsa nel raggio Vicino. Scudo della Convinzione: Armatura 2, +1 contro attacchi di chi dubita della propria causa. Lama della Verità: spada magica, 3d8, ignora 1 Armatura.
+:::
+
+:::box[Vincenzo "Il Primo Caduto" (segue)]{type=info}
+**Debolezze:** Dubbio: se i PG riescono a farlo dubitare (Persuadere +CAR a -2), perde lo Scudo per 2 round. Artefatto: distruggere i 4 frammenti che possiede lo indebolisce (-1d8 danno per frammento). Il ricordo di chi ha perso (se i PG scoprono chi era e lo confrontano con il suo dolore). **Comportamento:** Carismatico, convinto, tragico. Crede davvero che il Velo sia una prigione.
+:::
+
+:::box[Vincenzo "Il Primo Caduto" (segue)]{type=info}
+Non è un cattivo da fumetto - è un idealista che ha scelto il percorso sbagliato. In combattimento è feroce ma leale. **Hook:** *Vincenzo non vuole uccidere i PG. Vuole convincerli. Se ci riesce, il finale cambia tutto.*
 :::

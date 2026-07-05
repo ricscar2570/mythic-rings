@@ -43,7 +43,9 @@ Attiva la Casata • (+ qualsiasi mossa che segua dalla fiction)
 | Mortale | Boss + rinforzi | = livello +6 | 8+ |
 
 **Escalation Die v3.2:** R3: +1 tiro | R4: +1 tiro +1 danno | R5: +1 tiro +1d4 danno | R6+: +2 tiro +1d6 danno.
+:::
 
+:::box[BILANCIAMENTO COMBATTIMENTO (segue)]{type=warn}
 **Boss:** Armatura max 2. **Gruppi piccoli:** 2 PG -40% nemici, 3 PG -25%.
 :::
 
@@ -105,7 +107,9 @@ Clock globale e permanente. Misura quanto i civili sospettano della magia.
 | Ife | Stress | S8-9: poteri +1 costo | S10: doppio costo + Sfidare Pericolo |
 | Mictlan | PF | - | PF 0: Ultimo Respiro |
 
-**Mictlan PF = 28 + (FOR × 1).** Recupera 1d4 PF post-scontro (Resilienza della Soglia).
+:::
+:::box[SCALE RISORSE v3.2 (segue)]{type=info}
+**Mictlan PF = 28 + (FOR × 1).** Recupera 1d4 PF post-scontro (Resilienza della Soglia, max 3/sessione).
 :::
 
 :::box[LEGAMI: SCALA]{type=info}

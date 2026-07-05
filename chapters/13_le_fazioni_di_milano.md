@@ -30,7 +30,7 @@ ostile.
 | Fazione | Leader | Obiettivo | Metodo | Risorsa (+3) |
 |---| ---|---| ---|---|
 | Custodi | Cerchia 5 Anziani | Mantenere il Velo e proteggere i civili | Sorveglianza, intervento, diplomazia | Archivio, armeria, supporto missioni |
-| Fratellanza dei Caduti | Vincenzo \"Il Primo\" | Distruggere il Velo | Terrorismo magico, sabotaggio | Informazioni, poteri proibiti |
+| Fratellanza dei Caduti | Vincenzo “Il Primo” | Distruggere il Velo | Terrorismo magico, sabotaggio | Informazioni, poteri proibiti |
 | Corte dei Vampiri | Contessa Adriana | Sopravvivenza e influenza | Manipolazione sociale, ricchezza | Contatti profani, finanziamenti |
 | Cerchio delle Streghe | Nessuno (democratico) | Libertà magica | Rituali collettivi, protezione reciproca | Rituali, ingredienti, profezie |
 | Società del Velo | Dottor Massimiliano Sforza | Mantenere il Velo (lato profano) | Cover-up, disinformazione, media | Copertura, identità false, media |
@@ -41,13 +41,13 @@ Circa **40 Guardiani attivi** organizzati in celle da 3-5, supportati da
 100 operativi della Società del Velo. Quartier generale a Brera. La
 Cerchia dei 5 Anziani (uno per Casata + uno neutrale) governa per
 consenso ma Eleonora Visconti (Avalon) ha il peso maggiore. I Custodi
-sono la forza di difesa di Milano, ma sono sottorganico, stressati e
-internamente divisi tra falchi (\"più intervento\") e colombe (\"più
-diplomazia\"). I PG iniziano come nuove reclute.
+sono la forza di difesa di Milano, ma sono sotto organico, stressati e
+internamente divisi tra falchi (“più intervento”) e colombe (“più
+diplomazia”). I PG iniziano come nuove reclute.
 
 Fratellanza dei Caduti
 
-Guidata da **Vincenzo \"Il Primo Caduto\"**, ex Guardiano Avalon espulso
+Guidata da **Vincenzo “Il Primo Caduto”**, ex Guardiano Avalon espulso
 20 anni fa per aver tentato di rivelare il mondo magico ai profani. La
 Fratellanza crede che il Velo sia una prigione: nascondendo la magia, i
 Custodi impediscono all'umanità di evolversi. I loro metodi variano:
@@ -63,7 +63,7 @@ nemici dei Custodi - la Corte rispetta il Velo perché protegge anche
 loro. Ma sono predatori, e i loro interessi non sempre coincidono con
 quelli dei Guardiani. La Corte controlla diversi locali notturni e ha
 influenza nel mondo della moda e della finanza milanese. Circa **30
-vampiri** nella Corte, più una dozzina di \"indipendenti\" non
+vampiri** nella Corte, più una dozzina di “indipendenti” non
 affiliati.
 
 Cerchio delle Streghe
