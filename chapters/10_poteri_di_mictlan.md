@@ -1,279 +1,193 @@
 ---
 title: "Poteri di Mictlan"
 chapter: 10
-part: "Parte III: Le Quattro Casate"
-section: "Le Quattro Casate"
-epigraph: "La morte non è la fine. È una porta. E alcune porte si aprono dall'altro lato."
-status: complete
-version: 3.2
+part: "Parte III: I Poteri delle Casate"
+section: "Poteri delle Casate"
+epigraph: "Ogni porta si apre in entrambe le direzioni."
+tags: [mictlan, poteri]
+status: beta
+version: 0.9.0-beta.1
 ---
 
-## Poteri di Mictlan: La Soglia Eterna
+## Poteri di Mictlan: la Soglia Eterna
 
-Morte, spiriti, confine, transizione. I Mictlan sono psicopompi, medium, guardiani della soglia vita/morte. I loro poteri attraversano il Velo, evocano i morti, drenano la vita.
+Mictlan tratta con spiriti, morte, memoria e confini. I poteri usano normalmente **FAT** e consumano **Punti Ferita**. Il costo viene pagato prima del tiro e può portare il Guardiano a 0 PF, attivando immediatamente Ultimo Respiro dopo la risoluzione dell'effetto o della conseguenza.
 
-**Risorsa:** Punti Ferita. UNICA Casata che paga con la vita propria. **PF iniziali = 28 + (FOR × 1)** (bonus +4 rispetto alle altre Casate).
+I Mictlan iniziano con **28 + FOR PF**.
 
-**Caratteristica Poteri:** +FAT.
-
-:::box[Sangue Tenace: Potere Passivo Gratuito]{type=casata_mictlan}
-Quando il costo in PF di un potere ti porterebbe sotto il **40% dei PF massimi**, puoi scegliere di convertire metà del costo PF (arrotondato per difetto, minimo 1) in **+2 Stress**. Dichiaralo prima di pagare il costo. Questo potere è sempre attivo, nessun tiro richiesto.
+:::box[Sangue Tenace — passivo di Casata]{type=casata_mictlan}
+Una volta per scena, quando il costo di un potere ti porterebbe sotto il 40% dei PF massimi, puoi convertire metà del costo, arrotondato per difetto e minimo 1 PF, in **2 Stress**. Dichiara la conversione prima di pagare. Non riduce il costo sotto 1 PF e non può essere usata se lo Stress è già 10.
 :::
 
-:::box[Soglia 40%: già calcolata, non si tira mai a tavolo]{type=casata_mictlan}
-La soglia del 40% dipende solo dalla FOR, che non cambia durante uno scontro. Calcolala una volta in creazione e **segna quella casella sul tracker dei PF**: in gioco guardi solo dove sta il segnalino, senza aritmetica. La tabella qui sotto ti dà il valore già pronto.
-:::
-
-| FOR | PF massimi | Soglia (segna questa casella) |
-|---|---|---|
-| -1 | 27 | 11 |
-| 0 | 28 | 11 |
-| +1 | 29 | 12 |
-| +2 | 30 | 12 |
-| +3 | 31 | 12 |
-
-:::box[Resilienza della Soglia: Potere Passivo Gratuito]{type=casata_mictlan}
-**Progettato per campagne ad alto combattimento senza guaritore.**
-
-Il Mictlan esiste sul confine tra vita e morte: impara a drenare energia anche dallo sforzo del combattimento stesso.
-
-**Attivazione:** Alla fine di ogni scontro in cui hai ucciso o incapacitato almeno 1 avversario, recupera automaticamente **1d4 PF** senza tiro. Se nello scontro hai usato Drain (Livello 2), recupera invece **1d6 PF**.
-:::
-
-:::box[Resilienza della Soglia: Potere Passivo Gratuito (segue)]{type=casata_mictlan}
-**Limite di sessione:** Massimo **3 attivazioni per sessione**. Questo previene che il potere diventi banale nei party composti da soli Mictlan o in campagne ad altissimo volume di combattimento.
-
-**Limite di contesto:** Non funziona se nella scena è presente un guaritore attivo (Avalon o Ife), il corpo impara a cavarsela da solo solo quando non ha alternative.
-:::
-
-:::box[Resilienza della Soglia: Potere Passivo Gratuito (segue)]{type=casata_mictlan}
-**Controindicazione narrativa:** il Custode può segnalare che un uso frequente di questa meccanica rende il personaggio progressivamente più a suo agio con la morte altrui, utile come spunto per l'arco personale.
-:::
-
-:::box[Regola v3.2: Costi Mictlan]{type=danger}
-**L1:** costo 1-3 PF (non 2-3 come nel manuale base). **Vedere Oltre il Velo:** 2 PF. **Parlare con i Morti:** 1 PF. **Tocco Gelo:** 2 PF. Questi valori sostituiscono quelli del manuale base e sono stati calibrati in playtest.
-:::
-
-## Livello 1: Iniziato
+### Livello 1 — Iniziato
 
 :::box[Vedere Oltre il Velo]{type=casata_mictlan}
-**【 Livello 1 】**
+**Ruolo:** informazione  
+**Costo:** 2 PF | **Portata:** Sé | **Durata:** 10 minuti | **Tiro:** automatico
 
-**Costo:** 2 PF | **Range:** Sé | **Durata:** 10 minuti | **Tiro:** Automatico
-
-Occhi percepiscono il Piano Spirituale sovrapposto alla realtà. Vedi: spiriti/fantasmi, tracce di morte recente, aure necrotiche (magie, non-morti, oggetti maledetti), persone vicine alla morte. Malus: -1 a tiri sociali con viventi (distrazione, sguardo vuoto).
-
-*Indispensabile per navigare Milano Sotterranea e riconoscere minacce spirituali.*
+Vedi spiriti, impronte di morte, corpi posseduti e aperture recenti verso l'aldilà. Non conosci automaticamente identità, intenzioni o verità: per interpretare una traccia usa Investigare.
 :::
 
 :::box[Parlare con i Morti]{type=casata_mictlan}
-**【 Livello 1 】**
+**Ruolo:** informazione e relazione  
+**Costo:** 1 PF | **Portata:** Tocco con resti o oggetto personale | **Durata:** massimo 10 minuti | **Tiro:** +FAT
 
-**Costo:** 1 PF | **Range:** Tocco (cadavere o spirito) | **Durata:** Max 10 minuti | **Tiro:** Usare Potere +FAT
+- **10+:** lo spirito risponde a tre domande con ciò che crede vero; scegli se può vederti o restare anonimo.
+- **7–9:** risponde a una domanda; chiede un favore, è confuso oppure attira un'altra presenza.
+- **6−:** una voce risponde, ma non è quella attesa o il contatto apre una via; il Custode compie una Mossa.
 
-Evochi lo spirito di un morto. Appare come forma spettrale trasparente. **Requisiti:** corpo presente o morte entro Vicino, morte entro 1 settimana, spirito deve voler rispondere. Spiriti possono mentire.
+I morti possono sbagliare, mentire o ignorare ciò che non hanno conosciuto.
 :::
 
-:::box[Parlare con i Morti (segue)]{type=casata_mictlan}
-**10+** Contatto chiaro: lo spirito risponde a 3 domande veritieramente.
-**7-9** Contatto disturbato: risponde a 1 domanda, ma il messaggio è frammentato/metaforico.
-**6-** Contatto rifiutato: lo spirito non risponde o risponde con ostilità.
+:::box[Tocco del Gelo]{type=casata_mictlan}
+**Ruolo:** offensivo  
+**Costo:** 2 PF | **Portata:** Contatto | **Durata:** istantanea | **Tiro:** +FAT
+
+- **10+:** infliggi 2d6 danni magici e scegli: riduci il movimento del bersaglio, percepisci la sua paura principale oppure recuperi 2 PF.
+- **7–9:** infliggi 2d6 e scegli: ti esponi, il gelo colpisce anche un oggetto vicino, oppure non puoi recuperare PF.
+- **6−:** il freddo ritorna nel tuo corpo e il Custode compie una Mossa.
 :::
 
-:::box[Tocco Gelo]{type=casata_mictlan}
-**【 Livello 1 】**
-
-**Costo:** 2 PF | **Range:** Tocco | **Durata:** Istantaneo | **Tiro:** Usare Potere +FAT (+ Attaccare in combattimento)
-
-Tocco che infligge il freddo della morte. Mano pallida cadaverica, brina sulla pelle del bersaglio. Effetto ridotto su non-morti (già morti). Efficace su viventi.
-
-**10+** 2d8 danno necrotico + bersaglio rallentato (movimento dimezzato per 1 round).
-**7-9** 1d8 danno necrotico.
-**6-** 1d4 danno necrotico, Custode fa mossa.
-:::
-
-## Livello 2: Guardiano
+### Livello 2 — Guardiano
 
 :::box[Forma Spettrale]{type=casata_mictlan}
-**【 Livello 2 】**
+**Ruolo:** mobilità e difesa  
+**Costo:** 4 PF | **Portata:** Sé | **Durata:** 10 minuti | **Tiro:** +FAT
 
-**Costo:** 4 PF | **Range:** Sé | **Durata:** 10 minuti | **Tiro:** Usare Potere +FAT
+- **10+:** ottieni Armatura mistica 2 contro danno fisico, attraversi fessure e fluttui; puoi interagire con gli spiriti.
+- **7–9:** scegli due benefici; il terzo resta indisponibile e il tuo corpo appare morto.
+- **6−:** scegli un beneficio per un round e il Custode compie una Mossa.
 
-Corpo diventa semi-intangibile come un fantasma. **Intangibile:** attraversi muri (max 1m). Immune a fisico (magia colpisce normale). Volo lento. Silenzioso. Semi-trasparente. Non puoi toccare oggetti fisici (solo magie e spiriti).
+Non sei intangibile a ogni effetto e non attraversi barriere consacrate.
 :::
 
-:::box[Forma Spettrale (segue)]{type=casata_mictlan}
-**10+** Forma perfetta: tutti gli effetti, puoi parlare normalmente.
-**7-9** Forma base: tutti gli effetti, ma non puoi usare oggetti fisici.
-**6-** Forma parziale: solo semi-trasparenza e +2 Armatura vs fisico.
-:::
+:::box[Evocare uno Spirito]{type=casata_mictlan}
+**Ruolo:** evocazione  
+**Costo:** 4 PF | **Portata:** Vicino | **Durata:** scena | **Tiro:** +FAT
 
-:::box[Evocare]{type=casata_mictlan}
-**【 Livello 2 】**
+- **10+:** evochi uno spirito disponibile; sceglie di aiutarti in due modi: informazione, ricognizione, difesa o 2d6 danni magici una volta per round.
+- **7–9:** sceglie un solo aiuto e pretende un favore o una memoria.
+- **6−:** arriva uno spirito con una propria agenda e il Custode compie una Mossa.
 
-**Costo:** 4 PF | **Range:** Sé | **Durata:** 10 min o finché distrutto | **Tiro:** Usare Potere +FAT
-
-Evochi uno spirito servitore dal Piano dei Morti. **PF 10**, intangibile (vulnerabile magia), tocco spettrale +4 (1d6 necrotico), volo lento, attraversa muri. Intelligenza animale (comandi 1-2 parole).
-:::
-
-:::box[Evocare (segue)]{type=casata_mictlan}
-**10+** Spirito potente: PF 15, comandi complessi.
-**7-9** Spirito base: PF 10, comandi semplici.
-**6-** Spirito ribelle: appare ma non obbedisce, attacca il bersaglio più vicino.
+Lo spirito compie una sola azione significativa per round.
 :::
 
 :::box[Drain]{type=casata_mictlan}
-**【 Livello 2 】**
+**Ruolo:** offensivo e recupero  
+**Costo:** 3 PF | **Portata:** Vicino | **Durata:** istantanea | **Tiro:** +FAT
 
-**Costo:** 0 PF (si autofinanzia) | **Range:** Tocco | **Durata:** Istantaneo | **Tiro:** Usare Potere +FAT
+- **10+:** infliggi 2d8 danni magici e recuperi metà del danno effettivamente subito dal bersaglio, massimo 6 PF.
+- **7–9:** infliggi 2d6 e recuperi massimo 3 PF; scegli se lasciare una traccia necrotica o attirare uno spirito affamato.
+- **6−:** il flusso si inverte o tocca una memoria; il Custode compie una Mossa.
 
-Succhi energia vitale. I PF drenati ti curano (non superi PF massimi). Solo su creature **VIVENTI**.
-
-**10+** Dreni 2d6 PF al bersaglio, recuperi 2d6 PF.
-**7-9** Dreni 1d6 PF al bersaglio, recuperi 1d6 PF.
-**6-** Drain fallisce: nessun effetto, Custode fa mossa.
+Non può produrre un guadagno netto oltre i limiti indicati e non funziona su costrutti privi di forza vitale.
 :::
 
-:::box[Drain (segue)]{type=casata_mictlan}
-*Usi accettabili: combattimento, animali consenzienti, trasferire la tua vita a un alleato. Usi problematici: civili inconsapevoli (conseguenze narrative gravi).*
+### Livello 3 — Veterano
 
-*Sinergia con Resilienza della Soglia: se usi Drain durante uno scontro in cui poi sconfiggi un avversario, il recupero post-combattimento sale a 1d6 PF invece di 1d4.*
+:::box[Esercito dei Caduti]{type=casata_mictlan}
+**Ruolo:** evocazione  
+**Costo:** 6 PF | **Portata:** Lontano | **Durata:** scena | **Tiro:** +FAT
+
+- **10+:** richiami un gruppo di spiriti trattato come una sola minaccia alleata: 20 PF, Armatura 1, danno 2d6, tag *sciame, incorporeo, obbediente*.
+- **7–9:** 14 PF e scegli: richiede concentrazione, pretende un rito funebre o segue gli ordini alla lettera.
+- **6−:** i caduti ricordano torti e desideri; il Custode compie una Mossa.
+
+L'esercito compie una sola azione significativa per round.
 :::
 
-## Livello 3: Veterano
+:::box[Maledizione della Soglia]{type=casata_mictlan}
+**Ruolo:** debilitazione  
+**Costo:** 5 PF | **Portata:** Vicino | **Durata:** 24 ore | **Tiro:** +FAT
 
-:::box[Esercito]{type=casata_mictlan}
-**【 Livello 3 】**
+- **10+:** imponi una Condizione soprannaturale e scegli un divieto: attraversare una soglia, mentire, attaccare una persona o usare una capacità specifica. Violare il divieto infligge 2d8 danni magici una volta per scena.
+- **7–9:** la Condizione funziona per la scena oppure richiede un oggetto personale del bersaglio.
+- **6−:** la maledizione lega anche te o una persona associata; il Custode compie una Mossa.
 
-**Costo:** 6 PF | **Range:** Sé | **Durata:** 10 minuti | **Tiro:** Usare Potere +FAT
-
-Evochi **6 spettri guerrieri**. Ciascuno: PF 12, intangibile (immune fisico, vulnerabile magia), arma spettrale +5 (1d8 necrotico), volo medio, tattica base (fiancheggiano). Aspetto: soldati fantasma in armatura antica.
+Contro minacce LS 8+ il divieto crea un costo, non impedisce automaticamente l'azione.
 :::
 
-:::box[Esercito (segue)]{type=casata_mictlan}
-**10+** Esercito potente: 6 spettri, tattiche avanzate (circondano, proteggono).
-**7-9** Esercito base: 4 spettri, tattiche semplici.
-**6-** Esercito caotico: 3 spettri, attaccano tutti (amici inclusi).
+:::box[Confine dei Morti]{type=casata_mictlan}
+**Ruolo:** protezione e controllo  
+**Costo:** 5 PF | **Portata:** Vicino, cerchio di cinque metri | **Durata:** 10 minuti | **Tiro:** +FAT
+
+- **10+:** scegli due: gli spiriti non attraversano; i viventi all'interno ottengono Armatura mistica 1; nessun teletrasporto attraversa il confine.
+- **7–9:** scegli uno; il sigillo richiede concentrazione o un componente viene consumato.
+- **6−:** il confine trattiene qualcosa dalla parte sbagliata e il Custode compie una Mossa.
 :::
 
-:::box[Maledizione]{type=casata_mictlan}
-**【 Livello 3 】**
-
-**Costo:** 5 PF | **Range:** Vicino | **Durata:** 24 ore o finché dissolta | **Tiro:** Usare Potere +FAT (VS Resistere +FOR bersaglio)
-
-Marchi il bersaglio con il simbolo della morte. **Immediato:** 2d6 danno necrotico. **Persistente:** 1d6 danno ogni 6 ore. **Debilitante:** -2 FOR/CUO. **Visibile:** teschio nero in fronte (tutti lo vedono). Rimozione: Purificazione Suprema Avalon L4.
-:::
-
-:::box[Maledizione (segue)]{type=casata_mictlan}
-**10+** Maledizione piena: tutti gli effetti, +2 al tiro di qualsiasi Mictlan che attacca il bersaglio.
-**7-9** Maledizione parziale: danno immediato + persistente, no debuff caratteristiche.
-**6-** Maledizione fallisce: bersaglio immune per 24 ore.
-:::
-
-:::box[Confine]{type=casata_mictlan}
-**【 Livello 3 】**
-
-**Costo:** 5 PF | **Range:** Sé | **Durata:** 10 minuti | **Tiro:** Usare Potere +FAT
-
-Entri fisicamente nel Piano Spiriti. Esisti in entrambi i mondi simultaneamente. Vedi entrambi sovrapposti. Puoi toccare spiriti E oggetti fisici. Semi-intangibile: -2 per colpirti con fisico. Volo spirito.
-:::
-
-:::box[Confine (segue)]{type=casata_mictlan}
-**10+** Confine perfetto: tutti gli effetti, voli liberamente tra i piani.
-**7-9** Confine base: tutti gli effetti ma movimento dimezzato.
-**6-** Confine instabile: funziona 1 round, poi ti espelle nel piano fisico.
-:::
-
-## Livello 4: Maestro
+### Livello 4 — Maestro
 
 :::box[Tocco della Morte]{type=casata_mictlan}
-**【 Livello 4 】**
+**Ruolo:** offensivo superiore  
+**Costo:** 8 PF | **Portata:** Contatto | **Durata:** istantanea | **Tiro:** +FAT
 
-**Costo:** 8 PF | **Range:** Tocco | **Durata:** Istantaneo | **Tiro:** Usare Potere +FAT (VS Resistere +FOR bersaglio)
+- **10+:** contro minion o PNG comuni provochi morte immediata se la fiction lo consente; contro una minaccia significativa infliggi 3d10 danni puri e disattivi rigenerazione per la scena.
+- **7–9:** infliggi 3d8 danni puri; scegli se subire una Condizione grave o pagare 3 PF aggiuntivi.
+- **6−:** la morte prende qualcosa di imprevisto e il Custode compie una Mossa dura.
 
-Canalizzi essenza di morte pura. Il tocco può uccidere istantaneamente. **LS 6-:** morte automatica. **LS 7+:** morte solo se PF attuali ≤ 30% del massimo, altrimenti 6d6 danno necrotico. Non funziona su non-morti (già morti) o costrutti.
+Non elimina automaticamente un boss o un personaggio protetto da un vincolo narrativo.
 :::
 
-:::box[Tocco della Morte (segue)]{type=casata_mictlan}
-**10+** Tocco perfetto: come da regola LS, senza tiro difensivo.
-**7-9** Tocco parziale: 4d8 danno necrotico (nessuna morte istantanea).
-**6-** Tocco respinto: 2d6 danno necrotico a te dal contraccolpo.
-:::
+:::box[Animare i Caduti]{type=casata_mictlan}
+**Ruolo:** creazione di servitore  
+**Costo:** 6 PF | **Portata:** Tocco con un cadavere | **Durata:** 1 ora | **Tiro:** +FAT
 
-:::box[Animare]{type=casata_mictlan}
-**【 Livello 4 】**
+- **10+:** il corpo animato obbedisce: 16 PF, Armatura 1, danno 2d6, una qualità derivata dal corpo.
+- **7–9:** 10 PF e scegli: obbedisce alla lettera, conserva un ricordo disturbante o dura soltanto la scena.
+- **6−:** qualcosa occupa il corpo prima di te; il Custode compie una Mossa.
 
-**Costo:** 6 PF | **Range:** Tocco (cadavere) | **Durata:** 1 ora o finché distrutto | **Tiro:** Usare Potere +FAT
-
-Il cadavere si alza come non-morto sotto il tuo controllo. **PF 20, Armatura 2**, artigli/morso +4 (1d8), lento, nessuna intelligenza, immune a dolore/paura/veleni. Debolezza: fuoco (×1.5), acqua santa (2d6 danno).
-:::
-
-:::box[Animare (segue)]{type=casata_mictlan}
-**10+** Non-morto robusto: PF 20, comandi complessi.
-**7-9** Non-morto base: PF 10, comandi semplici.
-**6-** Non-morto incontrollato: sorge ma attacca tutti.
+L'animato compie una sola azione significativa per round e non conserva automaticamente competenze complesse.
 :::
 
 :::box[Possessione]{type=casata_mictlan}
-**【 Livello 4 】**
+**Ruolo:** infiltrazione e controllo  
+**Costo:** 7 PF | **Portata:** Vicino | **Durata:** massimo 10 minuti | **Tiro:** +FAT
 
-**Costo:** 7 PF | **Range:** Vicino | **Durata:** 10 min o finché espulso | **Tiro:** Usare Potere +FAT (VS Resistere +MEN bersaglio)
+- **10+:** entri in un PNG comune o in un corpo privo di volontà; percepisci attraverso di lui e puoi guidarne azioni non autodistruttive.
+- **7–9:** scegli: controllo parziale, durata di un minuto, oppure il tuo corpo resta vulnerabile e lo spirito del bersaglio ti osserva.
+- **6−:** resti intrappolato, espulso o condividi il corpo con un'altra presenza; il Custode compie una Mossa.
 
-Il tuo spirito lascia il corpo e possiede un bersaglio. Controlli il suo corpo (usi le sue stat, le tue conoscenze). Il tuo corpo crolla incosciente e vulnerabile. Se il corpo posseduto viene ucciso: ritorno traumatico (2d6 danno a te).
+Contro PG richiede consenso; contro minacce importanti produce esitazione, informazione o accesso, non controllo assoluto.
 :::
 
-:::box[Possessione (segue)]{type=casata_mictlan}
-**10+** Possessione piena: controllo completo, bersaglio non ricorda.
-**7-9** Possessione parziale: controllo parziale, bersaglio può Resistere ogni round (+MEN vs 10).
-**6-** Possessione fallisce: espulso, bersaglio sa del tentativo.
-:::
-
-## Livello 5: Leggenda
+### Livello 5 — Leggenda
 
 :::box[Avatar della Morte]{type=casata_mictlan}
-**【 Livello 5 】**
+**Ruolo:** trasformazione leggendaria  
+**Costo:** 10 PF | **Portata:** Sé | **Durata:** 10 minuti | **Tiro:** +FAT | **Limite:** una volta per sessione
 
-**Costo:** 10 PF | **Range:** Sé | **Durata:** 10 minuti | **Tiro:** Usare Potere +FAT
+- **10+:** ottieni Armatura mistica 3, volo spettrale, immunità a paura e veleno e scegli due Doni.
+- **7–9:** scegli un Dono; al termine scendi a 1 PF oppure perdi temporaneamente un ricordo vitale.
+- **6−:** scegli un Dono per un round e il Custode compie una Mossa dura.
+
+**Doni:** falce 3d10 magica; aura che infligge 1d4 danni magici una volta per round alle minacce Vicine; attraversare una barriera non consacrata; comandare per una scena un gruppo di non morti comuni. Nessun Dono concede azioni aggiuntive.
 :::
 
-:::box[Avatar della Morte (segue)]{type=casata_mictlan}
-Trascendi la mortalità, diventi avatar della Morte stessa. Scheletro coperto da veli neri, occhi vuoti blu ghiaccio, falce spettrale, aura di gelo. **+3 a TUTTE le caratteristiche.** Intangibile (immune fisico). Volo. Falce: +8 (3d10 necrotico). Aura morte (1d4 danno/round a viventi nel Vicino). Immunità: veleni, paura, charme.
+:::box[Riportare dalla Soglia]{type=casata_mictlan}
+**Ruolo:** ritorno dalla morte  
+**Costo:** 15 PF e un oggetto emotivamente insostituibile del morto | **Portata:** Tocco | **Durata:** rituale di 1 ora | **Tiro:** +FAT
+
+Può essere tentato su chi è morto da non più di un giorno e il cui spirito accetta il ritorno.
+
+- **10+:** ritorna a metà PF e sceglie una conseguenza permanente concordata.
+- **7–9:** ritorna a 1 PF, ma qualcosa attraversa con lui o una relazione viene perduta.
+- **6−:** il rituale apre la soglia senza riportare la persona prevista; il Custode compie una Mossa di campagna.
+
+Ogni personaggio può beneficiare di questo potere una sola volta, salvo decisione esplicita dell'intera campagna.
 :::
 
-:::box[Avatar della Morte (segue)]{type=casata_mictlan}
-**10+** Avatar completo: tutti gli effetti, 10 minuti.
-**7-9** Avatar ridotto: +2 caratteristiche, nessuna aura morte.
-**6-** Avatar instabile: funziona ma termina al primo 6-.
+:::box[Maremoto dei Morti]{type=casata_mictlan}
+**Ruolo:** cataclisma  
+**Costo:** 20 PF, minimo 20 disponibili prima del pagamento | **Portata:** Vista, area di cinquanta metri | **Durata:** istantanea e una scena | **Tiro:** +FAT | **Limite:** una volta per arco narrativo
+
+- **10+:** un'ondata di spiriti travolge l'area: infliggi 4d8 danni magici alle minacce scelte e ottieni tre effetti tra separare, esporre, spegnere un rituale, liberare spiriti prigionieri o aprire una via.
+- **7–9:** infliggi 4d6 e scegli due effetti; un debito con i morti diventa immediatamente concreto.
+- **6−:** l'ondata non distingue alleati, nemici e memorie; il Custode compie una Mossa di campagna.
+
+Se il costo porta a 0 PF, risolvi il potere e poi effettua Ultimo Respiro.
 :::
 
-:::box[Riportare]{type=casata_mictlan}
-**【 Livello 5 】**
-
-**Costo:** 15 PF + Sacrificio (oggetto emotivo del morto) | **Range:** Tocco | **Durata:** Rituale (1 ora) | **Tiro:** Usare Potere +FAT
-
-Viaggi nel Piano Spiriti, trovi l'anima del morto, la riporti indietro. **Requisiti:** corpo intatto (75%), morte entro 24 ore, spirito non vincolato, spirito deve voler tornare. Il Mictlan percorre fisicamente il Piano Spiriti (rischio reale).
-:::
-
-:::box[Riportare (segue)]{type=casata_mictlan}
-**10+** Resurrezione completa: il defunto torna con tutti i PF, il Mictlan ritorna sano.
-**7-9** Resurrezione riuscita ma il Mictlan torna ferito (perde metà PF rimanenti).
-**6-** Entrambi bloccati nel Piano Spiriti: serve soccorso esterno.
-:::
-
-:::box[Maremoto]{type=casata_mictlan}
-**【 Livello 5 】**
-
-**Costo:** 20 PF (TUTTO rimanente, min 20), probabilmente ti uccide | **Range:** Vista (raggio 50m) | **Durata:** Istantaneo | **Tiro:** Usare Potere +FAT
-:::
-
-:::box[Maremoto (segue)]{type=casata_mictlan}
-Squarci il Velo tra vita e morte. Un'ondata di migliaia di spiriti urlanti emerge e travolge i viventi. **6d8 danno necrotico a tutti.** Terrore: tutti (amici + nemici) devono Resistere +MEN o fuggire per 1d4 round. Spiriti persistono per 1 ora (zona pericolosa).
-:::
-
-:::box[Maremoto (segue)]{type=casata_mictlan}
-**10+** Maremoto pieno: danno pieno, spiriti obbediscono ai tuoi comandi per 1 ora.
-**7-9** Maremoto base: danno pieno, spiriti casuali (attaccano tutto).
-**6-** Maremoto incontrollato: danno pieno a tutti + Custode fa mossa catastrofica + probabilmente muori.
-
-*Il potere più devastante del gioco. Usato 0-1 volte nell'intera campagna. Non usarlo finché non sei pronto a morire.*
+:::box[Principio di Mictlan]{type=tip}
+Mictlan converte la propria sopravvivenza in accesso al confine. Il suo potere è forte perché ogni scelta avvicina davvero a Ultimo Respiro.
 :::

@@ -1,0 +1,22 @@
+'use strict';
+const assert = require('assert');
+const fs = require('fs');
+const path = require('path');
+const yaml = require('js-yaml');
+const { loadMeta } = require('../build/project-meta');
+
+const root = path.resolve(__dirname, '..');
+const meta = loadMeta(root);
+const data = yaml.load(fs.readFileSync(path.join(root, 'data/canonical_rules.yml'), 'utf8'));
+assert.strictEqual(String(data.product_version), String(meta.version));
+assert.strictEqual(data.rules.fate_points.start, 2);
+assert.strictEqual(data.rules.fate_points.maximum, 2);
+assert.match(data.rules.fate_points.spend, /un solo d6/i);
+assert.match(data.rules.last_breath.trigger, /senza Caratteristica o bonus/i);
+assert.strictEqual(data.rules.damage_armor.limits.equipment_armor, 3);
+assert.strictEqual(data.rules.damage_armor.limits.ordinary_total_armor, 4);
+assert.strictEqual(data.rules.damage_armor.limits.boss_armor, 2);
+assert.match(data.rules.escalation.text, /senza alterare la curva 2d6/i);
+assert.match(data.rules.gm_rolls.text, /non tira/i);
+assert.match(data.rules.investigation.guarantee, /ottieni sempre/i);
+console.log('Test canonici superati.');

@@ -1,0 +1,24 @@
+name: Anomalia editoriale
+description: Refusi, riferimenti, termini, struttura o impaginazione.
+title: "[EDITORIAL] "
+labels: [editorial]
+body:
+  - type: input
+    attributes:
+      label: File o pagina
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Testo attuale
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Correzione proposta
+  - type: dropdown
+    attributes:
+      label: Gravità
+      options: [S2 - altera il significato, S3 - ostacola la lettura, S4 - refuso]
+    validations:
+      required: true

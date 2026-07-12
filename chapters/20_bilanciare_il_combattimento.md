@@ -1,53 +1,133 @@
 ---
 title: "Bilanciare il Combattimento"
 chapter: 20
-part: "Parte V: Guida per il Custode"
-section: "Guida per il Custode"
-epigraph: "Il bilanciamento non è equità. È tensione."
-tags: []
-status: finale
-version: 3.2
+part: "Parte V: Strumenti del Custode"
+section: "Strumenti del Custode"
+epigraph: "Una minaccia memorabile non è una somma di Punti Ferita."
+tags: [custode, combattimento, bilanciamento]
+status: beta
+version: 0.9.0-beta.1
 ---
 
-## Bilanciare il Combattimento
+## Bilanciare il combattimento
 
-Livelli di Sfida
+Il Livello di Sfida è uno strumento di preparazione, non una promessa matematica. La difficoltà reale dipende da obiettivi, ambiente, numero di azioni nemiche, capacità di controllo, preparazione dei Guardiani e possibilità di fuga.
 
+Prima di assegnare valori, rispondi a tre domande:
 
-| Difficoltà | Setup | LS Totale | Durata Attesa |
-|---| ---|---| ---|
-| Facile | 3-4 nemici deboli (LS 1-2) | = livello gruppo | 3-4 round |
-| Medio | 5-6 misti O 1 forte | = livello gruppo +2 | 4-6 round |
-| Difficile | Boss (LS livello+2) + 2-3 minion | = livello gruppo +4 | 5-7 round |
-| Mortale | Boss (LS livello+4) + rinforzi | = livello gruppo +6 | 6-8 round |
+1. **Che cosa vuole la minaccia?** Uccidere, fuggire, ritardare, rapire, proteggere o corrompere producono scontri diversi.
+2. **Che cosa rende interessante la scena?** Terreno, civili, tempo, segreto, oggetto conteso o conseguenza politica.
+3. **Come può terminare oltre all'annientamento?** Resa, negoziazione, rituale, fuga, separazione, distruzione dell'obiettivo.
 
-:::box[M10: Armatura Boss Massima 2]{type=rule}
-In v3.2, nessun boss può avere Armatura superiore a 2. Questo garantisce che i PG possano sempre infliggere danno significativo, evitando combattimenti frustranti dove i colpi rimbalzano senza effetto. Se hai bisogno di un boss più resistente, aumenta i PF invece dell'Armatura. Un boss con 40 PF e Armatura 2 è più divertente di uno con 20 PF e Armatura 4.
-:::
+## Fasce di minaccia
 
-:::box[M10: Armatura Boss Massima 2 (segue)]{type=rule}
-**Eccezione narrativa:** creature con protezioni magiche specifiche (es. “immune al danno fisico, vulnerabile solo all'argento”) non usano il sistema Armatura - richiedono la soluzione giusta, non più danno.
-:::
+| LS | Ruolo | PF indicativi | Danno indicativo | Armatura | Capacità |
+|---:|---|---:|---|---:|---|
+| 1–2 | Minion | 3–10 | 1d4–1d6 | 0–1 | Una qualità semplice |
+| 3–4 | Comune | 12–24 | 1d8–2d6 | 0–2 | Due Mosse o una debolezza importante |
+| 5–6 | Forte | 20–34 | 2d6–2d8 | 1–2 | Controllo, mobilità o danno ad area |
+| 7–8 | Elite | 30–42 | 2d8–2d10 | 1–2 | Tre Mosse, reazione o cambio di posizione |
+| 9–10 | Leggendario | 38–55 | 3d6–3d8 | 1–2 | Fasi, agenda, vulnerabilità scopribile |
 
-## L'Escalation Die (v3.2: Curva Graduale)
+I valori sono punti di partenza. Una creatura che nega azioni, rigenera, colpisce un'area o agisce attraverso più corpi è più pericolosa di quanto indichino i PF.
 
-L'Escalation Die è la meccanica che mantiene i combattimenti dinamici impedendo lo stallo. Nella v3.2 la curva è **più graduale** per evitare il problema della risoluzione improvvisa: tensione bassa nei round 1-3, poi accelerazione imprevvisa al round 4+.
+## Numero di minacce
 
-| Round | Bonus Escalation | Effetto Narrativo |
-|---|---|---|
-| 1-2 | - | Nessun bonus. Tattiche iniziali, esplorazione. |
-| 3 | +1 al tiro di Attaccare | Il combattimento si intensifica. |
-| 4 | +1 danno fisso (in aggiunta al tiro) | Colpi più pesanti, energia sale. |
-| 5 | +1 tiro + +1d4 danno | La stanchezza e l'adrenalina cambiano tutto. |
-| 6+ | +2 tiro + +1d6 danno | Fase finale. Chiunque non sia fuori combattimento ora si batte con tutto. |
+Per un gruppo di quattro Guardiani iniziali:
 
-**Rationale:** Iniziare la progressione al Round 3 (invece che al 4) dà una curva di tensione distribuita. Il bonus separato al danno (invece che solo al tiro) significa che anche un 7-9 al Round 5 fa più male di un 10+ al Round 1, mantenendo la minaccia anche nei risultati parziali.
+| Incontro | Composizione iniziale |
+|---|---|
+| Pressione breve | 2–4 minion oppure una minaccia LS 3 |
+| Scontro ordinario | una LS 4 oppure una LS 3 con 2 minion |
+| Scontro duro | una LS 5–6 oppure due LS 4 con obiettivo complesso |
+| Boss di sessione | una LS 6–7 con terreno, fase o rinforzi |
+| Minaccia estrema | LS 8+; richiede informazioni, alleanze, vulnerabilità o fuga |
 
-**Boss con molti PF:** Applica l'Escalation Die normalmente. I boss non hanno un tetto artificiale di PF, il problema dello "stallo + risoluzione improvvisa" è risolto dalla curva graduale, non da una riduzione dei PF.
+Aggiungi o sottrai pressione in base a:
 
-:::box[Suggerimento: Gruppi Piccoli in Combattimento (M7)]{type=info}
-**2 PG:** Riduci il numero di nemici del 40%. I PG hanno +1 forward al primo tiro di combattimento ogni scontro. L'Escalation Die parte dal **Round 2** invece che dal Round 3.
-**3 PG:** Riduci il numero di nemici del 25%. L'Escalation Die parte normalmente dal **Round 3** (regola base v3.2).
-In entrambi i casi, i boss mantengono le loro statistiche ma perdono
-1 abilità speciale.
+- numero e livello dei Guardiani;
+- risorse già consumate;
+- accesso a guarigione e controllo;
+- sorpresa e preparazione;
+- obiettivi diversi dal danno;
+- possibilità concreta di ritirata.
+
+## Economia delle azioni
+
+Una creatura singola può essere sopraffatta anche con valori alti. Per un boss usa una o più delle seguenti soluzioni:
+
+- una reazione una volta per round;
+- una Mossa ambientale alla fine del round;
+- minion con un impulso semplice;
+- obiettivi paralleli;
+- cambio di fase al 50% dei PF;
+- vulnerabilità che deve essere scoperta o creata.
+
+Non concedere semplicemente più turni completi senza dichiararlo nello stat block. Ogni azione aggiuntiva deve avere un'identità leggibile.
+
+## Armatura dei boss
+
+L'Armatura di un boss non supera 2. Valori più alti allungano lo scontro senza generare decisioni. Usa invece:
+
+- immunità parziali e vulnerabilità specifiche;
+- reazioni;
+- movimento;
+- fasi;
+- scudi che possono essere rimossi;
+- conseguenze che cambiano il campo di battaglia.
+
+## Escalation
+
+L'Escalation aumenta soltanto il danno inflitto dai Guardiani:
+
+| Round | Bonus |
+|---|---:|
+| 1–2 | +0 danno |
+| 3 | +1 danno |
+| 4 | +2 danni |
+| 5+ | +3 danni |
+
+Non modifica i tiri. Si applica una volta per fonte di danno e si azzera quando lo scontro termina o cambia completamente scena.
+
+## Costruire una minaccia
+
+Per creare un avversario:
+
+1. scegli impulso e LS;
+2. assegna PF, danno e Armatura entro la fascia;
+3. definisci due o tre tag;
+4. scrivi almeno due Mosse concrete;
+5. aggiungi una debolezza o un modo alternativo di neutralizzarlo;
+6. stabilisci come reagisce a ferite, superiorità e sconfitta;
+7. controlla quante azioni produce per round;
+8. confrontalo con tre creature già testate.
+
+## Obiettivi di durata
+
+Usa questi obiettivi per diagnosticare, non come regole rigide:
+
+- minion: uno o due scambi;
+- scontro ordinario: 2–4 round;
+- scontro duro: 3–5 round;
+- boss: 4–6 round con cambiamenti significativi.
+
+Se uno scontro dura oltre il sesto round senza trasformarsi, non aumentare ancora i numeri: cambia obiettivo, fase, terreno o disponibilità della fuga.
+
+## Registro di playtest
+
+Per ogni scontro annota:
+
+- composizione del gruppo;
+- PF e risorse iniziali;
+- round totali;
+- danno inflitto e subito;
+- Mosse mai utilizzate;
+- momenti di stallo;
+- esito e via di risoluzione;
+- percezione di difficoltà dei giocatori.
+
+Un valore diventa canonico soltanto dopo essere stato verificato in più gruppi, inclusi tavoli che non conoscono l'autore.
+
+:::box[Principio finale]{type=tip}
+Bilancia la pressione, non soltanto i PF. Un buon scontro costringe i Guardiani a scegliere cosa proteggere, quale prezzo pagare e quando cambiare piano.
 :::

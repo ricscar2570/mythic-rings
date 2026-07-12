@@ -1,5 +1,5 @@
 /**
- * MYTHIC RINGS v3 — Markdown Parser
+ * MYTHIC RINGS — Markdown Parser
  * Converte i file .md dei capitoli in un AST intermedio
  * con supporto per estensioni custom (box, tabelle wide, ecc.)
  *

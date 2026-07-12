@@ -1,124 +1,149 @@
 ---
 title: "Quick Reference Custode"
 chapter: 31
-part: "Parte VII: Appendici"
-section: "Appendici"
-status: complete
-version: 3.2
+part: "Parte VII: Riferimenti"
+section: "Riferimenti"
+epigraph: "Presenta rischi leggibili. Rendi le scelte irreversibili."
+tags: [riferimento, custode]
+status: beta
+version: 0.9.0-beta.1
 ---
 
-## Quick Reference: Custode
+## Quick Reference — Custode
 
-*Stampabile. Una pagina con tutto il necessario per arbitrare.*
+### Agenda
 
-:::box[PRINCIPI DEL CUSTODE]{type=info}
-Descrivi un mondo vivo. Gioca per scoprire. Sii fan dei PG.
+- Rendi Milano viva, concreta e soprannaturale.
+- Sii fan dei Guardiani senza proteggerli dalle loro scelte.
+- Gioca per scoprire che cosa accade.
+- Fai pagare il potere con conseguenze significative.
 
-Fai domande, usa le risposte. Dai nomi a tutti.
+### Principi
 
-Fallimenti = opportunità. Pensa in scene, non meccaniche.
+- Parti dalla fiction.
+- Annuncia il pericolo prima di renderlo inevitabile.
+- Chiedi «come?» e «che cosa vuoi ottenere?».
+- Non negare un indizio necessario con un singolo tiro.
+- Dai a ogni PNG un desiderio e un limite.
+- Usa le risorse come pressione, non come contabilità punitiva.
+- Offri sempre una via diversa dall'eliminazione quando la fiction la consente.
+- Non tirare dadi per gli avversari.
 
-Alza la posta gradualmente. Inizia soft, poi hard.
-:::
+### Quando compiere una Mossa
 
-:::box[11 MOSSE CUSTODE]{type=info}
-Infliggi danno • Metti in pericolo • Consuma risorse
+- un giocatore ottiene 6−;
+- un 7–9 prevede un costo;
+- i Guardiani ignorano una minaccia annunciata;
+- tutti guardano il Custode per sapere cosa accade;
+- alla fine del round una minaccia è ancora libera di agire.
 
-Offri scelta difficile • Rivela verità scomoda • Introduci minaccia
+### Mosse morbide
 
-Separa il gruppo • Cattura qualcuno • Avanza Doom Clock
+- mostra un segno di pericolo;
+- rivela un costo;
+- consuma tempo o posizione;
+- separa possibilità senza chiuderle;
+- presenta una scelta difficile;
+- annuncia una conseguenza imminente.
 
-Attiva la Casata • (+ qualsiasi mossa che segua dalla fiction)
+### Mosse dure
 
-**Soft:** minaccia, PG può reagire. **Hard:** conseguenza immediata (su 6-, minaccia ignorata, fiction lo richiede).
-:::
+- infliggi il danno annunciato;
+- rendi concreta una minaccia;
+- separa il gruppo;
+- distruggi o sottrai una risorsa;
+- imponi una Condizione;
+- fai avanzare il Doom Clock;
+- rivela una verità irreversibile.
 
-:::box[BILANCIAMENTO COMBATTIMENTO]{type=warn}
+Una Mossa dura deve essere preparata dalla fiction o da un rischio già chiaro.
 
-| Difficoltà | Setup | LS Totale | Round Attesi |
-|---|---|---|---|
-| Facile | 3-4 deboli (LS 1-2) | = livello gruppo | 2-3 |
-| Medio | 5-6 misti / 1 forte | = livello +2 | 4-5 |
-| Difficile | Boss + 2-3 minion | = livello +4 | 6-8 |
-| Mortale | Boss + rinforzi | = livello +6 | 8+ |
+### Tiro base
 
-**Escalation Die v3.2:** R3: +1 tiro | R4: +1 tiro +1 danno | R5: +1 tiro +1d4 danno | R6+: +2 tiro +1d6 danno.
-:::
+| Totale | Risposta del Custode |
+|---|---|
+| 10+ | Applica l'effetto pieno e fai evolvere la scena |
+| 7–9 | Applica effetto e costo previsti; rendi la scelta concreta |
+| 6− | Compi una Mossa proporzionata e collegata all'azione |
 
-:::box[BILANCIAMENTO COMBATTIMENTO (segue)]{type=warn}
-**Boss:** Armatura max 2. **Gruppi piccoli:** 2 PG -40% nemici, 3 PG -25%.
-:::
+Il totale resta tra −3 e +4.
 
-:::box[STRUTTURA SESSIONE]{type=info}
-Recap (5 min) → Hook (10 min) → Investigazione (45 min)
+### Combattimento
 
-Complicazione (30 min) → Climax (60 min) → Risoluzione + XP (15 min)
+- La fiction decide chi agisce per primo.
+- Se è incerto, un solo Guardiano tira +CUO per il gruppo.
+- Ogni Guardiano: una Azione Principale e un movimento.
+- I nemici agiscono tramite conseguenze, minacce ignorate e fine round.
+- Combina i minion simili in una sola azione.
 
-**Regola 3 Indizi:** Mai bloccare su 1 tiro. 3+ modi per ottenere info critica.
-:::
+### Escalation
 
-:::box[DOOM CLOCK]{type=danger}
-**0→3:** Presagio. **3→6:** Escalation. **6→9:** Crisi. **9→12:** Catastrofe.
+| Round | Bonus al danno dei Guardiani |
+|---|---:|
+| 1–2 | +0 |
+| 3 | +1 |
+| 4 | +2 |
+| 5+ | +3 |
 
-**+1:** fine sessione senza azione / 6- su tiro collegato.
+Non aggiungerla ai tiri.
 
-**-1:** missione riuscita. **-2:** colpo decisivo alla minaccia principale.
-:::
+### Danno e Armatura
 
-:::box[VELO TRACKER]{type=warn}
-Clock globale e permanente. Misura quanto i civili sospettano della magia.
+- Danno minimo 1 dopo Armatura, salvo immunità.
+- Magico: solo Armatura mistica.
+- Puro: ignora Armatura.
+- Armatura equipaggiamento massimo 3.
+- Armatura totale ordinaria massimo 4.
+- Boss massimo 2.
 
-**0→3:** Voci. **3→6:** Sospetto (-1 tiri sociali). **6→9:** Crisi (no poteri pubblici). **9→12:** Velo Squarciato.
+### Investigazione
 
-**+1/sessione** se: poteri visibili in pubblico, danni materiali evidenti, creature viste da civili.
+Se esiste un indizio necessario, forniscilo sempre.
 
-**-1** per missione di copertura riuscita. Non scende mai sotto la soglia già raggiunta.
+- 10+: indizio + 2 domande.
+- 7–9: indizio + 1 domanda + costo.
+- 6−: indizio + Mossa dura collegata.
 
-*Doom Clock 9+ → automatico +1 Velo Tracker.*
-:::
+Non trasformare una falsa testimonianza in una verità indimostrabile.
 
-:::box[SAFETY TOOLS]{type=tip}
-**X-Card:** chiunque la alza = skip immediato, nessuna domanda.
+### Ultimo Respiro
 
-**Freno:** rallenta il tono, non interrompe la scena.
+Tiro 2d6 senza bonus.
 
-**Porta Aperta:** chiunque può uscire senza giustificarsi.
+- 12+: 1 PF, cosciente, una azione.
+- 10–11: 1 PF, incapacitato.
+- 7–9: 1 PF, prezzo duraturo proposto dal Custode.
+- 6−: morte salvo effetto esplicito.
 
-**Check-In:** pollice su/di lato/giù durante scene intense.
-:::
+Per un 7–9 proponi conseguenze differenti per natura e non tutte equivalenti a «il personaggio non è più giocabile».
 
-:::box[XP E LEVEL UP]{type=info}
-**Domande fine sessione** (1 XP ciascuna):
-1. Hai affrontato un pericolo significativo?
-2. Hai imparato qualcosa di nuovo?
-3. Hai risolto un problema importante?
-4. Hai sviluppato o sfidato un Legame?
-5. Hai agito secondo i principi della tua Casata?
+### Stat block degli avversari
 
-**5 XP = Level Up.** Scelte: +1 Caratteristica (max +3) • Nuovo Potere • +5 PF • Nuovo Legame L1 • Talento Speciale • 1 Mossa Avanzata (Liv. 3+).
-:::
+Ogni avversario deve indicare:
 
-:::box[SCALE RISORSE v3.2]{type=info}
+- impulso;
+- PF;
+- Armatura;
+- danno;
+- LS e tipo;
+- tag;
+- Mosse;
+- debolezza;
+- comportamento;
+- hook o funzione nell'indagine.
 
-| Casata | Risorsa | Penalità parziale | Limite |
-|---|---|---|---|
-| Avalon | Stress | S8-9: poteri +1 costo | S10: doppio costo + Sfidare Pericolo |
-| Umbra | Corruzione | C6: L3+ +1 Corr. / C7: L2+ +1 Corr. | C8: Trasformazione |
-| Ife | Stress | S8-9: poteri +1 costo | S10: doppio costo + Sfidare Pericolo |
-| Mictlan | PF | - | PF 0: Ultimo Respiro |
+Nessun valore di Attacco: il Custode non tira.
 
-:::
-:::box[SCALE RISORSE v3.2 (segue)]{type=info}
-**Mictlan PF = 28 + (FOR × 1).** Recupera 1d4 PF post-scontro (Resilienza della Soglia, max 3/sessione).
-:::
+### Checklist di fine sessione
 
-:::box[LEGAMI: SCALA]{type=info}
+- Quale decisione ha cambiato la situazione?
+- Quale Legame è stato messo alla prova?
+- Quale risorsa ha creato pressione reale?
+- Quale pista resta aperta?
+- Quale fazione reagirà?
+- È necessario aggiornare Doom Clock, Reputazione o milestone?
+- Quale regola ha rallentato o generato dubbi?
 
-| Livello | Nome | Bonus |
-|---|---|---|
-| L1 | Conoscente | +1 a tiri di Aiutare quel PNG |
-| L2 | Alleato | +1 ongoing in scene con quel PNG |
-| L3 | Legame Profondo | +2 + risorsa morale 1/sessione |
-
-**Rompere un Legame:** richiede tradimento o morte. Conseguenze narrative sempre.
+:::box[Regola d'oro]{type=tip}
+Se nessun esito possibile rende la storia più interessante, non chiedere un tiro. Descrivi ciò che accade e passa alla scelta successiva.
 :::

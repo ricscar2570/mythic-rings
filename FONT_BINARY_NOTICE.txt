@@ -1,0 +1,1 @@
+I file binari dei font non sono inclusi. Eseguire `npm ci`: lo script `scripts/sync_fonts.js` li materializza dalle dipendenze @fontsource bloccate in package-lock.json.

@@ -1,0 +1,7 @@
+id,asset_or_content,type,author_or_owner,source,license_or_contract,commercial_use,modification,attribution,territory,expiry,evidence,status,notes
+MR-TEXT-001,Testo principale,testo,Riccardo Scaringi,repository,da confermare,sì,sì,Riccardo Scaringi,mondiale,,da archiviare,verification-required,Verificare contributi e revisioni di terzi
+MR-BUILD-001,Codice di build,codice,Riccardo Scaringi / contributori,repository,da deliberare,da confermare,da confermare,da definire,mondiale,,cronologia Git,verification-required,Separare licenza del codice e licenza del gioco
+MR-FONT-001,EB Garamond,font,Georg Duffner e contributori,pacchetto npm/licenza font,OFL da verificare,sì,sì,secondo licenza,mondiale,,copia licenza,verification-required,Non distribuire file font all'utente finale fuori dagli artefatti consentiti
+MR-FONT-002,Cinzel,font,autore e contributori da verificare,pacchetto npm/licenza font,OFL da verificare,sì,sì,secondo licenza,mondiale,,copia licenza,verification-required,Controllare Cinzel Decorative separatamente
+MR-NAME-001,Mythic Rings,nome commerciale,Riccardo Scaringi,progetto,ricerca marchi richiesta,da confermare,n/a,n/a,territori di vendita,,report ricerca,verification-required,Verificare anteriorità e confondibilità
+MR-PBTA-001,Dicitura ispirato ai principi Powered by the Apocalypse,attribuzione/descrizione,da verificare,documentazione pubblica,verifica legale richiesta,da confermare,n/a,da definire,mondiale,,parere/nota,verification-required,Non usare loghi o testi non autorizzati

@@ -1,86 +1,81 @@
 /**
- * MYTHIC RINGS v3 — Assembler
- * Converte il DOCX in PDF tramite LibreOffice headless
- * e lo copia nella cartella dist/
+ * Mythic Rings - build PDF ufficiale a due passaggi.
+ * 1. converte il DOCX preliminare;
+ * 2. estrae i numeri di pagina dei capitoli;
+ * 3. rigenera il DOCX con indice paginato;
+ * 4. converte e post-processa il PDF definitivo.
  */
-
 'use strict';
-
-const { execSync, spawnSync } = require('child_process');
+const { execFileSync, spawnSync } = require('child_process');
 const path = require('path');
-const fs   = require('fs');
-const glob = require('glob');
+const fs = require('fs');
+const { loadMeta } = require('./project-meta');
+const PROJECT = loadMeta(__dirname);
 
-const DIST_DIR = path.resolve(process.argv[2] || './dist');
-const PDF_DIR  = path.join(DIST_DIR, 'pdf');
-
-function log(msg)  { console.log('\x1b[36m' + msg + '\x1b[0m'); }
-function ok(msg)   { console.log('\x1b[32m  ✅  ' + msg + '\x1b[0m'); }
-function err(msg)  { console.error('\x1b[31m  ✗  ' + msg + '\x1b[0m'); }
+const distDir = path.resolve(process.argv[2] || './dist');
+const docxPath = path.join(distDir, `${PROJECT.output_basename}.docx`);
+const pdfPath = path.join(distDir, `${PROJECT.output_basename}.pdf`);
+const tocPath = path.join(distDir, 'toc-pages.json');
 
 function findLibreOffice() {
-  const candidates = [
-    'libreoffice', 'soffice',
-    '/usr/bin/libreoffice', '/usr/bin/soffice',
-    '/Applications/LibreOffice.app/Contents/MacOS/soffice',
-    'C:\\Program Files\\LibreOffice\\program\\soffice.exe',
-  ];
+  const candidates = ['libreoffice', 'soffice', '/usr/bin/libreoffice', '/usr/bin/soffice', '/Applications/LibreOffice.app/Contents/MacOS/soffice', 'C:\\Program Files\\LibreOffice\\program\\soffice.exe'];
   for (const c of candidates) {
-    try {
-      execSync(`"${c}" --version`, { stdio: 'ignore' });
-      return c;
-    } catch {}
+    try { execFileSync(c, ['--version'], { stdio: 'ignore' }); return c; } catch (_) {}
   }
   return null;
 }
 
-function buildPDF() {
-  log('\n📄 MYTHIC RINGS v3 — PDF Builder\n');
-
-  const docxFiles = glob.sync(`${DIST_DIR}/*.docx`);
-  if (!docxFiles.length) {
-    err(`Nessun DOCX trovato in ${DIST_DIR}. Esegui prima: npm run build`);
-    process.exit(1);
-  }
-
-  const lo = findLibreOffice();
-  if (!lo) {
-    err('LibreOffice non trovato. Installalo con: sudo apt-get install libreoffice');
-    err('macOS: brew install --cask libreoffice');
-    process.exit(1);
-  }
-  log(`LibreOffice: ${lo}`);
-
-  if (!fs.existsSync(PDF_DIR)) fs.mkdirSync(PDF_DIR, { recursive: true });
-
-  for (const docx of docxFiles) {
-    const basename = path.basename(docx, '.docx');
-    log(`  Conversione: ${path.basename(docx)}`);
-
-    const result = spawnSync(lo, [
-      '--headless',
-      '--convert-to', 'pdf',
-      '--outdir', PDF_DIR,
-      docx,
-    ], { stdio: 'pipe', timeout: 120_000 });
-
-    if (result.status !== 0) {
-      err(`Conversione fallita: ${result.stderr?.toString()}`);
-      process.exit(1);
-    }
-
-    const pdfPath = path.join(PDF_DIR, basename + '.pdf');
-    if (fs.existsSync(pdfPath)) {
-      const kb = Math.round(fs.statSync(pdfPath).size / 1024);
-      ok(`${basename}.pdf  (${kb} KB)`);
-    }
-  }
-
-  // Lista PDF generati
-  const pdfs = glob.sync(`${PDF_DIR}/*.pdf`);
-  console.log(`\n  PDF generati: ${pdfs.length}`);
-  pdfs.forEach(p => console.log(`    ${path.basename(p)}`));
-  console.log('');
+function fail(result, label) {
+  console.error(result.stderr || result.stdout || label);
+  process.exit(1);
 }
 
-buildPDF();
+function convert(lo, profileName) {
+  const profile = path.join(distDir, profileName);
+  fs.mkdirSync(profile, { recursive: true });
+  if (fs.existsSync(pdfPath)) fs.unlinkSync(pdfPath);
+  const result = spawnSync(lo, [
+    `-env:UserInstallation=file://${profile.replace(/\\/g, '/')}`,
+    '--headless', '--convert-to', 'pdf', '--outdir', distDir, docxPath,
+  ], { encoding: 'utf8', timeout: 300000 });
+  if (result.status !== 0) fail(result, 'Conversione PDF fallita.');
+  if (!fs.existsSync(pdfPath)) {
+    console.error(`LibreOffice non ha prodotto il file atteso: ${pdfPath}`);
+    process.exit(1);
+  }
+}
+
+if (!fs.existsSync(docxPath)) {
+  console.error(`DOCX non trovato: ${docxPath}. Esegui npm run build:docx.`);
+  process.exit(1);
+}
+const lo = findLibreOffice();
+if (!lo) {
+  console.error('LibreOffice non trovato: necessario per la build PDF ufficiale.');
+  process.exit(1);
+}
+fs.mkdirSync(distDir, { recursive: true });
+console.log(`\nBuild ${PROJECT.title} ${PROJECT.version} - PDF a due passaggi\n`);
+
+// Passaggio 1: PDF preliminare per individuare le pagine reali.
+convert(lo, '.lo-profile-pass1');
+const extract = spawnSync('python3', [path.join(__dirname, 'extract_toc_pages.py'), pdfPath, tocPath], { encoding: 'utf8', timeout: 120000 });
+if (extract.status !== 0) fail(extract, 'Estrazione indice fallita.');
+process.stdout.write(extract.stdout || '');
+
+// Rigenera il DOCX con l'indice paginato.
+const rebuild = spawnSync(process.execPath, [path.join(__dirname, 'engine.js'), path.join(PROJECT.root, 'chapters'), distDir], {
+  cwd: PROJECT.root,
+  encoding: 'utf8',
+  timeout: 300000,
+  env: { ...process.env, MYTHIC_TOC_PAGES: tocPath },
+});
+if (rebuild.status !== 0) fail(rebuild, 'Rigenerazione DOCX con indice fallita.');
+process.stdout.write(rebuild.stdout || '');
+
+// Passaggio 2: PDF finale.
+convert(lo, '.lo-profile-pass2');
+const post = spawnSync('python3', [path.join(__dirname, 'postprocess_pdf.py'), pdfPath], { encoding: 'utf8', timeout: 120000 });
+if (post.status !== 0) fail(post, 'Post-processing PDF fallito.');
+process.stdout.write(post.stdout || '');
+console.log(`PDF generato: ${pdfPath} (${Math.round(fs.statSync(pdfPath).size / 1024)} KB)\n`);

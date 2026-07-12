@@ -4,1116 +4,414 @@ chapter: 5
 part: "Parte II: Le Regole"
 section: "Le Regole"
 epigraph: "Le regole sono semplici. La vita è complessa."
-tags: []
-status: finale
-version: 3.2
+tags: [regole, sistema, combattimento]
+status: beta
+version: 0.9.0-beta.1
 ---
 
-:::box[Aggiornamenti v3.2 - Regole Affinate]{type=danger}
-Le seguenti regole sono state affinate tramite test di simulazione (Monte Carlo) e playtest:
+## Come si gioca
+
+*Mythic Rings* è un gioco di ruolo urban fantasy narrativo e tattico. La fiction stabilisce ciò che è possibile; le regole intervengono quando un'azione è rischiosa, incerta e capace di cambiare davvero la situazione. Il Custode descrive il mondo e interpreta le minacce. I giocatori descrivono ciò che fanno i Guardiani. Solo i giocatori tirano i dadi.
+
+Il ciclo di gioco è semplice:
+
+1. il Custode presenta una situazione concreta;
+2. i giocatori fanno domande e dichiarano azioni;
+3. il Custode chiarisce rischi, posizione ed effetti prevedibili;
+4. se una Mossa viene innescata, il giocatore tira;
+5. l'esito modifica la fiction e genera una nuova situazione.
+
+:::box[Esempio: il ciclo di gioco]{type=example}
+**Custode:** «Nel magazzino di Lambrate sentite una respirazione irregolare al piano superiore. La scala è marcia e il buio sembra inghiottire la luce.»  
+**Leila:** «Mi fondo nelle ombre e salgo senza farmi notare.»  
+**Custode:** «La scala può cedere e chi è sopra sta ascoltando. Stai usando Fondersi nelle Ombre: il costo è 0 Corruzione; tira +FAT.»  
+Leila ottiene 8. Il potere funziona, ma il Custode applica una conseguenza prevista: la scala scricchiola e la minaccia sa che qualcuno sta salendo.
 :::
 
-:::box[Aggiornamenti v3.2 - Regole Affinate (segue)]{type=danger}
-**Stress Overflow, Penalità Progressiva** *(v3.2)* - **Stress 8-9:** I poteri costano +1 risorsa aggiuntiva. La magia è instabile. - **Stress 10, Burnout:** I poteri sono SOSPESI (non bloccati). Puoi ancora usarli, ma ogni attivazione costa il doppio E richiede un tiro su Sfidare Pericolo +FAT: su 6- il potere esplode (danno 1d6 al Guardiano, scena interrotta).
+## Principi fondamentali
+
+### La fiction viene prima
+
+Non dichiarare il nome di una Mossa come se fosse un pulsante. Descrivi l'azione del Guardiano, l'obiettivo e il metodo. Il Custode stabilisce se la Mossa si attiva e quale Caratteristica è pertinente.
+
+«Attacco con +FOR» non basta. «Carico il demone, cerco di inchiodarlo alla parete con la lancia» rende chiaro che cosa accade e quali conseguenze sono plausibili.
+
+### Si tira soltanto quando serve
+
+Non tirare se:
+
+- l'azione è sicura e alla portata del Guardiano;
+- l'esito è già determinato dalla fiction;
+- non esiste una conseguenza interessante;
+- il tiro ripeterebbe senza cambiamenti una prova già risolta.
+
+Quando un'azione è impossibile, il Custode lo dichiara e spiega quale condizione dovrebbe cambiare per renderla possibile. Quando è possibile senza rischio, accade. Quando è possibile ma rischiosa, si tira.
+
+### Un 6− cambia la situazione
+
+Un 6− non significa «non succede nulla». Il Custode compie una Mossa coerente con ciò che era stato annunciato: infligge un costo, rivela un pericolo, separa il gruppo, consuma una risorsa, peggiora la posizione o rende concreta una minaccia.
+
+### Il Custode è fan dei Guardiani
+
+Essere fan non significa proteggerli dalle conseguenze. Significa offrire rischi leggibili, rispettare le loro decisioni e rendere significativi successi, fallimenti e sacrifici. Una conseguenza non deve essere arbitraria né scollegata dall'azione che l'ha provocata.
+
+## Ruoli al tavolo
+
+### I giocatori
+
+Ogni giocatore controlla un Guardiano. Descrive le sue azioni, interpreta desideri e paure, aggiorna risorse e condizioni, formula domande e contribuisce alla storia senza decidere unilateralmente il mondo esterno.
+
+### Il Custode
+
+Il Custode:
+
+- presenta Milano come un luogo vivo;
+- interpreta PNG, creature e fazioni;
+- chiarisce rischi e conseguenze;
+- applica le Mosse del Custode;
+- mantiene la coerenza delle regole;
+- distribuisce l'attenzione tra i giocatori;
+- non tira dadi per gli avversari.
+
+:::box[Regola fondamentale: il Custode non tira]{type=rule}
+Gli avversari non effettuano tiri di Attacco o Difesa. Le loro azioni diventano concrete attraverso gli esiti 7–9 e 6−, le minacce annunciate e ignorate, e l'attivazione delle Mosse del Custode. Un nemico è pericoloso perché la fiction, il danno, i tag e le sue Mosse lo rendono tale, non perché possiede un bonus da tirare.
 :::
 
-:::box[Aggiornamenti v3.2 - Regole Affinate (segue)]{type=danger}
-Il personaggio è chiaramente al limite, usarlo è una scelta drammatica consapevole, non un muro. Finché lo Stress rimane a 10, non recuperi PF naturalmente.
-:::
+## Le cinque Caratteristiche
 
-:::box[Aggiornamenti v3.2 - Regole Affinate (segue)]{type=danger}
-**Corruzione Overflow, Penalità Progressiva** *(v3.2)*
-- **Corruzione 6:** I poteri L3+ costano +1 Corruzione aggiuntiva.
-- **Corruzione 7:** I poteri L2+ costano +1 Corruzione aggiuntiva. I poteri L1 restano al costo normale.
-- **Corruzione 8, Trasformazione:** Automatica e immediata. Non aspettare fine scena. Il giocatore perde il controllo del personaggio.
-:::
+I valori iniziali sono +2, +1, +1, 0 e −1, distribuiti tra le cinque Caratteristiche. Il limite ordinario è +3.
 
-:::box[Aggiornamenti v3.2 - Regole Affinate (segue)]{type=danger}
-*Rationale design: in un sistema PbtA i personaggi devono poter agire anche al limite: il dramma nasce da scelte rischiose, non da blocchi totali. La penalità progressiva mantiene la tensione senza rendere il personaggio passivo.*
+| Sigla | Nome | Ambito principale |
+|---|---|---|
+| FOR | Forza | Potenza, resistenza, lotta, sopportazione fisica |
+| CUO | Cuore | Coraggio, riflessi, agilità, istinto |
+| MEN | Mente | Percezione, analisi, memoria, conoscenza |
+| CAR | Carisma | Presenza, empatia, comando, persuasione |
+| FAT | Fato | Connessione con l'Anello, magia, destino |
 
-**Resurrezione Limite:** Un personaggio può essere riportato in vita al massimo una volta per sessione. La seconda morte nella stessa sessione è definitiva.
-:::
+La descrizione dell'azione può cambiare la Caratteristica usata. Sparare con calma da una posizione preparata può richiedere MEN; sparare d'istinto mentre si precipita da una finestra richiede CUO.
 
+## Il tiro base
 
-Parte II
+Quando una Mossa viene innescata:
 
-Regole Base
+1. tira **2d6**;
+2. somma la Caratteristica indicata;
+3. applica i modificatori ammessi;
+4. confronta il totale con le fasce di risultato.
 
-*«Le regole sono semplici. La vita è complessa.»*
+| Risultato | Esito |
+|---|---|
+| 10+ | Successo pieno: ottieni ciò che cercavi senza il costo principale temuto |
+| 7–9 | Successo con costo: ottieni l'effetto, ma accetti una scelta, una riduzione o una complicazione |
+| 6− | Il Custode compie una Mossa coerente con la fiction |
 
-**In Questo Capitolo:** Come funziona la conversazione al tavolo, le
-cinque caratteristiche, il sistema 2d6 con i tre risultati possibili, i
-Punti Ferita e il danno, i Legami come motore narrativo e meccanico, lo
-Stress e la Corruzione. Tutto ciò che serve per giocare - in un unico
-capitolo.
+### Risultati naturali
 
-## COME SI GIOCA
+Un **12 naturale**, cioè 12 sui due dadi prima dei modificatori, concede un beneficio aggiuntivo appropriato alla Mossa. In un attacco puoi scegliere **+1d6 danno** invece del beneficio ordinario.
 
-La Conversazione
+Un **2 naturale** conta sempre come 6−. Il Custode può compiere una Mossa dura, ma deve rispettare ciò che era stato annunciato e ciò che è plausibile nella scena.
 
-Mythic Rings è un gioco di conversazione. Non c'è tabellone, non ci sono
-pedine, non c'è una griglia esagonale. C'è solo un gruppo di persone
-sedute attorno a un tavolo (o connesse via audio) che raccontano una
-storia insieme. Il Custode descrive il mondo. I giocatori descrivono
-cosa fanno i loro personaggi. E quando un'azione è rischiosa e incerta,
-i dadi decidono cosa succede.
+### Limite dei modificatori
 
-Il gioco segue un loop naturale: il Custode presenta una situazione, i
-giocatori reagiscono, le conseguenze generano nuove situazioni. Questo
-loop si ripete per tutta la sessione, accelerando nei momenti di azione
-e rallentando nelle scene di dialogo e investigazione.
+Il modificatore totale, Caratteristica inclusa, non può superare **+4** né scendere sotto **−3**.
 
-:::box[Esempio: Il Loop di Gioco]{type=info}
-**Custode:** «Entrate nel magazzino abbandonato di Lambrate. È buio, odore di muffa e qualcosa di metallico - sangue, forse. Sentite una respirazione pesante dal secondo piano.» **Marco (Avalon):** «Accendo la luce del mio Anello. Illumino la scala.» **Custode:** «Una luce dorata emana dall'Anello. Vedi una scala pericolante, metà dei gradini sono marci. La respirazione si interrompe. Silenzio.»
-:::
+- Applica al massimo un bonus da Legame.
+- Applica al massimo un bonus da Aiutare.
+- Bonus provenienti dalla stessa fonte non si cumulano.
+- L'Escalation non modifica mai il tiro.
+- Vantaggi ulteriori migliorano posizione, effetto o informazioni, non il numero.
 
-:::box[Esempio: Il Loop di Gioco (segue)]{type=info}
-**Leila (Umbra):** «Mi fondo nelle ombre. Salgo invisibile.» **Custode:** «Bene - è un potere L1, quindi nessun costo Corruzione. Tira +FAT per vedere quanto funziona.» **Leila:** Tira 2d6+2 = 8. «Ottengo 8.» **Custode:** «7--9, successo parziale. Sei invisibile, MA la scala scricchiola sotto il tuo peso. Chi è sopra sa che qualcuno sta salendo. Cosa fai?» \...e il gioco continua.
-:::
-
-I Quattro Principi Fondamentali
-
-Mythic Rings si fonda su quattro principi che lo distinguono dai giochi
-di ruolo tradizionali. Non sono regole opzionali - sono la filosofia
-del gioco. Se li segui, il gioco funziona. Se li ignori, le meccaniche
-perdono senso.
-
-## 1. La Fiction Guida
-
-Prima di tirare un dado, descrivi cosa fai. Le azioni derivano dalla
-narrativa, non dalle statistiche sulla scheda. Non dici «uso il mio +2
-FOR per attaccare» - dici «carico il demone con la spada, miro al
-punto dove l'armatura è rotta». Il Custode interpreta la tua azione
-narrativa e determina quale mossa si attiva e quale caratteristica usi.
-A volte la risposta sarà diversa da quella che ti aspettavi: caricare un
-demone in un corridoio stretto potrebbe essere +CUO (agilità) invece che
-+FOR.
-
-## 2. Le Mosse Innescano i Tiri
-
-Non tiri «perché sì». Tiri quando la tua azione corrisponde a una Mossa
-- e ogni mossa ha un trigger specifico. «Attaccare» si attiva quando
-infliggi danno con violenza. «Leggere la Situazione» si attiva quando
-studi attentamente una scena. «Persuadere» si attiva quando cerchi di
-convincere qualcuno con argomenti. Se la tua azione non corrisponde a
-nessuna mossa, semplicemente accade - o il Custode ti chiede di
-precisare cosa fai.
-
-## 3. I Fallimenti Sono Interessanti
-
-Tirare 6-- non significa «non succede nulla». Significa «succede
-qualcosa di diverso da ciò che volevi, e probabilmente peggiore». Un
-fallimento è un motore narrativo: il Custode fa una mossa dura -
-introduce un pericolo, separa il gruppo, rivela una verità scomoda,
-infligge danno. I fallimenti sono ciò che rende le storie avvincenti.
-Non temere di tirare male.
-
-## 4. Descrivi l'Azione, Non il Risultato
-
-Non dire «voglio convincerlo» - dici «gli dico: tua figlia sarebbe
-orgogliosa se ci aiutassi, mentre gli mostro la foto». Descrivi l'azione
-concreta, non il risultato desiderato. I dadi decidono il risultato.
-Questa regola vale anche per il Custode: non dici «il demone ti colpisce
-per 6 danni» prima che il giocatore reagisca. Dici «il demone balza
-verso di te, artigli tesi. Cosa fai?» e lasci che il giocatore scelga la
-sua reazione.
-
-Ruoli al Tavolo
-
-## I Giocatori
-
-Ogni giocatore controlla un Guardiano. Il tuo compito è semplice:
-descrivi cosa fa il tuo personaggio, reagisci alle situazioni che il
-Custode presenta, tira i dadi quando richiesto, e interpreta il tuo
-personaggio - le sue paure, i suoi desideri, i suoi difetti. Fai
-domande quando sei confuso. Il Custode è lì per aiutarti, non per
-batterti.
-
-## Il Custode
-
-Il Custode è narratore, arbitro e fan dei personaggi. Descrive il mondo,
-interpreta i PNG, applica le regole, e fa domande ai giocatori per
-costruire la storia insieme. Il Custode non è un avversario: non «vince»
-se i PG muoiono, non nasconde informazioni per sadismo, non combatte
-contro i giocatori. Il Custode presenta sfide interessanti e tifa perché
-i Guardiani le superino - con un prezzo.
-
-:::box[Il Custode NON È l'Antagonista]{type=warn}
-Il Custode presenta sfide, MA vuole che i PG abbiano una possibilità
-reale di successo. Sei arbitro imparziale, narratore, e fan. Se un PG
-muore, deve essere perché la storia lo richiedeva e le scelte lo
-hanno portato lì - non perché hai deciso di punirlo.
-Regola d'oro: se una scelta non è interessante in nessun risultato,
-non farla tirare.
-:::
-
-**Regola Fondamentale: Solo i giocatori tirano i dadi.** Il Custode non
-tira mai. Quando un PNG attacca, il giocatore tira Difendere. Quando un
-PNG mente, il giocatore tira per accorgersene. Questo tiene il focus sui
-PG, accelera il gioco e aumenta la tensione: ogni tiro è una scelta del
-giocatore, non del Custode.
-
-## LE CINQUE CARATTERISTICHE
-
-Ogni Guardiano ha cinque caratteristiche che definiscono le sue
-capacità. I valori vanno da -1 (debole) a +3 (eccezionale). Alla
-creazione distribuisci +2, +1, +1, 0, -1 tra le cinque stat. Durante il
-gioco, spendendo XP, puoi aumentarle fino a un massimo di +3 (costa 5 XP
-per punto, con giustificazione narrativa).
-
-## FOR - Forza
-
-**Cosa rappresenta:** Potenza fisica, muscolatura, resistenza corporea,
-salute. FOR determina anche i tuoi Punti Ferita iniziali.
-
-**Usi FOR per:** attacchi corpo a corpo (spada, pugno, martello),
-sollevare, spingere o sfondare cose pesanti, resistere a veleni,
-malattie e fatica, reggere il dolore fisico, lotta e wrestling.
-
-:::box[FOR in Azione]{type=info}
-**FOR +2:** Kwame (Ife) solleva l'auto ribaltata per liberare la
-vittima intrappolata. Tira +FOR: 10+. L'auto si alza come se fosse di
-cartone. La donna viene estratta.
-**FOR -1:** Elena (Mictlan) tenta di sfondare la porta del magazzino.
-Tira +FOR: 5. La spalla le esplode di dolore, la porta non si muove.
-E il rumore ha attirato qualcosa.
-:::
-
-## CUO - Cuore
-
-**Cosa rappresenta:** Coraggio, istinto, riflessi, agilità, intuito
-emotivo. CUO è la stat del reagire, dello schivare, del sentire il
-pericolo prima che arrivi.
-
-**Usi CUO per:** attacchi a distanza (pistola, arco), schivare, saltare,
-acrobazie, agire d'istinto (reazioni rapide), resistere a paura e
-terrore magico, leggere le emozioni altrui istintivamente.
-
-:::box[CUO in Azione]{type=info}
-**CUO +2:** Marco (Avalon) vede la bomba ombra che sta per esplodere.
-L'istinto dice «CORRI». Tira +CUO: 11. Salta fuori dalla finestra un
-istante prima della detonazione.
-**CUO 0:** Leila (Umbra) spara al vampiro in fuga sul tetto. Tira
-+CUO: 8. Colpisce, MA non fatale - il proiettile gli attraversa la
-spalla e il vampiro scompare nella notte.
-:::
-
-## MEN - Mente
-
-**Cosa rappresenta:** Intelligenza, percezione, memoria, analisi,
-conoscenze. MEN è la stat dell'osservare, del dedurre, del sapere.
-
-**Usi MEN per:** notare dettagli nascosti (investigazione), ricordare
-informazioni (storia, occultismo, scienza), analizzare situazioni
-logicamente, resistere a illusioni mentali, decifrare codici e risolvere
-enigmi.
-
-:::box[MEN in Azione]{type=info}
-**MEN +2:** Leila (Umbra) studia la scena del crimine. Tira +MEN: 12.
-Critico! Nota il simbolo minuscolo del cultista inciso sotto
-l'intonaco - collegato a tre omicidi irrisolti. Svolta nel caso.
-**MEN -1:** Kwame (Ife) cerca di ricordare il rituale antico
-descritto in un testo Yoruba. Tira +MEN: 4. Confonde i simboli.
-L'incantesimo non funzionerà come previsto.
-:::
-
-## CAR - Carisma
-
-**Cosa rappresenta:** Fascino, persuasione, presenza, leadership, forza
-della personalità. CAR è la stat dell'influenzare, del comandare,
-dell'ispirare.
-
-**Usi CAR per:** convincere, persuadere, negoziare, intimidire con la
-sola presenza (non con la forza), comandare e ispirare alleati, sedurre
-e affascinare. CAR è la caratteristica primaria di Avalon: tutti i
-poteri Avalon usano +CAR.
-
-:::box[CAR in Azione]{type=info}
-**CAR +2:** Marco (Avalon) si rivolge alla folla terrorizzata in
-piazza Duomo. «CALMA! Siete al sicuro! Andate verso le uscite
-laterali, con ordine.» Tira +CAR: 10+. La folla si calma e obbedisce.
-**CAR 0:** Elena (Mictlan) tenta di convincere il vampiro antico a
-collaborare. Tira +CAR: 7. Il vampiro è scettico, MA ascolta la
-proposta - a una condizione.
-:::
-
-## FAT - Fato
-
-**Cosa rappresenta:** Fortuna, destino, connessione magica con l'Anello,
-sincronicità. FAT è la stat più «mistica»: alta FAT significa forte
-connessione con il mondo occulto.
-
-**Usi FAT per:** tutti i poteri magici (eccetto Avalon che usa CAR),
-colpi di fortuna, trovare cose al momento giusto, sopravvivere a
-situazioni impossibili, intuizione mistica. FAT è la caratteristica
-primaria di Umbra, Ife e Mictlan.
-
-:::box[FAT in Azione]{type=info}
-**FAT +2:** Leila (Umbra) attiva Invisibilità Parziale. Tira +FAT: 11. Perfetto. Scompare completamente nelle ombre, senza suono, senza traccia. **FAT +1:** Kwame (Ife) cerca un componente rituale raro nella bottega di via Sarpi. Tira +FAT: 9. Lo trova, MA il proprietario vuole qualcosa in cambio - non denaro. **FAT -1:** Elena (Mictlan) evoca lo spirito del testimone assassinato. Tira +FAT: 5.
-:::
-
-:::box[FAT in Azione (segue)]{type=info}
-Lo spirito appare, MA è furioso e confuso. Urla. I bicchieri nel bar esplodono.
-:::
-
-## DADI E MECCANICA CORE
-
-Il Sistema 2d6
-
-Mythic Rings usa un unico tipo di tiro: **2d6 + caratteristica**. Tiri
-due dadi a sei facce, sommi il risultato, e aggiungi il valore della
-caratteristica appropriata. Il Custode ti dice quale caratteristica
-usare in base all'azione che hai descritto.
-
-## Quando Tiri
-
-Tiri quando tre condizioni sono tutte vere: la tua azione corrisponde a
-una Mossa, il risultato è incerto (se il successo è automatico, non
-serve un tiro), e il fallimento ha conseguenze (se fallire non cambia
-nulla, non serve un tiro). Non tiri per azioni banali come attraversare
-una strada, ricaricare una pistola, o cercare un libro in biblioteca
-quando hai tre ore. Tiri solo quando la tensione esiste.
-
-## I Tre Risultati
-
-
-| Risultato | Nome | Cosa Succede |
-|---| ---|---|
-| 10+ | Successo Pieno | Ottieni ciò che vuoi, nessuna complicazione. Il miglior risultato possibile per l'azione descritta. |
-| 7--9 | Successo Parziale | Ottieni ciò che vuoi, MA con un costo, una complicazione o una scelta difficile. Il Custode offre un dilemma. |
-| 6-- | Fallimento | Non ottieni ciò che vuoi, E il Custode fa una mossa dura: introduce un pericolo, infligge danno, separa il gruppo, rivela una brutta verità. |
-
-:::box[Esempio: Tre Risultati dalla Stessa Azione]{type=info}
-**Situazione:** Marco tenta di scavalcare un muro alto 3 metri mentre è inseguito da un demone. Tira +CUO (+1). **10+ (tira 6+5 = 12):** «Corri, salti, ti aggrappi al bordo, ti tiri su in un movimento fluido. Sei oltre il muro. Il demone dietro urla frustrato - troppo lento.» **7--9 (tira 3+4 = 8):** «Scavalchi il muro, MA l'atterraggio è goffo. La caviglia si torce: -1 ongoing finché non riposi.
-:::
-
-:::box[Esempio: Tre Risultati dalla Stessa Azione (segue)]{type=info}
-E senti il demone che si arrampica dietro di te - hai 10 secondi di vantaggio.»
-
-danno. Il demone ti raggiunge. Artigli tesi, sorriso di troppi denti.
-Cosa fai?»
-:::
-
-## Modificatori Situazionali
-
-Normalmente tiri 2d6 + caratteristica. Ma il Custode può applicare
-modificatori basati sulle circostanze:
-
-
-| Situazione | Modificatore |
-|---| ---|
-| Condizioni perfette, preparazione eccellente | +1 |
-| Aiuto da un alleato (mossa Aiutare) | +1 |
-| Legame rilevante con PNG coinvolto (bonus del Tipo) | +1 per livello |
-| Condizioni difficili (buio, ferito, sotto pressione) | -1 |
-| Condizioni estreme (quasi impossibile) | -2 |
-| Ostacolato da nemico (mossa Ostacolare) | -1 |
-
-**Limite:** I modificatori totali non dovrebbero mai superare ±3. Se
-un'azione richiede più di +3 per avere senso, è automatica. Se richiede
-meno di -3, è narrativamente impossibile.
-
-## Risultati Speciali
-
-:::box[🎲 Doppio 6 - Successo Critico]{type=tip}
-Se tiri un 12 naturale (6+6), è un successo critico: ottieni il
-risultato 10+ PIÙ un beneficio extra. Il danno è moltiplicato ×1.5,
-ottieni informazioni bonus, eviti completamente un costo, o l'azione
-è così spettacolare da cambiare le condizioni della scena. Il Custode
-descrive un momento cinematico.
-:::
-
-:::box[🎲 Doppio 1 - Fallimento Critico]{type=danger}
-Se tiri un 2 naturale (1+1), è un fallimento critico: conta come 6--
-MA peggio. Il Custode fa una mossa dura con conseguenze severe.
-Narrativamente è un disastro epico - ma anche un momento che i
-giocatori ricorderanno per anni.
+:::box[Esempio: oltre il limite]{type=example}
+Marco ha CAR +3, riceve +1 da un Legame e +1 da Aiutare. Il totale resta +4. Il secondo vantaggio non scompare: il Custode può rendere l'effetto più ampio, ridurre il costo di un 7–9 o confermare una posizione particolarmente favorevole.
 :::
 
 ## Punti Fato
 
-Ogni PG ha **2 Punti Fato per sessione** (si rigenerano all'inizio di
-ogni sessione). Puoi spendere 1 Punto Fato per **Forzare la Fortuna**:
-ritira entrambi i dadi e tieni il nuovo risultato (anche se peggiore).
-Puoi anche spendere un Punto Fato per: attivare certi effetti speciali
-di Mosse o Legami, o evitare un colpo di grazia (il Custode decide come
-narrativamente).
+Ogni Guardiano inizia ogni sessione con **2 Punti Fato**. Il massimo è 2 e i punti non utilizzati non si conservano.
 
-I Punti Fato sono il «paracadute» del giocatore. Non usarli alla leggera
-- ma non conservarli per sempre. Il Fato premia chi lo invoca nei
-momenti cruciali.
+Dopo aver visto un tiro, ma prima che le conseguenze siano applicate, puoi spendere 1 Punto Fato per **ritirare un solo d6**. Il nuovo valore sostituisce il dado scelto anche se è peggiore.
 
-## PUNTI FERITA E DANNO
+I Punti Fato:
 
-Punti Ferita
+- non vengono guadagnati liberamente durante la sessione;
+- non concedono azioni aggiuntive;
+- non annullano automaticamente danno o morte;
+- possono essere usati su Ultimo Respiro secondo la normale procedura.
 
-I PF rappresentano salute, stamina, fortuna e volontà di vivere. Perdere
-10 PF non significa «10 tagli» - significa un colpo devastante che hai
-quasi schivato, l'adrenalina che crolla, la paura che ti paralizza un
-istante. Solo quando arrivi a 0 PF subisci una ferita vera,
-potenzialmente fatale.
+## Punti Ferita
 
-**PF Iniziali:** 20 + (FOR × 2) per Avalon, Umbra e Ife. 28 + (FOR × 1)
-per Mictlan.
+I Punti Ferita misurano la capacità di restare operativi, non soltanto lesioni anatomiche.
 
-## Subire Danno
+- Avalon, Umbra e Ife: **20 + (FOR × 2)**.
+- Mictlan: **28 + FOR**.
 
-Quando qualcosa ti ferisce, subisci un danno. Formula: **Danno Effettivo
-= Danno Base - Armatura**. L'Armatura è un valore fisso che riduce il
-danno (da 0 a 5+ con equipaggiamento avanzato). Esistono tre tipi di
-danno:
+A 0 PF si attiva immediatamente **Ultimo Respiro**. I PF non scendono sotto 0 ai fini del conteggio.
 
+## Danno e Armatura
 
-| Tipo | Descrizione | L'Armatura Protegge? |
+Il danno effettivo è:
+
+> **danno inflitto − Armatura applicabile, minimo 1**, salvo immunità esplicita.
+
+### Tipi di danno
+
+| Tipo | Protezione applicabile |
+|---|---|
+| Fisico | Armatura fisica o mistica |
+| Magico | Soltanto Armatura mistica |
+| Puro | Nessuna Armatura |
+
+### Limiti di Armatura
+
+- Armatura da equipaggiamento: massimo 3.
+- Armatura totale ordinaria: massimo 4.
+- Armatura dei boss: massimo 2; la loro resistenza deriva da PF, fasi e Mosse.
+- Si usa la migliore Armatura pertinente, non la somma di tutte le fonti.
+- Un effetto temporaneo può aggiungere al massimo +1 e non si cumula con effetti identici.
+
+:::box[Esempio: calcolare il danno]{type=example}
+Elena subisce 2d6 danni fisici e il risultato è 8. Indossa Armatura 2: perde 6 PF. Se il danno fosse magico e l'Armatura non fosse mistica, perderebbe tutti gli 8 PF. Un danno puro ignorerebbe comunque ogni protezione.
+:::
+
+### Danno, vulnerabilità e immunità
+
+Una vulnerabilità deve indicare il proprio effetto: per esempio +1d6 danno, perdita di una capacità o impossibilità di rigenerare. Evita moltiplicatori e frazioni durante il gioco. Un'immunità annulla il danno del tipo specificato, ma non impedisce automaticamente conseguenze narrative come essere spinto, intrappolato o separato.
+
+## Condizioni
+
+Una Condizione descrive un ostacolo persistente: **Accecato, Immobilizzato, In preda al panico, Stordito, Avvelenato**, o una formulazione specifica della scena.
+
+Ogni Condizione deve indicare:
+
+- che cosa impedisce o rende rischioso;
+- come può essere rimossa;
+- quando il Custode la può sfruttare.
+
+Una Condizione non impone automaticamente un modificatore. Prima modifica la fiction; soltanto se una Mossa lo richiede può tradursi in −1, nel rispetto del limite totale.
+
+## Legami
+
+Un Legame rappresenta una relazione capace di cambiare le decisioni del Guardiano. Ogni Legame possiede un **Tipo** e un **Livello** da 0 a 3.
+
+| Livello | Effetto |
+|---|---|
+| 0 | Il rapporto è spezzato o non più significativo; nessun bonus |
+| 1 | +1 quando Tipo e persona sono direttamente coinvolti |
+| 2 | Il bonus diventa +2 |
+| 3 | Il bonus resta +2; si sbloccano capacità speciale e risorsa morale |
+
+Un solo Legame può modificare lo stesso tiro. La persona legata deve essere direttamente coinvolta e il Tipo deve essere pertinente: ricordare genericamente qualcuno non basta.
+
+### Tipi di Legame
+
+| Tipo | Quando è pertinente | Capacità di livello 3 |
 |---|---|---|
-| Fisico | Spade, proiettili, artigli, cadute, esplosioni | Sì - qualsiasi tipo di Armatura |
-| Magico | Fuoco mistico, fulmini, energia arcana, maledizioni | Solo Armatura Magica (amuleti, barriere) |
-| Puro | Psichico, necromantico, drenaggio vitale | No - ignora sempre l'Armatura |
+| Protettore | Quando rischi per difendere la persona legata | **Interposizione:** una volta per sessione prendi al suo posto una conseguenza fisica appena annunciata |
+| Confidente | Quando ti apri, ti ricomponi o resisti grazie al suo sostegno | **Catarsi:** una volta per sessione, dopo una scena sincera, riduci di 1d4 lo Stress |
+| Rivale | Quando affronti un rischio per superarlo o dimostrargli qualcosa | **Sprone:** una volta per sessione ritira un dado di una Mossa pertinente, senza spendere Fato |
+| Mentore | Quando applichi direttamente un insegnamento o una conoscenza ricevuta | **Intuizione:** una volta per sessione poni una domanda aggiuntiva dopo Leggere la Situazione o Investigare |
+| Amato | Quando agisci per proteggerlo, raggiungerlo o mantenere una promessa fatta a lui | **Ancora:** una volta per sessione ignora 1 Stress appena ottenuto o resta cosciente fino alla fine della scena nonostante una Condizione |
 
-## Condizioni e Ferite
+Le capacità di Legame non modificano Ultimo Respiro, che resta un tiro senza bonus.
 
+### Spezzare e far crescere un Legame
 
-| PF Rimanenti | Condizione | Effetto |
-|---| ---|---|
-| 50%+ max | Sano | Nessuna penalità. |
-| 25--49% | Ferito | Nessuna penalità meccanica, ma descrivi le ferite: sangue, lividi, dolore. |
-| 1--24% | Gravemente Ferito | -1 a tutti i tiri. Movimento ridotto. Zoppichi, respiro affannoso. |
-| 0 | Morente | Tira Ultimo Respiro (vedi Capitolo Combattimento). |
+Un Legame cresce alla fine di una sessione se la relazione è stata messa alla prova e trasformata in modo significativo. Il Custode e il gruppo confermano insieme il passaggio.
 
-## Recuperare PF
+Quando morte, tradimento o separazione definitiva spezzano il rapporto, il Livello scende a 0 e il Guardiano subisce 2 Stress. Il rapporto può essere ricostruito soltanto attraverso la fiction.
 
-**Riposo Notturno (8 ore sicure):** Recuperi 1d4 PF.
+## Riprendersi
 
-**Riposo Lungo (24 ore di relax):** Recuperi 2d6 PF.
+Quando trascorri almeno 10 minuti ininterrotti in un luogo relativamente sicuro per curarti e ricomporti, tira **+FOR**.
 
-**Guarigione Magica:** Poteri Avalon e Ife possono guarire
-immediatamente (vedi Capitolo Poteri).
+Un Confidente L2+ che ti assiste attivamente concede +1, una sola volta per sessione per quel Legame.
 
-**Cure Mediche:** Ospedale o medico esperto: 1d6 PF al giorno per una
-settimana.
+- **10+:** recuperi 1d6 PF e riduci lo Stress di 1.
+- **7–9:** scegli: recuperi 1d4 PF oppure riduci lo Stress di 1.
+- **6−:** non recuperi; il Custode mostra un pericolo, un costo o un'urgenza con una Mossa morbida.
 
-**Medikit:** Uso immediato, 1d6 PF. Richiede 10 minuti.
+Se recuperi PF e consumi un medikit, ottieni 2 PF aggiuntivi. Puoi attivare Riprendersi al massimo una volta per scena o per sosta nella stessa location.
 
-## LEGAMI - REGOLE MECCANICHE
+## Stress
 
-I Legami non sono solo narrative. Sono una risorsa meccanica concreta
-che premia il roleplay relazionale - la parte più distintiva di Mythic
-Rings. Questa sezione dettaglia le regole per applicare, sviluppare e
-rompere i Legami.
+Lo Stress misura esaurimento, pressione emotiva e costo spirituale. Va da 0 a 10. Avalon e Ife lo usano come risorsa primaria; ogni Guardiano può comunque subirlo per eventi traumatici.
 
-## Quando Si Applica il Bonus Legame
+### Acquisire Stress
 
-Il bonus del Legame si applica quando sono vere tutte queste condizioni: il PNG è direttamente coinvolto nell'azione, stai agendo per, con o contro quel PNG, la situazione ha uno stake emotivo rilevante per la relazione, e il Tipo del Legame corrisponde all'azione.
+Lo Stress aumenta quando:
 
-**NON si applica quando:** il PNG non ha nulla a che fare con la situazione, l'azione è generica, o la connessione emotiva non è rilevante.
+- un potere ne prevede il costo;
+- una conseguenza lo infligge;
+- il Guardiano assiste a un orrore capace di spezzarne le certezze;
+- tradisce un valore o fallisce una responsabilità centrale, se il gruppo ritiene la conseguenza appropriata.
 
-**Tetto meccanico *(v3.2)*:** Il bonus Legame applicabile a un singolo tiro è **massimo +2**, indipendentemente dal livello del Legame. Questo mantiene la tensione del 7-9 anche con relazioni profonde.
+### Soglie
 
-Il livello L3 di un Legame non viene "sprecato": conferisce accesso a benefici narrativi esclusivi (vedi sotto) e al bonus morale 1/sessione, ma non aumenta il bonus meccanico oltre +2.
+- **0–7:** nessun costo aggiuntivo.
+- **8–9:** i poteri che costano Stress richiedono 1 Stress aggiuntivo.
+- **10, Burnout:** un potere può ancora essere usato, ma il costo è raddoppiato e il Guardiano deve Sfidare il Pericolo +FAT. Con 6− subisce 1d6 danni puri e il potere non produce l'effetto desiderato.
 
-| Livello Legame | Bonus meccanico (tiro) | Bonus narrativo |
-|---|---|---|
-| L1: Conoscente | +1 | Accesso, informazioni |
-| L2: Alleato | +2 | +1 ongoing in scene dedicate |
-| L3: Legame Profondo | +2 (cap) | Risorsa morale 1/sess + beneficio esclusivo |
+A 10 Stress il Custode descrive anche una manifestazione del Burnout concordata con il giocatore: panico, dissociazione, rabbia, collasso o altra risposta coerente e rispettosa dei limiti del tavolo.
 
-**NON si applica quando:** il PNG non ha nulla a che fare con la
-situazione, l'azione è generica (combatti un demone random, il PNG non è
-presente), o la connessione emotiva non è rilevante.
+### Ridurre Stress
 
-:::box[Esempio: Bonus Legame in Azione]{type=info}
-**Situazione:** Marco (Avalon) ha un Legame Protettore L2 con la
-figlia dell'informatore. La ragazza è in pericolo - un demone la
-tiene in ostaggio.
-Marco si lancia a difenderla. Tira Difendere +FOR (+1) + Legame
-Protettore (+2) = 2d6+3.
-La motivazione emotiva - proteggere una persona a cui tiene - si
-traduce in un bonus meccanico concreto. Questo è il cuore dei Legami.
+- Riprendersi, secondo la Mossa.
+- Una notte sicura: −1 Stress.
+- Una scena significativa con un Confidente: effetto previsto dal Legame.
+- Attività di Downtime dedicate.
+- Poteri che dichiarano esplicitamente il recupero.
+
+Lo Stress non può scendere sotto 0.
+
+## Corruzione Umbra
+
+La Corruzione misura quanto il Piano delle Ombre sta riscrivendo l'Umbra. Va da 0 a 8.
+
+| Corruzione | Effetto |
+|---|---|
+| 0–2 | Nessun effetto meccanico |
+| 3–5 | Segni visibili, tentazioni e conseguenze narrative crescenti |
+| 6 | I poteri Umbra L3+ costano 1 Corruzione aggiuntiva |
+| 7 | I poteri Umbra L2+ costano 1 Corruzione aggiuntiva |
+| 8 | Trasformazione immediata in PNG, salvo effetto esplicito che la impedisca |
+
+La Corruzione si riduce soltanto attraverso procedure dichiarate: redenzione significativa, purificazione, rinuncia prolungata ai poteri a pagamento o Downtime specifico. Il riposo ordinario non basta.
+
+## Nessun ciclo a guadagno netto
+
+Nessuna combinazione ripetibile può recuperare più risorse di quante ne consumi senza tempo, rischio o costo narrativo. Quando due effetti creano un ciclo di cura, riduzione dello Stress o generazione di risorse, applica questa regola e interrompi il ciclo. Il beneficio può funzionare una volta nella scena, poi richiede un cambiamento reale della fiction.
+
+# Combattimento
+
+Il combattimento è una conversazione più serrata. Round e turni servono a distribuire l'attenzione, non a sostituire la fiction.
+
+## Avvio dello scontro
+
+La fiction stabilisce chi può agire per primo. Un'imboscata preparata, una minaccia già puntata o una posizione dominante hanno effetto senza un tiro separato.
+
+Se l'ordine è davvero incerto, un solo Guardiano tira **Sfidare il Pericolo +CUO** per il gruppo:
+
+- 10+: i Guardiani scelgono chi apre lo scontro e ottengono una posizione favorevole;
+- 7–9: i Guardiani agiscono per primi, ma il Custode introduce una pressione immediata;
+- 6−: la minaccia prende l'iniziativa con una Mossa coerente.
+
+Non si tira iniziativa per ogni personaggio.
+
+## Round dei Guardiani
+
+In ogni round ciascun Guardiano dispone di:
+
+- **una Azione Principale**;
+- **un movimento** coerente con distanza, ostacoli e posizione.
+
+L'ordine viene deciso dal gruppo e può cambiare ogni round. Parlare brevemente, lasciar cadere un oggetto o compiere un gesto semplice non consuma l'Azione Principale. Attaccare, usare un potere, prestare cure, superare un ostacolo complesso o influenzare un avversario sì.
+
+## Quando agiscono i nemici
+
+Una minaccia agisce:
+
+1. come conseguenza di un 7–9 o 6−;
+2. quando una minaccia annunciata viene ignorata;
+3. alla fine del round, se è ancora libera di agire.
+
+Alla fine del round il Custode sceglie una Mossa per ogni minaccia significativa, ma combina minion simili in una sola azione per non rallentare il gioco.
+
+:::box[Esempio: azione nemica]{type=example}
+Il Dullahan alza la catena e annuncia che trascinerà Marco giù dal cavalcavia. Marco ignora la minaccia per liberare un ostaggio. Il Custode rende concreta la conseguenza: la catena lo avvolge, infligge il danno dello stat block e lo trascina verso il bordo. Non è necessario un tiro del Dullahan.
 :::
 
-## Sviluppare i Legami
+## Attaccare e Difendere
 
-**Aumentare un Legame:** I Legami crescono attraverso esperienze
-condivise significative. Superare un pericolo mortale insieme,
-confessare un segreto, fare un sacrificio per il PNG - il Custode
-decide quando un Legame sale di livello. Non succede ogni sessione:
-salire da L1 a L2 richiede almeno 2--3 sessioni di interazione, e da L2
-a L3 è un evento narrativo maggiore.
+Le procedure complete sono nel capitolo Mosse Base.
 
-**Diminuire un Legame:** Tradimenti, conflitti irrisolti, abbandono. Il
-Custode può ridurre il livello di un Legame quando la fiction lo
-richiede.
+- **Attaccare** si usa quando il Guardiano espone sé stesso al pericolo per infliggere danno o ottenere un vantaggio violento.
+- **Difendere** si usa quando protegge una persona, un luogo o un obiettivo da una minaccia imminente.
 
-**Rompere un Legame:** Morte del PNG, tradimento imperdonabile, scelta
-impossibile. Quando un Legame si rompe (scende a 0 permanentemente), il
-PG subisce +2 Stress e perde tutti i bonus associati. Ma i Legami rotti
-sono momenti narrativi potentissimi - spesso il trigger per un arco
-vendicativo o di crescita personale.
+Se un bersaglio è inerme e la fiction non presenta alcun rischio, non è necessario tirare. Il Custode descrive l'effetto e ne applica le conseguenze morali, legali e narrative.
 
-**Limite suggerito:** 4--6 Legami totali per PG. Più di 6 diventa
-difficile da gestire narrativamente. Qualità è meglio di quantità: tre
-Legami profondi (L2--L3) valgono più di dieci superficiali.
+## Distanze
 
-## La Mossa Riprendersi
+Le distanze sono narrative:
 
-:::box[Riprendersi (v3.2)]{type=info}
-**Trigger:** Quando ti prendi almeno 10 minuti ininterrotti in una location relativamente sicura per respirare, curare ferite minori, ritrovare la calma.
+| Fascia | Significato |
+|---|---|
+| Contatto | A portata di mano, lotta o presa |
+| Vicino | Nella stessa stanza o pochi passi |
+| Lontano | Attraverso una strada, un salone o un tetto |
+| Remoto | Fuori dalla scena immediata senza mezzi speciali |
+
+Un movimento ordinario cambia di una fascia. Ostacoli, terreno o poteri possono modificarlo.
+
+## Copertura e posizione
+
+La copertura non concede automaticamente Armatura. Può:
+
+- impedire un attacco diretto;
+- richiedere di cambiare posizione;
+- ridurre l'effetto di una conseguenza;
+- concedere +1 quando una Mossa lo giustifica.
+
+La posizione favorevole può permettere un'azione senza tiro, aumentare l'effetto o rendere possibile ciò che prima non lo era.
+
+## Escalation
+
+L'Escalation accelera gli scontri senza alterare la distribuzione del 2d6. Si applica soltanto al danno inflitto dai Guardiani.
+
+| Round | Bonus al danno dei Guardiani |
+|---|---:|
+| 1–2 | +0 |
+| 3 | +1 |
+| 4 | +2 |
+| 5+ | +3 |
+
+Il bonus si applica una volta per fonte di danno, non a ogni bersaglio di un'area. Torna a 0 quando lo scontro termina o cambia completamente scena.
+
+## Fuga, resa e obiettivi diversi dall'eliminazione
+
+I nemici non combattono sempre fino alla morte. Ogni minaccia dovrebbe avere un impulso: fuggire con un oggetto, proteggere un luogo, guadagnare tempo, rapire qualcuno, seminare terrore. Quando l'impulso è soddisfatto o diventa irraggiungibile, il Custode rivaluta lo scontro.
+
+Fuggire richiede una Mossa soltanto se una minaccia può impedirlo. Il tiro determina il prezzo della fuga, non se la sessione può proseguire.
+
+# Morte e conseguenze permanenti
+
+## Ultimo Respiro
+
+Quando i PF scendono a 0 o meno, fermali a 0 e tira immediatamente **2d6 senza Caratteristica o bonus**. Puoi spendere un Punto Fato per ritirare un dado secondo la procedura ordinaria.
+
+- **12+: Miracolo.** Torni a 1 PF, resti cosciente e puoi agire una volta prima della fine del round.
+- **10–11: Sopravvivi.** Torni a 1 PF, sei incapacitato e non puoi agire finché non ricevi cure o la scena termina.
+- **7–9: Sopravvivi a un prezzo.** Torni a 1 PF e scegli una conseguenza duratura tra due o tre proposte del Custode: cicatrice, menomazione, debito, perdita di un ricordo o Legame, Condizione grave.
+- **6−: Muori.** Soltanto un effetto che dichiara esplicitamente di intervenire sulla morte può evitarlo.
+
+Riprendersi non può trasformare un 6− di Ultimo Respiro in sopravvivenza.
+
+:::box[Proporre il prezzo]{type=rule}
+Il prezzo di un 7–9 deve cambiare il personaggio senza renderlo inutilizzabile. Presenta conseguenze diverse per natura: una fisica, una relazionale, una soprannaturale. Il giocatore deve poter scegliere quale costo definisce il seguito della sua storia.
 :::
 
-:::box[Riprendersi (v3.2) (segue)]{type=info}
-**Condizione di location:** Il Custode deve confermare che la location è "relativamente sicura". In combattimento attivo o con nemici vicini: non è attivabile. In zona controllata ma non ideale (es. vicolo con pericolo potenziale): il Custode può imporre -1 al tiro.
+## Morte eroica
+
+Prima o subito dopo un 6− di Ultimo Respiro, il giocatore può chiedere una Morte Eroica se il sacrificio può cambiare concretamente la scena. Il Custode chiarisce l'effetto ottenibile. Il Guardiano compie un'ultima azione decisiva senza tiro, poi muore. L'effetto non annulla automaticamente un'intera campagna o un antagonista leggendario, ma deve essere sostanziale e irreversibile.
+
+## Resurrezione
+
+La resurrezione non è un servizio ordinario. Richiede un effetto, rituale o arco narrativo che la dichiari esplicitamente. In ogni caso:
+
+- non può avvenire più di una volta per lo stesso personaggio senza una decisione di campagna;
+- impone un costo permanente;
+- non cancella le conseguenze della morte;
+- deve essere concordata con il giocatore e rispettare il tono stabilito.
+
+## Riferimento rapido
+
+| Risorsa | Valore | Soglia critica | Recupero principale |
+|---|---:|---|---|
+| PF | Formula di Casata | 0: Ultimo Respiro | Riprendersi, riposo, poteri |
+| Stress | 0–10 | 8–9 costo maggiore; 10 Burnout | Riprendersi, riposo, Downtime |
+| Corruzione | 0–8 | 6–7 costi maggiori; 8 trasformazione | Redenzione, purificazione, Downtime |
+| Punti Fato | 0–2 | Nessuna | Ripristino a 2 a inizio sessione |
+
+:::box[Fine capitolo]{type=tip}
+Ora possiedi il quadro normativo del gioco: tiro base, modificatori, risorse, Legami, danno, combattimento e morte. Il capitolo seguente presenta le dodici Mosse Base nel formato da consultazione al tavolo.
 :::
-
-:::box[Riprendersi (v3.2) (segue)]{type=info}
-**Tira +FOR.** Se un PNG con cui hai un Legame L2+ è presente e ti assiste attivamente (non solo "è nella stessa stanza"): +1 al tiro. Questo bonus si applica una sola volta per sessione per PNG.
-
-**10+:** Recuperi 1d6 PF e -1 Stress.
-**7-9:** Scegli uno: recuperi 1d4 PF OPPURE -1 Stress.
-**6-:** Non riesci a rilassarti. Il Custode fa una mossa morbida: un
-rumore, un ricordo, un'urgenza.
-:::
-
-## STRESS E CORRUZIONE
-
-Oltre ai Punti Ferita, i Guardiani gestiscono due risorse mentali e
-spirituali. Lo Stress misura l'esaurimento della psiche. La Corruzione
-misura l'erosione dell'anima. Entrambe raccontano una storia: quella del
-prezzo che si paga per combattere il soprannaturale.
-
-Stress (Avalon e Ife)
-
-**Cos'è:** Affaticamento mentale, burnout emotivo, strain spirituale.
-Canalizzare magia pura - luce o vita - brucia la psiche. Lo Stress
-sale quando usi poteri Avalon o Ife, quando testimoni orrori estremi,
-quando fallisci nel proteggere qualcuno, o quando sei costretto a
-tradire i valori della tua Casata.
-
-**Range:** 0 (fresco) → 10 (Burnout).
-
-## Accumulare Stress
-
-Guadagni Stress quando usi un potere Avalon o Ife (il costo è
-specificato nel potere), quando testimoni un orrore estremo (strage,
-tortura - tira +MEN, su 6-- prendi +1 Stress), quando fallisci nel
-salvare qualcuno importante (il Custode può dare +1 Stress), o quando
-agisci in modo contrario alla filosofia della tua Casata (un Avalon che
-uccide un innocente per il «male minore», un Ife che distrugge un
-ecosistema).
-
-:::box[A Stress 10: Burnout]{type=warn}
-A 10 Stress sei in Burnout, ma i poteri NON sono bloccati: sono **sospesi**. Puoi ancora usarli, ma ogni attivazione costa il doppio E richiede un tiro su Sfidare Pericolo +FAT: su 6- il potere esplode (1d6 danno al Guardiano, scena interrotta). Usarlo al limite è una scelta drammatica consapevole, non un muro. Finché lo Stress resta a 10 non recuperi PF naturalmente.
-:::
-
-:::box[A Stress 10: Burnout (segue)]{type=warn}
-Il Custode sceglie inoltre una manifestazione narrativa del Burnout: crollo emotivo (piangi incontrollabilmente, panico), dissociazione (ti senti vuoto, distaccato dal mondo), rabbia esplosiva (perdi il controllo, attacchi chi ti è vicino), o shutdown (catatonia temporanea, 10 minuti). Il Burnout è temporaneo - ma le conseguenze possono essere durature.
-:::
-
-:::box[Regola: Nessuna Cura a Guadagno Netto]{type=rule}
-Nessuna combinazione di poteri può produrre un guadagno netto di risorse. Curare PF o rimuovere Stress/Corruzione costa sempre almeno quanto rimuove: due Guardiani non possono curarsi a vicenda all'infinito, perché ogni cura accumula Stress su chi la lancia. Le risorse si recuperano solo con il tempo narrativo (riposo, Downtime, mossa Riprendersi), mai in un loop a costo zero dentro una scena.
-:::
-
-## Ridurre Stress
-
-**Riposo Notturno:** -1 Stress per notte (8 ore sicure).
-
-**Meditazione/Yoga:** -1d3 Stress (richiede 1 ora e ambiente
-tranquillo).
-
-**Terapia o Confessione:** -1d4 Stress (richiede PNG Confidente o
-terapeuta).
-
-**Tempo con un Legame:** -1d3 Stress (scena di roleplay significativa).
-
-**Hobby rilassante:** -1 Stress (cucinare, leggere, dipingere - i
-dettagli dipendono dal PG).
-
-**Nota:** Lo Stress NON sparisce velocemente. Il gioco forza pause e
-self-care. È un tema centrale di Mythic Rings: non puoi combattere il
-male ogni notte e restare intatto.
-
-:::box[Stress in Gioco: Marco (Avalon)]{type=casata_avalon}
-**Sessione 1:** Marco usa 3 poteri (1 Stress ciascuno). Stress = 3.
-**Sessione 2:** Testimonia un sacrificio rituale. Tira +MEN,
-fallisce: +1 Stress (ora 4). Poi usa 2 poteri. Ora 6.
-**Downtime:** Marco va a confessione con Padre Giovanni (Legame
-Mentore). Racconta gli orrori. Piange. -1d4 Stress (tira 3). Torna a
-3.
-**Sessione 3:** Inizia fresco (3 Stress). Può usare poteri, ma deve
-gestire l'economia. Sette usi lo porterebbero al Burnout.
-:::
-
-Corruzione (Solo Umbra)
-
-**Cos'è:** Contaminazione dal Piano delle Ombre. Ogni volta che usi
-poteri Umbra di livello 2 o superiore, un frammento dell'oscurità entra
-in te e si accumula. I poteri L1 sono gratuiti - l'Umbra li
-padroneggia senza rischio, come respirare nelle ombre.
-
-**Range:** 0 (puro) → 8 (Trasformazione).
-
-## Soglie di Corruzione
-
-
-| Livello | Effetto | Descrizione |
-|---| ---|---|
-| 0--2 | Nessun effetto | Usi i poteri senza conseguenze visibili. L'ombra è sotto controllo. |
-| 3 | Occhi Neri | Gli occhi dell'Umbra diventano temporaneamente neri quando usa i poteri. Effetto Velo: i non-Consapevoli non lo notano, ma gli altri Guardiani sì. |
-| 5 | Sussurri dell'Ombra | L'Umbra sente voci che suggeriscono azioni moralmente ambigue. Il Custode offre una tentazione per scena: accettarla dà un vantaggio ma costa un prezzo. |
-| 7 | Forma Instabile | L'ombra del PG si muove indipendentemente. -1 ongoing a CAR: le persone percepiscono qualcosa di sbagliato, un freddo innaturale. |
-| 8 | Trasformazione | Irreversibile. L'Umbra diventa creatura ombra pura: perde l'umanità, diventa PNG controllato dal Custode. Il giocatore crea un nuovo PG. Il vecchio PG diventa un antagonista ricorrente. |
-
-## Accumulare Corruzione
-
-Guadagni Corruzione quando usi un potere Umbra L2+ (il costo è
-specificato nel potere: L2 = 1, L3 = 2, L4 = 3, L5 = 4). I poteri L1
-sono gratuiti. Guadagni anche Corruzione per scelte moralmente oscure
-(tradire un alleato per vantaggio, uccidere un innocente - il Custode
-può dare +1) o per permanenza prolungata nel Piano delle Ombre (+1 per
-ogni ora oltre la prima).
-
-## Ridurre Corruzione
-
-Esistono **quattro percorsi** per ridurre la Corruzione Umbra, bilanciati tra accessibilità e costo narrativo:
-
-**1. Atto di Redenzione** *(1/sessione, -1 Corruzione)*
-Compiere un atto significativamente altruista che contrasta la natura oscura dell'ombra: proteggere un innocente a rischio personale, rinunciare a un vantaggio ottenuto con l'inganno, confessare una verità dolorosa. Il Custode conferma se l'atto qualifica. Massimo 1 per sessione.
-
-**2. Riposo Vigile** *(1/sessione, -1 Corruzione)*
-L'Umbra trascorre un'intera sessione senza usare poteri a pagamento (L2+). Alla fine della sessione, se la condizione è stata rispettata, la Corruzione scende di 1. Non richiede tiro. Questo percorso è sempre disponibile ma ha un costo tattico reale.
-
-**3. Rituale di Purificazione** *(-1 o -2 Corruzione, costo esterno)*
-Richiede un Guardiano Avalon L3+ o Ife L4+. Dura 1 ora. Costo: **2 Stress** a chi lo esegue. Risultato: -1 Corruzione. Con un 10+ su Usare Potere: -2 Corruzione.
-
-**4. Atto di Redenzione Profondo** *(raro, -2 o -3 Corruzione)*
-Un sacrificio narrativo maggiore: salvare una vita a rischio della propria, rivelare pubblicamente un segreto che costa caro, abbandonare un vantaggio fondamentale. Il Custode lo propone, il giocatore lo accetta. Rimuove 2-3 Corruzione. Non è un percorso "attivabile", emerge dalla fiction.
-
-**Importante:** La Corruzione non è permanente ma è *lenta* da ridurre. A differenza dello
-Stress, il riposo non la riduce. L'Umbra vive con il peso del proprio
-potere come arco narrativo lungo - non come punizione meccanica.
-
-:::box[Corruzione in Gioco: Leila (Umbra)]{type=casata_umbra}
-**Sessioni 1--3:** Leila usa poteri L1 senza costo. Quando serve, usa 2 poteri L2: Corruzione sale a 2. Ancora sicura. **Sessione 4:** Corruzione 3 - Occhi Neri. Marco (Avalon) nota che gli occhi di Leila diventano neri quando attiva l'Invisibilità. «Leila\... i tuoi occhi.» «Lo so. Non preoccuparti.» **Sessione 7:** Corruzione 5 - Sussurri. L'Ombra le sussurra: «Uccidi l'informatore. Nessuno lo saprà.
-:::
-
-:::box[Corruzione in Gioco: Leila (Umbra) (segue)]{type=casata_umbra}
-E avrai la risposta che cerchi.» Il Custode offre: +2 forward se accetta. **Sessione 9:** Corruzione 6. Leila compie un Atto di Redenzione: si espone per proteggere la figlia di un PNG, rischiando la vita. -1 Corruzione, torna a 5. Il Custode conferma. **Nota:** Leila ha ancora spazio. Con cap a 8, può usare diversi poteri L2-L3 prima del punto di non ritorno.
-:::
-
-:::box[Corruzione in Gioco: Leila (Umbra) (segue)]{type=casata_umbra}
-L'arco narrativo della Corruzione è una maratona, non uno sprint.
-:::
-
-Tabella Riferimento Rapido
-
-
-| Risorsa | Casate | Max | A Max | Recupero |
-|---| ---|---| ---|---|
-| PF | Tutti | 20+(FOR×2) / 28+(FOR×1) | Morente → Ultimo Respiro | 1d4/notte, poteri, cure |
-| Stress | Avalon, Ife | 10 | Burnout | -1/notte, downtime, Legami |
-| Corruzione | Umbra | 8 | Trasformazione | Atti Redenzione, Rituale |
-| Punti Fato | Tutti | 2/sessione | - | Si rigenerano ogni sessione |
-
-:::box[Fine Parte II - Regole Base]{type=tip}
-Ora conosci le meccaniche core di Mythic Rings: la conversazione al tavolo, le cinque caratteristiche, il sistema 2d6 con i suoi tre risultati, i Punti Ferita e il danno, i Legami come motore narrativo e meccanico, lo Stress e la Corruzione come prezzo del potere. **Prossimo capitolo:** Combattimento e Morte.
-:::
-
-:::box[Fine Parte II - Regole Base (segue)]{type=tip}
-Come funziona il combattimento dettagliato, le regole per attacco e difesa, l'Escalation Die, l'Ultimo Respiro e la Morte Eroica.
-:::
-
-## Parte III
-
-Combattimento e Morte
-
-*«Il combattimento non è scacchi. È caos controllato.»*
-
-**In Questo Capitolo:** La filosofia del combattimento cinematico, la
-struttura dei round, iniziativa narrativa e a tiro, distanze astratte,
-le mosse Attaccare e Difendere con tutti i risultati possibili, armi e
-armature di Milano, il Dado Escalation per combattimenti veloci, le
-situazioni speciali, l'Ultimo Respiro con i suoi modificatori narrativi,
-la Morte Eroica, e la resurrezione.
-
-## COMBATTIMENTO BASE
-
-Filosofia del Combattimento
-
-Mythic Rings non usa griglie tattiche o miniature. Il combattimento è
-teatro della mente: descrizioni verbali, dadi, e immaginazione
-collettiva. Ma questo non significa che sia caotico o improvvisato -
-ha una struttura precisa che serve a creare scene d'azione tese, veloci
-e cinematiche.
-
-Quattro principi guidano ogni scontro. Primo: narrativo prima di tutto.
-Non dici «tiro attacco» - dici «salto sul tavolo e affondo con la
-spada al collo del demone». Il Custode traduce in meccanica. Secondo:
-cinematico. Incoraggia azioni spettacolari: saltare dai tetti di
-Navigli, scivolare sotto le gambe del troll, usare l'ambiente. Terzo:
-mortale. Il combattimento è pericoloso. I PF scendono velocemente. Non
-sei invincibile - e questa consapevolezza rende ogni decisione
-significativa. Quarto: veloce. Ogni round dovrebbe durare 2--3 minuti al
-tavolo. Niente paralisi da analisi.
-
-:::box[Non Tutto è Combattimento]{type=warn}
-Non tutti i confronti richiedono il sistema di combattimento
-completo. Un singolo pugno è una mossa. Una scazzottata da cinque
-secondi è una mossa. Il combattimento formale - con round, turni e
-iniziativa - si usa solo quando il conflitto è prolungato, con
-scambi multipli e conseguenze reali.
-Se un PG vuole colpire un cultista distratto alle spalle, non serve
-iniziare un combattimento. È un tiro di Attaccare. Fine.
-:::
-
-Distanze Astratte
-
-Mythic Rings non usa metri precisi. Le distanze sono categorie narrative
-che determinano cosa puoi fare:
-
-
-| Distanza | Descrizione | Cosa Puoi Fare |
-|---| ---|---|
-| Vicino | A portata di braccio, mischia | Attacchi corpo a corpo, afferrare, parlare a bassa voce, usare medikit |
-| Medio | \~5--10 metri | Armi a distanza, poteri proiettile, urlare. Un movimento per entrare in mischia |
-| Lontano | \~20--50 metri | Solo armi a distanza e poteri a lungo raggio. Due movimenti per entrare in mischia |
-| Oltre | Più di 50 metri | Troppo lontano per combattimento diretto. Serve riposizionamento completo |
-
-Anatomia di un Round
-
-Il combattimento si divide in round. Ogni round corrisponde a circa 6
-secondi di tempo in gioco - ma non cronometrare: la durata narrativa
-conta più di quella reale. In ogni round, la sequenza è: determinare
-l'iniziativa (solo al primo round), ogni PG agisce nel suo turno, i
-nemici reagiscono, gli effetti temporanei avanzano, e si ricomincia.
-
-## Determinare l'Iniziativa
-
-**Metodo 1 - Narrativo (preferito):** Il Custode decide basandosi
-sulla fiction. Chi ha il vantaggio tattico? Chi ha dichiarato l'azione
-per prima? Chi è più veloce nella narrativa? Se Marco e Leila imboscano
-un vampiro, agiscono prima automaticamente. Nessun tiro.
-
-**Metodo 2 - Tiro (se incerto):** Se la situazione è paritaria (il
-gruppo entra in una stanza e 3 cultisti sono già lì), ogni PG tira +CUO.
-L'ordine va dal più alto al più basso. I nemici agiscono a metà - dopo
-i PG più veloci, prima dei più lenti.
-
-:::box[Esempio: Iniziativa a Tiro]{type=info}
-Il gruppo entra nel magazzino di Lambrate. Tre cultisti armati sono
-già dentro. Nessuno è sorpreso - situazione paritaria.
-**Leila** (CUO +1): 2d6+1 = 11
-**Elena** (CUO +1): 2d6+1 = 9
-***Cultisti agiscono qui***
-**Marco** (CUO +1): 2d6+1 = 8
-**Kwame** (CUO +1): 2d6+1 = 6
-Leila ed Elena agiscono prima dei cultisti. Marco e Kwame dopo.
-:::
-
-## Azioni nel Tuo Turno
-
-**1 Azione Principale:** Attaccare (mischia o distanza), usare un potere
-magico, Aiutare o Ostacolare un alleato o nemico, Leggere la Situazione
-(studiare il campo di battaglia), o Sfidare il Pericolo (azione
-rischiosa che non rientra in altre mosse).
-
-**1 Movimento:** Spostarti da Vicino a Medio o da Medio a Lontano (e
-viceversa), alzarti da terra, estrarre o riporre un'arma.
-
-**Azioni Gratuite:** Parlare brevemente (1--2 frasi), urlare un
-avvertimento, lasciare cadere un oggetto. Ragionevolmente illimitate.
-
-:::box[La Finzione Guida le Azioni]{type=info}
-Questa lista è un limite di *quante cose distinte* tenti prima che il Custode reagisca, non una griglia a turni. Una Mossa copre tutto ciò che la finzione racchiude in un gesto continuo: se "scivolo sotto il demone e lo colpisco" è un solo movimento fluido, è una sola Mossa (Attaccare) e lo spostamento è incluso. Separi le azioni solo quando il personaggio tenta cose realmente distinte (es.
-:::
-
-:::box[La Finzione Guida le Azioni (segue)]{type=info}
-correre al riparo E poi sparare). Nel dubbio: la descrizione viene prima, l'economia delle azioni serve solo a tenere il ritmo.
-:::
-
-## Quando Agiscono i Nemici
-
-I nemici non hanno un «turno» fisso. Agiscono in tre momenti: quando un
-PG tira 6-- (il Custode fa una mossa dura, che spesso è un attacco
-nemico), quando un PG esita o non sa che fare («Mentre ti guardi intorno
-indeciso, il vampiro balza. Cosa fai?»), e alla fine del round, quando
-tutti i PG hanno agito e i nemici sopravvissuti reagiscono. Non pensare
-«turno nemico» - pensa «i nemici rispondono ai PG».
-
-## Sorpresa
-
-**PG sorprendono nemici:** I PG agiscono prima automaticamente. I nemici
-non possono Difendere al primo round. Dal round 2, combattimento
-normale.
-
-**Nemici sorprendono PG:** I nemici infliggono danno automaticamente (i
-PG non possono Difendere). Dal round 2 in poi, i PG possono reagire
-normalmente.
-
-## ATTACCO E DIFESA
-
-Mossa: Attaccare
-
-**Trigger:** Quando infliggi danno con violenza - mischia, distanza, o
-magia offensiva.
-
-**Tira:** +FOR (mischia), +CUO (distanza), o +caratteristica del potere
-(magia, di solito +FAT o +CAR per Avalon).
-
-
-| Risultato | Effetto |
-|---| ---|
-| 10+ | Colpisci. Infliggi danno arma/potere. Scegli 1 bonus: danno extra (+1d6), apertura (alleato vicino ha +1 forward vs questo nemico), oppure eviti il contrattacco (non subisci danno reazione). |
-| 7--9 | Colpisci MA sei esposto. Infliggi danno, MA il Custode sceglie 1 complicazione: subisci danno contrattacco dal nemico, ti metti in posizione pericolosa (prono, disarmato, circondato), oppure il tuo danno è ridotto (tira metà dadi, arrotonda per difetto). |
-| 6-- | Manchi, oppure il colpo è inefficace. Il Custode fa una mossa dura: il nemico contrattacca duramente, la situazione peggiora, o succede qualcosa che non avevi previsto. |
-
-:::box[Esempio: Attacco in Mischia]{type=info}
-**Marco (FOR +1)** carica il vampiro con la spada d'argento (1d8 danno). «Tira Attaccare +FOR.» **Tira:** 2d6+1 = 10. Successo pieno! Infligge danno: 1d8 = 6. Il vampiro ha Armatura 1 → subisce 5 danni. Marco sceglie il bonus «Evito contrattacco»: la spada affonda nel petto del vampiro, che urla, ma Marco si ritrae prima che gli artigli lo afferrino.
-:::
-
-:::box[Esempio: Attacco in Mischia (segue)]{type=info}
-**Se avesse tirato 7--9:** La spada colpisce (1d8 danno) MA il vampiro graffia Marco al braccio mentre si avvicina: 1d6 danno contrattacco. **Se avesse tirato 6--:** Il vampiro schiva all'ultimo istante, afferra la lama e tira Marco a sé. Il vampiro è a un palmo dal suo collo.
-:::
-
-Mossa: Difendere
-
-**Trigger:** Quando proteggi te stesso o un alleato da un attacco o
-pericolo imminente.
-
-**Tira:** +FOR (parare, bloccare con scudo o arma) oppure +CUO
-(schivare, tuffarsi, rotolarsi).
-
-
-| Risultato | Effetto |
-|---| ---|
-| 10+ | Difesa perfetta. Scegli 1: eviti il danno completamente e mantieni la posizione, oppure riduci il danno a metà E contrattacchi (infliggi danno base della tua arma al nemico). |
-| 7--9 | Difesa parziale. Scegli 1: eviti il danno MA ti metti in posizione brutta (prono, esposto, spalle al muro), oppure riduci il danno a metà (ma lo subisci). |
-| 6-- | La difesa fallisce. Subisci il danno pieno e il Custode fa una mossa dura: la situazione peggiora (disarmato, circondato, alleato ferito, qualcosa di peggio). |
-
-**Difendere Altri:** Puoi usare Difendere per proteggere un alleato,
-purché tu sia Vicino a lui. Funziona in modo identico, ma sei TU a
-subire le conseguenze (danno, posizione brutta) al posto dell'alleato.
-
-:::box[Esempio: Proteggere un Alleato]{type=info}
-Il demone sta per colpire Kwame (ferito, 3 PF). Marco si interpone
-con lo scudo.
-**Marco tira Difendere +FOR:** 2d6+1 = 8. Successo parziale (7--9).
-Sceglie «Riduco danno metà». Lo scudo assorbe parte dell'impatto, ma
-Marco subisce 1d6/2 = 2 danni. Kwame è illeso.
-Se Marco avesse un Legame Protettore con Kwame, avrebbe avuto +1 al
-tiro - forse abbastanza per un 10+ e una difesa perfetta.
-:::
-
-## ARMI, ARMATURA E DANNO
-
-Danno Base delle Armi
-
-
-| Arma | Danno | Tag |
-|---| ---|---|
-| Pugno / Calcio | 1d4 | Mischia, Non-Letale |
-| Coltello / Pugnale | 1d6 | Mischia, Nascondibile |
-| Spada / Ascia / Manganello | 1d8 | Mischia |
-| Spada Grande / Martello da Guerra | 1d10 | Mischia, Due Mani, Lento |
-| Pistola (9mm) | 2d6 | Distanza, Rumoroso |
-| Fucile / Shotgun | 2d8 | Distanza, Due Mani, Molto Rumoroso |
-| Arco / Balestra | 1d8 | Distanza, Silenzioso, Lento |
-
-**Tag Spiegati:** Mischia = richiede essere Vicino. Distanza = funziona
-a Medio e Lontano. Due Mani = non puoi usare scudo o seconda arma. Lento
-= -1 iniziativa quando usi. Rumoroso = attira attenzione (polizia,
-civili, altri nemici). Nascondibile = superare perquisizioni senza tiro.
-Non-Letale = a 0 PF il bersaglio è incosciente, non morente.
-
-Armatura Dettagliata
-
-
-| Armatura | Valore | Descrizione |
-|---| ---|---|
-| Nessuna | 0 | Vestiti civili. Nessuna protezione. |
-| Leggera | 1 | Giacca di pelle spessa, giubbotto antiproiettile leggero sotto i vestiti. |
-| Media | 2 | Giubbotto antiproiettile tattico, cotta di maglia nascosta. |
-| Pesante | 3 | Armatura completa moderna o medievale. Ingombrante e visibile. |
-| Corazza | 4 | Armatura rinforzata, piastre spesse. Molto rara. |
-| Magica | +1 a +3 | Barriere, incantesimi di protezione. Si somma alla fisica. |
-
-**Ricorda:** L'Armatura fisica (giubbotto, scudo) protegge solo dal
-danno Fisico. L'Armatura magica (amuleti, barriere di Luce) protegge dal
-Fisico e dal Magico. Il danno Puro (psichico, necromantico) ignora
-sempre ogni tipo di Armatura.
-
-Danno Massiccio
-
-Se un singolo attacco infligge **15 o più danni dopo l'Armatura**, è
-Danno Massiccio. Oltre al danno normale, il PG tira +FOR per resistere
-allo shock: su 10+ regge e resiste, su 7--9 subisce un trauma (sceglie
-tra -1 ongoing finché guarito oppure perdere coscienza per 1d6 minuti),
-su 6-- sistema in shock (perde coscienza, rischio morte se non curato
-rapidamente).
-
-Danno Ambientale
-
-
-| Fonte | Danno |
-|---| ---|
-| Caduta (per ogni 3 metri) | 1d6 |
-| Fuoco (per round esposto) | 1d6, ignora Armatura |
-| Acido / Veleno | 1d8, ignora Armatura |
-| Elettricità | 2d6, ignora Armatura |
-| Freddo estremo (per ora) | 1d4 |
-| Annegamento (per round senza aria) | 1d6 |
-
-I combattimenti più pericolosi non sono quelli esplosivi - sono quelli
-che si trascinano troppo a lungo. Quando un nemico con Armatura alta e
-PF elevati assorbe colpo dopo colpo, il gioco rallenta: round dopo round
-di 7--9 che infliggono poco danno netto, mentre lo Stress e le risorse
-dei PG si esauriscono. Il Dado Escalation risolve questo problema
-trasformando la durata del combattimento in un'arma dei Guardiani.
-
-## Come Funziona
-
-Dal **round 3 in poi**, tutti i PG ottengono un bonus cumulativo e
-crescente: prima al tiro di Attaccare, poi anche al danno.
-
-
-| Round | Bonus Escalation PG (cumulativo) | Descrizione Narrativa |
-|---| ---|---|
-| 1--2 | Nessuno | Tattiche iniziali. I PG studiano il nemico, prendono le misure. |
-| 3 | +1 al tiro di Attaccare | Il combattimento si intensifica. |
-| 4 | +1 al tiro e +1 danno | L'energia sale, i colpi si fanno più pesanti. |
-| 5 | +1 al tiro e +1d4 danno | Stanchezza e adrenalina cambiano tutto. |
-| 6+ | +2 al tiro e +1d6 danno | Fase finale: chi è ancora in piedi dà tutto. |
-
-:::box[Perché Solo i PG?]{type=info}
-I nemici NON ottengono il bonus Escalation. Il vantaggio è esclusivo dei Guardiani - coerente con il principio PbtA «sii fan dei PG». Narrativamente, i Guardiani si adattano, imparano, e trovano la forza nei momenti disperati. I mostri combattono con la stessa ferocia dal primo all'ultimo round. Risultato pratico: la maggior parte dei combattimenti si risolve in 3--5 round.
-:::
-
-:::box[Perché Solo i PG? (segue)]{type=info}
-Quelli che superano il round 6 accelerano verso una conclusione cinematica.
-:::
-
-:::box[Esempio: Dado Escalation in Azione]{type=info}
-**Round 1--2:** Il gruppo combatte un Divoratore d'Ombre (30 PF, Armatura 2). I colpi si scambiano, ma il danno netto è basso: le armi fisiche fanno poco contro l'Armatura e i 7--9 complicano tutto. **Round 3 (Escalation: +1 al tiro):** Elena tira Attaccare +FAT (+2) + Escalation (+1) = 2d6+3. La probabilità di 10+ sale dal 41,7% (a +2) al 58,3% (a +3). Il suo Tocco Frigido perfora la barriera.
-:::
-
-:::box[Esempio: Dado Escalation in Azione (segue)]{type=info}
-**Round 4 (Escalation: +1 al tiro, +1 danno):** Marco carica con la spada: +FOR (+1) + Escalation (+1) = 2d6+2, e il colpo infligge +1 danno fisso. Il Divoratore barcolla. **Round 5 (Escalation: +1 al tiro, +1d4 danno):** Marco insiste: +FOR (+1) + Escalation (+1) = 2d6+2, con +1d4 danno bonus a segno. **Round 6 (Escalation: +2 al tiro, +1d6 danno):** Leila emerge dalle ombre con Lama d'Ombra:
-:::
-
-:::box[Esempio: Dado Escalation in Azione (segue)]{type=info}
-+FAT (+2) + Escalation (+2) = 2d6+4 - a +4 la probabilità di 10+ è 72,2% - e con +1d6 danno bonus il colpo finale squarcia il Divoratore.
-:::
-
-## SITUAZIONI SPECIALI
-
-## Copertura
-
-**Parziale** (muro basso, auto, mobili): +1 Armatura contro attacchi a
-distanza. **Totale** (dietro un muro pieno, dentro una stanza): +2
-Armatura contro distanza, MA non puoi attaccare senza uscire.
-
-## Combattere al Buio
-
-Senza luce: -1 ad attacchi a distanza se il nemico ha una fonte di luce,
--2 a tutti gli attacchi nel buio totale. Se TU sei invisibile, i nemici
-hanno -2 contro di te. I poteri Avalon (luce) annullano completamente le
-penalità del buio per tutto il gruppo Vicino.
-
-## Terreno Difficile
-
-Ghiaccio, macerie, scale: il movimento costa il doppio (spostarsi da
-Vicino a Medio richiede un'azione completa). Correre richiede Sfidare il
-Pericolo +CUO: su 6-- cadi prono.
-
-## Combattimento Montato
-
-Su cavallo, moto o veicolo: +1 danno in carica e movimento molto più
-veloce, MA -1 a Difendere (meno agile). Se smontato forzatamente,
-subisci 1d6 danni.
-
-## Combattimento Sottomarino
-
-Sott'acqua: armi taglienti fanno danno dimezzato, armi contundenti danno
-normale, armi da fuoco non funzionano. La magia funziona normalmente (a
-meno che sia basata sul fuoco). Ogni round, tira +FOR o perdi 1 PF per
-soffocamento.
-
-## Fuggire dal Combattimento
-
-Per fuggire, dichiara «Fuggo!» e tira **Sfidare il Pericolo +CUO**: su
-10+ fuggi pulito, su 7--9 fuggi MA lasci qualcosa (equipaggiamento,
-subisci un attacco gratuito, o il nemico ti insegue), su 6-- il nemico
-ti blocca, subisci danno, la situazione peggiora. Se il gruppo fugge,
-ogni PG tira separatamente: chi fallisce rallenta il gruppo o viene
-catturato.
-
-## Condizioni di Status
-
-
-| Condizione | Effetto | Durata |
-|---| ---|---|
-| Prono | -2 a Difendere, movimento dimezzato. Alzarsi = 1 azione movimento. | Finché ti alzi |
-| Accecato | -3 a tutti gli attacchi. Difendere solo +FOR (non puoi schivare). | Finché guarisci o l'effetto finisce |
-| Stordito | -2 a tutti i tiri. Non puoi usare poteri. | 1d4 round |
-| Immobilizzato | Non puoi muoverti o schivare. Attacchi contro di te hanno +2. | Finché liberato |
-| In Fiamme | 1d6 danni a inizio round. Azione completa per spegnerti (tira +CUO). | Finché spento |
-| Avvelenato | 1d4 danni a inizio round, -1 a tutti i tiri. | Finché curato o 1d6 round |
-
-Quando i tuoi PF scendono a 0, non muori immediatamente. Sei Morente -
-sospeso tra la vita e ciò che c'è dopo. In quel momento, tiri l'Ultimo
-Respiro: il tiro più importante del gioco.
-
-Mossa: Ultimo Respiro
-
-**Trigger:** I tuoi PF scendono a 0 o meno.
-
-Nella versione originale, l'Ultimo Respiro era un tiro nudo: 2d6 senza
-modificatori. Nella v3.2, il tiro ha **bonus condizionali** che premiano
-il gioco di squadra, i Legami e la gestione delle risorse. La morte
-diventa conseguenza dell'isolamento e dell'imprudenza - non della
-sfortuna.
-
-## Modificatori dell'Ultimo Respiro
-
-
-| Condizione | Bonus | Narrativa |
-|---| ---|---|
-| Un alleato ti sta assistendo (fisicamente Vicino) | +1 | Ti stringe, ti parla, ti tiene in vita |
-| Hai un Legame L2+ con qualcuno presente | +1 | Il pensiero di chi ami ti richiama indietro |
-| Hai Punti Fato disponibili (ne consumi 1) | +1 | Il destino non ha finito con te |
-| È la prima volta a 0 PF nella campagna | +1 | La morte non ti conosce ancora |
-
-**Bonus massimo: +4.** Con +4 il tasso di successo (10+) sale al 72,2%.
-Con +2 (caso tipico: un alleato vicino e un Legame forte) è del 41,7%.
-La morte rimane possibile, ma diventa più rara quando il gruppo è coeso
-e preparato.
-
-## Risultati dell'Ultimo Respiro
-
-## Tira: 2d6 + bonus condizionali (max +4)
-
-
-| Risultato | Effetto |
-|---| ---|
-| 12+ | Miracolo. Sopravvivi, torni a 1 PF. Sta a te spiegare come: volontà sovrumana, intervento del destino, l'Anello che rifiuta di perderti. Puoi continuare ad agire questo round. |
-| 10--11 | Stabilizzato. Non muori, ma sei incosciente a 0 PF. Richiedi cure mediche o magia per tornare cosciente. Se non curato entro 1 ora = morte. |
-| 7--9 | Scelta Difficile. La Morte ti offre un patto. Il Custode presenta 2 opzioni: sopravvivi MA perdi qualcosa (un arto, un senso, dei ricordi, un Legame azzerato permanentemente) OPPURE sopravvivi MA devi un debito alla Morte (un compito, un'anima sostitutiva, un favore da riscuotere nel momento peggiore). |
-| 6-- | Morte. Lo spirito lascia il corpo. Il PG è morto. Il giocatore deve creare un nuovo personaggio. Eccezione: gli alleati possono tentare la resurrezione (Avalon L5 o Mictlan L5), ma è un rituale difficile, raro e costoso. |
-
-:::box[Esempio: Ultimo Respiro - La Scelta di Elena]{type=info}
-Elena (Mictlan, 29 PF) scende a 0 PF dopo il colpo del vampiro antico. Tira Ultimo Respiro. **Bonus:** Marco è Vicino e la sostiene (+1), Elena ha un Legame L2 con Nonna Lucia, il cui spirito è presente (+1). Totale: 2d6+2. **Tira:** 2d6+2 = 9. Scelta Difficile (7--9). **Custode:** «Elena, attraversi il Velo. Il Regno dei Morti ti accoglie con un freddo familiare.
-:::
-
-:::box[Esempio: Ultimo Respiro - La Scelta di Elena (segue)]{type=info}
-Mictlantecuhtli appare, un sorriso che non è un sorriso. 'Troppo presto, piccola. Ma nulla è gratis.' Ti offre due opzioni:» **Opzione A:** «Vivi, ma dimentichi la persona più cara. Legame Nonna Lucia azzerato permanentemente. Non la sentirai più.» **Opzione B:** «Vivi, ma mi devi un debito. Quando chiamerò, verrai. Nessuna domanda.» Elena sceglie B. Torna a 1 PF. Il Custode annota:
-:::
-
-:::box[Esempio: Ultimo Respiro - La Scelta di Elena (segue)]{type=info}
-«Elena deve un favore alla Morte. Sarà riscosso nel momento peggiore.»
-:::
-
-Morte Eroica
-
-A volte, la morte più potente non è quella che subisci - è quella che
-scegli. Se un PG decide volontariamente di sacrificarsi per salvare il
-gruppo, proteggere un innocente, o compiere un gesto narrativamente
-devastante, non tira l'Ultimo Respiro. La morte è automatica e
-irreversibile. Ma il sacrificio ha un peso.
-
-## Requisiti
-
-La Morte Eroica deve essere una scelta consapevole del giocatore (non
-può essere forzata dal Custode), deve avere un impatto narrativo reale
-(non «mi sacrifico perché non mi piace il personaggio»), e il gruppo
-deve assistere o sapere del sacrificio.
-
-## Beneficio Permanente
-
-Quando un PG muore eroicamente, il gruppo ottiene un beneficio
-permanente. Il giocatore del PG morto sceglie uno tra due opzioni:
-
-**Opzione A - Ispirazione:** +1 permanente a una caratteristica per
-TUTTI i PG presenti. Il sacrificio del compagno li ha cambiati per
-sempre.
-
-**Opzione B - Spirito Guida:** Il PG morto diventa uno Spirito Guida
-consultabile 1 volta per sessione. Il gruppo può invocarlo (mossa
-speciale) per ottenere un consiglio, un'informazione, o un +2 forward a
-un tiro critico. Lo Spirito Guida ha la personalità del PG morto e può
-essere interpretato dal suo giocatore originale.
-
-:::box[Esempio: Morte Eroica - Marco Si Sacrifica]{type=info}
-Il Divoratore d'Ombre sta per aprire il portale permanente sotto il Duomo. Serve che qualcuno entri nel vortice per distruggerlo dall'interno. Nessuno sopravviverà. **Marco (Avalon):** «Ho giurato di proteggere. È questo il momento.» Si toglie l'Anello. Lo dà a Leila. «Dillo a Padre Giovanni: non ho paura.» Marco entra nel vortice. Luce dorata esplode. Il portale si chiude per sempre. **Beneficio scelto:
-:::
-
-:::box[Esempio: Morte Eroica - Marco Si Sacrifica (segue)]{type=info}
-Spirito Guida.** Da questo momento, il gruppo può invocare Marco 1/sessione. Il suo spirito appare brevemente, circondato di luce, per offrire un consiglio o un +2 forward quando la squadra ne ha più bisogno. Il giocatore di Marco lo interpreta ancora - non come PG, ma come presenza. E crea un nuovo Guardiano per la prossima sessione.
-:::
-
-## DOPO LA MORTE
-
-Resurrezione
-
-La morte può essere invertita, ma è estremamente difficile e non
-dovrebbe mai diventare un «reset button». La resurrezione è un momento
-climax della campagna - non una procedura di routine.
-
-## Requisiti per la Resurrezione
-
-**Tempo:** Massimo 24 ore dalla morte. Dopo, l'anima è troppo lontana.
-
-**Corpo:** Intatto almeno al 75%. Decapitazione o incenerimento =
-impossibile.
-
-**Rituale:** Avalon L5 «Resurrezione» oppure Mictlan L5 «Riportare
-Spirito».
-
-**Costo per chi lancia:** 5 Stress (Avalon) oppure 10 PF (Mictlan).
-
-**Sacrificio:** Un artefatto leggendario o un altro prezzo narrativo
-enorme.
-
-**Costo per chi resuscita:** -1 permanente a una caratteristica (a
-scelta del giocatore).
-
-Il rituale è un tiro: su **10+** riesce, il morto torna con 1 PF e la
-stat ridotta. Su **7--9** torna MA con una complicazione severa
-(posseduto? memoria danneggiata? debito con un'entità?). Su **6--** il
-rituale fallisce, il sacrificio è consumato, chi lancia paga il costo
-comunque, e il morto resta morto.
-
-Creare un Nuovo PG Dopo la Morte
-
-Se un PG muore permanentemente, il gioco non si ferma. Il gruppo ha
-prima una scena di lutto - un funerale, un ricordo condiviso, un
-giuramento di vendetta. Poi il giocatore crea un nuovo PG seguendo il
-processo in Parte I. Il Custode lo introduce nella narrativa nel modo
-più naturale: come recluta dei Custodi, alleato conosciuto da tempo, o
-nuovo Guardiano appena scelto da un Anello.
-
-**XP del Nuovo PG:** Inizia con XP pari alla metà di quelli del PG morto
-(arrotondato per difetto). Questo mantiene il bilanciamento senza punire
-eccessivamente il giocatore.
-
-**Legami:** Il nuovo PG crea 1--2 Legami con il gruppo esistente a L1,
-più 1 Legame esterno. La continuità narrativa del gruppo viene
-preservata.
-
-:::box[L'Anello Sceglie]{type=info}
-Quando un Guardiano muore, il suo Anello Custodia lascia il cadavere e inizia a cercare un nuovo portatore. A volte impiega giorni, a volte ore. L'Anello ha una volontà propria - e la sua scelta non è mai casuale. Questo è un ottimo aggancio narrativo per introdurre un nuovo PG:
-:::
-
-:::box[L'Anello Sceglie (segue)]{type=info}
-l'Anello del compagno caduto sceglie qualcuno di inaspettato, e il gruppo deve decidere se fidarsi di questo nuovo Guardiano che porta l'eredità del loro amico.
-:::
-
-:::box[Fine Parte III - Combattimento e Morte]{type=tip}
-Ora conosci il sistema di combattimento completo di Mythic Rings:
-:::
-
-:::box[Fine Parte III - Combattimento e Morte (segue)]{type=tip}
-la struttura dei round con iniziativa narrativa, le mosse Attaccare e Difendere con i loro tre risultati, le armi e l'armatura della Milano soprannaturale, il Dado Escalation che accelera gli scontri lunghi, le situazioni speciali, l'Ultimo Respiro con i suoi modificatori che premiano il gioco di squadra, e la Morte Eroica che trasforma il sacrificio in eredità.
-:::
-
-:::box[Fine Parte III - Combattimento e Morte (segue)]{type=tip}
-**Prossimo capitolo:** Parte IV - Mosse e Poteri. Le 12 Mosse Base che definiscono il vocabolario d'azione di ogni Guardiano, e il Sistema Poteri con tutti i 60 poteri delle quattro Casate.
-:::
-

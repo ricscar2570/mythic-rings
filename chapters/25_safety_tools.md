@@ -5,8 +5,8 @@ part: "Parte V: Guida per il Custode"
 section: "Guida per il Custode"
 epigraph: "Un gioco sicuro è un gioco migliore."
 tags: []
-status: finale
-version: 3.2
+status: beta
+version: 0.9.0-beta.1
 ---
 
 ## Safety Tools e Gestione del Tavolo
@@ -50,11 +50,3 @@ evoca.
 *È creare un mondo dove le storie nascono da sole.*
 
 ## *Ora vai. Milano ha bisogno del suo Custode.*
-
-## ⟡ MYTHIC RINGS v3.2 ⟡
-
-PARTE VI
-
-*Bestiario & Avventure*
-
-30 Creature · Campagna 8 Sessioni · 3 One-Shot

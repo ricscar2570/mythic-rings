@@ -1,5 +1,5 @@
 /**
- * MYTHIC RINGS v3 — Design System
+ * MYTHIC RINGS — Design System
  * Palette, tipografia, dimensioni pagina, stili Word
  * Tutti i valori in DXA (1 inch = 1440 DXA, 1 mm = 56.7 DXA)
  */

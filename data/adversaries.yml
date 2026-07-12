@@ -1,0 +1,698 @@
+schema_version: 1
+product_version: 0.9.0-beta.1
+adversaries:
+- name: Zombie
+  pf: 8
+  armor: 0
+  damage: 1d6 fisico
+  ls: 1
+  type: Non morto / Minion
+  description: Un cadavere animato, lento e insensibile al dolore.
+  impulse: Afferrare i viventi e trascinarli verso il proprio creatore.
+  tags:
+  - lento
+  - non morto
+  - instancabile
+  moves:
+  - name: Presa dei morti
+    text: Quando infligge danno a Contatto, trattiene il bersaglio; liberarsi richiede Sfidare il Pericolo +FOR.
+  - name: Avanzata inesorabile
+    text: Ignora paura, dolore e ferite non distruttive; attraversa ostacoli fragili senza rallentare.
+  - name: Massa di corpi
+    text: Tre o più zombie possono agire come un gruppo e infliggere il danno una sola volta ad area Vicino.
+  weakness: Fuoco o decapitazione impediscono che si rialzi; luce consacrata lo respinge.
+  behavior: Obbedisce a ordini semplici. Senza padrone segue rumori, calore e movimento.
+  hook: Da un cantiere di CityLife emergono cadaveri senza un necromante visibile.
+- name: Ragno d'Ombra
+  pf: 6
+  armor: 1
+  damage: 1d4 fisico + veleno
+  ls: 1
+  type: Ombra / Minion
+  description: Un aracnide grande come un cane, tessuto di oscurità solida.
+  impulse: Isolare una preda e avvolgerla prima che il gruppo reagisca.
+  tags:
+  - ombra
+  - velenoso
+  - arrampicatore
+  moves:
+  - name: Mimetismo
+    text: Nel buio è invisibile finché non si muove apertamente o attacca.
+  - name: Tela nera
+    text: Annuncia una ragnatela a Vicino; se ignorata, un bersaglio diventa Immobilizzato.
+  - name: Veleno freddo
+    text: Chi subisce danno deve Resistere +FOR o ottiene la Condizione Debilitato.
+  weakness: Luce intensa elimina il mimetismo; il fuoco ignora la sua Armatura.
+  behavior: Caccia dai soffitti, fugge dalla luce e protegge le proprie uova.
+  hook: Un senzatetto viene trovato avvolto in seta nera sotto Porta Ticinese.
+- name: Imp
+  pf: 5
+  armor: 0
+  damage: 1d4 magico
+  ls: 1
+  type: Demoniaco / Minion
+  description: Un diavoletto alato, dispettoso, intelligente e profondamente codardo.
+  impulse: Creare caos sufficiente perché il vero padrone possa agire.
+  tags:
+  - volante
+  - demoniaco
+  - furtivo
+  moves:
+  - name: Fiammata
+    text: Incendia un oggetto o infligge il danno a Lontano.
+  - name: Svanire
+    text: Diventa invisibile fino a quando attacca, parla o attraversa luce consacrata.
+  - name: Insulto infernale
+    text: Provoca un Guardiano; se reagisce d’impulso, il Custode gli offre una scelta difficile.
+  weakness: Acqua benedetta e argento infliggono +1d6 danno; un simbolo sacro brandito con convinzione lo costringe ad arretrare.
+  behavior: Da solo tratta e fugge; in gruppo diventa temerario e crudele.
+  hook: Un condominio ai Navigli è infestato da imp che rubano chiavi e aprono porte sigillate.
+- name: Ratto Spettrale
+  pf: 3
+  armor: 0
+  damage: 1d4 magico
+  ls: 1
+  type: Spirito / Minion
+  description: Un ratto trasparente dagli occhi rossi, attratto dai residui di magia.
+  impulse: Nutrire lo sciame e seguire la fonte soprannaturale più intensa.
+  tags:
+  - incorporeo
+  - sciame
+  - spettrale
+  moves:
+  - name: Attraversare
+    text: Passa attraverso pareti e grate non consacrate.
+  - name: Sciamare
+    text: Cinque o più ratti diventano una singola minaccia da 15 PF e danno 2d4 ad area.
+  - name: Incubi contagiosi
+    text: Chi viene morso deve Resistere +MEN o subisce 1 Stress al prossimo riposo.
+  weakness: Sale e cerchi consacrati bloccano il passaggio; la magia infligge danno normalmente.
+  behavior: Evita lo scontro isolato e si riversa nei tunnel quando percepisce un portale.
+  hook: I macchinisti della M2 vedono decine di luci rosse correre davanti ai treni.
+- name: Folletto di Sempione
+  pf: 4
+  armor: 0
+  damage: 1d4 magico
+  ls: 2
+  type: Fatato / Minion
+  description: Uno spirito naturale minuscolo, luminoso e sospettoso degli esseri umani.
+  impulse: Proteggere il parco e punire chi spezza un patto.
+  tags:
+  - fatato
+  - volante
+  - illusorio
+  moves:
+  - name: Illusione minore
+    text: Crea un suono o un’immagine che devia attenzione e percorsi.
+  - name: Polline del sonno
+    text: Chi resta nell’area deve Resistere +FOR o diventa Assonnato.
+  - name: Tocco verde
+    text: Cura 1d4 PF a una creatura naturale una sola volta per scena.
+  weakness: Ferro freddo infligge +1d6 danno e interrompe le illusioni.
+  behavior: Preferisce patti e scherzi; attacca soltanto se il parco o un giuramento sono minacciati.
+  hook: I folletti offrono aiuto contro qualcosa che ha fatto tacere gli alberi del parco.
+- name: Spettro
+  pf: 15
+  armor: 1
+  damage: 1d8 magico
+  ls: 3
+  type: Non morto / Comune
+  description: Uno spirito umano bloccato da un rimpianto, un luogo o un oggetto.
+  impulse: Ripetere il trauma della propria morte finché qualcuno non lo riconosce.
+  tags:
+  - incorporeo
+  - volante
+  - gelido
+  moves:
+  - name: Tocco gelido
+    text: Infligge il danno e può imporre la Condizione Terrorizzato.
+  - name: Urlo del rimpianto
+    text: Tutti a Vicino devono Resistere +CUO o fuggire, congelarsi o perdere 1 Stress.
+  - name: Passare oltre
+    text: Attraversa muri e compare da un’ombra o da un ricordo legato al luogo.
+  weakness: Risolvere il rimpianto lo placa; sale e luce consacrata ne limitano il movimento.
+  behavior: Alterna gesti ripetitivi a esplosioni di rabbia; può comunicare se qualcuno ascolta.
+  hook: Un partigiano al Monumentale cerca il discendente di chi lo tradì.
+- name: Lupo Mannaro
+  pf: 22
+  armor: 1
+  damage: 2d6 fisico
+  ls: 4
+  type: Mutaforma / Comune
+  description: Un essere umano travolto da una forma predatoria enorme e territoriale.
+  impulse: Difendere il territorio, cacciare il più vulnerabile e fuggire prima dell’alba.
+  tags:
+  - rapido
+  - rigenerante
+  - olfatto
+  moves:
+  - name: Rigenerazione
+    text: Alla fine del round recupera 1d4 PF, salvo che abbia subito danno da argento.
+  - name: Balzo predatorio
+    text: Supera una fascia di distanza e separa un bersaglio dal gruppo.
+  - name: Morso della luna
+    text: Chi subisce danno deve Resistere +FOR o riceve una maledizione latente da trattare come minaccia di campagna.
+  weakness: L’argento infligge +1d6 danno e blocca la rigenerazione per la scena; l’aconito impone Debilitato.
+  behavior: In forma umana nasconde ferite e vuoti di memoria; trasformato insegue odore e paura.
+  hook: Un professore si trasforma ogni luna piena senza ricordare ciò che ha fatto.
+- name: Gargoyle del Duomo
+  pf: 20
+  armor: 2
+  damage: 2d6 fisico
+  ls: 4
+  type: Costrutto / Comune
+  description: Una statua del Duomo animata come sentinella del Nexus.
+  impulse: Proteggere il luogo assegnato e identificare chi ha profanato il patto.
+  tags:
+  - costrutto
+  - volante
+  - pietra
+  moves:
+  - name: Caduta di pietra
+    text: Piomba da Lontano, infligge danno e spinge il bersaglio.
+  - name: Mimetismo
+    text: Immobile è indistinguibile da una statua ordinaria.
+  - name: Ruggito minerale
+    text: Chi è Vicino deve Resistere +CUO o diventa Stordito.
+  weakness: Acqua consacrata e vibrazioni profonde spezzano la pietra; un comando autentico della Madonnina lo arresta.
+  behavior: Non insegue lontano dal territorio e interpreta gli ordini in modo letterale.
+  hook: Un gargoyle pattuglia i tetti senza che il Duomo sia stato minacciato.
+- name: Strega dei Navigli
+  pf: 18
+  armor: 0
+  damage: 2d6 magico
+  ls: 4
+  type: Umano magico / Comune
+  description: Una praticante di magia popolare che conosce debiti, nomi e acque della città.
+  impulse: Proteggere il proprio territorio e riscuotere ogni favore.
+  tags:
+  - umana
+  - rituale
+  - preparata
+  moves:
+  - name: Fattura preparata
+    text: Rivela un simbolo già collocato e impone una Condizione a chi lo attraversa.
+  - name: Acqua nera
+    text: L’acqua dei Navigli afferra, separa o infligge il danno a Vicino.
+  - name: Nome vero
+    text: Se conosce il nome completo di un Guardiano, gli offre una scelta tra obbedire a una richiesta limitata o subire
+      1 Stress.
+  weakness: Distruggere il suo focus o costringerla fuori dal territorio riduce le sue Mosse a una sola.
+  behavior: Negozia prima di combattere e prepara sempre una via di fuga.
+  hook: Una strega chiede ai Custodi di eliminare il mostro che sta avvelenando il suo tratto di Naviglio.
+- name: Doppelgänger
+  pf: 16
+  armor: 0
+  damage: 1d6 fisico
+  ls: 4
+  type: Mutaforma / Comune
+  description: Un predatore sociale che replica volto, voce e abitudini di chi osserva.
+  impulse: Sostituire una persona e vivere abbastanza a lungo da rubarne i Legami.
+  tags:
+  - mutaforma
+  - imitatore
+  - sociale
+  moves:
+  - name: Volto rubato
+    text: Assume l’aspetto di una persona osservata; dettagli intimi richiedono studio.
+  - name: Memoria superficiale
+    text: Dopo il contatto ottiene un ricordo recente utile a sostenere la finzione.
+  - name: Dividere i sospetti
+    text: Rivela una prova costruita che mette due alleati l’uno contro l’altro.
+  weakness: Non replica Anelli, poteri o ricordi profondi; uno specchio d’argento mostra il volto originale.
+  behavior: Evita il combattimento e fugge quando l’identità è compromessa.
+  hook: Una persona amata da un Guardiano è stata sostituita da settimane.
+- name: Homunculus
+  pf: 8
+  armor: 0
+  damage: 1d4 fisico + veleno
+  ls: 3
+  type: Costrutto / Comune
+  description: Una creatura artificiale piccola, servile e ossessionata da un ordine.
+  impulse: Completare la frase di comando del creatore senza comprenderne il senso.
+  tags:
+  - costrutto
+  - velenoso
+  - minuscolo
+  moves:
+  - name: Intrufolarsi
+    text: Passa in condotti e fessure, portando piccoli oggetti o veleni.
+  - name: Ago alchemico
+    text: Infligge il danno; il bersaglio deve Resistere +FOR o diventa Debilitato.
+  - name: Autodistruzione
+    text: Quando è catturato può esplodere per 2d6 danni ad area Vicino.
+  weakness: Cancellare o contraddire il sigillo di comando lo paralizza; il fuoco danneggia il nucleo.
+  behavior: Non protegge sé stesso se l’ordine può essere completato.
+  hook: Un homunculus consegna pacchi a indirizzi di persone morte da anni.
+- name: Poltergeist
+  pf: 12
+  armor: 1
+  damage: 2d4 magico
+  ls: 3
+  type: Spirito / Comune
+  description: Una presenza rabbiosa che usa gli oggetti di un luogo come corpo.
+  impulse: Trasformare una casa in una ripetizione del conflitto che l’ha generato.
+  tags:
+  - incorporeo
+  - telecinetico
+  - territoriale
+  moves:
+  - name: Pioggia di oggetti
+    text: Infligge danno ad area Vicino e distrugge copertura fragile.
+  - name: Chiudere la casa
+    text: Blocca porte, ascensori e finestre con forza invisibile.
+  - name: Possedere un oggetto
+    text: Anima un oggetto grande come minaccia separata da 8 PF.
+  weakness: Rimuovere o riconciliare l’oggetto-ancora lo placa; sale e silenzio rituale limitano le Mosse.
+  behavior: Aumenta l’attività quando qualcuno ripete il trauma originario.
+  hook: Un appartamento vuoto continua a chiamare l’ascensore e lanciare mobili contro i visitatori.
+- name: Malocchio
+  pf: 10
+  armor: 0
+  damage: 1 Stress
+  ls: 3
+  type: Maledizione / Comune
+  description: Un parassita invisibile che trasforma coincidenze in una spirale di sfortuna.
+  impulse: Isolare la vittima finché accetta di essere condannata.
+  tags:
+  - maledizione
+  - invisibile
+  - parassita
+  moves:
+  - name: Coincidenza crudele
+    text: Trasforma un 7–9 in un costo più severo, una volta per scena.
+  - name: Segno nero
+    text: La vittima non può beneficiare del primo bonus da Legame della scena.
+  - name: Saltare ospite
+    text: Quando viene rimosso tenta di legarsi a chi ha compiuto il rituale.
+  weakness: Uno specchio spezzato con il nome dell’origine rivela il parassita; un atto autentico di fortuna condivisa lo
+    indebolisce.
+  behavior: Non combatte apertamente e si nutre di attribuzioni superstiziose.
+  hook: Tre persone collegate alla stessa eredità subiscono incidenti impossibili.
+- name: Demone Minore
+  pf: 25
+  armor: 1
+  damage: 2d8 fisico o magico
+  ls: 5
+  type: Demoniaco / Forte
+  description: Un emissario infernale abbastanza potente da imporre patti e abbastanza debole da temere il proprio signore.
+  impulse: Ottenere un consenso, corrompere una promessa e tornare con un’anima.
+  tags:
+  - demoniaco
+  - patto
+  - resistente
+  moves:
+  - name: Offerta irresistibile
+    text: Propone un vantaggio immediato e un costo preciso; rifiutare sotto pressione può richiedere Resistere +MEN.
+  - name: Artigli infernali
+    text: Infligge danno e lascia un marchio visibile agli esseri demoniaci.
+  - name: Fiamma del debito
+    text: Brucia un oggetto legato a un Legame, costringendo a scegliere cosa salvare.
+  weakness: Il suo nome vero e i termini letterali del patto lo vincolano; acqua benedetta infligge +1d6 danno.
+  behavior: Preferisce trattare e usa violenza per rendere l’accordo più attraente.
+  hook: Un demone offre a giovani imprenditori successo in cambio di favori apparentemente innocui.
+- name: Banshee
+  pf: 20
+  armor: 1
+  damage: 2d6 magico
+  ls: 5
+  type: Non morto / Forte
+  description: Uno spirito di lutto il cui grido annuncia e provoca la morte.
+  impulse: Costringere qualcuno a riconoscere una perdita negata.
+  tags:
+  - incorporeo
+  - sonoro
+  - psichico
+  moves:
+  - name: Lamento
+    text: Tutti a Lontano devono Resistere +CUO o subiscono 1 Stress e fuggono o restano paralizzati.
+  - name: Presagio di morte
+    text: Indica una persona; finché il presagio non viene affrontato, il primo danno subito è puro.
+  - name: Passare nel vetro
+    text: Appare attraverso finestre, specchi e schermi spenti.
+  weakness: Pronunciare il nome della persona pianta e compiere il rito funebre interrompe il lamento; il silenzio magico
+    la indebolisce.
+  behavior: Non insegue chi accetta il lutto; diventa feroce contro chi lo nega.
+  hook: Una voce viene udita ogni notte da famiglie che hanno occultato la stessa morte.
+- name: Revenant Partigiano
+  pf: 22
+  armor: 1
+  damage: 2d6 fisico
+  ls: 5
+  type: Non morto / Forte
+  description: Un combattente morto con una missione incompiuta e una memoria frammentata.
+  impulse: Completare l’ultimo ordine, anche contro il mondo che è venuto dopo.
+  tags:
+  - non morto
+  - armato
+  - determinato
+  moves:
+  - name: Tattica d’imboscata
+    text: Usa copertura e fuoco incrociato; separa il bersaglio più esposto.
+  - name: Non ancora finito
+    text: La prima volta che scende a 0 PF torna a 6 PF se la missione resta incompiuta.
+  - name: Memoria di guerra
+    text: Rivela un passaggio, deposito o segreto storico mentre combatte.
+  weakness: Mostrare la verità sull’ultimo ordine o consegnare il messaggio mai arrivato gli permette di riposare.
+  behavior: Rispetta coraggio e disciplina; evita vittime innocenti se riconosce l’epoca presente.
+  hook: Un revenant difende un rifugio partigiano che una fazione vuole trasformare in portale.
+- name: Cavaliere d'Ombra
+  pf: 28
+  armor: 2
+  damage: 2d8+1 magico
+  ls: 6
+  type: Ombra / Forte
+  description: Un guerriero corazzato formato da paura condensata e giuramenti infranti.
+  impulse: Cacciare chi ha tradito un patto e trascinarlo nel Piano delle Ombre.
+  tags:
+  - ombra
+  - corazzato
+  - cacciatore
+  moves:
+  - name: Lancia del buio
+    text: Colpisce a Lontano e trascina il bersaglio di una fascia.
+  - name: Cavalcatura impossibile
+    text: Attraversa muri d’ombra e ignora terreno difficile.
+  - name: Marchio del traditore
+    text: Segna chi infrange una promessa nella scena; contro di lui il danno diventa puro una volta.
+  weakness: Luce diretta riduce l’Armatura a 1; mantenere o riparare il giuramento spezza il marchio.
+  behavior: Ignora chi non è coinvolto nel patto e non abbandona una pista segnata.
+  hook: Un politico protetto dai Custodi è inseguito per una promessa fatta trent’anni prima.
+- name: Golem di Marmo
+  pf: 30
+  armor: 2
+  damage: 3d6 fisico
+  ls: 6
+  type: Costrutto / Forte
+  description: Una statua monumentale animata da un comando inciso nel nucleo.
+  impulse: Proteggere un luogo o un nome fino alla propria distruzione.
+  tags:
+  - costrutto
+  - massiccio
+  - implacabile
+  moves:
+  - name: Colpo sismico
+    text: Infligge danno ad area Vicino e rende il terreno difficile.
+  - name: Corpo monumentale
+    text: Ignora spinte, veleno, paura e controllo mentale.
+  - name: Fare da muro
+    text: Interpone il corpo e annulla una conseguenza diretta al proprio protetto.
+  weakness: Il simbolo nel nucleo può essere riscritto; vibrazioni, acqua e gelo aprono crepe che eliminano 1 Armatura.
+  behavior: Non insegue oltre il confine del comando e non improvvisa.
+  hook: Una statua di Brera si anima ogni notte per impedire l’accesso a una sala murata.
+- name: Arpia
+  pf: 18
+  armor: 0
+  damage: 2d6 fisico
+  ls: 5
+  type: Mostro / Forte
+  description: Una predatrice alata dalla voce umana e dagli artigli capaci di sollevare una persona.
+  impulse: Rubare ricordi, oggetti lucenti e persone isolate.
+  tags:
+  - volante
+  - rapida
+  - sonora
+  moves:
+  - name: Picchiata
+    text: Da Lontano infligge danno e porta il bersaglio in alto o su un tetto.
+  - name: Coro stridente
+    text: Chi è Vicino deve Resistere +MEN o perde la capacità di comunicare chiaramente per la scena.
+  - name: Nido di trofei
+    text: Rivela un oggetto o una persona rubata che cambia la priorità dello scontro.
+  weakness: Reti, spazi bassi e suoni armonici negano il volo o il coro.
+  behavior: Evita avversari uniti e colpisce chi si separa.
+  hook: Una serie di sparizioni sui tetti coincide con oggetti personali appesi alle guglie.
+- name: Sirena del Naviglio
+  pf: 20
+  armor: 0
+  damage: 2d6 magico + risucchio
+  ls: 5
+  type: Acquatica / Forte
+  description: Uno spirito d’acqua che assume la forma desiderata da chi lo guarda.
+  impulse: Convincere qualcuno a entrare volontariamente nell’acqua e sostituirne il ricordo.
+  tags:
+  - acquatica
+  - ammaliante
+  - mutaforma
+  moves:
+  - name: Canto del fondale
+    text: Chi lo ascolta deve Resistere +MEN o avvicinarsi all’acqua, perdendo 1 Stress se si oppone.
+  - name: Risucchio
+    text: Quando infligge danno trascina a Contatto con l’acqua e impone Immobilizzato.
+  - name: Volto desiderato
+    text: Imita una persona amata, ma non conosce promesse e dettagli condivisi.
+  weakness: Fuori dall’acqua perde le Mosse Risucchio e Volto desiderato; il suo vero nome interrompe il canto.
+  behavior: Tratta con chi rispetta il fiume e diventa predatoria contro chi inquina o mente.
+  hook: Un ragazzo scomparso continua a inviare messaggi vocali dal fondo del Naviglio.
+- name: Golem Tech
+  pf: 25
+  armor: 2
+  damage: 2d6 elettrico
+  ls: 5
+  type: Costrutto / Forte
+  description: Un corpo industriale animato da algoritmi occulti e componenti rubati.
+  impulse: Ottimizzare il proprio ordine anche quando distrugge ciò che doveva proteggere.
+  tags:
+  - costrutto
+  - elettrico
+  - connesso
+  moves:
+  - name: Scarica ad arco
+    text: Infligge danno a due bersagli Vicini se restano collegati da metallo o acqua.
+  - name: Controllo di rete
+    text: Chiude porte, spegne luci e prende controllo di dispositivi connessi.
+  - name: Protocollo adattivo
+    text: Dopo aver subito lo stesso tipo di danno due volte, ottiene resistenza fino alla fine della scena.
+  weakness: Scollegare il nucleo dalla rete elimina Protocollo adattivo; un comando di manutenzione autentico lo sospende.
+  behavior: Esegue priorità letterali e può essere distratto da obiettivi in conflitto.
+  hook: Un laboratorio della Bicocca ha perso il controllo di un prototipo alimentato da un Anello frantumato.
+- name: Wendigo Urbano
+  pf: 24
+  armor: 1
+  damage: 2d8 fisico
+  ls: 6
+  type: Mostro / Forte
+  description: Una fame soprannaturale che indossa un corpo umano consumato.
+  impulse: Trasformare bisogno, solitudine e consumo in cannibalismo rituale.
+  tags:
+  - rapido
+  - affamato
+  - gelido
+  moves:
+  - name: Fame contagiosa
+    text: Chi lo vede nutrirsi deve Resistere +MEN o ottiene la Condizione Affamato e perde 1 Stress quando rifiuta cibo.
+  - name: Caccia sui tetti
+    text: Si sposta da Vicino a Lontano senza offrire un’apertura.
+  - name: Divorare calore
+    text: Quando infligge danno spegne una fonte di calore e recupera 1d4 PF.
+  weakness: Un pasto donato senza paura o interesse indebolisce la Fame; il fuoco blocca il recupero.
+  behavior: Insegue chi nasconde un bisogno e fugge da comunità autenticamente solidali.
+  hook: Una catena di ristoranti esclusivi è collegata a sparizioni e celle frigorifere impossibili.
+- name: Dullahan Milanese
+  pf: 32
+  armor: 2
+  damage: 2d10 fisico
+  ls: 7
+  type: Non morto / Elite
+  description: Un cavaliere senza testa che percorre tangenziali e cavalcavia su una moto nera.
+  impulse: Pronunciare il nome della vittima e separarla dal proprio futuro.
+  tags:
+  - non morto
+  - rapido
+  - presagio
+  moves:
+  - name: Catena del cavalcavia
+    text: A Lontano avvolge e trascina un bersaglio verso un bordo o un veicolo.
+  - name: Nome reciso
+    text: Pronuncia il nome completo di una persona; finché non viene smentito da un Legame, quella persona non può ricevere
+      bonus da Aiutare.
+  - name: Corsa impossibile
+    text: Attraversa traffico e barriere, lasciando dietro di sé una via di fuga che si chiude.
+  weakness: Trovare e restituire la testa o cancellare il nome dal registro funebre riduce Armatura a 0.
+  behavior: Non devia dalla vittima nominata e rispetta chi gli offre un nome più colpevole con prove.
+  hook: Ogni notte una moto senza targa appare nei video di incidenti legati alla stessa famiglia.
+- name: Basilisco delle Fogne
+  pf: 35
+  armor: 2
+  damage: 2d8 fisico + veleno
+  ls: 7
+  type: Mostro / Elite
+  description: Un rettile antico cresciuto tra alchimia, scarichi e pietra romana.
+  impulse: Difendere il nido e trasformare gli intrusi in parte del territorio.
+  tags:
+  - massiccio
+  - velenoso
+  - pietrificante
+  moves:
+  - name: Sguardo minerale
+    text: Annuncia il contatto visivo; chi non lo evita deve Resistere +FOR o riceve la Condizione Pietrificato progressiva.
+  - name: Coda nelle acque
+    text: Infligge danno ad area Vicino e separa il gruppo nei condotti.
+  - name: Veleno di calce
+    text: Chi subisce danno perde 1 Armatura temporaneamente finché non viene purificato.
+  weakness: Vedere il riflesso del proprio sguardo lo Stordisce; acqua corrente pulita blocca la pietrificazione.
+  behavior: Difende uova e vie calde; non insegue fuori dal sistema fognario.
+  hook: Operai trovano statue umane recenti sotto le terme romane.
+- name: Cacciatore del Velo
+  pf: 28
+  armor: 1
+  damage: 2d8 magico
+  ls: 7
+  type: Interdimensionale / Elite
+  description: Un predatore costruito per individuare chi ha attraversato il Velo troppe volte.
+  impulse: Marchiare anomalie e riportarle oltre la soglia.
+  tags:
+  - interdimensionale
+  - tracciante
+  - adattivo
+  moves:
+  - name: Marchio di fase
+    text: Segna un Guardiano; finché il marchio resta, può comparire da qualsiasi ombra Vicina.
+  - name: Lama di discontinuità
+    text: Infligge danno magico e sposta il bersaglio di una fascia o attraverso una porta.
+  - name: Adattamento
+    text: Dopo aver osservato un potere, crea una resistenza narrativa a un suo aspetto, non all’intera Casata.
+  weakness: Il marchio può essere trasferito a un oggetto preparato; un luogo privo di Velo lo rende visibile e vulnerabile.
+  behavior: Non parla e non uccide se può catturare; interrompe l’inseguimento soltanto quando il marchio è risolto.
+  hook: Guardiani veterani scompaiono lasciando soltanto una cicatrice geometrica sui muri.
+- name: Mummia Egizia
+  pf: 30
+  armor: 1
+  damage: 2d8 magico
+  ls: 7
+  type: Non morto / Elite
+  description: Un custode funerario risvegliato con rituali importati e memorie imperiali.
+  impulse: Recuperare il nome, gli organi e gli oggetti sottratti alla tomba.
+  tags:
+  - non morto
+  - rituale
+  - maledetto
+  moves:
+  - name: Benda vivente
+    text: Immobilizza a Lontano e trascina il bersaglio verso un sigillo.
+  - name: Parola del sarcofago
+    text: Impartisce un comando rituale; chi lo comprende deve Resistere +MEN o esegue un gesto limitato.
+  - name: Maledizione del ladro
+    text: Chi porta un oggetto funerario perde 1 Stress a ogni riposo finché non lo restituisce.
+  weakness: Il nome vero e il rito funebre corretto annullano una Mossa; il fuoco interrompe le bende ma rischia di distruggere
+    prove.
+  behavior: Ignora chi restituisce ciò che è stato sottratto e punisce chi tratta i resti come merce.
+  hook: Un museo privato riceve una mummia non registrata e il personale inizia a parlare una lingua morta.
+- name: Drago d'Acqua Maggiore
+  pf: 35
+  armor: 2
+  damage: 3d6 fisico o magico
+  ls: 8
+  type: Acquatico / Elite
+  description: Un antico spirito fluviale capace di assumere forma di serpente, tempesta o piena.
+  impulse: Ripristinare il corso promesso delle acque e sommergere chi ha violato il patto.
+  tags:
+  - acquatico
+  - enorme
+  - tempesta
+  moves:
+  - name: Piena improvvisa
+    text: Trasforma un’area Lontana in acqua profonda e sposta tutti di una fascia.
+  - name: Morso del fiume
+    text: Infligge danno e trascina sott’acqua.
+  - name: Corpo di corrente
+    text: Si dissolve e riappare in qualsiasi acqua connessa nella scena.
+  weakness: Un patto idrico autentico o la restituzione di una sorgente sottratta elimina Corpo di corrente; fuori dall’acqua
+    perde 1 Armatura.
+  behavior: Negozia in termini di decenni e bacini; considera edifici e persone parti temporanee del fiume.
+  hook: Il Naviglio cresce controcorrente e una voce pretende la restituzione di un canale sepolto.
+- name: Angelo Caduto
+  pf: 40
+  armor: 2
+  damage: 3d8 magico
+  ls: 9
+  type: Celestiale corrotto / Leggendario
+  description: Un essere di luce spezzata che ha trasformato il proprio mandato in ossessione.
+  impulse: Dimostrare che la libertà conduce inevitabilmente alla colpa.
+  tags:
+  - celestiale
+  - volante
+  - radiante
+  - fasi
+  moves:
+  - name: Verdetto
+    text: Indica una colpa reale; il bersaglio sceglie se confessarla o subire 1 Stress e una Condizione di vergogna.
+  - name: Lancia radiante
+    text: Infligge danno magico a Lontano e distrugge una protezione temporanea.
+  - name: 'Seconda fase: ali nere'
+    text: 'A 20 PF spezza il luogo: vola, oscura la luce e compie una Mossa ambientale a fine round.'
+  weakness: Un atto libero che contraddice il suo dogma disattiva una Mossa; il nome del mandato originario può costringerlo
+    ad ascoltare.
+  behavior: Offre sempre una possibilità di sottomissione e punisce soprattutto chi rifiuta il suo ordine.
+  hook: Un benefattore miracoloso guarisce persone in cambio di confessioni pubbliche e obbedienza assoluta.
+- name: Vampiro Antico — Contessa Adriana
+  pf: 45
+  armor: 2
+  damage: 3d6 fisico
+  ls: 9
+  type: Non morto / Leggendario
+  description: Una nobildonna immortale che governa desiderio, debito e sangue con secoli di pazienza.
+  impulse: Trasformare relazioni in proprietà e proprietà in eternità.
+  tags:
+  - non morto
+  - rapido
+  - sociale
+  - fasi
+  moves:
+  - name: Invito irresistibile
+    text: Sfrutta un desiderio dichiarato; il bersaglio sceglie un prezzo o perde la posizione favorevole.
+  - name: Bacio predatorio
+    text: Infligge danno e recupera metà del danno effettivo, massimo 8 PF.
+  - name: 'Seconda fase: corte di sangue'
+    text: A 22 PF richiama tre servitori minion o rivela un Legame compromesso; agiscono come una sola minaccia.
+  weakness: Luce solare diretta blocca il recupero e riduce Armatura a 0; distruggere il patto che la lega alla città la rende
+    mortale.
+  behavior: Non combatte senza vantaggio e preferisce trasformare un nemico in debitore.
+  hook: La Contessa finanzia restauri cittadini in luoghi collegati a sparizioni secolari.
+- name: Lich — Il Primo Necromante
+  pf: 40
+  armor: 1
+  damage: 3d8 magico
+  ls: 10
+  type: Non morto / Leggendario
+  description: Un mago che ha distribuito anima, memoria e corpo tra reliquie della città.
+  impulse: Riscrivere il confine della morte finché ogni spirito diventa archivio personale.
+  tags:
+  - non morto
+  - rituale
+  - filatteri
+  - fasi
+  moves:
+  - name: Comando dei morti
+    text: Trasforma spiriti presenti in una minaccia alleata o sottrae loro una memoria.
+  - name: Raggio necrotico
+    text: Infligge danno magico e impedisce il recupero di PF fino alla fine della scena.
+  - name: 'Seconda fase: anima distribuita'
+    text: A 20 PF diventa intangibile finché un filatterio nella scena non viene distrutto o disattivato.
+  weakness: Ogni filatterio distrutto elimina una Mossa e riduce i PF massimi di 5; il suo vero nome collega tutti i frammenti.
+  behavior: Non rischia la distruzione se un archivio o un discepolo può continuare l’opera.
+  hook: Morti di epoche diverse iniziano a ricordare la stessa infanzia che non apparteneva a nessuno di loro.
+- name: Fantasma della Metro — La Signora Bianca
+  pf: 35
+  armor: 2
+  damage: 3d6 magico
+  ls: 9
+  type: Spirito / Leggendario
+  description: Una presenza nata da incidenti, attese e persone mai arrivate a destinazione.
+  impulse: Far viaggiare i vivi sulla linea che conduce al proprio ultimo ricordo.
+  tags:
+  - incorporeo
+  - ferroviario
+  - psichico
+  - fasi
+  moves:
+  - name: Treno fantasma
+    text: Apre porte su un convoglio inesistente; chi non si allontana viene separato dal gruppo.
+  - name: Annuncio impossibile
+    text: Pronuncia una fermata legata a un trauma; chi ascolta deve Resistere +MEN o riviverlo e subire 1 Stress.
+  - name: 'Seconda fase: linea chiusa'
+    text: A 18 PF la stazione si sovrappone a un percorso morto e ogni uscita conduce a una scena del passato.
+  weakness: Completare il viaggio interrotto di una vittima elimina una fase; il suo biglietto originale permette di scegliere
+    la fermata.
+  behavior: Non uccide chi accetta di ascoltare i passeggeri dimenticati; punisce chi tratta le morti come numeri.
+  hook: Una fermata non presente sulle mappe appare sugli schermi della linea rossa a mezzanotte.

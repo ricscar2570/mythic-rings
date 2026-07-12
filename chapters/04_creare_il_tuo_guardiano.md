@@ -5,8 +5,8 @@ part: "Parte I: Il Mondo di Mythic Rings"
 section: "Il Mondo di Mythic Rings"
 epigraph: "Non sei chi eri prima dell'Anello. Non sei ancora chi diventerai."
 tags: []
-status: finale
-version: 3.2
+status: beta
+version: 0.9.0-beta.1
 ---
 
 ## Creare il Tuo Guardiano
@@ -174,7 +174,7 @@ FAT canalizza i poteri di Umbra, Ife e Mictlan (Avalon usa CAR). Sembra una "sta
 :::box[FAT è la Stat di Lancio - ed è una Scelta, non uno Sbilanciamento (segue)]{type=info}
 scaricare FOR, CUO o MEN ha sempre un prezzo concreto.
 
-Il caso a parte è Mictlan, che vorrebbe FAT (poteri) e FOR (PF): la formula v3.2 28+(FOR×1) alza il floor a 28 e dimezza il peso di FOR proprio per ridurre questa doppia dipendenza. Un Mictlan può puntare su FAT e restare comunque resistente.
+Il caso a parte è Mictlan, che trae vantaggio sia da FAT sia da FOR. La formula 28 + FOR garantisce una riserva di PF elevata senza rendere obbligatoria una Caratteristica fisica massima: un Mictlan può privilegiare la magia e restare comunque resistente.
 :::
 
 ## PASSO 5: PUNTI FERITA E RISORSE
@@ -197,40 +197,36 @@ Esempio: Mictlan con FOR +1 → PF = 28 + 1 = 29.
 | +1 | 22 | 29 | Solido. Puoi permetterti qualche rischio. |
 | +2 | 24 | 30 | Robusto. Puoi incassare colpi e alimentare poteri. |
 
-## Risorse Iniziali
+## Risorse iniziali
 
+| Risorsa | Valore iniziale | Regola essenziale |
+|---|---:|---|
+| Stress | 0, massimo 10 | A 8–9 i poteri che costano Stress costano 1 in più; a 10 sei in Burnout |
+| Corruzione | 0, massimo 8 | Solo Umbra; a 8 il Guardiano si trasforma e diventa PNG salvo un effetto esplicito |
+| Punti Fato | 2, massimo 2 | Si ripristinano a inizio sessione; 1 punto ritira un solo d6 |
+| Armatura | 0 | L'equipaggiamento può fornire fino a 3; il totale ordinario non supera 4 |
 
-| Risorsa | Valore Iniziale | Descrizione |
-|---| ---|---|
-| Stress | 0 (max 10) | Stanchezza mentale. Sale usando poteri (Avalon/Ife) e in situazioni traumatiche. A 10 = Burnout. |
-| Corruzione | 0 (max 8) | Solo Umbra. Sale usando poteri L2+. Soglie: 3 (Occhi Neri), 5 (Sussurri), 7 (Forma Instabile), 8 (Trasformazione = perdita PG). |
-| Punti Fato | 2 per sessione | Si rigenerano all'inizio di ogni sessione. Usali per Forzare la Fortuna (ritira un dado) o attivare effetti speciali. |
-| Armatura | 0 | Acquisibile con equipaggiamento. Riduce il danno subito. Massimo 3 con equipaggiamento avanzato. |
+## PASSO 6: POTERI INIZIALI
 
-Scegli **3 poteri di Livello 1** dalla lista della tua Casata
-(dettagliata nel Capitolo dei Poteri). Il Livello 1 rappresenta le
-abilità base: il primo contatto con il Piano della tua Casata, i gesti
-istintivi della magia prima che diventino arte.
+Scegli **3 poteri di Livello 1** dalla lista della tua Casata. Il Livello 1 rappresenta il primo controllo consapevole dell'Anello: capacità affidabili, abbastanza versatili da definire lo stile del Guardiano senza risolvere da sole ogni scena.
 
-La raccomandazione è di scegliere un mix che copra situazioni diverse:
+Per un primo personaggio, scegli preferibilmente:
 
-**1 potere offensivo** - qualcosa che infligga danno o controlli i
-nemici. La Lama Radiante (Avalon), i Tentacoli d'Ombra (Umbra), gli
-Artigli Bestiali (Ife), o il Tocco del Gelo (Mictlan).
+- **un potere offensivo o di controllo**, capace di creare un'apertura o infliggere danno;
+- **un potere difensivo o di mobilità**, utile quando la posizione diventa pericolosa;
+- **un potere informativo, sociale o caratterizzante**, che mostri come il tuo Guardiano affronta i problemi.
 
-**1 potere difensivo o utility** - qualcosa che ti protegga, ti muova
-o ti dia un vantaggio tattico. Lo Scudo di Luce (Avalon), l'Invisibilità
-Parziale (Umbra), la Pelle Coriacea (Ife), o la Vista degli Spiriti
-(Mictlan).
+Questa distribuzione è un consiglio, non un requisito. Due Guardiani della stessa Casata possono scegliere combinazioni completamente diverse.
 
-**1 potere signature** - il potere che definisce il TUO stile, quello
-che userai più spesso e che ti renderà unico nel gruppo. Sceglilo con il
-cuore, non con la calcolatrice.
+I Mictlan ricevono gratuitamente anche il potere passivo L1 **Sangue Tenace**, oltre ai tre poteri scelti. I poteri Umbra L1 non costano Corruzione, salvo indicazione esplicita.
 
-Ricorda: i Mictlan ricevono anche il potere passivo L1 **Sangue Tenace**
-gratuitamente, in aggiunta ai 3 poteri scelti. È un talento innato della
-Casata. Inoltre, i poteri L1 Umbra non costano Corruzione - sono
-gratuiti, come respirare nelle ombre.
+Prima di terminare, annota per ogni potere:
+
+- trigger e Caratteristica;
+- costo;
+- portata e durata;
+- effetto di 10+, 7–9 e 6−, quando richiede un tiro;
+- eventuali limiti per scena o sessione.
 
 ## PASSO 7: EQUIPAGGIAMENTO BASE
 
@@ -257,11 +253,7 @@ saprebbe usare. L'Organizzazione non giudica.
 **Abbigliamento civile + outfit operativo** - vestiti normali per la
 vita di giorno, vestiti scuri e funzionali per le operazioni notturne.
 
-**Opzionale:** Se hai FOR +1 o superiore, puoi avere anche una
-**pistola** (con licenza speciale dei Custodi, non rintracciabile). La
-pistola è un'arma a distanza che infligge 2 danni. Non è magica, e molte
-creature soprannaturali la ignorano - ma contro i bersagli umani è
-spaventosamente efficace.
+**Opzionale:** scegli anche una **pistola** se è coerente con storia, addestramento e copertura del personaggio. Non richiede un valore minimo di FOR. È un'arma a distanza che infligge **2d6 danni fisici**, richiede entrambe le mani per essere usata con precisione e può attirare immediatamente attenzione civile e forze dell'ordine. Molte creature possiedono resistenze specifiche, ma nessuna ignora un'arma soltanto perché non è magica, salvo immunità dichiarata.
 
 ## PASSO 8: LEGAMI
 
@@ -273,31 +265,33 @@ mosse speciali man mano che crescono.
 
 ## Tipi di Legame
 
-Ogni Legame ha un Tipo che determina quando si attiva il bonus e quale
-mossa speciale sblocca al livello 3. Scegli il Tipo quando crei il
-Legame:
+Ogni Legame ha un Tipo e un Livello da 0 a 3. Il Livello determina il bonus; il Tipo stabilisce quando la relazione è pertinente.
 
+| Livello | Effetto |
+|---:|---|
+| 0 | Rapporto spezzato o non più significativo; nessun bonus |
+| 1 | +1 quando la persona e il Tipo sono direttamente coinvolti |
+| 2 | Il bonus diventa +2 |
+| 3 | Il bonus resta +2 e si sblocca la capacità speciale |
 
-| Tipo | Bonus | Trigger | Mossa Speciale (Livello 3) |
-|---| ---|---| ---|
-| Protettore | +1 Difendere | Quando difendi questo PNG | Scudo Umano: assorbi tutto il danno destinato a questo PNG (1/sessione) |
-| Confidente | +1 Riprendersi | Quando ti riposi/parli con questo PNG | Catarsi: -1d6 Stress quando confidi (1/sessione) |
-| Rivale | +1 Sfidare | Quando agisci per superare/impressionare questo PNG | Rivalità Costruttiva: ritira un dado (1/sessione) |
-| Mentore | +1 Investigare | Quando cerchi consiglio o conoscenza da questo PNG | Saggezza Antica: auto-successo su Investigare (1/sessione) |
-| Amato | +1 Ultimo Respiro | Sempre (questa persona ti tiene in vita) | Forza dell'Amore: quando a 0 PF, torna a 1d6 PF (1/campagna) |
+| Tipo | Trigger | Capacità speciale di Livello 3 |
+|---|---|---|
+| Protettore | Rischi per difendere la persona legata | **Interposizione:** una volta per sessione prendi al suo posto una conseguenza fisica appena annunciata |
+| Confidente | Ti apri, ti ricomponi o resisti grazie al suo sostegno | **Catarsi:** una volta per sessione, dopo una scena sincera, riduci di 1d4 lo Stress |
+| Rivale | Affronti un rischio per superarlo o dimostrargli qualcosa | **Sprone:** una volta per sessione ritira un dado di una Mossa pertinente senza spendere Fato |
+| Mentore | Applichi direttamente un insegnamento o una conoscenza ricevuta | **Intuizione:** una volta per sessione poni una domanda aggiuntiva dopo Leggere la Situazione o Investigare |
+| Amato | Agisci per proteggerlo, raggiungerlo o mantenere una promessa | **Ancora:** una volta per sessione ignora 1 Stress appena ottenuto o resta cosciente fino alla fine della scena nonostante una Condizione |
 
-I Legami possono essere con chiunque: familiari (genitore, fratello,
-partner), amici (compagno di università, collega, vicino), altri Custodi
-(un altro PG o un PNG dell'Organizzazione), o contatti utili (un
-informatore, un medico, un hacker). Per ogni Legame, scrivi il nome, la
-relazione, e perché è importante per il tuo personaggio.
+Un solo Legame può modificare lo stesso tiro. Il coinvolgimento deve essere diretto e significativo: pensare genericamente a una persona non concede il bonus. I Legami non modificano Ultimo Respiro.
 
-:::box[Legami tra PG]{type=info}
-Alla Session Zero, ogni giocatore dovrebbe creare almeno 1 Legame verso un altro PG. Questo garantisce coesione di gruppo fin dalla prima sessione. Non devono essere amici: un Legame Rivale tra un Avalon e un Umbra crea tensione narrativa deliziosa. Un Legame Protettore verso un alleato crea scene eroiche.
+I Legami possono unire familiari, amici, colleghi, altri Custodi, contatti o entità capaci di una relazione autentica. Per ciascuno scrivi nome, rapporto, Tipo, motivo dell'importanza e una domanda irrisolta.
+
+:::box[Legami tra Guardiani]{type=info}
+Durante la Sessione Zero, ogni giocatore crea almeno un Legame verso un altro Guardiano. Non deve essere positivo: un Rivale, un Mentore riluttante o un Protettore non ricambiato producono tensione utile, purché tutti desiderino giocarla.
 :::
 
-:::box[Legami tra PG (segue)]{type=info}
-Un Legame Confidente tra due personaggi che si sono appena conosciuti racconta la storia di una fiducia che cresce. **I Legami possono rompersi.** Tradimenti, morti, bugie scoperte - tutto può spezzare un Legame. Quando un Legame si rompe, il bonus scompare e il PG prende +2 Stress. Ma le storie migliori nascono dai Legami che vengono messi alla prova e sopravvivono.
+:::box[Spezzare un Legame]{type=warn}
+Quando morte, tradimento o separazione definitiva spezzano il rapporto, il Livello scende a 0 e il Guardiano subisce 2 Stress. Il Legame può essere ricostruito soltanto attraverso scene e decisioni che trasformino davvero la relazione.
 :::
 
 ## PASSO 9: TOCCHI FINALI
@@ -337,7 +331,7 @@ come si assemblano le scelte e per darti ispirazione.
 :::
 
 :::box[Marco Ferretti - Avalon, Il Paladino (segue)]{type=casata_avalon}
-**Caratteristiche:** FOR +1, CUO +1, MEN 0, CAR +2, FAT -1 **PF:** 22 (20 + 2) \| Stress: 0/10 \| Punti Fato: 2 **Poteri L1:** Lama Radiante (offensivo), Scudo di Luce (difensivo), Presenza Intimidatoria (utility sociale). **Equipaggiamento:** Anello Avalon, smartphone, auricolare, Glock 19, manganello, 500€, giacca kevlar leggera. **Legami:** Sofia Conti (ex collega detective) - Confidente L1 -
+**Caratteristiche:** FOR +1, CUO +1, MEN 0, CAR +2, FAT -1 **PF:** 22 (20 + 2) \| Stress: 0/10 \| Punti Fato: 2 **Poteri L1:** Luce Guida (rivelazione), Scudo Radiante (difesa), Guarigione Minore (cura). **Equipaggiamento:** Anello Avalon, smartphone, auricolare, Glock 19, manganello, 500€, giacca kevlar leggera. **Legami:** Sofia Conti (ex collega detective) - Confidente L1 -
 :::
 
 :::box[Marco Ferretti - Avalon, Il Paladino (segue)]{type=casata_avalon}
@@ -355,7 +349,7 @@ autodifesa.
 :::
 
 :::box[Leila Ferrara - Umbra, L'Infiltratrice (segue)]{type=casata_umbra}
-**Aspetto:** Capelli neri corti, occhi scuri che non battono mai abbastanza, giacca di pelle consumata, anello d'ombra quasi invisibile al mignolo. **Caratteristiche:** FOR -1, CUO +1, MEN +1, CAR 0, FAT +2 **PF:** 18 (20 - 2) \| Stress: 0/10 \| Corruzione: 0/8 \| Punti Fato: 2 **Poteri L1:** Invisibilità Parziale (furtività), Sussurro d'Ombra (inganno sonoro), Lama d'Ombra (offensivo). Tutti a costo 0.
+**Aspetto:** Capelli neri corti, occhi scuri che non battono mai abbastanza, giacca di pelle consumata, anello d'ombra quasi invisibile al mignolo. **Caratteristiche:** FOR -1, CUO +1, MEN +1, CAR 0, FAT +2 **PF:** 18 (20 - 2) \| Stress: 0/10 \| Corruzione: 0/8 \| Punti Fato: 2 **Poteri L1:** Fondersi nelle Ombre (furtività), Occhi Notturni (percezione), Lama d'Ombra (offensivo). Tutti a costo 0 Corruzione.
 :::
 
 :::box[Leila Ferrara - Umbra, L'Infiltratrice (segue)]{type=casata_umbra}
@@ -371,7 +365,7 @@ autodifesa.
 :::
 
 :::box[Professor Kwame Asante - Ife, Il Druido Urbano (segue)]{type=casata_ife}
-Le piante nel suo ufficio crescono troppo velocemente. **Caratteristiche:** FOR 0, CUO +1, MEN +1, CAR -1, FAT +2 **PF:** 20 (20 + 0) \| Stress: 0/10 \| Punti Fato: 2 **Poteri L1:** Rampicanti Obbedienti (controllo piante), Tocco Curativo (guarigione base), Vista Naturale (percezione della vita nelle vicinanze).
+Le piante nel suo ufficio crescono troppo velocemente. **Caratteristiche:** FOR 0, CUO +1, MEN +1, CAR -1, FAT +2 **PF:** 20 (20 + 0) \| Stress: 0/10 \| Punti Fato: 2 **Poteri L1:** Crescita Rapida (controllo vegetale), Tocco Vitale (guarigione), Sensi Animali (percezione).
 :::
 
 :::box[Professor Kwame Asante - Ife, Il Druido Urbano (segue)]{type=casata_ife}
@@ -387,11 +381,11 @@ Le piante nel suo ufficio crescono troppo velocemente. **Caratteristiche:** FOR 
 :::
 
 :::box[Elena Marchetti - Mictlan, La Medium (segue)]{type=casata_mictlan}
-**Aspetto:** Magra, occhiaie perenni, tatuaggio di catrina sull'avambraccio sinistro, anello di ossidiana al medio. Veste sempre di nero - non per scelta estetica, ma perché i colori la distraggono. **Caratteristiche:** FOR +1, CUO +1, MEN 0, CAR -1, FAT +2 **PF:** 29 (28 + 1) \| Stress: 0/10 \| Punti Fato:
+**Aspetto:** Magra, occhiaie perenni, tatuaggio di catrina sull'avambraccio sinistro, anello di ossidiana al medio. Veste sempre di nero - non per scelta estetica, ma perché i colori la distraggono. **Caratteristiche:** FOR +1, CUO +1, MEN 0, CAR -1, FAT +2 **PF:** 29 (28 + 1) \| Stress: 0/10 \| Punti Fato: 2 **Potere Passivo:** Sangue Tenace. **Poteri L1:** Vedere Oltre il Velo (percezione), Tocco del Gelo (offensivo), Parlare con i Morti (comunicazione).
 :::
 
 :::box[Elena Marchetti - Mictlan, La Medium (segue)]{type=casata_mictlan}
-2 **Potere Passivo:** Sangue Tenace (gratuito, attivo quando sotto 40% PF ≈ 12 PF) **Poteri L1:** Vista degli Spiriti (vede fantasmi e tracce di morte), Tocco Frigido (offensivo, drenaggio minore), Voce dei Caduti (comunicazione base con spiriti recenti).
+**Sangue Tenace:** entro i limiti descritti nel capitolo della Casata, Elena può convertire parte del costo in PF dei poteri in Stress.
 :::
 
 :::box[Elena Marchetti - Mictlan, La Medium (segue)]{type=casata_mictlan}
@@ -399,7 +393,7 @@ Le piante nel suo ufficio crescono troppo velocemente. **Caratteristiche:** FOR 
 :::
 
 :::box[Elena Marchetti - Mictlan, La Medium (segue)]{type=casata_mictlan}
-Marco Ferretti (Avalon) - Protettore L1 - il PG di un altro giocatore; Marco la protegge in combattimento, lei gli parla con i morti che lo tormentano. **Citazione:** «I morti non mentono. I vivi, sempre.» **Paura:** Che le voci non siano spiriti ma segnali che sta perdendo la ragione. **Desiderio:** Capire perché l'Anello ha scelto lei - e se lo merita. **Segreto:** Lo spirito di suo padre appare ogni notte.
+Marco Ferretti (Avalon) - Protettore L1 - il PG di un altro giocatore; Marco la protegge in combattimento, lei gli parla con i morti che lo tormentano. **Citazione:** «I morti ricordano a modo loro. I vivi scelgono che cosa dimenticare.» **Paura:** Che le voci non siano spiriti ma segnali che sta perdendo la ragione. **Desiderio:** Capire perché l'Anello ha scelto lei - e se lo merita. **Segreto:** Lo spirito di suo padre appare ogni notte.
 :::
 
 :::box[Elena Marchetti - Mictlan, La Medium (segue)]{type=casata_mictlan}

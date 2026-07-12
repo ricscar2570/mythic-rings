@@ -3,128 +3,174 @@ title: "Le 12 Attività di Downtime"
 chapter: 23
 part: "Parte V: Guida per il Custode"
 section: "Guida per il Custode"
-epigraph: "Milano non smette mai di muoversi. Nemmeno i suoi guardiani."
-status: complete
-version: 3.2
+epigraph: "Tra due notti impossibili, i Guardiani devono ancora vivere."
+tags: [downtime, recupero, legami]
+status: beta
+version: 0.9.0-beta.1
 ---
 
-## Le 12 Attività di Downtime
+## Le 12 attività di downtime
 
-Tra una missione e l'altra, i Guardiani vivono. Il **Downtime** è il tempo tra le avventure, giorni, settimane o mesi dove i PG si riposano, si preparano e coltivano la propria vita.
+Il downtime rappresenta giorni o settimane durante i quali i Guardiani recuperano, coltivano relazioni, mantengono la copertura e preparano il futuro. Non è un menu astratto: ogni attività deve diventare almeno una breve scena o un montaggio con una scelta significativa.
 
-Ogni PG può scegliere **1 attività di Downtime** per ogni periodo tra sessioni (il Custode decide quanto tempo passa). Alcune attività richiedono un tiro; altre hanno effetti automatici.
+Per ogni periodo di downtime, ciascun Guardiano sceglie **una attività principale**. Se trascorre molto tempo o la campagna cambia scala, il Custode può concederne due. Il normale riposo notturno avviene prima delle attività e segue le regole di recupero; i benefici non si moltiplicano ripetendo la stessa azione nello stesso periodo.
 
-| Attività | Tiro | Effetto Rapido |
-|---|---|---|
-| Addestramento | +FOR o +CUO | +1 forward prossima sessione |
-| Ricerca Occulta | +MEN | Scopri info sulla prossima minaccia |
-| Contatti Strada | +CAR | Ottieni contatto o info |
-| Lavoro Civile | Automatico | Mantieni copertura |
-| Meditazione | +FAT | -1/2 Stress + possibile indizio |
-| Purificazione (Umbra) | +FAT | -1/2 Corruzione |
-| Comunione Spiriti (Mictlan) | +FAT | Parla con 1 spirito |
-| Rafforzare Legame | +CUO | Legame sale di livello |
-| Creare Artefatto | +MEN | Oggetto con 1 uso magico |
-| Sorveglianza Quartiere | +MEN | Nessuna sorpresa prossima sessione |
-| Relax | Automatico | -1d4 Stress +1d4 PF |
-| Indagine Personale | +MEN o +FAT | Progressi arco personale |
+## Procedura
 
----
+1. stabilisci quanto tempo passa e quali minacce continuano a muoversi;
+2. applica il recupero ordinario consentito dalla fiction;
+3. ogni giocatore sceglie un'attività;
+4. giocate o riassumete la scena;
+5. effettuate il tiro soltanto se esiste rischio;
+6. registrate contatti, debiti, Legami, risorse e conseguenze;
+7. fate avanzare i clock indipendenti quando previsto, non come punizione per aver riposato.
 
-:::box[1. Addestramento]{type=info}
-**Tiro:** +FOR o +CUO
+| # | Attività | Tiro | Risultato principale |
+|---:|---|---|---|
+| 1 | Addestramento | +FOR o +CUO | Preparazione circoscritta |
+| 2 | Ricerca occulta | +MEN | Verità e pista utile |
+| 3 | Coltivare contatti | +CAR | Accesso, favore o informazione |
+| 4 | Vita civile | Nessuno o +CAR | Copertura e responsabilità |
+| 5 | Meditazione e cura | +FAT | Recupero controllato dello Stress |
+| 6 | Purificazione Umbra | +FAT | Riduzione della Corruzione |
+| 7 | Comunione con gli spiriti | +FAT | Contatto con un defunto pertinente |
+| 8 | Rafforzare un Legame | +CUO | Trasformazione della relazione |
+| 9 | Creare un artefatto minore | +MEN | Oggetto limitato e tracciabile |
+| 10 | Sorvegliare un quartiere | +MEN | Segnali e vantaggio informativo |
+| 11 | Recuperare | Nessuno | PF e Stress secondo regole definite |
+| 12 | Indagine personale | +MEN o +FAT | Progresso su una Milestone |
 
-**10+** +1 forward alla prossima sessione per Attaccare o Difendere.
-**7-9** +1 forward ma -1 Stress (allenamento duro).
-**6-** Ti fai male: -1d4 PF. Nessun bonus.
-:::
+## 1. Addestramento
 
-:::box[2. Ricerca Occulta]{type=info}
-**Tiro:** +MEN
+Descrivi tecnica, istruttore o ostacolo. Scegli una situazione precisa: combattere in spazi stretti, proteggere civili, inseguire sui tetti, mantenere un rituale sotto pressione.
 
-**10+** Scopri 1 informazione utile sulla prossima minaccia.
-**7-9** Informazione parziale o incompleta.
-**6-** Informazione sbagliata (sembrerà vera fino a quando non è troppo tardi).
-:::
+**10+:** ottieni **Preparato**: una volta nella prossima sessione, +1 a un tiro direttamente collegato all'addestramento. **7--9:** ottieni Preparato, ma scegli: perdi 1d4 PF che non può essere ignorato; devi un favore all'istruttore; oppure l'allenamento espone un limite che il Custode metterà in scena. **6−:** non ottieni il bonus, ma scopri una debolezza reale della tua tecnica e il Custode ti dice come potresti correggerla.
 
-:::box[3. Contatti Strada]{type=info}
-**Tiro:** +CAR
+Preparato non si cumula con un altro beneficio omonimo.
 
-**10+** Ottieni 1 contatto utile O 1 informazione dal Mercato Notturno.
-**7-9** Il contatto vuole un favore prima.
-**6-** Attiri attenzioni indesiderate.
-:::
+## 2. Ricerca occulta
 
-:::box[4. Lavoro Civile]{type=tip}
-**Tiro:** Automatico (nessun tiro)
+Definisci una domanda, una fonte e il rischio di consultarla.
 
-Guadagni denaro. Copertura mantenuta. Nessun beneficio meccanico ma il PG mantiene la propria vita profana.
+**10+:** ottieni una risposta vera e una pista utilizzabile; poni inoltre una domanda di approfondimento. **7--9:** ottieni la risposta fondamentale, ma scegli un costo: tempo, debito, esposizione oppure fonte incompleta. **6−:** ottieni comunque un indizio vero; la fonte è compromessa, qualcuno nota la ricerca o il Doom Clock collegato avanza di 1.
 
-*Richiesto 1 volta ogni 3 sessioni o la copertura salta, con conseguenze narrative.*
-:::
+Il Custode non presenta un'informazione falsa come esito meccanicamente garantito.
 
-:::box[5. Meditazione]{type=info}
-**Tiro:** +FAT
+## 3. Coltivare contatti
 
-**10+** -2 Stress e un sogno rivelatore (il Custode ti dà un indizio narrativo).
-**7-9** -1 Stress. Riposo senza visioni.
-**6-** Il sogno è un incubo: +1 Stress invece di ridurlo.
-:::
+Indica quale cerchia frequenti e che cosa chiedi.
 
-:::box[6. Purificazione (solo Umbra)]{type=casata_umbra}
-**Tiro:** +FAT
+**10+:** scegli 2. **7--9:** scegli 1 e il contatto richiede un favore concreto. **6−:** ottieni comunque un nome o un appuntamento, ma una fazione rivale viene a conoscenza del tuo interesse.
 
-**10+** -2 Corruzione.
-**7-9** -1 Corruzione.
-**6-** Le ombre resistono: +1 Corruzione temporanea e visioni inquietanti.
+- accesso a un luogo o evento;
+- informazione affidabile;
+- equipaggiamento comune difficile da reperire;
+- presentazione a un PNG;
+- riduzione di un debito esistente.
 
-*Vedi anche Rituale Purificazione (Cap. 11) per riduzione aggiuntiva.*
-:::
+## 4. Vita civile
 
-:::box[7. Comunione con gli Spiriti (solo Mictlan)]{type=casata_mictlan}
-**Tiro:** +FAT
+Mostra come il Guardiano mantiene lavoro, famiglia, studio, salute e copertura. Non richiede tiro se dedica il tempo necessario. Recupera stabilità narrativa: la copertura rimane credibile e un Legame civile riceve attenzione.
 
-**10+** Parla con 1 spirito a scelta. Ottieni 1 risposta onesta a qualsiasi domanda.
-**7-9** Lo spirito risponde ma è criptico o parla per metafore.
-**6-** Lo spirito è ostile o ingannevole. La sua risposta è una bugia.
-:::
+Se il personaggio ha ignorato ripetutamente la propria vita o tenta di riparare una crisi urgente, tira +CAR.
 
-:::box[8. Rafforzare Legame]{type=info}
-**Tiro:** +CUO
+**10+:** stabilizzi la situazione e scegli una piccola opportunità. **7--9:** la copertura regge, ma accetti un impegno futuro. **6−:** eviti il collasso immediato, ma il Custode introduce una conseguenza visibile nella prossima sessione.
 
-**10+** Un Legame a scelta sale di 1 livello (max L3).
-**7-9** Il Legame non sale ma il PNG è grato (+1 forward alla prossima interazione).
-**6-** Qualcosa va storto: il Legame è messo alla prova narrativamente.
-:::
+Non esiste un obbligo fisso di scegliere questa attività ogni tre sessioni: la necessità deriva dagli eventi narrativi.
 
-:::box[9. Creare Artefatto]{type=info}
-**Tiro:** +MEN
+## 5. Meditazione e cura
 
-**10+** Crei un oggetto minore con 1 uso magico (definisci con il Custode).
-**7-9** L'oggetto funziona ma ha un effetto collaterale (da definire).
-**6-** L'oggetto è instabile. Si attiverà nel momento peggiore della prossima sessione.
-:::
+Questa attività richiede un luogo sicuro, tempo e un metodo personale. Tira +FAT.
 
-:::box[10. Sorveglianza Quartiere]{type=info}
-**Tiro:** +MEN
+**10+:** riduci 2 Stress. **7--9:** riduci 1 Stress e scegli: rivivi una memoria dolorosa; riveli qualcosa a un Confidente; oppure una visione mostra un segnale vero ma inquietante. **6−:** riduci comunque 1 Stress, ma il Custode compie una mossa soft collegata a ciò che emerge.
 
-**10+** Sai tutto ciò che è successo nel quartiere. Nessuna sorpresa la prossima sessione.
-**7-9** Informazioni parziali: 1 evento ti sfugge.
-**6-** Mentre sorvegli, qualcuno sorveglia te. Il Custode lo sa.
-:::
+Non sostituisce il recupero notturno; si applica dopo di esso.
 
-:::box[11. Relax]{type=tip}
-**Tiro:** Automatico (nessun tiro)
+Un Ife che trascorre la scena prendendosi cura di un ecosistema vivo riduce 1 Stress aggiuntivo, una sola volta per downtime.
 
--1d4 Stress e +1d4 PF. Nessun rischio, nessun bonus speciale.
+## 6. Purificazione Umbra
 
-*A volte il meglio che puoi fare è riposare. Non ogni downtime deve essere eroico.*
-:::
+Richiede un rituale, un luogo protetto e un atto di confronto con la propria Ombra. Tira +FAT.
 
-:::box[12. Indagine Personale]{type=info}
-**Tiro:** +MEN o +FAT (a seconda del metodo di indagine)
+**10+:** riduci 2 Corruzione. **7--9:** riduci 1 Corruzione e scegli: l'Ombra rivela un desiderio che dovrai affrontare; il rituale richiede un debito; oppure una presenza ti riconosce. **6−:** riduci comunque 1 Corruzione, ma il Custode introduce una tentazione concreta o una minaccia collegata.
 
-**10+** Fai progressi sul tuo arco personale (il Custode rivela 1 pezzo del puzzle narrativo).
-**7-9** Un indizio, ma porta a nuove domande.
-**6-** La tua indagine attira l'attenzione di chi preferiresti evitare.
+Un Atto di Redenzione e una Purificazione possono avvenire nello stesso periodo soltanto se sono eventi distinti e significativi; non oltrepassare 0.
+
+## 7. Comunione con gli spiriti
+
+Scegli un defunto plausibilmente raggiungibile e spiega il legame. Tira +FAT.
+
+**10+:** lo spirito si manifesta in modo stabile; poni 3 domande. **7--9:** poni 1 domanda e accetta una richiesta o una limitazione. **6−:** ricevi un frammento vero e pertinente, ma arriva lo spirito sbagliato, il contatto attira attenzione o il luogo resta contaminato.
+
+Le risposte riflettono memoria e convinzioni dello spirito; non sono automaticamente onniscienti.
+
+## 8. Rafforzare un Legame
+
+Dichiara quale relazione vuoi trasformare e che cosa fai concretamente per essa. Tira +CUO soltanto se la scena contiene rischio emotivo, conflitto o possibilità reale di cambiamento.
+
+**10+:** scegli 2. **7--9:** scegli 1 e rispondi a una domanda scomoda del Custode o dell'altro personaggio. **6−:** la scena rivela una verità importante; il livello non cambia ancora, ma il Custode indica che cosa servirebbe.
+
+- il Legame sale di un livello, massimo L3, se la fiction lo giustifica;
+- risolvi un debito o una promessa;
+- crea una nuova opportunità condivisa;
+- trasforma il tipo del Legame con consenso reciproco.
+
+Un Legame non può salire più di una volta nello stesso downtime.
+
+## 9. Creare un artefatto minore
+
+Definisci funzione, materiali, fonte magica e limite. Tira +MEN.
+
+**10+:** crei l'oggetto con 2 cariche. **7--9:** crealo con 1 carica e scegli un limite: fragile; riconoscibile; richiede attivazione; attira una specifica creatura. **6−:** puoi completarlo con 1 carica, ma il Custode sceglie due limiti oppure richiede un componente pericoloso prima che funzioni.
+
+Un artefatto minore può:
+
+- fornire +1 a un singolo tiro molto specifico;
+- neutralizzare una proprietà comune;
+- conservare un messaggio o una traccia;
+- produrre un effetto narrativo limitato.
+
+Non replica un potere L3+, non concede Armatura oltre il limite e non diventa permanente senza un avanzamento o un progetto di campagna.
+
+## 10. Sorvegliare un quartiere
+
+Descrivi rete, percorso e segnali cercati. Tira +MEN.
+
+**10+:** poni 3 domande sul quartiere. **7--9:** poni 1 domanda e lasci una traccia o perdi accesso a una fonte. **6−:** poni comunque 1 domanda; qualcuno identifica la sorveglianza o agisce per depistarti.
+
+- Quale fazione si sta muovendo?
+- Quale luogo sta diventando pericoloso?
+- Chi è appena arrivato o scomparso?
+- Quale segnale del Velo viene ignorato?
+- Dove potrei intervenire prima della crisi?
+
+Non garantisce «nessuna sorpresa»: fornisce opportunità di risposta.
+
+## 11. Recuperare
+
+Trascorri il downtime senza progetti rischiosi. Dopo il recupero notturno ordinario:
+
+- recupera 1d4 PF;
+- riduci 1 Stress;
+- rimuovi una Condizione temporanea quando la fiction lo consente;
+- ripara o sostituisci equipaggiamento comune.
+
+Non riduce Corruzione. Non può riportare i PF oltre il massimo. Se il personaggio riceve cure professionali o magiche aggiuntive, applicale una sola volta secondo la relativa regola.
+
+## 12. Indagine personale
+
+Scegli una Milestone, un segreto o una domanda del personaggio e descrivi il metodo. Tira +MEN per ricerca e deduzione, oppure +FAT per visioni, presagi e contatti soprannaturali.
+
+**10+:** ottieni un progresso concreto e scegli: una verità; un luogo; una persona; una prova. **7--9:** ottieni il progresso, ma apre una responsabilità, un debito o una scelta. **6−:** ottieni un indizio vero che porta avanti l'arco; la fonte del mistero si accorge di te o colpisce un elemento collegato.
+
+## Azioni condivise
+
+Due Guardiani possono svolgere insieme la stessa attività. Uno tira e l'altro può **Aiutare** se la fiction lo permette. Entrambi condividono benefici narrativi e conseguenze; i benefici numerici non vengono duplicati salvo indicazione esplicita.
+
+## Minacce durante il downtime
+
+Il riposo non congela il mondo. Prima delle attività, il Custode dichiara quali clock potrebbero avanzare. Se il gruppo dedica settimane a recuperare mentre un rituale è imminente, il piano nemico continua. Questo non deve sorprendere: la pressione deve essere già visibile.
+
+:::box[Scopo del downtime]{type=tip}
+Il downtime è riuscito quando modifica almeno una tra **risorsa, relazione, informazione, posizione, debito o progetto personale** e offre materiale concreto per la sessione successiva.
 :::

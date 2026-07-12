@@ -5,8 +5,8 @@ part: "Parte I: Il Mondo di Mythic Rings"
 section: "Il Mondo di Mythic Rings"
 epigraph: "Quattro Casate, quattro vie verso la verità. Nessuna è completamente giusta."
 tags: []
-status: finale
-version: 3.2
+status: beta
+version: 0.9.0-beta.1
 ---
 
 ## Le Quattro Casate
@@ -100,19 +100,20 @@ tramite un Atto di Catarsi con un Confidente (Legame livello 2+).
 Mosse Esclusive
 
 :::box[Voce dell'Autorità]{type=info}
-**Quando dai un ordine in una situazione critica**, tira +CAR. **10+:** Tutti gli alleati presenti agiscono immediatamente, fuori dal normale ordine di iniziativa. La tua voce taglia il caos come una lama di luce. Scegli tu l'ordine in cui agiscono. **7--9:** Gli alleati agiscono immediatamente, ma tu sei esposto - il prossimo attacco contro di te ha +1 danno. Guidare ha un costo. **6--:** Il panico li blocca.
-:::
+**Quando coordini gli alleati sotto pressione**, descrivi un ordine chiaro e tira +CAR. **10+:** scegli 2. **7--9:** scegli 1 e il Custode espone te a un pericolo immediato. **6−:** il gruppo esita o interpreta male l'ordine; il Custode compie una mossa, ma non annulla ciò che i personaggi hanno già ottenuto.
 
-:::box[Voce dell'Autorità (segue)]{type=info}
-Nessuno agisce. Forse le tue parole non sono abbastanza, o forse la situazione è più terrificante della tua convinzione. *Nota:* Questa mossa non costa Stress. È un'espressione naturale della leadership Avalon, non un potere magico.
+- Un alleato ottiene +1 al prossimo tiro direttamente collegato all'ordine.
+- Un alleato può raggiungere una posizione vicina senza esporsi al pericolo che la separa.
+- Rimuovi da un alleato una condizione narrativa di paura, esitazione o confusione.
+- Tutti comprendono immediatamente una singola informazione tattica che comunichi.
+
+Questa mossa non concede azioni aggiuntive e non costa Stress: rappresenta la disciplina e la leadership Avalon.
 :::
 
 :::box[Luce della Verità]{type=info}
-**Quando guardi qualcuno negli occhi e cerchi la verità**, tira +CAR. **10+:** Sai se mente e perché. Non leggi la mente, ma percepisci l'intenzione dietro le parole - paura, avidità, disperazione, amore. L'Anello pulsa caldo quando la verità emerge. **7--9:** Sai se mente, ma non il motivo. Percepisci la dissonanza tra parole e intenzione, ma il perché resta oscuro. **6--:** La luce ti acceca.
-:::
+**Quando sostieni lo sguardo di qualcuno e cerchi una menzogna consapevole**, tira +CAR. **10+:** sai se la persona crede vera la frase appena pronunciata e puoi chiedere anche *che cosa sta proteggendo?* oppure *che cosa omette di proposito?* **7--9:** percepisci una contraddizione reale, ma per comprenderla devi mostrare il tuo sospetto, rivelare un dettaglio su di te o accettare che l'interlocutore interrompa la conversazione. **6−:** la verità resta indistinta e il Custode compie una mossa; non fornisce mai una certezza falsa come se provenisse dall'Anello.
 
-:::box[Luce della Verità (segue)]{type=info}
-Percepisci qualcosa, ma non sai se è vero o se è il riflesso dei tuoi pregiudizi. Il Custode può darti informazioni fuorvianti.
+La mossa rileva convinzioni e intenzioni, non fatti oggettivi: una persona sincera può essere comunque male informata, manipolata o confusa.
 :::
 
 Archetipi di Personaggio
@@ -255,13 +256,13 @@ l'Umbra li padroneggia senza rischio, come respirare. Ma da L2 in su, il
 prezzo sale.
 
 
-| Corruzione | Effetto | Meccanica |
-|---| ---|---|
-| 0--2 | Nessun effetto visibile. L'Umbra opera normalmente. | Nessuna |
-| 3 | Occhi Neri: gli occhi dell'Umbra diventano completamente neri per alcuni secondi dopo l'uso dei poteri. Effetto cosmetico, coperto dal Velo. | Cosmetico |
-| 5 | Sussurri dell'Ombra: il PG sente voci che suggeriscono azioni moralmente ambigue. Il Custode offre una tentazione per scena: se il PG la accetta, guadagna +1 forward ma la tentazione ha sempre un costo nascosto. | Tentazione 1/scena |
-| 7 | Forma Instabile: l'ombra del PG si muove indipendentemente - a volte fa gesti che il PG non sta facendo. -1 ongoing a CAR (le persone percepiscono qualcosa di sbagliato). | -1 ongoing CAR |
-| 8 | Trasformazione: il Guardiano diventa una Creatura d'Ombra. Perdita del PG. Il personaggio diventa un antagonista sotto il controllo del Custode. | PERDITA PG |
+| Corruzione | Segni nella fiction | Effetto meccanico |
+|---:|---|---|
+| 0--2 | L'Ombra rimane silenziosa; eventuali segni sono quasi impercettibili. | Nessuno. |
+| 3--5 | Occhi anneriti, riflessi in ritardo, sussurri e tentazioni. Il Custode può offrire occasioni oscure, ma accettarle non concede bonus automatici. | Nessuna penalità numerica permanente. |
+| 6 | L'Ombra oppone resistenza quando il Guardiano forza i poteri più profondi. | I poteri L3+ costano +1 Corruzione. |
+| 7 | L'ombra si muove autonomamente e il controllo si assottiglia. | Anche i poteri L2+ costano +1 Corruzione. |
+| 8 | L'Ombra prende il sopravvento. | Trasformazione: il personaggio diventa un PNG del Custode. |
 
 **Recupero: Atto di Redenzione.** L'Umbra può ridurre la Corruzione di 1
 punto compiendo un atto significativamente altruista che contraddice
@@ -274,19 +275,21 @@ possibile un Rituale di Purificazione che riduce di 1 la Corruzione.
 Mosse Esclusive
 
 :::box[Leggere le Ombre]{type=info}
-**Quando osservi qualcuno senza essere visto**, tira +FAT. **10+:** Scopri un segreto, una debolezza o un piano. L'ombra della persona ti sussurra ciò che il suo proprietario vorrebbe nascondere. **7--9:** Scopri qualcosa di utile, ma la tua presenza è sospettata. Non ti hanno visto, ma qualcuno si è girato con un brivido lungo la schiena. **6--:** Sei scoperto - o peggio, ciò che vedi nell'ombra ti vede.
-:::
+**Quando osservi senza essere notato una persona o un luogo dominato dalle ombre**, formula ciò che vuoi capire e tira +FAT. **10+:** poni 2 domande. **7--9:** poni 1 domanda, ma qualcuno avverte una presenza o lasci una traccia. **6−:** poni comunque 1 domanda; il Custode risponde sinceramente e compie una mossa collegata a ciò che le ombre hanno rivelato.
 
-:::box[Leggere le Ombre (segue)]{type=info}
-A volte le ombre restituiscono lo sguardo.
+- Che cosa viene nascosto qui?
+- Qual è la via d'accesso o di fuga meno sorvegliata?
+- Chi esercita davvero il controllo?
+- Quale debolezza potrei sfruttare?
+- Che cosa sta per accadere?
+
+La mossa non sostituisce **Investigare**: offre letture furtive e tattiche, non prove complete.
 :::
 
 :::box[Colpo dall'Ombra]{type=info}
-**Quando attacchi un nemico completamente inconsapevole della tua presenza**: Infliggi danno automatico (nessun tiro per colpire) + 1d6 danni extra. L'ombra guida la tua mano con precisione chirurgica. **Poi tira +CUO per restare nascosto:** **10+:** Resti invisibile. Il nemico non sa cosa lo ha colpito. Puoi colpire ancora. **7--9:** Sei scoperto. Il nemico sa dove sei e reagisce. **6--:** Contrattacco immediato.
-:::
+**Quando attacchi un bersaglio che non sa dove sei e non può reagire in tempo**, tira **Attaccare +CUO** invece della Caratteristica normalmente richiesta. **10+:** infliggi il danno dell'arma +1d6 e scegli 1: rimani nascosto; raggiungi una posizione vicina favorevole; disarmi o immobilizzi brevemente il bersaglio. **7--9:** infliggi il normale danno dell'arma, ma riveli la tua posizione oppure subisci una conseguenza immediata. **6−:** il bersaglio, una sentinella o l'ambiente neutralizza il vantaggio e il Custode compie una mossa.
 
-:::box[Colpo dall'Ombra (segue)]{type=info}
-Il nemico era più preparato di quanto pensassi, o qualcun altro ti ha visto.
+Non infligge danno automatico e non concede un secondo attacco: il vantaggio deriva dalla precisione e dal controllo della posizione.
 :::
 
 Archetipi di Personaggio
@@ -437,27 +440,30 @@ completamente al flusso di energia vivente - sentire ogni pianta, ogni
 animale, ogni persona nelle vicinanze. È bellissimo e devastante. Come
 un abbraccio che non ti lascia mai.
 
-Bonus Ife: il contatto con la natura riduce lo Stress di 1 punto
-aggiuntivo durante il recupero. Un Ife che passa la notte in un parco o
-in un bosco recupera più velocemente di un Ife chiuso in un appartamento
-di cemento.
+Bonus Ife: una volta per ogni attività di downtime, se il Guardiano
+trascorre tempo significativo in contatto con un ecosistema vivo e lo
+protegge o se ne prende cura, riduce 1 Stress aggiuntivo. Il beneficio
+non si attiva limitandosi a dormire vicino a una pianta o attraversare
+un parco: deve diventare parte della scena e delle scelte del personaggio.
 
 Mosse Esclusive
 
 :::box[Sentire la Vita]{type=info}
-**Quando tocchi una creatura vivente o una pianta**, tira +FAT. **10+:** Senti il suo stato completo: salute fisica, stato emotivo, e intenzioni (se è una creatura senziente). Un albero ti racconta se qualcuno è passato di qui recentemente. Un cane ti mostra il volto dell'ultima persona che lo ha toccato. Una persona ti rivela inconsapevolmente se ha paura, se mente, se sta soffrendo.
-:::
+**Quando entri in contatto con un essere vivente o con una rete naturale e ti apri alle sue sensazioni**, tira +FAT. **10+:** poni 3 domande. **7--9:** poni 1 domanda e scegli: assorbi un'emozione o un dolore e prendi +1 Stress; oppure la creatura percepisce chiaramente la tua intrusione. **6−:** ricevi comunque un'impressione vera e utile, ma il flusso vitale ti travolge; prendi +1 Stress e il Custode compie una mossa.
 
-:::box[Sentire la Vita (segue)]{type=info}
-**7--9:** Percepisci qualcosa di vago: un'emozione dominante, una sensazione di salute o malattia, una direzione approssimativa. Utile ma incompleto. **6--:** Il flusso di vita ti travolge. Senti troppo, troppo forte. Prendi +1 Stress e il Custode descrive un'emozione o un'immagine che non avresti voluto percepire.
+- Che cosa lo ferisce o lo altera?
+- Quale emozione domina in questo momento?
+- Che cosa ha toccato o attraversato di recente?
+- Da quale direzione proviene la minaccia più vicina?
+- Che cosa desidera proteggere?
+
+Le risposte descrivono percezioni, memoria sensoriale e stato vitale; non trasformano piante o animali in testimoni onniscienti.
 :::
 
 :::box[Simbiosi]{type=info}
-**Quando guarisci un alleato con i tuoi poteri**: Per ogni 3 PF che guarisci, guadagni 1 PF tu stesso. La vita che doni ritorna, in parte, a te. Questo non elimina il costo in Stress della guarigione, ma mitiga l'usura fisica e rappresenta la filosofia Ife: dare non è mai a senso unico nel ciclo della natura. *Nota:* Questa mossa è passiva e automatica. Non richiede un tiro.
-:::
+**Una volta per scena**, quando un tuo potere restituisce PF a un alleato, puoi recuperare 2 PF. Non si attiva sulle cure rivolte a te stesso, sugli effetti continuati, sulle guarigioni ad area ripetute o su una cura che non abbia effettivamente restituito almeno 1 PF.
 
-:::box[Simbiosi (segue)]{type=info}
-Si attiva ogni volta che usi un potere di guarigione su un alleato.
+Simbiosi non riduce il costo in Stress del potere e non può generare un ciclo di guarigione tra più Ife: ciascun Guardiano può beneficiarne una sola volta nella scena.
 :::
 
 Archetipi di Personaggio
@@ -611,43 +617,26 @@ debolezza, sangue dal naso, tosse, svenimenti nei casi estremi. È un
 sacrificio letterale e volontario. I Mictlan lo accettano con la stessa
 serenità con cui accettano la morte: fa parte del prezzo.
 
-I Mictlan iniziano con più PF degli altri Guardiani: **PF = 28 + (FOR × 1)** invece di 20 + (FOR × 2) per le altre Casate. La formula è stata aggiornata nella v3.2 per ridurre la dipendenza obbligatoria da FOR: il floor di base è più alto (+28 vs +24 precedente), ma il moltiplicatore è dimezzato. Inoltre, i costi dei poteri sono stati
-dimezzati rispetto alle versioni precedenti per allineare il rischio con
-le altre Casate.
+I Mictlan iniziano con più PF degli altri Guardiani: **PF = 28 + FOR**, mentre Avalon, Umbra e Ife usano **20 + (FOR × 2)**. La riserva più alta compensa il fatto che ogni potere consuma direttamente la capacità del Guardiano di restare in piedi.
 
+Il costo non dipende soltanto dal Livello: è riportato in ogni potere e riflette portata, durata e impatto. I poteri più estremi possono portare il Mictlan a 0 PF. In quel caso l'effetto si risolve e subito dopo si attiva Ultimo Respiro.
 
-| Livello | Costo PF | Stress Alt. | Nota |
-|---| ---|---| ---|
-| L1 | 1 PF | - | Costo minimo. Anche un Mictlan ferito può usarli. |
-| L2 | 2 PF | (1 PF + 2 Stress) | Con Sangue Tenace, se scendi sotto 40% PF puoi convertire. |
-| L3 | 3 PF | (2 PF + 2 Stress) | Poteri significativi. Il sangue dal naso è un segnale. |
-| L4 | 4 PF | (2 PF + 2 Stress) | Il corpo protesta. Pallore, tremori, vista sfocata. |
-| L5 | 6 PF | (3 PF + 2 Stress) | Poteri devastanti. Rischio reale di morte. |
-
-:::box[Sangue Tenace (Potere Passivo L1, Gratuito)]{type=info}
-**Quando usi un potere e il costo in PF ti porterebbe sotto il 40% dei PF massimi**, puoi scegliere di convertire metà del costo PF (arrotondato per difetto) in +2 Stress. Questo crea un punto decisionale interessante ad ogni uso: paghi in sangue o in stanchezza? Il corpo o la mente? Sangue Tenace è la valvola di sicurezza che permette ai Mictlan di essere audaci senza essere suicidi.
-:::
-
-:::box[Sangue Tenace (Potere Passivo L1, Gratuito) (segue)]{type=info}
-*Esempio:* Elena, Mictlan con 29 PF massimi (soglia 40% ≈ 12 PF), è a 14 PF e vuole usare un potere L3 (costo 3 PF). Scendrebbe a 11, sotto la soglia. Può attivare Sangue Tenace: paga 2 PF (invece di 3) e prende +2 Stress. Scende a 12 PF invece di 11, restando alla soglia invece di scendere sotto.
+:::box[Sangue Tenace — passivo di Casata]{type=info}
+Una volta per scena, se il costo di un potere ti porterebbe sotto il 40% dei PF massimi, puoi convertire metà del costo, arrotondato per difetto e minimo 1 PF, in 2 Stress. Dichiara la conversione prima di pagare. Il costo non può scendere sotto 1 PF e la capacità non è disponibile a Stress 10.
 :::
 
 Mosse Esclusive
 
 :::box[Interrogare i Morti]{type=info}
-**Quando tocchi un cadavere e cerchi di parlare con il suo spirito**, tira +FAT. **10+:** Lo spirito risponde a 3 domande sinceramente. I morti non hanno più nulla da nascondere - la verità scorre da loro come acqua da una fonte. **7--9:** Lo spirito risponde a 1 domanda, ma vuole qualcosa in cambio. Un favore, una promessa, la chiusura di un affare lasciato in sospeso. I morti hanno ancora desideri.
-:::
+**Quando tocchi resti sufficienti a creare un contatto e cerchi lo spirito che vi è legato**, tira +FAT. **10+:** poni 3 domande e lo spirito risponde secondo ciò che ricorda e crede. **7--9:** poni 1 domanda; lo spirito pretende prima una promessa, un favore o il riconoscimento di un desiderio incompiuto. **6−:** ricevi comunque un frammento vero e pertinente, ma lo spirito è confuso, ostile, incompleto o attira una presenza indesiderata; il Custode compie una mossa.
 
-:::box[Interrogare i Morti (segue)]{type=info}
-**6--:** Lo spirito è ostile, confuso, o non è chi pensavi. Forse mente (i morti più vecchi imparano a farlo). Forse urla - e il suo urlo attira qualcosa che non avresti voluto incontrare. *Nota:* Questa mossa non costa PF. È un talento naturale del Mictlan, non un potere canalizzato. Ma richiede un cadavere ragionevolmente intatto e recente (meno di una settimana).
+I morti possono mentire, ricordare male o interpretare gli eventi. La mossa garantisce che la risposta rifletta davvero la loro prospettiva, non che sia oggettivamente corretta. Non costa PF, ma richiede un legame plausibile con il defunto; resti antichi o gravemente dispersi possono richiedere un rituale, un oggetto personale o un luogo significativo.
 :::
 
 :::box[Presagio]{type=info}
-**Una volta per sessione**, puoi chiedere al Custode: «Qualcuno qui morirà presto?» Il Custode risponde onestamente. Sente il brivido della morte che si avvicina - non la certezza, ma la probabilità. L'Anello diventa pesantissimo per un istante. **Se la risposta è sì:** Ottieni +2 forward per ogni azione volta a proteggere quella persona.
-:::
+**Una volta per sessione**, quando ti fermi ad ascoltare il peso della morte, chiedi al Custode: *qual è la morte più vicina e quale segno la annuncia?* Il Custode descrive onestamente la minaccia mortale più probabile che il personaggio possa percepire, senza trasformarla in un destino certo né rivelare necessariamente ogni responsabile.
 
-:::box[Presagio (segue)]{type=info}
-L'Anello guida la tua mano con l'urgenza di chi ha visto il futuro e vuole cambiarlo. *Nota:* Il Custode non è obbligato a rivelare chi morirà - solo se qualcuno è in pericolo mortale. Il Presagio non è infallibile: indica il destino più probabile, non quello certo. Le azioni dei PG possono cambiarlo.
+Scegli te stesso o un alleato che abbia compreso il presagio: quella persona ottiene +1 a un singolo tiro compiuto per evitare la morte indicata. Il bonus si perde quando la minaccia cambia, viene scongiurata o termina la sessione.
 :::
 
 Archetipi di Personaggio
@@ -692,13 +681,15 @@ incontrovertibile: gli spiriti hanno informazioni cruciali, i morti
 possono testimoniare, e qualcuno deve custodire il confine tra i vivi e
 i morti.
 
-**La Regola Sacra:** Mictlan non riporta i morti permanentemente. La
-resurrezione vera richiede poteri L5 di Avalon o Ife, e anche in quel
-caso è temporanea e con conseguenze gravi. I Mictlan possono solo
-rianimare cadaveri - corpi senza anima, automi di carne. Rispettano il
-ciclo naturale con una convinzione assoluta: «La Morte va accettata, non
-combattuta. Chi combatte la Morte perde sempre. La questione è solo
-quanto danno fa prima di perdere.»
+**La Regola Sacra:** nessuna Casata rende la resurrezione ordinaria o
+sicura. Alcuni poteri di Livello 5 di Avalon, Ife e Mictlan possono
+tentare di richiamare una persona appena morta, ma richiedono condizioni
+precise, un prezzo irreversibile e non possono diventare una procedura
+ripetibile. Rianimare un cadavere privo dell'anima è invece un atto
+diverso, temporaneo e sottoposto alle regole del relativo potere.
+I Mictlan rispettano il ciclo naturale proprio perché ne conoscono i
+confini: «La Morte va accettata. Richiamare qualcuno significa assumersi
+il debito che lascia dietro di sé.»
 
 **Linea Ley:** La Linea dei Morti (S, dal Cimitero Monumentale al Duomo)
 risuona con l'energia Mictlan. Lungo questa linea il confine tra vivi e

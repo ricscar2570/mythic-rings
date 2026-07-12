@@ -1,7 +1,7 @@
 /**
- * MYTHIC RINGS v3 — PDF HTML Renderer
+ * MYTHIC RINGS — HTML Renderer
  * Converte i capitoli .md in un documento HTML completo
- * pronto per WeasyPrint → PDF A5 due colonne
+ * per consultazione, debug e controllo di parità editoriale
  */
 'use strict';
 
@@ -9,6 +9,8 @@ const fs   = require('fs');
 const path = require('path');
 const glob = require('glob');
 const { parseFrontmatter, parse, NODE } = require('./md-parser');
+const { loadMeta } = require('./project-meta');
+const PROJECT = loadMeta(__dirname);
 
 // ── Escape HTML ──────────────────────────────────────────────
 function esc(s) {
@@ -170,24 +172,57 @@ function renderChapter(ast, fm, chapterIndex) {
 function buildCover() {
   return `
 <div class="cover-page">
-  <div class="cover-eyebrow">Urban Fantasy · Milano Occulta</div>
-  <div class="cover-title">Mythic<br>Rings</div>
-  <div class="cover-version">v3.2</div>
+  <div class="cover-eyebrow">${esc(PROJECT.system_description)}</div>
+  <div class="cover-title">${esc(PROJECT.title).replace(/ /g, '<br>')}</div>
+  <div class="cover-version">${esc(PROJECT.edition)}</div>
   <div class="cover-rule"></div>
   <div class="cover-subtitle">
-    Guardiani di Milano<br>
+    ${esc(PROJECT.subtitle)}<br>
     <br>
-    Un gioco di ruolo di investigazione soprannaturale<br>
-    nel cuore di Milano
+    ${esc(PROJECT.tagline)}
   </div>
-  <div class="cover-tagline">Powered by the Apocalypse</div>
+  <div class="cover-tagline">Versione ${esc(PROJECT.version)}</div>
 </div>
 `;
 }
 
+// ── Back matter HTML ──────────────────────────────────────────
+function buildBackMatter() {
+  const contacts = [PROJECT.website, PROJECT.contact].filter(Boolean).map(esc).join(' · ');
+  const isbn = PROJECT.isbn ? `<p>ISBN: ${esc(PROJECT.isbn)}</p>` : '';
+  return `
+<div class="page-break"></div>
+<div class="chapter-header avoid-break">
+  <div class="chapter-title">Colophon</div>
+</div>
+<div class="chapter-body">
+  <h2>${esc(PROJECT.title)} - ${esc(PROJECT.subtitle)}</h2>
+  <p><strong>${esc(PROJECT.edition)} - versione ${esc(PROJECT.version)} (${esc(String(PROJECT.copyright_year))})</strong></p>
+  <p>Ideazione, testo e game design: ${esc(PROJECT.author)}.</p>
+  <p>Sviluppo editoriale e manutenzione della presente edizione: ${esc(PROJECT.author)}.</p>
+  <p>Mythic Rings e Guardiani di Milano sono opere di fantasia. Nomi, personaggi, luoghi ed eventi, per quanto ispirati alla città di Milano, sono usati in modo fittizio.</p>
+  <p>Mythic Rings è un gioco ispirato ai principi Powered by the Apocalypse. La dicitura definitiva e ogni attribuzione aggiuntiva devono essere verificate prima della release commerciale.</p>
+  <p>Copyright © ${esc(String(PROJECT.copyright_year))} ${esc(PROJECT.author)}. Tutti i diritti riservati.</p>
+  ${isbn}
+  ${contacts ? `<p>${contacts}</p>` : ''}
+</div>
+<div class="page-break"></div>
+<div class="chapter-header avoid-break">
+  <div class="chapter-title">Crediti e Ringraziamenti</div>
+</div>
+<div class="chapter-body">
+  <h2>Autore</h2>
+  <p>${esc(PROJECT.author)} - ideazione, testo e game design.</p>
+  <h2>Stato dei crediti</h2>
+  <p>Questa è una versione beta editoriale. I crediti nominativi di editing, consulenza e playtest saranno inseriti esclusivamente dopo conferma scritta e prima della release commerciale.</p>
+  <h2>Ringraziamenti</h2>
+  <p>Grazie ai lettori e ai tavoli che contribuiranno alla verifica della Prima Edizione.</p>
+</div>`;
+}
+
 // ── Documento HTML completo ──────────────────────────────────
 function buildFullHTML(chaptersDir, cssPath) {
-  const files = glob.sync(`${chaptersDir}/*.md`).sort();
+  const files = PROJECT.chapters.map(rel => path.join(PROJECT.root, rel));
   if (!files.length) {
     console.error('Nessun capitolo trovato in ' + chaptersDir);
     process.exit(1);
@@ -244,7 +279,7 @@ function buildFullHTML(chaptersDir, cssPath) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
-  <title>Mythic Rings v3.2</title>
+  <title>${esc(PROJECT.title)} - ${esc(PROJECT.edition)} ${esc(PROJECT.version)}</title>
   <style>
 ${cssText}
   </style>
@@ -253,11 +288,11 @@ ${cssText}
 
 ${buildCover()}
 
-<div class="blank-page"></div>
-
 ${toc}
 
 ${chapters.join('\n')}
+
+${buildBackMatter()}
 
 </body>
 </html>
@@ -270,10 +305,10 @@ if (require.main === module) {
   const outDir  = path.resolve(process.argv[3] || './dist');
   const cssPath = path.resolve(__dirname, 'pdf-styles.css');
 
-  console.log('\n🖋  MYTHIC RINGS v3 — PDF HTML Renderer\n');
+  console.log(`\nBuild ${PROJECT.title} ${PROJECT.version} - HTML\n`);
 
   const html     = buildFullHTML(chapDir, cssPath);
-  const htmlPath = path.join(outDir, 'Mythic_Rings_v3.html');
+  const htmlPath = path.join(outDir, `${PROJECT.output_basename}.html`);
 
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(htmlPath, html, 'utf8');

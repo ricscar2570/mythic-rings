@@ -1,254 +1,192 @@
 ---
 title: "Poteri di Umbra"
 chapter: 8
-part: "Parte III: Le Quattro Casate"
-section: "Le Quattro Casate"
-epigraph: "Le ombre non mentono. Mostrano solo ciò che la luce non vuole vedere."
-status: complete
-version: 3.2
+part: "Parte III: I Poteri delle Casate"
+section: "Poteri delle Casate"
+epigraph: "L'ombra non mente. Nasconde."
+tags: [umbra, poteri]
+status: beta
+version: 0.9.0-beta.1
 ---
 
-## Poteri di Umbra: L'Abisso che Sussurra
+## Poteri di Umbra: l'Abisso che Sussurra
 
-Ombre, inganno, infiltrazione, controllo. Gli Umbra sono fantasmi urbani, manipolatori di percezioni, tessitori di paura. I loro poteri nascondono, ingannano, feriscono nell'oscurità.
+Umbra domina occultamento, spostamento, inganno e paura. I poteri usano normalmente **FAT** e alimentano la **Corruzione**.
 
-**Risorsa:** Corruzione (0-8). Ogni uso dei poteri L2+ contamina l'anima. A 8 = Trasformazione irreversibile.
+- I poteri L1 non costano Corruzione.
+- L2 costa normalmente 1 Corruzione.
+- L3 costa normalmente 2.
+- L4 costa normalmente 3.
+- L5 costa normalmente 4.
+- A Corruzione 6, i poteri L3+ costano 1 in più.
+- A Corruzione 7, i poteri L2+ costano 1 in più.
+- A Corruzione 8, la trasformazione è immediata.
 
-**Caratteristica Poteri:** +FAT.
+Paga il costo prima del tiro. Un potere non può portarti oltre 8 senza attivare la trasformazione.
 
-:::box[Regola v3.2: Corruzione Umbra]{type=danger}
-I poteri **L1 sono sempre gratuiti** (nessun costo Corruzione). Da L2 in su il costo è indicato nel box del potere.
-
-**Penalità Progressiva Corruzione** *(v3.2)*:
-- **Corruzione 6:** I poteri L3+ costano +1 Corruzione aggiuntiva.
-- **Corruzione 7:** I poteri L2+ costano +1 Corruzione aggiuntiva. I poteri L1 restano al costo normale.
-- **Corruzione 8, Trasformazione:** Automatica e immediata. Il personaggio è perduto.
-:::
-
-:::box[Regola v3.2: Corruzione Umbra (segue)]{type=danger}
-*L'Umbra non viene bloccata, viene resa più costosa man mano che si avvicina al limite. Ogni uso è una scelta drammatica consapevole.*
-
-Per ridurre la Corruzione: vedi Capitolo 11 (Riposo Vigile, Rituale Purificazione, Atto di Redenzione).
-:::
-
-## Livello 1: Iniziato
+### Livello 1 — Iniziato
 
 :::box[Fondersi nelle Ombre]{type=casata_umbra}
-**【 Livello 1 】**
+**Ruolo:** furtività  
+**Costo:** 0 Corruzione | **Portata:** Sé | **Durata:** concentrazione, massimo 10 minuti | **Tiro:** +FAT
 
-**Costo:** +1 Corruzione | **Range:** Sé | **Durata:** Concentrazione (max 10 min) | **Tiro:** Usare Potere +FAT
-
-Ti fondi letteralmente nelle ombre. Diventi **invisibile** finché resti in oscurità. Requisito: area buia/ombreggiata. Si interrompe se: attacchi, usi altro potere, entri in luce forte, subisci danno.
+- **10+:** diventi invisibile finché resti in ombra e non compi un'azione apertamente aggressiva; scegli se muoverti senza lasciare tracce o includere l'equipaggiamento di un alleato a Contatto.
+- **7–9:** sei nascosto, ma scegli: devi restare quasi immobile, la durata è breve, oppure la tua ombra si muove in modo riconoscibile.
+- **6−:** l'ombra ti copre solo in parte e il Custode compie una Mossa.
 :::
 
-:::box[Fondersi nelle Ombre (segue)]{type=casata_umbra}
-**10+** Fusione perfetta: invisibile finché scegli di fermarti, puoi muoverti alla velocità normale.
-**7-9** Fusione parziale: invisibile ma movimento dimezzato.
-**6-** Fusione instabile: semi-trasparente (-2 a colpirti), non invisibile.
+:::box[Lama d'Ombra]{type=casata_umbra}
+**Ruolo:** offensivo  
+**Costo:** 0 Corruzione | **Portata:** Sé | **Durata:** scena | **Tiro:** +FAT all'attivazione
 
-*Potere fondamentale Umbra. Indispensabile per infiltrazione e fuga.*
-:::
+Crei un'arma d'ombra, tag **magica, silenziosa, occultabile**, danno 2d6.
 
-:::box[Lama Ombra]{type=casata_umbra}
-**【 Livello 1 】**
-
-**Costo:** +1 Corruzione | **Range:** Sé | **Durata:** Scena | **Tiro:** Usare Potere +FAT
-
-Le ombre solidificano in un pugnale/spada corta di oscurità pura. **Danno 1d8 + veleno ombra** (1d4/round per 3 round). Tag: Mischia, Silenziosa, Ignora Armatura Leggera (1-2). Peso zero. Bonus vs creature di luce: +1d6.
-:::
-
-:::box[Lama Ombra (segue)]{type=casata_umbra}
-**10+** Lama perfetta: danno pieno, veleno attivo.
-**7-9** Lama base: danno pieno, ma nessun veleno.
-**6-** Lama instabile: 1d4, nessun veleno, si dissolve dopo il colpo.
+- **10+:** aggiungi *penetrante 1* oppure *Lontano*.
+- **7–9:** funziona, ma scegli: termina al primo 6−, emana freddo riconoscibile, oppure il danno è 1d8.
+- **6−:** esiste per un solo attacco e il Custode compie una Mossa.
 :::
 
 :::box[Occhi Notturni]{type=casata_umbra}
-**【 Livello 1 】**
+**Ruolo:** informazione  
+**Costo:** 0 Corruzione | **Portata:** Sé | **Durata:** 1 ora | **Tiro:** automatico
 
-**Costo:** +1 Corruzione | **Range:** Sé | **Durata:** 1 ora | **Tiro:** Automatico
-
-Occhi diventano completamente neri (inquietante). Vedi perfettamente al buio come fosse giorno. Bonus: percepisci movimento dietro ostacoli (+2 MEN notare imboscate), vedi aure magiche (brillano debolmente). Malus sociale: PNG normali reagiscono con disagio/paura.
-
-*Potere sempre utile. Il malus sociale è narrativo, non meccanico.*
+Vedi nel buio naturale e distingui ombre soprannaturali, aperture e tracce recenti. Non attraversi muri, non vedi attraverso illusioni perfette e non scopri automaticamente creature invisibili.
 :::
 
-## Livello 2: Guardiano
+### Livello 2 — Guardiano
 
-:::box[Passo Ombra]{type=casata_umbra}
-**【 Livello 2 】**
+:::box[Passo d'Ombra]{type=casata_umbra}
+**Ruolo:** mobilità  
+**Costo:** 1 Corruzione | **Portata:** Lontano, destinazione visibile o conosciuta | **Durata:** istantanea | **Tiro:** +FAT
 
-**Costo:** +2 Corruzione | **Range:** Lontano (devi vedere destinazione) | **Durata:** Istantaneo | **Tiro:** Usare Potere +FAT
-
-Teletrasporto istantaneo attraverso il Piano Ombre. Dissolvi in un'ombra, riappari in un'altra. Requisito: punto di partenza E destinazione devono essere in ombra.
-:::
-
-:::box[Passo Ombra (segue)]{type=casata_umbra}
-**10+** Passo perfetto: teletrasporto silenzioso, puoi portare 1 alleato Vicino.
-**7-9** Passo base: teletrasporto riuscito, solo te.
-**6-** Passo sbagliato: arrivi ma in posizione sbagliata scelta dal Custode.
+- **10+:** attraversi le ombre e appari nel punto scelto; puoi portare una persona consenziente a Contatto.
+- **7–9:** arrivi, ma scegli: lasci una traccia, perdi un oggetto non assicurato, oppure appari esposto.
+- **6−:** il Custode compie una Mossa; puoi arrivare in un'ombra vicina ma pericolosa o attirare qualcosa dal passaggio.
 :::
 
 :::box[Veleno Psichico]{type=casata_umbra}
-**【 Livello 2 】**
+**Ruolo:** debilitazione  
+**Costo:** 1 Corruzione | **Portata:** Tocco | **Durata:** scena | **Tiro:** +FAT
 
-**Costo:** +2 Corruzione | **Range:** Tocco | **Durata:** Istantaneo + Afflizione | **Tiro:** Usare Potere +FAT
+- **10+:** infliggi 1d8 danni magici e imponi una Condizione mentale coerente; scegli se è silenzioso o difficile da individuare.
+- **7–9:** infliggi 1d8 e scegli: Condizione breve, il bersaglio comprende l'origine, oppure subisci 1 Stress.
+- **6−:** il veleno si riflette come un ricordo o una paura e il Custode compie una Mossa.
 
-Infliggi veleno che attacca la mente. Tocchi il bersaglio, le ombre entrano sotto la pelle. **Effetti progressivi:** round 1: -1 a tutti i tiri; round 3: allucinazioni (-2); round 5: incapacitato. Cura: magia purificazione (Avalon L3+) o riposo completo (8 ore).
-:::
-
-:::box[Veleno Psichico (segue)]{type=casata_umbra}
-**10+** Veleno pieno: tutti gli effetti progressivi attivi.
-**7-9** Veleno parziale: solo -1 a tutti i tiri per tutta la scena.
-**6-** Veleno fallisce: bersaglio immune per questa scena.
-
-*Eccellente pre-combattimento su PNG di alto valore.*
+Contro un altro PG richiede consenso del giocatore per qualsiasi controllo del comportamento.
 :::
 
 :::box[Velo]{type=casata_umbra}
-**【 Livello 2 】**
+**Ruolo:** occultamento di gruppo  
+**Costo:** 1 Corruzione | **Portata:** Vicino | **Durata:** concentrazione, massimo 10 minuti | **Tiro:** +FAT
 
-**Costo:** +2 Corruzione | **Range:** Vicino | **Durata:** Concentrazione (max 1 ora) | **Tiro:** Usare Potere +FAT
-
-Crei un'illusione visiva complessa: camuffa il tuo aspetto, crea un'immagine fantasma, nascondi un oggetto. Solo visuale (no suono, tatto, odore). Max dimensione: umanoide o oggetto 3m. Stabile: non richiede concentrazione attiva.
+- **10+:** fino a cinque persone o un oggetto grande vengono ignorati da osservatori ordinari finché non attirano apertamente attenzione.
+- **7–9:** scegli: soltanto tre bersagli, durata di pochi minuti, oppure telecamere e magia lasciano una traccia.
+- **6−:** il Velo confonde anche gli alleati o nasconde qualcosa di pericoloso; il Custode compie una Mossa.
 :::
 
-:::box[Velo (segue)]{type=casata_umbra}
-**10+** Velo perfetto: illusione convincente, +3 a ingannare.
-**7-9** Velo parziale: illusione base, chi la osserva attentamente tira MEN vs 10 per notare difetti.
-**6-** Velo traballante: evidente ad occhio attento, -1 a ingannare.
-:::
-
-## Livello 3: Veterano
+### Livello 3 — Veterano
 
 :::box[Suggestione]{type=casata_umbra}
-**【 Livello 3 】**
+**Ruolo:** influenza  
+**Costo:** 2 Corruzione | **Portata:** Vicino | **Durata:** fino al compimento o alla fine della scena | **Tiro:** +FAT
 
-**Costo:** +3 Corruzione | **Range:** Vicino | **Durata:** Conversazione | **Tiro:** Usare Potere +FAT (VS Resistere +MEN bersaglio)
+Formula una richiesta breve e plausibile.
 
-Suggestione telepatica. Pianti un pensiero nella mente del bersaglio, lui crede sia idea propria. Non può forzare azioni suicide o contro la natura profonda del bersaglio. Più è "naturale", più è probabile il successo.
+- **10+:** un PNG comune la segue finché non viola un proprio limite fondamentale; contro una minaccia importante ottieni esitazione, informazione o posizione favorevole.
+- **7–9:** il bersaglio chiede una prova, interpreta alla lettera oppure ricorderà chiaramente la manipolazione.
+- **6−:** riconosce l'intrusione e il Custode compie una Mossa.
+
+Non controlla un PG senza consenso e non impone suicidio, tradimento assoluto o violazione di limiti stabiliti.
 :::
 
-:::box[Suggestione (segue)]{type=casata_umbra}
-**10+** Suggestione piena: il pensiero attecchisce, il bersaglio agisce come se fosse sua idea.
-**7-9** Suggestione parziale: agisce ma con esitazione, +1 tiro successivo per resistere.
-**6-** Suggestione fallisce: bersaglio non si accorge del tentativo ma resiste.
+:::box[Cloni d'Ombra]{type=casata_umbra}
+**Ruolo:** difesa e inganno  
+**Costo:** 2 Corruzione | **Portata:** Sé | **Durata:** scena | **Tiro:** +FAT
+
+- **10+:** crei tre duplicati; annulla le prime due conseguenze che dipendono dal colpirti o individuarti, poi i cloni svaniscono.
+- **7–9:** crei due duplicati e annulli una sola conseguenza; scegli se la fonte comprende subito il trucco.
+- **6−:** il clone agisce con una volontà inquietante e il Custode compie una Mossa.
+
+I cloni non compiono Azioni Principali e non infliggono danno autonomamente.
 :::
 
-:::box[Cloni]{type=casata_umbra}
-**【 Livello 3 】**
+:::box[Pozzo d'Ombra]{type=casata_umbra}
+**Ruolo:** controllo di area  
+**Costo:** 2 Corruzione | **Portata:** Lontano, area Vicino | **Durata:** concentrazione, massimo 10 minuti | **Tiro:** +FAT
 
-**Costo:** +3 Corruzione | **Range:** Sé | **Durata:** 1 minuto | **Tiro:** Usare Potere +FAT
+- **10+:** l'area diventa buio soprannaturale e terreno difficile; scegli se trattenere i nemici o assorbire suoni.
+- **7–9:** scegli un solo effetto e una via resta aperta.
+- **6−:** il pozzo si espande o collega un luogo indesiderato; il Custode compie una Mossa.
 
-Crei **3 duplicati illusori** fatti di ombre semi-solide. Si muovono, mimano i tuoi movimenti. Se colpiti: si dissolvono (1 colpo). Possono "attaccare" ma danno 0 (illusione). Nemici non sanno quale sei tu.
+Gli alleati non sono immuni se non hai preparato con loro un segnale o un percorso.
 :::
 
-:::box[Cloni (segue)]{type=casata_umbra}
-**10+** 3 cloni perfetti: nemici devono tirare MEN vs 12 per identificarti.
-**7-9** 3 cloni base: nemici -2 ai tiri per colpirti (1/3 possibilità di colpire clone).
-**6-** 1 solo clone traballante: evidente ma distrae comunque per 1 round.
+### Livello 4 — Maestro
 
-*Eccellente vs boss singoli. Inefficace contro nemici con sensi extra-ordinari.*
+:::box[Frammentare la Mente]{type=casata_umbra}
+**Ruolo:** controllo superiore  
+**Costo:** 3 Corruzione | **Portata:** Vicino | **Durata:** scena | **Tiro:** +FAT
+
+- **10+:** contro un PNG LS 6 o meno imponi una crisi che lo rende incapace di perseguire il proprio impulso per la scena; contro LS superiore rimuovi una Mossa e infliggi 2d8 danni magici.
+- **7–9:** ottieni l'effetto ridotto; scegli se assorbire 1 Stress o rendere visibile un tuo ricordo al bersaglio.
+- **6−:** le menti si sovrappongono e il Custode compie una Mossa dura.
 :::
 
-:::box[Pozzo]{type=casata_umbra}
-**【 Livello 3 】**
+:::box[Portale d'Ombra]{type=casata_umbra}
+**Ruolo:** trasporto  
+**Costo:** 3 Corruzione | **Portata:** due superfici a Tocco, destinazione entro la città | **Durata:** 10 minuti | **Tiro:** +FAT
 
-**Costo:** +3 Corruzione | **Range:** Medio (cerchio raggio 3m) | **Durata:** Concentrazione (max 10 min) | **Tiro:** Usare Potere +FAT
-
-Crei una zona di **oscurità assoluta**. La luce non penetra. Creature senza visione notturna: -3 a tutti i tiri. Tu (Umbra) vedi perfettamente dentro. Ombre tangibili: movimento dimezzato per chi non è Umbra.
+- **10+:** colleghi i due punti; il passaggio è stabile e può essere chiuso da te.
+- **7–9:** scegli: un solo attraversamento per persona, destinazione imprecisa, oppure qualcosa nota il portale.
+- **6−:** il collegamento apre sul luogo sbagliato o permette un passaggio contrario; il Custode compie una Mossa.
 :::
 
-:::box[Pozzo (segue)]{type=casata_umbra}
-**10+** Pozzo profondo: oscurità impenetrabile, movimento ridotto a un quarto per i nemici.
-**7-9** Pozzo base: oscurità completa, penalità -3.
-**6-** Pozzo debole: penombra (-1), non vera oscurità.
+:::box[Forma d'Ombra]{type=casata_umbra}
+**Ruolo:** trasformazione  
+**Costo:** 3 Corruzione | **Portata:** Sé | **Durata:** 10 minuti | **Tiro:** +FAT
+
+- **10+:** diventi fumo senziente: Armatura mistica 3 contro danno fisico, attraversi fessure, voli lentamente e i tuoi attacchi diventano magici.
+- **7–9:** scegli due benefici; il terzo resta indisponibile, e al termine subisci una Condizione.
+- **6−:** scegli un beneficio per un round; l'Ombra tenta di trattenerti e il Custode compie una Mossa.
+
+Non sei immune al danno fisico; usa la migliore Armatura e rispetta il limite totale.
 :::
 
-## Livello 4: Maestro
+### Livello 5 — Leggenda
 
-:::box[Frammentare]{type=casata_umbra}
-**【 Livello 4 】**
+:::box[Legione d'Ombra]{type=casata_umbra}
+**Ruolo:** evocazione  
+**Costo:** 4 Corruzione | **Portata:** Lontano | **Durata:** scena | **Tiro:** +FAT | **Limite:** una volta per sessione
 
-**Costo:** +4 Corruzione | **Range:** Vicino | **Durata:** Istantaneo | **Tiro:** Usare Potere +FAT (VS Resistere +MEN bersaglio)
+- **10+:** evochi una legione trattata come un'unica minaccia alleata: 24 PF, Armatura 1, danno 2d8, tag *sciame, magico, obbediente*.
+- **7–9:** 16 PF e danno 2d6; scegli se richiede concentrazione o pretende un pegno futuro.
+- **6−:** una forza arriva, ma non è pienamente tua; il Custode compie una Mossa di campagna.
 
-Attacco psichico devastante. Frantumi la mente del bersaglio con le ombre. Creature LS 8+: +2 a resistere. Creature senza intelligenza: immuni. Non funziona su bersagli già sotto controllo mentale.
+La legione compie una sola azione significativa per round.
 :::
 
-:::box[Frammentare (segue)]{type=casata_umbra}
-**10+** Mente distrutta: bersaglio incapacitato per 1d6 round + -2 MEN permanente.
-**7-9** Mente scossa: bersaglio confuso per 1d4 round (-2 a tutti i tiri).
-**6-** Attacco respinto: nessun effetto, Custode fa mossa.
-:::
+:::box[Avatar d'Ombra]{type=casata_umbra}
+**Ruolo:** trasformazione leggendaria  
+**Costo:** 4 Corruzione | **Portata:** Sé | **Durata:** 10 minuti | **Tiro:** +FAT | **Limite:** una volta per sessione
 
-:::box[Portale]{type=casata_umbra}
-**【 Livello 4 】**
+- **10+:** ottieni Armatura mistica 3, volo, passaggio attraverso fessure e scegli due Doni.
+- **7–9:** scegli un Dono; al termine aumenta la Corruzione di 1 oppure perdi temporaneamente un ricordo importante.
+- **6−:** ottieni un Dono per un round e il Custode compie una Mossa dura; la trasformazione può tentare di diventare permanente.
 
-**Costo:** +4 Corruzione | **Range:** Tocco (crei 2 portali) | **Durata:** 10 minuti | **Tiro:** Usare Potere +FAT
-
-Crei due portali di oscurità collegati (2m × 2m). Entri in uno, esci dall'altro istantaneamente. Chiunque può attraversarli. Distanza max 1 km. Devi aver visto la destinazione. Entrambi devono essere in ombra.
-:::
-
-:::box[Portale (segue)]{type=casata_umbra}
-**10+** Portali stabili: durano 10 min, puoi spostarli come azione gratuita 1 volta.
-**7-9** Portali instabili: durano 5 min, non spostabili.
-**6-** Un portale deviato: arrivi ma in posizione scelta dal Custode.
-:::
-
-:::box[Forma Ombra]{type=casata_umbra}
-**【 Livello 4 】**
-
-**Costo:** +4 Corruzione | **Range:** Sé | **Durata:** 10 minuti | **Tiro:** Usare Potere +FAT
-
-Il corpo diventa ombra vivente. Semi-intangibile, terrificante. Corpo = fumo nero denso, occhi viola, leviti 10cm. **Armatura +5** vs fisico. Passa pareti (crepe min 5 cm). Volo lento. Terrore vs PNG LS 4-. Attacchi ombra: 2d6 + drain 1d4 PF.
-:::
-
-:::box[Forma Ombra (segue)]{type=casata_umbra}
-**10+** Forma perfetta: tutti gli effetti, puoi parlare normalmente.
-**7-9** Forma instabile: tutti gli effetti ma non puoi usare oggetti fisici.
-**6-** Forma parziale: solo +2 Armatura e semi-trasparenza.
-:::
-
-## Livello 5: Leggenda
-
-:::box[Legione]{type=casata_umbra}
-**【 Livello 5 】**
-
-**Costo:** +4 Corruzione | **Range:** Sé | **Durata:** 10 minuti | **Tiro:** Usare Potere +FAT
-
-Evochi **12 guerrieri ombra** obbedienti. Ciascuno: PF 15, Armatura 2, Attacco +6 (1d8 arma ombra), movimento veloce, immuni a paura/veleni/stanchezza. Intelligenza: comandi semplici (1-2 parole).
-:::
-
-:::box[Legione (segue)]{type=casata_umbra}
-**10+** Legione perfetta: 12 guerrieri, obbediscono a qualsiasi comando.
-**7-9** Legione ridotta: 8 guerrieri, comandi solo semplici.
-**6-** Legione caotica: 6 guerrieri ma attaccano il bersaglio più vicino (amici inclusi).
-:::
-
-:::box[Avatar Ombra]{type=casata_umbra}
-**【 Livello 5 】**
-
-**Costo:** +5 Corruzione | **Range:** Sé | **Durata:** 10 minuti | **Tiro:** Usare Potere +FAT
-
-Trascendi la mortalità, diventi avatar del Piano Ombre. Corpo = oscurità pura (3m), occhi rossi, 6 tentacoli ombra, aura di buio totale. **+3 a TUTTE le caratteristiche.** Intangibilità (immune fisico). Volo. 6 attacchi ombra per turno (2d8 + drain). Aura terrore (LS 6-: fuga automatica).
-:::
-
-:::box[Avatar Ombra (segue)]{type=casata_umbra}
-**10+** Avatar completo: tutti gli effetti.
-**7-9** Avatar ridotto: +2 caratteristiche, 3 attacchi.
-**6-** Avatar instabile: funziona ma termina al primo 6-.
+**Doni:** tentacoli 3d8 a Lontano; annullare una fonte di luce o visione; teletrasporto una volta per round al posto del movimento; aura che impone una Condizione di paura ai PNG comuni. Nessun Dono concede più Azioni Principali.
 :::
 
 :::box[Vuoto]{type=casata_umbra}
-**【 Livello 5 】**
+**Ruolo:** annullamento  
+**Costo:** porta la Corruzione a 8 | **Portata:** Lontano, area Vicino | **Durata:** istantanea | **Tiro:** +FAT | **Limite:** una volta per arco narrativo
 
-**Costo:** +5 Corruzione (TUTTO rimanente, min 5) | **Range:** Lontano (sfera raggio 10m) | **Durata:** Istantaneo | **Tiro:** Usare Potere +FAT
+- **10+:** cancelli un effetto magico, un portale o una fase di una minaccia; scegli inoltre che cosa rimane intatto.
+- **7–9:** l'effetto viene annullato, ma il Vuoto consuma anche una risorsa, un ricordo o un luogo significativo.
+- **6−:** il Vuoto si apre senza obbedire; il Custode compie una Mossa di campagna.
 
-Apri un portale verso il Piano Ombre. Vortice di oscurità che aspira tutto. Tutte le creature in area devono **Sfidare Pericolo +FOR**: 6- = risucchiate nel Piano Ombre. Dense ombre permanenti nell'area per 1 ora.
+Dopo il tiro raggiungi Corruzione 8 e si applica la trasformazione, salvo un effetto esplicito capace di impedirla.
 :::
 
-:::box[Vuoto (segue)]{type=casata_umbra}
-**10+** Vuoto perfetto: vortice potente, +2 al tiro del Custode contro chi resiste.
-**7-9** Vuoto parziale: vortice base, solo danno 4d8 a chi resiste.
-**6-** Vuoto incontrollato: coinvolge anche te nel tiro.
+:::box[Principio di Umbra]{type=tip}
+Umbra eccelle nel cambiare accesso, informazione e posizione. Il suo vero rischio non è fallire un singolo potere, ma scegliere quanta identità sacrificare per ottenere controllo.
 :::

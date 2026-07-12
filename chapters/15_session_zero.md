@@ -5,8 +5,8 @@ part: "Parte V: Guida per il Custode"
 section: "Guida per il Custode"
 epigraph: "Prima di giocare, parlate. Dopo aver parlato, giocate."
 tags: []
-status: finale
-version: 3.2
+status: beta
+version: 0.9.0-beta.1
 ---
 
 ## Session Zero

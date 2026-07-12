@@ -5,8 +5,8 @@ part: "Parte V: Guida per il Custode"
 section: "Guida per il Custode"
 epigraph: "Il tempo non aspetta. L'apocalisse nemmeno."
 tags: []
-status: finale
-version: 3.2
+status: beta
+version: 0.9.0-beta.1
 ---
 
 ## Il Doom Clock Espanso
@@ -28,16 +28,15 @@ Le 4 Soglie del Doom Clock
 
 ## Quando il Doom Clock Avanza
 
-**Automaticamente:** alla fine di ogni sessione dove i PG non hanno
-agito contro la minaccia (+1). Alla fine di ogni arco narrativo senza
-risoluzione (+2).
+Il Doom Clock avanza quando la minaccia ottiene concretamente spazio, tempo o risorse. Il Custode deve sempre collegare l'avanzamento a un evento percepibile nella fiction.
 
-**Su 6-:** quando un PG fallisce un tiro direttamente collegato alla
-minaccia, il Doom Clock avanza di 1.
+**Minaccia ignorata:** alla fine di una sessione in cui i Guardiani hanno scelto consapevolmente di non contrastarla, il Custode può avanzare il Clock di 1 e mostrare ciò che è accaduto nel frattempo.
 
-**Azioni nemiche:** quando la fazione antagonista compie un'azione
-significativa (sabotaggio, rituale, attacco), il Doom Clock avanza di
-1-3 a seconda della gravità.
+**Conseguenza di una mossa:** su un 6− direttamente collegato alla minaccia, il Custode può scegliere di avanzare il Clock di 1 come conseguenza, invece di sommare automaticamente questa conseguenza ad altre mosse dure.
+
+**Azione nemica:** quando la fazione antagonista completa un passo significativo del proprio piano, il Clock avanza di 1. Un avanzamento di 2 o più è riservato a svolte già annunciate, catastrofi o passaggi di soglia.
+
+**Tempo trascorso:** se i Guardiani dedicano giorni o settimane ad altro, il Custode può far avanzare il Clock, ma deve prima rendere leggibile la pressione della minaccia.
 
 **Ridurre il Doom Clock:** i PG possono ridurre il Clock con azioni
 dirette: -1 per missione riuscita contro la minaccia, -2 per colpo
@@ -72,10 +71,12 @@ A differenza del Doom Clock, il Velo Tracker **non si azzera mai** tra gli archi
 
 Il Velo Tracker avanza quando i Custodi lasciano tracce visibili della magia nel mondo profano:
 
-**+1 automatico** alla fine di ogni sessione in cui almeno uno dei seguenti è accaduto:
-- Un potere vistoso è stato usato in luogo pubblico senza gestione dei testimoni
-- Uno scontro ha causato danni materiali evidenti (esplosioni, crolli, incendi)
-- Un non-morto o creatura soprannaturale è stata vista da civili
+**+1**, quando una prova credibile sopravvive alla scena e raggiunge un pubblico più ampio. Esempi:
+- un potere vistoso è stato usato in luogo pubblico e i testimoni non sono stati gestiti;
+- uno scontro ha causato danni materiali evidenti difficili da spiegare;
+- una creatura soprannaturale è stata vista e documentata da civili.
+
+La semplice presenza di testimoni non rende l'aumento automatico: conta ciò che resta, chi lo crede e quanto si diffonde.
 
 **+2** per eventi eccezionali:
 - Una battaglia di grandi dimensioni in zona urbana popolare
@@ -92,7 +93,7 @@ Il Velo Tracker si riduce solo attraverso azioni attive dei PG:
 
 - **-1** per ogni missione di copertura riuscita (depistaggi, memory wipe su testimoni con poteri Umbra, rimozione prove)
 - **-1** per ogni Legame profano usato per soffocare una notizia (costo narrativo: il PNG sa, e ora ha potere su di voi)
-- **-2** per operazione su larga scala di disinformazione (richiede risorse, tempo e un tiro +CAR o +MEN difficile)
+- **-2** per un'operazione su larga scala di disinformazione: richiede risorse, tempo e una mossa coerente con l'approccio usato; su 7–9 la copertura funziona ma crea un costo o una nuova vulnerabilità.
 
 Il Velo Tracker non scende mai sotto la soglia attuale una volta superata: se avete raggiunto 6, non tornerete mai sotto 3, le voci già circolano.
 
@@ -105,7 +106,7 @@ Idealmente, il Velo Tracker sale lentamente per le prime sessioni, poi accelera 
 :::
 
 :::box[Interazione Velo Tracker / Doom Clock]{type=warn}
-Quando il **Doom Clock** di una minaccia raggiunge 9 o 12, considera di avanzare automaticamente il Velo Tracker di **+1**: catastrofi di quella portata lasciano sempre tracce visibili. È il prezzo che il mondo paga quando i Custodi arrivano troppo tardi.
+Quando il **Doom Clock** di una minaccia raggiunge 9 o 12, valuta se le conseguenze siano visibili ai profani. Se lo sono e lasciano prove credibili, avanza il Velo Tracker di **+1**. Non applicare l'aumento soltanto per il valore numerico del Clock: deve derivare da ciò che è realmente accaduto nella fiction.
 :::
 
 ### Velo Tracker nella Quick Reference

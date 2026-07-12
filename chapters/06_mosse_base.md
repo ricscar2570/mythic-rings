@@ -3,336 +3,231 @@ title: "Mosse Base"
 chapter: 6
 part: "Parte II: Le Regole"
 section: "Le Regole"
-epigraph: "Le mosse non sono regole. Sono il linguaggio con cui la storia risponde alle tue scelte."
-status: complete
-version: 3.2
+epigraph: "Quando agisci, il mondo risponde."
+tags: [mosse, riferimento]
+status: beta
+version: 0.9.0-beta.1
 ---
 
-## La Filosofia delle Mosse
+## Le Mosse Base
 
-Le mosse non sono semplicemente meccaniche, sono strumenti narrativi. Un **7-9** non è un "mezzo successo": è un successo con complicazioni che rendono la storia più interessante. Un **6-** non è "hai fallito": è "qualcosa di inaspettato accade" che spinge la narrazione in direzioni imprevedibili.
+Una Mossa si attiva quando la descrizione dell'azione corrisponde al suo **trigger**. Il giocatore non sceglie una Mossa da un menu: descrive ciò che fa e il tavolo riconosce la procedura pertinente.
 
-Il Custode non chiama mai una mossa per nome. I giocatori descrivono azioni, e le mosse emergono dalla fiction. "Esamino la scena del crimine" attiva Investigare. "Gli pianto un pugno" attiva Attaccare. **La narrazione viene sempre prima della meccanica.**
+Prima di tirare, il Custode chiarisce:
 
-## Come Funzionano i Tiri
+- che cosa può ottenere il Guardiano;
+- quale rischio è già visibile;
+- quale Caratteristica si applica;
+- eventuali costi da pagare in anticipo.
 
-| Risultato | Significato | Chi Narra |
-|---|---|---|
-| **10+** | Successo pieno | Il giocatore |
-| **7-9** | Successo con complicazione | Giocatore + Custode |
-| **6-** | Mossa del Custode | Il Custode |
+Il modificatore totale, Caratteristica inclusa, resta tra −3 e +4.
 
-| Modificatore | Tipo | Durata |
-|---|---|---|
-| **+1 forward** | Bonus al prossimo tiro specifico | 1 tiro |
-| **+1 ongoing** | Bonus a tutti i tiri di un tipo | Finché condizione persiste |
-| **-1 ongoing** | Penalità a tutti i tiri pertinenti | Finché condizione persiste |
+# 1. Attaccare
 
-## 1. Attaccare
+:::box[Attaccare]{type=rule}
+**Quando affronti una minaccia con violenza mentre essa può reagire**, descrivi il metodo e tira con la Caratteristica coerente: di solito +FOR in mischia, +CUO a distanza o +FAT/CAR per un potere.
 
-:::box[⚔️ Attaccare]{type=rule}
-**Quando:** Infliggi violenza con intenzione di ferire.
+**10+:** infliggi il danno e scegli 2.  
+**7–9:** infliggi il danno e scegli 1; la minaccia reagisce o il Custode applica un costo annunciato.  
+**6−:** il Custode compie una Mossa; la tua azione può comunque produrre un effetto limitato se la fiction lo richiede.
 
-**Tiro:** +FOR (mischia, forza bruta) o +CUO (armi a distanza, agilità in combattimento)
-
-**10+** Colpisci. Infliggi danno e scegli 1 bonus:
-- +1d6 danno aggiuntivo (colpo devastante)
-- Crei un'apertura: +1 forward al prossimo tiro tuo o di un alleato
-- Eviti completamente il contrattacco nemico
+**Opzioni:**
+- eviti la reazione immediata della minaccia;
+- infliggi +1d6 danno;
+- ottieni o concedi una posizione favorevole;
+- imponi una Condizione coerente;
+- proteggi un alleato dall'esposizione creata dall'attacco.
 :::
 
-:::box[⚔️ Attaccare (segue)]{type=rule}
-**7-9** Colpisci, ma sei esposto. Infliggi danno, ma il Custode sceglie 1 conseguenza:
-- Subisci contrattacco (danno nemico)
-- Perdi posizione tattica
-- Attiri attenzione indesiderata (altri nemici)
+Un 12 naturale concede un beneficio aggiuntivo; puoi scegliere +1d6 danno al posto del beneficio ordinario. La stessa opzione non può essere scelta due volte salvo una capacità esplicita.
 
-**6-** Manchi, o il colpo è inefficace. Il Custode fa una mossa dura.
+Se il bersaglio non può reagire e non esiste un rischio concreto, non tirare: applica il danno o l'effetto e descrivi le conseguenze.
 
-*Il danno base dipende dall'arma. Il bonus +1d6 del 10+ si aggiunge al danno dell'arma.*
+# 2. Difendere
+
+:::box[Difendere]{type=rule}
+**Quando ti interponi per proteggere una persona, un luogo o un obiettivo da una minaccia imminente**, tira +FOR per reggere l'urto, +CUO per reagire o un'altra Caratteristica se la fiction lo giustifica.
+
+**10+:** impedisci o riduci sostanzialmente la minaccia e scegli 2.  
+**7–9:** proteggi l'obiettivo, ma scegli 1 e subisci un costo o un'esposizione.  
+**6−:** il Custode compie una Mossa; la tua scelta di proteggere resta significativa.
+
+**Opzioni:**
+- dimezzi il danno che subisci, arrotondando per eccesso;
+- sposti l'obiettivo in una posizione sicura;
+- prendi il controllo della posizione o dell'oggetto conteso;
+- esponi la minaccia: il prossimo alleato ottiene +1;
+- costringi la minaccia a concentrarsi su di te.
 :::
 
-:::box[💡 Esempio: Attacco in Mischia]{type=example}
-*Marco (FOR +2): "Carico il ghoul con la mazza da baseball, mirando alla testa!"*
+Difendere non è una parata automatica contro ogni attacco. Richiede che il Guardiano possa davvero intervenire.
 
-*Custode: "Ghoul ti vede arrivare, ti ringhia contro. Tira Attaccare +FOR."*
+# 3. Sfidare il Pericolo
 
-*Marco tira: 2d6+2 = 9 (7-9)*
+:::box[Sfidare il Pericolo]{type=rule}
+**Quando affronti un pericolo immediato senza una Mossa più specifica**, tira con la Caratteristica coerente.
 
-*Custode: "Colpisci in pieno, 1d8 danno, il cranio scricchiola. Ma il ghoul ti afferra il braccio prima che tu possa ritirarti. I suoi artigli affondano nella spalla: 1d6 danno a te. Sei ancora faccia a faccia con lui."*
+- +FOR per resistere, forzare o sopportare;
+- +CUO per schivare, reagire o mantenere il coraggio;
+- +MEN per comprendere, ricordare o mantenere il controllo mentale;
+- +CAR per imporre presenza o sostenere qualcuno;
+- +FAT per attraversare un rischio soprannaturale o affidarti al destino.
+
+**10+:** superi il pericolo.  
+**7–9:** riesci, ma il Custode offre un esito ridotto, un costo o una scelta difficile.  
+**6−:** il Custode compie una Mossa coerente con il pericolo.
 :::
 
-## 2. Difendere
+Questa Mossa non sostituisce Attaccare, Difendere, Investigare o Usare Potere.
 
-:::box[🛡️ Difendere]{type=rule}
-**Quando:** Ti proteggi da un attacco in arrivo, o proteggi un alleato Vicino.
+# 4. Leggere la Situazione
 
-**Tiro:** +FOR (bloccare, reggere impatto) o +CUO (schivare, agilità difensiva)
+:::box[Leggere la Situazione]{type=rule}
+**Quando osservi una situazione tesa per capire ciò che sta per accadere**, tira +MEN o +CUO, secondo che tu proceda per analisi o istinto.
 
-**10+** Scegli 1:
-- Eviti completamente il danno
-- Eviti il danno E ottieni contrattacco (+1 forward)
+**10+:** poni 3 domande.  
+**7–9:** poni 1 domanda.  
+**6−:** poni comunque 1 domanda, ma il Custode compie una Mossa e la risposta può arrivare troppo tardi o esporti.
 
-**7-9** Scegli 1:
-- Eviti ma finisci in posizione svantaggiata
-- Subisci metà danno (senza contrattacco)
-
-**6-** Subisci danno pieno + il Custode fa una mossa dura.
+Domande:
+- qual è il pericolo più immediato?
+- che cosa qui non è come sembra?
+- qual è la via di fuga o l'accesso migliore?
+- chi o che cosa controlla davvero la situazione?
+- quale elemento posso sfruttare?
+- che cosa sta per succedere?
 :::
 
-:::box[🛡️ Difendere (segue)]{type=rule}
-*Proteggere Alleato: Puoi Difendere un alleato Vicino, subendo le conseguenze al suo posto. Devi essere a massimo 3-5m.*
+Quando agisci immediatamente sulla risposta, ottieni +1 alla Mossa pertinente. Il bonus vale una sola volta.
+
+# 5. Persuadere o Raggirare
+
+:::box[Persuadere o Raggirare]{type=rule}
+**Quando cerchi di cambiare il comportamento di un PNG dotato di volontà attraverso ragioni, pressione, promessa o inganno**, dichiara che cosa vuoi e che cosa offri o rischi, poi tira +CAR.
+
+**10+:** il PNG accetta se la richiesta è compatibile con interessi, limiti e possibilità; scegli anche 1 beneficio.  
+**7–9:** il PNG accetta soltanto con una garanzia, un prezzo, una prova o una concessione.  
+**6−:** il PNG reagisce secondo i propri interessi e il Custode compie una Mossa.
+
+**Benefici:**
+- non chiede subito il prezzo previsto;
+- rivela un'informazione utile;
+- mantiene la parola oltre il minimo necessario;
+- non si accorge di una parte dell'inganno.
 :::
 
-## 3. Sfidare Pericolo
+La Mossa non obbliga un PNG a violare i propri confini fondamentali e non consente di controllare la volontà di un altro PG.
 
-:::box[🎲 Sfidare Pericolo]{type=rule}
-**Quando:** Agisci sotto minaccia o pressione, o tenti azione rischiosa che non rientra in altre mosse.
+# 6. Aiutare o Ostacolare
 
-**Tiro:** +Caratteristica appropriata (il Custode decide quale si applica)
+:::box[Aiutare o Ostacolare]{type=rule}
+**Quando rischi qualcosa di concreto per aiutare o ostacolare l'azione di un altro Guardiano**, descrivi come intervieni e tira con una Caratteristica coerente.
 
-- +FOR: forza bruta, resistenza, reggere peso/dolore
-- +CUO: agilità, riflessi, schivare
-- +MEN: concentrazione, lucidità sotto pressione
-- +CAR: presenza, intimidazione, mantenere la calma
-- +FAT: intuizione, resistenza magica
+**10+:** concedi +1 o imponi −1 e non ti esponi.  
+**7–9:** concedi +1 o imponi −1, ma condividi la conseguenza o accetti un costo.  
+**6−:** il Custode compie una Mossa; il tiro principale si risolve senza il tuo bonus, salvo che la fiction indichi diversamente.
 :::
 
-:::box[🎲 Sfidare Pericolo (segue)]{type=rule}
-**10+** Fai ciò che volevi, nessuna complicazione.
+Un tiro può ricevere al massimo un bonus da Aiutare. Aiutare non può portare il modificatore totale oltre +4.
 
-**7-9** Riesci, ma il Custode offre una scelta difficile o complicazione:
-- Riesci MA lasci qualcosa (equipaggiamento, posizione, tempo)
-- Riesci MA subisci danno o stress
-- Riesci MA attiri attenzione indesiderata
+# 7. Investigare
 
-**6-** Il pericolo si realizza pienamente. Il Custode fa una mossa dura.
+:::box[Investigare]{type=rule}
+**Quando esamini prove, ricostruisci eventi o cerchi una verità nascosta sotto pressione**, tira +MEN.
+
+Se la scena contiene un indizio necessario, lo ottieni sempre. Il tiro stabilisce chiarezza, vantaggi e costo, non se la storia può continuare.
+
+**10+:** ottieni l'indizio fondamentale e poni 2 domande.  
+**7–9:** ottieni l'indizio fondamentale e poni 1 domanda; il Custode introduce un costo, un ritardo o un'esposizione.  
+**6−:** ottieni l'indizio fondamentale, ma il Custode compie una Mossa dura collegata alla ricerca.
+
+Domande:
+- che cosa è successo qui davvero?
+- che cosa collega questa prova alla minaccia?
+- chi ha lasciato questo segno e perché?
+- che cosa manca o è stato alterato?
+- quale pericolo è nascosto nella prova?
+- dove conduce la prossima pista?
 :::
 
-:::box[💡 Sfidare Pericolo: Tre Esempi Rapidi]{type=example}
-*Sofia scala un edificio sotto il fuoco: "Sfidare Pericolo +CUO", riflessi per schivare.*
+Il Custode non presenta come verità un falso indizio capace di rendere insolubile il mistero. Può mostrare testimonianze incomplete, depistaggi riconoscibili o interpretazioni interessate, purché esistano strumenti per distinguerli.
 
-*Luca mantiene la concentrazione mentre un demone urla: "Sfidare Pericolo +MEN", resistere al panico.*
+# 8. Usare Potere
 
-*Amara convince il suo anello a non bruciare: "Sfidare Pericolo +FAT", intuizione magica.*
+:::box[Usare Potere]{type=rule}
+**Quando canalizzi un potere che richiede un tiro**, paga prima il costo indicato e tira la Caratteristica specificata dal potere.
+
+**10+:** il potere produce l'effetto pieno.  
+**7–9:** il potere funziona; applica le opzioni specifiche. Se non sono presenti, scegli o accetta una conseguenza: costo +1, effetto ridotto oppure attenzione indesiderata.  
+**6−:** il costo resta pagato e il Custode compie una Mossa; il potere può fallire, deviare o manifestarsi in modo instabile.
 :::
 
-## 4. Leggere Situazione
+Un potere privo di tiro produce l'effetto dichiarato quando costo, condizioni e limiti sono rispettati. Un effetto non può superare limiti di Armatura, modificatori o risorse senza dichiararlo esplicitamente.
 
-:::box[🔍 Leggere Situazione]{type=rule}
-**Quando:** Osservi attentamente una situazione, un ambiente o una persona per capire meglio.
+# 9. Ultimo Respiro
 
-**Tiro:** +MEN
+:::box[Ultimo Respiro]{type=danger}
+**Quando scendi a 0 PF o meno**, fermati a 0 e tira immediatamente 2d6 senza Caratteristica o bonus. Puoi spendere 1 Punto Fato per ritirare un solo dado.
 
-**10+** Fai 3 domande dalla lista. Il Custode risponde onestamente. Ottieni +1 forward quando agisci sulle informazioni ricevute.
-
-**7-9** Fai 1 domanda dalla lista. Ottieni +1 forward.
-
-**6-** Perdi tempo, trai una conclusione errata, o attiri attenzione indesiderata.
+**12+: Miracolo.** Torni a 1 PF, resti cosciente e puoi agire una volta prima della fine del round.  
+**10–11: Sopravvivi.** Torni a 1 PF, sei incapacitato finché non ricevi cure o la scena termina.  
+**7–9: Sopravvivi a un prezzo.** Torni a 1 PF e scegli una conseguenza duratura tra quelle proposte dal Custode.  
+**6−: Muori.** Soltanto un effetto che dichiara esplicitamente di intervenire sulla morte può evitarlo.
 :::
 
-:::box[🔍 Leggere Situazione (segue)]{type=rule}
-**Lista Domande:**
-- Qual è la minaccia più immediata qui?
-- Cosa è successo qui recentemente?
-- Cosa sta per succedere?
-- Cosa qui è utile o prezioso per me?
-- Chi è davvero in controllo di questa situazione?
-- Come posso uscire (o entrare) da qui?
+Il Custode propone conseguenze chiare e diverse per natura. Riprendersi non può stabilizzare un Guardiano morto dopo un 6−.
+
+# 10. Riprendersi
+
+:::box[Riprendersi]{type=rule}
+**Quando trascorri almeno 10 minuti ininterrotti in un luogo relativamente sicuro per curarti e ricomporti**, tira +FOR.
+
+Un Confidente L2+ che ti assiste attivamente concede +1, una sola volta per sessione per quel Legame.
+
+**10+:** recuperi 1d6 PF e riduci lo Stress di 1.  
+**7–9:** scegli: recuperi 1d4 PF oppure riduci lo Stress di 1.  
+**6−:** non recuperi; il Custode mostra un pericolo, un costo o un'urgenza.
+
+Se recuperi PF e consumi un medikit, recuperi 2 PF aggiuntivi. Puoi usare Riprendersi al massimo una volta per scena o per sosta nella stessa location.
 :::
 
-## 5. Persuadere / Raggirare
+# 11. Resistere
 
-:::box[💬 Persuadere / Raggirare]{type=rule}
-**Quando:** Tenti di convincere un PNG a fare qualcosa o a credere qualcosa tramite le parole.
+:::box[Resistere]{type=rule}
+**Quando veleno, paura, controllo mentale, malattia o un effetto persistente minacciano di sopraffarti**, tira con la Caratteristica indicata dall'effetto o scelta dal Custode in base alla fiction.
 
-**Tiro:** +CAR (+1 per livello Legame se il PNG è un tuo Legame)
-
-**10+** Il PNG fa ciò che chiedi o crede ciò che dici, a meno che sia contrario al suo istinto di sopravvivenza.
+**10+:** resisti e l'effetto non si applica.  
+**7–9:** resisti in parte: scegli tra durata ridotta, effetto attenuato o un costo immediato.  
+**6−:** l'effetto si applica pienamente e il Custode compie una Mossa se la situazione lo giustifica.
 :::
 
-:::box[💬 Persuadere / Raggirare (segue)]{type=rule}
-**7-9** Il PNG obbedisce, ma il Custode sceglie 1:
-- Richiede una prova concreta prima di agire
-- Richiede pagamento o un favore in cambio
-- Diventa sospettoso: -1 ongoing ai rapporti futuri
+Resistere non è una difesa universale da usare dopo ogni conseguenza. Si attiva soltanto quando l'effetto concede esplicitamente una possibilità di opposizione.
 
-**6-** Il PNG rifiuta, si offende o capisce che menti. La situazione peggiora.
+# 12. Forzare la Fortuna
 
-*Questa mossa NON può: convincere un PNG a suicidarsi, tradire tutto ciò in cui crede, o agire contro la sua natura fondamentale.*
+:::box[Forzare la Fortuna]{type=rule}
+**Dopo avere visto un tuo tiro e prima che le conseguenze siano applicate**, spendi 1 Punto Fato per ritirare un solo d6. Devi accettare il nuovo valore.
 :::
 
-## 6. Aiutare / Ostacolare
+Ogni Guardiano dispone di 2 Punti Fato per sessione, massimo 2. Non si conservano e non concedono azioni aggiuntive.
 
-:::box[🤝 Aiutare / Ostacolare]{type=rule}
-**Quando:** Aiuti un alleato o ostacoli un nemico che sta per tirare per una mossa.
+## Riepilogo
 
-**Tiro:** +Legame con bersaglio (se alleato) o +Caratteristica appropriata (se nemico)
+| # | Mossa | Tiro abituale | Funzione |
+|---:|---|---|---|
+| 1 | Attaccare | +FOR, +CUO o potere | Infliggere danno sotto minaccia |
+| 2 | Difendere | +FOR o +CUO | Proteggere un obiettivo |
+| 3 | Sfidare il Pericolo | Caratteristica coerente | Affrontare un rischio generico |
+| 4 | Leggere la Situazione | +MEN o +CUO | Comprendere una scena tesa |
+| 5 | Persuadere o Raggirare | +CAR | Influenzare un PNG |
+| 6 | Aiutare o Ostacolare | Caratteristica coerente | Modificare l'azione altrui |
+| 7 | Investigare | +MEN | Ottenere e interpretare indizi |
+| 8 | Usare Potere | Indicata dal potere | Canalizzare l'Anello |
+| 9 | Ultimo Respiro | 2d6 senza bonus | Determinare la sorte a 0 PF |
+| 10 | Riprendersi | +FOR | Recuperare PF o Stress |
+| 11 | Resistere | Indicata dall'effetto | Opporsi a effetti persistenti |
+| 12 | Forzare la Fortuna | Nessun tiro separato | Rilanciare un d6 spendendo Fato |
 
-**10+** Se aiuti: alleato ottiene +2 al prossimo tiro. Se ostacoli: nemico subisce -2 al prossimo tiro.
-
-**7-9** Se aiuti: +1 all'alleato MA ti esponi a pericolo. Se ostacoli: -1 al nemico MA ti esponi a contrattacco.
+:::box[Regola di consultazione]{type=tip}
+Quando una sintesi, un potere o un esempio sembra contraddire questo capitolo, applica il testo completo della Mossa e segnala l'incoerenza come errata. Una release commerciale non deve contenere eccezioni implicite.
 :::
-
-:::box[🤝 Aiutare / Ostacolare (segue)]{type=rule}
-**6-** Nessun bonus o malus E ti metti in una brutta situazione. Il Custode fa una mossa.
-
-*Timing: Dichiari aiuto/ostacolo PRIMA che il bersaglio tiri. Non puoi dichiararlo retroattivamente.*
-:::
-
-## 7. Investigare
-
-:::box[🕵️ Investigare]{type=rule}
-**Quando:** Cerchi attivamente indizi su un crimine, mistero, persona o luogo.
-
-**Tiro:** +MEN
-
-**10+** Trovi 2 indizi significativi. Il Custode descrive chiaramente cosa hai scoperto.
-
-**7-9** Scegli 1:
-- Trovi 1 indizio MA impieghi tempo eccessivo (complicazione temporale)
-- Trovi 2 indizi MA uno è fuorviante o incompleto
-
-**6-** Nessun indizio utile, o trovi informazione falsa, o attiri attenzione indesiderata.
-:::
-
-:::box[🕵️ Investigare (segue)]{type=rule}
-*Differenza da Leggere Situazione: Investigare richiede tempo e ricerca attiva. Leggere Situazione è osservazione immediata.*
-:::
-
-## 8. Usare Potere
-
-:::box[✨ Usare Potere]{type=rule}
-**Quando:** Attivi un potere magico della tua Casata.
-
-**Tiro:** +FAT (Umbra, Ife, Mictlan) o +CAR (solo Avalon)
-
-**10+** Il potere funziona esattamente come descritto. Paghi il costo normale.
-:::
-
-:::box[✨ Usare Potere (segue)]{type=rule}
-**7-9** Il potere funziona, ma il Custode sceglie 1:
-- Costo raddoppiato (×2 Stress/Corruzione/PF)
-- Effetto ridotto (durata dimezzata o potenza minore)
-- Attiri attenzione indesiderata (nemici percepiscono la magia, il Velo vacilla)
-
-**6-** Il potere fallisce completamente MA paghi il costo comunque. Il Custode fa una mossa (spesso: la magia va fuori controllo o produce l'effetto opposto).
-:::
-
-:::box[✨ Usare Potere (segue)]{type=rule}
-*Regola v3.2: a Stress 10 e ad alta Corruzione i poteri non sono bloccati ma diventano progressivamente più costosi e rischiosi (vedi Cap. 5, Stress e Corruzione). I poteri L1 gratuiti Umbra e l'Ultimo Respiro restano sempre disponibili.*
-:::
-
-:::box[Armi Magiche in Mischia]{type=rule}
-Se un potere dice "(conta come Attacco)", l'attivazione È l'attacco: un solo tiro di Usare Potere risolve anche il danno.
-:::
-
-:::box[Armi Magiche in Mischia (segue)]{type=rule}
-Altrimenti, un'arma magica evocata si gestisce in due tempi: **evocarla** è Usare Potere (la fai apparire, 1 Azione Principale); **colpirci** nei round successivi è Attaccare, con la caratteristica indicata dall'arma (es. Lama Radiante: +FOR). Evocazione e primo colpo stanno nella stessa Azione solo se il potere lo dichiara esplicitamente.
-:::
-
-## 9. Ultimo Respiro
-
-:::box[💀 Ultimo Respiro]{type=danger}
-**Quando:** I tuoi PF scendono a 0 o meno.
-
-**Tiro:** 2d6 + modificatori (massimo +4 totale)
-
-**Modificatori bonus:**
-- +1 per ogni alleato Vicino che ti assiste attivamente
-- +1 se hai un Legame L3+ con qualcuno presente
-- +1 se hai compiuto un atto eroico in questa sessione
-- +1 se la tua Casata ha una rilevanza narrativa in questo momento
-:::
-
-:::box[💀 Ultimo Respiro (segue)]{type=danger}
-**12+** Miracolo. Torni a 1 PF, puoi agire questo round. Narrativa: volontà indomabile, destino, intervento divino.
-:::
-
-:::box[💀 Ultimo Respiro (segue)]{type=danger}
-**10-11** La Morte ti offre un patto. Il Custode presenta 2-3 opzioni, scegli 1:
-- Sopravvivi (1 PF) MA perdi qualcosa permanentemente (arto, senso, ricordi, Legame)
-- Sopravvivi MA devi un compito alla Morte (favore futuro, portare un'anima sostitutiva)
-- Sopravvivi MA debilitato (1 PF, -2 ongoing per 24 ore)
-
-**7-9** Sopravvivi (1 PF) MA il Custode sceglie 1 conseguenza grave senza offrirti scelta.
-:::
-
-:::box[💀 Ultimo Respiro (segue)]{type=danger}
-**6-** Lo spirito lascia il corpo. Il PG è morto. Crea un nuovo personaggio. Eccezione: alleati possono tentare di stabilizzarti se agiscono immediatamente (Riprendersi su di te come azione).
-:::
-
-## 10. Riprendersi
-
-:::box[🩹 Riprendersi]{type=rule}
-**Quando:** Ti prendi una pausa sicura (almeno 10 minuti) per recuperare fiato, curare ferite, ricomporti.
-
-**Tiro:** +FOR
-
-**10+** Recuperi 1d6 PF. Se usi un medikit o bende: +2 PF bonus.
-
-**7-9** Recuperi 1d4 PF, MA il tempo o la situazione peggiora (nemici si avvicinano, condizioni degradano).
-
-**6-** Nessun recupero. La situazione precipita (attacco a sorpresa, la ferita si infetta: -1 ongoing).
-:::
-
-:::box[🩹 Riprendersi (segue)]{type=rule}
-*Requisiti: Almeno 10 minuti ininterrotti in location relativamente sicura. Frequenza: Max 1 volta per scena/location.*
-:::
-
-## 11. Resistere
-
-:::box[🔮 Resistere]{type=rule}
-**Quando:** Subisci un effetto magico, psichico, fisico estremo o condizione negativa e cerchi di tenerlo a bada.
-
-**Tiro:** +Caratteristica appropriata
-
-- +FOR: effetti fisici (veleni, paralisi, trasformazioni forzate)
-- +MEN: effetti mentali (charm, paura, controllo mentale)
-- +FAT: effetti magici puri (maledizioni, corruzione, drain)
-
-**10+** Scuoti l'effetto completamente. Sei immune per il resto della scena.
-:::
-
-:::box[🔮 Resistere (segue)]{type=rule}
-**7-9** Scegli 1:
-- Resisti, ma subisci 1d6 danno da sforzo (fisico o psichico)
-- L'effetto ti colpisce in forma ridotta (durata dimezzata, potenza dimezzata)
-
-**6-** L'effetto ti colpisce pienamente + il Custode fa una mossa dura.
-:::
-
-## 12. Forzare Fortuna
-
-:::box[🎰 Forzare Fortuna]{type=warn}
-**Quando:** Dopo aver visto il risultato di un tiro, prima che le conseguenze vengano risolte.
-
-**Costo:** 1 Punto Fato (nessun tiro richiesto)
-
-**Effetto:** Ritira TUTTI i dadi, accetta il nuovo risultato (anche se peggiore).
-:::
-
-:::box[🎰 Forzare Fortuna (segue)]{type=warn}
-**Punti Fato:**
-- Inizi ogni sessione con 1. Massimo 3. Non si conservano tra sessioni.
-- **Guadagnare Punti Fato in gioco:** Accetta una complicazione narrativa quando il Custode la offre, oppure compi un atto veramente eroico (a discrezione del Custode).
-
-*Forzare Fortuna è l'ultima risorsa, il momento in cui il destino stesso vacilla. Usala con saggezza.*
-:::
-
-## Riepilogo delle 12 Mosse
-
-| # | Mossa | Tiro | Uso Principale |
-|---|---|---|---|
-| 1 | Attaccare | +FOR / +CUO | Combattimento |
-| 2 | Difendere | +FOR / +CUO | Protezione |
-| 3 | Sfidare Pericolo | +variabile | Azione rischiosa |
-| 4 | Leggere Situazione | +MEN | Osservazione tattica |
-| 5 | Persuadere / Raggirare | +CAR | Interazione sociale |
-| 6 | Aiutare / Ostacolare | +Legame / +variabile | Supporto |
-| 7 | Investigare | +MEN | Ricerca indizi |
-| 8 | Usare Potere | +FAT / +CAR | Magia |
-| 9 | Ultimo Respiro | 2d6 + mod. | Sopravvivenza |
-| 10 | Riprendersi | +FOR | Guarigione |
-| 11 | Resistere | +variabile | Difesa effetti |
-| 12 | Forzare Fortuna | Punto Fato | Ritiro dado |

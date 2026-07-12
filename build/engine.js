@@ -1,5 +1,5 @@
 /**
- * MYTHIC RINGS v3 — Rendering Engine
+ * MYTHIC RINGS — Rendering Engine
  * Converte l'AST dei capitoli in documenti .docx professionali
  * Layout: A5, due colonne, tipografia Georgia
  */
@@ -11,7 +11,7 @@ const {
   PageBreak, AlignmentType, HeadingLevel,
   BorderStyle, WidthType, ShadingType, VerticalAlign, LevelFormat,
   TableOfContents, LineRuleType, SectionType,
-  Header, Footer, PageNumber,
+  Header, Footer, PageNumber, TabStopType, LeaderType,
 } = require('docx');
 
 const path  = require('path');
@@ -22,6 +22,8 @@ const { PAGE, COLORS, FONTS, SIZE, PARA_STYLES,
         borderSingle, borderThick, borderNone,
         bordersAll, bordersNone } = require('./styles');
 const { parse, parseFrontmatter, NODE, parseInlineRuns } = require('./md-parser');
+const { loadMeta } = require('./project-meta');
+const PROJECT = loadMeta(__dirname);
 
 // ═══════════════════════════════════════════════════════
 // HELPERS RUN / PARAGRAFO
@@ -514,7 +516,7 @@ function renderChapterSection(ast, frontmatter, isFirstChapter = false) {
 // HELPER: Header e Footer ricorrenti
 // ═══════════════════════════════════════════════════════
 function makeHeader(chapterTitle) {
-  const title = chapterTitle ? chapterTitle.toUpperCase() : 'MYTHIC RINGS v3.2';
+  const title = chapterTitle ? chapterTitle.toUpperCase() : `${PROJECT.title.toUpperCase()} ${PROJECT.edition.toUpperCase()}`;
   return new Header({
     children: [new Paragraph({
       children: [
@@ -535,7 +537,7 @@ function makeFooter() {
   return new Footer({
     children: [new Paragraph({
       children: [new TextRun({
-        text: 'Mythic Rings v3.2  ·  Milano Occulta  ·  Powered by the Apocalypse',
+        text: `${PROJECT.title} · ${PROJECT.edition} · ${PROJECT.version}`,
         font: FONTS.serif, size: SIZE.xs, color: COLORS.gray500, italics: true,
       })],
       border: { top: { style: BorderStyle.SINGLE, size: 2, color: COLORS.gray300, space: 4 } },
@@ -591,6 +593,62 @@ function makeChapterHeaderTable(chapterTitle, chapterNum, partName, epigraph) {
 
 // COSTRUZIONE DOCUMENT
 // ══════════════════════════════════════════════════════════
+function loadTOCPages() {
+  const candidates = [
+    process.env.MYTHIC_TOC_PAGES,
+    path.join(PROJECT.root, 'dist', 'toc-pages.json'),
+    path.join(PROJECT.root, 'data', 'toc-pages.lock.json'),
+  ].filter(Boolean);
+  for (const candidate of candidates) {
+    try {
+      if (fs.existsSync(candidate)) return JSON.parse(fs.readFileSync(candidate, 'utf8'));
+    } catch (e) {
+      console.warn(`  ⚠  Indice paginato non caricato da ${candidate}: ${e.message}`);
+    }
+  }
+  return {};
+}
+
+function buildStaticTOC(chapters) {
+  const out = [];
+  const pageMap = loadTOCPages();
+  let currentPart = null;
+  for (const ch of chapters) {
+    const part = ch.frontmatter.part || '';
+    if (part && part !== currentPart) {
+      currentPart = part;
+      out.push(new Paragraph({
+        spacing: { before: 150, after: 45 },
+        keepNext: true,
+        children: [textRun(part, { size: SIZE.sm, color: COLORS.crimson, bold: true, caps: true })],
+      }));
+    }
+    const chapterNo = String(ch.frontmatter.chapter || '');
+    const page = pageMap[chapterNo] || pageMap[ch.frontmatter.title || ''];
+    const children = [
+      textRun(`${chapterNo}. `, { size: SIZE.body, color: COLORS.crimson, bold: true }),
+      textRun(ch.frontmatter.title || '', { size: SIZE.body, color: COLORS.ink }),
+    ];
+    if (page) {
+      children.push(textRun(`\t${page}`, { size: SIZE.body, color: COLORS.gray700 }));
+    }
+    out.push(new Paragraph({
+      spacing: { before: 25, after: 25 },
+      indent: { left: 160 },
+      tabStops: page ? [{ type: TabStopType.RIGHT, position: PAGE.CONTENT_W - 200, leader: LeaderType.DOT }] : undefined,
+      children,
+    }));
+  }
+  out.push(new Paragraph({
+    spacing: { before: 180, after: 0 },
+    children: [textRun(pageMap && Object.keys(pageMap).length
+      ? 'Le pagine sono state calcolate dalla build corrente; il PDF include anche segnalibri navigabili.'
+      : 'La build PDF completa calcola automaticamente i numeri di pagina e aggiunge i segnalibri.',
+      { size: SIZE.sm, color: COLORS.gray500, italic: true })],
+  }));
+  return out;
+}
+
 function buildDocument(chapters) {
   // chapters: array di { ast, frontmatter, filename }
   const docSections = [];
@@ -606,17 +664,6 @@ function buildDocument(chapters) {
     children: buildCoverPage(),
   });
 
-  // ── Pagina bianca ────────────────────────────────────
-  docSections.push({
-    properties: {
-      page: {
-        size: { width: PAGE.WIDTH, height: PAGE.HEIGHT },
-        margin: PAGE.MARGIN,
-      },
-    },
-    children: [spacerPara()],
-  });
-
   // ── TOC ──────────────────────────────────────────────
   docSections.push({
     properties: {
@@ -629,16 +676,7 @@ function buildDocument(chapters) {
         spacing: { before: 0, after: 200 },
         border: { bottom: { style: BorderStyle.SINGLE, size: 8, color: COLORS.crimson, space: 5 } },
       }),
-      new TableOfContents('Indice', {
-        hyperlink: true,
-        headingStyleRange: '1-3',
-        stylesWithLevels: [
-          { styleName: 'Heading1', level: 1 },
-          { styleName: 'Heading2', level: 2 },
-          { styleName: 'Heading3', level: 3 },
-        ],
-      }),
-      new Paragraph({ children: [new PageBreak()] }),
+      ...buildStaticTOC(chapters),
     ],
   });
 
@@ -726,6 +764,12 @@ function buildDocument(chapters) {
 
   // ── Document finale ──────────────────────────────────
   return new Document({
+    creator: PROJECT.author,
+    title: `${PROJECT.title} - ${PROJECT.subtitle}`,
+    subject: PROJECT.system_description,
+    description: PROJECT.system_description,
+    keywords: 'gioco di ruolo, urban fantasy, Milano, 2d6',
+    lastModifiedBy: PROJECT.author,
     features: { updateFields: true },
     styles: {
       default: {
@@ -814,41 +858,35 @@ function buildColophonPage() {
     children: [textRun(text, { size: o.size || SIZE.sm, color: o.color || COLORS.gray500,
                                italic: o.italic || false, bold: o.bold || false })],
   });
-  return [
+  const lines = [
     spacerPara(400),
     new Paragraph({
       alignment: AlignmentType.LEFT,
       spacing: { before: 0, after: 30 },
-      children: [textRun('MYTHIC RINGS', { size: SIZE.chap, bold: true, color: COLORS.crimson, caps: true })],
+      children: [textRun(PROJECT.title.toUpperCase(), { size: SIZE.chap, bold: true, color: COLORS.crimson, caps: true })],
     }),
     new Paragraph({
       alignment: AlignmentType.LEFT,
       spacing: { before: 0, after: 120 },
       border: { bottom: borderSingle(COLORS.gold, 4) },
-      children: [textRun('Guardiani di Milano', { size: SIZE.body, italic: true, color: COLORS.gray700 })],
+      children: [textRun(PROJECT.subtitle, { size: SIZE.body, italic: true, color: COLORS.gray700 })],
     }),
-    dim('Edizione v3.2 (2026)', { bold: true, color: COLORS.gray700, size: SIZE.body }),
-    dim('Prima edizione italiana'),
+    dim(`${PROJECT.edition} - versione ${PROJECT.version} (${PROJECT.copyright_year})`, { bold: true, color: COLORS.gray700, size: SIZE.body }),
     spacerPara(60),
-    dim('Ideazione, testo e game design: Riccardo [Cognome]'),
-    dim('Sviluppo del sistema, bilanciamento e impaginazione: Riccardo [Cognome]'),
+    dim(`Ideazione, testo e game design: ${PROJECT.author}`),
+    dim(`Sviluppo editoriale e manutenzione della presente edizione: ${PROJECT.author}`),
     spacerPara(60),
-    dim('Mythic Rings e Guardiani di Milano sono opere di fantasia. Nomi, personaggi,'
-      + ' luoghi ed eventi, per quanto ispirati alla città di Milano, sono usati in modo'
-      + ' fittizio. Qualsiasi somiglianza con fatti o persone reali è puramente casuale.'),
+    dim('Mythic Rings e Guardiani di Milano sono opere di fantasia. Nomi, personaggi, luoghi ed eventi, per quanto ispirati alla città di Milano, sono usati in modo fittizio. Qualsiasi somiglianza con fatti o persone reali è puramente casuale.'),
     spacerPara(40),
-    dim('Questo gioco è Powered by the Apocalypse, un sistema creato da Meguey Baker e'
-      + ' Vincent Baker. Powered by the Apocalypse e i suoi principi sono usati con'
-      + ' riconoscimento agli autori originali.'),
+    dim('Mythic Rings è un gioco ispirato ai principi Powered by the Apocalypse. La dicitura definitiva e ogni eventuale attribuzione aggiuntiva devono essere verificate prima della release commerciale.'),
     spacerPara(80),
-    dim('Copyright \u00A9 2026 Riccardo [Cognome]. Tutti i diritti riservati.', { color: COLORS.gray700 }),
-    dim('Nessuna parte di questo volume può essere riprodotta senza autorizzazione'
-      + ' scritta, salvo brevi citazioni a scopo di recensione.'),
-    spacerPara(60),
-    dim('ISBN: 000-00-00000-00-0', { color: COLORS.gray300 }),
-    dim('www.mythicrings.it   ·   contatto@mythicrings.it', { color: COLORS.gray300 }),
-    new Paragraph({ children: [new PageBreak()] }),
+    dim(`Copyright © ${PROJECT.copyright_year} ${PROJECT.author}. Tutti i diritti riservati.`, { color: COLORS.gray700 }),
+    dim('Nessuna parte di questo volume può essere riprodotta senza autorizzazione scritta, salvo brevi citazioni a scopo di recensione.'),
   ];
+  if (PROJECT.isbn) lines.push(spacerPara(60), dim(`ISBN: ${PROJECT.isbn}`, { color: COLORS.gray300 }));
+  const contacts = [PROJECT.website, PROJECT.contact].filter(Boolean).join(' · ');
+  if (contacts) lines.push(dim(contacts, { color: COLORS.gray300 }));
+  return lines;
 }
 
 // ── Pagina crediti e ringraziamenti (in fondo al volume) ──
@@ -863,10 +901,6 @@ function buildCreditsBackMatter() {
     spacing: { before: o.before ?? 30, after: o.after ?? 30, line: 276 },
     children: [textRun(text, { size: SIZE.body, color: COLORS.ink })],
   });
-  const name = (text) => new Paragraph({
-    spacing: { before: 20, after: 20 },
-    children: [textRun(text, { size: SIZE.body, color: COLORS.gray700 })],
-  });
   return [
     new Paragraph({
       heading: HeadingLevel.HEADING_1,
@@ -874,26 +908,14 @@ function buildCreditsBackMatter() {
       border: { bottom: borderSingle(COLORS.crimson, 8) },
       children: [textRun('Crediti e Ringraziamenti', { size: SIZE.chap, bold: true, color: COLORS.crimson, caps: true })],
     }),
-    head('L\u2019Autore'),
-    body('Mythic Rings nasce da una passione per Milano e per il gioco di ruolo che intreccia'
-      + ' investigazione, dramma personale e il costo del potere. Ogni regola di questo volume'
-      + ' è stata scritta, giocata e riscritta attorno a un unico principio: che il'
-      + ' potere abbia sempre un prezzo, e che quel prezzo racconti una storia.'),
+    head('Autore'),
+    body(`${PROJECT.author} - ideazione, testo e game design.`),
+    head('Stato dei crediti'),
+    body('Questa è una versione beta editoriale. I crediti nominativi di editing, consulenza e playtest saranno inseriti esclusivamente dopo conferma scritta delle persone coinvolte e prima della release commerciale.'),
     head('Ringraziamenti'),
-    body('Un grazie a chi ha reso possibile questo gioco: alle persone che hanno letto le prime'
-      + ' bozze quando erano ancora appunti disordinati, a chi si è seduto al tavolo per provare'
-      + ' regole che non funzionavano ancora, e a chi ha creduto in una Milano occulta prima che'
-      + ' esistesse su carta.'),
-    head('Playtester'),
-    body('Questo volume è stato affinato attraverso il gioco reale. Un ringraziamento particolare'
-      + ' ai tavoli che hanno dato la caccia ai mostri tra i Navigli e il Monumentale:'),
-    name('[Nome playtester]   ·   [Nome playtester]   ·   [Nome playtester]'),
-    name('[Nome playtester]   ·   [Nome playtester]   ·   [Nome playtester]'),
-    body('Se hai partecipato a un tavolo di playtest e il tuo nome non compare qui, scrivici:'
-      + ' la prossima edizione ti renderà merito.', { before: 60 }),
-    head('Un\u2019Ultima Parola'),
-    body('I Custodi vegliano su Milano da secoli, in silenzio, senza chiedere riconoscimento.'
-      + ' Che tu sieda dietro lo schermo o impugni un Anello, ora la città è anche tua. Proteggila.'),
+    body('Grazie ai lettori e ai tavoli che contribuiranno alla verifica della Prima Edizione. Ogni osservazione utile viene registrata, riprodotta e valutata attraverso il protocollo di playtest della repository.'),
+    head("Un'ultima parola"),
+    body('I Custodi vegliano su Milano da secoli, in silenzio, senza chiedere riconoscimento. Che tu sieda dietro lo schermo o impugni un Anello, ora la città è anche tua. Proteggila.'),
   ];
 }
 
@@ -903,12 +925,12 @@ function buildCoverPage() {
     spacerPara(400),
     new Paragraph({
       alignment: AlignmentType.CENTER,
-      children: [textRun('MYTHIC RINGS', { size: 72, bold: true, color: COLORS.crimson, caps: true })],
+      children: [textRun(PROJECT.title.toUpperCase(), { size: 72, bold: true, color: COLORS.crimson, caps: true })],
       spacing: { before: 0, after: 80 },
     }),
     new Paragraph({
       alignment: AlignmentType.CENTER,
-      children: [textRun('v3.2', { size: 40, color: COLORS.gold })],
+      children: [textRun(PROJECT.edition, { size: 34, color: COLORS.gold })],
       spacing: { before: 0, after: 120 },
     }),
     new Paragraph({
@@ -917,7 +939,7 @@ function buildCoverPage() {
         top:    borderSingle(COLORS.crimson, 4),
         bottom: borderSingle(COLORS.crimson, 4),
       },
-      children: [textRun('GUARDIANI DI MILANO', {
+      children: [textRun(PROJECT.subtitle.toUpperCase(), {
         size: SIZE.h2, color: COLORS.parchment2, bold: true, caps: true,
       })],
       spacing: { before: 80, after: 80 },
@@ -926,8 +948,7 @@ function buildCoverPage() {
     new Paragraph({
       alignment: AlignmentType.CENTER,
       children: [textRun(
-        'Un gioco di ruolo di investigazione soprannaturale\n'
-        + 'nel cuore di Milano · Powered by the Apocalypse',
+        `${PROJECT.system_description}\n${PROJECT.tagline}`,
         { size: SIZE.body, color: COLORS.gray300, italic: true }
       )],
     }),
@@ -1006,10 +1027,10 @@ async function fixFontTableRel(docxPath) {
 async function buildAll(chaptersDir, outputDir) {
   const chalk = require('chalk');
 
-  console.log(chalk.bold.cyan('\n⚙  MYTHIC RINGS v3 — Build Engine\n'));
+  console.log(chalk.bold.cyan(`\nBuild ${PROJECT.title} ${PROJECT.version} - DOCX\n`));
 
   // Leggi tutti i capitoli in ordine
-  const files = glob.sync(`${chaptersDir}/*.md`).sort();
+  const files = PROJECT.chapters.map(rel => path.join(PROJECT.root, rel));
   if (!files.length) {
     console.error(chalk.red('Nessun file .md trovato in ' + chaptersDir));
     process.exit(1);
@@ -1031,7 +1052,7 @@ async function buildAll(chaptersDir, outputDir) {
   const buf = await Packer.toBuffer(doc);
 
   if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
-  const outPath = path.join(outputDir, 'Mythic_Rings_v3.docx');
+  const outPath = path.join(outputDir, `${PROJECT.output_basename}.docx`);
   fs.writeFileSync(outPath, buf);
   await fixFontTableRel(outPath);
   await enableMirrorMargins(outPath);

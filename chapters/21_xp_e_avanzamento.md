@@ -4,70 +4,95 @@ chapter: 21
 part: "Parte V: Guida per il Custode"
 section: "Guida per il Custode"
 epigraph: "Ogni cicatrice racconta una storia. Ogni storia ti cambia."
-status: complete
-version: 3.2
+tags: [avanzamento, esperienza]
+status: beta
+version: 0.9.0-beta.1
 ---
 
-## XP e Avanzamento
+## XP e avanzamento
 
-### Domande di Fine Sessione
+L'avanzamento premia scelte, scoperte e trasformazioni, non il numero di avversari sconfitti.
 
-Alla fine di ogni sessione, ogni giocatore risponde a queste domande. Ogni **Sì** vale **1 XP**:
+### Domande di fine sessione
+
+Alla fine della sessione, il gruppo risponde insieme. Ogni risposta positiva concede 1 XP a ciascun Guardiano direttamente coinvolto.
 
 | # | Domanda |
-|---|---|
+|---:|---|
 | 1 | Hai affrontato un pericolo significativo? |
-| 2 | Hai imparato qualcosa di nuovo (sul mondo o su te stesso)? |
-| 3 | Hai risolto un problema importante? |
-| 4 | Hai sviluppato o sfidato un Legame? |
-| 5 | Hai agito secondo i principi della tua Casata (anche se costoso)? |
-| 6 | *(M8)* Hai risolto una situazione senza ricorrere alla violenza? |
+| 2 | Hai scoperto qualcosa che cambia la comprensione del mondo o di te stesso? |
+| 3 | Hai trasformato, messo alla prova o spezzato un Legame? |
+| 4 | Hai pagato un prezzo concreto per i principi della tua Casata? |
+| 5 | Hai risolto un problema senza ricorrere alla violenza quando la violenza era possibile? |
 
-**Bonus Custode (+1 XP):** se un PG ha fatto qualcosa di eccezionale: eroismo, creatività brillante, roleplay profondo. Tipico: 2-5 XP per sessione.
+Il Custode può assegnare 1 XP aggiuntivo al gruppo per il completamento di un obiettivo di campagna dichiarato. Evita premi discrezionali per «bravo roleplay»: tendono a favorire stili più visibili e a trasformare il Custode in giudice della performance.
 
-**A 5 XP = Level Up.**
+A **5 XP** il Guardiano ottiene un avanzamento e riporta gli XP a 0. Gli XP in eccesso vengono conservati.
 
-### Level Up
+## Avanzamenti
 
-A 5 XP, il PG sceglie **1** dei seguenti miglioramenti:
+Scegli una delle opzioni non ancora esaurite:
 
-- **+1 Caratteristica** (massimo +3 in qualsiasi caratteristica)
-- **Nuovo Potere Casata** (costo 5 XP; deve essere del livello successivo)
-- **+5 PF permanenti**
-- **Nuovo Legame L1** (con PNG o PG)
-- **Talento Speciale** (abilità custom, richiede approvazione Custode)
-- **1 Mossa Avanzata** (richiede Livello 3+, vedi Capitolo 22)
+- aumenta una Caratteristica di 1, massimo +3;
+- apprendi un nuovo potere della Casata per cui soddisfi i requisiti;
+- aumenta i PF massimi di 4, massimo due volte;
+- crea un nuovo Legame L1 nato dalla fiction;
+- aumenta di 1 un Legame esistente, se è stato trasformato in gioco;
+- apprendi una Mossa Avanzata, se possiedi almeno tre avanzamenti;
+- ottieni una risorsa narrativa stabile: rifugio, contatto, laboratorio, autorità o artefatto minore.
 
-:::box[Regola v3.2: Nuovo Potere Casata]{type=info}
-I poteri si apprendono in ordine di livello: non puoi prendere un L3 se non hai tutti i L1 e L2. Eccezione: il Custode può permettere un salto narrativo (es. evento traumatico che sblocca potere più alto) con conseguenze storywise adeguate.
+### Apprendere poteri
+
+Non è necessario possedere tutti i poteri dei Livelli inferiori. Per apprendere un potere:
+
+- possiedi almeno due poteri del Livello precedente;
+- giustifica l'apprendimento attraverso addestramento, crisi, mentore o scoperta;
+- rispetta il massimo Livello disponibile.
+
+| Avanzamenti totali | Livello massimo del potere |
+|---:|---:|
+| 0–1 | L1 |
+| 2–3 | L2 |
+| 4–5 | L3 |
+| 6–7 | L4 |
+| 8+ | L5 |
+
+Un salto eccezionale può essere il centro di un arco narrativo, ma non rimuove i requisiti senza un costo permanente e una decisione condivisa.
+
+## Milestone personali
+
+Ogni Guardiano definisce con il Custode **tre Milestone visibili**, legate a:
+
+1. una verità da affrontare;
+2. una relazione da trasformare;
+3. un destino o una responsabilità da scegliere.
+
+Le Milestone non devono essere trappole segrete. Il giocatore deve conoscere il tipo di trasformazione verso cui il personaggio si sta muovendo, pur senza sapere come accadrà.
+
+Quando una Milestone viene raggiunta, scegli una ricompensa appropriata:
+
+- un avanzamento immediato;
+- una capacità narrativa unica e circoscritta;
+- un cambiamento stabile di posizione in una fazione;
+- la rimozione o trasformazione di una paura, debito o Condizione permanente;
+- l'accesso a un potere da apprendere con il prossimo avanzamento.
+
+Le ricompense non superano il limite +3 delle Caratteristiche, non concedono resurrezioni gratuite e non introducono una capacità più ampia di un potere L5.
+
+:::box[Esempio di Milestone]{type=example}
+**Verità:** Elena scopre perché lo spirito del padre rifiuta di andarsene.  
+**Relazione:** sceglie se liberarlo o trattenerlo, trasformando il Legame.  
+**Destino:** accetta o rifiuta un ruolo nel Consiglio dei Morti.
+
+La ricompensa può essere un avanzamento e un'autorità narrativa presso gli spiriti del Monumentale, non un bonus oltre i limiti del sistema.
 :::
 
-## Milestone Personali (M17)
+## Ritmo di campagna
 
-Oltre al sistema XP standard, ogni PG ha **3 Milestone Personali**, traguardi narrativi unici legati alla storia del personaggio. Quando un PG raggiunge una Milestone, ottiene una ricompensa speciale che nessun level up può dare.
+Con 2–4 XP medi per sessione, un avanzamento arriva ogni due o tre sessioni. Per una campagna breve, riduci la soglia a 4 XP; per una campagna lunga mantienila a 5 e usa ricompense narrative tra gli avanzamenti.
 
-### Come Funzionano
+Prima di introdurre poteri L4–L5, verifica che il gruppo desideri un cambiamento di scala: questi poteri possono trasformare luoghi, fazioni e struttura della campagna.
 
-All'inizio della campagna, il Custode definisce 3 Milestone per ogni PG basandosi su background, segreto, paura e desiderio del personaggio. Le Milestone sono **segrete**, il giocatore non le conosce. Quando un PG compie un'azione che soddisfa una Milestone, il Custode lo rivela e assegna la ricompensa.
-
-| Milestone | Tipo | Esempio Trigger | Ricompensa |
-|---|---|---|---|
-| 1: Scoperta | Il PG affronta una verità su sé stesso o il suo passato | Sofia accetta la propria morte in visione | +1 Caratteristica (oltre il max +3) OPPURE rimuovi 1 paura/debolezza |
-| 2: Potere | Il PG compie un'azione straordinaria legata alla sua Casata | Sofia riesce a riportare in vita qualcuno senza corruzione | Potere unico esclusivo co-creato con il Custode |
-| 3: Destino | Il PG realizza il proprio destino o cambia il mondo | Sofia riconcilia i vivi con i morti al Monumentale | Ruolo nella fazione con autorità e responsabilità narrative |
-
-:::box[Esempio: Milestone per Sofia (Mictlan)]{type=casata_mictlan}
-**Milestone 1 (Scoperta):** Sofia vede la propria morte in visione. Quando sceglie di accettarla invece di fuggire → +1 FAT (anche oltre +3).
-
-**Milestone 2 (Potere):** Sofia riesce a riportare in vita qualcuno senza corruzione → Potere unico: "Secondo Soffio" (resurrezione 1/campagna, senza costo PF).
-
-**Milestone 3 (Destino):** Sofia riconcilia i vivi con i morti al Cimitero Monumentale → Diventa Portavoce del Consiglio dei Morti.
-:::
-
-### Quando Definire le Milestone
-
-Le Milestone si definiscono durante o subito dopo la Session Zero, usando le risposte del giocatore alle domande di background. Non devono essere prevedibili, devono sorprendere il giocatore quando vengono rivelate.
-
-:::box[Consiglio per il Custode]{type=tip}
-Le Milestone migliori toccano le **paure** e i **desideri** del personaggio, non solo le sue capacità. Un Guardiano che teme l'intimità raggiunge la sua Milestone quando si fida davvero di qualcuno. Uno che desidera controllo la raggiunge quando lascia andare.
+:::box[Principio di avanzamento]{type=tip}
+Ogni miglioramento dovrebbe creare almeno una nuova responsabilità, scelta o esposizione. Crescere significa poter cambiare più cose e avere più cose da perdere.
 :::

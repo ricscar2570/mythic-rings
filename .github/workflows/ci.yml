@@ -1,0 +1,57 @@
+name: Editorial CI
+
+on:
+  push:
+    branches: [main, develop, "develop/**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: System dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libreoffice pandoc zip unzip fonts-ebgaramond fonts-crosextra-carlito
+
+      - name: Project dependencies
+        run: |
+          npm ci
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Clean release build and preflight
+        run: npm run release:check
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: mythic-rings-${{ github.sha }}
+          path: |
+            dist/*.docx
+            dist/*.html
+            dist/*.pdf
+            dist/*.json
+            dist/products/*
+          if-no-files-found: error
+          retention-days: 14

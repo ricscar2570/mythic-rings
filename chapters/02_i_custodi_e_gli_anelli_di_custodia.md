@@ -5,8 +5,8 @@ part: "Parte I: Il Mondo di Mythic Rings"
 section: "Il Mondo di Mythic Rings"
 epigraph: "Un Anello non si sceglie. Ti sceglie."
 tags: []
-status: finale
-version: 3.2
+status: beta
+version: 0.9.0-beta.1
 ---
 
 ## I Custodi e gli Anelli Custodia
@@ -287,14 +287,15 @@ piano. I poteri crescono con l'esperienza del portatore: un Guardiano
 appena scelto ha accesso ai poteri di Livello 1, mentre un veterano con
 anni di servizio può accedere a poteri devastanti di Livello 5.
 
-**Hanno un costo.** Nessun potere è gratuito. Canalizzare l'energia di
-un altro piano attraverso un corpo umano ha conseguenze. L'Anello di
-Avalon e quello di Ife consumano la stabilità mentale del portatore
-(Stress). L'Anello di Umbra contamina progressivamente l'anima del
-portatore (Corruzione). L'Anello di Mictlan drena la forza vitale stessa
-del portatore (Punti Ferita). Ogni Guardiano sa che i propri poteri
-hanno un prezzo, e impara a gestire quel prezzo con la cautela di un
-equilibrista.
+**Hanno un prezzo.** La magia degli Anelli lascia sempre una traccia,
+anche quando una singola capacità non richiede una spesa immediata.
+Avalon e Ife consumano la stabilità del portatore attraverso lo Stress;
+Umbra accumula Corruzione quando forza i poteri oltre le tecniche più
+semplici; Mictlan sacrifica direttamente Punti Ferita. I poteri Umbra di
+Livello 1 non aumentano la Corruzione, ma appartengono comunque a una
+tradizione il cui uso prolungato espone alla trasformazione. Ogni
+Guardiano impara quindi a trattare il potere come una risorsa narrativa
+e meccanica, mai come una soluzione priva di conseguenze.
 
 La Scelta dell'Anello
 
@@ -386,12 +387,12 @@ mai gratuita. Il tipo di costo dipende dalla Casata e riflette la
 filosofia profonda di ciascun Anello.
 
 
-| Casata | Risorsa | Intervallo | A Massimo | Recupero |
-|---| ---|---| ---|---|
-| Avalon | Stress | 0 - 10 | Burnout: poteri sospesi (costo doppio + rischio), crollo emotivo | -1 per notte di riposo, attività di downtime rilassanti, Atto di Catarsi con Confidente |
-| Umbra | Corruzione | 0 - 8 | Trasformazione in creatura d'ombra (PERDITA PG) | Atti di Redenzione (max 1/sessione), Rituale di Purificazione durante downtime |
-| Ife | Stress | 0 - 10 | Burnout: come Avalon | Come Avalon. In più: contatto con natura riduce -1 Stress aggiuntivo |
-| Mictlan | Punti Ferita | 28+(FOR×1) | Morente: tira Ultimo Respiro | 1d4 per notte, guarigione magica, mossa Riprendersi. Sangue Tenace: può convertire parte del costo PF in Stress |
+| Casata | Risorsa | Intervallo | Soglie critiche | Recupero |
+|---|---:|---|---|---|
+| Avalon | Stress | 0--10 | A 8--9 ogni potere costa +1 Stress. A 10 il costo raddoppia e l'uso richiede **Sfidare il Pericolo +FAT**; su 6− il potere fallisce e infligge 1d6 danni puri. | −1 dopo una notte di riposo sicuro; attività di downtime; Atto di Catarsi con un Confidente L2+. |
+| Umbra | Corruzione | 0--8 | A 6 i poteri L3+ costano +1 Corruzione; a 7 anche i poteri L2+ costano +1; a 8 il Guardiano si trasforma e diventa un PNG. | Un Atto di Redenzione significativo per sessione; Rituale di Purificazione durante il downtime. |
+| Ife | Stress | 0--10 | Usa le stesse soglie di Avalon. | Come Avalon; una volta per downtime, un contatto significativo con un ecosistema vivo riduce 1 Stress aggiuntivo. |
+| Mictlan | Punti Ferita | 28 + FOR | A 0 PF si attiva **Ultimo Respiro**. I costi dei poteri non possono essere ridotti sotto 1 PF. | **Riprendersi**, cure, riposo e poteri. **Sangue Tenace** può convertire parte del costo in Stress entro i propri limiti. |
 
 :::box[La Filosofia del Costo]{type=info}
 Ogni costo racconta una storia. **Avalon e Ife** pagano in Stress perché canalizzare la Luce pura o la Vita selvaggia brucia la psiche umana. È come guardare il sole troppo a lungo o sentire troppo intensamente - il corpo umano non è progettato per contenere tanta energia. Il burnout non è solo meccanico: è un crollo emotivo, lacrime incontrollabili, paralisi, terrore.

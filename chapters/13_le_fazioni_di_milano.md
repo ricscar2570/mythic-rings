@@ -5,8 +5,8 @@ part: "Parte IV: Milano Mitica"
 section: "Milano Mitica"
 epigraph: "In guerra, non sai chi sono i tuoi nemici finché non ti sparano alle spalle."
 tags: []
-status: finale
-version: 3.2
+status: beta
+version: 0.9.0-beta.1
 ---
 
 ## Le Fazioni di Milano
@@ -17,7 +17,7 @@ fazioni principali** competono per influenza, risorse e sopravvivenza.
 Le relazioni tra queste fazioni cambiano costantemente, e le azioni dei
 Guardiani le influenzano direttamente.
 
-Sistema Reputazione (M18)
+## Sistema di Reputazione
 
 Ogni PG ha un punteggio di **Reputazione** da **-5** (odiato) a **+5**
 (fidato) con ciascuna delle 5 fazioni. Inizia a **0** (sconosciuto). Le

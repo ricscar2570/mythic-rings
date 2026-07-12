@@ -5,8 +5,8 @@ part: "Parte IV: Milano Mitica"
 section: "Milano Mitica"
 epigraph: "Ogni quartiere ha la sua anima. Alcuni ce l'hanno letteralmente."
 tags: []
-status: finale
-version: 3.2
+status: beta
+version: 0.9.0-beta.1
 ---
 
 ## I Dodici Quartieri di Milano

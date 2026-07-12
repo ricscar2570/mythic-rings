@@ -1,0 +1,2 @@
+# In Markdown, exactly two trailing spaces encode an intentional hard line break.
+*.md whitespace=-trailing-space

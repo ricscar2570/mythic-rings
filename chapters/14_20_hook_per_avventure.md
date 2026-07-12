@@ -5,8 +5,8 @@ part: "Parte IV: Milano Mitica"
 section: "Milano Mitica"
 epigraph: "Ogni storia ha un inizio. Trova il tuo."
 tags: []
-status: finale
-version: 3.2
+status: beta
+version: 0.9.0-beta.1
 ---
 
 ## 20 Hook per Avventure
@@ -45,14 +45,3 @@ di sfida** suggerito.
 *Il Velo nasconde segreti antichi.*
 
 ## *Il tuo Anello brilla nella notte.*
-
-## ⟡ MYTHIC RINGS v3.2 ⟡
-
-PARTE V
-
-*Guida per il Custode*
-
-Principi · Mosse · Strumenti · Sessioni
-
-*“Non racconti una storia. Crei le condizioni perché una storia
-emerga.”*

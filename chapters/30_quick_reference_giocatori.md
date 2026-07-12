@@ -1,80 +1,117 @@
 ---
 title: "Quick Reference Giocatori"
 chapter: 30
-part: "Parte VII: Appendici"
-section: "Appendici"
-epigraph: "Tutto ciò che serve, in una pagina."
-tags: []
-status: finale
-version: 3.2
+part: "Parte VII: Riferimenti"
+section: "Riferimenti"
+epigraph: "La regola che serve, quando serve."
+tags: [riferimento, giocatori]
+status: beta
+version: 0.9.0-beta.1
 ---
 
-## Quick Reference - Giocatori
+## Quick Reference — Giocatori
 
-*Stampabile. Una pagina con tutto il necessario per giocare.*
+### Tiro base
 
-:::box[MECCANICA BASE]{type=info}
-**Quando agisci:** Tira 2d6 + Caratteristica
-**10+:** Successo pieno
-**7-9:** Successo con complicazione
-**6-:** Fallimento (Custode fa mossa)
-**12 naturale:** Successo critico (beneficio extra)
-**2 naturale:** Fallimento critico (complicazione severa)
-:::
+Tira **2d6 + Caratteristica + modificatori**.
 
-:::box[CARATTERISTICHE]{type=info}
-**FOR (Forza):** Potenza fisica, resistenza
-**CUO (Cuore):** Coraggio, istinto, riflessi
-**MEN (Mente):** Intelligenza, percezione, memoria
-**CAR (Carisma):** Fascino, leadership, presenza
-**FAT (Fato):** Fortuna, magia, destino
-:::
+| Totale | Esito |
+|---|---|
+| 10+ | Successo pieno |
+| 7–9 | Successo con costo, scelta o complicazione |
+| 6− | Il Custode compie una Mossa |
 
+Modificatore totale: minimo −3, massimo +4. Un 12 naturale concede un beneficio aggiuntivo; un 2 naturale conta sempre come 6−.
 
-| Mossa | Tiro | Effetto Rapido |
-|---| ---|---|
-| Attaccare | +FOR/+CUO | 10+: danno pieno. 7-9: danno ma esposto. |
-| Difendere | +FOR/+CUO | 10+: blocchi/schivi. 7-9: riduci danno metà. |
-| Sfidare Pericolo | +variabile | 10+: eviti. 7-9: costo/complicazione. |
-| Leggere Situazione | +MEN | 10+: 3 domande. 7-9: 1 domanda. |
-| Leggere Persona | +CAR | 10+: 3 domande. 7-9: 1 domanda. |
-| Persuadere | +CAR | 10+: accetta. 7-9: vuole qualcosa in cambio. |
-| Raggirare | +CAR | 10+: ci casca. 7-9: ci casca ma sospetta. |
-| Usare Potere | +FAT/+CAR | 10+: effetto pieno. 7-9: effetto ridotto o costo extra. |
-| Aiutare/Ostacolare | +Legame | 10+: +1/-2 al tiro alleato/nemico. 7-9: ti esponi. |
-| Investigare | +MEN | 10+: indizio chiaro + dettaglio. 7-9: indizio vago. |
-| Resistere | +variabile | 10+: resisti. 7-9: effetto ridotto. Reazione. |
-| Ultimo Respiro | +nulla | 10+: 1 PF. 7-9: scelta. 6-: morte. |
+### Punti Fato
 
-:::box[DANNO & SALUTE]{type=info}
-**PF Iniziali:** 20 + (FOR × 2)
-**Armatura:** Riduce danno subito (max 2 per boss)
-**A 0 PF:** Tiri Ultimo Respiro
-**Recupero:** 1d4 PF per notte riposo, 1d6 PF con cure magiche
-:::
+- Inizio sessione: 2.
+- Massimo: 2.
+- Spendi 1 dopo il tiro e prima delle conseguenze.
+- Ritira un solo d6 e tieni il nuovo valore.
+- Non concedono azioni aggiuntive e non si conservano.
 
-:::box[POTERI - COSTI]{type=info}
-**Avalon:** +Stress (max 10). Tira +CAR.
-**Umbra:** +Corruzione (max 8). Tira +FAT.
-**Ife:** +Stress (max 10). Tira +FAT.
-**Mictlan:** -PF (variabile). Tira +FAT.
-:::
+### Legami
 
-:::box[COSA TRACCI A TAVOLO (per Casata)]{type=tip}
-Nessun giocatore segue tutti i tracker del gioco: i Clock globali (Doom Clock, Velo), la Reputazione delle fazioni e l'Escalation Die sono del Custode. Tu segui solo i tuoi:
-:::
+| Livello | Bonus |
+|---:|---:|
+| 1 | +1 |
+| 2 | +2 |
+| 3 | +2 e capacità speciale |
 
-:::box[COSA TRACCI A TAVOLO (per Casata) (segue)]{type=tip}
-**Avalon / Ife:** PF · Armatura · Stress (0-10) · Punti Fato (0-2) **Umbra:** PF · Armatura · Stress (0-10) · Corruzione (0-8) · Punti Fato (0-2) **Mictlan:** PF (con la soglia Sangue Tenace già segnata) · Armatura · Stress (0-10) · Punti Fato (0-2) Lo Stress è il costo dei poteri per Avalon e Ife; per Umbra il costo è la Corruzione; per Mictlan è la vita (PF).
-:::
+Un solo Legame per tiro. Persona e Tipo devono essere direttamente coinvolti. Ultimo Respiro non riceve bonus dai Legami.
 
-:::box[COSA TRACCI A TAVOLO (per Casata) (segue)]{type=tip}
-Tutti possono comunque accumulare Stress da fonti narrative.
-:::
+### Danno e Armatura
 
-:::box[XP & AVANZAMENTO]{type=info}
-Fine sessione: 6 domande (1 XP per SÌ) + bonus Custode (+1 XP).
-Tipico: 2-5 XP/sessione. A 5 XP = Level Up.
-**Level Up:** +1 Caratteristica, Nuovo Potere, +5 PF, Nuovo Legame
-L1, Talento Speciale, o Mossa Avanzata (L3+).
+**Danno effettivo = danno − Armatura applicabile, minimo 1**, salvo immunità.
+
+- Fisico: Armatura fisica o mistica.
+- Magico: soltanto Armatura mistica.
+- Puro: ignora Armatura.
+- Equipaggiamento massimo 3; totale ordinario massimo 4.
+
+### Turno di combattimento
+
+Ogni round hai:
+
+- una Azione Principale;
+- un movimento coerente con la fiction.
+
+Il gruppo decide l'ordine, che può cambiare ogni round. Il Custode non tira per i nemici.
+
+### Escalation
+
+| Round | Danno dei Guardiani |
+|---|---:|
+| 1–2 | +0 |
+| 3 | +1 |
+| 4 | +2 |
+| 5+ | +3 |
+
+### Risorse
+
+| Risorsa | Intervallo | Soglia |
+|---|---:|---|
+| PF | Formula di Casata | 0: Ultimo Respiro |
+| Stress | 0–10 | 8–9 costi maggiori; 10 Burnout |
+| Corruzione Umbra | 0–8 | 6–7 costi maggiori; 8 trasformazione |
+| Fato | 0–2 | si ripristina a 2 a inizio sessione |
+
+### Riprendersi
+
+10 minuti in luogo relativamente sicuro, tira +FOR.
+
+- 10+: 1d6 PF e −1 Stress.
+- 7–9: 1d4 PF oppure −1 Stress.
+- 6−: nessun recupero; il Custode mostra un costo o un'urgenza.
+- Medikit consumato: +2 PF se recuperi PF.
+
+### Ultimo Respiro
+
+A 0 PF, tira 2d6 senza bonus.
+
+- 12+: 1 PF, cosciente, un'ultima azione nel round.
+- 10–11: 1 PF, incapacitato.
+- 7–9: 1 PF e conseguenza duratura.
+- 6−: morte, salvo effetto esplicito.
+
+### Mosse Base
+
+| Mossa | Funzione |
+|---|---|
+| Attaccare | Infliggere danno sotto minaccia |
+| Difendere | Proteggere una persona o un obiettivo |
+| Sfidare il Pericolo | Affrontare un rischio senza Mossa più specifica |
+| Leggere la Situazione | Comprendere una scena tesa |
+| Persuadere o Raggirare | Influenzare un PNG |
+| Aiutare o Ostacolare | Modificare l'azione altrui |
+| Investigare | Ottenere e interpretare indizi |
+| Usare Potere | Canalizzare un potere dell'Anello |
+| Ultimo Respiro | Determinare la sorte a 0 PF |
+| Riprendersi | Recuperare PF o Stress |
+| Resistere | Opporsi a un effetto persistente |
+| Forzare la Fortuna | Ritirare un d6 spendendo Fato |
+
+:::box[Prima descrivi, poi tira]{type=tip}
+Dichiara cosa fai, con quale obiettivo e in quale modo. La fiction determina la Mossa, la Caratteristica e le conseguenze possibili.
 :::

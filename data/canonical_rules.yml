@@ -1,0 +1,127 @@
+schema_version: 1
+product_version: 0.9.0-beta.1
+rules:
+  core_roll:
+    id: MR-RULE-001
+    title: Tiro base
+    text: Tira 2d6, somma la Caratteristica indicata e gli eventuali modificatori ammessi. Con 10+ ottieni un successo pieno; con 7-9 ottieni un successo con costo, scelta o complicazione; con 6- il Custode compie una mossa coerente con la fiction.
+    natural_12: Scegli un beneficio aggiuntivo appropriato alla mossa; in un attacco puoi scegliere +1d6 danno invece del beneficio ordinario.
+    natural_2: Conta sempre come 6-; il Custode può compiere una mossa dura, ma non introduce conseguenze scollegate dalla fiction.
+  modifiers:
+    id: MR-RULE-002
+    title: Limite dei modificatori
+    text: Il modificatore totale al tiro, Caratteristica inclusa, non può superare +4 né scendere sotto -3. Se ulteriori vantaggi o svantaggi sarebbero rilevanti, cambiano la posizione narrativa, il costo o l'effetto invece del numero.
+    stacking:
+      - Applica al massimo un bonus da Legame.
+      - Applica al massimo un bonus da Aiutare.
+      - Bonus provenienti dalla stessa fonte non si cumulano.
+      - L'Escalation non modifica mai il tiro.
+  fate_points:
+    id: MR-RULE-003
+    title: Punti Fato
+    start: 2
+    maximum: 2
+    refresh: All'inizio di ogni sessione; i Punti Fato non si conservano.
+    spend: Dopo avere visto un tiro e prima che le conseguenze siano applicate, spendi 1 Punto Fato per ritirare un solo d6. Il nuovo risultato sostituisce il dado scelto anche se peggiore.
+    restrictions:
+      - Non si guadagnano Punti Fato durante la sessione, salvo un effetto che lo dichiari esplicitamente.
+      - Un Punto Fato non concede un'azione aggiuntiva.
+      - Un Punto Fato non annulla automaticamente danno, morte o conseguenze.
+  bonds:
+    id: MR-RULE-004
+    title: Legami
+    levels:
+      1: Il Legame concede +1 quando il suo Tipo e la persona legata sono direttamente coinvolti.
+      2: Il bonus diventa +2.
+      3: Il bonus resta +2 e si sblocca la capacità speciale del Tipo, oltre a una risorsa morale utilizzabile una volta per sessione.
+    application: Un solo Legame può modificare lo stesso tiro. Il coinvolgimento deve essere diretto, emotivamente significativo e coerente con il Tipo del Legame.
+    breaking: Quando un Legame viene spezzato da morte, tradimento o separazione definitiva, il suo livello scende a 0 e il Guardiano subisce 2 Stress.
+  recover:
+    id: MR-RULE-005
+    title: Riprendersi
+    trigger: Quando trascorri almeno 10 minuti ininterrotti in un luogo relativamente sicuro per curarti e ricomporti.
+    roll: Tira +FOR. Un Confidente L2+ che ti assiste attivamente concede +1, una sola volta per sessione per quel Legame.
+    results:
+      "10+": Recuperi 1d6 PF e riduci lo Stress di 1.
+      "7-9": Scegli se recuperare 1d4 PF oppure ridurre lo Stress di 1.
+      "6-": Non recuperi; il Custode compie una mossa morbida che mostra un pericolo, un costo o un'urgenza.
+    medikit: Se recuperi PF e consumi un medikit, recuperi 2 PF aggiuntivi.
+    frequency: Al massimo una volta per scena o per sosta nella stessa location.
+  last_breath:
+    id: MR-RULE-006
+    title: Ultimo Respiro
+    trigger: Quando i PF scendono a 0 o meno, fermali a 0 e tira immediatamente 2d6 senza Caratteristica o bonus. Puoi spendere un Punto Fato normalmente per ritirare un dado.
+    results:
+      "12+": "Miracolo. Torni a 1 PF, resti cosciente e puoi ancora agire una volta prima della fine del round."
+      "10-11": "Sopravvivi. Torni a 1 PF, sei incapacitato e non puoi agire finché non ricevi cure o la scena termina."
+      "7-9": "Sopravvivi a 1 PF, ma scegli un prezzo permanente o duraturo tra quelli proposti dal Custode: cicatrice, menomazione, debito, perdita di un ricordo o Legame, condizione grave."
+      "6-": "Muori. La morte può essere evitata soltanto da un effetto esplicitamente dichiarato prima o immediatamente dopo il tiro."
+    no_stabilize_after_failure: Riprendersi non può trasformare un 6- di Ultimo Respiro in sopravvivenza.
+  damage_armor:
+    id: MR-RULE-007
+    title: Danno e Armatura
+    formula: Danno effettivo = massimo 1 tra danno inflitto meno Armatura applicabile, salvo immunità esplicita.
+    types:
+      physical: L'Armatura fisica o mistica protegge.
+      magical: Protegge soltanto l'Armatura mistica.
+      pure: Ignora ogni Armatura.
+    limits:
+      equipment_armor: 3
+      ordinary_total_armor: 4
+      boss_armor: 2
+    stacking: Usa la migliore Armatura pertinente. Un effetto temporaneo può aggiungere al massimo +1, senza superare il limite totale; effetti temporanei uguali non si cumulano.
+  combat_flow:
+    id: MR-RULE-008
+    title: Flusso del combattimento
+    initiative: La fiction stabilisce chi può agire per primo. Se è davvero incerto, un solo Guardiano tira Sfidare il Pericolo +CUO per il gruppo; non si effettua un tiro di iniziativa per ogni personaggio.
+    round: In ogni round ciascun Guardiano può compiere una Azione Principale e un movimento coerente con la fiction. L'ordine dei Guardiani è deciso dal gruppo e può cambiare ogni round.
+    enemies: Il Custode non tira. I nemici agiscono come conseguenza di 7-9 e 6-, quando una minaccia annunciata viene ignorata e alla fine del round per ogni minaccia ancora libera di agire.
+  escalation:
+    id: MR-RULE-009
+    title: Escalation
+    text: L'Escalation accelera gli scontri senza alterare la curva 2d6. Si applica soltanto al danno inflitto dai Guardiani.
+    rounds:
+      "1-2": +0 danno
+      "3": +1 danno
+      "4": +2 danni
+      "5+": +3 danni
+    reset: Torna a 0 quando lo scontro termina o cambia completamente scena.
+  investigation:
+    id: MR-RULE-010
+    title: Investigare
+    trigger: Quando esamini prove, ricostruisci eventi o cerchi una verità nascosta sotto pressione, tira +MEN.
+    guarantee: Se la scena contiene un indizio necessario, lo ottieni sempre. Il tiro stabilisce chiarezza, vantaggi e costo, non se la storia può continuare.
+    results:
+      "10+": Ottieni l'indizio fondamentale e poni due domande dalla lista.
+      "7-9": Ottieni l'indizio fondamentale e poni una domanda; il Custode introduce un costo, un ritardo o un'esposizione.
+      "6-": Ottieni l'indizio fondamentale, ma il Custode compie una mossa dura collegata alla ricerca.
+    no_false_core_clues: Non fornire come verità un falso indizio capace di rendere insolubile il mistero.
+  power_use:
+    id: MR-RULE-011
+    title: Usare Potere
+    trigger: Quando canalizzi un potere che richiede un tiro, paga il costo indicato e tira la Caratteristica specificata dal potere.
+    results:
+      "10+": Il potere produce l'effetto pieno.
+      "7-9": Il potere funziona; scegli o accetta una conseguenza prevista dal potere. In mancanza di opzioni specifiche, il Custode sceglie tra costo +1, effetto ridotto o attenzione indesiderata.
+      "6-": Paghi il costo e il Custode compie una mossa; il potere può fallire, deviare o produrre un effetto instabile coerente con la fiction.
+  stress_corruption:
+    id: MR-RULE-012
+    title: Stress e Corruzione
+    stress:
+      range: 0-10
+      "8-9": I poteri che costano Stress costano 1 Stress aggiuntivo.
+      "10": Il Guardiano è in Burnout. Può usare un potere, ma ne paga il costo raddoppiato e deve Sfidare il Pericolo +FAT; su 6- subisce 1d6 danno puro e il potere non produce l'effetto desiderato.
+    corruption:
+      range: 0-8
+      "6": I poteri Umbra di livello 3 o superiore costano 1 Corruzione aggiuntiva.
+      "7": I poteri Umbra di livello 2 o superiore costano 1 Corruzione aggiuntiva.
+      "8": Trasformazione immediata; il personaggio diventa PNG salvo un effetto esplicitamente capace di impedirlo.
+  mictlan_hp:
+    id: MR-RULE-013
+    title: Punti Ferita Mictlan
+    standard_formula: 20 + (FOR x 2)
+    mictlan_formula: 28 + FOR
+  gm_rolls:
+    id: MR-RULE-014
+    title: Tiri del Custode
+    text: Il Custode non tira per attaccare, difendere o usare capacità. Gli avversari hanno PF, Armatura, danno, tag, impulsi e mosse; le loro azioni entrano in gioco attraverso la fiction e le mosse del Custode.

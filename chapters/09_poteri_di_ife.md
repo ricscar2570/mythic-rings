@@ -1,249 +1,189 @@
 ---
 title: "Poteri di Ife"
 chapter: 9
-part: "Parte III: Le Quattro Casate"
-section: "Le Quattro Casate"
-epigraph: "La vita non ha inizio né fine. Ha solo trasformazioni."
-status: complete
-version: 3.2
+part: "Parte III: I Poteri delle Casate"
+section: "Poteri delle Casate"
+epigraph: "La vita non è docile. Cresce dove trova spazio."
+tags: [ife, poteri]
+status: beta
+version: 0.9.0-beta.1
 ---
 
-## Poteri di Ife: Il Ciclo della Vita
+## Poteri di Ife: il Ciclo della Vita
 
-Vita, natura, trasformazione, equilibrio. Gli Ife sono guaritori del corpo e dell'anima, shapeshifter, custodi del ciclo naturale. I loro poteri curano, trasformano, connettono con il mondo vivente.
+Ife canalizza crescita, guarigione, animali e forza primordiale. I poteri usano normalmente **FAT** e costano **Stress**. Il costo viene pagato prima del tiro. Gli effetti di guarigione non possono creare cicli a guadagno netto; ogni singolo potere può curare lo stesso bersaglio una sola volta per scena, salvo indicazione diversa.
 
-**Risorsa:** Stress (0-10). Come gli Avalon, ma il loro Stress viene dalla connessione con la vita: dare troppo logora. A 10 = Burnout.
-
-**Caratteristica Poteri:** +FAT.
-
-**Temi:** Guarigione organica, trasformazione, natura urbana, sciami, ciclo vita/morte.
-
-## Livello 1: Iniziato
+### Livello 1 — Iniziato
 
 :::box[Tocco Vitale]{type=casata_ife}
-**【 Livello 1 】**
+**Ruolo:** guarigione  
+**Costo:** 1 Stress | **Portata:** Tocco | **Durata:** istantanea | **Tiro:** +FAT
 
-**Costo:** 1 Stress | **Range:** Tocco | **Durata:** Istantaneo | **Tiro:** Usare Potere +FAT
-
-Guarigione rapida base. Funziona anche su animali e piante. Versione "organica" (pelle che ricresce, ossa che si riposizionano visibilmente).
-
-**10+** Recupera 2d6+FAT PF.
-**7-9** Recupera 1d6 PF.
-**6-** Recupera 1d4 PF ma il bersaglio subisce 1 Stress (il processo fa male).
+- **10+:** il bersaglio recupera 1d6 PF oppure rimuove una Condizione fisica lieve.
+- **7–9:** recupera 1d4 PF; scegli se il segno naturale è evidente o subire +1 Stress.
+- **6−:** recupera 1 PF e il Custode compie una Mossa collegata alla ferita.
 :::
 
 :::box[Crescita Rapida]{type=casata_ife}
-**【 Livello 1 】**
+**Ruolo:** controllo e utilità  
+**Costo:** 1 Stress | **Portata:** Vicino | **Durata:** scena | **Tiro:** +FAT
 
-**Costo:** 1 Stress | **Range:** Vicino (raggio 3m) | **Durata:** Istantaneo / Scena | **Tiro:** Usare Potere +FAT
+- **10+:** la vegetazione cresce nella forma desiderata: barriera, presa, ponte o riparo; scegli se è resistente o discreta.
+- **7–9:** l'effetto funziona, ma è temporaneo, impreciso o richiede materiale vegetale abbondante.
+- **6−:** la crescita segue un impulso proprio e il Custode compie una Mossa.
 
-Acceleri la crescita della vegetazione. Piante crescono settimane in secondi. Richiede vegetazione esistente (anche muschio). In deserto/cemento puro: impossibile.
-:::
-
-:::box[Crescita Rapida (segue)]{type=casata_ife}
-**10+** Crescita esplosiva: radici/rovi bloccano area (Sfidare Pericolo +FOR per muoversi), piante obbediscono a semplici comandi per 1 scena.
-**7-9** Crescita base: ostacolo naturale, nessun controllo.
-**6-** Crescita incontrollata: si espande a caso, potrebbe bloccare anche te.
+Senza piante presenti puoi far germogliare semi preparati, ma l'effetto è ridotto.
 :::
 
 :::box[Sensi Animali]{type=casata_ife}
-**【 Livello 1 】**
+**Ruolo:** informazione  
+**Costo:** 1 Stress | **Portata:** Sé | **Durata:** 1 ora | **Tiro:** automatico
 
-**Costo:** 1 Stress | **Range:** Sé | **Durata:** 1 ora | **Tiro:** Automatico
-
-Potenzi un senso a livello animale. Scegli 1:
-
-- **Vista (Aquila):** dettagli a 100m, +2 MEN notare lontano.
-- **Udito (Lupo):** sussurri a 50m, distingui battiti cardiaci.
-- **Olfatto (Orso):** segui tracce 24h, riconosci da odore.
-- **Tatto (Serpente):** percepisci vibrazioni terreno nel Vicino.
+Scegli olfatto, udito, vista notturna o percezione delle vibrazioni. Ottieni una posizione favorevole quando quel senso è direttamente utile, ma acquisisci anche una sensibilità o impulso animale coerente che il Custode può richiamare.
 :::
 
-:::box[Sensi Animali (segue)]{type=casata_ife}
-*Combinare due sensi nella stessa ora richiede 2 Stress. Il senso potenziato può essere sopraffatto da odori/suoni estremi.*
-:::
-
-## Livello 2: Guardiano
+### Livello 2 — Guardiano
 
 :::box[Vigore]{type=casata_ife}
-**【 Livello 2 】**
+**Ruolo:** potenziamento  
+**Costo:** 2 Stress | **Portata:** Tocco | **Durata:** scena | **Tiro:** +FAT
 
-**Costo:** 2 Stress | **Range:** Tocco (te o alleato) | **Durata:** Scena | **Tiro:** Usare Potere +FAT
+- **10+:** il bersaglio ottiene 8 PF temporanei e ignora la prima Condizione di fatica o dolore.
+- **7–9:** ottiene 5 PF temporanei; scegli se al termine subisce 1 Stress o una Condizione di spossatezza.
+- **6−:** ottiene 3 PF temporanei per un round e il Custode compie una Mossa.
 
-Infudi forza animale. **+2 FOR, +2 CUO** (temporanei). Danno corpo-a-corpo +1d4. Salti raddoppiati, velocità ×1.5.
+I PF temporanei non si sommano ad altre fonti dello stesso tipo.
 :::
 
-:::box[Vigore (segue)]{type=casata_ife}
-**10+** Vigore pieno: +2 FOR, +2 CUO, +1d4 danno, nessun effetto collaterale.
-**7-9** Vigore base: +1 FOR, +1 CUO, nessun bonus danno.
-**6-** Vigore selvaggio: +2 FOR ma bersaglio deve Resistere +MEN ogni round o attaccare il bersaglio più vicino.
+:::box[Purga delle Tossine]{type=casata_ife}
+**Ruolo:** guarigione  
+**Costo:** 2 Stress | **Portata:** Tocco | **Durata:** istantanea | **Tiro:** +FAT
 
-*Su alleato combattente = tank temporaneo. Su te stesso = predatore.*
-:::
+- **10+:** rimuovi veleno, malattia comune o una Condizione biologica; apprendi anche la sua origine.
+- **7–9:** la neutralizzi, ma scegli: effetti residui, trasferisci a te una Condizione lieve, oppure +1 Stress.
+- **6−:** ne rallenti l'effetto, ma il Custode compie una Mossa e serve una cura ulteriore.
 
-:::box[Purga Tossine]{type=casata_ife}
-**【 Livello 2 】**
-
-**Costo:** 2 Stress | **Range:** Tocco | **Durata:** Istantaneo | **Tiro:** Usare Potere +FAT
-
-Purifichi il corpo da veleni, malattie, droghe, alcool. Non funziona su maledizioni magiche (serve Avalon L4). Malattie magiche (licantropia): riduce sintomi ma non cura la radice.
-:::
-
-:::box[Purga Tossine (segue)]{type=casata_ife}
-**10+** Purga completa: rimuovi TUTTE le tossine.
-**7-9** Purga parziale: rimuovi 1 tossina, le altre restano.
-**6-** Purga parziale dolorosa: come 7-9 ma bersaglio subisce 1d6 danno dalla "crisi" di purificazione.
-
-*Salva-vita vs veleni letali. Indispensabile nel bestiario di Milano.*
+Maledizioni e malattie soprannaturali richiedono una procedura specifica.
 :::
 
 :::box[Corteccia]{type=casata_ife}
-**【 Livello 2 】**
+**Ruolo:** difesa  
+**Costo:** 2 Stress | **Portata:** Tocco | **Durata:** scena | **Tiro:** +FAT
 
-**Costo:** 2 Stress | **Range:** Tocco (te o alleato) | **Durata:** Scena | **Tiro:** Usare Potere +FAT
+- **10+:** il bersaglio ottiene Armatura fisica 3 e resistenza al calore, freddo o elettricità, scelta all'attivazione.
+- **7–9:** Armatura fisica 2; scegli se il movimento è ridotto o l'aspetto è impossibile da nascondere.
+- **6−:** Armatura fisica 1 per un round e il Custode compie una Mossa.
 
-La pelle indurisce, assume texture di corteccia. **Armatura +3** (cumula). Resistenza elementi: metà danno fuoco/freddo/elettricità. Stabilità: +2 FOR resistere spinte. Malus: Movimento -1, CUO -1, aspetto ovviamente non-umano.
+Usa la migliore Armatura; non si cumula con sé stessa e rispetta il limite totale.
 :::
 
-:::box[Corteccia (segue)]{type=casata_ife}
-**10+** Corteccia densa: Armatura +3, tutte le resistenze.
-**7-9** Corteccia base: Armatura +2, nessuna resistenza agli elementi.
-**6-** Corteccia fragile: Armatura +1, cade al primo danno subito.
-:::
-
-## Livello 3: Veterano
+### Livello 3 — Veterano
 
 :::box[Forma Animale]{type=casata_ife}
-**【 Livello 3 】**
+**Ruolo:** trasformazione e mobilità  
+**Costo:** 3 Stress | **Portata:** Sé | **Durata:** 1 ora | **Tiro:** +FAT
 
-**Costo:** 3 Stress | **Range:** Sé | **Durata:** 1 ora | **Tiro:** Usare Potere +FAT
+Scegli un animale reale di taglia tra gatto e cavallo.
 
-Trasformi in animale a scelta. Mantieni PF, intelligenza, Anello. Equipaggiamento fonde. Comunichi con la specie.
+- **10+:** assumi forma, sensi e movimento; conserva mente e poteri compatibili, e scegli un tratto eccezionale.
+- **7–9:** la forma funziona, ma scegli: durata di 10 minuti, impulso animale difficile da ignorare, oppure equipaggiamento lasciato indietro.
+- **6−:** la trasformazione è incompleta o instabile e il Custode compie una Mossa.
 
-- **Lupo:** veloce ×2, morso 1d8, traccia.
-- **Aquila:** volo, vista +3 MEN, artigli 1d6.
-- **Orso:** FOR +2, 1d10, +5 PF temporanei.
-- **Serpente:** piccolo, silenzioso, morso 1d4 + veleno.
-:::
-
-:::box[Forma Animale (segue)]{type=casata_ife}
-**10+** Trasformazione perfetta: mantieni la forma per 1 ora, cambi a piacere entro la durata.
-**7-9** Trasformazione base: 30 minuti, 1 forma.
-**6-** Trasformazione parziale: forma ibrida (penalità -1 a tutto), 10 minuti.
+**Tratti:** volo, nuoto, olfatto superiore, velocità, armatura naturale 1, attacco 2d6.
 :::
 
 :::box[Rigenerazione]{type=casata_ife}
-**【 Livello 3 】**
+**Ruolo:** guarigione sostenuta  
+**Costo:** 4 Stress | **Portata:** Tocco | **Durata:** fino alla fine della scena | **Tiro:** +FAT | **Limite:** una volta per bersaglio per sessione
 
-**Costo:** 4 Stress | **Range:** Tocco (te o alleato) | **Durata:** 10 minuti | **Tiro:** Usare Potere +FAT
+- **10+:** il bersaglio recupera subito 2d6 PF e altri 1d4 alla fine del prossimo round.
+- **7–9:** recupera 2d6 PF; scegli se la rigenerazione lascia una mutazione temporanea o se subisci +1 Stress.
+- **6−:** recupera 1d6 PF e il Custode compie una Mossa collegata alla crescita incontrollata.
 
-Rigenerazione cellulare accelerata. Inizio di ogni turno il bersaglio recupera **1d6 PF** automaticamente. Ferite si chiudono, ossa si risaldano, sanguinamento si ferma. Non rigenera arti completamente persi (serve Rinascita L4).
-:::
-
-:::box[Rigenerazione (segue)]{type=casata_ife}
-**10+** Rigenerazione potente: 1d6+2 PF/turno, dura 10 minuti.
-**7-9** Rigenerazione base: 1d4 PF/turno, dura 5 minuti.
-**6-** Rigenerazione minima: recupera 1d4 PF totali all'attivazione, poi cessa.
+Non rigenera arti, non interviene sulla morte e non può essere mantenuta per generare recupero indefinito.
 :::
 
 :::box[Sciame]{type=casata_ife}
-**【 Livello 3 】**
+**Ruolo:** evocazione e controllo  
+**Costo:** 3 Stress | **Portata:** Lontano | **Durata:** scena | **Tiro:** +FAT
 
-**Costo:** 3 Stress | **Range:** Medio (raggio Vicino) | **Durata:** Concentrazione (max 10 min) | **Tiro:** Usare Potere +FAT
+- **10+:** richiami uno sciame di animali o insetti; scegli due funzioni: oscurare, inseguire, trattenere, trasportare un piccolo oggetto, infliggere 2d6 danni ad area.
+- **7–9:** scegli una funzione; lo sciame è rumoroso, lascia danni materiali o richiede concentrazione.
+- **6−:** arriva uno sciame con un impulso proprio e il Custode compie una Mossa.
 
-Evochi uno sciame di insetti aggressivi. Oscura visuale (-2 attacco/percezione). **1d4 danno/round** a creature dentro. Immuni ad armi normali. Vulnerabili: fuoco, vento forte, freddo.
+Lo sciame compie una sola azione significativa per round.
 :::
 
-:::box[Sciame (segue)]{type=casata_ife}
-**10+** Sciame denso: -2 visuale, 1d4/round, puoi dirigerlo come azione libera.
-**7-9** Sciame base: -1 visuale, 1d4/round, si muove da solo (verso il nemico più vicino).
-**6-** Sciame incontrollato: attacca tutti (amici inclusi).
-:::
-
-## Livello 4: Maestro
+### Livello 4 — Maestro
 
 :::box[Furia della Terra]{type=casata_ife}
-**【 Livello 4 】**
+**Ruolo:** offensivo ad area  
+**Costo:** 5 Stress | **Portata:** Lontano, area Vicino | **Durata:** istantanea | **Tiro:** +FAT
 
-**Costo:** 5 Stress | **Range:** Lontano (raggio 10m) | **Durata:** Istantaneo | **Tiro:** Usare Potere +FAT
-
-La terra risponde alla tua chiamata. Terremoto localizzato, radici emergenti, terreno rimodellato. Richiede terreno naturale (su asfalto/cemento: -2 al tiro; in edificio: rischio crollo).
-:::
-
-:::box[Furia della Terra (segue)]{type=casata_ife}
-**10+** Furia piena: 3d8 danno + proni + radici bloccano area per 1 round.
-**7-9** Furia base: 2d6 danno + proni.
-**6-** Furia incontrollata: colpisce tutti nell'area (amici inclusi), 2d6.
+- **10+:** radici, pietra e terreno infliggono 3d6 danni fisici e imponi Immobilizzato alle minacce scelte.
+- **7–9:** infliggi 2d8 e scegli: area ridotta, danni materiali estesi, oppure +2 Stress.
+- **6−:** il terreno si spezza senza distinzione e il Custode compie una Mossa.
 :::
 
 :::box[Rinascita]{type=casata_ife}
-**【 Livello 4 】**
+**Ruolo:** riparazione del corpo  
+**Costo:** 6 Stress | **Portata:** Tocco | **Durata:** rituale di 10 minuti | **Tiro:** +FAT
 
-**Costo:** 6 Stress | **Range:** Tocco | **Durata:** Rituale (1 min) | **Tiro:** Usare Potere +FAT
+- **10+:** rigeneri un arto perduto, ripari un organo o rimuovi una menomazione fisica; il bersaglio resta debilitato fino al prossimo Downtime.
+- **7–9:** la guarigione avviene, ma scegli: mutazione visibile, perdita temporanea di una Caratteristica, oppure necessità di un raro componente biologico.
+- **6−:** la crescita è incompleta o pericolosa e il Custode compie una Mossa dura.
 
-Guarigione massima. Recupera **TUTTI i PF**. Rimuovi TUTTE le condizioni. Rigenera 1 arto/organo perso (entro 24h). Rimuovi 1d4 Stress. Non funziona su morti. Maledizioni maggiori: serve Purificazione Suprema (Avalon L4).
-:::
-
-:::box[Rinascita (segue)]{type=casata_ife}
-**10+** Rinascita completa: tutti gli effetti.
-**7-9** Rinascita parziale: tutti i PF + condizioni, ma nessuna rigenerazione arti.
-**6-** Rinascita parziale dolorosa: come 7-9 ma bersaglio subisce 2 Stress aggiuntivi dal processo.
+Non riporta in vita e non cancella un prezzo non fisico di Ultimo Respiro.
 :::
 
 :::box[Predatore]{type=casata_ife}
-**【 Livello 4 】**
+**Ruolo:** trasformazione da combattimento  
+**Costo:** 5 Stress | **Portata:** Sé | **Durata:** 10 minuti | **Tiro:** +FAT
 
-**Costo:** 5 Stress | **Range:** Sé | **Durata:** 10 minuti | **Tiro:** Usare Potere +FAT
+- **10+:** ottieni 10 PF temporanei, Armatura fisica 2, movimento rapido e attacco naturale 2d8; scegli un Dono.
+- **7–9:** ottieni i benefici base ma scegli: 6 PF temporanei, Armatura 1 oppure impulso predatorio difficile da controllare.
+- **6−:** ottieni attacco 2d8 per un round e il Custode compie una Mossa.
 
-Trasformi in predatore apicale (tigre, grizzly, coccodrillo). **+3 FOR, +2 CUO, +10 PF temporanei, Armatura +2**. Attacchi: artigli/morso 2d8, 2 attacchi/turno. Velocità ×2. Presenza terrificante (PNG LS 5- fuggono).
+**Doni:** scalata impossibile, olfatto che segue una traccia senza tiro, presa che impone Immobilizzato, ruggito che disperde minion. Non concede azioni aggiuntive.
 :::
 
-:::box[Predatore (segue)]{type=casata_ife}
-**10+** Predatore perfetto: tutti gli effetti, 10 minuti.
-**7-9** Predatore base: +2 FOR, +1 CUO, 1 attacco 2d8.
-**6-** Predatore frenetico: tutti gli effetti ma devi attaccare ogni round o prendere 1d4 danno da istinto soppresso.
-:::
-
-## Livello 5: Leggenda
+### Livello 5 — Leggenda
 
 :::box[Avatar della Vita]{type=casata_ife}
-**【 Livello 5 】**
+**Ruolo:** trasformazione leggendaria  
+**Costo:** 8 Stress | **Portata:** Sé | **Durata:** 10 minuti | **Tiro:** +FAT | **Limite:** una volta per sessione
 
-**Costo:** 8 Stress | **Range:** Sé | **Durata:** 10 minuti | **Tiro:** Usare Potere +FAT
+- **10+:** ottieni Armatura mistica 3, 15 PF temporanei e scegli due Doni.
+- **7–9:** scegli un Dono e 10 PF temporanei; al termine subisci Burnout o una mutazione duratura.
+- **6−:** scegli un Dono per un round e il Custode compie una Mossa dura.
 
-Trascendi, diventi avatar della forza vitale. Forma ibrida elementale-vegetale (4m, legno vivente, fiori, occhi verdi, radici). **+3 a TUTTE le caratteristiche, +20 PF temporanei, Armatura +4.** Rigenerazione **2d6 PF/turno**. Sciame permanente. Ogni creatura Vicina recupera 1d4 PF/turno (alleati).
-:::
-
-:::box[Avatar della Vita (segue)]{type=casata_ife}
-**10+** Avatar completo: tutti gli effetti.
-**7-9** Avatar ridotto: +2 caratteristiche, +10 PF temp, rigenerazione 1d6/turno.
-**6-** Avatar instabile: funziona ma termina al primo 6-.
+**Doni:** guarire 2d6 PF distribuiti tra alleati una volta; radici 3d8 a Lontano; ignorare una Condizione fisica; far crescere un rifugio o ponte enorme. Nessun effetto cura automaticamente ogni round.
 :::
 
 :::box[Ciclo Eterno]{type=casata_ife}
-**【 Livello 5 】**
+**Ruolo:** ritorno dalla morte  
+**Costo:** 10 Stress e un sacrificio vitale volontario o equivalente | **Portata:** Tocco | **Durata:** rituale di 1 ora | **Tiro:** +FAT
 
-**Costo:** 10 Stress + Sacrificio (creatura vivente) | **Range:** Tocco | **Durata:** Rituale (1 ora) | **Tiro:** Usare Potere +FAT
+Può essere tentato su una persona morta da non più di un giorno.
 
-Riporti un morto alla vita tramite ciclo naturale. Vita per vita. **Requisiti:** corpo intatto (75%), morte entro 7 giorni, sacrificio vivente, location naturale. Il sacrificio muore durante il rituale (consenso necessario per animali senzienti).
-:::
+- **10+:** il corpo rinasce con metà PF e un cambiamento permanente legato alla natura.
+- **7–9:** ritorna a 1 PF, ma vita e morte esigono un debito o una sostituzione concordata.
+- **6−:** nasce qualcosa di diverso o il ciclo reclama un prezzo maggiore; il Custode compie una Mossa di campagna.
 
-:::box[Ciclo Eterno (segue)]{type=casata_ife}
-**10+** Resurrezione completa: il defunto torna con tutti i PF, il sacrificio trasforma in pianta (non scompare).
-**7-9** Resurrezione parziale: il defunto torna con metà PF, -1 caratteristica permanente.
-**6-** Il sacrificio muore, il defunto non torna.
+Un personaggio può beneficiare di questo potere una sola volta, salvo decisione esplicita della campagna.
 :::
 
 :::box[Furia Primordiale]{type=casata_ife}
-**【 Livello 5 】**
+**Ruolo:** cataclisma  
+**Costo:** porta lo Stress a 10 | **Portata:** Vista, area di cinquanta metri | **Durata:** istantanea e conseguenze persistenti | **Tiro:** +FAT | **Limite:** una volta per arco narrativo
 
-**Costo:** 10 Stress (TUTTO rimanente, min 10) | **Range:** Vista (raggio 50m) | **Durata:** Istantaneo + 10 min tempesta | **Tiro:** Usare Potere +FAT
+- **10+:** scegli tre: terremoto controllato, tempesta, crescita che intrappola un esercito, guarigione del territorio, apertura di una via. Le persone scelte possono essere risparmiate.
+- **7–9:** scegli due e accetta un danno collaterale o un cambiamento permanente del luogo.
+- **6−:** la natura riprende ciò che considera suo; il Custode compie una Mossa di campagna.
 
-Scateni l'ira della natura. Terremoto + tempesta + crescita esplosiva. **4d6 danno a tutti** + proni. Foresta istantanea (blocca il raggio). Fulmini casuali (1d4 bersagli, 3d8 elettrico, 1/round per 10 min). Radici bloccano tutti per 1 round.
+Il potere cambia la situazione, non sostituisce automaticamente la conclusione narrativa di una minaccia leggendaria.
 :::
 
-:::box[Furia Primordiale (segue)]{type=casata_ife}
-**10+** Furia piena: tutti gli effetti, alleati immuni al danno iniziale.
-**7-9** Furia base: 4d6 a tutti (amici inclusi), nessuna tempesta persistente.
-**6-** Furia incontrollata: come 7-9 + il Custode sceglie 1 conseguenza catastrofica.
+:::box[Principio di Ife]{type=tip}
+Ife non è soltanto guarigione: crea terreno, corpi e alleanze viventi. La vita è potente perché cresce, ma ogni crescita incontrollata occupa spazio e pretende equilibrio.
 :::

@@ -1,0 +1,30 @@
+name: Anomalia o proposta di regola
+description: Segnala una contraddizione, un caso limite o un problema di bilanciamento.
+title: "[RULES] "
+labels: [rules]
+body:
+  - type: textarea
+    attributes:
+      label: Regola interessata
+      description: Indica capitolo, sezione e formulazione attuale.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Problema osservato
+      description: Descrivi cosa accade al tavolo e perché è ambiguo o dannoso.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Riproduzione
+      description: Fornisci personaggi, valori, tiro e sequenza degli eventi.
+  - type: dropdown
+    attributes:
+      label: Gravità
+      options: [S1 - blocca la sessione, S2 - interpretazioni incompatibili, S3 - attrito, S4 - minore]
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Proposta o dati di playtest

@@ -5,8 +5,8 @@ part: "Parte IV: Milano Mitica"
 section: "Milano Mitica"
 epigraph: "Milano è costruita sopra se stessa. Strato su strato, segreto su segreto."
 tags: []
-status: finale
-version: 3.2
+status: beta
+version: 0.9.0-beta.1
 ---
 
 ## La Milano Sotterranea
