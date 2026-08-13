@@ -1,0 +1,111 @@
+schema_version: 1
+canon_version: "0.9.0-beta.2/G1"
+policy:
+  line_effect_model: "fiction_position_effect"
+  numeric_roll_modifiers: false
+  statement: >-
+    Linee Ley e Nexus modificano accesso, posizione, effetto, scala, informazione,
+    segnale o rischio fictionale. Non concedono bonus/malus numerici generici ai tiri,
+    alla cura, all'Armatura, allo Stress o alla Corruzione.
+central_nexus:
+  id: MR-LOC-001
+  name: "Nexus del Duomo"
+  location: "sotto Piazza Duomo"
+  lines: [MR-LEY-001, MR-LEY-002, MR-LEY-003, MR-LEY-004, MR-LEY-005]
+  function: "convergenza delle cinque Linee, sede rituale e territorio neutrale"
+  steward: "Cerchia degli Anziani; accesso materiale affidato a Don Aurelio Marchetti"
+  risk: "un sovraccarico o una corruzione può propagarsi lungo tutte le Linee"
+  benefit: "rende possibili rituali e fenomeni di scala altrimenti irraggiungibile"
+  sensory_signal: "pressione nelle orecchie, pelle elettrica, echi sovrapposti delle quattro stirpi"
+lines:
+  - id: MR-LEY-001
+    name: "Linea dell'Alba"
+    direction: "nord-est"
+    route: ["Sesto San Giovanni", "Loreto", "Porta Venezia", "San Babila", "Duomo"]
+    affinity: "Avalon"
+    energy: ["luce", "ordine", "verità", "protezione"]
+    fictional_effect: >-
+      La luce soprannaturale lascia tracce più leggibili; protezioni e rivelazioni
+      possono avere portata o durata fictionale maggiore quando la scena lo giustifica.
+    corruption_signs: ["abbagliamento innaturale", "riflessi senza fonte", "compulsione alla confessione"]
+  - id: MR-LEY-002
+    name: "Linea dell'Ombra"
+    direction: "sud-ovest"
+    route: ["Navigli", "Darsena", "Porta Ticinese", "Colonne di San Lorenzo", "Duomo"]
+    affinity: "Umbra"
+    energy: ["ombra", "segreto", "passaggio", "ambiguità"]
+    fictional_effect: >-
+      Ombre, riflessi e percorsi secondari offrono copertura o accessi che altrove
+      richiederebbero preparazione; non rendono automaticamente più alto un tiro.
+    corruption_signs: ["ombre in ritardo", "riflessi discordanti", "voci trasportate dall'acqua"]
+  - id: MR-LEY-003
+    name: "Linea della Vita"
+    direction: "nord-ovest"
+    route: ["Parco Sempione", "Castello Sforzesco", "Cairoli", "Duomo"]
+    affinity: "Ife"
+    energy: ["vita", "crescita", "relazione", "rigenerazione"]
+    fictional_effect: >-
+      Reti viventi e vegetazione possono sostenere comunicazione, tracciamento,
+      rituali o trasformazioni su scala altrimenti non disponibile.
+    corruption_signs: ["crescita fuori stagione", "radici invasive", "fauna irrequieta"]
+  - id: MR-LEY-004
+    name: "Linea dei Morti"
+    direction: "nord"
+    route: ["Cimitero Monumentale", "Porta Garibaldi", "Brera", "Duomo"]
+    affinity: "Mictlan"
+    energy: ["morte", "memoria", "soglia", "transizione"]
+    fictional_effect: >-
+      Presenze e memorie dei morti sono più facili da localizzare o contattare quando
+      esiste già un legame plausibile; la Linea non annulla costi o tiri delle mosse.
+    corruption_signs: ["condensa fredda", "nomi sussurrati", "orologi che perdono minuti"]
+  - id: MR-LEY-005
+    name: "Linea del Fato"
+    direction: "sud-est"
+    route: ["Porta Romana", "Crocetta", "Duomo"]
+    affinity: null
+    energy: ["caso", "scelta", "coincidenza", "possibilità"]
+    fictional_effect: >-
+      Coincidenze significative possono rendere visibile una scelta, un presagio o
+      un percorso; non modificano direttamente probabilità o risultati dei dadi.
+    corruption_signs: ["ripetizioni improbabili", "incontri sincronici", "sequenze causali impossibili"]
+secondary_nexus:
+  - id: MR-LOC-002
+    name: "Giardini di Porta Venezia"
+    line: MR-LEY-001
+    function: "nodo di rivelazione e sorveglianza del margine nord-est"
+    steward: "cellula mista di Porta Venezia, incarico a rotazione"
+    risk: "sovraesposizione: persone e cose nascoste diventano troppo facili da notare"
+    benefit: "può rendere visibile una traccia soprannaturale già presente nella scena"
+    sensory_signal: "riflessi dorati sulle foglie anche senza luce diretta"
+  - id: MR-LOC-003
+    name: "Darsena"
+    line: MR-LEY-002
+    function: "nodo di ascolto, transito e scambio di informazioni"
+    steward: "cellula Umbra dei Navigli in accordo con i mediatori del Mercato Notturno"
+    risk: "segreti e sussurri possono viaggiare in entrambe le direzioni"
+    benefit: "l'acqua può fornire una pista o un contatto che richiede poi azione nella fiction"
+    sensory_signal: "voci spezzate nel rumore dell'acqua e riflessi che non seguono il cielo"
+  - id: MR-LOC-004
+    name: "Castello Sforzesco e Parco Sempione"
+    line: MR-LEY-003
+    function: "nodo di memoria vivente e crescita"
+    steward: "rete Ife locale; Nonna Rosa è la referente più anziana"
+    risk: "la crescita può difendere il luogo anche contro chi ritiene invasore"
+    benefit: "la rete vegetale può aprire un accesso, ricordare un passaggio o sostenere un rituale"
+    sensory_signal: "radici che vibrano al tatto e foglie che reagiscono a nomi pronunciati"
+  - id: MR-LOC-005
+    name: "Cimitero Monumentale"
+    line: MR-LEY-004
+    function: "nodo di memoria dei morti e transizione"
+    steward: "Guardiano Anselmo e la rete Mictlan del Monumentale"
+    risk: "spiriti estranei possono rispondere insieme a quello cercato"
+    benefit: "un contatto con un defunto milanese può diventare possibile nella fiction quando esiste una traccia adeguata"
+    sensory_signal: "nebbia localizzata, pietra fredda, nomi sussurrati da direzioni sbagliate"
+  - id: MR-LOC-006
+    name: "Porta Romana e Crocetta"
+    line: MR-LEY-005
+    function: "nodo di coincidenze e biforcazioni"
+    steward: "incarico mensile a rotazione tra le quattro Casate"
+    risk: "ogni coincidenza utile può crearne una seconda non controllata"
+    benefit: "può rendere evidente una scelta o collegare due piste già presenti"
+    sensory_signal: "orologi sincronizzati, numeri ripetuti, incontri improbabili nella stessa ora"

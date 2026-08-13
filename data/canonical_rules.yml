@@ -1,61 +1,72 @@
-schema_version: 1
-product_version: 0.9.0-beta.1
+schema_version: 2
+product_version: 0.9.0-beta.2
 rules:
   core_roll:
     id: MR-RULE-001
     title: Tiro base
-    text: Tira 2d6, somma la Caratteristica indicata e gli eventuali modificatori ammessi. Con 10+ ottieni un successo pieno; con 7-9 ottieni un successo con costo, scelta o complicazione; con 6- il Custode compie una mossa coerente con la fiction.
-    natural_12: Scegli un beneficio aggiuntivo appropriato alla mossa; in un attacco puoi scegliere +1d6 danno invece del beneficio ordinario.
-    natural_2: Conta sempre come 6-; il Custode può compiere una mossa dura, ma non introduce conseguenze scollegate dalla fiction.
+    text: Tira 2d6, somma la Caratteristica indicata e gli eventuali modificatori ammessi. Con 10+ ottieni un successo pieno;
+      con 7-9 ottieni un successo con costo, scelta o complicazione; con 6- il Custode compie una mossa coerente con la fiction.
+    natural_12: Scegli un beneficio aggiuntivo appropriato alla mossa; in un attacco puoi scegliere +1d6 danno invece del
+      beneficio ordinario.
+    natural_2: Conta sempre come 6-; il Custode può compiere una mossa dura, ma non introduce conseguenze scollegate dalla
+      fiction.
   modifiers:
     id: MR-RULE-002
     title: Limite dei modificatori
-    text: Il modificatore totale al tiro, Caratteristica inclusa, non può superare +4 né scendere sotto -3. Se ulteriori vantaggi o svantaggi sarebbero rilevanti, cambiano la posizione narrativa, il costo o l'effetto invece del numero.
+    text: Il modificatore totale al tiro, Caratteristica inclusa, non può superare +4 né scendere sotto -3. Se ulteriori vantaggi
+      o svantaggi sarebbero rilevanti, cambiano la posizione narrativa, il costo o l'effetto invece del numero.
     stacking:
-      - Applica al massimo un bonus da Legame.
-      - Applica al massimo un bonus da Aiutare.
-      - Bonus provenienti dalla stessa fonte non si cumulano.
-      - L'Escalation non modifica mai il tiro.
+    - Applica al massimo un bonus da Legame.
+    - Applica al massimo un bonus da Aiutare.
+    - Bonus provenienti dalla stessa fonte non si cumulano.
+    - L'Escalation non modifica mai il tiro.
   fate_points:
     id: MR-RULE-003
     title: Punti Fato
     start: 2
     maximum: 2
     refresh: All'inizio di ogni sessione; i Punti Fato non si conservano.
-    spend: Dopo avere visto un tiro e prima che le conseguenze siano applicate, spendi 1 Punto Fato per ritirare un solo d6. Il nuovo risultato sostituisce il dado scelto anche se peggiore.
+    spend: Dopo avere visto un tiro e prima che le conseguenze siano applicate, spendi 1 Punto Fato per ritirare un solo d6.
+      Il nuovo risultato sostituisce il dado scelto anche se peggiore.
     restrictions:
-      - Non si guadagnano Punti Fato durante la sessione, salvo un effetto che lo dichiari esplicitamente.
-      - Un Punto Fato non concede un'azione aggiuntiva.
-      - Un Punto Fato non annulla automaticamente danno, morte o conseguenze.
+    - Non si guadagnano Punti Fato durante la sessione, salvo un effetto che lo dichiari esplicitamente.
+    - Un Punto Fato non concede un'azione aggiuntiva.
+    - Un Punto Fato non annulla automaticamente danno, morte o conseguenze.
   bonds:
     id: MR-RULE-004
     title: Legami
     levels:
       1: Il Legame concede +1 quando il suo Tipo e la persona legata sono direttamente coinvolti.
       2: Il bonus diventa +2.
-      3: Il bonus resta +2 e si sblocca la capacità speciale del Tipo, oltre a una risorsa morale utilizzabile una volta per sessione.
-    application: Un solo Legame può modificare lo stesso tiro. Il coinvolgimento deve essere diretto, emotivamente significativo e coerente con il Tipo del Legame.
-    breaking: Quando un Legame viene spezzato da morte, tradimento o separazione definitiva, il suo livello scende a 0 e il Guardiano subisce 2 Stress.
+      3: Il bonus resta +2 e si sblocca la capacità speciale del Tipo, oltre a una risorsa morale utilizzabile una volta per
+        sessione.
+    application: Un solo Legame può modificare lo stesso tiro. Il coinvolgimento deve essere diretto, emotivamente significativo
+      e coerente con il Tipo del Legame.
+    breaking: Quando un Legame viene spezzato da morte, tradimento o separazione definitiva, il suo livello scende a 0 e il
+      Guardiano subisce 2 Stress.
   recover:
     id: MR-RULE-005
     title: Riprendersi
     trigger: Quando trascorri almeno 10 minuti ininterrotti in un luogo relativamente sicuro per curarti e ricomporti.
     roll: Tira +FOR. Un Confidente L2+ che ti assiste attivamente concede +1, una sola volta per sessione per quel Legame.
     results:
-      "10+": Recuperi 1d6 PF e riduci lo Stress di 1.
-      "7-9": Scegli se recuperare 1d4 PF oppure ridurre lo Stress di 1.
-      "6-": Non recuperi; il Custode compie una mossa morbida che mostra un pericolo, un costo o un'urgenza.
+      10+: Recuperi 1d6 PF e recuperi 1 Stress.
+      7-9: Scegli se recuperare 1d4 PF oppure recuperare 1 Stress.
+      6-: Non recuperi; il Custode compie una mossa morbida che mostra un pericolo, un costo o un'urgenza.
     medikit: Se recuperi PF e consumi un medikit, recuperi 2 PF aggiuntivi.
     frequency: Al massimo una volta per scena o per sosta nella stessa location.
   last_breath:
     id: MR-RULE-006
     title: Ultimo Respiro
-    trigger: Quando i PF scendono a 0 o meno, fermali a 0 e tira immediatamente 2d6 senza Caratteristica o bonus. Puoi spendere un Punto Fato normalmente per ritirare un dado.
+    trigger: Quando i PF scendono a 0 o meno, fermali a 0 e tira immediatamente 2d6 senza Caratteristica o bonus. Puoi spendere
+      un Punto Fato normalmente per ritirare un dado.
     results:
-      "12+": "Miracolo. Torni a 1 PF, resti cosciente e puoi ancora agire una volta prima della fine del round."
-      "10-11": "Sopravvivi. Torni a 1 PF, sei incapacitato e non puoi agire finché non ricevi cure o la scena termina."
-      "7-9": "Sopravvivi a 1 PF, ma scegli un prezzo permanente o duraturo tra quelli proposti dal Custode: cicatrice, menomazione, debito, perdita di un ricordo o Legame, condizione grave."
-      "6-": "Muori. La morte può essere evitata soltanto da un effetto esplicitamente dichiarato prima o immediatamente dopo il tiro."
+      12+: Miracolo. Torni a 1 PF, resti cosciente e puoi ancora agire una volta prima della fine del round.
+      10-11: Sopravvivi. Torni a 1 PF, sei incapacitato e non puoi agire finché non ricevi cure o la scena termina.
+      7-9: 'Sopravvivi a 1 PF, ma scegli un prezzo permanente o duraturo tra quelli proposti dal Custode: cicatrice, menomazione,
+        debito, perdita di un ricordo o Legame, condizione grave.'
+      6-: Muori. La morte può essere evitata soltanto da un effetto esplicitamente dichiarato prima o immediatamente dopo
+        il tiro.
     no_stabilize_after_failure: Riprendersi non può trasformare un 6- di Ultimo Respiro in sopravvivenza.
   damage_armor:
     id: MR-RULE-007
@@ -69,59 +80,215 @@ rules:
       equipment_armor: 3
       ordinary_total_armor: 4
       boss_armor: 2
-    stacking: Usa la migliore Armatura pertinente. Un effetto temporaneo può aggiungere al massimo +1, senza superare il limite totale; effetti temporanei uguali non si cumulano.
+    stacking: Usa la migliore Armatura pertinente. Un effetto temporaneo può aggiungere al massimo +1, senza superare il limite
+      totale; effetti temporanei uguali non si cumulano.
   combat_flow:
     id: MR-RULE-008
     title: Flusso del combattimento
-    initiative: La fiction stabilisce chi può agire per primo. Se è davvero incerto, un solo Guardiano tira Sfidare il Pericolo +CUO per il gruppo; non si effettua un tiro di iniziativa per ogni personaggio.
-    round: In ogni round ciascun Guardiano può compiere una Azione Principale e un movimento coerente con la fiction. L'ordine dei Guardiani è deciso dal gruppo e può cambiare ogni round.
-    enemies: Il Custode non tira. I nemici agiscono come conseguenza di 7-9 e 6-, quando una minaccia annunciata viene ignorata e alla fine del round per ogni minaccia ancora libera di agire.
+    initiative: La fiction stabilisce chi può agire per primo. Se è davvero incerto, un solo Guardiano tira Sfidare il Pericolo
+      +CUO per il gruppo; non si effettua un tiro di iniziativa per ogni personaggio.
+    round: In ogni round ciascun Guardiano può compiere una Azione Principale e un movimento coerente con la fiction. L'ordine
+      dei Guardiani è deciso dal gruppo e può cambiare ogni round.
+    threat_unit: Una minaccia singola oppure un gruppo di minion gestito come unità possiede di norma un solo budget di Azione
+      Significativa per round. Lo stat block può dichiarare esplicitamente una eccezione.
+    significant_action: Infliggere il danno pieno dello stat block, imporre una Condizione, spostare forzatamente un bersaglio,
+      impadronirsi di un obiettivo o attivare una Mossa offensiva nominata spende il budget di Azione Significativa della minaccia.
+      Una reazione puramente difensiva, un telegraph, un riposizionamento senza conseguenza oppure una rivelazione fictionale non lo spende.
+    enemies: Il Custode non tira. Una minaccia può spendere il proprio budget come conseguenza di 7-9 o 6-, quando una minaccia
+      annunciata viene ignorata oppure alla fine del round. Alla fine del round agiscono soltanto le minacce significative che
+      non hanno già speso il budget. Se una conseguenza successiva coinvolge una minaccia che ha già agito, il Custode usa
+      pressione, posizione, clock o nuove minacce senza concederle una seconda Azione Significativa.
+    reset: Alla chiusura del round, dopo le azioni delle minacce ancora libere, tutti i budget si ripristinano per il round successivo.
   escalation:
     id: MR-RULE-009
     title: Escalation
     text: L'Escalation accelera gli scontri senza alterare la curva 2d6. Si applica soltanto al danno inflitto dai Guardiani.
     rounds:
-      "1-2": +0 danno
-      "3": +1 danno
-      "4": +2 danni
-      "5+": +3 danni
+      1-2: +0 danno
+      '3': +1 danno
+      '4': +2 danni
+      5+: +3 danni
+    application: Il bonus si applica al massimo una volta per Azione Principale del Guardiano che infligge danno. Non si moltiplica
+      per numero di colpi o bersagli. Se l'Azione Principale danneggia più bersagli o produce più istanze di danno, il giocatore
+      sceglie una sola istanza o un solo bersaglio a cui aggiungere il bonus.
+    exclusions: Attacchi bonus, reazioni, danni persistenti nei round successivi e azioni autonome di evocazioni non ricevono
+      Escalation se non consumano l'Azione Principale del Guardiano. Se l'Azione Principale viene spesa per comandare direttamente
+      una evocazione ad attaccare, il bonus può applicarsi una sola volta a un suo bersaglio.
     reset: Torna a 0 quando lo scontro termina o cambia completamente scena.
   investigation:
     id: MR-RULE-010
     title: Investigare
     trigger: Quando esamini prove, ricostruisci eventi o cerchi una verità nascosta sotto pressione, tira +MEN.
-    guarantee: Se la scena contiene un indizio necessario, lo ottieni sempre. Il tiro stabilisce chiarezza, vantaggi e costo, non se la storia può continuare.
+    guarantee: Se la scena contiene un indizio necessario, lo ottieni sempre. Il tiro stabilisce chiarezza, vantaggi e costo,
+      non se la storia può continuare.
     results:
-      "10+": Ottieni l'indizio fondamentale e poni due domande dalla lista.
-      "7-9": Ottieni l'indizio fondamentale e poni una domanda; il Custode introduce un costo, un ritardo o un'esposizione.
-      "6-": Ottieni l'indizio fondamentale, ma il Custode compie una mossa dura collegata alla ricerca.
+      10+: Ottieni l'indizio fondamentale e poni due domande dalla lista.
+      7-9: Ottieni l'indizio fondamentale e poni una domanda; il Custode introduce un costo, un ritardo o un'esposizione.
+      6-: Ottieni l'indizio fondamentale, ma il Custode compie una mossa dura collegata alla ricerca.
     no_false_core_clues: Non fornire come verità un falso indizio capace di rendere insolubile il mistero.
   power_use:
     id: MR-RULE-011
     title: Usare Potere
-    trigger: Quando canalizzi un potere che richiede un tiro, paga il costo indicato e tira la Caratteristica specificata dal potere.
+    trigger: Quando canalizzi un potere che richiede un tiro, paga il costo indicato e tira la Caratteristica specificata
+      dal potere.
     results:
-      "10+": Il potere produce l'effetto pieno.
-      "7-9": Il potere funziona; scegli o accetta una conseguenza prevista dal potere. In mancanza di opzioni specifiche, il Custode sceglie tra costo +1, effetto ridotto o attenzione indesiderata.
-      "6-": Paghi il costo e il Custode compie una mossa; il potere può fallire, deviare o produrre un effetto instabile coerente con la fiction.
+      10+: Il potere produce l'effetto pieno.
+      7-9: Il potere funziona; scegli o accetta una conseguenza prevista dal potere. In mancanza di opzioni specifiche, il
+        Custode sceglie tra costo +1, effetto ridotto o attenzione indesiderata.
+      6-: Paghi il costo e il Custode compie una mossa; il potere può fallire, deviare o produrre un effetto instabile coerente
+        con la fiction.
   stress_corruption:
     id: MR-RULE-012
     title: Stress e Corruzione
+    terminology:
+      suffer_stress: Subire X Stress significa aumentare il valore di Stress di X, fino a un massimo di 10.
+      recover_stress: Recuperare X Stress significa ridurre il valore di Stress di X, fino a un minimo di 0.
+      spend_hp: Spendere X PF significa pagare volontariamente un costo in PF; non è danno e l'Armatura non lo riduce.
+      suffer_damage: Subire danno segue MR-RULE-007 e applica l'Armatura pertinente, salvo danno puro.
+      lose_hp: Perdere PF è una perdita diretta esplicitamente definita dalla regola che la causa; non è automaticamente né spesa né danno.
     stress:
       range: 0-10
-      "8-9": I poteri che costano Stress costano 1 Stress aggiuntivo.
-      "10": Il Guardiano è in Burnout. Può usare un potere, ma ne paga il costo raddoppiato e deve Sfidare il Pericolo +FAT; su 6- subisce 1d6 danno puro e il potere non produce l'effetto desiderato.
+      8-9: I poteri che costano Stress costano 1 Stress aggiuntivo.
+      payment: Calcola il costo finale prima di pagarlo. Aumenta lo Stress fino a 10. Ogni punto del costo che eccederebbe 10 è sovraccarico di Burnout e fa perdere 2 PF, ignorando Armatura; questa perdita non è danno e non può essere ridotta o trasferita.
+      burnout: Se almeno 1 punto del costo va in sovraccarico, prima del tiro del potere devi Sfidare il Pericolo +FAT. Su 10+ procedi. Su 7-9 procedi ma il Custode dichiara un costo, una posizione peggiore o una esposizione immediata che non può essere ulteriore Stress. Su 6- subisci 1d6 danni puri e il potere non produce l'effetto desiderato; il costo già pagato resta pagato.
+      set_to_ten_cost: Un costo scritto come 'porta lo Stress a 10' aumenta lo Stress fino a 10. Se sei già a 10, conta come 1 punto di Stress in sovraccarico per attivare il Burnout.
     corruption:
       range: 0-8
-      "6": I poteri Umbra di livello 3 o superiore costano 1 Corruzione aggiuntiva.
-      "7": I poteri Umbra di livello 2 o superiore costano 1 Corruzione aggiuntiva.
-      "8": Trasformazione immediata; il personaggio diventa PNG salvo un effetto esplicitamente capace di impedirlo.
+      '6': I poteri Umbra di livello 3 o superiore costano 1 Corruzione aggiuntiva.
+      '7': I poteri Umbra di livello 2 o superiore costano 1 Corruzione aggiuntiva.
+      '8': Trasformazione immediata; il personaggio diventa PNG salvo un effetto esplicitamente capace di impedirlo.
   mictlan_hp:
     id: MR-RULE-013
     title: Punti Ferita Mictlan
     standard_formula: 20 + (FOR x 2)
     mictlan_formula: 28 + FOR
+    sangue_tenace:
+      frequency: Una volta per scena.
+      timing: Dopo avere calcolato il costo finale in PF di un potere e prima di spenderlo. Armatura, resistenze al danno e immunità non modificano un costo in PF; eventuali effetti che riducono esplicitamente il costo del potere si applicano prima di Sangue Tenace.
+      trigger: Il pagamento integrale del costo finale lascerebbe il Guardiano sotto il 40% dei PF massimi. Essere esattamente al 40% non basta.
+      eligibility: Il costo finale deve essere almeno 2 PF e il Guardiano deve poter subire interamente 2 Stress, quindi partire da Stress 0-8.
+      converted_amount: Converti un numero di PF pari a floor(costo_finale / 2), minimo 1 ma mai più di costo_finale - 1. Con costo 1 non esiste una quantità convertibile e Sangue Tenace non si attiva.
+      payment: Spendi i PF residui e subisci 2 Stress. I PF convertiti non sono danno né perdita diretta; il prezzo Corpo della Risonanza e altre perdite che vietano la conversione non sono eleggibili.
   gm_rolls:
     id: MR-RULE-014
     title: Tiri del Custode
-    text: Il Custode non tira per attaccare, difendere o usare capacità. Gli avversari hanno PF, Armatura, danno, tag, impulsi e mosse; le loro azioni entrano in gioco attraverso la fiction e le mosse del Custode.
+    text: Il Custode non tira per attaccare, difendere o usare capacità. Gli avversari hanno PF, Armatura, danno, tag, impulsi
+      e mosse; le loro azioni entrano in gioco attraverso la fiction e le mosse del Custode.
+  ring_resonance:
+    id: MR-RULE-015
+    title: Risonanza dell'Anello
+    trigger: Dopo avere risolto eventuali Punti Fato, quando il risultato finale di Usare Potere oppure di una Mossa Esclusiva
+      di Casata che richiede un tiro è 6- oppure 7-9, prima che il Custode applichi conseguenze.
+    frequency: Una volta per scena per Guardiano.
+    scene_boundary: Una scena è una unità continua di luogo, tempo e obiettivo immediato. Non si resetta per un nuovo round,
+      un breve riposo, uno spostamento tattico o il passaggio in un ambiente adiacente mentre il conflitto o l'obiettivo restano
+      gli stessi. Il Custode chiarisce il cambio di scena prima del tiro successivo quando esiste un dubbio reale.
+    effect: 'Migliora il risultato di una fascia: 6- diventa 7-9; 7-9 diventa 10+. Il costo base del potere già pagato resta
+      pagato. Il 2 naturale non può essere migliorato.'
+    consequence_replacement: Quando la Risonanza viene accettata, l'esito originale è sostituito dall'esito migliorato. Non si applica anche la conseguenza propria della fascia originale; dopo l'esito migliorato si applica soltanto il prezzo di Risonanza accettato, oltre al costo base già pagato.
+    exclusions:
+    - Non modifica Ultimo Respiro.
+    - Non si applica a tiri mondani, downtime o poteri senza tiro.
+    - Dopo avere accettato la Risonanza non si può usare Fato sullo stesso tiro.
+    price_procedure: Il Custode offre due prezzi concreti appartenenti a categorie diverse. Il giocatore ne accetta uno oppure
+      rinuncia alla Risonanza e mantiene il risultato originale. Se il Custode non può formulare due prezzi realmente validi,
+      la procedura non parte e l'uso della Risonanza resta disponibile. Quando due prezzi validi sono stati dichiarati per
+      intero, l'opportunità di Risonanza della scena è spesa anche se il giocatore li rifiuta. Il prezzo accettato si applica
+      subito dopo l'effetto migliorato, prima di una nuova azione.
+    prices:
+      body: 'Corpo: perdi 4 PF ignorando l’Armatura. Questa perdita non può essere ridotta, convertita o trasferita; se porta
+        a 0 PF, attiva Ultimo Respiro dopo avere risolto l’effetto migliorato.'
+      soul: 'Anima: ricevi una Condizione dell''Anello, con limite concreto e via di risoluzione dichiarati dal Custode e
+        collegati all''impulso dell''Anello della tua Casata. Non scompare con Riprendersi, Recuperare, cure o con il semplice
+        trascorrere del tempo. Si rimuove alla fine di una scena significativa che soddisfa davvero la via dichiarata; nel
+        downtime segue la procedura del Capitolo 23.'
+      bond: 'Legame: il Custode nomina un Legame esistente e dichiara una conseguenza concreta su fiducia, sicurezza, promessa,
+        debito o esposizione. Non riduce automaticamente il Livello del Legame senza una rottura giustificata dalla fiction.'
+      world: 'Mondo: il Velo Tracker avanza di 1 e resta una prova o traccia soprannaturale reale che richiede un’azione
+        concreta per essere contenuta.'
+    eligibility: 'Sono eleggibili soltanto Usare Potere e le Mosse Esclusive di Casata che richiedono un tiro. Non basta che
+      un’azione sia soprannaturale nella fiction: se non appartiene a una di queste due categorie, la Risonanza non si applica.'
+    price_validity:
+      general: 'I due prezzi devono essere entrambi realmente applicabili, differenti e non possono fingere come nuovo prezzo
+        una conseguenza già interamente pagata per lo stesso tiro. Possono colpire la stessa risorsa già usata dal costo base
+        soltanto se aggiungono davvero il proprio effetto canonico: per esempio un Mictlan può pagare il costo in PF del potere
+        e poi perdere altri 4 PF scegliendo Corpo.'
+      body: Corpo è valido finché il Guardiano è vivo; può portarlo a 0 PF e quindi a Ultimo Respiro.
+      soul: Anima è valido soltanto se il Custode può dichiarare una Condizione nuova o significativamente diversa, il suo
+        limite concreto e una via di risoluzione giocabile che il Guardiano possa realisticamente perseguire.
+      bond: Legame è valido soltanto se esiste un Legame L1+ che la conseguenza può raggiungere in modo credibile; non si
+        sceglie un rapporto arbitrario estraneo alla scena o alle sue conseguenze.
+      world: Mondo è valido finché il Velo Tracker può avanzare. A Velo 12 non può essere offerto, salvo che la campagna abbia
+        già stabilito una procedura esplicita oltre la Rivelazione.
+    natural_two_timing: Il 2 naturale si valuta sui due dadi finali dopo eventuali ritiri di Fato. Se Fato sostituisce uno
+      dei due 1, il risultato non è più un 2 naturale; se i due dadi finali sono ancora 1 e 1, Risonanza non può migliorarlo.
+  ring_anchor:
+    id: MR-RULE-016
+    title: Ancora dell'Anello
+    creation: Alla creazione, designa come Ancora uno dei tuoi Legami di Livello 1 o superiore. È la relazione che ti ricorda
+      chi sei al di fuori del potere dell’Anello.
+    grounding: 'Una volta per sessione, quando l’Ancora è direttamente presente o in contatto significativo nella scena e
+      il Custode offre Anima come prezzo di Risonanza, puoi chiedere di sostituirlo con un prezzo Legame che coinvolga l’Ancora.
+      Il Custode deve dichiarare il nuovo prezzo prima che tu scelga se accettarlo. Se l’altro prezzo era già Legame, questa
+      sostituzione è un’eccezione al requisito di categorie differenti: i due prezzi devono però descrivere conseguenze materialmente
+      diverse.'
+    breaking: Se il Legame-Ancora scende a Livello 0 o viene spezzato, non possiedi un’Ancora finché una scena significativa
+      non designa un altro Legame L1+; non si sceglie una nuova Ancora nel mezzo di una risoluzione.
+
+  ring_bond_states:
+    id: MR-RULE-017
+    title: Stati del legame con l'Anello e Rinuncia
+    states:
+      removed:
+        name: Anello tolto
+        rule: >-
+          Il Guardiano non indossa l'Anello ma lo possiede o ne mantiene il controllo. Il legame resta integro; poteri,
+          Risonanza e Ancora funzionano normalmente. Togliere l'Anello non è Rinuncia e non applica penalità numeriche.
+      temporary_separation:
+        name: Separazione temporanea
+        rule: >-
+          L'Anello è fisicamente lontano, sottratto o irraggiungibile ma il legame non è spezzato. Di norma poteri,
+          Risonanza e Ancora restano disponibili. Soltanto una circostanza fictionale esplicita che sopprima o interrompa
+          la connessione può rendere temporaneamente indisponibile un effetto; il Custode dichiara esattamente cosa è
+          bloccato prima del tiro e non applica modificatori nascosti.
+      cession:
+        name: Cessione
+        rule: >-
+          Il Guardiano affida volontariamente l'oggetto a qualcun altro. La cessione non trasferisce la scelta dell'Anello,
+          il legame o i poteri. Per il portatore originario vale come separazione temporanea finché il rapporto non cambia
+          attraverso una regola esplicita. Chi riceve l'Anello non può usarne i poteri se non è stato scelto.
+      renunciation:
+        name: Rinuncia
+        rule: >-
+          La Rinuncia è una procedura di campagna volontaria e dichiarata fuori dalla risoluzione immediata di un tiro.
+          Richiede consenso esplicito del giocatore e chiarisce prima del rituale quali accessi vengono persi. Completata
+          la Rinuncia, il personaggio perde poteri di Casata, Risonanza e Ancora e cessa di essere un Guardiano operativo.
+          Non subisce automaticamente penalità permanenti a Caratteristiche, PF o altre statistiche; eventuali conseguenze
+          meccaniche aggiuntive devono essere concordate prima del rituale.
+    death: >-
+      La morte del portatore spezza ordinariamente il legame ed è distinta dai quattro stati volontari o temporanei sopra descritti.
+    no_bypass: >-
+      Togliere, separare o cedere l'Anello non permette di evitare un costo, un prezzo o una conseguenza già dichiarati e
+      non crea una nuova scena ai fini della Risonanza.
+  veil_tracker:
+    id: MR-RULE-018
+    title: Velo Tracker
+    range: 0-12
+    meaning: >-
+      Misura quanto prove credibili del soprannaturale sono diventate conoscenza civile persistente a Milano. È globale e
+      non si azzera tra gli archi.
+    thresholds:
+      '3': Voci
+      '6': Sospetto
+      '9': Crisi d'Identità
+      '12': Velo Squarciato
+    advance: >-
+      Avanza di +1 quando una prova credibile sopravvive alla scena e raggiunge un pubblico più ampio; +2 o +3 soltanto per
+      eventi eccezionali o catastrofici esplicitamente descritti. Il prezzo Mondo della Risonanza avanza sempre di +1 e
+      nomina una traccia reale, senza sommare un secondo aumento per la stessa prova.
+    reduction: >-
+      Si riduce soltanto tramite azioni attive e costose di contenimento. Dopo avere raggiunto 6, 9 o 12, il nuovo minimo
+      permanente è rispettivamente 3, 6 o 9.
+    no_parallel_exposure_scale: >-
+      Non esiste una seconda scala meccanica Esposizione 0-4. La parola esposizione può descrivere una conseguenza fictionale,
+      ma ogni pressione globale sul segreto usa il Velo Tracker 0-12.

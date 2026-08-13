@@ -1,5 +1,5 @@
 schema_version: 1
-product_version: 0.9.0-beta.1
+product_version: 0.9.0-beta.2
 adversaries:
 - name: Zombie
   pf: 8
@@ -127,7 +127,7 @@ adversaries:
   - name: Tocco gelido
     text: Infligge il danno e può imporre la Condizione Terrorizzato.
   - name: Urlo del rimpianto
-    text: Tutti a Vicino devono Resistere +CUO o fuggire, congelarsi o perdere 1 Stress.
+    text: Tutti a Vicino devono Resistere +CUO o fuggire, congelarsi o subire 1 Stress.
   - name: Passare oltre
     text: Attraversa muri e compare da un’ombra o da un ricordo legato al luogo.
   weakness: Risolvere il rimpianto lo placa; sale e luce consacrata ne limitano il movimento.
@@ -561,7 +561,7 @@ adversaries:
   damage: 2d8 magico
   ls: 7
   type: Non morto / Elite
-  description: Un custode funerario risvegliato con rituali importati e memorie imperiali.
+  description: Una sentinella funeraria risvegliata con rituali importati e memorie imperiali.
   impulse: Recuperare il nome, gli organi e gli oggetti sottratti alla tomba.
   tags:
   - non morto

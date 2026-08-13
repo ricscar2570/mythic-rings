@@ -6,7 +6,7 @@ section: "Guida per il Custode"
 epigraph: "Prima di giocare, parlate. Dopo aver parlato, giocate."
 tags: []
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Session Zero
@@ -71,14 +71,12 @@ Idealmente, il gruppo ha almeno una Casata diversa. Non è obbligatorio
 (un gruppo tutto Umbra può essere fantastico) ma la varietà arricchisce
 il gioco. Discutete le preferenze e negoziate.
 
-:::box[Suggerimento: Gruppi Piccoli (M7)]{type=info}
-**2 PG:** Il Custode fornisce 1 PNG alleato che colma la Casata
-mancante. Il PNG ha personalità ma non ruba la scena. In
-combattimento, i PG hanno +1 forward al primo tiro di ogni scontro
-(supporto morale).
-**3 PG:** Nessun PNG necessario, ma i PG iniziano con +3 PF ciascuno
-e 1 Punto Fato extra per sessione. Il Custode riduce il numero di
-nemici del 25%.
+:::box[Suggerimento: Gruppi piccoli]{type=info}
+**2 Guardiani:** riduci la composizione degli scontri rispetto alla base per quattro Guardiani: preferisci un solo fronte di pressione alla volta, meno minion e minacce di LS inferiore. Un PNG alleato può colmare una funzione narrativa mancante, ma non prende un turno completo da giocatore e non concede bonus numerici automatici.
+
+**3 Guardiani:** riduci normalmente di un minion o di un gradino la pressione prevista dall'incontro. Non concedere PF o Punti Fato aggiuntivi.
+
+In entrambi i casi non modificare i limiti canonici di Fato, Armatura o modificatori. Per calibrare gli scontri usa il Capitolo 20.
 :::
 
 ## Passo 5: Creazione Personaggi
@@ -100,7 +98,7 @@ insieme il trigger di ogni Legame.
 Scegliete il quartiere dove i PG operano principalmente (vedi Parte V).
 Il quartiere base definisce il tono delle prime sessioni, i PNG
 ricorrenti e le minacce iniziali. I PG possono vivere in quartieri
-diversi ma avere un punto di ritrovo comune (es. il Caffè Fiorio a
+diversi ma avere un punto di ritrovo comune (es. il Caffè Fiori Oscuri a
 Brera).
 
 ## Passo 8: Stabilire la Situazione Iniziale

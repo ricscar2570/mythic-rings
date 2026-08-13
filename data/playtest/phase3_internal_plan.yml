@@ -1,0 +1,128 @@
+version: 0.9.0-beta.2
+status: prepared_not_executed
+purpose: Piano operativo delle 12 sessioni interne previste dalla Fase 3; non contiene risultati di playtest.
+blocks:
+  A:
+    sessions: [P3-S01, P3-S02]
+    focus: [onboarding, creazione, prime_risonanze]
+    output: problemi_di_comprensione
+  B:
+    sessions: [P3-S03, P3-S04]
+    focus: [combattimento, reazioni, escalation]
+    output: log_round_e_danni
+  C:
+    sessions: [P3-S05, P3-S06]
+    focus: [indagine, linee_ley]
+    output: chiarezza_posizione_effetto
+  D:
+    sessions: [P3-S07, P3-S08]
+    focus: [stress_test_casate]
+    output: economia_risorse
+  E:
+    sessions: [P3-S09, P3-S10]
+    focus: [downtime, recupero, relazioni]
+    output: cicli_e_conseguenze
+  F:
+    sessions: [P3-S11, P3-S12]
+    focus: [mini_arco, boss]
+    output: persistenza_payoff_carico_custode
+sessions:
+  - id: P3-S01
+    block: A
+    title: Onboarding senza spiegazione preventiva
+    scenario: Notte al Monumentale — apertura e prima indagine
+    tests: [G2-A, B1]
+    composition: [Avalon, Umbra, Ife, Mictlan]
+    required_observations: [tempo_creazione, prime_consultazioni, prima_risonanza, chiarezza_prezzi]
+  - id: P3-S02
+    block: A
+    title: Seconda sessione e prime scelte autonome
+    scenario: Notte al Monumentale — sviluppo e climax
+    tests: [G2-A, B1]
+    composition: [Avalon, Umbra, Ife, Mictlan]
+    required_observations: [procedura_risonanza_senza_aiuto, anchor, prezzo_rifiutato_o_accettato, desiderio_seconda_sessione]
+  - id: P3-S03
+    block: B
+    title: Minion combinati e budget delle minacce
+    scenario: Drill di combattimento standardizzato
+    tests: [G2-B, G2-C, B7]
+    composition: [Avalon, Umbra, Ife, Mictlan]
+    required_observations: [azioni_significative, doppie_attivazioni, ordine_round, escalation_area]
+  - id: P3-S04
+    block: B
+    title: Boss, reazioni e scontro lungo
+    scenario: Scontro boss standardizzato fino al round 5+
+    tests: [G2-B, G2-C, B3]
+    composition: [Avalon, Umbra, Ife, Mictlan]
+    required_observations: [reazioni, eccezioni_statblock, escalation_3_4_5, durata_scontro]
+  - id: P3-S05
+    block: C
+    title: Indagine fail-forward
+    scenario: Mistero con tre vie verso lo stesso indizio fondamentale
+    tests: [B1]
+    composition: [Avalon, Umbra, Ife, Mictlan]
+    required_observations: [indizi_fondamentali, costi_7_9, mosse_6_minus, tempo_consultazione]
+  - id: P3-S06
+    block: C
+    title: Linee Ley e Nexus senza bonus numerici
+    scenario: Spostamento fra due Linee e un Nexus con vantaggi fictionali
+    tests: [B1]
+    composition: [Avalon, Umbra, Ife, Mictlan]
+    required_observations: [posizione_effetto, assenza_bonus_locali, influenza_milano, chiarezza_canon]
+  - id: P3-S07
+    block: D
+    title: Mictlan senza guaritore
+    scenario: Attrito su tre scene con recupero limitato
+    tests: [G2-D, B2, B8]
+    composition: [Mictlan, Umbra, Umbra, Mictlan]
+    required_observations: [pf_spesi, sangue_tenace, stress, rinunce_poteri, recupero]
+  - id: P3-S08
+    block: D
+    title: Mictlan con supporto e confronto Casate
+    scenario: Boss più recupero immediatamente successivo
+    tests: [G2-D, B3, B6]
+    composition: [Mictlan, Avalon, Ife, Umbra]
+    required_observations: [conversione_cure_in_potere, centralita_avalon, sostenibilita_mictlan, spotlight]
+  - id: P3-S09
+    block: E
+    title: Umbra da Corruzione 0
+    scenario: Infiltrazione lunga seguita da downtime
+    tests: [B4]
+    composition: [Umbra, Avalon, Ife, Mictlan]
+    required_observations: [poteri_umbra_usati, corruzione_finale, recupero_downtime, costi_percepiti]
+  - id: P3-S10
+    block: E
+    title: Umbra a Corruzione 6 e cicli di recupero
+    scenario: Scena ad alta pressione più downtime e Legami
+    tests: [B5]
+    composition: [Umbra, Avalon, Ife, Mictlan]
+    required_observations: [spirale_corruzione, anti_ciclo, condizioni_anello, legami, recupero]
+  - id: P3-S11
+    block: F
+    title: Mini-arco — conseguenze persistenti
+    scenario: Due scene collegate con Frammento, Velo e fazione
+    tests: [B1]
+    composition: [Avalon, Umbra, Ife, Mictlan]
+    required_observations: [velo, conseguenze_risonanza_ritornano, promesse, persistenza]
+  - id: P3-S12
+    block: F
+    title: Boss e payoff del mini-arco
+    scenario: Finale con obiettivo non eliminazione e possibile negoziazione
+    tests: [B1, B7]
+    composition: [Avalon, Umbra, Ife, Mictlan]
+    required_observations: [payoff, carico_custode, combattimento_o_alternativa, spotlight, seconda_sessione]
+balance_matrix:
+  B1: {hypothesis: gruppo_misto_standard, minimum_sessions: 4}
+  B2: {hypothesis: mictlan_senza_guaritore, minimum_sessions: 1}
+  B3: {hypothesis: mictlan_con_avalon, minimum_sessions: 2}
+  B4: {hypothesis: umbra_corruzione_0, minimum_sessions: 1}
+  B5: {hypothesis: umbra_corruzione_6, minimum_sessions: 1}
+  B6: {hypothesis: avalon_car_3, minimum_sessions: 1}
+  B7: {hypothesis: ife_controllo_campo, minimum_sessions: 2}
+  B8: {hypothesis: nessun_guaritore, minimum_sessions: 1}
+decision_thresholds:
+  casata_decisive_share_warning: 0.35
+  unused_power_share_warning: 0.30
+  same_scene_cost_recovery_warning: 0.50
+  mictlan_healer_effect_warning: 0.25
+  minimum_comparable_observations_before_change: 3

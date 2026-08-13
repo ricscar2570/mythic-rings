@@ -6,99 +6,144 @@ section: "Milano Mitica"
 epigraph: "Milano è costruita sopra se stessa. Strato su strato, segreto su segreto."
 tags: []
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## La Milano Sotterranea
 
 :::quote
-La prima cosa che ogni Guardiano impara è che Milano ha due volti. C'è la Milano che tutti conoscono - la moda, il Duomo, l'aperitivo ai Navigli, i grattacieli di Porta Nuova. E poi c'è la Milano Mitica. Quella sotto. Quella oltre il Velo.
+La prima cosa che ogni Guardiano impara è che Milano ha due volti. C'è la Milano che tutti conoscono — il Duomo, i Navigli, Porta Nuova, i tram, i cantieri. E poi c'è la Milano Mitica: quella che occupa gli stessi luoghi ma segue una seconda geografia fatta di Linee, soglie, memorie e debiti.
 
-Le due città coesistono nello stesso spazio, sovrapposte come due lucidi su una lavagna luminosa. Un turista vede una crepa nel muro di una chiesa. Un Guardiano vede un sigillo antico che tiene chiuso un portale. Un pendolare aspetta la metro alle undici di sera. Un Guardiano vede lo spettro del minatore che morì scavando quel tunnel nel 1959.
+Le due città non sono due mappe separate. Un turista vede una crepa nel muro di una chiesa; un Guardiano può riconoscervi un sigillo. Un pendolare aspetta la metropolitana; un Guardiano può accorgersi che qualcuno continua ad aspettare lo stesso treno da decenni.
 
-Milano Mitica è un organismo. Respira attraverso le Linee Ley, pulsa attraverso il Nexus sotto il Duomo, e sussurra attraverso i fantasmi che camminano tra i vivi. Ogni quartiere ha una personalità, un'affiliazione, e segreti che aspettano solo di essere scoperti.
+Milano Mitica respira attraverso le Linee Ley, pulsa nel Nexus sotto il Duomo e conserva memoria nei luoghi in cui il Velo è stato piegato troppe volte.
 :::
 
+## Il Nexus del Duomo
 
-Il Nexus del Duomo
+Sotto Piazza Duomo, nella geografia occulta del gioco, le cinque Linee
+Ley convergono nel **Nexus del Duomo (MR-LOC-001)**. È il cuore rituale
+della Milano Mitica: una cavità rinforzata e trasformata dai Guardiani
+nel corso dei secoli, dove i segni delle quattro stirpi convivono nello
+stesso spazio.
 
-Trenta metri sotto Piazza Duomo, nel punto esatto dove cinque Linee Ley
-convergono, si trova il **Nexus del Potere** - il cuore pulsante della
-Milano Mitica. È una caverna naturale, allargata e rinforzata nei secoli
-da Guardiani di ogni Casata. Le pareti sono coperte di simboli: la luce
-dorata di Avalon, le ombre liquide di Umbra, le radici viventi di Ife,
-le ossa incise di Mictlan.
+Il Nexus è **territorio neutrale** per il Patto del Nexus stabilito nel
+1386, l'anno in cui cominciò anche il cantiere storico del Duomo. Il
+patto, i Guardiani che lo stipularono e la cavità soprannaturale sono
+elementi di fiction. Nessuna fazione può reclamare il luogo come
+proprietà esclusiva e ogni violenza al suo interno costituisce una
+rottura deliberata del patto.
 
-Il Nexus è **territorio neutrale assoluto** per un patto che risale al
-1386 - lo stesso anno in cui iniziarono i lavori del Duomo
-soprastante. Nessuna fazione può reclamare il Nexus, nessun atto di
-violenza è permesso al suo interno. L'ultima persona che violò il patto,
-un Rinnegato di nome Gervasio nel 1943, venne risucchiata dalle Linee
-Ley stesse - il suo urlo riecheggia ancora nelle notti di luna piena,
-se sai ascoltare.
+L'ultimo caso registrato negli archivi risale al 1943: il Rinnegato
+Gervasio tentò di usare la convergenza contro un altro Guardiano e
+scomparve durante il contraccolpo. Nessuno sa se le Linee lo abbiano
+ucciso, spostato o conservato.
 
-L'**accesso** avviene attraverso una cripta nascosta sotto il Duomo, la
-cui chiave è custodita dalla Cerchia dei Cinque Anziani. I Guardiani di
-grado sufficiente possono richiedere accesso per rituali, consulti tra
-Casate, o in caso di emergenza.
+L'**accesso materiale** passa attraverso una cripta nascosta. La Cerchia
+degli Anziani controlla le autorizzazioni; **Don Aurelio Marchetti**
+custodisce le chiavi e conosce i percorsi fisici. Un Guardiano non
+ottiene automaticamente accesso perché appartiene a una Casata.
 
-Le Cinque Linee Ley
+## Le Cinque Linee Ley
 
-Cinque fiumi di energia magica invisibile attraversano Milano,
-convergendo sotto il Duomo. Ogni Linea ha un **colore percepibile** solo
-ai Guardiani (o con il potere Vedere Oltre il Velo), un **elemento
-associato**, e **quartieri che attraversa**. Le Linee Ley amplificano la
-magia: usare un potere su una Linea Ley dà **+1 al tiro di Usare
-Potere**.
+Le Linee Ley sono geografia occulta **fittizia**. I loro percorsi sono
+stabili nel canon e rispettano la disposizione relativa dei luoghi
+milanesi, ma non seguono necessariamente strade, binari o infrastrutture
+reali.
 
+| ID | Linea | Percorso canonico | Affinità | Segnale ricorrente |
+|---|---|---|---|---|
+| MR-LEY-001 | Alba | Sesto San Giovanni → Loreto → Porta Venezia → San Babila → Duomo | Avalon | riflessi dorati, luce senza fonte, verità difficili da ignorare |
+| MR-LEY-002 | Ombra | Navigli → Darsena → Porta Ticinese → Colonne di San Lorenzo → Duomo | Umbra | ombre in ritardo, riflessi discordanti, sussurri nell'acqua |
+| MR-LEY-003 | Vita | Parco Sempione → Castello Sforzesco → Cairoli → Duomo | Ife | crescita fuori stagione, radici sensibili, animali che reagiscono insieme |
+| MR-LEY-004 | Morti | Cimitero Monumentale → Porta Garibaldi → Brera → Duomo | Mictlan | freddo localizzato, nomi sussurrati, ricordi che affiorano |
+| MR-LEY-005 | Fato | Porta Romana → Crocetta → Duomo | nessuna | coincidenze ripetute, orologi sincronizzati, incontri improbabili |
 
-| Linea | Colore | Elemento | Quartieri Attraversati |
-|---| ---|---| ---|
-| Prima (Nord) | Oro | Luce / Ordine | Centrale → Brera → Duomo |
-| Seconda (Est) | Verde | Vita / Natura | Porta Venezia → Isola → Duomo |
-| Terza (Sud) | Viola | Ombra / Inganno | Navigli → Porta Ticinese → Duomo |
-| Quarta (Ovest) | Grigio | Morte / Transizione | San Siro → City Life → Duomo |
-| Quinta (Centro) | Bianco | Equilibrio / Fato | Verticale - dal cielo al sottosuolo, ancorata al Nexus |
+### Regola di utilizzo
 
-**Linee Ley Corrotte:** Quando una Linea Ley viene contaminata (rituale
-oscuro, morte di massa, squarcio nel Velo), il bonus +1 diventa un
-**malus -1** e la zona attraversata subisce effetti collaterali: incubi
-nei residenti, animali che fuggono, tecnologia che funziona male.
-Purificare una Linea Ley è un'avventura in sé.
+Una Linea non è un modificatore numerico. **Non concede +1, non riduce
+costi, non aumenta automaticamente la cura e non modifica Armatura,
+Stress o Corruzione.** Cambia invece ciò che è possibile o significativo
+nella fiction.
 
-Il Velo a Milano
+Quando una Linea è pertinente, il Custode può:
 
-Milano è una città di 1.4 milioni di persone, con 10 milioni nell'area
-metropolitana. Il **Velo** - l'illusione collettiva che separa il
-mondo magico da quello ordinario - è sotto pressione costante. Troppi
-occhi, troppi smartphone, troppi social media. Mantenere il Velo a
-Milano è un lavoro a tempo pieno, e la **Società del Velo**
-(l'organizzazione di umani non-magici che aiutano a coprire gli
-incidenti) lavora straordinari quasi ogni notte.
+- rendere disponibile un accesso o un percorso che normalmente
+  richiederebbe preparazione;
+- ampliare scala, portata o durata di un effetto quando la mossa o il
+  potere lo consentono;
+- far emergere una traccia, un testimone, una memoria o un segnale;
+- dichiarare un rischio specifico legato alla Linea prima della scelta;
+- rendere possibile un rituale che altrove richiederebbe un Nexus.
 
-**Punti Deboli del Velo a Milano:** il Cimitero Monumentale (troppi
-morti, troppi spiriti), la Stazione Centrale nelle ore notturne (portale
-dimensionale instabile), i tunnel della metropolitana (specialmente la
-linea M2 tra Loreto e Piola, costruita sopra un antico cimitero della
-peste del 1630).
+Se resta un rischio reale, **si tira normalmente** e si applicano costi e
+risultati della fonte normativa.
+
+### Linee corrotte
+
+Quando una Linea viene contaminata da un rituale, una breccia o una
+concentrazione di violenza soprannaturale, non applica un malus numerico
+generico. La corruzione cambia la fiction: la Linea offre accessi
+pericolosi, produce segnali falsati, attira entità coerenti con la
+contaminazione o trasforma un beneficio in una scelta con costo.
+Purificarla richiede un obiettivo concreto e può costituire il centro di
+un'intera avventura.
+
+## Il Velo a Milano
+
+Il Comune di Milano ospita **circa 1,4 milioni di residenti**; la Città
+Metropolitana ne ospita **circa 3,25 milioni**. Il manuale usa queste
+cifre come scala narrativa e non tratta una più ampia regione urbana
+come sinonimo amministrativo della Città Metropolitana.
+
+Il **Velo** è sottoposto a una pressione particolare in una città densa,
+connessa e continuamente osservata. Smartphone, telecamere, trasporti e
+social network non annullano il Velo, ma rendono più costoso contenere i
+danni fisici e le testimonianze persistenti. La **Società del Velo** —
+organizzazione alleata ma distinta dai Custodi — opera proprio su questo
+lato civile del problema.
+
+I punti deboli non dipendono da spiegazioni pseudo-storiche obbligatorie.
+Il Cimitero Monumentale, la Stazione Centrale, i tunnel e altri luoghi
+possono diventare soglie perché la fiction stabilisce una concentrazione
+di morte, transito, memoria o ripetizione; non è necessario attribuire a
+un'infrastruttura reale un cimitero, un rituale o una catastrofe non
+documentata.
 
 ---
 
-## Nexus Secondari: Decentralizzare Milano
+## I cinque Nexus Secondari
 
-Il Nexus del Duomo è il centro del sistema magico, ma non è l'unico nodo di potere. Milano ha **cinque Nexus Secondari**, punti dove le Linee Ley si incrociano o si concentrano abbastanza da creare effetti magici locali permanenti. Questi nodi rendono ogni quartiere narrativamente autonomo.
+Milano possiede cinque concentrazioni stabili riconosciute dai Custodi
+come **Nexus Secondari**. Ciascuna appartiene a una Linea, ha una funzione
+riconoscibile e presenta un beneficio che modifica la fiction invece di
+aggiungere una seconda economia di bonus.
 
-| Nexus | Quartiere | Tipo di Energia | Effetto Meccanico Locale |
-|---|---|---|---|
-| Colonne di San Lorenzo | Porta Ticinese | Protezione antica, confine | Il Velo è più spesso: +1 ai tiri per nascondere eventi magici in zona |
-| Cimitero Monumentale | Monumentale | Morte, spiriti, confine | I Mictlan recuperano +1d4 PF aggiuntivi da Resilienza della Soglia in questa area |
-| Castello Sforzesco (Segrete) | Sempione | Natura primordiale, antico | Gli Ife possono usare Crescita Rapida senza terreno esistente, il muschio delle fondamenta basta |
-| Bosco Verticale | Isola | Vita artificiale, tecnologia magica | Tutti i poteri di guarigione (Avalon e Ife) recuperano +1 PF aggiuntivo per tiro |
-| Naviglio Grande (nodo sotterraneo) | Navigli | Ombra mobile, transizione | Gli Umbra riducono di 1 il costo Corruzione dei poteri di movimento (Passo Ombra, Portale) |
+| ID | Nexus | Linea | Funzione | Beneficio fictionale | Rischio |
+|---|---|---|---|---|---|
+| MR-LOC-002 | Giardini di Porta Venezia | Alba | rivelazione e sorveglianza | una traccia soprannaturale già presente può diventare leggibile o distinguibile | ciò che era nascosto può diventare visibile anche a chi non volevi coinvolgere |
+| MR-LOC-003 | Darsena | Ombra | ascolto, transito, scambio | l'acqua può collegare una pista a un contatto, percorso o voce già esistente | i segreti possono viaggiare in entrambe le direzioni |
+| MR-LOC-004 | Castello Sforzesco / Parco Sempione | Vita | memoria vivente e crescita | una rete vegetale può ricordare un passaggio, aprire un accesso o sostenere un rituale | la crescita decide chi considera invasore |
+| MR-LOC-005 | Cimitero Monumentale | Morti | memoria dei defunti e transizione | un contatto con un morto può diventare possibile quando esiste una traccia adeguata | più spiriti possono rispondere insieme a quello cercato |
+| MR-LOC-006 | Porta Romana / Crocetta | Fato | coincidenze e biforcazioni | una scelta o un collegamento tra due piste può diventare evidente | ogni coincidenza utile può produrne una seconda non controllata |
 
-**Regola del Nexus Secondario:** Un PG che si trova in un Nexus Secondario durante un Downtime può spendere l'attività "Meditazione" per ottenere il bonus specifico del nodo per l'intera sessione successiva, invece del normale -1 Stress.
+### Custodia
+
+I Nexus non sono «proprietà» automatica della Casata affine alla Linea.
+La custodia è un incarico politico e operativo:
+
+- Porta Venezia: cellula mista con incarico a rotazione;
+- Darsena: cellula Umbra dei Navigli in accordo con i mediatori del
+  Mercato Notturno;
+- Sempione: rete Ife locale, con Nonna Rosa come referente più anziana;
+- Monumentale: Guardiano Anselmo e rete Mictlan locale;
+- Porta Romana/Crocetta: incarico mensile a rotazione tra le Casate.
+
+**Downtime:** trovarsi in un Nexus può rendere possibile nella fiction
+un'attività, una ricerca o un contatto che altrove non lo sarebbe. Non
+concede un bonus persistente alla sessione successiva e non sostituisce
+le attività di downtime canoniche.
 
 :::box[Consiglio per il Custode: Distribuire le Missioni]{type=tip}
-Usate i Nexus Secondari per ancorare le missioni ai quartieri specifici. Un problema al Cimitero riguarda i Mictlan. Una perturbazione al Bosco Verticale chiama gli Ife. Le Colonne sono territorio di tutti ma sentinelle Avalon ci pattugliano. Questo evita il "torna al Duomo" come soluzione di default.
+Usa i Nexus Secondari per distribuire pressioni e responsabilità nella città senza trasformarli in distributori di bonus. Un problema al Monumentale può mettere Mictlan davanti a una memoria scomoda; la Darsena può far arrivare un segreto a Umbra insieme a chi lo sta cercando; Sempione può offrire a Ife un accesso che richiede comunque una promessa. Il luogo modifica **la scelta**, non il numero da sommare al dado.
 :::
-

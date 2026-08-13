@@ -6,7 +6,7 @@ section: "Bestiario e Avventure"
 epigraph: "Il Velo protegge Milano. Il Velo imprigiona Milano. Entrambe le frasi possono essere vere."
 tags: [campagna, avventure, velo, fratellanza]
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Il Crepuscolo del Velo
@@ -101,19 +101,19 @@ Mantieni una scheda visibile con questi elementi.
 | Vita |  | integro / purificato / distrutto / sostituito | lacerazioni che si richiudono nel modo sbagliato |
 | Nome |  | integro / purificato / distrutto / sostituito | persone e creature vengono escluse o attirate per errore |
 
-### Esposizione pubblica
+### Velo Tracker della campagna
 
-Segna da 0 a 4 quanto Milano ha visto e conservato del soprannaturale.
+Usa il **Velo Tracker canonico 0–12** del Capitolo 18. Non mantenere una seconda scala Esposizione 0–4.
 
-| Valore | Stato |
+| Valore | Stato della campagna |
 |---:|---|
-| 0 | Eventi isolati, facilmente razionalizzati. |
-| 1 | Registrazioni e testimoni discordanti; la Società interviene. |
-| 2 | Comunità online e giornalisti collegano gli eventi. |
-| 3 | Un evento pubblico non può essere completamente cancellato. |
-| 4 | La rivelazione è irreversibile; il finale riguarda come governarla. |
+| 0–2 | Eventi isolati, ancora facili da razionalizzare o contenere. |
+| 3–5 | **Voci:** registrazioni e testimoni iniziano a collegarsi. |
+| 6–8 | **Sospetto:** giornalisti, investigatori e istituzioni seguono piste persistenti. |
+| 9–11 | **Crisi d'Identità:** almeno una prova pubblica è difficile da contenere e influenza direttamente le scene. |
+| 12 | **Velo Squarciato:** la rivelazione è irreversibile; il finale riguarda come governarla. |
 
-Aumenta l'Esposizione per eventi pubblici realmente osservati e conservati. Riducila soltanto attraverso contenimento, accordi o sacrifici espliciti; non cancellarla come conseguenza automatica del Velo.
+Avanza il Velo soltanto per prove credibili che sopravvivono e si diffondono, oppure secondo una regola che lo dichiari esplicitamente. Riducilo soltanto attraverso contenimento attivo e rispettando i minimi permanenti 3/6/9 dopo le soglie 6/9/12. Il prezzo **Mondo** della Risonanza vale sempre +1 e nomina la traccia che resta.
 
 ### Promesse e debiti
 
@@ -186,7 +186,7 @@ Mediatrice del Mercato Notturno. Protegge la neutralità perché è l'unico spaz
 
 ### Nonna Rosa
 
-Custode Ife ritirata. Considera ogni artefatto un rapporto vivente, non un oggetto. Non consegna il Frammento della Vita a chi parla soltanto di sicurezza e vittoria.
+Guardiana Ife ritirata. Considera ogni artefatto un rapporto vivente, non un oggetto. Non consegna il Frammento della Vita a chi parla soltanto di sicurezza e vittoria.
 
 **Vuole:** una responsabilità nominata e condivisa.  
 **Teme:** che il Velo venga riparato senza essere riformato.  
@@ -307,7 +307,7 @@ Prima di passare alla sessione successiva annota:
 - se Valentina considera i Guardiani affidabili;
 - se Nicolò è morto, sopravvissuto o diventato un testimone spirituale;
 - quale Guardiano è stato identificato dalla Fratellanza;
-- Clock ed Esposizione pubblica.
+- Clock e Velo Tracker.
 
 Chiedi a un Guardiano quale dettaglio del Mercato non riesce più a dimenticare. Quella immagine può tornare quando il Frammento della Memoria entra in gioco.
 
@@ -448,7 +448,7 @@ Radici senzienti bloccano chi non dichiara che cosa intende proteggere. **Sentir
 
 Le pareti mostrano persone cancellate dal Velo. Ogni Guardiano vede una memoria che la propria Casata preferirebbe ignorare. Il Custode pone una domanda, non stabilisce il passato senza consenso.
 
-### Custode di marmo
+### Sentinella di marmo
 
 Un **Golem di Marmo** protegge il frammento. Non attacca chi porta il sigillo di Nonna Rosa e risponde a tre comandi iscritti nella sala. Può essere combattuto, ingannato o convinto che il vero pericolo sia la trasmissione della talpa.
 
@@ -859,12 +859,12 @@ La sessione non chiede ai Guardiani di essere ovunque. Chiede **chi autorizzano 
 
 ### Conseguenze delle tre crisi
 
-- **Centrale risolta con ascolto:** gli spiriti diventano testimoni, non nemici; Esposizione +1.
+- **Centrale risolta con ascolto:** gli spiriti diventano testimoni, non nemici; Velo Tracker +1.
 - **Centrale dissolta:** ordine immediato, ma la Società perde credibilità presso i morti.
 - **Navigli protetti:** Valentina mantiene il percorso segreto.
 - **Navigli abbandonati:** il Mercato sopravvive, ma chiude gli accessi ai Guardiani.
 - **Trasmissione del Duomo interrotta:** Vincenzo perde reclute, ma il gruppo appare censorio.
-- **Trasmissione lasciata attiva:** Esposizione +1 e la città conosce accuse vere insieme alla propaganda.
+- **Trasmissione lasciata attiva:** Velo Tracker +1 e la città conosce accuse vere insieme alla propaganda.
 
 ### Incontro con Vincenzo
 
@@ -879,7 +879,7 @@ Una alternativa concreta deve specificare almeno autorità, limiti e controllo. 
 Riepiloga davanti al gruppo:
 
 - Frammenti disponibili;
-- Clock ed Esposizione;
+- Clock e Velo Tracker;
 - alleati e promesse;
 - capacità attive di Vincenzo;
 - posizione dichiarata dai Guardiani;
@@ -897,7 +897,7 @@ Prima della sessione costruisci una **matrice del finale**.
 |---|---|---|
 | Frammenti | posseduti, purificati, distrutti, sostituiti | pilastri disponibili e instabilità |
 | Clock | 9–12 | numero di pressioni iniziali |
-| Esposizione | 0–4 | possibilità e costo della rivelazione |
+| Velo Tracker | 0–12 | possibilità e costo della rivelazione |
 | Alleati | presenti o perduti | crisi delegate e rituali accessibili |
 | Leve | prove, messaggi, codici | difese narrative di Vincenzo rimosse |
 | Promesse | mantenute o infrante | sostegno, debiti ed epilogo |

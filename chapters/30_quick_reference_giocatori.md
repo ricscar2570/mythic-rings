@@ -6,7 +6,7 @@ section: "Riferimenti"
 epigraph: "La regola che serve, quando serve."
 tags: [riferimento, giocatori]
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Quick Reference — Giocatori
@@ -31,6 +31,23 @@ Modificatore totale: minimo −3, massimo +4. Un 12 naturale concede un benefici
 - Ritira un solo d6 e tieni il nuovo valore.
 - Non concedono azioni aggiuntive e non si conservano.
 
+### Risonanza dell'Anello
+
+Una volta per scena, dopo eventuale Fato, se **Usare Potere** oppure una **Mossa Esclusiva di Casata che richiede un tiro** termina a 6− o 7–9, puoi invocare la Risonanza: Un nuovo round, una pausa breve o uno spostamento tattico non resettano la scena.
+
+- 6− → 7–9;
+- 7–9 → 10+.
+
+Non funziona su Ultimo Respiro, azioni mondane, downtime o poteri senza tiro. Il **2 naturale si controlla dopo eventuale Fato sui due dadi finali**: se restano 1 e 1, Risonanza non può migliorarlo. Il Custode offre **due prezzi di categorie differenti** e realmente validi. Se non può formularne due, la procedura non parte e l'uso resta disponibile. Dopo che due prezzi validi sono stati dichiarati per intero, l'uso della scena è speso anche se li rifiuti; in quel caso conservi il risultato originale.
+
+| Prezzo | Effetto |
+|---|---|
+| Corpo | perdi 4 PF ignorando Armatura |
+| Anima | ricevi una Condizione dell'Anello persistente |
+| Legame | conseguenza concreta su un Legame nominato |
+| Mondo | Velo Tracker +1 e una traccia reale nella fiction |
+
+
 ### Legami
 
 | Livello | Bonus |
@@ -40,6 +57,8 @@ Modificatore totale: minimo −3, massimo +4. Un 12 naturale concede un benefici
 | 3 | +2 e capacità speciale |
 
 Un solo Legame per tiro. Persona e Tipo devono essere direttamente coinvolti. Ultimo Respiro non riceve bonus dai Legami.
+
+**Ancora dell'Anello:** designa un Legame L1+ alla creazione. Non dà bonus. Una volta per sessione, se è presente o in contatto significativo, puoi chiedere di sostituire un prezzo Anima della Risonanza con un prezzo Legame che coinvolga l'Ancora; il Custode dichiara il nuovo prezzo prima della scelta.
 
 ### Danno e Armatura
 
@@ -57,7 +76,7 @@ Ogni round hai:
 - una Azione Principale;
 - un movimento coerente con la fiction.
 
-Il gruppo decide l'ordine, che può cambiare ogni round. Il Custode non tira per i nemici.
+Il gruppo decide l'ordine, che può cambiare ogni round. Il Custode non tira per i nemici. Ogni unità di minaccia ha normalmente una sola Azione Significativa per round: se l'ha già spesa come conseguenza o minaccia ignorata, non riceve un secondo attacco pieno a fine round.
 
 ### Escalation
 
@@ -67,6 +86,8 @@ Il gruppo decide l'ordine, che può cambiare ogni round. Il Custode non tira per
 | 3 | +1 |
 | 4 | +2 |
 | 5+ | +3 |
+
+**Una sola volta per Azione Principale che infligge danno.** Se colpisci più volte o più bersagli, scegli una sola istanza o un solo bersaglio. Reazioni, attacchi bonus, danno persistente e azioni autonome di evocazioni non la ricevono senza una Azione Principale spesa dal Guardiano.
 
 ### Risorse
 
@@ -81,8 +102,8 @@ Il gruppo decide l'ordine, che può cambiare ogni round. Il Custode non tira per
 
 10 minuti in luogo relativamente sicuro, tira +FOR.
 
-- 10+: 1d6 PF e −1 Stress.
-- 7–9: 1d4 PF oppure −1 Stress.
+- 10+: 1d6 PF e recuperi 1 Stress.
+- 7–9: 1d4 PF oppure recuperi 1 Stress.
 - 6−: nessun recupero; il Custode mostra un costo o un'urgenza.
 - Medikit consumato: +2 PF se recuperi PF.
 

@@ -6,7 +6,7 @@ section: "Guida per il Custode"
 epigraph: "Le mosse del Custode non sono punizioni. Sono il modo in cui il mondo risponde."
 tags: [custode, mosse, conseguenze]
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Le Mosse del Custode
@@ -128,6 +128,30 @@ Permetti di ottenere subito ciò che serve in cambio di un debito, esposizione, 
 
 Dopo aver cambiato la situazione, restituisci la decisione ai giocatori. Una buona mossa termina quasi sempre con una nuova scelta, non con un monologo.
 
+## Quando un Guardiano invoca la Risonanza
+
+La Risonanza interviene **prima** che tu applichi le conseguenze del risultato originale. Segui sempre questa sequenza:
+
+1. conferma che il tiro sia eleggibile e che il Guardiano non abbia già usato Risonanza nella scena;
+2. ricorda il nuovo esito possibile: 6− → 7–9 oppure 7–9 → 10+;
+3. scegli **due categorie differenti** tra Corpo, Anima, Legame e Mondo;
+4. dichiara per intero i due prezzi concreti;
+5. il giocatore accetta uno dei prezzi oppure rinuncia e conserva il risultato originale;
+6. se accetta, risolvi l'esito migliorato e subito dopo applica il prezzo, prima di una nuova azione.
+
+Non compiere anche la Mossa del 6− che è stato trasformato in 7–9. Analogamente, se un 7–9 diventa 10+, non applicare il costo che apparteneva al 7–9, salvo che faccia parte del **costo base del potere già pagato prima del tiro**.
+
+| Categoria | Procedura del Custode |
+|---|---|
+| **Corpo** | dichiara «perdi 4 PF ignorando Armatura»; non aggiungere un secondo danno nascosto |
+| **Anima** | nomina la Condizione dell'Anello, che cosa limita e quale impulso della Casata sta emergendo |
+| **Legame** | nomina il Legame e la conseguenza concreta; non abbassare automaticamente il Livello |
+| **Mondo** | avanza il Velo di 1 e descrivi la prova o traccia che rende reale quell'avanzamento |
+
+Prima di proporre i prezzi, verifica che siano **entrambi validi**: Anima richiede una Condizione nuova o significativamente diversa con un limite e una via di risoluzione; Legame richiede un Legame L1+ che la conseguenza possa raggiungere in modo credibile; Mondo non può essere offerto a Velo 12 salvo una procedura di campagna già stabilita oltre la Rivelazione. Corpo resta disponibile finché il Guardiano è vivo e può essere letale. Nessun prezzo può limitarsi a ripetere un costo obbligatorio già pagato per lo stesso tiro.
+
+Se viene offerto **Anima** e l'Ancora del Guardiano è direttamente presente o in contatto significativo, il giocatore può usare una volta per sessione l'Ancora per chiedere che Anima sia sostituito da un prezzo **Legame** che coinvolga quell'Ancora. Dichiara il nuovo prezzo prima che scelga.
+
 ## Conseguenze per fascia di risultato
 
 ### Su 10+
@@ -187,7 +211,7 @@ Scegli l'intensità in base alla situazione.
 
 ## Esempio completo
 
-Leila osserva un emissario della Fratellanza da un tetto e usa **Leggere le Ombre**. Ottiene 6−. La mossa garantisce comunque una domanda; sceglie «Qual è la via meno sorvegliata?». Il Custode risponde: il garage sotterraneo è aperto durante il cambio turno. Poi compie una mossa: una telecamera motorizzata ruota verso Leila. Non invalida l'informazione e non dichiara che la risposta era falsa. Mostra una minaccia e chiede: «La luce rossa della telecamera si accende. Che cosa fai?»
+Chiara osserva un emissario della Fratellanza da un tetto e usa **Leggere le Ombre**. Ottiene 6−. La mossa garantisce comunque una domanda; sceglie «Qual è la via meno sorvegliata?». Il Custode risponde: il garage sotterraneo è aperto durante il cambio turno. Poi compie una mossa: una telecamera motorizzata ruota verso Chiara. Non invalida l'informazione e non dichiara che la risposta era falsa. Mostra una minaccia e chiede: «La luce rossa della telecamera si accende. Che cosa fai?»
 
 :::box[Regola di chiusura]{type=tip}
 Una mossa del Custode dovrebbe cambiare almeno una tra **posizione, informazione, tempo, risorse, relazioni o obiettivi** e poi restituire una scelta ai giocatori.

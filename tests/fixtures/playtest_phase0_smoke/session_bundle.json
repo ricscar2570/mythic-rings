@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "session": {
+    "session_id": "G000-S01",
+    "group_id": "G000",
+    "rules_version": "0.9.0-beta.2",
+    "test_mode": "internal",
+    "scenario_id": "PHASE0-SMOKE",
+    "group_profile": "internal",
+    "players_count": 4,
+    "duration_minutes": 165,
+    "preparation_minutes": 35,
+    "notes": "Fixture sintetica: non rappresenta un playtest reale."
+  },
+  "characters": [
+    {"character_id":"G000-C01","casata":"Avalon","advancement_tier":1,"start_pf":12,"end_pf":7,"start_stress":0,"end_stress":2,"start_corruption":0,"end_corruption":0,"start_fate":2,"end_fate":1,"powers_used":3,"decisive_resolutions":4,"anchor_type":"person","anchor_level":1,"casata_resource_name":null,"casata_resource_start":null,"casata_resource_end":null,"notes":""},
+    {"character_id":"G000-C02","casata":"Umbra","advancement_tier":1,"start_pf":10,"end_pf":8,"start_stress":0,"end_stress":1,"start_corruption":0,"end_corruption":1,"start_fate":2,"end_fate":0,"powers_used":4,"decisive_resolutions":3,"anchor_type":"ideal","anchor_level":1,"casata_resource_name":"Corruzione","casata_resource_start":0,"casata_resource_end":1,"notes":""},
+    {"character_id":"G000-C03","casata":"Ife","advancement_tier":1,"start_pf":11,"end_pf":9,"start_stress":0,"end_stress":3,"start_corruption":0,"end_corruption":0,"start_fate":2,"end_fate":1,"powers_used":3,"decisive_resolutions":3,"anchor_type":"community","anchor_level":1,"casata_resource_name":null,"casata_resource_start":null,"casata_resource_end":null,"notes":""},
+    {"character_id":"G000-C04","casata":"Mictlan","advancement_tier":1,"start_pf":14,"end_pf":6,"start_stress":0,"end_stress":2,"start_corruption":0,"end_corruption":0,"start_fate":2,"end_fate":2,"powers_used":4,"decisive_resolutions":3,"anchor_type":"family","anchor_level":1,"casata_resource_name":"PF","casata_resource_start":14,"casata_resource_end":6,"notes":""}
+  ],
+  "resonance_events": [
+    {
+      "event_id":"G000-S01-R01","character_id":"G000-C02","scene_id":"G000-S01-SC02","move_type":"use_power","pre_result":"7-9","fate_used_before":false,"procedure_started":true,"opportunity_spent":true,
+      "price_1_category":"Anima","price_1_text":"L'Anello imprime una Condizione che impedisce di dire spontaneamente un segreto finché non viene affrontata.","price_1_valid":true,
+      "price_2_category":"Mondo","price_2_text":"Il Velo avanza di 1 e una telecamera registra l'ombra impossibile.","price_2_valid":true,
+      "choice":"Mondo","post_result":"10+","decision_seconds":21,"anchor_used":false,"clarity_rating":5,"relevance_rating":5,"difficulty_rating":4,"consequence_returned_in_fiction":true,"notes":""
+    },
+    {
+      "event_id":"G000-S01-R02","character_id":"G000-C04","scene_id":"G000-S01-SC04","move_type":"exclusive_move","pre_result":"6-","fate_used_before":true,"procedure_started":true,"opportunity_spent":true,
+      "price_1_category":"Corpo","price_1_text":"Perde 4 PF ignorando Armatura.","price_1_valid":true,
+      "price_2_category":"Legame","price_2_text":"L'Ancora viene coinvolta nella conseguenza della scena e scopre una parte del segreto.","price_2_valid":true,
+      "choice":"rifiuto","post_result":"6-","decision_seconds":33,"anchor_used":false,"clarity_rating":5,"relevance_rating":4,"difficulty_rating":5,"consequence_returned_in_fiction":false,"notes":"Il rifiuto conserva il risultato originale."
+    }
+  ],
+  "combat_rounds": [
+    {"combat_id":"G000-S01-C01","scene_id":"G000-S01-SC04","round_number":1,"escalation_value":0,"guardian_significant_actions":4,"custode_moves":2,"ignored_threat_moves":1,"minion_group_activations":1,"damage_to_guardians":6,"damage_to_adversaries":13,"rule_lookups":1,"order_doubts":0,"possible_duplicate_enemy_action":false,"notes":""},
+    {"combat_id":"G000-S01-C01","scene_id":"G000-S01-SC04","round_number":2,"escalation_value":1,"guardian_significant_actions":4,"custode_moves":2,"ignored_threat_moves":0,"minion_group_activations":1,"damage_to_guardians":4,"damage_to_adversaries":17,"rule_lookups":0,"order_doubts":0,"possible_duplicate_enemy_action":false,"notes":""}
+  ],
+  "rule_lookups": [
+    {"lookup_id":"G000-S01-L01","rule_or_term":"Risonanza dell'Anello","expected_location":"Come si gioca","found_location":"Come si gioca","elapsed_seconds":28,"applied_correctly":true,"linked_issue_id":null,"notes":""},
+    {"lookup_id":"G000-S01-L02","rule_or_term":"fine round","expected_location":"Bilanciare il combattimento","found_location":"Come si gioca","elapsed_seconds":46,"applied_correctly":true,"linked_issue_id":"G000-S01-I01","notes":"La posizione attesa differiva da quella reale."}
+  ],
+  "issues": [
+    {"session_issue_id":"G000-S01-I01","category":"rules","severity":"P2","observed_behavior":"Il tester ha cercato la procedura di fine round nel capitolo di bilanciamento prima di trovarla nel capitolo normativo.","frequency":1,"page_or_section":"Come si gioca / combattimento","interpretation_chosen":"Regola trovata e applicata correttamente.","notes":"Fixture per validare il modello, non evidenza di una issue reale."}
+  ],
+  "post_session": {
+    "second_session_yes_count": 3,
+    "second_session_no_count": 1,
+    "hardest_ring_decision": "Scegliere tra Mondo e Anima quando entrambe le conseguenze erano concrete.",
+    "rule_confusion": "Posizione della procedura di fine round.",
+    "weak_resonance_price": "Nessuno nella fixture sintetica.",
+    "spotlight_observation": "Distribuzione abbastanza uniforme; Avalon 4 risoluzioni decisive, gli altri 3.",
+    "milan_element": "La telecamera collegata al Velo ha modificato la scena successiva.",
+    "rule_search_expectation": "Il gruppo si aspettava la fine round anche nel capitolo di bilanciamento.",
+    "remove_before_add": "Nessuna proposta: fixture sintetica.",
+    "comprehension_notes": "La fixture dimostra che i campi obbligatori possono essere compilati senza dati personali.",
+    "preference_notes": "Non applicabile a una fixture sintetica."
+  }
+}

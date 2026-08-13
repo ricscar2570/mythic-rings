@@ -6,7 +6,7 @@ section: "Le Regole"
 epigraph: "Le regole sono semplici. La vita è complessa."
 tags: [regole, sistema, combattimento]
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Come si gioca
@@ -23,9 +23,9 @@ Il ciclo di gioco è semplice:
 
 :::box[Esempio: il ciclo di gioco]{type=example}
 **Custode:** «Nel magazzino di Lambrate sentite una respirazione irregolare al piano superiore. La scala è marcia e il buio sembra inghiottire la luce.»  
-**Leila:** «Mi fondo nelle ombre e salgo senza farmi notare.»  
+**Chiara:** «Mi fondo nelle ombre e salgo senza farmi notare.»  
 **Custode:** «La scala può cedere e chi è sopra sta ascoltando. Stai usando Fondersi nelle Ombre: il costo è 0 Corruzione; tira +FAT.»  
-Leila ottiene 8. Il potere funziona, ma il Custode applica una conseguenza prevista: la scala scricchiola e la minaccia sa che qualcuno sta salendo.
+Chiara ottiene 8. Il potere funziona, ma il Custode applica una conseguenza prevista: la scala scricchiola e la minaccia sa che qualcuno sta salendo.
 :::
 
 ## Principi fondamentali
@@ -139,6 +139,68 @@ I Punti Fato:
 - non annullano automaticamente danno o morte;
 - possono essere usati su Ultimo Respiro secondo la normale procedura.
 
+
+## Risonanza dell'Anello
+
+La Risonanza è il modo in cui un Guardiano forza l'Anello a concedere **più di quanto i dadi abbiano concesso**. Non è un bonus e non richiede un nuovo tracker.
+
+### Quando puoi invocarla
+
+Dopo avere risolto eventuali Punti Fato, quando il risultato finale di **Usare Potere** oppure di una **Mossa Esclusiva di Casata che richiede un tiro** è **6−** oppure **7–9**, prima che il Custode applichi le conseguenze, puoi dichiarare: **«Faccio risuonare l'Anello.»**
+
+- **6− → 7–9**;
+- **7–9 → 10+**.
+
+Il costo base del potere, pagato prima del tiro, resta pagato. Un **2 naturale** non può essere migliorato. Sono eleggibili **soltanto** Usare Potere e le Mosse Esclusive di Casata che richiedono un tiro: non basta che un'azione sia soprannaturale nella fiction. La Risonanza non modifica **Ultimo Respiro**, non si applica a un'azione mondana, a un'attività di downtime o a un potere senza tiro. Ogni Guardiano può invocarla **una sola volta per scena**. Una scena è un'unità continua di luogo, tempo e obiettivo immediato: **non** si resetta per un nuovo round, un breve riposo, uno spostamento tattico o il passaggio in un ambiente adiacente mentre il conflitto o l'obiettivo restano gli stessi. In caso di dubbio il Custode chiarisce il cambio di scena **prima del tiro successivo**.
+
+Se usi un Punto Fato, risolvi prima il ritiro e poi decidi sulla Risonanza. Il **2 naturale si valuta sui due dadi finali dopo il ritiro**: se Fato sostituisce uno dei due 1, non è più un 2 naturale; se i due dadi finali restano 1 e 1, Risonanza non può migliorarlo. Dopo avere accettato la Risonanza non puoi usare Fato sullo stesso tiro.
+
+### Il prezzo
+
+Il Custode propone **due prezzi concreti di categorie differenti**. Deve dichiarare esattamente che cosa accadrà: nessun prezzo nascosto, nessun «lo scoprirai dopo». Se non può formulare **due prezzi realmente validi**, la procedura non parte e conservi l'uso di Risonanza della scena. Quando due prezzi validi sono stati dichiarati per intero, quell'opportunità di Risonanza è **spesa anche se li rifiuti**. Puoi accettarne uno oppure rinunciare e mantenere il risultato originale.
+
+I due prezzi devono essere **entrambi realmente applicabili** e non possono fingere come nuovo prezzo una conseguenza già interamente pagata per lo stesso tiro. Possono colpire la stessa risorsa già usata dal costo base soltanto aggiungendo davvero il proprio effetto canonico: per esempio un Mictlan può pagare il costo in PF del potere e poi scegliere **Corpo**, perdendo **altri 4 PF**. Una categoria non è un prezzo valido se in quella scena non può produrre una conseguenza concreta. In particolare:
+
+- **Corpo** è sempre disponibile finché il Guardiano è vivo e può portarlo a 0 PF;
+- **Anima** richiede una Condizione nuova o significativamente diversa, con limite concreto e una via di risoluzione dichiarabile;
+- **Legame** richiede un Legame L1+ che la conseguenza possa raggiungere in modo credibile; non scegliere un rapporto arbitrario soltanto per renderlo vulnerabile;
+- **Mondo** richiede che il Velo Tracker possa avanzare. A **Velo 12** non può essere offerto, salvo che la campagna abbia già stabilito una procedura esplicita oltre la Rivelazione.
+
+### Formulare due prezzi in meno di 45 secondi
+
+1. **Guarda la scena:** che cosa può essere realmente colpito adesso o come conseguenza immediata?
+2. **Elimina le categorie non valide:** niente Legame senza un L1+ raggiungibile, niente Anima senza limite e via di risoluzione, niente Mondo a Velo 12.
+3. **Scegli due categorie differenti.**
+4. **Dichiara effetto + prova concreta:** «Corpo, perdi 4 PF e la luce ti brucia le mani» è completo; «pagherai qualcosa» non lo è.
+5. **Lascia scegliere:** se il giocatore accetta, il risultato originale viene sostituito da quello migliorato. Non applicare anche la conseguenza della fascia precedente.
+
+La libreria di sviluppo `docs/rules/RISONANZA_PRICE_LIBRARY.md` contiene sei esempi per ciascuna Casata e categoria, più esempi di prezzi non validi. Nel manuale pubblicato ne resterà soltanto una selezione dopo il blind playtest.
+
+| Prezzo | Effetto canonico |
+|---|---|
+| **Corpo** | Dopo l'effetto migliorato perdi **4 PF**, ignorando l'Armatura. La perdita non può essere ridotta, convertita o trasferita. Se raggiungi 0 PF, attiva Ultimo Respiro dopo avere risolto l'effetto. |
+| **Anima** | Ricevi una **Condizione dell'Anello** con un limite concreto, collegata all'impulso dell'Anello della tua Casata. Non scompare con Riprendersi o con il semplice passare del tempo: richiede una scena significativa che la affronti o un downtime appropriato. |
+| **Legame** | Il Custode nomina un Legame esistente e dichiara una conseguenza concreta su fiducia, sicurezza, promessa, debito o esposizione. Il Livello non scende automaticamente senza una rottura realmente avvenuta nella fiction. |
+| **Mondo** | Il **Velo Tracker avanza di 1** e resta una prova o traccia soprannaturale reale che richiede un'azione concreta per essere contenuta. |
+
+Il risultato migliorato viene risolto, quindi il prezzo si applica immediatamente **prima di qualsiasi nuova azione**. Un prezzo di Risonanza non può essere annullato da un effetto generico di cura, protezione o conversione; un'eccezione deve dichiarare esplicitamente di modificare la Risonanza.
+
+### Risolvere una Condizione dell'Anello
+
+Quando accetti **Anima**, il Custode deve avere già dichiarato anche la via di risoluzione. La Condizione viene rimossa alla fine di una **scena significativa** in cui il Guardiano soddisfa davvero quella via e ne affronta le conseguenze. Non serve un tiro se non esiste un rischio reale. Se la affronti durante il downtime, dedica a questo scopo l'attività principale più coerente e applica la procedura del Capitolo 23. **Riprendersi, Recuperare, una cura o il semplice passare del tempo non rimuovono da soli una Condizione dell'Anello.**
+
+:::box[Esempio: Vincere e pagare]{type=example}
+Elena usa **Parlare con i Morti**, paga il costo e ottiene 6. Ha già deciso di non spendere Fato. Dichiara la Risonanza. Il Custode offre **Corpo: perdi 4 PF** oppure **Mondo: il Velo Tracker avanza di 1 perché tutte le telecamere del corridoio registrano per tre secondi una figura impossibile**. Elena accetta Mondo. Il risultato diventa 7–9 e si risolve come tale; poi il Velo avanza. Il 6− originario non genera anche una Mossa dura.
+:::
+
+## Ancora dell'Anello
+
+Ogni Guardiano designa uno dei propri **Legami L1+** come **Ancora dell'Anello**: la relazione che gli ricorda chi è quando il potere pretende di diventare identità. L'Ancora non concede bonus aggiuntivi.
+
+**Una volta per sessione**, se l'Ancora è direttamente presente o in contatto significativo nella scena e il Custode offre **Anima** come uno dei prezzi di Risonanza, puoi chiedere di sostituire quel prezzo con **Legame** coinvolgendo l'Ancora. Il Custode dichiara il nuovo prezzo; puoi ancora accettarlo oppure rinunciare alla Risonanza. Se l'altro prezzo era già **Legame**, questa sostituzione è l'unica eccezione al requisito di categorie differenti: i due prezzi devono comunque descrivere conseguenze materialmente diverse.
+
+Se il Legame-Ancora scende a L0 o viene spezzato, resti senza Ancora finché una scena significativa non designa un altro Legame L1+. Non puoi scegliere una nuova Ancora nel mezzo della risoluzione che ha spezzato la precedente.
+
 ## Punti Ferita
 
 I Punti Ferita misurano la capacità di restare operativi, non soltanto lesioni anatomiche.
@@ -208,10 +270,10 @@ Un solo Legame può modificare lo stesso tiro. La persona legata deve essere dir
 | Tipo | Quando è pertinente | Capacità di livello 3 |
 |---|---|---|
 | Protettore | Quando rischi per difendere la persona legata | **Interposizione:** una volta per sessione prendi al suo posto una conseguenza fisica appena annunciata |
-| Confidente | Quando ti apri, ti ricomponi o resisti grazie al suo sostegno | **Catarsi:** una volta per sessione, dopo una scena sincera, riduci di 1d4 lo Stress |
+| Confidente | Quando ti apri, ti ricomponi o resisti grazie al suo sostegno | **Catarsi:** una volta per sessione, dopo una scena sincera, recuperi 1d4 Stress |
 | Rivale | Quando affronti un rischio per superarlo o dimostrargli qualcosa | **Sprone:** una volta per sessione ritira un dado di una Mossa pertinente, senza spendere Fato |
 | Mentore | Quando applichi direttamente un insegnamento o una conoscenza ricevuta | **Intuizione:** una volta per sessione poni una domanda aggiuntiva dopo Leggere la Situazione o Investigare |
-| Amato | Quando agisci per proteggerlo, raggiungerlo o mantenere una promessa fatta a lui | **Ancora:** una volta per sessione ignora 1 Stress appena ottenuto o resta cosciente fino alla fine della scena nonostante una Condizione |
+| Amato | Quando agisci per proteggerlo, raggiungerlo o mantenere una promessa fatta a lui | **Radicamento:** una volta per sessione ignora 1 Stress appena ottenuto o resta cosciente fino alla fine della scena nonostante una Condizione |
 
 Le capacità di Legame non modificano Ultimo Respiro, che resta un tiro senza bonus.
 
@@ -227,37 +289,59 @@ Quando trascorri almeno 10 minuti ininterrotti in un luogo relativamente sicuro 
 
 Un Confidente L2+ che ti assiste attivamente concede +1, una sola volta per sessione per quel Legame.
 
-- **10+:** recuperi 1d6 PF e riduci lo Stress di 1.
-- **7–9:** scegli: recuperi 1d4 PF oppure riduci lo Stress di 1.
+- **10+:** recuperi 1d6 PF e recuperi 1 Stress.
+- **7–9:** scegli: recuperi 1d4 PF oppure recuperi 1 Stress.
 - **6−:** non recuperi; il Custode mostra un pericolo, un costo o un'urgenza con una Mossa morbida.
 
 Se recuperi PF e consumi un medikit, ottieni 2 PF aggiuntivi. Puoi attivare Riprendersi al massimo una volta per scena o per sosta nella stessa location.
 
 ## Stress
 
-Lo Stress misura esaurimento, pressione emotiva e costo spirituale. Va da 0 a 10. Avalon e Ife lo usano come risorsa primaria; ogni Guardiano può comunque subirlo per eventi traumatici.
+Lo Stress misura esaurimento, pressione emotiva e costo spirituale. Va da **0 a 10**. Avalon e Ife lo usano come risorsa primaria; ogni Guardiano può comunque subirlo per eventi traumatici.
 
-### Acquisire Stress
+### Verbi canonici delle risorse
 
-Lo Stress aumenta quando:
+- **Subire X Stress** significa aumentare il valore di X, fino a 10.
+- **Recuperare X Stress** significa ridurre il valore di X, fino a 0.
+- **Spendere X PF** significa pagare volontariamente un costo in PF: non è danno e l'Armatura non lo riduce.
+- **Subire danno** segue le regole di Danno e Armatura.
+- **Perdere PF** è una perdita diretta soltanto quando una regola usa esplicitamente questa formula, come il prezzo Corpo della Risonanza.
+
+### Subire Stress
+
+Subisci Stress quando:
 
 - un potere ne prevede il costo;
 - una conseguenza lo infligge;
 - il Guardiano assiste a un orrore capace di spezzarne le certezze;
 - tradisce un valore o fallisce una responsabilità centrale, se il gruppo ritiene la conseguenza appropriata.
 
-### Soglie
+### Soglie e Burnout
 
 - **0–7:** nessun costo aggiuntivo.
-- **8–9:** i poteri che costano Stress richiedono 1 Stress aggiuntivo.
-- **10, Burnout:** un potere può ancora essere usato, ma il costo è raddoppiato e il Guardiano deve Sfidare il Pericolo +FAT. Con 6− subisce 1d6 danni puri e il potere non produce l'effetto desiderato.
+- **8–9:** i poteri che costano Stress richiedono **1 Stress aggiuntivo**.
+- **10:** sei in **Burnout**. Lo Stress non supera 10, ma i poteri restano possibili attraverso il sovraccarico descritto sotto.
 
-A 10 Stress il Custode descrive anche una manifestazione del Burnout concordata con il giocatore: panico, dissociazione, rabbia, collasso o altra risposta coerente e rispettosa dei limiti del tavolo.
+Quando usi un potere con costo in Stress, **calcola prima il costo finale**. Aumenta lo Stress fino a 10. Ogni punto del costo che eccederebbe 10 diventa **sovraccarico di Burnout**: perdi **2 PF** per punto, ignorando Armatura. Questa perdita non è danno e non può essere ridotta, convertita o trasferita.
 
-### Ridurre Stress
+Se almeno 1 punto va in sovraccarico, prima del tiro del potere devi **Sfidare il Pericolo +FAT**:
+
+- **10+:** procedi con il tiro del potere;
+- **7–9:** procedi, ma il Custode dichiara un costo, una posizione peggiore o un'esposizione immediata che **non può essere ulteriore Stress**;
+- **6−:** subisci **1d6 danni puri** e il potere non produce l'effetto desiderato. Il costo già pagato resta pagato.
+
+Un costo scritto come **«porta lo Stress a 10»** aumenta lo Stress fino a 10. Se sei già a 10, conta come **1 punto di Stress in sovraccarico** per attivare la procedura di Burnout.
+
+:::box[Esempio: entrare in Burnout]{type=example}
+Sara è a Stress 9 e usa un potere dal costo base 2. A 8–9 il costo finale è 3. Un punto porta lo Stress a 10; i due punti eccedenti diventano sovraccarico e le fanno perdere 4 PF. Sara tira **Sfidare il Pericolo +FAT**: se ottiene 7+, può poi tirare normalmente per il potere; con 6− subisce anche 1d6 danni puri e l'effetto non si produce.
+:::
+
+A Stress 10 il Custode descrive anche una manifestazione del Burnout concordata con il giocatore: panico, dissociazione, rabbia, collasso o altra risposta coerente e rispettosa dei limiti del tavolo. La descrizione non sottrae agency né aggiunge penalità non dichiarate.
+
+### Recuperare Stress
 
 - Riprendersi, secondo la Mossa.
-- Una notte sicura: −1 Stress.
+- Una notte sicura: recuperi 1 Stress.
 - Una scena significativa con un Confidente: effetto previsto dal Legame.
 - Attività di Downtime dedicate.
 - Poteri che dichiarano esplicitamente il recupero.
@@ -280,7 +364,7 @@ La Corruzione si riduce soltanto attraverso procedure dichiarate: redenzione sig
 
 ## Nessun ciclo a guadagno netto
 
-Nessuna combinazione ripetibile può recuperare più risorse di quante ne consumi senza tempo, rischio o costo narrativo. Quando due effetti creano un ciclo di cura, riduzione dello Stress o generazione di risorse, applica questa regola e interrompi il ciclo. Il beneficio può funzionare una volta nella scena, poi richiede un cambiamento reale della fiction.
+Nessuna combinazione ripetibile può recuperare più risorse di quante ne consumi senza tempo, rischio o costo narrativo. Quando due effetti creano un ciclo di cura, recupero dello Stress o generazione di risorse, applica questa regola e interrompi il ciclo. Il beneficio può funzionare una volta nella scena, poi richiede un cambiamento reale della fiction.
 
 # Combattimento
 
@@ -309,16 +393,22 @@ L'ordine viene deciso dal gruppo e può cambiare ogni round. Parlare brevemente,
 
 ## Quando agiscono i nemici
 
-Una minaccia agisce:
+Il Custode non tira. Per evitare che una stessa creatura agisca due volte per errore, considera ogni avversario significativo — oppure un gruppo di minion gestito insieme — una **unità di minaccia** con **un budget di Azione Significativa per round**, salvo eccezione esplicita nello stat block.
+
+Una minaccia può spendere quel budget:
 
 1. come conseguenza di un 7–9 o 6−;
-2. quando una minaccia annunciata viene ignorata;
-3. alla fine del round, se è ancora libera di agire.
+2. quando una minaccia chiaramente annunciata viene ignorata;
+3. alla fine del round, **solo se non lo ha già speso**.
 
-Alla fine del round il Custode sceglie una Mossa per ogni minaccia significativa, ma combina minion simili in una sola azione per non rallentare il gioco.
+Conta come **Azione Significativa** infliggere il danno pieno dello stat block, imporre una Condizione, spostare forzatamente un bersaglio, impadronirsi di un obiettivo o attivare una Mossa offensiva nominata. Un telegraph, una rivelazione, un riposizionamento senza conseguenza o una reazione puramente difensiva non spendono il budget.
+
+Se un tiro successivo richiede una conseguenza ma la minaccia coinvolta ha già speso il proprio budget, il Custode usa **pressione senza seconda attivazione**: peggiora la posizione, separa risorse, avanza un Clock, mostra un nuovo pericolo o porta in scena un'altra minaccia. Non infligge di nuovo il danno pieno della stessa creatura.
+
+Alla fine del round agiscono soltanto le unità di minaccia ancora libere; poi tutti i budget si ripristinano. Minion simili combinati in un gruppo contano come **una sola unità**, non come un'attivazione per creatura.
 
 :::box[Esempio: azione nemica]{type=example}
-Il Dullahan alza la catena e annuncia che trascinerà Marco giù dal cavalcavia. Marco ignora la minaccia per liberare un ostaggio. Il Custode rende concreta la conseguenza: la catena lo avvolge, infligge il danno dello stat block e lo trascina verso il bordo. Non è necessario un tiro del Dullahan.
+Il Dullahan alza la catena e annuncia che trascinerà Marco giù dal cavalcavia. Marco ignora la minaccia per liberare un ostaggio. Il Custode rende concreta la conseguenza: la catena lo avvolge, infligge il danno dello stat block e lo trascina verso il bordo. Il Dullahan ha ora **speso la propria Azione Significativa del round**. Se un altro Guardiano ottiene subito 7–9 contro di lui, il Custode può far perdere posizione o creare un nuovo pericolo, ma non infligge di nuovo il danno pieno del Dullahan nello stesso round salvo una capacità esplicita.
 :::
 
 ## Attaccare e Difendere
@@ -365,7 +455,9 @@ L'Escalation accelera gli scontri senza alterare la distribuzione del 2d6. Si ap
 | 4 | +2 |
 | 5+ | +3 |
 
-Il bonus si applica una volta per fonte di danno, non a ogni bersaglio di un'area. Torna a 0 quando lo scontro termina o cambia completamente scena.
+Il bonus si applica **al massimo una volta per Azione Principale del Guardiano che infligge danno**. Non si moltiplica per numero di colpi o bersagli. Se la stessa Azione Principale infligge danno più volte o a più bersagli, il giocatore sceglie **una sola istanza o un solo bersaglio** a cui aggiungere il bonus.
+
+Non ricevono Escalation gli attacchi bonus, le reazioni, i danni persistenti nei round successivi o le azioni autonome di una evocazione che non consumano l'Azione Principale del Guardiano. Se il Guardiano spende invece la propria Azione Principale per comandare direttamente un'evocazione ad attaccare, può applicare il bonus una sola volta a un suo bersaglio. Torna a 0 quando lo scontro termina o cambia completamente scena.
 
 ## Fuga, resa e obiettivi diversi dall'eliminazione
 

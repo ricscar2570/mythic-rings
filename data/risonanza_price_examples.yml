@@ -1,0 +1,402 @@
+version: 0.9.0-beta.2
+purpose: Esempi operativi per MR-RULE-015; non introducono nuove regole.
+casate:
+  Avalon:
+    Corpo:
+    - id: AVA-COR-01
+      scene: Scudo Radiante davanti a un autobus
+      price: 'La luce rifluisce nelle braccia: perdi 4 PF ignorando Armatura; le mani restano ustionate e tremanti per la
+        scena.'
+    - id: AVA-COR-02
+      scene: Lama di luce contro un demone
+      price: 'Il contraccolpo attraversa spalla e costole: perdi 4 PF ignorando Armatura; resta un segno luminoso sotto la
+        pelle.'
+    - id: AVA-COR-03
+      scene: Guarigione sotto il fuoco
+      price: 'Il calore passa attraverso il tuo corpo prima di raggiungere l’alleato: perdi 4 PF ignorando Armatura.'
+    - id: AVA-COR-04
+      scene: Esorcismo nel Duomo
+      price: 'La voce si spezza e sangue caldo scende dal naso: perdi 4 PF ignorando Armatura.'
+    - id: AVA-COR-05
+      scene: Barriera contro un crollo
+      price: 'L’Anello scarica il peso della barriera sul tuo corpo: perdi 4 PF ignorando Armatura.'
+    - id: AVA-COR-06
+      scene: Rivelazione di una presenza nascosta
+      price: 'La luce ti attraversa gli occhi: perdi 4 PF ignorando Armatura; per qualche secondo vedi soltanto sagome dorate.'
+    Anima:
+    - id: AVA-ANI-01
+      condition: Vincolato
+      limit: Finché la persona che hai promesso di proteggere resta in pericolo immediato, non puoi abbandonarla volontariamente
+        per un obiettivo estraneo senza dichiarare che infrangi il giuramento.
+      resolution: Rinegozia o infrangi il giuramento in una scena significativa e affrontane la conseguenza.
+    - id: AVA-ANI-02
+      condition: Giudice inflessibile
+      limit: Quando hai prove concrete di un torto nella scena, non puoi accettare un compromesso che lo ignori senza dichiarare
+        quale valore stai sacrificando.
+      resolution: Riconosci pubblicamente un tuo giudizio errato e ripara almeno una conseguenza che hai causato.
+    - id: AVA-ANI-03
+      condition: Martire
+      limit: Quando un alleato subisce una conseguenza fisica che potresti assumerti credibilmente, devi scegliere esplicitamente
+        se interporti o lasciarla ricadere su di lui.
+      resolution: Chiedi aiuto invece di assorbire da solo un pericolo reale e accetta la risposta altrui.
+    - id: AVA-ANI-04
+      condition: Parola scolpita
+      limit: 'Una promessa pronunciata davanti all’Anello diventa vincolante: non puoi agire volontariamente contro di essa
+        senza dichiararne la rottura.'
+      resolution: Sciogli la promessa con la persona coinvolta oppure spezzala apertamente e affronta la perdita di fiducia.
+    - id: AVA-ANI-05
+      condition: Luce senza ombre
+      limit: Quando sospetti una menzogna rilevante, non puoi fingere di non averla notata per comodità.
+      resolution: Accetta che una verità resti ambigua e prendi una decisione senza costringere nessuno a confessare.
+    - id: AVA-ANI-06
+      condition: Custode di tutti
+      limit: Quando civili indifesi sono in pericolo immediato e puoi intervenire, devi riconoscere la loro sorte prima di
+        perseguire un vantaggio personale.
+      resolution: Scegli consapevolmente un limite alla tua responsabilità in una scena e lascia che qualcun altro decida
+        cosa proteggere.
+    Legame:
+    - id: AVA-LEG-01
+      target: Confidente
+      consequence: 'Il bagliore dell’Anello appare nel messaggio video: il Confidente capisce che gli hai nascosto la reale
+        portata del pericolo e pretende spiegazioni prima di aiutarti ancora.'
+    - id: AVA-LEG-02
+      target: Amato
+      consequence: La persona amata viene identificata dalle telecamere accanto a te durante l’anomalia; la sua sicurezza
+        diventa un problema concreto nella prossima scena.
+    - id: AVA-LEG-03
+      target: Mentore
+      consequence: Il Mentore scopre che hai piegato il risultato con la Risonanza e ti chiede di consegnargli temporaneamente
+        una prova o un artefatto per verificare se sei ancora affidabile.
+    - id: AVA-LEG-04
+      target: Rivale
+      consequence: Il Rivale assiste alla tua esitazione e rende pubblica nel vostro ambiente una versione umiliante ma plausibile
+        della scena; la prossima richiesta di cooperazione parte da sfiducia.
+    - id: AVA-LEG-05
+      target: Protettore
+      consequence: Per coprire la tua traccia il Protettore deve esporsi con nome e ruolo; ora un antagonista sa chi contattare
+        per raggiungerti.
+    - id: AVA-LEG-06
+      target: Legame istituzionale
+      consequence: Un contatto nella Società del Velo falsifica un rapporto per proteggerti; conserva però una copia e ora
+        possiede un debito concreto nei tuoi confronti.
+    Mondo:
+    - id: AVA-MON-01
+      scene: Scudo Radiante in metropolitana
+      trace: 'Velo +1: una telecamera registra un arco di luce che devia schegge senza sorgente fisica; il file resta nel
+        sistema di sicurezza.'
+    - id: AVA-MON-02
+      scene: Lama di luce in strada
+      trace: 'Velo +1: sull’asfalto rimane una cauterizzazione geometrica che un tecnico comunale fotografa e archivia.'
+    - id: AVA-MON-03
+      scene: Guarigione in pronto soccorso
+      trace: 'Velo +1: gli esami mostrano una rigenerazione impossibile tra due scansioni a pochi minuti di distanza; il referto
+        resta firmato.'
+    - id: AVA-MON-04
+      scene: Esorcismo in condominio
+      trace: 'Velo +1: tutti gli smartphone del piano registrano per tre secondi la stessa voce in una lingua che nessuno
+        stava parlando.'
+    - id: AVA-MON-05
+      scene: Barriera nel traffico
+      trace: 'Velo +1: decine di cruscotti registrano un impatto fermato nel vuoto; almeno un video viene caricato prima del
+        contenimento.'
+    - id: AVA-MON-06
+      scene: Rivelazione al Castello
+      trace: 'Velo +1: un visitatore fotografa figure dorate riflesse in una vetrina dove non c’era nessuno; conserva l’originale
+        RAW.'
+  Umbra:
+    Corpo:
+    - id: UMB-COR-01
+      scene: Fondersi nelle Ombre sotto inseguimento
+      price: 'L’ombra ti sottrae calore e respiro: perdi 4 PF ignorando Armatura; la pelle resta gelida.'
+    - id: UMB-COR-02
+      scene: Lama d’Ombra
+      price: 'La lama beve anche da te: perdi 4 PF ignorando Armatura; un taglio nero compare sul palmo.'
+    - id: UMB-COR-03
+      scene: Attraversamento di una zona buia
+      price: 'La pressione del Piano delle Ombre comprime il torace: perdi 4 PF ignorando Armatura.'
+    - id: UMB-COR-04
+      scene: Occultare un alleato
+      price: 'Una parte della sua sagoma viene sottratta alla tua: perdi 4 PF ignorando Armatura.'
+    - id: UMB-COR-05
+      scene: Leggere un segreto nelle ombre
+      price: 'Il sussurro ti provoca un’emorragia dall’orecchio: perdi 4 PF ignorando Armatura.'
+    - id: UMB-COR-06
+      scene: Spegnere una presenza soprannaturale
+      price: 'Le ombre mordono il tuo contorno prima di obbedire: perdi 4 PF ignorando Armatura.'
+    Anima:
+    - id: UMB-ANI-01
+      condition: Sospettoso
+      limit: Quando una decisione dipende da un’informazione sensibile, non puoi trattare una sola fonte come sufficiente
+        se puoi verificarla concretamente.
+      resolution: Affida volontariamente un segreto rilevante a qualcuno e accetta di dipendere dal suo giudizio.
+    - id: UMB-ANI-02
+      condition: Segreto necessario
+      limit: 'Quando scopri un fatto compromettente su qualcuno presente nella scena, non puoi rivelarlo impulsivamente: devi
+        scegliere chi ne ha davvero bisogno e assumerti la responsabilità del silenzio.'
+      resolution: Rivela volontariamente un tuo segreto capace di metterti in svantaggio e accetta ciò che l’altro ne farà.
+    - id: UMB-ANI-03
+      condition: Controllo delle uscite
+      limit: Entrando in un luogo teso devi identificare una via di fuga o una leva prima di poterti affidare completamente
+        a qualcuno.
+      resolution: Resta volontariamente in una situazione senza via di fuga preparata e lascia che un alleato scelga il piano.
+    - id: UMB-ANI-04
+      condition: Volto doppio
+      limit: Quando due gruppi incompatibili ti chiedono una posizione, non puoi rispondere con la stessa identità o versione
+        dei fatti a entrambi.
+      resolution: Scegli una sola versione di te davanti a persone che conoscono entrambe le tue facce e accetta la perdita
+        di una copertura.
+    - id: UMB-ANI-05
+      condition: Debito d’ombra
+      limit: Ogni favore ottenuto attraverso un segreto deve essere registrato come qualcosa che dovrai restituire; non puoi
+        trattarlo come gratuito.
+      resolution: Restituisci un favore senza ottenere informazioni, influenza o sicurezza in cambio.
+    - id: UMB-ANI-06
+      condition: Nessuna coincidenza
+      limit: Quando un dettaglio improbabile compare due volte, non puoi ignorarlo come caso senza dedicargli almeno una verifica
+        concreta.
+      resolution: Lascia andare consapevolmente una pista plausibile e affidati alla lettura di un altro Guardiano.
+    Legame:
+    - id: UMB-LEG-01
+      target: Confidente
+      consequence: Il Confidente scopre che hai verificato di nascosto una sua affermazione; la prossima confidenza richiede
+        che tu ammetta apertamente la sorveglianza.
+    - id: UMB-LEG-02
+      target: Amato
+      consequence: Una tua copertura usa senza consenso il nome dell’Amato; una persona pericolosa ora collega quell’identità
+        alla tua attività.
+    - id: UMB-LEG-03
+      target: Mentore
+      consequence: Il Mentore riconosce una tecnica proibita nelle tue ombre e sospende l’accesso a una sua rete di contatti
+        finché non chiarisci cosa hai fatto.
+    - id: UMB-LEG-04
+      target: Rivale
+      consequence: Il Rivale ottiene una copia di un segreto che pensavi esclusivo e può usarlo come leva nella prossima trattativa.
+    - id: UMB-LEG-05
+      target: Protettore
+      consequence: Per nasconderti, il Protettore mente a qualcuno a cui tiene; la sua relazione viene messa sotto pressione
+        e sa che la causa sei tu.
+    - id: UMB-LEG-06
+      target: Contatto professionale
+      consequence: Un informatore viene esposto come tua fonte; resta vivo, ma non potrà aiutarti senza chiedere protezione
+        o una via d’uscita.
+    Mondo:
+    - id: UMB-MON-01
+      scene: Fondersi nelle Ombre in un centro commerciale
+      trace: 'Velo +1: le telecamere perdono soltanto la tua sagoma mentre tutto il resto continua a registrare; il pattern
+        viene segnalato come anomalia.'
+    - id: UMB-MON-02
+      scene: Lama d’Ombra
+      trace: 'Velo +1: la ferita non riflette luce nelle fotografie forensi e il medico conserva immagini ad alta risoluzione.'
+    - id: UMB-MON-03
+      scene: Passaggio attraverso un’ombra
+      trace: 'Velo +1: due sistemi di accesso registrano lo stesso badge a chilometri di distanza nello stesso secondo.'
+    - id: UMB-MON-04
+      scene: Interrogare un’ombra
+      trace: 'Velo +1: una registrazione ambientale contiene risposte vocali che nessun microfono avrebbe potuto captare.'
+    - id: UMB-MON-05
+      scene: Occultamento di gruppo
+      trace: 'Velo +1: un algoritmo di sorveglianza segnala una zona nera che si muove contro le fonti luminose.'
+    - id: UMB-MON-06
+      scene: Spegnere un rituale
+      trace: 'Velo +1: tutte le lampade del quartiere proiettano per un istante ombre orientate verso lo stesso punto; diversi
+        civili le fotografano.'
+  Ife:
+    Corpo:
+    - id: IFE-COR-01
+      scene: Crescita Rapida attraverso cemento
+      price: 'La crescita ti prosciuga come febbre: perdi 4 PF ignorando Armatura; vene verdi affiorano per la scena.'
+    - id: IFE-COR-02
+      scene: Tocco Vitale su un ferito grave
+      price: 'Una parte della ferita passa attraverso di te: perdi 4 PF ignorando Armatura.'
+    - id: IFE-COR-03
+      scene: Sensi Animali prolungati
+      price: 'Il corpo reagisce a troppi stimoli: perdi 4 PF ignorando Armatura; tremori e nausea rendono visibile lo sforzo.'
+    - id: IFE-COR-04
+      scene: Radici contro un veicolo
+      price: 'La tensione delle radici si riflette su tendini e schiena: perdi 4 PF ignorando Armatura.'
+    - id: IFE-COR-05
+      scene: Purificare un luogo contaminato
+      price: 'Assorbi per un istante ciò che la vita espelle: perdi 4 PF ignorando Armatura.'
+    - id: IFE-COR-06
+      scene: Proteggere un ecosistema dalla magia
+      price: 'L’Anello sottrae energia metabolica per sostenere il luogo: perdi 4 PF ignorando Armatura.'
+    Anima:
+    - id: IFE-ANI-01
+      condition: Sovraccarico empatico
+      limit: Quando percepisci sofferenza immediata che puoi realmente alleviare, devi almeno riconoscerla e scegliere consapevolmente
+        se intervenire.
+      resolution: Stabilisci un confine esplicito in una scena significativa e accetta il costo sociale o morale di quel limite.
+    - id: IFE-ANI-02
+      condition: Niente è scarto
+      limit: Quando una creatura vivente ferita viene trattata come sacrificabile, non puoi ignorarla senza dichiarare perché
+        la sua vita vale meno dell’obiettivo.
+      resolution: Lascia andare consapevolmente qualcosa che non puoi salvare e resta presente alle conseguenze senza tentare
+        di controllarle.
+    - id: IFE-ANI-03
+      condition: Cura prima di vittoria
+      limit: Quando un alleato è gravemente ferito e puoi aiutarlo, devi scegliere apertamente tra cura e obiettivo prima
+        di compiere un’azione offensiva estranea.
+      resolution: Chiedi a una persona ferita che cosa vuole davvero e rispetta la sua scelta anche se preferisce rischiare.
+    - id: IFE-ANI-04
+      condition: Radici profonde
+      limit: Quando una comunità con cui hai creato un legame è minacciata, non puoi trattarla come semplice terreno di missione.
+      resolution: Affida a quella comunità una decisione che ti riguarda e accetta che possa scegliere diversamente da te.
+    - id: IFE-ANI-05
+      condition: Ciclo incompleto
+      limit: Quando una fine naturale è già avvenuta, non puoi tentare di invertirla soltanto per evitare il lutto senza nominare
+        chi pagherebbe il prezzo.
+      resolution: Partecipa a un rito di commiato o chiusura e rinuncia a un intervento che avrebbe prolungato artificialmente
+        il legame.
+    - id: IFE-ANI-06
+      condition: Crescita incontrollata
+      limit: Quando puoi risolvere un problema facendo crescere o moltiplicare qualcosa, devi considerare chi dovrà convivere
+        con ciò che lasci.
+      resolution: Riduci volontariamente la scala di un tuo potere per proteggere l’equilibrio del luogo, accettando un risultato
+        meno comodo.
+    Legame:
+    - id: IFE-LEG-01
+      target: Confidente
+      consequence: Il Confidente ti vede assorbire il dolore altrui e teme che tu non sappia più dire di no; prima di sostenerti
+        ancora chiede un limite concreto.
+    - id: IFE-LEG-02
+      target: Amato
+      consequence: L’Amato viene coinvolto nell’assistenza a qualcuno che hai salvato; ora conosce una parte della tua vita
+        che volevi separata.
+    - id: IFE-LEG-03
+      target: Mentore
+      consequence: Il Mentore ritiene che tu abbia imposto la tua idea di “cura” senza ascoltare; ti chiede di restituire
+        decisione alla comunità coinvolta.
+    - id: IFE-LEG-04
+      target: Rivale
+      consequence: Il Rivale prende in carico persone che tu non hai potuto salvare e guadagna fiducia pubblica a tue spese.
+    - id: IFE-LEG-05
+      target: Protettore
+      consequence: Per permetterti di continuare, il Protettore resta indietro con feriti o civili; il prossimo pericolo lo
+        trova separato dal gruppo.
+    - id: IFE-LEG-06
+      target: Legame comunitario
+      consequence: Una comunità che ti considera alleato scopre che la tua magia ha modificato il luogo senza consultarla
+        e pretende riparazione prima di offrirti accesso.
+    Mondo:
+    - id: IFE-MON-01
+      scene: Crescita Rapida in strada
+      trace: 'Velo +1: radici spaccano l’asfalto formando in pochi secondi anelli di crescita impossibili da spiegare; restano
+        campioni biologici.'
+    - id: IFE-MON-02
+      scene: Tocco Vitale in ospedale
+      trace: 'Velo +1: una coltura cellulare prelevata dopo la guarigione mostra crescita accelerata e viene conservata dal
+        laboratorio.'
+    - id: IFE-MON-03
+      scene: Sensi Animali
+      trace: 'Velo +1: uno stormo intero cambia direzione per seguire i tuoi gesti davanti a decine di testimoni e a una webcam
+        urbana.'
+    - id: IFE-MON-04
+      scene: Barriera vegetale
+      trace: 'Velo +1: piante fuori stagione crescono da terreno sterile e restano vive; un botanico raccoglie campioni.'
+    - id: IFE-MON-05
+      scene: Purificazione dell’acqua
+      trace: 'Velo +1: contaminanti spariscono da un tratto di canale in pochi secondi e i sensori registrano il salto.'
+    - id: IFE-MON-06
+      scene: Richiamo della fauna
+      trace: 'Velo +1: animali domestici e selvatici convergono ordinatamente sullo stesso isolato; i video sincronizzati
+        iniziano a circolare.'
+  Mictlan:
+    Corpo:
+    - id: MIC-COR-01
+      scene: Parlare con i Morti dopo avere già speso PF
+      price: 'La Risonanza pretende altro sangue oltre al costo base: perdi altri 4 PF ignorando Armatura; Sangue Tenace non
+        può convertirli.'
+    - id: MIC-COR-02
+      scene: Tocco del Gelo
+      price: 'Il gelo entra nelle ossa: perdi 4 PF ignorando Armatura; le labbra diventano livide per la scena.'
+    - id: MIC-COR-03
+      scene: Vedere Oltre il Velo
+      price: 'Per un istante il cuore rallenta quasi a fermarsi: perdi 4 PF ignorando Armatura.'
+    - id: MIC-COR-04
+      scene: Vincolare uno spirito
+      price: 'Il legame funerario passa attraverso il tuo sangue: perdi 4 PF ignorando Armatura.'
+    - id: MIC-COR-05
+      scene: Aprire un passaggio ai morti
+      price: 'L’Anello prende quattro battiti che non torneranno nella scena: perdi 4 PF ignorando Armatura.'
+    - id: MIC-COR-06
+      scene: Proteggere qualcuno da un fantasma
+      price: 'La presenza attraversa te prima di essere respinta: perdi 4 PF ignorando Armatura.'
+    Anima:
+    - id: MIC-ANI-01
+      condition: Eco insistente
+      limit: Il nome, la voce o il ricordo di un morto collegato alla scena continua a imporsi finché non affronti ciò che
+        è rimasto incompiuto.
+      resolution: Porta a compimento la richiesta oppure rifiutala consapevolmente in una scena e affronta ciò che il rifiuto
+        lascia dietro di sé.
+    - id: MIC-ANI-02
+      condition: Conto dei morti
+      limit: Dopo una scena con vittime, non puoi passare oltre senza nominare almeno chi è morto per conseguenza diretta
+        delle vostre scelte.
+      resolution: 'Restituisci un nome alla comunità dei vivi: informa, commemora o registra una vittima che sarebbe rimasta
+        anonima.'
+    - id: MIC-ANI-03
+      condition: Nessuna morte muta
+      limit: Quando uno spirito può comunicare in modo sicuro, non puoi trattarlo soltanto come ostacolo senza ascoltare almeno
+        una sua richiesta.
+      resolution: Ascolta un morto senza promettere nulla e poi scegli apertamente di negargli ciò che chiede.
+    - id: MIC-ANI-04
+      condition: Confine sottile
+      limit: Quando sei davanti a una persona morente, percepisci entrambe le possibilità e devi dichiarare se stai proteggendo
+        la vita o accettando la fine.
+      resolution: Accompagna una fine senza usare magia per rimandarla e resta presente con chi sopravvive.
+    - id: MIC-ANI-05
+      condition: Debito ancestrale
+      limit: Quando invochi il nome di un antenato o morto per ottenere autorità, devi riconoscere pubblicamente che la tua
+        decisione non è soltanto tua.
+      resolution: Prendi una decisione importante senza invocare i morti e accetta di portarne personalmente la responsabilità.
+    - id: MIC-ANI-06
+      condition: Oggetto funerario
+      limit: Un oggetto appartenuto a un morto collegato alla scena acquista per te un peso rituale e non può essere usato
+        come semplice strumento.
+      resolution: Restituisci, seppellisci o consegna l’oggetto a chi ne deve decidere il destino, rinunciando al vantaggio
+        che offriva.
+    Legame:
+    - id: MIC-LEG-01
+      target: Confidente
+      consequence: Il Confidente sente una voce morta attraverso il tuo telefono e comprende che il pericolo ti segue anche
+        fuori dalle missioni; chiede distanza o una spiegazione completa.
+    - id: MIC-LEG-02
+      target: Amato
+      consequence: Un morto pronuncia il nome dell’Amato senza che tu glielo abbia detto; ora sai che quel Legame è raggiungibile
+        dal soprannaturale e devi decidere come proteggerlo.
+    - id: MIC-LEG-03
+      target: Mentore
+      consequence: Il Mentore scopre che hai interrogato uno spirito che aveva chiesto silenzio e mette in dubbio il tuo giudizio
+        rituale.
+    - id: MIC-LEG-04
+      target: Rivale
+      consequence: Il Rivale ottiene la testimonianza di un morto che contraddice la tua versione degli eventi e può usarla
+        davanti alla Cerchia.
+    - id: MIC-LEG-05
+      target: Protettore
+      consequence: Per impedirti di crollare, il Protettore deve assistere a un rito funerario che non era pronto a conoscere;
+        la relazione ora porta quel segreto.
+    - id: MIC-LEG-06
+      target: Famiglia del defunto
+      consequence: La famiglia di uno spirito scopre che hai parlato con lui senza consenso; può chiedere risposte, silenzio
+        o restituzione di ciò che hai appreso.
+    Mondo:
+    - id: MIC-MON-01
+      scene: Parlare con i Morti in obitorio
+      trace: 'Velo +1: un registratore spento conserva la voce del cadavere e il tecnico ne salva una copia.'
+    - id: MIC-MON-02
+      scene: Tocco del Gelo
+      trace: 'Velo +1: la brina forma parole leggibili su superfici calde e viene fotografata prima di sciogliersi.'
+    - id: MIC-MON-03
+      scene: Vedere Oltre il Velo
+      trace: 'Velo +1: la tua pupilla mostra per pochi secondi strutture impossibili in un video medico ad alta definizione.'
+    - id: MIC-MON-04
+      scene: Richiamare uno spirito
+      trace: 'Velo +1: sensori ambientali registrano una caduta termica localizzata con impronte che terminano contro un muro.'
+    - id: MIC-MON-05
+      scene: Aprire un passaggio
+      trace: 'Velo +1: per tre secondi persone diverse ricevono sul telefono chiamate da numeri appartenuti a morti collegati
+        al luogo.'
+    - id: MIC-MON-06
+      scene: Vincolare un fantasma
+      trace: 'Velo +1: l’ombra del morto resta visibile su una parete anche dopo la sua scomparsa e viene campionata/fotografata.'

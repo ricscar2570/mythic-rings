@@ -6,7 +6,7 @@ section: "Il Mondo di Mythic Rings"
 epigraph: "Quattro Casate, quattro vie verso la verità. Nessuna è completamente giusta."
 tags: []
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Le Quattro Casate
@@ -91,9 +91,10 @@ I poteri Avalon costano **Stress** (scala 0--10). Canalizzare la luce
 pura del Piano della Luce è come guardare il sole: bellissimo, ma la
 psiche umana non è progettata per contenere tanta perfezione. Ogni uso
 dei poteri erode la stabilità mentale del Guardiano. A Stress 10, il
-Guardiano subisce un **Burnout**: i poteri non si bloccano ma diventano
-sospesi - costano il doppio e richiedono un tiro su Sfidare Pericolo +FAT
-(vedi Cap. 5) - accompagnati da un crollo emotivo. Il recupero avviene naturalmente (-1
+Guardiano è in **Burnout**. I poteri non si bloccano: il costo che non
+può più entrare nel tracker diventa sovraccarico fisico (**2 PF persi
+per ogni punto di Stress eccedente**) e richiede **Sfidare il Pericolo
++FAT** prima del tiro del potere (vedi Cap. 5). Il recupero avviene naturalmente (-1
 per notte di riposo), attraverso attività di downtime rilassanti, o
 tramite un Atto di Catarsi con un Confidente (Legame livello 2+).
 
@@ -128,8 +129,8 @@ morire per proteggere estranei che non sapranno mai il suo nome.
 **Il Guaritore.** Medico, prete, infermiere - qualcuno che dedicava la
 vita alla cura già prima dell'Anello. Il suo potere più grande non è
 offensivo, è la capacità di rimettere insieme ciò che è rotto. Esempio
-PG: Padre Tommaso, 54 anni, prete di Sant'Ambrogio. Crede che la magia
-sia un dono divino e cura chiunque - anche nemici feriti.
+PG: Daria Sanna, 34 anni, infermiera. Protegge chiunque sia affidato
+alle sue cure - anche un nemico ferito, finché non torna una minaccia.
 
 **L'Esorcista.** Specialista nella purificazione e nel bandire demoni.
 Freddo, metodico, con una conoscenza enciclopedica dei rituali di
@@ -145,9 +146,10 @@ lascia mai nessuno indietro.
 
 Storia a Milano
 
-Avalon è la Casata più antica dei Custodi - il suo Anello fu il primo
-a essere scoperto nel 1224, portato dal cavaliere che sarebbe diventato
-il primo dei quattro fondatori. Le radici culturali della Casata
+Gli archivi moderni classificano come **Avalon** una delle quattro
+stirpi portate dai fondatori del 1224. Il cavaliere associato a questa
+stirpe compare per primo in alcune cronache, ma il nome di Casata e la
+sequenza degli Anelli sono convenzioni archivistiche posteriori. Le radici culturali della Casata
 affondano nella tradizione cavalleresca medievale e nell'influenza
 cristiana, ma Avalon non è una Casata religiosa. Molti membri sono
 credenti - cristiani, musulmani, ebrei, induisti - ma la Casata
@@ -166,10 +168,11 @@ Guardiani morirono. Da allora, Avalon porta il peso di quel ricordo come
 un monito: la luce, spinta all'estremo, diventa fanatismo. E il
 fanatismo è buio travestito da luce.
 
-**Linea Ley:** La Linea dell'Alba (NE, da Sesto al Duomo) risuona con
-l'energia di Avalon. I Guardiani Avalon che usano i poteri lungo questa
-linea ottengono un bonus narrativo: durata più lunga, area più ampia,
-effetti più spettacolari.
+**Linea Ley:** La Linea dell'Alba corre da nord-est lungo Sesto San
+Giovanni, Loreto, Porta Venezia e San Babila fino al Duomo. Risuona con
+Avalon. Può rendere disponibili rivelazioni, protezioni o effetti di
+scala maggiore quando la fiction lo sostiene, ma non concede bonus
+numerici al tiro.
 
 :::box[Esempio: Una Notte da Avalon]{type=info}
 Piazza Sant'Ambrogio, ore 2:47. La basilica è chiusa da ore, ma Padre Tommaso ha le chiavi. Dentro, nella cripta, qualcosa si muove. Lo sente prima di vederlo. L'Anello al dito diventa rovente - un avvertimento. Qualcosa di malvagio, qualcosa che non dovrebbe essere qui, sta emergendo dalla pietra stessa della cripta.
@@ -296,9 +299,9 @@ Archetipi di Personaggio
 
 **L'Infiltratrice.** Spia, maestra dei travestimenti, raccoglitrice di
 informazioni. Vive più vite contemporaneamente e a volte dimentica quale
-sia quella vera. Esempio PG: Leila Ferrara, 41 anni, ex-detective. La
-Questura pensa che abbia lasciato la polizia per burnout. In realtà, il
-burnout era causato dal vedere cose che nessuno credeva.
+sia quella vera. Esempio PG: Chiara Bellini, 36 anni, ex-investigatrice privata. Ha
+imparato a entrare in una stanza senza essere ricordata e a uscire con
+la sola informazione che tutti volevano nascondere.
 
 **L'Assassino.** Killer silenzioso che elimina minacce con precisione
 chirurgica. Non uccide per piacere - uccide perché qualcuno deve
@@ -314,15 +317,16 @@ ma il pubblico è fatto di mostri.
 
 **La Ladra.** Specialista nel recupero di artefatti magici, furto di
 informazioni e operazioni che richiedono dita leggere e nervi d'acciaio.
-Esempio PG: Valentina «La Volpe», età sconosciuta. Neutrale per scelta,
-vende informazioni a chiunque paghi. Ma quando i Custodi chiamano
-davvero, risponde sempre.
+Esempio PG: Marta Greco, 29 anni, restauratrice e ladra di artefatti.
+Conosce serrature, collezionisti e percorsi di servizio meglio delle
+persone che li hanno progettati.
 
 Storia a Milano
 
-L'Anello di Umbra fu il terzo a essere scoperto nel 1224, trovato
-dall'assassino tra i quattro fondatori - un uomo di cui gli archivi
-non conservano il vero nome, solo lo pseudonimo «L'Ombra del Fondatore».
+La stirpe oggi classificata come **Umbra** apparteneva ai quattro Anelli
+registrati nel patto del 1224. Le cronache attribuiscono uno di quei
+portatori a un assassino di cui non conservano il vero nome, soltanto lo
+pseudonimo «L'Ombra del Fondatore»; il nome Umbra è posteriore.
 Da allora, Umbra ha sempre avuto una reputazione controversa tra i
 Custodi. Alcuni li vedono come necessari: il lavoro sporco deve essere
 fatto, e meglio che lo facciano professionisti. Altri li temono: un
@@ -339,10 +343,11 @@ regola ferrea: **non usare la Corruzione contro i propri alleati**
 (tranne in caso di autodifesa assoluta). Rompere questa regola significa
 espulsione immediata e permanente.
 
-**Linea Ley:** La Linea dell'Ombra (W, da San Siro al Duomo) risuona con
-l'energia Umbra. Lungo questa linea le ombre sono più profonde,
-l'invisibilità più facile, e i poteri Umbra hanno un'intensità narrativa
-maggiore.
+**Linea Ley:** La Linea dell'Ombra corre da sud-ovest lungo Navigli,
+Darsena, Porta Ticinese e Colonne di San Lorenzo fino al Duomo. Lungo
+questa linea ombre, riflessi e passaggi possono creare coperture o accessi
+che altrove richiederebbero preparazione; il tiro e i costi Umbra non
+cambiano automaticamente.
 
 :::box[Esempio: Una Notte da Umbra]{type=info}
 Via Padova, ore 3:15. Leila Ferrara cammina nell'ombra dei portici. Non cammina - scivola. È un'ombra tra le ombre, una macchia di buio che si muove controcorrente. Il bersaglio è l'uomo al terzo tavolo del bar ancora aperto. Non è un uomo, ovviamente. È un vampiro di mezza età che sta reclutando adepti per un culto che vuole aprire una Porta Dimensionale sotto il Duomo.
@@ -442,14 +447,14 @@ un abbraccio che non ti lascia mai.
 
 Bonus Ife: una volta per ogni attività di downtime, se il Guardiano
 trascorre tempo significativo in contatto con un ecosistema vivo e lo
-protegge o se ne prende cura, riduce 1 Stress aggiuntivo. Il beneficio
+protegge o se ne prende cura, recupera 1 Stress aggiuntivo. Il beneficio
 non si attiva limitandosi a dormire vicino a una pianta o attraversare
 un parco: deve diventare parte della scena e delle scelte del personaggio.
 
 Mosse Esclusive
 
 :::box[Sentire la Vita]{type=info}
-**Quando entri in contatto con un essere vivente o con una rete naturale e ti apri alle sue sensazioni**, tira +FAT. **10+:** poni 3 domande. **7--9:** poni 1 domanda e scegli: assorbi un'emozione o un dolore e prendi +1 Stress; oppure la creatura percepisce chiaramente la tua intrusione. **6−:** ricevi comunque un'impressione vera e utile, ma il flusso vitale ti travolge; prendi +1 Stress e il Custode compie una mossa.
+**Quando entri in contatto con un essere vivente o con una rete naturale e ti apri alle sue sensazioni**, tira +FAT. **10+:** poni 3 domande. **7--9:** poni 1 domanda e scegli: assorbi un'emozione o un dolore e subisci 1 Stress; oppure la creatura percepisce chiaramente la tua intrusione. **6−:** ricevi comunque un'impressione vera e utile, ma il flusso vitale ti travolge; subisci 1 Stress e il Custode compie una mossa.
 
 - Che cosa lo ferisce o lo altera?
 - Quale emozione domina in questo momento?
@@ -463,23 +468,20 @@ Le risposte descrivono percezioni, memoria sensoriale e stato vitale; non trasfo
 :::box[Simbiosi]{type=info}
 **Una volta per scena**, quando un tuo potere restituisce PF a un alleato, puoi recuperare 2 PF. Non si attiva sulle cure rivolte a te stesso, sugli effetti continuati, sulle guarigioni ad area ripetute o su una cura che non abbia effettivamente restituito almeno 1 PF.
 
-Simbiosi non riduce il costo in Stress del potere e non può generare un ciclo di guarigione tra più Ife: ciascun Guardiano può beneficiarne una sola volta nella scena.
+Simbiosi non riduce il costo in Stress del potere. Si applica la regola generale **Nessun ciclo a guadagno netto** del Capitolo 5; come limite specifico di Simbiosi, ciascun Guardiano può beneficiarne una sola volta nella scena.
 :::
 
 Archetipi di Personaggio
 
 **La Guaritrice.** Medico naturale che salva vite come respirare. Il suo
-primo istinto è sempre curare, mai colpire. Esempio PG: Nonna Rosa (vero
-nome: Rosa Ferretti), 68 anni, erborista nel quartiere Isola. Tutti la
-conoscono come la vecchietta gentile che fa tisane miracolose. Nessuno
-sospetta che quelle tisane contengano ingredienti che non dovrebbero
-esistere.
+primo istinto è sempre curare, mai colpire. Esempio PG: Sara Bianchi, 44
+anni, fisioterapista di quartiere. Conosce il corpo come una rete di
+relazioni e considera ogni guarigione una responsabilità condivisa.
 
 **Il Druido Urbano.** Protettore del verde cittadino, degli animali e
-degli ecosistemi occulti nascosti nei parchi. Esempio PG: Professor
-Kwame Asante, 62 anni, docente di Botanica alla Statale. Le piante nel
-suo studio crescono troppo velocemente e hanno foglie che nessun
-botanico ha mai classificato.
+degli ecosistemi occulti nascosti nei parchi. Esempio PG: Luca Serra, 46 anni,
+ecologo urbano. Monitora alberi, cortili e tetti verdi come fossero un
+unico organismo e ha imparato che alcune radici ricordano chi le tocca.
 
 **Il Mutaforma.** Combattente che assume caratteristiche animali per
 affrontare le minacce. Più istintivo degli altri Ife, più a contatto con
@@ -496,15 +498,18 @@ cosa.
 
 Storia a Milano
 
-Le radici culturali di Ife affondano nelle tradizioni africane -
-Yoruba, Ifa, tradizioni spirituali che vedono il mondo come un tessuto
-vivente interconnesso. Il nome stesso viene da *Ile-Ife*, la città sacra
-nigeriana considerata il luogo di nascita dell'umanità nella cosmologia
-Yoruba. La Casata arrivò a Milano nel Seicento con i mercanti e si
-integrò rapidamente, forse perché la filosofia Ife - rispetto per la
-vita, equilibrio, connessione - risuona con valori universali. Oggi
-Ife è la Casata più multiculturale dei Custodi, con membri provenienti
-da ogni continente.
+Nei documenti più antichi dei Custodi questa stirpe compare con nomi
+descrittivi legati alla **Vita** e alla relazione tra esseri viventi. Il
+nome moderno **Ife** appartiene alla classificazione contemporanea delle
+Casate e viene applicato retroattivamente negli archivi. Mythic Rings
+richiama tradizioni culturali reali attraverso nomi e immagini, ma non
+afferma che tali tradizioni derivino dagli Anelli, da Milano o dai
+fondatori del 1224. Non esiste quindi un'«arrivo di Ife a Milano nel
+Seicento» canonico: i portatori e le pratiche della stirpe cambiano nel
+tempo e la forma moderna della Casata è il risultato di secoli di
+contatti, reinterpretazioni e responsabilità condivise. La formulazione
+culturale definitiva resta soggetta a lettura specialistica prima della
+release commerciale.
 
 **Il Principio Chiave:** Ife non è pacifista. È un errore comune e
 pericoloso. Gli Ife uccidono quando necessario - ma solo dopo aver
@@ -513,11 +518,12 @@ toglierla a chi minaccia gli innocenti.» Non esiste Ife che non abbia
 ucciso. Ma ogni Ife ricorda il nome di ogni creatura a cui ha tolto la
 vita.
 
-**Linea Ley:** La Linea della Vita (N, da Sempione al Duomo) risuona con
-l'energia Ife. Lungo questa linea le piante crescono più rigogliose, gli
-animali sono più attivi, e i poteri Ife hanno un'efficacia narrativa
-maggiore. La quercia quattrocentenaria nel Parco Sempione è il cuore
-pulsante di questa linea, protetta da un Custode Ife dal 1987.
+**Linea Ley:** La Linea della Vita corre da nord-ovest attraverso Parco
+Sempione, Castello Sforzesco e Cairoli fino al Duomo. Risuona con Ife:
+reti viventi e vegetazione possono conservare tracce, aprire percorsi o
+sostenere rituali su scala maggiore. Non aumenta numericamente cure,
+tiri o recuperi. La rete verde di Sempione è uno dei suoi nodi più
+stabili.
 
 :::box[Esempio: Una Notte da Ife]{type=info}
 Parco Sempione, ore 1:30. Il professor Asante è seduto sotto la grande quercia, con le mani premute contro la corteccia. L'albero gli sta parlando. Non con parole - gli alberi non parlano con parole. Con immagini, sensazioni, ricordi compressi in secoli. La quercia ha visto molto. Stanotte ha visto qualcosa che la spaventa: creature che scavano sotto le sue radici.
@@ -622,7 +628,7 @@ I Mictlan iniziano con più PF degli altri Guardiani: **PF = 28 + FOR**, mentre 
 Il costo non dipende soltanto dal Livello: è riportato in ogni potere e riflette portata, durata e impatto. I poteri più estremi possono portare il Mictlan a 0 PF. In quel caso l'effetto si risolve e subito dopo si attiva Ultimo Respiro.
 
 :::box[Sangue Tenace — passivo di Casata]{type=info}
-Una volta per scena, se il costo di un potere ti porterebbe sotto il 40% dei PF massimi, puoi convertire metà del costo, arrotondato per difetto e minimo 1 PF, in 2 Stress. Dichiara la conversione prima di pagare. Il costo non può scendere sotto 1 PF e la capacità non è disponibile a Stress 10.
+Una volta per scena, dopo avere calcolato il costo finale in PF di un potere, se pagarlo per intero ti lascerebbe **sotto il 40% dei PF massimi**, puoi usare Sangue Tenace prima di spenderlo. Il costo deve essere almeno 2 PF e devi partire da **Stress 0–8**. Converti `floor(costo / 2)` PF, minimo 1 ma lasciando sempre almeno 1 PF da spendere; poi spendi il residuo e **subisci 2 Stress**. Essere esattamente al 40% non attiva la capacità. Vedi il Capitolo 10 per esempi con costi 1, 2, 3 e 5.
 :::
 
 Mosse Esclusive
@@ -643,9 +649,9 @@ Archetipi di Personaggio
 
 **Il Necromante.** Comanda i morti con rispetto e pragmatismo. I suoi
 alleati non-morti sono strumenti temporanei, non schiavi permanenti.
-Esempio PG: Signora Marisol Reyes, 58 anni, direttrice di agenzia
-funebre. Parla con i clienti anche dopo che sono morti, e loro
-apprezzano.
+Esempio PG: Davide Lorenzi, 51 anni, tanatoprattore. Tratta i morti
+come interlocutori con diritti e limiti, non come strumenti da
+interrogare finché conviene.
 
 **La Medium.** Parla con gli spiriti, ottiene informazioni che nessun
 vivo potrebbe fornire, e a volte trasmette messaggi tra i vivi e i
@@ -669,17 +675,17 @@ giustizia diversa.
 
 Storia a Milano
 
-Il nome Mictlan viene dal Mictlan azteco - il regno dei morti nella
-cosmologia mesoamericana, un luogo di nove livelli dove le anime
-affrontano prove per raggiungere la pace eterna. La Casata ha radici
-culturali mesoamericane ma si è globalizzata nel corso dei secoli.
-Arrivò a Milano nell'Ottocento attraverso l'immigrazione e fu
-inizialmente accolta con diffidenza e paura: la necromanzia era
-considerata malvagia per definizione da molti Custodi, soprattutto gli
-Avalon. Ma i Mictlan dimostrarono il loro valore in modo
-incontrovertibile: gli spiriti hanno informazioni cruciali, i morti
-possono testimoniare, e qualcuno deve custodire il confine tra i vivi e
-i morti.
+Nei documenti più antichi dei Custodi questa stirpe compare con nomi
+descrittivi legati alla **Soglia**, alla memoria e al rapporto con i
+morti. Il nome moderno **Mictlan** appartiene alla classificazione
+contemporanea delle Casate e viene applicato retroattivamente negli
+archivi. Mythic Rings non presenta le tradizioni nahua o mesoamericane
+reali come una scuola di necromanzia creata dagli Anelli, né assegna alla
+Casata un «arrivo a Milano nell'Ottocento» inventato. Marisol Reyes
+arrivò personalmente a Milano nel 1992 seguendo il proprio Anello; la
+stirpe e i suoi portatori sono molto più antichi e non coincidono con
+una singola migrazione. La formulazione culturale definitiva resta
+soggetta a lettura specialistica prima della release commerciale.
 
 **La Regola Sacra:** nessuna Casata rende la resurrezione ordinaria o
 sicura. Alcuni poteri di Livello 5 di Avalon, Ife e Mictlan possono
@@ -691,11 +697,12 @@ I Mictlan rispettano il ciclo naturale proprio perché ne conoscono i
 confini: «La Morte va accettata. Richiamare qualcuno significa assumersi
 il debito che lascia dietro di sé.»
 
-**Linea Ley:** La Linea dei Morti (S, dal Cimitero Monumentale al Duomo)
-risuona con l'energia Mictlan. Lungo questa linea il confine tra vivi e
-morti è più sottile, gli spiriti sono più attivi, e i poteri Mictlan
-hanno un'efficacia narrativa maggiore. Dopo la mezzanotte, le anime
-inquiete del Monumentale sussurrano a chi sa ascoltare.
+**Linea Ley:** La Linea dei Morti corre da nord attraverso Cimitero
+Monumentale, Porta Garibaldi e Brera fino al Duomo. Risuona con Mictlan:
+memorie e presenze dei morti sono più facili da localizzare quando
+esiste già un legame plausibile. Non riduce i costi in PF e non concede
+bonus a Parlare con i Morti. Dopo la mezzanotte, il Monumentale resta
+uno dei luoghi in cui la Linea è più percepibile.
 
 :::box[Esempio: Una Notte da Mictlan]{type=info}
 Cimitero Monumentale, ore 00:47. Elena Marchetti siede su una panchina di marmo tra le tombe, l'Anello di ossidiana al dito che pulsa con il peso di mille ricordi che non sono i suoi. Lo spirito è seduto accanto a lei. Un uomo anziano, traslucido, con le mani in grembo e lo sguardo perso nel vuoto. È morto tre giorni fa - infarto, dicono. Ma lo spirito dice altro.

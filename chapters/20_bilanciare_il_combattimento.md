@@ -6,7 +6,7 @@ section: "Strumenti del Custode"
 epigraph: "Una minaccia memorabile non è una somma di Punti Ferita."
 tags: [custode, combattimento, bilanciamento]
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Bilanciare il combattimento
@@ -54,16 +54,20 @@ Aggiungi o sottrai pressione in base a:
 
 ## Economia delle azioni
 
-Una creatura singola può essere sopraffatta anche con valori alti. Per un boss usa una o più delle seguenti soluzioni:
+Una creatura singola può essere sopraffatta anche con valori alti. In compenso, concederle più azioni complete senza controllo rende il combattimento imprevedibile. Usa quindi il **budget di Azione Significativa** del Capitolo 5: una minaccia singola o un gruppo di minion gestito insieme ne possiede normalmente una per round.
 
-- una reazione una volta per round;
-- una Mossa ambientale alla fine del round;
-- minion con un impulso semplice;
+Per un boss puoi aggiungere una o più delle seguenti soluzioni **solo se sono leggibili nello stat block**:
+
+- una reazione specifica una volta per round;
+- una Mossa ambientale separata che non replica il normale attacco del boss;
+- minion con un impulso semplice, ciascun gruppo come propria unità di minaccia;
 - obiettivi paralleli;
 - cambio di fase al 50% dei PF;
 - vulnerabilità che deve essere scoperta o creata.
 
-Non concedere semplicemente più turni completi senza dichiararlo nello stat block. Ogni azione aggiuntiva deve avere un'identità leggibile.
+Una reazione che infligge danno pieno, impone una Condizione, sposta forzatamente un bersaglio, prende un obiettivo o attiva una Mossa offensiva nominata **spende il normale budget** salvo che lo stat block dica esplicitamente «Reazione extra». Una reazione puramente difensiva o di riposizionamento non lo spende.
+
+Non concedere semplicemente più turni completi. Ogni eccezione deve dire **quale azione aggiuntiva esiste e quante volte può avvenire**. L'esempio di sviluppo completo è in `docs/rules/COMBAT_ROUND_EXAMPLE.md`.
 
 ## Armatura dei boss
 

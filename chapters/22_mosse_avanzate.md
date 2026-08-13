@@ -6,7 +6,7 @@ section: "Guida per il Custode"
 epigraph: "L'esperienza non elimina il prezzo: insegna a scegliere quando pagarlo."
 tags: [avanzamento, mosse]
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Mosse avanzate
@@ -84,7 +84,7 @@ La mossa termina quando abbandoni la posizione, vieni incapacitato o l'obiettivo
 
 **Quando agisci contro il tuo interesse immediato per mantenere una promessa esplicita legata a un Legame**, dichiara quale prezzo accetti e tira +CUO.
 
-**10+:** mantieni la promessa e scegli 1: riduci 1 Stress; recupera 1 Punto Fato già speso, senza superare 2; oppure il Legame ottiene un'opportunità concreta di trasformarsi. **7--9:** mantieni la promessa, ma il Custode sceglie un costo aggiuntivo coerente tra tempo, esposizione, debito o perdita di posizione. **6−:** la promessa resta ancora possibile, ma la situazione chiede una scelta più grave; il Custode la rende esplicita.
+**10+:** mantieni la promessa e scegli 1: recuperi 1 Stress; recupera 1 Punto Fato già speso, senza superare 2; oppure il Legame ottiene un'opportunità concreta di trasformarsi. **7--9:** mantieni la promessa, ma il Custode sceglie un costo aggiuntivo coerente tra tempo, esposizione, debito o perdita di posizione. **6−:** la promessa resta ancora possibile, ma la situazione chiede una scelta più grave; il Custode la rende esplicita.
 
 Non aumenta automaticamente il livello del Legame.
 

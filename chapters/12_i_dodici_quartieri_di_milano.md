@@ -6,7 +6,7 @@ section: "Milano Mitica"
 epigraph: "Ogni quartiere ha la sua anima. Alcuni ce l'hanno letteralmente."
 tags: []
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## I Dodici Quartieri di Milano
@@ -59,7 +59,10 @@ segreto nella sacrestia. Una sala circolare con cinque archi, uno per
 Casata (più uno vuoto - nessuno sa per chi). Il pavimento è un mosaico
 che rappresenta Milano vista dall'alto, con le Linee Ley in oro. Al
 centro, una pietra nera liscia come ossidiana: toccarla dà visioni del
-passato di Milano. Guardiani con FOR +2 possono resistere; gli altri
+passato di Milano. Se resistere al flusso di memorie è rischioso, il
+Custode usa **Sfidare il Pericolo** con la Caratteristica più coerente
+con il modo in cui il Guardiano si oppone; non esiste una soglia FOR
+locale. Gli altri
 vedono cose che non vogliono vedere.
 
 **2. Galleria Vittorio Emanuele II - Il Mercato degli Specchi.** Di
@@ -100,10 +103,11 @@ sottosuolo quando troppe magie vengono usate contemporaneamente.
 
 ## Risorsa per i Guardiani
 
-**Amplificazione del Nexus:** un Guardiano che medita nella Cripta del
-Nexus per 1 ora può recuperare 1d6 Stress o 1d4 PF extra, oppure ridurre
-la Corruzione di 1 (Umbra). Utilizzabile 1 volta per sessione, richiede
-approvazione di Don Aurelio.
+**Amplificazione del Nexus:** con l'approvazione di Don Aurelio, la
+Cripta può rendere possibile un rituale di scala maggiore, stabilizzare
+per qualche ora una perturbazione oppure mostrare quale Linea sta
+reagendo a un problema. **Non recupera PF o Stress e non riduce
+Corruzione:** per quelle risorse si usano le procedure canoniche.
 
 ## Tabella Eventi Casuali (2d6)
 
@@ -144,34 +148,36 @@ secoli fa.
 museo pubblico. Ma la sala 24 - normalmente chiusa al pubblico per
 “restauro permanente” - è il centro operativo dei Custodi. Dietro un
 quadro del Caravaggio c'è una porta che si apre solo con il tocco di un
-Anello Custodia. All'interno: sala riunioni degli Anziani, archivio
+Anello di Custodia. All'interno: sala riunioni degli Anziani, archivio
 missioni, armeria leggera, e una bacheca delle minacce attive.
 
 **2. L'Orto Botanico di Brera.** Un giardino segreto nel cuore del
 quartiere. I Guardiani Ife lo usano come luogo di guarigione - le
 piante qui crescono in modo anomalo, rispondendo alla presenza magica.
-Un Guardiano ferito che riposa qui per un'ora recupera 1d4 PF extra. Ma
-attenzione: di notte, le piante diventano protettive. Intrusi non-magici
+Un Guardiano ferito può usare qui le normali procedure di recupero in
+un ambiente protetto, se la fiction concede davvero tempo e sicurezza.
+Il luogo non aggiunge PF. Ma attenzione: di notte, le piante diventano protettive. Intrusi non-magici
 vengono gentilmente scoraggiati. Intrusi ostili vengono afferrati dalle
 radici.
 
-**3. Caffè Fiorio - Il Punto d'Incontro.** Questo caffè storico è il
-luogo dove i Guardiani si incontrano informalmente. Il barista, Enzo, è
-un Consapevole che sa preparare caffè con proprietà leggermente magiche
-(un espresso che dà +1 forward al prossimo tiro di Leggere Situazione?
-Sì, esiste). Il retrobottega è un rifugio sicuro.
+**3. Caffè Fiori Oscuri - Il Punto d'Incontro.** Questo locale fittizio
+di Brera è il luogo dove i Guardiani si incontrano informalmente. Il
+barista, Enzo, è un Consapevole che sa preparare caffè con proprietà
+leggermente magiche: un aroma può far riaffiorare un dettaglio o aiutare
+qualcuno a mettere a fuoco ciò che ha già visto, ma non concede bonus ai
+tiri. Il retrobottega è un rifugio sicuro.
 
 ## PNG
 
-**Professoressa Eleonora Visconti** - Anziana Avalon, 65 anni. Ex
-storica dell'arte alla Statale, ora guida i Custodi di Milano come Prima
-tra Pari nella Cerchia degli Anziani. Capelli bianchi corti, occhi color
-miele, sempre un filo di perle. Parla piano ma quando parla tutti
-ascoltano. *Segreto: il suo Anello Custodia è il più antico di Milano
-- ha 400 anni. Le mostra visioni del futuro che non condivide con
-nessuno.*
+**Professoressa Eleonora Visconti** — Anziana Avalon, 65 anni e
+coordinatrice operativa dei Custodi. È «Prima tra Pari» sul campo, ma la
+Presidenza neutrale della Cerchia appartiene a Elisabetta Conti. Ex
+storica dell'arte alla Statale, parla piano e viene ascoltata perché
+conosce persone, archivi e conseguenze. *Segreto: partecipò alla
+copertura del caso Arianna e nascose una copia del suo ultimo messaggio;
+non partecipò alla decisione originaria di sigillare la breccia.*
 
-**Enzo Moretti** - Barista del Caffè Fiorio, Consapevole. 45 anni,
+**Enzo Moretti** - Barista del Caffè Fiori Oscuri, Consapevole. 45 anni,
 baffi curati, sempre un grembiule pulito. Ex Guardiano: ha perso i
 poteri in un incidente 15 anni fa ma ha scelto di restare vicino al
 mondo magico. *Segreto: il suo Anello non è sparito. Si è spento. Enzo
@@ -188,10 +194,12 @@ rituale originale è andato perduto.
 
 ## Risorsa per i Guardiani
 
-**Archivio dei Custodi:** un Guardiano può consultare l'archivio per
-ottenere +2 a un tiro di Investigare quando la ricerca riguarda storia
-occulta, precedenti missioni, o minacce note. Richiede 1 ora di
-consultazione.
+**Archivio dei Custodi:** un'ora di consultazione permette di trovare
+una **pista pertinente** quando esistono precedenti su storia occulta,
+missioni o minacce note. Se stabilire dettagli, interpretare dati
+contraddittori o farlo sotto pressione comporta un rischio, si usa
+**Investigare** normalmente: l'Archivio amplia ciò che puoi sapere, non
+il modificatore al dado.
 
 ## Tabella Eventi Casuali (2d6)
 
@@ -200,7 +208,7 @@ consultazione.
 |---| ---|
 | 2 | Un quadro nella Pinacoteca piange sangue reale. I restauratori sono confusi. |
 | 3 | Una studentessa dell'Accademia dipinge inconsciamente scene profetiche. Chi è? |
-| 4 | Il Caffè Fiorio viene visitato da un Guardiano sconosciuto, da un'altra città. Porta notizie urgenti. |
+| 4 | Il Caffè Fiori Oscuri viene visitato da un Guardiano sconosciuto, da un'altra città. Porta notizie urgenti. |
 | 5 | Un'asta d'arte privata include un artefatto magico spacciato per “opera contemporanea”. |
 | 6 | Eleonora Visconti convoca una riunione d'emergenza. Qualcuno ha violato l'archivio. |
 | 7 | Le piante dell'Orto Botanico crescono di un metro in una notte. Qualcosa le agita. |
@@ -245,13 +253,14 @@ non tutti quelli che entrano escono.
 
 **3. Darsena - Il Porto dei Sussurri.** La grande darsena dove i
 Navigli si incontrano è un punto di ascolto: l'acqua qui trasporta i
-sussurri. Un Guardiano che si concentra per 10 minuti alla Darsena può
-tirare Leggere Situazione con +1 per captare voci, piani e segreti che
-viaggiano lungo i canali.
+sussurri. Un Guardiano che si concentra per dieci minuti alla Darsena può
+cogliere una voce, un nome o una direzione che abbia davvero viaggiato
+lungo il sistema d'acqua e ombre. Se separare un segnale vero da uno
+falso è rischioso, usa **Leggere la Situazione** normalmente.
 
 ## PNG
 
-**Valentina “La Volpe”** - Mercante di informazioni, Umbra neutrale.
+**Valentina Riva, “La Volpe”** — Umbra rinnegata e mediatrice indipendente del Mercato Notturno.
 Età apparente 35 (età reale sconosciuta). Capelli rosso fuoco, sorriso
 di chi sa qualcosa che tu non sai, abiti vintage impeccabili. Gestisce
 il Mercato Notturno e sa tutto di tutti. Non è alleata di nessuno ma
@@ -319,8 +328,10 @@ vanno da un demone maggiore a un frammento del Piano delle Ombre stesso.
 **1. Colonne di San Lorenzo - Il Cerchio.** Area aperta ma carica di
 energia. I Guardiani Umbra vengono qui per meditare e contattare entità
 del Piano delle Ombre in modo relativamente sicuro (le colonne
-funzionano come “firewall”). Un rituale condotto tra le colonne ha +1
-al tiro. Ma disturbare i sigilli è pericolosissimo.
+funzionano come “firewall”). Un rituale condotto tra le colonne può
+richiedere meno preparazione materiale o contenere meglio ciò che viene
+chiamato, ma non modifica il tiro. Disturbare i sigilli è
+pericolosissimo.
 
 **2. Il Sotterraneo del Ticinese.** Un locale underground il cui
 proprietario è un lupo mannaro in pensione. La cantina è un rifugio
@@ -449,9 +460,11 @@ naturale ciclico, forse qualcosa nelle Segrete si sta svegliando.
 
 ## Risorsa per i Guardiani
 
-**Guarigione Naturale:** un Guardiano che riposa nella Radura per 30
-minuti recupera 1d4 PF extra e -1 Stress. Utilizzabile 1 volta per
-sessione. Guardiani Ife recuperano 1d6 PF.
+**Radura Nascosta:** la Radura offre la calma, le piante e la sicurezza
+necessarie per applicare le **normali procedure di recupero** quando la
+fiction concede davvero una pausa. Può inoltre fornire un ingrediente o
+un contatto vegetale necessario a un rituale. Non aggiunge PF e non
+fa recuperare Stress automaticamente.
 
 ## Tabella Eventi Casuali (2d6)
 
@@ -489,9 +502,11 @@ di lusso, arrabbiati e confusi.
 ## Location
 
 **1. Bosco Verticale - La Sentinella.** I due grattacieli verdi
-funzionano come antenna Ife: amplificano i poteri naturali nella zona
-(+1 a poteri Ife nel raggio di 200m). I Guardiani Ife possono comunicare
-con le piante dell'edificio per sorvegliare il quartiere dall'alto.
+funzionano come antenna Ife: collegano le piante dell'edificio alla rete
+verde del quartiere. Un Guardiano Ife può usarle per comunicare,
+localizzare una perturbazione o ottenere una visuale indiretta se la
+rete vegetale ha davvero percepito l'evento. Non concedono +1 ai
+poteri.
 
 **2. Piazza Gae Aulenti - La Piazza dei Vetri.** Piazza moderna con
 fontane e vetrate. Di notte, le vetrate riflettono il vecchio quartiere
@@ -525,9 +540,10 @@ inevitabile.
 
 ## Risorsa per i Guardiani
 
-**Sorveglianza Aerea:** le piante del Bosco Verticale possono monitorare
-il quartiere. Un Guardiano Ife può chiedere alle piante di segnalare
-attività soprannaturali nell'area. Automatico, 1 volta per sessione.
+**Sorveglianza Verde:** le piante del Bosco Verticale possono indicare
+dove la rete è stata spezzata, bruciata, spaventata o attraversata. La
+risposta dipende da ciò che le piante avrebbero potuto percepire: non è
+onniscienza e non introduce un uso 1/sessione separato dalle regole.
 
 ## Tabella Eventi Casuali (2d6)
 
@@ -566,8 +582,10 @@ Porta Venezia non giudica.
 
 **1. Giardini Indro Montanelli - Il Santuario.** Le piante qui sono
 senzienti e protettive. Un Guardiano ferito che si addormenta nei
-giardini viene “curato” dalla vegetazione: +1d6 PF al risveglio. Ma le
-piante scelgono chi curare. Chi entra con intenzioni ostili viene
+giardini può svegliarsi circondato da piante che hanno protetto il suo
+riposo e reso possibile una pausa sicura. La guarigione usa le procedure
+canoniche: il luogo non aggiunge dadi o PF. Le piante scelgono chi
+proteggere. Chi entra con intenzioni ostili viene
 espulso - gentilmente ma fermamente.
 
 **2. Libreria dell'Aldilà (Via Lecco).** Una libreria dell'usato gestita
@@ -578,9 +596,10 @@ non è sempre denaro.
 
 **3. Bagni Misteriosi.** Un complesso di piscine pubbliche che, nelle
 notti di luna piena, si riempie di acqua con proprietà rigenerative.
-Immergersi rimuove 1 condizione negativa o 2 Stress. Il proprietario è
-ignaro - l'effetto è naturale, legato a una sorgente sotterranea che
-tocca una Linea Ley.
+Immergersi può diventare il gesto fictionale necessario a una
+catarsi, a un confronto o alla risoluzione di una Condizione quando la
+sua specifica via di risoluzione lo permette. Non rimuove Condizioni o
+Stress in modo generico. Il proprietario è ignaro dell'effetto occulto.
 
 ## PNG
 
@@ -608,9 +627,10 @@ predatrice” si sta assottigliando.
 
 ## Risorsa per i Guardiani
 
-**Guarigione del Santuario:** riposo di 1 ora nei Giardini Montanelli
-garantisce +1d6 PF e -1 Stress. Per Guardiani Ife, anche -1 condizione
-negativa. 1 volta per sessione.
+**Santuario Verde:** i Giardini possono offrire un luogo sicuro, una
+rete vivente o un elemento necessario a una scena di recupero. PF,
+Stress e Condizioni cambiano soltanto attraverso le procedure canoniche
+che li regolano.
 
 ## Tabella Eventi Casuali (2d6)
 
@@ -666,7 +686,7 @@ vita. Ma se disturbati, si difendono.
 
 ## PNG
 
-**Custode Anselmo** - Guardiano Mictlan, 70 anni. Vive in una cripta
+**Guardiano Anselmo** — Mictlan, 70 anni. Vive in una cripta
 di famiglia da 40 anni. Pelle grigia, occhi pallidi, voce bassa come un
 sussurro. Parla più con i morti che con i vivi. *Segreto: Anselmo è
 morto nel 1998, durante un rituale andato storto. È tornato ma qualcosa
@@ -689,9 +709,11 @@ avvistamenti.
 
 ## Risorsa per i Guardiani
 
-**Consiglio dei Morti:** un Guardiano Mictlan può chiedere al Consiglio
-dei Morti informazioni su qualsiasi defunto milanese. Tira Parlare con
-Morti con +1. Utilizzabile 1 volta per sessione.
+**Consiglio dei Morti:** quando il Consiglio accetta di ricevere un
+Guardiano, può rendere possibile il contatto con un defunto milanese per
+cui esista almeno un nome, una memoria o una traccia. Se viene usata
+**Parlare con i Morti**, si tira normalmente e lo spirito conserva
+prospettiva, limiti e richieste proprie.
 
 ## Tabella Eventi Casuali (2d6)
 
@@ -768,9 +790,10 @@ frequenza sta aumentando.
 
 ## Risorsa per i Guardiani
 
-**Vista dall'Alto:** dall'ultimo piano della Torre Isozaki, un Guardiano
-può tirare Leggere Situazione con +2 per identificare anomalie magiche
-in tutta Milano. Richiede 10 minuti di concentrazione.
+**Vista dall'Alto:** da un punto di osservazione preparato in quota un
+Guardiano può individuare **quale zona** presenta un'anomalia abbastanza
+grande da alterare il Velo o le Linee. Capire natura, responsabile o
+intenzione richiede poi la normale indagine e non riceve +2.
 
 ## Tabella Eventi Casuali (2d6)
 
@@ -851,10 +874,10 @@ altro Piano. Fabio e il suo team sono costantemente in allerta.
 
 ## Risorsa per i Guardiani
 
-**Sorveglianza Pirellone:** un Guardiano può consultare i monitor di
-sorveglianza per ottenere informazioni in tempo reale su anomalie
-magiche in qualsiasi quartiere di Milano. +1 a Leggere Situazione per
-minacce attive in città.
+**Sorveglianza Pirellone:** i monitor possono indicare dove sensori,
+telecamere o rilevatori del Velo stanno registrando un'anomalia attiva.
+Forniscono una **pista e una posizione**, non un bonus a Leggere la
+Situazione; dettagli e interpretazione seguono le mosse normali.
 
 ## Tabella Eventi Casuali (2d6)
 
@@ -893,7 +916,9 @@ proprie regole, più antiche dei Custodi.
 **1. Erboristeria della Nonna Chen.** Un negozietto stipato di barattoli
 dove la Nonna Chen, 90 anni (in apparenza), prepara rimedi che curano
 davvero. Per i Consapevoli, il retrobottega offre ingredienti per
-rituali, pozioni che recuperano 1d4 PF, e tè che riduce 1 Stress. I
+rituali, impacchi, infusioni e preparati che possono contare come
+**equipaggiamento o requisito fictionale** per una normale procedura di
+recupero. Non restituiscono PF o Stress fuori dalle regole canoniche. I
 prezzi sono equi ma non negoziabili.
 
 **2. I Canali Sotterranei.** Sotto Chinatown scorrono i resti di antichi
@@ -918,8 +943,10 @@ incarnato - finché la comunità crede in lei, lei esiste.*
 
 **Kenji Murakami** - Tatuatore giapponese, 38 anni. I suoi tatuaggi
 non sono solo arte: i motivi tradizionali (draghi, onde, carpe)
-conferiscono protezione reale (+1 Armatura temporanea, o +1 a un tiro
-specifico, 1/sessione). Serio, metodico, taciturno. *Segreto: Kenji è un
+conferiscono protezione rituale riconoscibile: possono permettere di
+attraversare una barriera, essere riconosciuti da una tradizione o
+resistere nella fiction a un effetto per cui il tatuaggio è stato
+preparato. Non concedono +1 o Armatura generica. Serio, metodico, taciturno. *Segreto: Kenji è un
 esiliato - cacciato dalla sua gilda magica a Osaka. Qualcuno verrà a
 cercarlo.*
 
@@ -933,9 +960,10 @@ qualcosa di più grande e antico nelle profondità.
 
 ## Risorsa per i Guardiani
 
-**Rimedi della Nonna Chen:** un Guardiano può acquistare pozioni
-curative (1d4 PF, costo trascurabile) o tè rilassante (-1 Stress)
-all'Erboristeria. 1 acquisto per visita, max 2 visite per sessione.
+**Rimedi della Nonna Chen:** l'Erboristeria fornisce ingredienti,
+preparati e conoscenze che possono rendere possibile una normale cura,
+una catarsi o un rituale quando la fiction lo richiede. Non crea una
+seconda riserva di PF o Stress acquistabile a costo trascurabile.
 
 ## Tabella Eventi Casuali (2d6)
 
@@ -973,15 +1001,18 @@ dall'area tra un evento e l'altro.
 
 **1. Lo Stadio - Il Calderone.** Durante eventi (partite, concerti),
 lo stadio genera un campo di energia grezza utilizzabile dai Guardiani:
-+1 a qualsiasi tiro che coinvolga emozioni (Persuadere, Resistere +CUO).
-Ma l'energia attira anche predatori soprannaturali che si mimetizzano
-nella folla.
+può rendere possibile raggiungere una folla, sostenere un rito emotivo o
+far emergere ciò che migliaia di persone stanno provando insieme. Non
+aggiunge +1 ai tiri. L'energia attira anche predatori soprannaturali che
+si mimetizzano nella folla.
 
 **2. Il Parcheggio Sotterraneo.** Due livelli interrati dove l'Affamato
 si manifesta con più forza. Dopo le partite, quando la folla è andata
 via, il parcheggio diventa gelido e le ombre si allungano. Chi resta
-solo qui troppo a lungo si sente svuotato - -1 Stress ma anche -1d4 PF
-(l'Affamato prende).
+solo qui troppo a lungo si sente svuotato e stranamente calmo: l'Affamato
+sta prendendo qualcosa. Se l'esposizione diventa una minaccia concreta,
+il Custode annuncia la conseguenza e usa le normali regole per danno,
+Stress o Condizioni invece di applicare un pacchetto locale fisso.
 
 **3. Il Bar degli Ultras.** Un bar vicino allo stadio dove un gruppo di
 ultras è inconsapevolmente diventato una “coven” emotiva: le loro
@@ -1013,9 +1044,11 @@ punto critico.
 
 ## Risorsa per i Guardiani
 
-**Energia dello Stadio:** durante una partita o concerto, qualsiasi
-Guardiano nell'area può “attingere” all'energia emotiva per +1 a un
-tiro. Ma ogni utilizzo nutre anche l'Affamato.
+**Energia dello Stadio:** durante una partita o un concerto, un
+Guardiano può attingere alla pressione emotiva per tentare un effetto di
+scala collettiva che normalmente richiederebbe una fonte adeguata.
+L'Affamato percepisce immediatamente l'uso e può reagire: il luogo amplia
+la posta in gioco, non il modificatore al dado.
 
 ## Tabella Eventi Casuali (2d6)
 

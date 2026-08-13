@@ -6,7 +6,7 @@ section: "Riferimenti"
 epigraph: "Un chiarimento non deve creare una nuova regola."
 tags: [faq, riferimento]
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Domande frequenti
@@ -89,7 +89,7 @@ Può presentare bugie, testimonianze interessate o prove alterate come elementi 
 
 ### 20. Cosa accade a Stress 10?
 
-Il Guardiano è in Burnout. Può ancora usare un potere, ma ne paga il costo raddoppiato e deve Sfidare il Pericolo +FAT. Con 6− subisce 1d6 danni puri e il potere non produce l'effetto desiderato.
+Il Guardiano è in Burnout. Lo Stress resta al massimo 10. Quando un costo in Stress eccederebbe 10, ogni punto eccedente fa perdere 2 PF ignorando Armatura; se esiste almeno un punto di sovraccarico, prima del tiro del potere devi Sfidare il Pericolo +FAT. Su 10+ procedi; su 7–9 procedi con un costo, una posizione peggiore o un'esposizione immediata che non sia altro Stress; su 6− subisci 1d6 danni puri e il potere non produce l'effetto desiderato. Il costo già pagato resta pagato.
 
 ### 21. Cosa accade a Corruzione 8?
 
@@ -126,6 +126,50 @@ No. Aggiungono opzioni o modificano trigger specifici. Quando non si attivano, u
 ### 29. Che cosa prevale in caso di dubbio?
 
 Il testo completo del capitolo Come si gioca e delle Mosse Base prevale sulle sintesi. Durante una sessione scegli l'interpretazione più coerente, annota il dubbio e non interrompere a lungo il gioco. Dopo la sessione consulta l'errata ufficiale.
+
+### 30. Quando posso usare la Risonanza dell'Anello?
+
+Dopo avere risolto eventuali Punti Fato, quando il risultato finale di **Usare Potere** oppure di una **Mossa Esclusiva di Casata che richiede un tiro** è 6− o 7–9. Devi dichiararla prima che il Custode applichi le conseguenze. Ogni Guardiano può usarla una volta per scena.
+
+### 31. Un 6− trasformato in 7–9 produce comunque la Mossa del Custode del 6−?
+
+No. Se accetti la Risonanza, risolvi il nuovo 7–9 e poi paghi il prezzo di Risonanza. Non aggiungere anche la Mossa che apparteneva al 6− originale. Il costo base del potere già pagato resta invece pagato.
+
+### 32. Posso usare prima Risonanza e poi un Punto Fato?
+
+No. Se vuoi spendere Fato, fallo prima. Dopo il ritiro valuti il risultato finale e puoi eventualmente invocare Risonanza. Una volta accettata la Risonanza, non puoi usare Fato sullo stesso tiro.
+
+### 33. Il prezzo Corpo può essere ridotto, curato prima di applicarlo o trasferito?
+
+No. Corpo infligge esattamente **4 PF** ignorando Armatura e non può essere ridotto, convertito o trasferito. Si applica dopo l'effetto migliorato e prima di una nuova azione. Se porta a 0 PF, risolvi prima l'effetto e poi Ultimo Respiro.
+
+### 34. Che cosa fa esattamente l'Ancora dell'Anello?
+
+È un Legame L1+ scelto alla creazione e non concede bonus. Una volta per sessione, se l'Ancora è direttamente presente o in contatto significativo e il Custode offre **Anima** come prezzo di Risonanza, puoi chiedere che quel prezzo venga sostituito da **Legame** coinvolgendo l'Ancora. Il Custode dichiara il nuovo prezzo prima che tu scelga se accettarlo. Se l'altro prezzo era già Legame, i due prezzi possono eccezionalmente essere entrambi Legame ma devono avere conseguenze materialmente diverse. Se l'Ancora scende a L0, ne designi un'altra soltanto dopo una scena significativa.
+
+### 35. Il Custode può offrire qualsiasi due prezzi?
+
+No. Entrambi devono essere applicabili e dichiarati per intero. **Anima** richiede una Condizione nuova o significativamente diversa con un limite concreto e una via di risoluzione; **Legame** richiede un Legame L1+ che la conseguenza possa raggiungere in modo credibile; **Mondo** non può essere offerto a Velo 12, salvo che la campagna abbia già stabilito una procedura esplicita oltre la Rivelazione. **Corpo** può invece essere offerto finché il Guardiano è vivo, anche se i 4 PF lo porterebbero a Ultimo Respiro. Un costo obbligatorio già pagato per il tiro non può essere riciclato come uno dei due prezzi.
+
+### 36. Se pago già PF per un potere Mictlan, Corpo è ancora un prezzo valido?
+
+Sì. Il costo del potere resta pagato e **Corpo aggiunge altri 4 PF**: non stai contando due volte la stessa perdita. Ciò che è vietato è presentare come prezzo di Risonanza una conseguenza già interamente applicata senza aggiungere il nuovo effetto canonico. Lo stesso principio vale per le altre risorse.
+
+### 37. Quando si controlla il 2 naturale se ho usato Fato?
+
+Dopo il ritiro. Guarda i **due dadi finali**: se sono ancora 1 e 1, il risultato resta 6− e Risonanza non può migliorarlo. Se Fato ha sostituito uno dei due 1, non hai più un 2 naturale e puoi valutare normalmente la Risonanza sul risultato finale.
+
+### 38. Togliere l'Anello significa rinunciare?
+
+No. **Anello tolto**, **separazione temporanea**, **cessione** e **Rinuncia** sono quattro stati differenti. Togliere l'oggetto non spezza il legame e non applica penalità; anche una separazione temporanea mantiene di norma poteri, Risonanza e Ancora. Soltanto una circostanza fictionale esplicita che sopprima la connessione può bloccare temporaneamente un effetto, e il Custode deve dichiararlo prima del tiro.
+
+### 39. Posso dare il mio Anello a un'altra persona?
+
+Puoi affidare fisicamente l'oggetto, ma la **cessione non trasferisce** scelta, legame o poteri. Per il portatore originario vale come separazione temporanea; chi riceve l'Anello non può usarne i poteri se non è stato scelto.
+
+### 40. Che cosa comporta la Rinuncia?
+
+È una procedura volontaria di campagna, dichiarata fuori dalla risoluzione immediata di un tiro. Prima del rituale il giocatore dà consenso esplicito e il tavolo chiarisce cosa verrà perso. Dopo la Rinuncia il personaggio perde poteri di Casata, Risonanza e Ancora e cessa di essere un Guardiano operativo. Penalità permanenti aggiuntive a Caratteristiche, PF o altre statistiche esistono soltanto se concordate **prima** del rituale.
 
 :::box[FAQ e regole]{type=info}
 La FAQ chiarisce le regole, non ne crea di nuove. Ogni modifica meccanica deve essere inserita prima nella specifica canonica e nei capitoli normativi.

@@ -1,0 +1,68 @@
+schema_version: 1
+canon_version: "0.9.0-beta.2/G1"
+principles:
+  - "Gli Anelli e le quattro stirpi sono più antichi delle istituzioni milanesi; la loro origine resta ignota."
+  - "I nomi moderni Avalon, Umbra, Ife e Mictlan sono categorie istituzionali contemporanee usate anche retroattivamente negli archivi."
+  - "I nomi Ife e Mictlan non implicano che tradizioni yoruba o nahua/mesoamericane derivino da Milano o dagli Anelli."
+  - "Quando il testo usa storia reale, distingue chiaramente il fatto storico dall'evento occulto inventato."
+events:
+  - id: MR-TIME-001
+    date: "prima del 1224"
+    real_or_fictional: "fictional"
+    event: "Gli Anelli delle quattro stirpi esistono già; nessun archivio affidabile ne conosce creatori o origine."
+  - id: MR-TIME-002
+    date: "1224"
+    real_or_fictional: "mixed"
+    event: >-
+      Durante una fase di conflitto politico interno e di crescente tensione tra i comuni lombardi e la politica imperiale,
+      quattro portatori si riconoscono a Milano e fondano il patto che diventerà l'organizzazione dei Custodi.
+      Gli archivi moderni li classificano retroattivamente nelle quattro stirpi; non usano necessariamente i nomi di Casata odierni.
+  - id: MR-TIME-003
+    date: "1348"
+    real_or_fictional: "mixed"
+    event: "La peste produce una crisi del Velo; i Custodi formalizzano protocolli per morti inquieti, memoria e contenimento."
+  - id: MR-TIME-004
+    date: "1386"
+    real_or_fictional: "mixed"
+    event: >-
+      Con l'avvio del cantiere del Duomo, una frattura occulta rende instabile il Nexus. Cinque Guardiani stabiliscono il Patto del Nexus
+      e creano i cinque Frammenti-Ancora che, nella campagna, formano lo Specchio del Velo.
+  - id: MR-TIME-005
+    date: "1503"
+    real_or_fictional: "fictional"
+    event: "Il Grande Scisma degli Ouroboros divide i Custodi sulla possibilità di usare gli Anelli per governare anziché proteggere."
+  - id: MR-TIME-006
+    date: "1630"
+    real_or_fictional: "mixed"
+    event: >-
+      La peste e le morti di massa assottigliano la Linea dei Morti; i Custodi formalizzano protocolli per sepolture,
+      memoria e archivi funerari. Quando il Cimitero Monumentale viene aperto nell'Ottocento, tali protocolli vengono adattati al nuovo nodo.
+  - id: MR-TIME-007
+    date: "XIX-XX secolo"
+    real_or_fictional: "fictional institutional history"
+    event: >-
+      I Custodi passano gradualmente da etichette locali e descrittive a una classificazione internazionale delle quattro stirpi.
+      I documenti moderni usano Avalon, Umbra, Ife e Mictlan anche per registrazioni più antiche. È una convenzione dell'organizzazione,
+      non un'affermazione sull'origine storica delle tradizioni culturali richiamate dai nomi.
+  - id: MR-TIME-008
+    date: "1943"
+    real_or_fictional: "mixed"
+    event: "I bombardamenti aprono numerose brecce; il Rinnegato Gervasio viola il Patto del Nexus e scompare nelle Linee."
+  - id: MR-TIME-009
+    date: "1987"
+    real_or_fictional: "fictional"
+    event: "Nonna Rosa assume la custodia stabile del nodo Vita di Sempione e si ritira progressivamente dalle operazioni ordinarie."
+  - id: MR-TIME-010
+    date: "1992"
+    real_or_fictional: "fictional"
+    event: "Marisol Reyes arriva a Milano seguendo il richiamo del proprio Anello e in seguito diventa la rappresentante Mictlan nella Cerchia."
+  - id: MR-TIME-011
+    date: "2003"
+    real_or_fictional: "fictional"
+    event: >-
+      Una frattura intrappola Arianna, sorella di Vincenzo. Elisabetta Conti partecipa alla decisione di sigillare la breccia e perde un braccio;
+      Eleonora Visconti partecipa alla successiva copertura e nasconde una copia dell'ultimo messaggio di Arianna.
+  - id: MR-TIME-012
+    date: "oggi"
+    real_or_fictional: "fictional"
+    event: "Circa quaranta Guardiani e altrettanti Anelli attivi proteggono l'area milanese mentre il Velo mostra nuovi segni di pressione."

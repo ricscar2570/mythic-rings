@@ -1,0 +1,67 @@
+schema_version: 1
+canon_version: "0.9.0-beta.2/G1"
+npcs:
+  - id: MR-NPC-001
+    name: "Elisabetta Conti"
+    age: 67
+    status: "Presidente neutrale della Cerchia degli Anziani"
+    casata: "ex-Avalon; ritirata"
+    role: "presidenza istituzionale, strategia, voto neutrale"
+    objective: "mantenere operativi i Custodi senza permettere che una Casata domini la Cerchia"
+    secret: "nel 2003 contribuì alla decisione originaria di sigillare la breccia di Arianna e perse un braccio durante la crisi"
+    first_appearance: "capitolo 2"
+  - id: MR-NPC-002
+    name: "Eleonora Visconti"
+    age: 65
+    status: "Anziana Avalon e coordinatrice operativa"
+    casata: "Avalon"
+    role: "rappresentante Avalon nella Cerchia; Prima tra Pari nelle operazioni sul campo"
+    objective: "preservare il Velo e la capacità operativa dei Custodi, anche quando la trasparenza la mette a rischio"
+    secret: "partecipò alla copertura del caso Arianna, non alla decisione originaria; nascose una copia del suo ultimo messaggio"
+    first_appearance: "capitolo 12"
+  - id: MR-NPC-003
+    name: "Leila Ferrara"
+    age: 41
+    status: "Anziana Umbra"
+    casata: "Umbra"
+    role: "intelligence, controspionaggio, sicurezza interna"
+    objective: "impedire infiltrazioni senza trasformare i Custodi in una polizia segreta incontrollata"
+    secret: "mantiene dossier non condivisi integralmente con la Cerchia"
+    first_appearance: "capitolo 2"
+  - id: MR-NPC-004
+    name: "Kwame Asante"
+    age: 62
+    status: "Anziano Ife"
+    casata: "Ife"
+    role: "mediazione, reti viventi, rapporti diplomatici"
+    objective: "evitare che proteggere il Velo significhi spezzare comunità e relazioni"
+    secret: "mantiene canali civili con membri non violenti della Fratellanza"
+    first_appearance: "capitolo 2"
+  - id: MR-NPC-005
+    name: "Marisol Reyes"
+    age: 58
+    status: "Anziana Mictlan"
+    casata: "Mictlan"
+    role: "memoria dei morti, protocollo funerario, gestione delle soglie"
+    objective: "proteggere vivi e morti dalle conseguenze di una gestione irresponsabile del Velo"
+    secret: "il suo Anello la richiamò a Milano nel 1992; non considera Milano l'origine della propria tradizione"
+    first_appearance: "capitolo 2"
+  - id: MR-NPC-006
+    name: "Padre Tommaso De Luca"
+    age: 54
+    status: "Guardiano Avalon veterano e mentore"
+    casata: "Avalon"
+    role: "referente operativo, archivio sul campo, accompagnamento dei nuovi Guardiani"
+    objective: "proteggere innocenti e rendere i Custodi responsabili delle proprie scelte"
+    secret: "ha copiato documenti sul caso Arianna e vuole che almeno i Custodi conoscano la verità"
+    first_appearance: "capitolo 3"
+  - id: MR-NPC-007
+    name: "Valentina Riva"
+    alias: "La Volpe"
+    age: null
+    status: "Umbra rinnegata, mediatrice indipendente del Mercato Notturno"
+    casata: "Umbra"
+    role: "informazioni, neutralità del Mercato, contatti tra fazioni"
+    objective: "mantenere il Mercato indipendente da Custodi e Fratellanza"
+    secret: "ha un accordo informale con i Custodi: libertà e neutralità in cambio di informazioni che prevengono catastrofi"
+    first_appearance: "capitolo 1"

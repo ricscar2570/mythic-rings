@@ -136,6 +136,13 @@ for path in [
     ROOT / "products/adventure/Mythic_Rings_Notte_al_Monumentale.md",
 ]:
     text = path.read_text(encoding="utf-8")
+    fm_match = re.match(r"\A---\s*\n(.*?)\n---\s*\n", text, re.S)
+    if not fm_match:
+        fail(f"{path.relative_to(ROOT)}: frontmatter assente")
+    else:
+        product_fm = yaml.safe_load(fm_match.group(1))
+        if str(product_fm.get("version")) != str(meta["version"]):
+            fail(f"{path.relative_to(ROOT)}: versione {product_fm.get('version')} diversa da {meta['version']}")
     for pattern, label in [
         (r"\[[A-ZÀ-Ü][^\]]*(?:nome|cognome|email|sito|playtester)[^\]]*\]", "placeholder"),
         (r"Mythic Rings v3", "versione storica"),
@@ -150,10 +157,131 @@ for pattern, label in [
     (r"ritira(?:re)?\s+(?:entrambi|tutti e due)\s+i\s+dadi", "Fato: ritiro di entrambi i dadi"),
     (r"Dado Escalation[^\n]{0,120}(?:tiro|tiri|2d6)", "Escalation applicata ai tiri"),
     (r"Armatura\s+(?:totale\s+)?(?:massima|max)\s*[:=]?\s*[5-9]", "Armatura ordinaria oltre il limite"),
+    (r"Punto Fato extra", "Fato oltre il massimo canonico"),
+    (r"\+1 forward al primo tiro di ogni scontro", "bonus ad hoc per gruppi piccoli"),
 ]:
     hits = re.findall(pattern, corpus, re.I)
     if hits:
         fail(f"Regola obsoleta rilevata ({label}): {len(hits)} occorrenze")
+
+# Ring Core: parità semantica e collisioni ad alto rischio.
+canonical = yaml.safe_load((ROOT / "data/canonical_rules.yml").read_text(encoding="utf-8"))
+ring = canonical.get("rules", {}).get("ring_resonance", {})
+anchor = canonical.get("rules", {}).get("ring_anchor", {})
+if ring.get("id") != "MR-RULE-015":
+    fail("Risonanza: MR-RULE-015 assente")
+if anchor.get("id") != "MR-RULE-016":
+    fail("Ancora: MR-RULE-016 assente")
+if not re.search(r"una volta per scena", str(ring.get("frequency", "")), re.I):
+    fail("Risonanza: frequenza diversa da 1/scena")
+if not re.search(r"non si resetta", str(ring.get("scene_boundary", "")), re.I) or not re.search(r"nuovo round", str(ring.get("scene_boundary", "")), re.I):
+    fail("Risonanza: confine di scena non definito contro reset tattici")
+if set((ring.get("prices") or {}).keys()) != {"body", "soul", "bond", "world"}:
+    fail("Risonanza: categorie di prezzo non canoniche")
+if not re.search(r"Usare Potere", str(ring.get("trigger", "")), re.I) or not re.search(r"Mossa Esclusiva di Casata", str(ring.get("trigger", "")), re.I):
+    fail("Risonanza: eleggibilità non chiusa su Usare Potere/Mossa Esclusiva")
+validity = ring.get("price_validity") or {}
+if not re.search(r"realmente applicabili", str(validity.get("general", "")), re.I):
+    fail("Risonanza: validità generale dei prezzi assente")
+if not re.search(r"Velo 12", str(validity.get("world", "")), re.I):
+    fail("Risonanza: limite Mondo a Velo 12 assente")
+if not re.search(r"dadi finali", str(ring.get("natural_two_timing", "")), re.I):
+    fail("Risonanza: timing del 2 naturale dopo Fato assente")
+if not re.search(r"stessa risorsa", str(validity.get("general", "")), re.I):
+    fail("Risonanza: regola sui costi aggiuntivi della stessa risorsa assente")
+if not re.search(r"non parte", str(ring.get("price_procedure", "")), re.I) or not re.search(r"spesa anche se", str(ring.get("price_procedure", "")), re.I):
+    fail("Risonanza: uso dopo prezzi non validi/rifiutati non normato")
+if re.search(r"se il tavolo non usa", str((ring.get("prices") or {}).get("world", "")), re.I):
+    fail("Risonanza: Mondo non deve avere fallback senza Velo Tracker")
+if not re.search(r"eccezione.*categorie differenti", str(anchor.get("grounding", "")), re.I):
+    fail("Ancora: edge case con secondo prezzo Legame non normato")
+
+ring_sources = [
+    ROOT / "chapters/05_come_si_gioca.md",
+    ROOT / "chapters/30_quick_reference_giocatori.md",
+    ROOT / "chapters/31_quick_reference_custode.md",
+    ROOT / "products/quickstart/Mythic_Rings_Quickstart.md",
+    ROOT / "products/player-kit/Mythic_Rings_Kit_del_Giocatore.md",
+]
+for path in ring_sources:
+    text = path.read_text(encoding="utf-8")
+    required_patterns = {
+        "Risonanza": r"Risonanza dell'Anello",
+        "6−→7–9": r"6−\s*(?:→|diventa)\s*7[–-]9",
+        "7–9→10+": r"7[–-]9\s*(?:→|diventa)\s*10\+",
+        "Corpo 4 PF": r"(?:Corpo[\s\S]{0,260}(?:4 PF|−4 PF)|(?:4 PF|−4 PF)[\s\S]{0,260}Corpo)",
+        "Mondo/Velo": r"(?:Mondo[\s\S]{0,260}Velo|Velo[\s\S]{0,260}Mondo)",
+        "eleggibilità chiusa": r"Mossa Esclusiva di Casata",
+        "rifiuto consuma opportunità": r"(?:spes[ao]|speso).*anche se|anche se.*(?:rifiut|rinunc)",
+    }
+    for label, pattern in required_patterns.items():
+        if not re.search(pattern, text, re.I):
+            fail(f"{path.relative_to(ROOT)}: Ring Core incompleto ({label})")
+
+# Il nome Ancora è riservato alla nuova regola, non alla capacità L3 di Amato.
+for path in [ROOT / "chapters/04_creare_il_tuo_guardiano.md", ROOT / "chapters/05_come_si_gioca.md", ROOT / "products/player-kit/Mythic_Rings_Kit_del_Giocatore.md"]:
+    text = path.read_text(encoding="utf-8")
+    if re.search(r"\|\s*Amato\s*\|[^\n]*\*\*Ancora", text):
+        fail(f"{path.relative_to(ROOT)}: collisione terminologica Ancora/Amato")
+
+# Le quattro Casate sono stirpi di Anelli; non possono ricomparire come quattro soli artefatti milanesi.
+lore_corpus = "\n".join((ROOT / rel).read_text(encoding="utf-8") for rel in ["chapters/01_milano_nascosta.md", "chapters/02_i_custodi_e_gli_anelli_di_custodia.md"])
+for pattern, label in [
+    (r"quattro artefatti(?: magici)? leggendari", "quattro soli artefatti"),
+    (r"Quelli di Milano\s+sono quattro", "quattro soli Anelli a Milano"),
+]:
+    if re.search(pattern, lore_corpus, re.I):
+        fail(f"Lore Anelli incoerente: {label}")
+
+# Parità delle distanze e rimozione di regole ad hoc residue.
+quickstart_text = (ROOT / "products/quickstart/Mythic_Rings_Quickstart.md").read_text(encoding="utf-8")
+kit_text = (ROOT / "products/player-kit/Mythic_Rings_Kit_del_Giocatore.md").read_text(encoding="utf-8")
+for label, text in [("quickstart", quickstart_text), ("kit", kit_text)]:
+    for band in ["Contatto", "Vicino", "Lontano", "Remoto"]:
+        if not re.search(rf"\b{band}\b", text):
+            fail(f"{label}: distanza canonica assente ({band})")
+if re.search(r"\|\s*\*\*Medio\*\*\s*\|", quickstart_text):
+    fail("quickstart: distanza Medio obsoleta")
+if re.search(r"\*\*Medio\*\*\s*·", kit_text):
+    fail("kit: distanza Medio obsoleta")
+
+session_zero = (ROOT / "chapters/15_session_zero.md").read_text(encoding="utf-8")
+if re.search(r"Punto Fato extra|\+1 forward al primo tiro", session_zero, re.I):
+    fail("Sessione Zero: scaling gruppi piccoli viola i limiti canonici")
+
+rings_chapter = (ROOT / "chapters/02_i_custodi_e_gli_anelli_di_custodia.md").read_text(encoding="utf-8")
+if re.search(r"efficacia ridotta", rings_chapter, re.I):
+    fail("Anelli: efficacia ridotta non quantificata")
+if not (
+    re.search(r"Separazione temporanea[\s\S]{0,500}non applica modificatori nascosti", rings_chapter, re.I)
+    and re.search(r"Anello tolto[\s\S]{0,300}(?:Nessuna penalità numerica|non applica penalità numeriche)", rings_chapter, re.I)
+):
+    fail("Anelli: stati di rimozione/separazione senza regola esplicita")
+
+one_shots = (ROOT / "chapters/28_tre_one_shot.md").read_text(encoding="utf-8")
+if re.search(r"Ada Brambilla, custode notturna", one_shots, re.I):
+    fail("Collisione terminologica Custode/occupazione in one-shot")
+
+downtime_text = (ROOT / "chapters/23_le_12_attivita_di_downtime.md").read_text(encoding="utf-8")
+if not re.search(r"Affrontare una Condizione dell'Anello durante il downtime", downtime_text, re.I):
+    fail("Downtime: procedura di risoluzione Condizione dell'Anello assente")
+if not re.search(r"beneficio numerico principale", downtime_text, re.I):
+    fail("Downtime: la rimozione della Condizione non ha costo opportunità esplicito")
+
+# Style guide: terminologia editoriale ad alto rischio.
+style_guide = (ROOT / "docs/EDITORIAL_STYLE_GUIDE.md").read_text(encoding="utf-8")
+if not re.search(r"Custode[^\n]*esclusivamente[^\n]*(?:GM|conduce il gioco)", style_guide, re.I):
+    fail("Style guide: il singolare Custode non è riservato esplicitamente al GM")
+if not re.search(r"Contatto, Vicino, Lontano, Remoto", style_guide, re.I):
+    fail("Style guide: distanze canoniche non allineate")
+if re.search(r"Distanze:\s*Vicino,\s*Medio,\s*Lontano,\s*Oltre", style_guide, re.I):
+    fail("Style guide: vecchie distanze ancora normative")
+if not re.search(r"Anello di Custodia\s*/\s*Anelli di Custodia", style_guide, re.I):
+    fail("Style guide: grafia Anello di Custodia non fissata")
+
+bestiary_text = (ROOT / "chapters/26_il_bestiario_di_milano.md").read_text(encoding="utf-8")
+if re.search(r"custode funerario", bestiary_text, re.I):
+    fail("Bestiario: Custode usato come personaggio in-fiction")
 
 # Dimensioni anomale: avviso, non blocco.
 for rel in meta["chapters"]:

@@ -3,7 +3,7 @@ title: "Mythic Rings — Notte al Monumentale"
 subtitle: "Avventura introduttiva"
 author: "Riccardo Scaringi"
 lang: it-IT
-version: "0.9.0-beta.1"
+version: "0.9.0-beta.2"
 rights: "Copyright © 2026 Riccardo Scaringi. Versione beta per playtest."
 ---
 
@@ -12,6 +12,10 @@ rights: "Copyright © 2026 Riccardo Scaringi. Versione beta per playtest."
 ## Avventura introduttiva per Mythic Rings
 
 *I morti chiedono di essere ricordati. Qualcosa ha imparato a usare le loro voci.*
+
+:::box[Regola firma: Risonanza]{type=info}
+Questa avventura è anche il primo test della meccanica-identità di *Mythic Rings*. Una volta per scena, un Guardiano può migliorare di una fascia un 6− o 7–9 ottenuto con **Usare Potere** oppure con una **Mossa Esclusiva di Casata che richiede un tiro**. Il Custode offre due prezzi reali di categorie differenti: **Corpo, Anima, Legame, Mondo**. Il giocatore ne accetta uno oppure conserva il risultato originale. Regole complete nel Quickstart o nel Capitolo 5 del manuale.
+:::
 
 Questa avventura è progettata per una sessione di tre o quattro ore con tre o quattro Guardiani appena creati. Richiede il **Quickstart di Mythic Rings** oppure il manuale base e il **Kit del Giocatore**. I quattro pregenerati del quickstart sono particolarmente adatti.
 
@@ -26,7 +30,7 @@ Il fascicolo separa le informazioni del Custode dal resto del quickstart, aggiun
 | Preparazione | 20–30 minuti alla prima lettura |
 | Tono | horror investigativo, memoria e lutto |
 | Conflitti | uno possibile, uno probabile ma evitabile |
-| Regole esercitate | indagine, Legami, poteri, Condizioni, combattimento, conseguenze 7–9 |
+| Regole esercitate | indagine, Legami, poteri, Risonanza dell'Anello, Condizioni, combattimento, conseguenze 7–9 |
 
 ## Contenuti e sicurezza
 
@@ -65,9 +69,9 @@ Ettore può essere convinto a interrompere il rituale. Il Coro deve essere conge
 Collega il caso ai personaggi:
 
 - Ada conosce almeno un Guardiano o un suo contatto profano;
-- Ettore possiede un documento che interessa Leila o Marco;
+- Ettore possiede un documento che interessa Chiara o Marco;
 - il Coro può imitare una voce importante per Elena;
-- le radici e i cipressi percepiscono per Kwame che nella cripta non esiste una singola vita.
+- le radici e i cipressi permettono a Luca di percepire che nella cripta non esiste una singola vita.
 
 ### Percorso delle informazioni
 
@@ -81,11 +85,11 @@ I Guardiani possono andare subito alla cripta. In quel caso Ettore li ascolta, m
 
 ### Ada Brambilla
 
-Custode notturna del cimitero. Pratica, orgogliosa e terrorizzata. Ha visto una bambina col cappotto rosso dirigersi verso la cripta, ma teme di non essere creduta.
+Addetta notturna del cimitero. Pratica, orgogliosa e terrorizzata. Ha visto una bambina col cappotto rosso dirigersi verso la cripta, ma teme di non essere creduta.
 
 ### Ettore Valli
 
-Ex Custode, consumato dal lutto. 18 PF, Armatura 1, danno 1d8 magico. Usa catene di memoria per imporre Disorientato e separare. Evita di uccidere.
+Ex archivista dei Custodi, consumato dal lutto. 18 PF, Armatura 1, danno 1d8 magico. Usa catene di memoria per imporre Disorientato e separare. Evita di uccidere.
 
 ### Marta / Il Coro
 
@@ -331,9 +335,9 @@ Descrivi o disegna un cerchio sottile attraversato da cinque crepe, una delle qu
 
 Al termine, assegna XP con le domande del Kit del Giocatore. Come conseguenza narrativa:
 
-- **Congedo:** ogni Guardiano riduce 1 Stress dopo l'epilogo; Ettore diventa contatto difficile.
+- **Congedo:** ogni Guardiano recupera 1 Stress dopo l'epilogo; Ettore diventa contatto difficile.
 - **Contenimento:** il gruppo ottiene una risorsa narrativa, ma il contenitore richiede custodia.
-- **Incarnazione:** il Coro diventa una minaccia ricorrente e l'Esposizione del soprannaturale aumenta.
+- **Incarnazione:** il Coro diventa una minaccia ricorrente e il **Velo Tracker avanza di 1**; una prova credibile del rituale sopravvive alla notte.
 - **Distruzione:** ogni Guardiano definisce un ricordo temporaneamente perduto; recuperarlo può diventare una Milestone.
 
 Non concedere nuovi bonus permanenti non previsti dal sistema.
@@ -385,4 +389,4 @@ Scegli non più di due collegamenti per non trasformare ogni dettaglio in antici
 
 Ideazione, testo e game design: **Riccardo Scaringi**.
 
-*Mythic Rings* è un'opera di fantasia ambientata in una Milano immaginaria. Versione beta editoriale 0.9.0-beta.1.
+*Mythic Rings* è un'opera di fantasia ambientata in una Milano immaginaria. Versione beta editoriale 0.9.0-beta.2.

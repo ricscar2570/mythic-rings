@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "session": {
+    "session_id": "G001-S01",
+    "group_id": "G001",
+    "rules_version": "0.9.0-beta.2",
+    "test_mode": "internal",
+    "scenario_id": "SCENARIO-ID",
+    "group_profile": "mixed",
+    "players_count": 4,
+    "duration_minutes": 180,
+    "preparation_minutes": 45,
+    "notes": ""
+  },
+  "characters": [],
+  "resonance_events": [],
+  "combat_rounds": [],
+  "rule_lookups": [],
+  "issues": [],
+  "post_session": {
+    "second_session_yes_count": 0,
+    "second_session_no_count": 0,
+    "hardest_ring_decision": "",
+    "rule_confusion": "",
+    "weak_resonance_price": "",
+    "spotlight_observation": "",
+    "milan_element": "",
+    "rule_search_expectation": "",
+    "remove_before_add": "",
+    "comprehension_notes": "",
+    "preference_notes": ""
+  }
+}

@@ -6,7 +6,7 @@ section: "Guida per il Custode"
 epigraph: "Tra due notti impossibili, i Guardiani devono ancora vivere."
 tags: [downtime, recupero, legami]
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Le 12 attività di downtime
@@ -82,11 +82,11 @@ Non esiste un obbligo fisso di scegliere questa attività ogni tre sessioni: la 
 
 Questa attività richiede un luogo sicuro, tempo e un metodo personale. Tira +FAT.
 
-**10+:** riduci 2 Stress. **7--9:** riduci 1 Stress e scegli: rivivi una memoria dolorosa; riveli qualcosa a un Confidente; oppure una visione mostra un segnale vero ma inquietante. **6−:** riduci comunque 1 Stress, ma il Custode compie una mossa soft collegata a ciò che emerge.
+**10+:** recuperi 2 Stress. **7--9:** recuperi 1 Stress e scegli: rivivi una memoria dolorosa; riveli qualcosa a un Confidente; oppure una visione mostra un segnale vero ma inquietante. **6−:** recuperi comunque 1 Stress, ma il Custode compie una mossa soft collegata a ciò che emerge.
 
 Non sostituisce il recupero notturno; si applica dopo di esso.
 
-Un Ife che trascorre la scena prendendosi cura di un ecosistema vivo riduce 1 Stress aggiuntivo, una sola volta per downtime.
+Un Ife che trascorre la scena prendendosi cura di un ecosistema vivo recupera 1 Stress aggiuntivo, una sola volta per downtime.
 
 ## 6. Purificazione Umbra
 
@@ -151,11 +151,22 @@ Non garantisce «nessuna sorpresa»: fornisce opportunità di risposta.
 Trascorri il downtime senza progetti rischiosi. Dopo il recupero notturno ordinario:
 
 - recupera 1d4 PF;
-- riduci 1 Stress;
+- recuperi 1 Stress;
 - rimuovi una Condizione temporanea quando la fiction lo consente;
 - ripara o sostituisci equipaggiamento comune.
 
 Non riduce Corruzione. Non può riportare i PF oltre il massimo. Se il personaggio riceve cure professionali o magiche aggiuntive, applicale una sola volta secondo la relativa regola.
+
+## Affrontare una Condizione dell'Anello durante il downtime
+
+Una Condizione dell'Anello **non è una Condizione temporanea** e non viene rimossa da Recuperare, Meditazione, cura o riposo come effetto automatico. Per affrontarla durante il downtime:
+
+1. scegli come attività principale una delle dodici attività la cui fiction possa realmente soddisfare la **via di risoluzione dichiarata** quando la Condizione è stata acquisita;
+2. descrivi che cosa il Guardiano fa per opporsi, rinegoziare o accettare consapevolmente l'impulso dell'Anello;
+3. se non esiste un rischio reale, giocate una scena significativa e rimuovi la Condizione alla fine quando la via è stata effettivamente soddisfatta;
+4. se esiste rischio, usa il tiro dell'attività scelta. La Condizione si rimuove quando la via viene soddisfatta anche su 7–9 o 6−, ma applica normalmente costo o conseguenza dell'esito: la Risonanza lascia quindi una storia, non un blocco indefinito.
+
+Dedicare l'attività alla Condizione sostituisce il **beneficio numerico principale** che avresti ottenuto dall'attività (per esempio recupero di Stress, riduzione di Corruzione o recupero PF), ma non cancella le conseguenze narrative del tiro. Una stessa attività non può contemporaneamente rimuovere più Condizioni dell'Anello.
 
 ## 12. Indagine personale
 

@@ -6,7 +6,7 @@ section: "Poteri delle Casate"
 epigraph: "Ogni porta si apre in entrambe le direzioni."
 tags: [mictlan, poteri]
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Poteri di Mictlan: la Soglia Eterna
@@ -16,7 +16,20 @@ Mictlan tratta con spiriti, morte, memoria e confini. I poteri usano normalmente
 I Mictlan iniziano con **28 + FOR PF**.
 
 :::box[Sangue Tenace — passivo di Casata]{type=casata_mictlan}
-Una volta per scena, quando il costo di un potere ti porterebbe sotto il 40% dei PF massimi, puoi convertire metà del costo, arrotondato per difetto e minimo 1 PF, in **2 Stress**. Dichiara la conversione prima di pagare. Non riduce il costo sotto 1 PF e non può essere usata se lo Stress è già 10.
+Una volta per scena, **dopo avere calcolato il costo finale in PF di un potere e prima di spenderlo**, se pagarlo per intero ti lascerebbe **sotto il 40% dei PF massimi**, puoi usare **Sangue Tenace**. Essere esattamente al 40% non basta.
+
+Il costo finale deve essere almeno **2 PF** e devi poter subire per intero **2 Stress** (quindi partire da Stress 0–8). Converti un numero di PF pari a **metà del costo finale arrotondata per difetto**, minimo 1, ma senza mai ridurre la spesa residua sotto **1 PF**. Spendi i PF residui e **subisci 2 Stress**.
+
+Armatura, resistenze e immunità al danno non modificano un costo in PF. Se un effetto riduce esplicitamente il costo del potere, applicalo **prima** di Sangue Tenace. Il prezzo **Corpo** della Risonanza e le altre perdite che dichiarano di non poter essere convertite non sono costi di potere eleggibili.
+
+| Costo finale | PF convertiti | Pagamento con Sangue Tenace |
+|---:|---:|---|
+| 1 PF | 0 | Non si può attivare; spendi 1 PF normalmente |
+| 2 PF | 1 | spendi 1 PF + subisci 2 Stress |
+| 3 PF | 1 | spendi 2 PF + subisci 2 Stress |
+| 5 PF | 2 | spendi 3 PF + subisci 2 Stress |
+
+**Esempio di soglia:** Elena ha 30 PF massimi, quindi il 40% è 12. Con 13 PF attuali, un costo 2 la porterebbe a 11: può usare Sangue Tenace e spendere 1 PF + subire 2 Stress. Con 14 PF e un costo 2 finirebbe a 12 esatti: non può attivarlo, perché il trigger richiede di scendere **sotto** il 40%.
 :::
 
 ### Livello 1 — Iniziato
@@ -80,7 +93,7 @@ Lo spirito compie una sola azione significativa per round.
 - **7–9:** infliggi 2d6 e recuperi massimo 3 PF; scegli se lasciare una traccia necrotica o attirare uno spirito affamato.
 - **6−:** il flusso si inverte o tocca una memoria; il Custode compie una Mossa.
 
-Non può produrre un guadagno netto oltre i limiti indicati e non funziona su costrutti privi di forza vitale.
+Si applica la regola generale **Nessun ciclo a guadagno netto** del Capitolo 5. Questo potere non funziona su costrutti privi di forza vitale.
 :::
 
 ### Livello 3 — Veterano

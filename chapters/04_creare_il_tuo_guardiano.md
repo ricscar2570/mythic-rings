@@ -6,7 +6,7 @@ section: "Il Mondo di Mythic Rings"
 epigraph: "Non sei chi eri prima dell'Anello. Non sei ancora chi diventerai."
 tags: []
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Creare il Tuo Guardiano
@@ -184,7 +184,7 @@ Il caso a parte è Mictlan, che trae vantaggio sia da FAT sia da FOR. La formula
 **PF Iniziali = 20 + (FOR × 2)** per Avalon, Umbra e Ife. Esempio: FOR
 +1 → PF = 20 + 2 = 22.
 
-**PF Iniziali Mictlan = 28 + (FOR × 1)**. I Mictlan hanno un bonus di +4 sul floor di base rispetto alle altre Casate, ma il moltiplicatore di FOR è dimezzato: questo riduce la dipendenza obbligatoria da FOR e garantisce maggiore PF a baseline anche con caratteristica fisica bassa.
+**PF Iniziali Mictlan = 28 + (FOR × 1)**. A parità di FOR, i Mictlan hanno una riserva iniziale superiore alle altre Casate: il vantaggio va da 9 PF con FOR −1 a 5 PF con FOR +3. Il moltiplicatore di FOR è dimezzato, quindi la Casata resta resistente anche senza massimizzare la caratteristica fisica.
 Questa resistenza riflette la loro connessione con il confine tra vita e
 morte: i loro poteri consumano la loro stessa vita.
 Esempio: Mictlan con FOR +1 → PF = 28 + 1 = 29.
@@ -233,9 +233,11 @@ Prima di terminare, annota per ogni potere:
 Tutti i Guardiani iniziano con lo stesso kit base, fornito
 dall'Organizzazione dei Custodi al momento della Scelta:
 
-**Anello di Custodia** - al dito, indistruttibile, fonte dei tuoi
-poteri e del tuo legame con la Casata. Non può essere rimosso se non
-volontariamente (e rimuoverlo significa rinunciare a essere Guardiano).
+**Anello di Custodia** - normalmente al dito, indistruttibile, fonte
+del legame con la Casata. Puoi **toglierlo** senza rinunciare al ruolo:
+il legame spirituale resta. Separazione temporanea, cessione e Rinuncia
+sono stati distinti e seguono la procedura canonica del Capitolo 2; solo
+la **Rinuncia** spezza volontariamente il legame.
 
 **Smartphone criptato** - con l'app dei Custodi installata:
 comunicazione sicura, segnali d'allarme, mappa delle Linee Ley, database
@@ -277,14 +279,20 @@ Ogni Legame ha un Tipo e un Livello da 0 a 3. Il Livello determina il bonus; il 
 | Tipo | Trigger | Capacità speciale di Livello 3 |
 |---|---|---|
 | Protettore | Rischi per difendere la persona legata | **Interposizione:** una volta per sessione prendi al suo posto una conseguenza fisica appena annunciata |
-| Confidente | Ti apri, ti ricomponi o resisti grazie al suo sostegno | **Catarsi:** una volta per sessione, dopo una scena sincera, riduci di 1d4 lo Stress |
+| Confidente | Ti apri, ti ricomponi o resisti grazie al suo sostegno | **Catarsi:** una volta per sessione, dopo una scena sincera, recuperi 1d4 Stress |
 | Rivale | Affronti un rischio per superarlo o dimostrargli qualcosa | **Sprone:** una volta per sessione ritira un dado di una Mossa pertinente senza spendere Fato |
 | Mentore | Applichi direttamente un insegnamento o una conoscenza ricevuta | **Intuizione:** una volta per sessione poni una domanda aggiuntiva dopo Leggere la Situazione o Investigare |
-| Amato | Agisci per proteggerlo, raggiungerlo o mantenere una promessa | **Ancora:** una volta per sessione ignora 1 Stress appena ottenuto o resta cosciente fino alla fine della scena nonostante una Condizione |
+| Amato | Agisci per proteggerlo, raggiungerlo o mantenere una promessa | **Radicamento:** una volta per sessione ignora 1 Stress appena ottenuto o resta cosciente fino alla fine della scena nonostante una Condizione |
 
 Un solo Legame può modificare lo stesso tiro. Il coinvolgimento deve essere diretto e significativo: pensare genericamente a una persona non concede il bonus. I Legami non modificano Ultimo Respiro.
 
 I Legami possono unire familiari, amici, colleghi, altri Custodi, contatti o entità capaci di una relazione autentica. Per ciascuno scrivi nome, rapporto, Tipo, motivo dell'importanza e una domanda irrisolta.
+
+### Designa la tua Ancora dell'Anello
+
+Scegli **uno dei tuoi Legami L1** e segnalo come **Ancora dell'Anello**. È la relazione che ricorda al Guardiano chi è quando l'Anello cerca di trasformare una necessità in un assoluto. L'Ancora non concede un bonus aggiuntivo ai tiri.
+
+Una volta per sessione, se l'Ancora è direttamente presente o in contatto significativo nella scena e il Custode ti offre **Anima** come prezzo di Risonanza, puoi chiedere di sostituirlo con un prezzo **Legame** che coinvolga l'Ancora. Il Custode dichiara il nuovo prezzo prima che tu decida. Se l'altro prezzo era già Legame, i due prezzi possono eccezionalmente appartenere alla stessa categoria ma devono descrivere conseguenze diverse. Se il Legame-Ancora viene spezzato o scende a L0, dovrai stabilirne un'altra attraverso una scena significativa; non puoi sostituirla nel mezzo di una risoluzione.
 
 :::box[Legami tra Guardiani]{type=info}
 Durante la Sessione Zero, ogni giocatore crea almeno un Legame verso un altro Guardiano. Non deve essere positivo: un Rivale, un Mentore riluttante o un Protettore non ricambiato producono tensione utile, purché tutti desiderino giocarla.
@@ -331,7 +339,7 @@ come si assemblano le scelte e per darti ispirazione.
 :::
 
 :::box[Marco Ferretti - Avalon, Il Paladino (segue)]{type=casata_avalon}
-**Caratteristiche:** FOR +1, CUO +1, MEN 0, CAR +2, FAT -1 **PF:** 22 (20 + 2) \| Stress: 0/10 \| Punti Fato: 2 **Poteri L1:** Luce Guida (rivelazione), Scudo Radiante (difesa), Guarigione Minore (cura). **Equipaggiamento:** Anello Avalon, smartphone, auricolare, Glock 19, manganello, 500€, giacca kevlar leggera. **Legami:** Sofia Conti (ex collega detective) - Confidente L1 -
+**Caratteristiche:** FOR +1, CUO +1, MEN 0, CAR +2, FAT -1 **PF:** 22 (20 + 2) \| Stress: 0/10 \| Punti Fato: 2 **Poteri L1:** Luce Guida (rivelazione), Scudo Radiante (difesa), Guarigione Minore (cura). **Equipaggiamento:** Anello Avalon, smartphone, auricolare, Glock 19, manganello, 500€, giacca kevlar leggera. **Legami:** Sofia Conti (ex collega detective) - Confidente L1, **Ancora dell'Anello** -
 :::
 
 :::box[Marco Ferretti - Avalon, Il Paladino (segue)]{type=casata_avalon}
@@ -344,36 +352,36 @@ quelle perse.
 autodifesa.
 :::
 
-:::box[Leila Ferrara - Umbra, L'Infiltratrice]{type=casata_umbra}
+:::box[Chiara Bellini - Umbra, L'Infiltratrice]{type=casata_umbra}
 **Concept:** Ex-detective della Questura, lasciò per «burnout». In realtà, il burnout era causato dal vedere cose che nessuno voleva credere. L'Anello la trovò durante un'indagine sotto copertura finita in un rituale occulto. **Età: 41 \| Quartiere: Navigli \| Vita Normale:** Consulente di sicurezza freelance.
 :::
 
-:::box[Leila Ferrara - Umbra, L'Infiltratrice (segue)]{type=casata_umbra}
+:::box[Chiara Bellini - Umbra, L'Infiltratrice (segue)]{type=casata_umbra}
 **Aspetto:** Capelli neri corti, occhi scuri che non battono mai abbastanza, giacca di pelle consumata, anello d'ombra quasi invisibile al mignolo. **Caratteristiche:** FOR -1, CUO +1, MEN +1, CAR 0, FAT +2 **PF:** 18 (20 - 2) \| Stress: 0/10 \| Corruzione: 0/8 \| Punti Fato: 2 **Poteri L1:** Fondersi nelle Ombre (furtività), Occhi Notturni (percezione), Lama d'Ombra (offensivo). Tutti a costo 0 Corruzione.
 :::
 
-:::box[Leila Ferrara - Umbra, L'Infiltratrice (segue)]{type=casata_umbra}
-**Equipaggiamento:** Anello Umbra, smartphone, auricolare, coltello a serramanico, grimaldelli, 500€, vestiti scuri. **Legami:** Commissario Rossi (ex capo) - Rivale L1 - lui non le ha mai creduto, lei vuole dimostrargli che aveva ragione. Sara (figlia, 16 anni) - Protettore L1 - la ragione per cui torna sempre a casa. **Citazione:** «La verità è come un'ombra: più la cerchi, più si nasconde.»
+:::box[Chiara Bellini - Umbra, L'Infiltratrice (segue)]{type=casata_umbra}
+**Equipaggiamento:** Anello Umbra, smartphone, auricolare, coltello a serramanico, grimaldelli, 500€, vestiti scuri. **Legami:** Commissario Rossi (ex capo) - Rivale L1 - lui non le ha mai creduto, lei vuole dimostrargli che aveva ragione. Sara (figlia, 16 anni) - Protettore L1, **Ancora dell'Anello** - la ragione per cui torna sempre a casa. **Citazione:** «La verità è come un'ombra: più la cerchi, più si nasconde.»
 :::
 
-:::box[Leila Ferrara - Umbra, L'Infiltratrice (segue)]{type=casata_umbra}
+:::box[Chiara Bellini - Umbra, L'Infiltratrice (segue)]{type=casata_umbra}
 **Paura:** Che la Corruzione la trasformi e Sara la veda per quello che sta diventando. **Desiderio:** Smantellare il culto che quasi la uccise. **Segreto:** Durante l'indagine sotto copertura, uccise un innocente scambiandolo per un cultista. Il caso fu insabbiato.
 :::
 
-:::box[Professor Kwame Asante - Ife, Il Druido Urbano]{type=casata_ife}
-**Concept:** Docente di Botanica alla Statale di Milano, originario del Ghana. Sentiva le piante parlare da sempre - pensava fosse una metafora. L'Anello gli ha dimostrato che non lo era. **Età: 62 \| Quartiere: Isola \| Vita Normale:** Professore universitario, vive solo con un gatto chiamato Yaw. **Aspetto:** Alto, capelli bianchi, occhiali rotondi, sempre con un rametto verde nella tasca del giacca.
+:::box[Luca Serra - Ife, Il Druido Urbano]{type=casata_ife}
+**Concept:** Ecologo urbano che lavora tra parchi, cortili e tetti verdi. Ha sempre trattato la città come un ecosistema unico; l'Anello gli ha dimostrato che alcune reti viventi ricordano davvero. **Età: 46 \| Quartiere: Isola \| Vita Normale:** Consulente ambientale e docente a contratto. **Aspetto:** Alto, capelli scuri con fili grigi, occhiali rotondi, sempre con semi e taccuino nelle tasche.
 :::
 
-:::box[Professor Kwame Asante - Ife, Il Druido Urbano (segue)]{type=casata_ife}
-Le piante nel suo ufficio crescono troppo velocemente. **Caratteristiche:** FOR 0, CUO +1, MEN +1, CAR -1, FAT +2 **PF:** 20 (20 + 0) \| Stress: 0/10 \| Punti Fato: 2 **Poteri L1:** Crescita Rapida (controllo vegetale), Tocco Vitale (guarigione), Sensi Animali (percezione).
+:::box[Luca Serra - Ife, Il Druido Urbano (segue)]{type=casata_ife}
+Le piante nel suo studio reagiscono alla sua presenza con movimenti quasi impercettibili. **Caratteristiche:** FOR 0, CUO +1, MEN +1, CAR -1, FAT +2 **PF:** 20 (20 + 0) \| Stress: 0/10 \| Punti Fato: 2 **Poteri L1:** Crescita Rapida (controllo vegetale), Tocco Vitale (guarigione), Sensi Animali (percezione).
 :::
 
-:::box[Professor Kwame Asante - Ife, Il Druido Urbano (segue)]{type=casata_ife}
-**Equipaggiamento:** Anello Ife, smartphone, auricolare, bastone da passeggio (arma improvvisata), 500€, giacca tweed con tasche piene di semi. **Legami:** La Grande Quercia del Parco Sempione - Mentore L1 - sì, un albero. Ha 400 anni e sa più cose di qualsiasi Custode. Dottoressa Yuki Tanaka (collega, Dipartimento di Biologia) - Confidente L1 - sospetta qualcosa ma non fa domande.
+:::box[Luca Serra - Ife, Il Druido Urbano (segue)]{type=casata_ife}
+**Equipaggiamento:** Anello Ife, smartphone, auricolare, bastone da passeggio (arma improvvisata), 500€, giacca tweed con tasche piene di semi. **Legami:** La Grande Quercia del Parco Sempione - Mentore L1, **Ancora dell'Anello** - sì, un albero. Ha 400 anni e sa più cose di qualsiasi Custode. Dottoressa Yuki Tanaka (collega, Dipartimento di Biologia) - Confidente L1 - sospetta qualcosa ma non fa domande.
 :::
 
-:::box[Professor Kwame Asante - Ife, Il Druido Urbano (segue)]{type=casata_ife}
-**Citazione:** «La natura non affretta. E nemmeno io.» **Paura:** Che l'umanità distrugga l'equilibrio naturale prima che lui possa proteggerlo. **Desiderio:** Trovare il modo di far convivere il mondo occulto e il mondo naturale in pace. **Segreto:** Nel 2019, durante un esperimento, creò accidentalmente una pianta senziente. La tiene nel suo ufficio. Lei è cosciente.
+:::box[Luca Serra - Ife, Il Druido Urbano (segue)]{type=casata_ife}
+**Citazione:** «La natura non affretta. E nemmeno io.» **Paura:** Trasformare la natura in uno strumento invece di ascoltarla. **Desiderio:** Far convivere la città e le sue reti viventi senza che una domini l'altra. **Segreto:** Durante un monitoraggio ha scoperto una rete vegetale che sembra ricordare persone scomparse; non lo ha ancora riferito ai Custodi.
 :::
 
 :::box[Elena Marchetti - Mictlan, La Medium]{type=casata_mictlan}
@@ -389,7 +397,7 @@ Le piante nel suo ufficio crescono troppo velocemente. **Caratteristiche:** FOR 
 :::
 
 :::box[Elena Marchetti - Mictlan, La Medium (segue)]{type=casata_mictlan}
-**Equipaggiamento:** Anello Mictlan, smartphone, auricolare, coltello rituale (arma), 500€, vestiti neri, quaderno per annotare le testimonianze degli spiriti. **Legami:** Nonna Lucia (spirito) - Mentore L1 - morta 5 anni fa, rifiuta di andarsene finché Elena «non impara a vivere».
+**Equipaggiamento:** Anello Mictlan, smartphone, auricolare, coltello rituale (arma), 500€, vestiti neri, quaderno per annotare le testimonianze degli spiriti. **Legami:** Nonna Lucia (spirito) - Mentore L1, **Ancora dell'Anello** - morta 5 anni fa, rifiuta di andarsene finché Elena «non impara a vivere».
 :::
 
 :::box[Elena Marchetti - Mictlan, La Medium (segue)]{type=casata_mictlan}

@@ -1,0 +1,170 @@
+# Mythic Rings 0.9.0-beta.2 — Roadmap G0/G1 + G2 rules-lock candidate + Phase 3 preparation
+
+## Base attesa
+
+Applicare sopra una repository che abbia già la patch:
+
+`Mythic_Rings_0.9.0-beta.2_RING_CORE_PATCH`
+
+La patch contiene **solo file modificati o aggiunti rispetto a quella base**. Non contiene `dist/`, `node_modules/`, cache o repository completa.
+
+## Stato raggiunto
+
+- G0 — Baseline congelata: PASS.
+- G1 — Canon approvato: PASS.
+- G2 — Alpha rules-locked: PENDING.
+  - la rules-lock candidate supera i controlli tecnici;
+  - mancano ancora le evidenze reali con Custodi/tester indipendenti previste dal piano.
+- Fase 3: pacchetto operativo delle 12 sessioni preparato, **non eseguito** e non contato come evidenza.
+
+## Principali interventi
+
+### Fase 0
+- snapshot immutabile beta.2 + checksum;
+- registro issue/decisioni/changelog master;
+- convenzioni ID;
+- modello dati anonimo per playtest, schema e fixture sintetica;
+- gate G0 e validator.
+
+### Fase 1
+- cinque Linee Ley e sei Nexus canonici;
+- roster PNG e gerarchia unificati;
+- cronologia canonica in 12 eventi;
+- presente mobile «Milano, oggi»;
+- rimozione di bonus locali concorrenti;
+- gate G1 e validator.
+
+### Fase 2
+- MR-RULE-017: Anello tolto / separazione temporanea / cessione / Rinuncia;
+- MR-RULE-018: unico Velo Tracker globale 0–12;
+- Risonanza: libreria 96 prezzi + procedura operativa in 45 secondi;
+- MR-RULE-008: una Azione Significativa per unità di minaccia/round;
+- MR-RULE-009: Escalation una volta per Azione Principale + 5 casi limite;
+- MR-RULE-012: verbi risorse + Burnout consolidato + anti-ciclo proprietario;
+- MR-RULE-013: Sangue Tenace proceduralizzato con esempi 1/2/3/5 PF;
+- glossary, quick reference, quickstart e prodotti riallineati;
+- validator `scripts/validate_rules_phase2.py`;
+- `docs/gates/G2_RULES_LOCK_CANDIDATE.md` esplicita perché G2 non è ancora PASS.
+
+### Preparazione Fase 3
+- piano delle 12 sessioni, blocchi A–F;
+- matrice B1–B8;
+- soglie 35% / 30% / 50% / 25% e vincolo di 3 osservazioni comparabili;
+- analizzatore di bundle reali;
+- lo stato `prepared_not_executed` impedisce di confondere preparazione/fixture con playtest reale.
+
+## Applicazione
+
+Estrarre lo ZIP nella radice della repository e sovrascrivere i file omonimi.
+
+Quindi:
+
+```bash
+find . -type d -name __pycache__ -prune -exec rm -rf {} +
+find . -type f -name '*.pyc' -delete
+npm ci
+python3 -m pip install -r requirements.txt
+npm run phase2:check
+npm run playtest:plan:check
+npm run verify
+```
+
+`npm run verify` richiede le dipendenze Node installate. I controlli Python di G0/G1/Fase2 e il piano Fase3 sono stati eseguiti con successo nel checkout di sviluppo.
+
+## Per chiudere G2
+
+Usare `docs/playtest/PHASE2_RULES_TEST_SCRIPT.md`. Non sostituire le prove con simulazioni o fixture.
+
+Servono:
+- 2 Custodi indipendenti per prezzi Risonanza e ordine del round;
+- 3 tester indipendenti per Sangue Tenace;
+- i risultati devono essere registrati nei moduli e poi in `docs/gates/G2_EVIDENCE.md`.
+
+## File eliminati
+
+Nessuno.
+
+## File modificati o aggiunti
+
+- `CHANGELOG.md`
+- `CONTRIBUTING.md`
+- `README.md`
+- `archive/baselines/0.9.0-beta.2/BASELINE.json`
+- `archive/baselines/0.9.0-beta.2/README.md`
+- `archive/baselines/0.9.0-beta.2/source_snapshot.tar.gz`
+- `chapters/01_milano_nascosta.md`
+- `chapters/02_i_custodi_e_gli_anelli_di_custodia.md`
+- `chapters/03_le_quattro_casate.md`
+- `chapters/04_creare_il_tuo_guardiano.md`
+- `chapters/05_come_si_gioca.md`
+- `chapters/06_mosse_base.md`
+- `chapters/07_poteri_di_avalon.md`
+- `chapters/09_poteri_di_ife.md`
+- `chapters/10_poteri_di_mictlan.md`
+- `chapters/11_la_milano_sotterranea.md`
+- `chapters/12_i_dodici_quartieri_di_milano.md`
+- `chapters/13_le_fazioni_di_milano.md`
+- `chapters/15_session_zero.md`
+- `chapters/17_le_mosse_del_custode.md`
+- `chapters/18_il_doom_clock_espanso.md`
+- `chapters/20_bilanciare_il_combattimento.md`
+- `chapters/22_mosse_avanzate.md`
+- `chapters/23_le_12_attivita_di_downtime.md`
+- `chapters/26_il_bestiario_di_milano.md`
+- `chapters/27_campagna_il_crepuscolo_del_velo.md`
+- `chapters/29_glossario_dei_termini.md`
+- `chapters/30_quick_reference_giocatori.md`
+- `chapters/31_quick_reference_custode.md`
+- `chapters/32_domande_frequenti_faq.md`
+- `data/adversaries.yml`
+- `data/canon/npcs.yml`
+- `data/canon/occult_geography.yml`
+- `data/canon/timeline.yml`
+- `data/canon/world.yml`
+- `data/canonical_rules.yml`
+- `data/playtest/phase3_internal_plan.yml`
+- `data/risonanza_price_examples.yml`
+- `docs/CANONICAL_RULES_SPEC.md`
+- `docs/CANON_BIBLE.md`
+- `docs/CANON_ROSTER.md`
+- `docs/CANON_TIMELINE.md`
+- `docs/EDITORIAL_STYLE_GUIDE.md`
+- `docs/STATUS.md`
+- `docs/gates/G0_BASELINE_FROZEN.md`
+- `docs/gates/G1_CANON_APPROVED.md`
+- `docs/gates/G2_RULES_LOCK_CANDIDATE.md`
+- `docs/playtest/DATA_MODEL.md`
+- `docs/playtest/PHASE2_RULES_TEST_SCRIPT.md`
+- `docs/playtest/PHASE3_INTERNAL_PLAYTEST_PLAN.md`
+- `docs/playtest/forms/CHARACTER_LOG.csv`
+- `docs/playtest/forms/COMBAT_LOG.csv`
+- `docs/playtest/forms/ISSUE_LOG.csv`
+- `docs/playtest/forms/POST_SESSION_QUESTIONNAIRE.md`
+- `docs/playtest/forms/README.md`
+- `docs/playtest/forms/RESONANCE_LOG.csv`
+- `docs/playtest/forms/RULE_LOOKUP_LOG.csv`
+- `docs/playtest/forms/SESSION_FORM.csv`
+- `docs/playtest/schema/session_bundle.schema.json`
+- `docs/playtest/templates/session_bundle.template.json`
+- `docs/project/CHANGELOG_MASTER.csv`
+- `docs/project/DECISION_REGISTER.csv`
+- `docs/project/ID_CONVENTIONS.md`
+- `docs/project/ISSUE_REGISTER.csv`
+- `docs/project/ISSUE_REGISTER_README.md`
+- `docs/research/CANON_SOURCE_NOTES.md`
+- `docs/rules/COMBAT_ROUND_EXAMPLE.md`
+- `docs/rules/ESCALATION_CASES.md`
+- `docs/rules/RISONANZA_PRICE_LIBRARY.md`
+- `package.json`
+- `products/adventure/Mythic_Rings_Notte_al_Monumentale.md`
+- `products/player-kit/Mythic_Rings_Kit_del_Giocatore.md`
+- `products/quickstart/Mythic_Rings_Quickstart.md`
+- `scripts/analyze_playtest_bundles.py`
+- `scripts/audit_content.py`
+- `scripts/validate_phase3_plan.py`
+- `scripts/validate_playtest_dataset.py`
+- `scripts/validate_project_governance.py`
+- `scripts/validate_rules_phase2.py`
+- `scripts/validate_world_canon.py`
+- `scripts/verify_baseline.py`
+- `tests/fixtures/playtest_phase0_smoke/session_bundle.json`

@@ -3,7 +3,7 @@ title: "Mythic Rings — Quickstart"
 subtitle: "Guardiani di Milano"
 author: "Riccardo Scaringi"
 lang: it-IT
-version: "0.9.0-beta.1"
+version: "0.9.0-beta.2"
 rights: "Copyright © 2026 Riccardo Scaringi. Versione beta per playtest."
 ---
 
@@ -34,14 +34,15 @@ Questa è una versione beta destinata al playtest. Le regole qui presenti deriva
 
 # 1. Che cos'è Mythic Rings
 
-*Mythic Rings* è un gioco di ruolo urban fantasy narrativo e tattico. A Milano esiste una barriera chiamata **Velo**, che nasconde magia, spiriti e creature alla maggior parte delle persone. Quattro Anelli scelgono Guardiani appartenenti alle Casate di Avalon, Umbra, Ife e Mictlan.
+*Mythic Rings* è un gioco di ruolo urban fantasy narrativo e tattico. A Milano esiste una barriera chiamata **Velo**, che nasconde magia, spiriti e creature alla maggior parte delle persone. Gli Anelli di quattro stirpi scelgono Guardiani appartenenti alle Casate di Avalon, Umbra, Ife e Mictlan.
 
 I Guardiani indagano minacce, proteggono persone, trattano con fazioni e usano poteri che chiedono sempre un prezzo:
 
 - Avalon e Ife accumulano **Stress**;
 - Umbra rischia la **Corruzione**;
 - Mictlan sacrifica **Punti Ferita**;
-- tutti mettono alla prova i propri **Legami**.
+- tutti mettono alla prova i propri **Legami**;
+- tutti possono chiedere all'Anello **più di quanto i dadi abbiano concesso**, accettandone il prezzo.
 
 Una sessione alterna conversazione, esplorazione, decisioni e tiri. Il Custode descrive il mondo e le minacce. I giocatori descrivono le azioni dei Guardiani. **Soltanto i giocatori tirano i dadi.**
 
@@ -131,11 +132,50 @@ Ogni Guardiano inizia la sessione con **2 Punti Fato**, massimo 2. Dopo aver tir
 
 I Punti Fato non concedono azioni aggiuntive e non vengono conservati tra sessioni.
 
+## Risonanza dell'Anello
+
+L'Anello può spingerti oltre il risultato dei dadi. **Una volta per scena**, dopo avere risolto eventuale Fato, se **Usare Potere** oppure una **Mossa Esclusiva di Casata che richiede un tiro** termina a 6− o 7–9, puoi dichiarare: **«Faccio risuonare l'Anello.»** Una scena non si resetta per un nuovo round, un breve riposo o un semplice spostamento finché conflitto e obiettivo immediato restano gli stessi.
+
+- 6− diventa 7–9;
+- 7–9 diventa 10+.
+
+Ultimo Respiro, le azioni mondane, il downtime e i poteri senza tiro non sono eleggibili. Il costo base del potere resta pagato. Il **2 naturale si controlla sui dadi finali dopo eventuale Fato**: se restano 1 e 1, Risonanza non può migliorarlo.
+
+Il Custode ti offre **due prezzi di categorie differenti**, dichiarandoli interamente. Se non può formulare due prezzi validi, la procedura non parte e conservi l'uso della scena. Dopo che due prezzi validi sono stati dichiarati, quell'uso è speso anche se li rifiuti. Accettane uno oppure rinuncia e conserva l'esito originale.
+
+| Prezzo | Che cosa accade |
+|---|---|
+| **Corpo** | perdi 4 PF ignorando Armatura; se arrivi a 0, risolvi l'effetto e poi Ultimo Respiro |
+| **Anima** | ricevi una Condizione dell'Anello persistente, con un limite concreto |
+| **Legame** | un Legame nominato subisce una conseguenza concreta su fiducia, sicurezza, promessa, debito o esposizione |
+| **Mondo** | Velo Tracker +1 e resta una prova o traccia soprannaturale reale |
+
+Entrambi i prezzi devono essere realmente applicabili: Anima richiede una Condizione nuova con limite e via di risoluzione; Legame richiede un Legame L1+ raggiungibile dalla conseguenza; Mondo non è disponibile a Velo 12. Un costo già pagato non può essere semplicemente contato di nuovo, ma lo stesso tipo di risorsa può subire **un costo aggiuntivo reale**: un Mictlan che ha pagato PF per il potere può ancora scegliere Corpo e perdere altri 4 PF.
+
+Nel quickstart, una Condizione dell'Anello si rimuove soltanto quando il Guardiano soddisfa in una scena significativa la via di risoluzione dichiarata dal Custode; cura e Riprendersi non bastano. Se la one-shot termina prima, la Condizione entra nell'epilogo del personaggio.
+
+Se accetti, risolvi l'esito migliorato e poi paga subito il prezzo. Non subisci anche la conseguenza dell'esito originale che hai migliorato.
+
+:::box[Esempio: l'Anello presenta il conto]{type=example}
+Elena ottiene 6− usando **Parlare con i Morti**. Invoca la Risonanza. Il Custode offre **Corpo: perdi 4 PF** oppure **Mondo: Velo +1 perché una telecamera registra una figura impossibile**. Elena sceglie Mondo: il tiro diventa 7–9, si risolve come tale e poi il Velo avanza di 1.
+:::
+
+### Stati del legame con l'Anello
+
+| Stato | Effetto |
+|---|---|
+| **Anello tolto** | il legame resta integro; poteri, Risonanza e Ancora funzionano |
+| **Separazione temporanea** | di norma il legame resta attivo; un blocco fictionale deve essere dichiarato prima del tiro |
+| **Cessione** | affidare l'oggetto non trasferisce legame o poteri e vale come separazione temporanea |
+| **Rinuncia** | procedura volontaria di campagna: dopo il rituale perdi poteri di Casata, Risonanza e Ancora; nessuna penalità permanente aggiuntiva senza consenso preventivo |
+
+Togliere, separare o cedere l'Anello non annulla costi/prezzi già dichiarati e non crea una nuova scena per la Risonanza.
+
 ## Esempio di tiro
 
-Leila attraversa un viale sorvegliato da statue animate. Descrive come usa i portici e le ombre: il Custode chiarisce che un fallimento la separerà dagli altri e attiva **Sfidare il Pericolo +CUO**. Leila ha CUO +1 e tira 4 e 3: totale 8. Riesce, ma con un costo. Il Custode offre due possibilità: lasciare una traccia riconoscibile oppure arrivare senza il proprio zaino. La giocatrice sceglie la traccia.
+Chiara attraversa un viale sorvegliato da statue animate. Descrive come usa i portici e le ombre: il Custode chiarisce che un fallimento la separerà dagli altri e attiva **Sfidare il Pericolo +CUO**. Chiara ha CUO +1 e tira 4 e 3: totale 8. Riesce, ma con un costo. Il Custode offre due possibilità: lasciare una traccia riconoscibile oppure arrivare senza il proprio zaino. La giocatrice sceglie la traccia.
 
-Il risultato non significa “quasi successo”: Leila attraversa davvero il viale. Il 7–9 introduce una nuova decisione o pressione.
+Il risultato non significa “quasi successo”: Chiara attraversa davvero il viale. Il 7–9 introduce una nuova decisione o pressione.
 
 # 5. Le mosse essenziali
 
@@ -218,7 +258,7 @@ Un solo Aiutare può fornire bonus a un tiro.
 
 Quando hai almeno dieci minuti in un luogo relativamente sicuro e ricevi cure o recuperi fiato, tira +FOR. Un Confidente L2+ presente può concedere +1 una volta per sessione.
 
-**10+:** recupera 1d6 PF e riduci 1 Stress. **7–9:** scegli 1d4 PF oppure −1 Stress. **6−:** non recuperi e il Custode compie una mossa soft.
+**10+:** recupera 1d6 PF e recupera 1 Stress. **7–9:** scegli 1d4 PF oppure recupera 1 Stress. **6−:** non recuperi e il Custode compie una mossa soft.
 
 Se recuperi PF e consumi un medikit, recuperi 2 PF aggiuntivi. La mossa può essere usata una sola volta per scena o luogo sicuro finché la situazione non cambia.
 
@@ -239,10 +279,10 @@ Le distanze sono narrative.
 
 | Distanza | Significato |
 |---|---|
-| **Contatto** | puoi toccare o afferrare |
-| **Vicino** | pochi passi, stessa piccola zona |
-| **Medio** | altra parte di una stanza, strada o sala |
-| **Lontano** | richiede corsa, copertura o arma adatta |
+| **Contatto** | a portata di mano, lotta o presa |
+| **Vicino** | nella stessa stanza o pochi passi |
+| **Lontano** | attraverso una strada, un salone o un tetto |
+| **Remoto** | fuori dalla scena immediata senza mezzi speciali |
 
 In un conflitto, un Guardiano può normalmente compiere **una azione significativa e un movimento**. La fiction stabilisce chi ha l'iniziativa. Se due gruppi si contendono davvero il primo istante, un rappresentante dei Guardiani tira +CUO.
 
@@ -268,7 +308,7 @@ L'Escalation accelera il combattimento senza modificare il tiro 2d6.
 | 4 | +2 |
 | 5+ | +3 |
 
-Il bonus si applica una sola volta per fonte di danno e non aumenta le cure.
+Il bonus si applica **al massimo una volta per Azione Principale del Guardiano che infligge danno**. Se l'azione colpisce più volte o più bersagli, scegli una sola istanza o un solo bersaglio. Non aumenta le cure e non si applica a reazioni, attacchi bonus, danno persistente o azioni autonome di evocazioni.
 
 ## Condizioni
 
@@ -289,7 +329,7 @@ La Condizione modifica prima ciò che è possibile nella fiction. Non applica se
 | Oggetto | Effetto |
 |---|---|
 | Coltello o manganello | 1d8 fisico, Contatto |
-| Pistola | 2d6 fisico, Medio o Lontano, rumorosa |
+| Pistola | 2d6 fisico, Lontano, rumorosa |
 | Bastone | 1d8 fisico, Contatto, può tenere a distanza |
 | Giacca protettiva | Armatura fisica 1 |
 | Medikit | consumalo durante Riprendersi per +2 PF recuperati |
@@ -306,11 +346,11 @@ Un conflitto termina quando la posta è risolta, non quando ogni avversario è m
 
 Scala 0–10.
 
-- a 8–9, ogni potere costa +1 Stress;
-- a 10, il costo raddoppia e l'uso richiede Sfidare il Pericolo +FAT;
-- su 6−, il potere fallisce e infligge 1d6 danni puri.
+- a 8–9, ogni potere con costo in Stress costa 1 Stress aggiuntivo;
+- lo Stress non supera 10: ogni punto del costo che eccederebbe 10 ti fa perdere **2 PF** ignorando Armatura;
+- se almeno 1 punto va in sovraccarico, prima del tiro del potere **Sfidare il Pericolo +FAT**: 10+ procedi; 7–9 procedi con un costo/posizione/esposizione che non sia altro Stress; 6− subisci 1d6 danni puri e il potere non produce l'effetto desiderato.
 
-Una notte sicura riduce 1 Stress. Downtime, Catarsi e capacità specifiche possono ridurlo ulteriormente.
+Una notte sicura fa recuperare 1 Stress. Downtime, Catarsi e capacità specifiche possono farne recuperare altro.
 
 ## Corruzione — Umbra
 
@@ -327,7 +367,7 @@ La Corruzione si riduce con Atti di Redenzione e rituali di Purificazione.
 
 I Mictlan hanno 28 + FOR PF e pagano i poteri in PF. Il costo può portarli a 0, attivando Ultimo Respiro dopo la risoluzione.
 
-**Sangue Tenace:** una volta per scena, se il costo ti porterebbe sotto il 40% dei PF massimi, puoi convertire metà del costo, arrotondato per difetto e minimo 1 PF, in 2 Stress. Non riduce il costo sotto 1 PF.
+**Sangue Tenace:** una volta per scena, dopo avere calcolato il costo finale in PF di un potere, se pagarlo per intero ti lascerebbe **sotto il 40% dei PF massimi**, puoi convertire `floor(costo / 2)` PF (minimo 1, lasciando almeno 1 PF da spendere) e **subire 2 Stress**. Richiede costo almeno 2 PF e Stress iniziale 0–8; essere esattamente al 40% non basta.
 
 # 8. Legami
 
@@ -341,14 +381,21 @@ Un Legame descrive una relazione importante.
 
 Si applica un solo Legame per tiro. Se un Legame si spezza, chi ne è direttamente coinvolto prende 2 Stress e la relazione cambia nella fiction.
 
+## Ancora dell'Anello
+
+Ogni Guardiano ha designato uno dei propri Legami L1+ come **Ancora**: la relazione che gli ricorda chi è quando l'Anello pretende di diventare identità. Non concede un bonus.
+
+**Una volta per sessione**, se l'Ancora è direttamente presente o in contatto significativo e il Custode offre **Anima** come prezzo di Risonanza, puoi chiedere di sostituirlo con un prezzo **Legame** che coinvolga l'Ancora. Il Custode dichiara il nuovo prezzo prima che tu decida. Se l'altro prezzo era già Legame, i due prezzi possono eccezionalmente essere entrambi Legame ma devono avere conseguenze diverse.
+
+
 ## Legami dei pregenerati
 
 Prima della scena iniziale, ogni giocatore risponde a una domanda:
 
 - **Marco ed Elena:** quale promessa di protezione è diventata troppo pesante?
-- **Leila e Marco:** quale indagine li ha messi su fronti opposti?
-- **Kwame ed Elena:** quale spirito naturale o umano hanno aiutato insieme?
-- **Leila e Kwame:** quale prova scientifica Leila ha affidato soltanto a lui?
+- **Chiara e Marco:** quale indagine li ha messi su fronti opposti?
+- **Luca ed Elena:** quale spirito naturale o umano hanno aiutato insieme?
+- **Chiara e Luca:** quale prova scientifica Chiara ha affidato soltanto a lui?
 - **Tutti:** chi ha già incontrato Ada Brambilla e perché non le ha raccontato tutta la verità?
 
 La risposta crea un fatto condiviso. Non concede automaticamente bonus: il Legame deve essere direttamente rilevante alla mossa.
@@ -365,11 +412,11 @@ La risposta crea un fatto condiviso. Non concede automaticamente bonus: il Legam
 
 **FOR +1, CUO +1, MEN 0, CAR +2, FAT −1**
 
-**PF 22 | Stress 0/10 | Fato 2 | Armatura 1**
+**PF 22 | Stress 0/10 | Fato 2 | Armatura 1 | Risonanza [ ] | Ancora usata [ ]**
 
 **Armi:** Glock 19, 2d6 fisico, Lontano; manganello, 1d8 fisico, Contatto.
 
-**Legami:** Sofia Conti, Confidente L1; Elena Marchetti, Protettore L1.
+**Legami:** Sofia Conti, Confidente L1 (**Ancora**); Elena Marchetti, Protettore L1.
 
 ### Luce Guida
 
@@ -381,11 +428,11 @@ Costo 1 Stress, tira +CAR. 10+: Armatura mistica 2 a te o a un alleato, più eff
 
 ### Guarigione Minore
 
-Costo 2 Stress, tira +CAR. 10+: 1d6+2 PF o rimuovi una Condizione fisica lieve. 7–9: 1d6 PF e +1 Stress oppure segno evidente. 6−: 1d4 PF e mossa del Custode.
+Costo 2 Stress, tira +CAR. 10+: 1d6+2 PF o rimuovi una Condizione fisica lieve. 7–9: 1d6 PF e subisci 1 Stress oppure segno evidente. 6−: 1d4 PF e mossa del Custode.
 
 **Mossa esclusiva — Voce dell'Autorità:** quando coordini sotto pressione, tira +CAR. 10+: scegli 2; 7–9 scegli 1 e ti esponi: +1 a un alleato, riposizionamento, rimuovere paura, comunicare una informazione tattica.
 
-## Leila Ferrara — Umbra, l'Infiltratrice
+## Chiara Bellini — Umbra, l'Infiltratrice
 
 **Concept:** ex detective sotto copertura. Ha visto il soprannaturale prima di essere scelta e nessuno le ha creduto.
 
@@ -395,11 +442,11 @@ Costo 2 Stress, tira +CAR. 10+: 1d6+2 PF o rimuovi una Condizione fisica lieve. 
 
 **FOR −1, CUO +1, MEN +1, CAR 0, FAT +2**
 
-**PF 18 | Corruzione 0/8 | Stress 0/10 | Fato 2 | Armatura 1**
+**PF 18 | Corruzione 0/8 | Stress 0/10 | Fato 2 | Armatura 1 | Risonanza [ ] | Ancora usata [ ]**
 
 **Armi:** coltello, 1d8 fisico, Contatto; pistola compatta, 2d6 fisico, Lontano.
 
-**Legami:** Sara, figlia, Protettore L1; Commissario Rossi, Rivale L1.
+**Legami:** Sara, figlia, Protettore L1 (**Ancora**); Commissario Rossi, Rivale L1.
 
 ### Fondersi nelle Ombre
 
@@ -415,9 +462,9 @@ Costo 0, automatico. Per un'ora vedi nel buio naturale e distingui ombre soprann
 
 **Mossa esclusiva — Leggere le Ombre:** osservando senza essere vista, tira +FAT. 10+: 2 domande; 7–9: 1 e lasci traccia; 6−: 1 risposta vera e mossa del Custode.
 
-## Professor Kwame Asante — Ife, il Druido Urbano
+## Luca Serra — Ife, il Druido Urbano
 
-**Concept:** docente di botanica. Ha sempre percepito le piante come interlocutori; ora sa che rispondevano davvero.
+**Concept:** ecologo urbano. Ha sempre trattato parchi, cortili e tetti verdi come una rete; ora sa che quella rete ricorda e risponde.
 
 **Obiettivo della sessione:** distinguere ciò che vive da ciò che imita la vita.  
 **Paura:** usare la natura come strumento invece di ascoltarla.  
@@ -425,15 +472,15 @@ Costo 0, automatico. Per un'ora vedi nel buio naturale e distingui ombre soprann
 
 **FOR 0, CUO +1, MEN +1, CAR −1, FAT +2**
 
-**PF 20 | Stress 0/10 | Fato 2 | Armatura 0**
+**PF 20 | Stress 0/10 | Fato 2 | Armatura 0 | Risonanza [ ] | Ancora usata [ ]**
 
 **Arma:** bastone, 1d8 fisico, Contatto.
 
-**Legami:** Grande Quercia del Sempione, Mentore L1; Yuki Tanaka, Confidente L1.
+**Legami:** Grande Quercia del Sempione, Mentore L1 (**Ancora**); Yuki Tanaka, Confidente L1.
 
 ### Tocco Vitale
 
-Costo 1 Stress, tira +FAT. 10+: 1d6 PF o rimuovi Condizione lieve. 7–9: 1d4 PF e segno evidente o +1 Stress. 6−: 1 PF e mossa del Custode.
+Costo 1 Stress, tira +FAT. 10+: 1d6 PF o rimuovi Condizione lieve. 7–9: 1d4 PF e segno evidente oppure subisci 1 Stress. 6−: 1 PF e mossa del Custode.
 
 ### Crescita Rapida
 
@@ -443,7 +490,7 @@ Costo 1 Stress, tira +FAT. 10+: crea barriera, presa, ponte o riparo, resistente
 
 Costo 1 Stress, automatico. Per un'ora scegli olfatto, udito, vista notturna o vibrazioni; ottieni posizione favorevole quando è direttamente utile.
 
-**Mossa esclusiva — Sentire la Vita:** toccando un essere vivente o una rete naturale, tira +FAT. 10+: 3 domande; 7–9: 1 e prendi Stress o sei percepito; 6−: impressione vera, +1 Stress e mossa del Custode.
+**Mossa esclusiva — Sentire la Vita:** toccando un essere vivente o una rete naturale, tira +FAT. 10+: 3 domande; 7–9: 1 e subisci 1 Stress oppure sei percepito; 6−: impressione vera, subisci 1 Stress e mossa del Custode.
 
 ## Elena Marchetti — Mictlan, la Medium
 
@@ -455,11 +502,11 @@ Costo 1 Stress, automatico. Per un'ora scegli olfatto, udito, vista notturna o v
 
 **FOR +1, CUO +1, MEN 0, CAR −1, FAT +2**
 
-**PF 29 | Stress 0/10 | Fato 2 | Armatura 0**
+**PF 29 | Stress 0/10 | Fato 2 | Armatura 0 | Risonanza [ ] | Ancora usata [ ]**
 
 **Arma:** coltello rituale, 1d8 fisico, Contatto.
 
-**Legami:** Nonna Lucia, spirito Mentore L1; Marco, Protettore L1.
+**Legami:** Nonna Lucia, spirito Mentore L1 (**Ancora**); Marco, Protettore L1.
 
 ### Vedere Oltre il Velo
 
@@ -486,6 +533,7 @@ Costo 2 PF, tira +FAT. 10+: 2d6 danni magici e scegli rallentamento, percezione 
 
 ## Principi
 
+- quando offri la Risonanza, presenta due prezzi reali e applicabili di categorie differenti, dichiarali prima della scelta e non riciclare un costo già obbligatorio;
 - parti dalla fiction;
 - dichiara il rischio prima del tiro;
 - fornisci indizi affidabili;
@@ -512,6 +560,12 @@ Costo 2 PF, tira +FAT. 10+: 2d6 danni magici e scegli rallentamento, percezione 
 - avanza il Doom Clock collegato;
 - offri una opportunità con costo.
 
+## Velo Tracker nel quickstart
+
+Segna un valore condiviso da **0 a 12**, iniziando da 0. Quando un Guardiano accetta **Mondo** come prezzo della Risonanza, aumenta il Velo di 1 e nomina la prova che resta. A 3 compaiono voci o una pista credibile; a 6 qualcuno inizia a investigare sistematicamente; a 9 una prova diventa difficile da contenere; a 12 il soprannaturale non è più occultabile.
+
+Per questa one-shot non serve ridurre il tracker: ogni aumento deve però produrre una traccia che possa tornare durante la sessione o nel debriefing.
+
 ## Preparazione del Custode in quindici minuti
 
 1. Leggi verità nascosta e quattro finali.
@@ -537,7 +591,7 @@ Il Custode non tira. Per ogni avversario:
 4. risolvi la loro risposta;
 5. realizza la minaccia se viene ignorata o come conseguenza appropriata.
 
-Alla fine del round, una minaccia ancora libera può compiere una mossa annunciata.
+Ogni avversario significativo — oppure un gruppo di minion gestito insieme — ha normalmente **una Azione Significativa per round**. Danno pieno, Condizione, spostamento forzato, presa di un obiettivo o Mossa offensiva nominata spendono quel budget. Una minaccia può spenderlo come conseguenza, minaccia ignorata o a fine round; a fine round agiscono soltanto le unità che non l'hanno già speso. Se una minaccia ha già agito, usa pressione, posizione o Clock invece di darle un secondo attacco pieno.
 
 # 11. Avventura — Notte al Monumentale
 
@@ -558,9 +612,9 @@ Ettore può essere convinto a interrompere il rituale. Il Coro deve essere conge
 Collega il caso ai personaggi:
 
 - Ada conosce almeno un Guardiano o un suo contatto profano;
-- Ettore possiede un documento che interessa Leila o Marco;
+- Ettore possiede un documento che interessa Chiara o Marco;
 - il Coro può imitare una voce importante per Elena;
-- le radici e i cipressi percepiscono per Kwame che nella cripta non esiste una singola vita.
+- le radici e i cipressi percepiscono per Luca che nella cripta non esiste una singola vita.
 
 ### Percorso delle informazioni
 
@@ -574,11 +628,11 @@ I Guardiani possono andare subito alla cripta. In quel caso Ettore li ascolta, m
 
 ### Ada Brambilla
 
-Custode notturna del cimitero. Pratica, orgogliosa e terrorizzata. Ha visto una bambina col cappotto rosso dirigersi verso la cripta, ma teme di non essere creduta.
+Addetta notturna del cimitero. Pratica, orgogliosa e terrorizzata. Ha visto una bambina col cappotto rosso dirigersi verso la cripta, ma teme di non essere creduta.
 
 ### Ettore Valli
 
-Ex Custode, consumato dal lutto. 18 PF, Armatura 1, danno 1d8 magico. Usa catene di memoria per imporre Disorientato e separare. Evita di uccidere.
+Ex archivista dei Custodi, consumato dal lutto. 18 PF, Armatura 1, danno 1d8 magico. Usa catene di memoria per imporre Disorientato e separare. Evita di uccidere.
 
 ### Marta / Il Coro
 
@@ -779,6 +833,10 @@ Registrate:
 - durata del conflitto principale;
 - regole consultate più volte;
 - capacità considerate troppo forti o deboli;
+- numero di Risonanze invocate, accettate e rifiutate;
+- categorie di prezzo offerte e scelte;
+- se almeno un prezzo è sembrato ovvio, fittizio o sproporzionato;
+- se l'Ancora ha influenzato una decisione;
 - punti in cui l'avventura si è fermata;
 - chiarezza della promessa del gioco;
 - interesse per una campagna successiva.
@@ -794,6 +852,8 @@ Prima di chiudere, il Custode verifica:
 - [ ] almeno un 7–9 ha prodotto una scelta reale;
 - [ ] gli indizi non si sono bloccati;
 - [ ] le risorse delle Casate hanno inciso sulle decisioni;
+- [ ] la Risonanza ha creato almeno una scelta reale senza rendere automatici i 10+;
+- [ ] i prezzi erano dichiarati prima della scelta e nessuno era fittizio;
 - [ ] gli avversari hanno agito senza tiri del Custode;
 - [ ] il finale è derivato dalle scelte, non da una scena obbligatoria;
 - [ ] ho annotato regole consultate o interpretate in modi differenti.
@@ -802,4 +862,4 @@ Prima di chiudere, il Custode verifica:
 
 Ideazione, testo e game design: **Riccardo Scaringi**.
 
-*Mythic Rings* è un'opera di fantasia ambientata in una Milano immaginaria. Versione beta editoriale 0.9.0-beta.1. Crediti, licenze e diciture definitive saranno consolidati prima della release commerciale.
+*Mythic Rings* è un'opera di fantasia ambientata in una Milano immaginaria. Versione beta editoriale 0.9.0-beta.2. Crediti, licenze e diciture definitive saranno consolidati prima della release commerciale.

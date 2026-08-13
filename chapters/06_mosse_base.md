@@ -6,7 +6,7 @@ section: "Le Regole"
 epigraph: "Quando agisci, il mondo risponde."
 tags: [mosse, riferimento]
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Le Mosse Base
@@ -164,6 +164,10 @@ Il Custode non presenta come verità un falso indizio capace di rendere insolubi
 
 Un potere privo di tiro produce l'effetto dichiarato quando costo, condizioni e limiti sono rispettati. Un effetto non può superare limiti di Armatura, modificatori o risorse senza dichiararlo esplicitamente.
 
+### Risonanza dopo Usare Potere
+
+Dopo eventuale Fato e prima delle conseguenze, una volta per scena puoi invocare la **Risonanza dell'Anello** su questo tiro: 6− diventa 7–9 oppure 7–9 diventa 10+, in cambio di uno dei due prezzi dichiarati dal Custode tra Corpo, Anima, Legame e Mondo. La stessa procedura si applica alle **Mosse Esclusive di Casata che richiedono un tiro**. Il 2 naturale non è migliorabile. Il testo completo è nel Capitolo 5.
+
 # 9. Ultimo Respiro
 
 :::box[Ultimo Respiro]{type=danger}
@@ -184,8 +188,8 @@ Il Custode propone conseguenze chiare e diverse per natura. Riprendersi non può
 
 Un Confidente L2+ che ti assiste attivamente concede +1, una sola volta per sessione per quel Legame.
 
-**10+:** recuperi 1d6 PF e riduci lo Stress di 1.  
-**7–9:** scegli: recuperi 1d4 PF oppure riduci lo Stress di 1.  
+**10+:** recuperi 1d6 PF e recuperi 1 Stress.  
+**7–9:** scegli: recuperi 1d4 PF oppure recuperi 1 Stress.  
 **6−:** non recuperi; il Custode mostra un pericolo, un costo o un'urgenza.
 
 Se recuperi PF e consumi un medikit, recuperi 2 PF aggiuntivi. Puoi usare Riprendersi al massimo una volta per scena o per sosta nella stessa location.
@@ -223,6 +227,7 @@ Ogni Guardiano dispone di 2 Punti Fato per sessione, massimo 2. Non si conservan
 | 6 | Aiutare o Ostacolare | Caratteristica coerente | Modificare l'azione altrui |
 | 7 | Investigare | +MEN | Ottenere e interpretare indizi |
 | 8 | Usare Potere | Indicata dal potere | Canalizzare l'Anello |
+| — | **Risonanza** | Nessun tiro separato | Migliorare di una fascia un tiro dell'Anello pagando un prezzo |
 | 9 | Ultimo Respiro | 2d6 senza bonus | Determinare la sorte a 0 PF |
 | 10 | Riprendersi | +FOR | Recuperare PF o Stress |
 | 11 | Resistere | Indicata dall'effetto | Opporsi a effetti persistenti |

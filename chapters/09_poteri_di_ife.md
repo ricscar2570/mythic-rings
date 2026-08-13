@@ -6,12 +6,12 @@ section: "Poteri delle Casate"
 epigraph: "La vita non è docile. Cresce dove trova spazio."
 tags: [ife, poteri]
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Poteri di Ife: il Ciclo della Vita
 
-Ife canalizza crescita, guarigione, animali e forza primordiale. I poteri usano normalmente **FAT** e costano **Stress**. Il costo viene pagato prima del tiro. Gli effetti di guarigione non possono creare cicli a guadagno netto; ogni singolo potere può curare lo stesso bersaglio una sola volta per scena, salvo indicazione diversa.
+Ife canalizza crescita, guarigione, animali e forza primordiale. I poteri usano normalmente **FAT** e costano **Stress**. Il costo viene pagato prima del tiro. Si applica la regola generale **Nessun ciclo a guadagno netto** del Capitolo 5. Inoltre, salvo indicazione diversa, ogni singolo potere di guarigione può restituire PF allo stesso bersaglio una sola volta per scena.
 
 ### Livello 1 — Iniziato
 
@@ -20,7 +20,7 @@ Ife canalizza crescita, guarigione, animali e forza primordiale. I poteri usano 
 **Costo:** 1 Stress | **Portata:** Tocco | **Durata:** istantanea | **Tiro:** +FAT
 
 - **10+:** il bersaglio recupera 1d6 PF oppure rimuove una Condizione fisica lieve.
-- **7–9:** recupera 1d4 PF; scegli se il segno naturale è evidente o subire +1 Stress.
+- **7–9:** recupera 1d4 PF; scegli se il segno naturale è evidente oppure subisci 1 Stress.
 - **6−:** recupera 1 PF e il Custode compie una Mossa collegata alla ferita.
 :::
 
@@ -60,7 +60,7 @@ I PF temporanei non si sommano ad altre fonti dello stesso tipo.
 **Costo:** 2 Stress | **Portata:** Tocco | **Durata:** istantanea | **Tiro:** +FAT
 
 - **10+:** rimuovi veleno, malattia comune o una Condizione biologica; apprendi anche la sua origine.
-- **7–9:** la neutralizzi, ma scegli: effetti residui, trasferisci a te una Condizione lieve, oppure +1 Stress.
+- **7–9:** la neutralizzi, ma scegli: effetti residui, trasferisci a te una Condizione lieve, oppure subisci 1 Stress.
 - **6−:** ne rallenti l'effetto, ma il Custode compie una Mossa e serve una cura ulteriore.
 
 Maledizioni e malattie soprannaturali richiedono una procedura specifica.
@@ -97,7 +97,7 @@ Scegli un animale reale di taglia tra gatto e cavallo.
 **Costo:** 4 Stress | **Portata:** Tocco | **Durata:** fino alla fine della scena | **Tiro:** +FAT | **Limite:** una volta per bersaglio per sessione
 
 - **10+:** il bersaglio recupera subito 2d6 PF e altri 1d4 alla fine del prossimo round.
-- **7–9:** recupera 2d6 PF; scegli se la rigenerazione lascia una mutazione temporanea o se subisci +1 Stress.
+- **7–9:** recupera 2d6 PF; scegli se la rigenerazione lascia una mutazione temporanea oppure subisci 1 Stress.
 - **6−:** recupera 1d6 PF e il Custode compie una Mossa collegata alla crescita incontrollata.
 
 Non rigenera arti, non interviene sulla morte e non può essere mantenuta per generare recupero indefinito.
@@ -121,7 +121,7 @@ Lo sciame compie una sola azione significativa per round.
 **Costo:** 5 Stress | **Portata:** Lontano, area Vicino | **Durata:** istantanea | **Tiro:** +FAT
 
 - **10+:** radici, pietra e terreno infliggono 3d6 danni fisici e imponi Immobilizzato alle minacce scelte.
-- **7–9:** infliggi 2d8 e scegli: area ridotta, danni materiali estesi, oppure +2 Stress.
+- **7–9:** infliggi 2d8 e scegli: area ridotta, danni materiali estesi, oppure subisci 2 Stress.
 - **6−:** il terreno si spezza senza distinzione e il Custode compie una Mossa.
 :::
 

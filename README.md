@@ -2,11 +2,11 @@
 
 Repository sorgente di **Mythic Rings: Guardiani di Milano**, gioco di ruolo urban fantasy narrativo e tattico basato su 2d6, scritto da **Riccardo Scaringi**.
 
-Stato attuale: **0.9.0-beta.1**. La beta è adatta a build, revisione e playtest; non è ancora autorizzata come release commerciale 1.0 perché restano obbligatori i gate esterni descritti in `docs/RELEASE_GATES.md`.
+Stato attuale: **0.9.0-beta.2**. La beta è adatta a build, revisione e playtest; non è ancora autorizzata come release commerciale 1.0 perché restano obbligatori i gate esterni descritti in `docs/RELEASE_GATES.md`.
 
 ## Identità del prodotto
 
-I giocatori interpretano Guardiani scelti da quattro Anelli mitici. Proteggono il Velo nella Milano contemporanea, indagano minacce e fazioni, e usano poteri che consumano Stress, Corruzione o Punti Ferita. Soltanto i giocatori tirano i dadi; il combattimento usa PF, Armatura, distanze narrative ed Escalation applicata al danno.
+I giocatori interpretano Guardiani scelti dagli Anelli mitici delle quattro Casate. Proteggono il Velo nella Milano contemporanea, indagano minacce e fazioni, e usano poteri che consumano Stress, Corruzione o Punti Ferita. Soltanto i giocatori tirano i dadi; il combattimento usa PF, Armatura, distanze narrative ed Escalation applicata al danno. **Quando i dadi non bastano, un Guardiano può far risuonare l'Anello e migliorare l'esito accettando un prezzo su Corpo, Anima, Legami o Velo:** questa è la meccanica-identità della beta.2.
 
 ## Fonte di verità
 
@@ -16,6 +16,13 @@ Le regole fondamentali seguono questa gerarchia:
 2. `docs/CANONICAL_RULES_SPEC.md`;
 3. capitoli normativi del manuale;
 4. quick reference, FAQ e prodotti derivati.
+
+Il **canon di mondo** segue una gerarchia parallela:
+
+1. `data/canon/world.yml`, `occult_geography.yml`, `npcs.yml`, `timeline.yml`;
+2. `docs/CANON_BIBLE.md` e viste di consultazione derivate;
+3. capitoli del manuale e campagna;
+4. prodotti derivati.
 
 Una release candidata non può contenere divergenze tra questi livelli. Le decisioni meccaniche significative richiedono un ADR in `docs/decisions/` e test aggiornati.
 
@@ -36,6 +43,9 @@ Il bestiario deriva da `data/adversaries.yml`; non modificare direttamente gli s
 │   ├── player-kit/                  # scheda, tracker e riferimenti
 │   └── adventure/                   # Notte al Monumentale autonoma
 ├── docs/                             # specifiche, gate, playtest, legale e lancio
+│   ├── project/                     # issue, decisioni, changelog master e convenzioni ID
+│   ├── playtest/                    # modello dati, schema e moduli di raccolta
+│   └── gates/                       # report verificabili dei gate della roadmap
 ├── build/                            # renderer DOCX, HTML e PDF
 ├── scripts/                          # generatori, audit e preflight
 ├── tests/                            # test delle regole canoniche
@@ -63,73 +73,103 @@ python3 -m pip install -r requirements.txt
 ## Comandi principali
 
 ```bash
-# Rigenera il bestiario, valida il corpus ed esegue i test
+# Rigenera il bestiario, valida corpus, test canonici, governance, canon G1 e consolidamento tecnico delle regole Fase 2
 npm run verify
 
-# Costruisce manuale DOCX, HTML e PDF
+# Verifica soltanto baseline, registri e fixture del modello dati playtest
+npm run phase0:check
+
+# Verifica la Fase 0 e il canon di mondo chiuso a G1
+npm run phase1:check
+
+# Verifica G0 + G1 + coerenza tecnica delle regole candidate G2
+npm run phase2:check
+
+# Verifica che il piano delle 12 sessioni interne sia completo senza confonderlo con evidenza reale
+npm run playtest:plan:check
+
+# Costruisce il manuale usando il lock di paginazione già committato
 npm run build:manual
+
+# Ricostruisce il manuale e rigenera/stabilizza il lock dell'indice
+npm run build:manual:refresh
 
 # Costruisce quickstart, kit e avventura autonoma
 npm run build:products
 
-# Pulisce e ricostruisce tutti gli artefatti
+# Pulisce e ricostruisce tutti gli artefatti usando il lock esistente
 npm run build:all
 
-# Rigenera il lock dell’indice dopo modifiche che cambiano la paginazione
-npm run build:pdf:refresh
+# Pulisce, ricostruisce tutto e rigenera il lock di paginazione
+npm run build:all:refresh
 
 # Verifica sorgenti e artefatti già costruiti, senza ricostruirli
 npm run release:preflight
 
-# Gate di release: pulizia, ricostruzione completa e preflight
+# Gate beta/CI autosufficiente: refresh della paginazione, build completa e preflight
 npm run release:check
 
-# Alias esplicito del gate di release
+# Gate RC/1.0: usa il lock già committato e fallisce se la paginazione diverge
+npm run release:locked
+
+# Alias del gate beta/CI
 npm run release:build
 ```
 
 Gli artefatti vengono scritti in `dist/` e `dist/products/`.
 
+
+## Governance della roadmap
+
+La **Fase 0** è chiusa in `docs/gates/G0_BASELINE_FROZEN.md` e la **Fase 1** in `docs/gates/G1_CANON_APPROVED.md`. La **Fase 2** ha raggiunto una *rules-lock candidate* verificata tecnicamente, documentata in `docs/gates/G2_RULES_LOCK_CANDIDATE.md`, ma **G2 non è ancora PASS**: restano le evidenze umane su formulazione dei prezzi, ordine del round e Sangue Tenace definite in `docs/playtest/PHASE2_RULES_TEST_SCRIPT.md`. La baseline 0.9.0-beta.2 è congelata sotto `archive/baselines/0.9.0-beta.2/`; issue e decisioni sono gestite in `docs/project/`, il modello dati dei playtest è in `docs/playtest/` e il canon strutturato di mondo è in `data/canon/`.
+
+Ogni modifica successiva deve citare un ID stabile del registro o un ADR. Gli ID del piano (`P0-01`, `P1-03` ecc.) restano riferimenti di roadmap e non sostituiscono gli ID stabili `CANON-*`, `RULE-*`, `BAL-*` ecc.
+
+La preparazione della **Fase 3** è descritta in `docs/playtest/PHASE3_INTERNAL_PLAYTEST_PLAN.md` e `data/playtest/phase3_internal_plan.yml`: 12 sessioni in sei blocchi A–F, matrice B1–B8 e soglie decisionali. Lo stato è intenzionalmente `prepared_not_executed`; il repository non deve mai trasformare fixture o simulazioni in evidenza di playtest reale. I bundle reali possono essere aggregati con `python3 scripts/analyze_playtest_bundles.py ... --out docs/playtest/reports`.
+
 ## Pipeline di produzione
 
-`release:check` è intenzionalmente autosufficiente: funziona anche dopo un checkout pulito, quando `dist/` non esiste. `release:preflight` è invece il controllo rapido per artefatti già costruiti.
+`release:check` è intenzionalmente autosufficiente per beta e CI: funziona dopo un checkout pulito, ricostruisce `dist/` e **rigenera il lock di paginazione** quando il testo è cambiato. `release:preflight` controlla invece artefatti già costruiti. `release:locked` è il gate più severo per RC/1.0: usa il lock già committato e fallisce se la paginazione effettiva diverge.
 
-La pipeline completa esegue:
+La pipeline `release:check` esegue:
 
-1. generazione del bestiario strutturato;
-2. validazione di frontmatter, versione e sintassi;
-3. test delle regole canoniche;
-4. audit semantico dei contenuti;
+1. controllo di portabilità della repository;
+2. generazione del bestiario strutturato;
+3. validazione di frontmatter, versione e sintassi;
+4. test delle regole canoniche e audit semantico;
 5. generazione del manuale DOCX;
 6. generazione HTML;
-7. caricamento del lock di paginazione dell’indice;
+7. rigenerazione iterativa del lock di paginazione fino alla stabilità;
 8. conversione del DOCX in PDF tramite LibreOffice;
-9. confronto tra pagine effettive e lock: la build fallisce se l’indice è obsoleto;
-10. post-processing PDF atomico con metadati e segnalibri;
-11. generazione dei prodotti separati;
-12. preflight su file, pagine, metadati, placeholder e parità approssimativa.
+9. post-processing PDF atomico con metadati e segnalibri;
+10. generazione dei prodotti separati;
+11. preflight su file, pagine, metadati, placeholder e parità approssimativa.
 
-Il PDF ufficiale non dipende da WeasyPrint. La build ordinaria usa un solo passaggio e rifiuta un indice non più allineato. `npm run build:pdf:refresh` esegue i passaggi lenti necessari a stabilizzare e aggiornare il lock soltanto dopo modifiche che alterano la paginazione. La precedente pipeline WeasyPrint è conservata soltanto come codice storico e non è il percorso di release.
+Il PDF ufficiale non dipende da WeasyPrint. Per lavoro quotidiano, `build:manual` e `build:all` conservano la modalità rapida a lock già noto; se il testo cambia la paginazione possono chiedere di eseguire `build:pdf:refresh`. Prima di una release candidate esegui un refresh, **committa `data/toc-pages.lock.json`**, quindi verifica da checkout pulito con `npm run release:locked`. La precedente pipeline WeasyPrint è soltanto codice storico e non è il percorso di release.
 
 ## Prodotti generati
 
 ### Manuale base
 
 ```text
-Mythic_Rings_Prima_Edizione_beta1.docx
-Mythic_Rings_Prima_Edizione_beta1.html
-Mythic_Rings_Prima_Edizione_beta1.pdf
+Mythic_Rings_Prima_Edizione_beta2.docx
+Mythic_Rings_Prima_Edizione_beta2.html
+Mythic_Rings_Prima_Edizione_beta2.pdf
 ```
 
 ### Prodotti di ingresso
 
 ```text
-Mythic_Rings_Quickstart_beta1.*
-Mythic_Rings_Kit_del_Giocatore_beta1.*
-Mythic_Rings_Notte_al_Monumentale_beta1.*
+Mythic_Rings_Quickstart_beta2.*
+Mythic_Rings_Kit_del_Giocatore_beta2.*
+Mythic_Rings_Notte_al_Monumentale_beta2.*
 ```
 
 Il quickstart contiene regole essenziali, quattro pregenerati e l'avventura. L'avventura autonoma ripropone lo scenario come fascicolo separato con handout, gestione del ritmo e rapporto di playtest.
+
+## Style guide e terminologia
+
+La grafia normativa è in `docs/EDITORIAL_STYLE_GUIDE.md`. In particolare, **Custode** al singolare indica soltanto il GM; **i Custodi di Milano** è il nome collettivo dell'organizzazione e i suoi singoli membri sono **Guardiani**. Le distanze canoniche sono **Contatto, Vicino, Lontano, Remoto**.
 
 ## Sintassi editoriale
 

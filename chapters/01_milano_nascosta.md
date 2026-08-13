@@ -6,14 +6,15 @@ section: "Il Mondo di Mythic Rings"
 epigraph: "Sotto ogni grande città dorme un orrore. Sopra ogni orrore vegliano gli eroi."
 tags: []
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Milano Nascosta
 
-**Milano, 2025.** Una metropoli di oltre tre milioni di anime, cuore
-pulsante dell'economia italiana, capitale indiscussa della moda e del
-design. I grattacieli di Porta Nuova svettano contro il cielo, riflessi
+**Milano, oggi.** Circa 1,4 milioni di persone risiedono nel Comune e
+circa 3,25 milioni nella Città Metropolitana. È una città che vive ben
+oltre i propri confini amministrativi, cuore pulsante dell'economia
+italiana e riferimento internazionale per moda e design. I grattacieli di Porta Nuova svettano contro il cielo, riflessi
 di vetro e acciaio che catturano la luce del sole lombardo. Nei Navigli
 i turisti sorseggiano Spritz al tramonto. In Piazza Duomo i piccioni si
 contendono le briciole mentre migliaia di persone si incrociano senza
@@ -129,10 +130,12 @@ La città che tutti conoscono. Tram arancioni che attraversano viali
 alberati. Aperitivi in Brera con taglieri di formaggi e vini naturali.
 Fashion Week, Salone del Mobile, San Siro che ruggisce il sabato sera. I
 Navigli con i loro mercatini domenicali e i murales colorati. La M1
-rossa che ti porta da Sesto a Bisceglie in quaranta minuti esatti di
-sudore e gomitate.
+rossa che attraversa la città tra pendolari, turisti e coincidenze di
+quartiere.
 
-Tre milioni e mezzo di persone vivono vite normali in questa Milano.
+Circa 1,4 milioni di residenti vivono vite normali nel Comune; oltre tre
+milioni vivono nella Città Metropolitana che gravita ogni giorno su
+Milano.
 Lavorano, amano, litigano nel traffico di Viale Monza, si lamentano del
 costo degli affitti (troppo alti), del tempo (troppo grigio), e dei
 lavori in metrò (troppo lenti). Non sanno nulla. Non sospettano nulla. E
@@ -152,7 +155,7 @@ dell'Europa occidentale.
 I morti camminano nel Cimitero Monumentale dopo mezzanotte. Le ombre
 hanno denti nei vicoli di Porta Ticinese. I gargoyle del Duomo non sono
 tutti di pietra. Nel Parco Sempione, la quercia di quattrocento anni al
-centro del giardino segreto è protetta da una Custode Ife che non ha
+centro del giardino segreto è protetta da una Guardiana Ife che non ha
 lasciato il parco dal 1987. E sotto la Stazione Centrale, nel livello
 più profondo che nessun treno raggiunge, qualcosa dorme. Qualcosa di
 molto, molto grande.
@@ -162,7 +165,7 @@ molto, molto grande.
 :::
 
 :::box[Esempio: Due Milano, Una Notte (segue)]{type=info}
-Sul tetto del palazzo di fronte al bar, un Umbra in ricognizione osserva un uomo seduto da solo a un tavolo: Valentina «La Volpe», la più famosa mercante di informazioni della Milano Mitica, sta per incontrare un cliente che non sa essere un agente della Fratellanza dei Caduti. Tra venti minuti, in questo vicolo tranquillo, ci sarà un combattimento. I Custodi sono già in posizione.
+Sul tetto del palazzo di fronte al bar, un Umbra in ricognizione osserva un uomo seduto da solo a un tavolo: Valentina Riva, «La Volpe», la più famosa mercante di informazioni della Milano Mitica, sta per incontrare un cliente che non sa essere un agente della Fratellanza dei Caduti. Tra venti minuti, in questo vicolo tranquillo, ci sarà un combattimento. I Custodi sono già in posizione.
 :::
 
 :::box[Esempio: Due Milano, Una Notte (segue)]{type=info}
@@ -193,13 +196,13 @@ dei Caduti, vampiri, culti - desidera controllarlo.
 ## Le Cinque Linee
 
 
-| Linea | Percorso Milanese | Energia | Effetto |
-|---| ---|---| ---|
-| Linea dell'Alba | Da Nord-Est (Sesto) al Duomo | Luce, guarigione, verità. Risuona con la Casata Avalon. | I poteri Avalon sono +1 più efficaci lungo il suo tracciato. |
-| Linea dell'Ombra | Da Ovest (San Siro) al Duomo | Oscurità, segreti, inganno. Risuona con la Casata Umbra. | Le ombre sono più profonde, l'invisibilità più facile. |
-| Linea della Vita | Da Nord (Sempione) al Duomo | Natura, crescita, trasformazione. Risuona con la Casata Ife. | Le piante crescono più rigogliose, gli animali sono più attivi. |
-| Linea dei Morti | Da Sud (Monumentale) al Duomo | Morte, spiriti, confine. Risuona con la Casata Mictlan. | Il confine tra i vivi e i morti è più sottile. |
-| Linea del Fato | Da Sud-Est (Porta Romana) al Duomo | Destino, casualità, cambiamento. Non associata a nessuna Casata. | Eventi improbabili accadono più spesso. Coincidenze significative. |
+| Linea | Percorso Milanese | Energia | Effetto fictionale |
+|---|---|---|---|
+| Linea dell'Alba | Nord-est: Sesto San Giovanni → Loreto → Porta Venezia → San Babila → Duomo | Luce, ordine, verità, protezione. Risuona con Avalon. | Tracce soprannaturali diventano più leggibili; protezioni e rivelazioni possono estendere scala o durata quando la fiction lo giustifica. |
+| Linea dell'Ombra | Sud-ovest: Navigli → Darsena → Porta Ticinese → Colonne di San Lorenzo → Duomo | Ombra, segreto, passaggio, ambiguità. Risuona con Umbra. | Ombre, riflessi e percorsi secondari possono offrire copertura o accessi non disponibili altrove. |
+| Linea della Vita | Nord-ovest: Parco Sempione → Castello Sforzesco → Cairoli → Duomo | Vita, crescita, relazione, rigenerazione. Risuona con Ife. | Reti viventi e vegetazione possono sostenere comunicazione, tracciamento o rituali su scala maggiore. |
+| Linea dei Morti | Nord: Cimitero Monumentale → Porta Garibaldi → Brera → Duomo | Morte, memoria, soglia, transizione. Risuona con Mictlan. | Presenze e memorie dei morti risultano più facili da localizzare o contattare quando esiste già un legame plausibile. |
+| Linea del Fato | Sud-est: Porta Romana → Crocetta → Duomo | Caso, scelta, coincidenza, possibilità. Nessuna Casata. | Coincidenze significative possono rendere visibile una scelta, un presagio o un percorso senza modificare i dadi. |
 
 :::box[⚡ Il Nexus]{type=info}
 **Posizione:** Sotto Piazza Duomo, 30 metri di profondità. **Accesso:** Cripta segreta sotto il Duomo. Chiave custodita dalla Cerchia degli Anziani. **Territorio:** Neutrale per patto antico tra tutte le fazioni. Nessun combattimento permesso entro 50 metri dal Nexus.
@@ -215,25 +218,30 @@ I rituali più potenti richiedono la sua energia. E se qualcuno riuscisse a corr
 
 ## Effetti delle Linee Ley nel Gioco
 
-Le Linee Ley non sono solo lore decorativo - hanno effetti meccanici
-concreti che il Custode può usare per arricchire le scene:
+Le Linee Ley non sono solo lore decorativo: modificano **posizione,
+effetto, accesso e rischio nella fiction**, non la matematica del tiro.
+Una Linea o un Nexus non concede mai da solo +1/-1, PF aggiuntivi,
+Armatura, recupero di Stress o riduzione di Corruzione. Quegli effetti
+appartengono alle regole e ai poteri che li dichiarano esplicitamente.
 
-**Poteri potenziati.** Quando un Guardiano usa un potere lungo la Linea
-Ley associata alla propria Casata, il Custode può concedere un effetto
-bonus narrativo: durata prolungata, area maggiore, o un dettaglio
-estetico più spettacolare. Questo non modifica il tiro, ma arricchisce
-la fiction.
+**Risonanza ambientale.** Quando un Guardiano agisce lungo una Linea
+affine alla propria Casata, il Custode può rendere possibile una scala,
+un accesso o un effetto che altrove richiederebbe preparazione: una luce
+che raggiunge l'intero corridoio, una rete di radici che conserva una
+traccia, un'ombra che collega due passaggi. Se resta un rischio reale,
+il tiro avviene normalmente.
 
-**Velo sottile.** Vicino alle Linee Ley, il Velo è più debole. Gli
-Incidenti del Velo sono più probabili, i Consapevoli più frequenti, e le
-creature occulte più attive. Questo rende le zone lungo le Linee sia più
-potenti che più pericolose.
+**Velo sottile.** Vicino alle Linee Ley, il Velo è più sensibile. Gli
+Incidenti del Velo sono più probabili, i Consapevoli più frequenti e le
+creature occulte più attive. Il vantaggio fictionale porta quindi anche
+un rischio più leggibile.
 
-**Intersezioni.** Dove due Linee si incrociano (prima di convergere
-tutte al Nexus), si creano *Nodi Minori* - punti di potere minore ma
-comunque significativi. Questi nodi sono spesso contesi tra fazioni, e
-molti quartieri hanno costruito la propria identità occulta attorno a un
-Nodo Minore.
+**Concentrazioni locali.** Prima di convergere al Duomo, le Linee formano
+nodi minori. Cinque concentrazioni stabili sono riconosciute come
+**Nexus Secondari**: Giardini di Porta Venezia, Darsena, Castello
+Sforzesco/Parco Sempione, Cimitero Monumentale e Porta Romana/Crocetta.
+I loro benefici sono sempre fictionali e non persistono automaticamente
+nella sessione successiva.
 
 Le Minacce Occulte
 
@@ -347,8 +355,8 @@ naturale.
 Senza protezione, Milano cadrebbe nel caos in settimane. Le Creature
 d'Ombra si moltiplicherebbero senza controllo. I vampiri uscirebbero
 allo scoperto. I culti completerebbero i loro rituali. Le Porte si
-spalancherebbero. Il Velo si strapperebbe. E tre milioni e mezzo di
-persone scoprirebbero, in un singolo istante di puro terrore, che gli
+spalancherebbero. Il Velo si strapperebbe. E milioni di persone, a Milano e nella sua area metropolitana,
+potrebbero scoprire in un singolo istante di puro terrore che gli
 incubi sono reali.
 
 Questo non deve succedere.
@@ -359,7 +367,7 @@ Qui entrano in gioco i **Custodi**.
 Ora conosci il mondo in cui vivono i tuoi personaggi. Sai cos'è il
 Velo, come funziona, e quali sono i suoi limiti. Sai delle Linee Ley
 e del Nexus. Sai che tipo di minacce infestano la Milano Mitica.
-**Prossimo capitolo:** Capitolo 2 - I Custodi e gli Anelli
+**Prossimo capitolo:** Capitolo 2 - I Custodi e gli Anelli di
 Custodia. Scoprirai l'organizzazione segreta che protegge Milano da
 otto secoli, e gli Anelli magici che scelgono i propri portatori.
 :::
@@ -368,7 +376,7 @@ otto secoli, e gli Anelli magici che scelgono i propri portatori.
 l'organizzazione segreta che protegge la città da ottocento anni.
 Conoscerai la loro struttura, la Cerchia degli Anziani, i Guardiani
 attivi e gli alleati che operano nell'ombra. Imparerai la storia e il
-funzionamento degli Anelli Custodia, i quattro artefatti leggendari che
+funzionamento degli Anelli di Custodia, artefatti leggendari appartenenti a quattro stirpi che
 scelgono i propri portatori e conferiscono poteri straordinari. E
 comprenderai il prezzo che ogni Guardiano paga per proteggere ciò che
 ama.

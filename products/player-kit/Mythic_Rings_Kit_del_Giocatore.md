@@ -2,7 +2,7 @@
 title: "Mythic Rings — Kit del Giocatore"
 author: "Riccardo Scaringi"
 lang: it-IT
-version: "0.9.0-beta.1"
+version: "0.9.0-beta.2"
 rights: "Copyright © 2026 Riccardo Scaringi. Versione beta per playtest."
 ---
 
@@ -28,7 +28,10 @@ Per una scheda pulita, stampa le pagine della sezione **Scheda del Guardiano** e
 **Paura:**  
 **Desiderio:**  
 **Segreto:**  
-**Domanda personale:**
+**Domanda personale:**  
+**Ancora dell'Anello (Legame L1+):**  
+**Risonanza usata in questa scena:** [ ]  
+**Ancora usata in questa sessione:** [ ]
 
 ## Caratteristiche
 
@@ -136,13 +139,41 @@ Avanzamenti già scelti:
 
 Inizi ogni sessione con 2 Punti Fato, massimo 2. Dopo avere visto un tiro e prima delle conseguenze, spendi 1 per ritirare un solo d6. Il nuovo risultato sostituisce il dado scelto anche se peggiore.
 
+## Risonanza dell'Anello
+
+**1/scena.** Dopo eventuale Fato, su un 6− o 7–9 di **Usare Potere** oppure di una **Mossa Esclusiva di Casata che richiede un tiro**. Un nuovo round, una pausa breve o uno spostamento tattico non creano una nuova scena:
+
+- 6− → 7–9;
+- 7–9 → 10+.
+
+Il Custode offre due prezzi di categorie differenti. Se non può formularne due validi, l'uso resta disponibile. Dopo la dichiarazione completa di due prezzi validi, l'uso della scena è speso anche se li rifiuti. Accettane uno oppure mantieni il risultato originale.
+
+| Corpo | Anima | Legame | Mondo |
+|---|---|---|---|
+| −4 PF, ignora Armatura | Condizione dell'Anello persistente | conseguenza su un Legame nominato | Velo +1 e traccia reale |
+
+Niente Risonanza su Ultimo Respiro, downtime, azioni mondane o poteri senza tiro. Il costo base del potere resta pagato. Il 2 naturale si controlla sui dadi finali dopo eventuale Fato: se restano 1 e 1, Risonanza non può migliorarlo.
+
+I due prezzi devono essere realmente applicabili e dichiarati prima della scelta. **Mondo** non può essere offerto a Velo 12; **Legame** richiede un Legame L1+ raggiungibile dalla conseguenza; **Anima** deve indicare limite e via di risoluzione della Condizione.
+
+## Stati dell'Anello
+
+| Stato | Regola rapida |
+|---|---|
+| **Anello tolto** | legame integro; poteri/Risonanza/Ancora restano disponibili |
+| **Separazione temporanea** | di norma come sopra; eventuale soppressione va dichiarata prima del tiro |
+| **Cessione** | non trasferisce il legame; per te vale come separazione temporanea |
+| **Rinuncia** | procedura volontaria di campagna; perdi poteri di Casata, Risonanza e Ancora; niente penalità permanenti ulteriori senza consenso preventivo |
+
+Togliere, separare o cedere l'Anello non evita costi o prezzi già dichiarati e non resetta la scena.
+
 ## Distanze
 
-**Contatto** · **Vicino** · **Medio** · **Lontano**
+**Contatto** · **Vicino** · **Lontano** · **Remoto**
 
 ## Turno di conflitto
 
-Una Azione Principale e un movimento coerente con la fiction. Il gruppo decide l'ordine dei Guardiani e può cambiarlo ogni round. Il Custode non tira per gli avversari.
+Una Azione Principale e un movimento coerente con la fiction. Il gruppo decide l'ordine dei Guardiani e può cambiarlo ogni round. Il Custode non tira per gli avversari. Ogni unità di minaccia ha normalmente una sola Azione Significativa per round.
 
 ## Danno e Armatura
 
@@ -163,7 +194,7 @@ Danno effettivo = danno inflitto − Armatura pertinente, minimo 1 salvo immunit
 | 4 | +2 |
 | 5+ | +3 |
 
-Il bonus non modifica il tiro e torna a 0 alla fine del conflitto.
+Il bonus non modifica il tiro. Si applica **al massimo una volta per Azione Principale del Guardiano che infligge danno**; se colpisci più volte o più bersagli, scegli una sola istanza o un solo bersaglio. Reazioni, attacchi bonus, danni persistenti e azioni autonome di evocazioni non lo ricevono. Torna a 0 alla fine del conflitto.
 
 # Mosse essenziali
 
@@ -272,15 +303,21 @@ Quando raggiungi 0 PF, fermali a 0 e tira 2d6 senza bonus. Puoi spendere Fato no
 
 Quando un Legame si spezza per morte, tradimento o separazione definitiva, scende a 0 e il Guardiano subisce 2 Stress.
 
+## Ancora dell'Anello
+
+Designa un Legame L1+ come Ancora. Non concede bonus. **Una volta per sessione**, se è presente o in contatto significativo e il Custode offre Anima come prezzo di Risonanza, puoi chiedere di sostituirlo con un prezzo Legame che coinvolga l'Ancora; il nuovo prezzo viene dichiarato prima della scelta.
+
+Se l'Ancora scende a L0, ne designi un'altra soltanto dopo una scena significativa.
+
 ## Tipi e capacità L3
 
 | Tipo | Quando è pertinente | Capacità di livello 3 |
 |---|---|---|
 | Protettore | rischi per difendere la persona | **Interposizione:** prendi al suo posto una conseguenza fisica appena annunciata, 1/sessione |
-| Confidente | ti apri, ti ricomponi o resisti grazie al sostegno | **Catarsi:** dopo una scena sincera riduci 1d4 Stress, 1/sessione |
+| Confidente | ti apri, ti ricomponi o resisti grazie al sostegno | **Catarsi:** dopo una scena sincera recuperi 1d4 Stress, 1/sessione |
 | Rivale | affronti un rischio per superarlo o dimostrare qualcosa | **Sprone:** ritira un dado di una mossa pertinente senza Fato, 1/sessione |
 | Mentore | applichi un insegnamento ricevuto | **Intuizione:** domanda aggiuntiva dopo Leggere o Investigare, 1/sessione |
-| Amato | proteggi, raggiungi o mantieni una promessa | **Ancora:** ignora 1 Stress appena ottenuto o resta cosciente nonostante una Condizione, 1/sessione |
+| Amato | proteggi, raggiungi o mantieni una promessa | **Radicamento:** ignora 1 Stress appena ottenuto o resta cosciente nonostante una Condizione, 1/sessione |
 
 I Legami non modificano Ultimo Respiro.
 
@@ -294,7 +331,7 @@ I Legami non modificano Ultimo Respiro.
 | Valore | 6 | 7 | 8 | 9 | 10 | — |
 | Segna |  |  |  |  |  | — |
 
-A 8–9 i poteri che costano Stress costano +1. A 10 il costo raddoppia e devi Sfidare il Pericolo +FAT; su 6− subisci 1d6 danni puri e il potere non produce l'effetto desiderato.
+A 8–9 i poteri con costo in Stress costano 1 Stress aggiuntivo. Il valore massimo è 10: ogni punto di costo che eccederebbe 10 ti fa perdere 2 PF ignorando Armatura e attiva il Burnout. Prima del tiro del potere Sfidare il Pericolo +FAT: 10+ procedi; 7–9 procedi con un costo/posizione/esposizione che non sia altro Stress; 6− subisci 1d6 danni puri e il potere non produce l'effetto desiderato.
 
 ## Umbra — Corruzione
 
@@ -308,7 +345,14 @@ A 6 i poteri L3+ costano +1 Corruzione. A 7 anche i poteri L2+. A 8 avviene la t
 
 ## Mictlan — Sangue Tenace
 
-Una volta per scena, quando un costo in PF ti porterebbe sotto il 40% dei PF massimi, converti metà del costo, arrotondato per difetto e minimo 1 PF, in 2 Stress. Il costo residuo resta almeno 1 PF.
+Una volta per scena, dopo avere calcolato il costo finale in PF di un potere, se pagarlo per intero ti lascerebbe **sotto il 40% dei PF massimi**, puoi convertire `floor(costo / 2)` PF, minimo 1, lasciando almeno 1 PF da spendere. Richiede costo almeno 2 PF e Stress iniziale 0–8. **Spendi i PF residui e subisci 2 Stress.** Essere esattamente al 40% non basta.
+
+| Costo | Risultato |
+|---:|---|
+| 1 PF | non attivabile |
+| 2 PF | spendi 1 PF + subisci 2 Stress |
+| 3 PF | spendi 2 PF + subisci 2 Stress |
+| 5 PF | spendi 3 PF + subisci 2 Stress |
 
 # Avanzamento
 
@@ -355,7 +399,7 @@ Ogni risposta positiva concede 1 XP ai Guardiani direttamente coinvolti.
 - Hai affrontato un pericolo significativo?
 - Hai scoperto qualcosa che cambia il mondo o te stesso?
 - Hai trasformato, messo alla prova o spezzato un Legame?
-- Hai pagato un prezzo concreto per i principi della Casata?
+- Hai pagato un prezzo concreto per i principi della Casata o per la Risonanza del tuo Anello, lasciando una conseguenza reale?
 - Hai risolto un problema senza violenza quando era possibile usarla?
 
 Il Custode può assegnare 1 XP di gruppo per un obiettivo di campagna dichiarato.

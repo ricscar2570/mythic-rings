@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "product": "Mythic Rings",
+  "product_version": "0.9.0-beta.2",
+  "baseline_name": "Ring Core pre-Phase-0",
+  "captured_at": "2026-08-13T19:14:00+02:00",
+  "source_snapshot": {
+    "path": "archive/baselines/0.9.0-beta.2/source_snapshot.tar.gz",
+    "sha256": "c057d11942d1753dcac8dc2a98c4ac06da5d439e071ac0138e97b5147921062a",
+    "file_count": 103,
+    "scope": "Repository editoriale beta.2 prima dei file di governance della Fase 0; esclusi dist, archive, node_modules, assets/fonts, cache Python."
+  },
+  "reference_manual": {
+    "filename": "Mythic_Rings_Prima_Edizione_0.9.0-beta.2_RING_CORE_COMPLETO.pdf",
+    "pages": 265,
+    "sha256": "043b4401e5baa0b40f237e14558d1a0643e8d7862c0dee4b173766713e71dc4d",
+    "included_in_repository": false,
+    "note": "Il PDF di riferimento resta un artefatto di consegna esterno alla repository; pagina e checksum ne rendono identificabile in modo univoco la baseline editoriale."
+  },
+  "immutability_policy": "La baseline non si modifica. Qualsiasi correzione successiva appartiene a una nuova versione o a un nuovo snapshot; non si rigenera questo archivio in-place."
+}

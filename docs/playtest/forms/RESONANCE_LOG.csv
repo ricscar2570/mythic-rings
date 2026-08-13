@@ -1,0 +1,1 @@
+event_id,character_id,scene_id,move_type,pre_result,fate_used_before,procedure_started,opportunity_spent,price_1_category,price_1_text,price_1_valid,price_2_category,price_2_text,price_2_valid,choice,post_result,decision_seconds,anchor_used,clarity_rating,relevance_rating,difficulty_rating,consequence_returned_in_fiction,notes

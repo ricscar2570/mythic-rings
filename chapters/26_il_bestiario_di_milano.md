@@ -6,7 +6,7 @@ section: "Bestiario e Avventure"
 epigraph: "Milano ha i suoi mostri. Alcuni li conosci già."
 tags: [bestiario, avversari]
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Il Bestiario di Milano
@@ -143,7 +143,7 @@ Il danno riportato è quello inflitto quando la creatura ottiene un'apertura rea
 
 **Mosse**
 - **Tocco gelido:** Infligge il danno e può imporre la Condizione Terrorizzato.
-- **Urlo del rimpianto:** Tutti a Vicino devono Resistere +CUO o fuggire, congelarsi o perdere 1 Stress.
+- **Urlo del rimpianto:** Tutti a Vicino devono Resistere +CUO o fuggire, congelarsi o subire 1 Stress.
 - **Passare oltre:** Attraversa muri e compare da un’ombra o da un ricordo legato al luogo.
 
 **Debolezza:** Risolvere il rimpianto lo placa; sale e luce consacrata ne limitano il movimento.  
@@ -532,7 +532,7 @@ Il danno riportato è quello inflitto quando la creatura ottiene un'apertura rea
 :::
 
 :::box[Mummia Egizia]{type=info}
-*Un custode funerario risvegliato con rituali importati e memorie imperiali.*
+*Una sentinella funeraria risvegliata con rituali importati e memorie imperiali.*
 
 | PF | Armatura | Danno | LS | Tipo |
 |---:|---:|---|---:|---|

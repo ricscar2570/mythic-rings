@@ -6,7 +6,7 @@ section: "Poteri delle Casate"
 epigraph: "La luce non promette misericordia. Promette di mostrare la verità."
 tags: [avalon, poteri]
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Poteri di Avalon: la Luce Indomabile
@@ -55,7 +55,7 @@ Non può riportare in vita né sostituire Ultimo Respiro.
 Scagli una fiamma bianca contro un bersaglio.
 
 - **10+:** infliggi 2d6 danni magici e scegli: +1d6 contro non morti/demoni, oppure rimuovi un effetto d'ombra minore.
-- **7–9:** infliggi 2d6 danni magici, ma scegli: ti esponi, il raggio colpisce qualcosa di fragile, oppure +1 Stress.
+- **7–9:** infliggi 2d6 danni magici, ma scegli: ti esponi, il raggio colpisce qualcosa di fragile, oppure subisci 1 Stress.
 - **6−:** il Custode compie una Mossa; la fiamma può deviare o rivelare la tua posizione.
 :::
 
@@ -90,7 +90,7 @@ La barriera ha 12 PF e Armatura 2 se viene attaccata direttamente.
 **Costo:** 4 Stress | **Portata:** Tocco | **Durata:** istantanea | **Tiro:** +CAR
 
 - **10+:** recupera 2d6+3 PF e rimuovi una Condizione fisica grave oppure stabilizza una menomazione perché non peggiori.
-- **7–9:** recupera 2d6 PF; scegli se subire +1 Stress o trasferire a te una Condizione lieve del bersaglio.
+- **7–9:** recupera 2d6 PF; scegli se subire 1 Stress oppure trasferire a te una Condizione lieve del bersaglio.
 - **6−:** recupera 1d6 PF, ma il Custode compie una Mossa dura collegata alla ferita.
 
 Non rigenera arti e non annulla il prezzo di Ultimo Respiro.
@@ -103,7 +103,7 @@ Non rigenera arti e non annulla il prezzo di Ultimo Respiro.
 Crei un'arma di luce, tag **magica, luminosa, precisa**, danno 2d8.
 
 - **10+:** scegli un tag aggiuntivo: *penetrante 1*, *ritorno*, *Contatto/Lontano*.
-- **7–9:** l'arma funziona, ma scegli: danno 2d6, durata fino al primo 6−, oppure +1 Stress.
+- **7–9:** l'arma funziona, ma scegli: danno 2d6, durata fino al primo 6−, oppure subisci 1 Stress.
 - **6−:** si manifesta per un solo attacco e il Custode compie una Mossa.
 
 Gli attacchi successivi usano Attaccare normalmente.
@@ -138,7 +138,7 @@ Non impedisce automaticamente la trasformazione già avvenuta a Corruzione 8.
 **Costo:** 6 Stress | **Portata:** Vista, area Vicino | **Durata:** istantanea | **Tiro:** +CAR
 
 - **10+:** infliggi 3d8 danni magici ai nemici scelti nell'area e lascia intatti gli innocenti.
-- **7–9:** infliggi 3d6; scegli: area più piccola, danno collaterale materiale, oppure +2 Stress.
+- **7–9:** infliggi 3d6; scegli: area più piccola, danno collaterale materiale, oppure subisci 2 Stress.
 - **6−:** la luce colpisce senza precisione o attira una risposta superiore; il Custode compie una Mossa.
 :::
 

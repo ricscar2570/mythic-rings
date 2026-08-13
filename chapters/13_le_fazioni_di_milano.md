@@ -6,7 +6,7 @@ section: "Milano Mitica"
 epigraph: "In guerra, non sai chi sono i tuoi nemici finché non ti sparano alle spalle."
 tags: []
 status: beta
-version: 0.9.0-beta.1
+version: 0.9.0-beta.2
 ---
 
 ## Le Fazioni di Milano
@@ -29,7 +29,7 @@ ostile.
 
 | Fazione | Leader | Obiettivo | Metodo | Risorsa (+3) |
 |---| ---|---| ---|---|
-| Custodi | Cerchia 5 Anziani | Mantenere il Velo e proteggere i civili | Sorveglianza, intervento, diplomazia | Archivio, armeria, supporto missioni |
+| Custodi | Cerchia degli Anziani (pres. Elisabetta Conti) | Mantenere il Velo e proteggere i civili | Sorveglianza, intervento, diplomazia | Archivio, armeria, supporto missioni |
 | Fratellanza dei Caduti | Vincenzo “Il Primo” | Distruggere il Velo | Terrorismo magico, sabotaggio | Informazioni, poteri proibiti |
 | Corte dei Vampiri | Contessa Adriana | Sopravvivenza e influenza | Manipolazione sociale, ricchezza | Contatti profani, finanziamenti |
 | Cerchio delle Streghe | Nessuno (democratico) | Libertà magica | Rituali collettivi, protezione reciproca | Rituali, ingredienti, profezie |
@@ -37,13 +37,16 @@ ostile.
 
 Custodi di Milano
 
-Circa **40 Guardiani attivi** organizzati in celle da 3-5, supportati da
-100 operativi della Società del Velo. Quartier generale a Brera. La
-Cerchia dei 5 Anziani (uno per Casata + uno neutrale) governa per
-consenso ma Eleonora Visconti (Avalon) ha il peso maggiore. I Custodi
-sono la forza di difesa di Milano, ma sono sotto organico, stressati e
-internamente divisi tra falchi (“più intervento”) e colombe (“più
-diplomazia”). I PG iniziano come nuove reclute.
+Circa **40 Guardiani attivi** sono organizzati in celle da 3-5 e
+sostenuti da circa **200 persone di supporto interne ai Custodi**:
+analisti, archivisti, medici, tecnici, logistica e Consapevoli. La
+**Società del Velo** è un'alleata distinta con circa 100 operativi e non
+rientra in questo conteggio. Quartier generale a Brera. La **Cerchia
+degli Anziani** governa con cinque seggi: Elisabetta Conti è la
+Presidente neutrale; Eleonora Visconti rappresenta Avalon ed è la
+coordinatrice operativa, Prima tra Pari sul campo. I Custodi sono sotto
+organico, stressati e internamente divisi tra chi vuole più intervento e
+chi preferisce più diplomazia. I PG iniziano come nuove reclute.
 
 Fratellanza dei Caduti
 

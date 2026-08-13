@@ -1,0 +1,49 @@
+schema_version: 1
+canon_version: "0.9.0-beta.2/G1"
+setting:
+  temporal_mode: "presente_mobile"
+  display_phrase: "Milano, oggi"
+  rule: >-
+    Il manuale evita di fissare l'ambientazione a un anno salvo quando una data storica
+    è necessaria alla fiction. Dati civici contemporanei sono arrotondati nel testo e
+    mantenuti con data/fonte nelle note di ricerca.
+population:
+  comune_milano:
+    display: "circa 1,4 milioni di residenti"
+    reference_value: 1399079
+    reference_date: "2025-12-31"
+    type: "real_world_reference"
+  citta_metropolitana:
+    display: "circa 3,25 milioni di residenti"
+    reference_value: 3246455
+    reference_date: "2025-01-01"
+    type: "real_world_reference"
+  wider_urban_region:
+    display: "non quantificata nel canon"
+    rule: "Non usare '10 milioni' o altre stime come sinonimo di Città Metropolitana."
+organizations:
+  custodi_di_milano:
+    type: "fictional"
+    active_guardians: 40
+    support_staff: 200
+    definition: >-
+      I circa quaranta Guardiani sono portatori attivi di Anelli nell'area milanese.
+      Le circa duecento persone di supporto appartengono alla struttura dei Custodi:
+      analisti, archivisti, medici, tecnici, logistica, contatti e Consapevoli.
+  societa_del_velo:
+    type: "fictional"
+    field_operatives: 100
+    separate_from_custodi_support: true
+    definition: >-
+      Organizzazione alleata ma distinta dai Custodi. I suoi circa cento operativi
+      Consapevoli lavorano sul lato civile e istituzionale del contenimento del Velo.
+  cerchia_degli_anziani:
+    type: "fictional"
+    seats: 5
+    structure: "quattro rappresentanti di Casata più una Presidenza neutrale"
+rings:
+  active_in_milan_approx: 40
+  four_foundational_lineages: true
+  rule: >-
+    I 'quattro Anelli' delle formule rituali indicano le quattro stirpi fondative,
+    non quattro soli artefatti. Ogni Guardiano attivo possiede il proprio Anello.
