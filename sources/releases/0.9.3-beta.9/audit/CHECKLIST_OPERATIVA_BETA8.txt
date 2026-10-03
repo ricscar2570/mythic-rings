@@ -1,0 +1,738 @@
+Checklist operativa per Mythic Rings 0.9.3-beta.8
+
+Questa checklist è progettata per produrre una beta.8 esclusivamente editoriale, senza riaprire il design del gioco. Il suo obiettivo è garantire che il blind test misuri le regole di Mythic Rings, non errori di composizione, titoli spostati, parole espulse o formulazioni incoerenti presenti nella beta.7.
+
+File di partenza: Mythic_Rings_Manuale_Completo_0.9.3-beta.7_BLIND-READY-CLEAN.pdf
+
+0. Regole per la revisione beta.8
+Blocco del design
+ Non modificare costi dei poteri.
+ Non modificare danni.
+ Non modificare PF.
+ Non modificare Stress o Corruzione.
+ Non modificare probabilità o fasce di risultato.
+ Non aggiungere o rimuovere poteri.
+ Non modificare la Risonanza.
+ Non modificare il Fato.
+ Non modificare il sistema dei Legami.
+ Non modificare lo scaling da 2 a 5 Guardiani.
+ Non modificare il budget delle Azioni Significative.
+ Non modificare la struttura della campagna.
+ Non modificare gli esiti finali della campagna.
+ Non introdurre nuove opzioni per correggere problemi puramente editoriali.
+ Non riscrivere passaggi già corretti se non presentano un problema concreto.
+Interventi ammessi
+ Riposizionamento di titoli e sottotitoli.
+ Reintegrazione di parole espulse.
+ Correzione grammaticale e ortotipografica.
+ Uniformazione della terminologia.
+ Correzione dei rinvii interni.
+ Riordino di blocchi finiti nella posizione sbagliata.
+ Eliminazione di duplicazioni involontarie.
+ Correzione di tabelle e riquadri.
+ Regolazione delle interruzioni di pagina.
+ Correzione di testatine e piè di pagina.
+ Uniformazione delle fasce numeriche.
+ Miglioramento della leggibilità senza cambiare il significato.
+1. Correzioni bloccanti
+
+Questi interventi devono essere completati prima di qualunque esportazione candidata al blind test.
+
+Pagine 22-23: Cerchia degli Anziani
+ Verificare che il titolo Cinque Anziani Attuali preceda l’intero elenco.
+ Verificare che l’elenco contenga esattamente:
+Elisabetta Conti, Presidente;
+Eleonora Visconti, Avalon;
+Leila Ferrara, Umbra;
+Kwame Asante, Ife;
+Marisol Reyes, Mictlan.
+ Verificare che Mentori operativi sia un sottotitolo separato.
+ Ripristinare il nome di Padre Tommaso all’inizio del suo paragrafo.
+ Usare la formulazione:
+
+Padre Tommaso resta invece un Guardiano Avalon veterano e mentore operativo: non occupa un seggio nella Cerchia.
+
+ Verificare che Padre Tommaso non sembri uno dei cinque Anziani.
+ Verificare che il paragrafo non inizi con “resta invece” senza un soggetto.
+ Controllare che nessuna scheda degli Anziani sia spezzata in modo ambiguo fra le due pagine.
+Pagine 43-44: Manifesto della Fratellanza
+ Separare visivamente il titolo dalla citazione.
+ Eliminare underscore, asterischi o marcatori di corsivo visibili.
+ Usare questa struttura:
+
+Il Manifesto della Fratellanza
+
+Vincenzo scrive:
+
+«Il Velo non protegge l’umanità...»
+
+ Verificare che la citazione continui correttamente a pagina 44.
+ Evitare che una singola riga della citazione resti isolata.
+ Correggere la frase sui metodi di Vincenzo:
+
+Vincenzo ha torto nei metodi: terrorismo magico, sabotaggi e reclutamento forzato, ma non necessariamente nella diagnosi.
+
+ Verificare che “diagnosi” si riferisca chiaramente al problema politico e morale del Velo.
+ Controllare che il paragrafo seguente non sia finito dentro la citazione.
+Pagina 70: Interrogare i Morti
+ Eliminare ogni duplicazione parziale della Mossa.
+ Spostare il titolo Interrogare i Morti prima del trigger.
+ Usare il seguente ordine:
+titolo;
+trigger;
+caratteristica utilizzata;
+10+;
+7–9;
+6−;
+chiarimento su memoria e prospettiva;
+Presagio;
+archetipi.
+ Verificare che nessun esito appaia prima del titolo.
+ Verificare che il 7–9 preceda il 6−.
+ Verificare che la Mossa non sia mescolata con Parlare con i Morti.
+ Conservare la distinzione normativa già consolidata:
+Interrogare i Morti quando i resti rendono già possibile il contatto;
+Parlare con i Morti quando il potere deve aprire il contatto;
+mai due tiri per la stessa incertezza.
+ Controllare che il titolo non sia rimasto anche in fondo alla pagina.
+Pagina 119: evocazioni ed Escalation
+ Inserire un’intestazione prima del passaggio sulle evocazioni.
+ Usare, per esempio:
+
+Effetti aggiuntivi ed evocazioni
+
+ Correggere il periodo:
+
+Reazioni, attacchi bonus, danni persistenti e azioni autonome non ricevono Escalation.
+
+ Mantenere separato il paragrafo:
+
+Per le evocazioni vale una regola comune...
+
+ Verificare che il soggetto di ogni frase sia esplicito.
+ Verificare che l’Escalation si applichi al massimo una volta per Azione Principale.
+ Controllare che la regola non sembri negare l’Escalation all’attacco principale del Guardiano.
+Pagina 150: Sensi Animali
+ Spostare il titolo Sensi Animali prima di ruolo, costo, portata e durata.
+ Usare l’ordine standard dei poteri:
+titolo;
+ruolo;
+costo;
+portata;
+durata;
+effetto;
+tiro, se previsto;
+esiti.
+ Eliminare l’eventuale titolo duplicato in fondo alla pagina.
+ Verificare che il potere sia chiaramente identificabile come potere Ife L1.
+ Controllare che il titolo non sia separato dal relativo corpo da un’interruzione di pagina.
+Pagina 157: Parlare con i Morti
+ Spostare il titolo Parlare con i Morti prima di ruolo e costo.
+ Usare l’ordine:
+titolo;
+ruolo;
+costo;
+portata;
+durata;
+tiro;
+esiti;
+chiarimento con Interrogare i Morti.
+ Conservare la formula che impedisce un doppio tiro.
+ Verificare che il costo di 1 PF sia leggibile.
+ Verificare che la possibilità di aprire il contatto sia distinta dall’interrogazione di resti già sufficienti.
+ Rimuovere il titolo duplicato dalla posizione successiva agli esiti.
+Pagina 160: Confine dei Morti
+ Spostare Confine dei Morti prima di “Ruolo: protezione e controllo”.
+ Verificare che statistiche e descrizione non siano associate a Tocco della Morte.
+ Controllare la corretta successione dei poteri Mictlan.
+ Eliminare ogni titolo duplicato a fondo pagina.
+ Verificare costo, durata e area rispetto al testo canonico della beta.7.
+Pagina 161: Animare i Caduti
+ Spostare Animare i Caduti prima del ruolo.
+ Conservare la regola generale delle evocazioni dopo gli esiti.
+ Verificare che la creatura evocata sia descritta come una singola unità.
+ Verificare che possa compiere al massimo un’Azione Significativa per round.
+ Verificare che attaccare o usare una capacità significativa richieda normalmente l’Azione Principale del Guardiano.
+ Verificare la presenza della clausola “salvo autonomia esplicita”.
+ Eliminare eventuali frammenti isolati come “un’azione”.
+ Controllare che il 7–9 preceda il 6−.
+Pagina 163: Maremoto dei Morti
+ Spostare Maremoto dei Morti prima di “Ruolo: cataclisma”.
+ Eliminare il titolo duplicato collocato dopo il corpo del potere.
+ Verificare che il passaggio a La Milano Sotterranea sia chiaramente separato.
+ Controllare che il potere L5 non sembri appartenere al capitolo seguente.
+ Evitare che un singolo esito del potere resti isolato nella pagina successiva.
+2. Ricomposizione della campagna
+
+Il problema ricorrente della beta.7 è l’espulsione di parole o brevi sintagmi, soprattutto un’alternativa, dal periodo originario.
+
+Pagina 318: Vincenzo
+ Ricomporre:
+
+Ciò che non concede facilmente: rinunciare alla convergenza senza un’alternativa concreta e verificabile.
+
+ Eliminare il frammento isolato “un’alternativa”.
+ Verificare che “concreta e verificabile” concordi con “alternativa”.
+Pagina 319: Nadia
+ Ricomporre:
+
+Ha bisogno di un’alternativa credibile, non di una richiesta di obbedienza.
+
+ Eliminare il frammento isolato.
+ Verificare che il periodo non inizi o termini nella colonna sbagliata.
+Pagina 320: riduzione del Clock
+ Ricomporre:
+
+distruggono un’infrastruttura essenziale;
+
+ Eliminare il frammento “un’infrastruttura” rimasto a fondo pagina.
+ Verificare che il punto appartenga all’elenco corretto.
+ Verificare la punteggiatura uniforme di tutto l’elenco.
+Pagina 337: memoria di Lucia
+ Ricomporre:
+
+la memoria di Lucia diventa un’accusa contro tutti i contendenti.
+
+ Eliminare il frammento isolato “un’accusa”.
+ Verificare che la frase mantenga il significato politico previsto.
+Pagina 339: Nadia e la proposta politica
+ Ricomporre:
+
+Vuole sentire un’alternativa concreta.
+
+ Eliminare il frammento isolato.
+ Verificare che il soggetto “Nadia” sia ancora chiaramente identificabile.
+Pagina 342: Sessione 6
+ Spostare il titolo in cima al blocco.
+ Usare:
+
+Sessione 6: La discesa
+
+ Collocare immediatamente dopo:
+Obiettivo;
+Clock previsto;
+situazione iniziale.
+ Verificare che nessun contenuto della sessione preceda il titolo.
+ Uniformare la punteggiatura del titolo con le altre sessioni.
+ Controllare che “La discesa” non compaia una seconda volta in fondo alla pagina.
+Pagina 345: quattro risposte alle obiezioni
+ Ricomporre:
+
+Una prova, una testimonianza, un’alternativa e una garanzia possono rispettivamente affrontarle.
+
+ Verificare che esistano effettivamente quattro obiezioni corrispondenti.
+ Verificare che “rispettivamente” sia comprensibile.
+ Se la corrispondenza non è immediata, trasformare la frase in un elenco di quattro coppie, senza modificare il contenuto.
+Pagina 348: cellula della Fratellanza
+ Reintegrare nell’elenco:
+
+una cellula della Fratellanza passata dalla parte dei Guardiani disattiva un sostituto;
+
+ Non lasciare la frase isolata a fondo pagina.
+ Verificare che “sostituto” abbia un referente già definito nel paragrafo.
+ Uniformare la punteggiatura agli altri punti dell’elenco.
+Pagina 349: contenuto minimo dell’alternativa
+ Ricomporre:
+
+Un’alternativa concreta deve specificare almeno autorità, limiti e controllo.
+
+ Eliminare il frammento isolato.
+ Valutare se “controllo” debba essere “meccanismi di controllo”, senza cambiare il significato.
+Pagina 351: conclusione con Vincenzo
+ Ricomporre:
+
+Vincenzo accetta un’alternativa e collabora alla riscrittura.
+
+ Verificare che il punto appartenga all’esito corretto.
+ Eliminare il frammento isolato.
+Pagina 353: debolezza di Vincenzo
+ Ricomporre:
+
+un’alternativa concreta alla segretezza assoluta.
+
+ Verificare che il sintagma completi una frase grammaticalmente intera.
+ Eliminare il frammento isolato.
+Pagina 354: finale trasformativo
+ Ricomporre:
+
+Richiede il rituale di Nonna Rosa o un’alternativa costruita durante la campagna...
+
+ Verificare che l’alternativa sia descritta come ottenibile attraverso le scelte precedenti.
+ Eliminare il frammento isolato.
+ Controllare che il periodo prosegua correttamente nella riga successiva.
+Controllo globale della parola “alternativa”
+ Cercare tutte le occorrenze di un’alternativa.
+ Verificare che nessuna occorrenza sia isolata in fondo a una pagina.
+ Verificare che nessuna frase contenga:
+“senza concreta”;
+“ha bisogno di credibile”;
+“accetta e collabora” quando manca l’oggetto;
+“o costruita” senza sostantivo;
+“concreta alla segretezza” senza sostantivo.
+ Controllare nel file sorgente se “un’alternativa” possiede uno stile, riquadro o proprietà di flusso differente dal resto del paragrafo.
+ Correggere la causa di composizione, non soltanto le singole occorrenze.
+3. Titoli delle one-shot
+Notte al Monumentale
+ Separare titolo e durata.
+ Usare:
+
+Notte al Monumentale
+ Durata: 3–4 ore
+
+ Eliminare Notte al MonumentaleDurata.
+ Verificare che il titolo non sia attaccato al primo paragrafo.
+ Verificare che durata, tono e numero di giocatori siano trattati come metadati separati.
+Il Mercante d’Ombre
+ Separare titolo e durata.
+ Usare:
+
+Il Mercante d’Ombre
+ Durata: 3–4 ore
+
+ Eliminare Il Mercante d’OmbreDurata.
+ Verificare che apostrofo e maiuscole siano uniformi.
+Sangue sotto il Duomo
+ Separare titolo e durata.
+ Usare:
+
+Sangue sotto il Duomo
+ Durata: 4–5 ore
+
+ Eliminare Sangue sotto il DuomoDurata.
+ Verificare che il titolo non venga ripetuto nel piè di pagina.
+4. Quartieri e hook
+Navigli
+ Collocare il titolo Navigli prima di:
+Casata dominante;
+citazione;
+testo introduttivo.
+ Verificare che la citazione non preceda il titolo.
+ Verificare che la parola “Navigli” non sia duplicata in fondo alla pagina.
+Rete Informativa
+ Usare l’ordine:
+Risorsa per i Guardiani;
+Rete Informativa;
+descrizione della risorsa;
+Tabella degli eventi casuali;
+tabella.
+ Verificare che la descrizione della Rete Informativa non sia collocata dopo la tabella.
+ Conservare la regola per cui il contatto rende possibile la richiesta.
+ Conservare gli esiti normali di Persuadere o Raggirare.
+Porta Ticinese
+ Applicare lo stesso ordine alla Rete Sotterranea.
+ Mantenere la condizione:
+percorso sconosciuto;
+percorso instabile;
+viaggio sotto pressione.
+ Non rendere obbligatorio il tiro se non esiste rischio.
+ Non introdurre esiti locali diversi da Sfidare il Pericolo.
+Hook 2-4
+ Riunire ciascun titolo alla relativa descrizione:
+Le Acque Nere;
+Il Treno Vuoto;
+I Graffiti Profetici.
+ Per ogni hook mantenere insieme:
+numero;
+titolo;
+quartiere;
+difficoltà;
+descrizione;
+possibile sviluppo.
+ Evitare che tre titoli siano seguiti dalle descrizioni solo a fine pagina.
+ Controllare lo stesso problema negli hook 5-8.
+ Verificare che ciascuna riga della tabella resti unita alla propria descrizione.
+5. Equipaggiamento iniziale
+ Collocare Anello di Custodia come primo elemento del kit.
+ Ordinare:
+Anello di Custodia;
+smartphone criptato;
+auricolare;
+500 euro;
+arma da mischia;
+abbigliamento operativo;
+eventuale kevlar;
+pistola opzionale.
+ Verificare che l’Anello non compaia in un blocco separato a fondo pagina.
+ Verificare che la pistola sia chiaramente indicata come opzionale.
+ Verificare che il kevlar non sembri obbligatorio per tutti.
+ Controllare che nessun oggetto sia duplicato.
+6. Uniformazione delle fasce numeriche
+Standard obbligatorio
+
+Usare esclusivamente:
+
+ 12+
+ 10–11
+ 10+
+ 7–9
+ 6−
+ 0–8
+ 0–10
+ 1–2
+ 2–4
+ 2–5
+ 3–5
+ 4–6
+ 8–9
+Ricerca globale
+
+Cercare e correggere:
+
+ 7 9
+ 7-9
+ 10 11
+ 10-11
+ 6-
+ 0-8
+ 0-10
+ 1-2
+ 2-4
+ 2-5
+ 3-5
+ 4-6
+ 8-9
+Controlli specifici
+ Mosse Esclusive.
+ Mosse Base.
+ Mosse Avanzate.
+ Ultimo Respiro.
+ Poteri.
+ Stress.
+ Corruzione.
+ Reputazione.
+ Attività di downtime.
+ Scaling.
+ Quick Reference giocatori.
+ Quick Reference Custode.
+ FAQ.
+Controllo semantico
+ Non trasformare il normale segno meno matematico in 6−.
+ Non modificare valori negativi di Reputazione.
+ Non modificare intervalli di pagine.
+ Non modificare date o numeri telefonici.
+ Verificare manualmente ogni sostituzione automatica.
+7. Correzioni grammaticali e lessicali
+Forme obbligatorie
+ microPorta Dimensionale → piccola Porta Dimensionale
+ nonmagici → non-magici
+ expoliziotto → ex poliziotto
+ cinesemilanese → milanese di origine cinese
+ senegalesemilanese → milanese di origine senegalese
+ copiaesca → copia-esca
+Apostrofi
+
+Cercare e correggere:
+
+ una azione → un’azione
+ una unità → un’unità
+ una alleanza → un’alleanza
+ una informazione → un’informazione
+ una alternativa → un’alternativa
+ una infrastruttura → un’infrastruttura
+ una accusa → un’accusa
+ una opportunità → un’opportunità
+ una organizzazione → un’organizzazione
+Controlli contestuali
+ Non sostituire automaticamente “una” quando il sostantivo seguente non richiede elisione.
+ Verificare maiuscole di Casate, Anelli, Guardiani, Custodi e Velo.
+ Uniformare “Casata dominante” con la stessa capitalizzazione.
+ Uniformare “Livello di Sfida” e sigla LS.
+ Uniformare “Punti Ferita” e sigla PF.
+ Uniformare “Azione Principale” e “Azione Significativa”.
+ Uniformare “Mossa Esclusiva”.
+ Uniformare “Quick Reference” oppure adottare una traduzione italiana unica.
+8. Controllo delle intestazioni dei poteri
+
+Per ogni potere verificare la sequenza:
+
+titolo;
+livello;
+ruolo;
+costo;
+portata;
+durata;
+trigger o effetto;
+tiro;
+10+;
+7–9;
+6−;
+chiarimenti.
+Avalon
+ Tutti i titoli precedono il corpo.
+ Nessun titolo compare a fondo pagina.
+ Nessun costo è separato dal potere.
+Umbra
+ Tutti i titoli precedono il corpo.
+ Le evocazioni riportano la regola comune.
+ Corruzione e costo sono leggibili.
+Ife
+ Sensi Animali corretto.
+ Sciame mantiene la regola delle evocazioni.
+ Gli altri titoli precedono sempre ruolo e costo.
+ Nessun potere è diviso senza richiamo di continuazione.
+Mictlan
+ Parlare con i Morti corretto.
+ Confine dei Morti corretto.
+ Animare i Caduti corretto.
+ Maremoto dei Morti corretto.
+ Esercito dei Caduti conserva la versione completa.
+ Tutti i costi in PF sono leggibili.
+ Nessun potere sembra appartenere al potere precedente o successivo.
+9. Controllo delle evocazioni
+
+Per ogni evocazione verificare la presenza della formula canonica:
+
+Questa unità può compiere al massimo un’Azione Significativa per round e segue la regola comune delle evocazioni descritta in Combattimento. Per attaccare o usare una capacità significativa richiede normalmente l’Azione Principale del Guardiano, salvo autonomia esplicita.
+
+Evocazioni da controllare
+ Legione d’Ombra.
+ Sciame.
+ Evocare uno Spirito.
+ Esercito dei Caduti.
+ Animare i Caduti.
+ Ogni eventuale creatura o servitore evocato da altri poteri.
+Verifica di coerenza
+ Una sola unità mantenuta per Guardiano, salvo eccezione esplicita.
+ Una sola Azione Significativa per round.
+ Comando tramite Azione Principale.
+ Nessuna reazione gratuita implicita.
+ Nessuna Escalation autonoma.
+ Nessun attacco bonus non dichiarato.
+ Nessun frammento della regola finito in fondo pagina.
+ Nessuna formula abbreviata che cambi il significato.
+10. Tabelle
+Tabelle prioritarie
+ Prezzo del potere delle quattro Casate.
+ PF iniziali.
+ Stress e Corruzione.
+ Ultimo Respiro.
+ Scaling 2–5 Guardiani.
+ Reputazione.
+ Velo Tracker.
+ Doom Clock.
+ Eventi casuali dei quartieri.
+ Strutture della campagna.
+ Quick Reference.
+Controlli per ogni tabella
+ Titolo presente.
+ Intestazioni complete.
+ Nessuna parola troncata.
+ Nessuna riga associata alla colonna sbagliata.
+ Nessun testo espulso a fondo pagina.
+ Nessun campo vuoto involontario.
+ Intervalli numerici uniformi.
+ Colonne sufficientemente larghe.
+ Testo a capo senza sovrapposizione.
+ Riga di intestazione ripetuta se la tabella continua nella pagina successiva.
+ La continuazione è indicata chiaramente.
+ Nessun titolo della sezione seguente è assorbito nella tabella.
+11. Testatine, piè di pagina e indice
+Testatine
+ Usare la stessa testatina in tutte le 387 pagine.
+ Verificare che BLIND non venga troncato in IND.
+ Verificare che BLIND READY CLEAN non invada il numero di pagina.
+ Verificare coerenza della versione 0.9.3-beta.8.
+ Eliminare qualunque vecchia versione beta.7.
+ Controllare pagine pari e dispari.
+Piè di pagina
+ Numero di pagina visibile.
+ Nessun numero duplicato.
+ Nessun frammento del corpo del testo nel piè di pagina.
+ Nessun titolo di potere espulso nel piè di pagina.
+ Nessun elemento decorativo sopra il testo.
+Indice
+ Aggiornare tutte le pagine dopo la ricomposizione.
+ Verificare le pagine di:
+Interrogare i Morti;
+Poteri Ife;
+Poteri Mictlan;
+Sessione 6;
+one-shot;
+appendici.
+ Verificare i segnalibri del PDF.
+ Verificare che ogni segnalibro apra la pagina corretta.
+ Eliminare riferimenti a capitoli numerici non visibili.
+ Preferire titolo e pagina nei rinvii interni.
+12. Quick Reference e FAQ
+Quick Reference giocatori
+ Risonanza identica al corpus.
+ Fato identico al corpus.
+ Anello tolto o separato identico al corpus.
+ Ancora senza bonus automatico.
+ Confidente con +1 speciale che sostituisce il normale bonus.
+ Ultimo Respiro 7–9 completo.
+ Corruzione 8 risolta dopo il potere.
+ PF temporanei non utilizzabili per Sangue Tenace.
+ Armatura non qualificata definita correttamente.
+ Fasce numeriche uniformate.
+Quick Reference Custode
+ Corpo valido soltanto se il Guardiano è vivo e può perdere PF.
+ Corpo può portare a Ultimo Respiro.
+ Mondo non valido a Velo 12 salvo riduzione immediata.
+ Legame richiede un Legame L1+ nominato e raggiungibile.
+ Anima richiede Condizione e via di risoluzione.
+ Due prezzi differenti e realmente applicabili.
+ Budget nemico di una sola Azione Significativa.
+ Reazioni limitate e specifiche.
+ Evocazioni correttamente sintetizzate.
+ Nessuna regola assente dal corpus completo.
+FAQ
+ Confidente.
+ Ultimo Respiro.
+ Corruzione 8.
+ Rinuncia.
+ Risonanza rifiutata.
+ Prezzo Mondo.
+ Evocazioni.
+ PF temporanei Mictlan.
+ Interrogare e Parlare con i Morti.
+ Armatura non qualificata.
+ Nessuna risposta in conflitto con la Quick Reference.
+ Nessuna FAQ ripete integralmente un capitolo.
+13. Validazione visuale del PDF
+Prima esportazione
+ Esportare la beta.8 in un nuovo file.
+ Non sovrascrivere la beta.7.
+ Verificare che il PDF non sia protetto o danneggiato.
+ Verificare il numero totale delle pagine.
+ Verificare font incorporati.
+ Verificare segnalibri.
+ Verificare metadati e numero di versione.
+Rendering completo
+ Renderizzare tutte le pagine in PNG.
+ Controllare ogni pagina, non soltanto quelle modificate.
+ Verificare una pagina alla volta.
+ Usare almeno una risoluzione sufficiente a leggere il corpo del testo.
+ Controllare separatamente le pagine con tabelle.
+Pagine obbligatorie da controllare a ingrandimento maggiore
+ 22–23.
+ 43–44.
+ 70.
+ 84.
+ 115–119.
+ 147.
+ 150.
+ 152.
+ 157.
+ 159–163.
+ 177–183.
+ 196–203.
+ 213–215.
+ 318–320.
+ 337–354.
+ Aperture delle tre one-shot.
+ Quick Reference.
+ FAQ.
+ Indice.
+Difetti visuali da cercare
+ Titoli dopo il relativo corpo.
+ Parole isolate a fondo pagina.
+ Prima riga del paragrafo mancante.
+ Ultima riga espulsa.
+ Tabelle spezzate.
+ Testo sovrapposto.
+ Testo tagliato.
+ Caratteri neri o glifi assenti.
+ Trattini trasformati in spazi.
+ Corsivi mostrati come underscore.
+ Asterischi visibili.
+ Intestazioni troncate.
+ Colonne fuori ordine.
+ Numeri di pagina errati.
+ Spazi bianchi innaturali prodotti da blocchi espulsi.
+14. Ricerca automatica finale
+
+La beta.8 non deve essere approvata se una delle seguenti ricerche produce occorrenze non giustificate.
+
+Frammenti e residui
+ quote 
+ Aggiorna la scheda
+ Prima Edizione
+ segue**
+ underscore visibili
+ asterischi visibili
+ Capitolo 31
+ Capitolo 20
+ Capitolo 5
+ un’alternativa isolato
+ un’infrastruttura isolato
+ un’accusa isolato
+ Vista dall’Alto isolato
+ Durata: attaccato al titolo
+Parole troncate
+ Navigl
+ Garibald
+ Pirell
+ Sarp
+ Mort quando dovrebbe essere “Morti”
+ Cadut
+ Guardian
+ Anziani Attual
+ mp quando dovrebbe essere “Imp”
+Frasi sintomatiche
+ senza concreta
+ ha bisogno di credibile
+ o costruita durante
+ concreta alla segretezza
+ accetta e collabora
+ distruggono essenziale
+ diventa contro
+ produce e una scelta
+ guidata da senza soggetto o nome
+ resta invece a inizio pagina
+ una cellula isolato a fondo pagina
+15. Congelamento della beta.8
+Gate normativo
+ Nessuna regola centrale modificata.
+ Nessuna nuova capacità.
+ Nessuna nuova eccezione.
+ Nessuna variazione di costi o danni.
+ Quick Reference allineate.
+ FAQ allineate.
+ Esempi allineati.
+Gate editoriale
+ Nessun titolo dopo il proprio corpo.
+ Nessuna parola espulsa.
+ Nessun frammento isolato.
+ Nessuna tabella rotta.
+ Nessuna intestazione mutilata.
+ Nessuna fascia numerica non standard.
+ Nessun titolo attaccato a “Durata”.
+ Tutte le 387 pagine controllate visivamente.
+Gate blind
+ Un lettore esterno trova la creazione del personaggio senza assistenza.
+ Un lettore esterno trova le regole del combattimento in meno di 60 secondi.
+ Un lettore esterno trova la Risonanza in meno di 60 secondi.
+ Un lettore esterno trova Ultimo Respiro in meno di 60 secondi.
+ Un lettore esterno comprende come comandare un’evocazione.
+ Un lettore esterno distingue Interrogare i Morti da Parlare con i Morti.
+ Un Custode trova scaling e budget nemico senza rinvii ambigui.
+ La Sessione 6 è immediatamente identificabile.
+ Le tre one-shot hanno titoli e metadati leggibili.
+ Il protocollo di raccolta dati è utilizzabile senza spiegazioni esterne.
+Criterio finale di approvazione
+
+La beta.8 può essere dichiarata BLIND-READY-CLEAN soltanto se:
+
+ tutti i bloccanti sono chiusi;
+ non restano frasi troncate;
+ non restano parole isolate;
+ quick reference, FAQ e corpus concordano;
+ l’intero PDF è stato renderizzato e controllato;
+ una seconda persona ha svolto almeno una lettura cieca delle sezioni operative;
+ nessun intervento della beta.8 ha cambiato il bilanciamento;
+ tutti i problemi ulteriori riguardano aspetti che possono essere determinati soltanto dal playtest.
+Decisione dopo il controllo
+ PASS: distribuire la beta.8 ai gruppi blind.
+ PASS CON ERRATA: ammesso solo per refusi non operativi e già documentati.
+ FAIL EDITORIALE: correggere composizione o leggibilità, senza riaprire il design.
+ FAIL NORMATIVO: bloccare la distribuzione se quick reference, esempi o corpus forniscono procedure diverse.
+Miglioramento principale della checklist
+
+La checklist separa deliberatamente tre livelli che nelle build precedenti tendevano a sovrapporsi:
+
+regola corretta, già sostanzialmente raggiunta;
+regola correttamente composta nel PDF, ancora da completare;
+regola realmente comprensibile senza assistenza, da verificare prima e durante il blind.
+
+La beta.8 dovrà chiudere soltanto il secondo livello. Il terzo sarà misurato attraverso i gruppi blind, mentre il primo non deve essere riaperto senza dati concreti.

@@ -1,0 +1,46 @@
+title: Mythic Rings
+subtitle: Guardiani di Milano
+edition: Prima Edizione
+version: 0.9.3-beta.9
+release_stage: beta
+status: BLIND CLEAN CANDIDATE
+language: it-IT
+author: Riccardo Scaringi
+copyright_year: 2026
+source_provenance: reconstructed_from_final_pdf_text_snapshot
+reference_pdf_sha256: 93cc50ccbcbbf270ba4340619072729f40b48a9da7356a38c6e92d812a16fcf7
+reference_pdf_pages: 387
+chapters:
+- chapters/01_milano_nascosta.md
+- chapters/02_i_custodi_e_gli_anelli_di_custodia.md
+- chapters/03_le_quattro_casate.md
+- chapters/04_creare_il_tuo_guardiano.md
+- chapters/05_come_si_gioca.md
+- chapters/06_mosse_base.md
+- chapters/07_poteri_di_avalon.md
+- chapters/08_poteri_di_umbra.md
+- chapters/09_poteri_di_ife.md
+- chapters/10_poteri_di_mictlan.md
+- chapters/11_la_milano_sotterranea.md
+- chapters/12_i_dodici_quartieri_di_milano.md
+- chapters/13_le_fazioni_di_milano.md
+- chapters/14_20_hook_per_avventure.md
+- chapters/15_session_zero.md
+- chapters/16_i_principi_del_custode.md
+- chapters/17_le_mosse_del_custode.md
+- chapters/18_il_doom_clock_espanso.md
+- chapters/19_creare_e_gestire_sessioni.md
+- chapters/20_bilanciare_il_combattimento.md
+- chapters/21_xp_e_avanzamento.md
+- chapters/22_mosse_avanzate.md
+- chapters/23_le_12_attivita_di_downtime.md
+- chapters/24_sistema_reputazione.md
+- chapters/25_safety_tools.md
+- chapters/26_il_bestiario_di_milano.md
+- chapters/27_campagna_il_crepuscolo_del_velo.md
+- chapters/28_tre_one_shot.md
+- chapters/29_glossario_dei_termini.md
+- chapters/30_quick_reference_giocatori.md
+- chapters/31_quick_reference_custode.md
+- chapters/32_domande_frequenti_faq.md
+- chapters/33_indice_completo.md
