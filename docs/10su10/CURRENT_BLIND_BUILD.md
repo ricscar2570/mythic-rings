@@ -1,9 +1,8 @@
-# Current blind build
+# Current blind build status
 
-**0.9.3-beta.8 BLIND READY CLEAN**
+Blind distribution is **PAUSED** pending the external editorial read of 0.9.3-beta.9.
 
-- Manual SHA-256: `d80c2a18f0da36e65405c7066b4bb5e38d012d23fa6f89c04f68c46853512fcb`
-- Blind Test Pack SHA-256: `74c298a86f743fc84725dfcd404f6b467cf89a8db3637be6095c7544e86dd7f4`
-- Branch: `develop/10su10`
+Beta.8 failed the stricter editorial checklist and is superseded.  
+Beta.9 has passed internal editorial QA but is still a candidate until the required second human blind-read passes.
 
-Supersedes beta.6 and beta.7. Use only beta.8 for new blind sessions.
+Do not mix beta.8 data with future beta.9 blind data.
