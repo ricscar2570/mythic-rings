@@ -1,0 +1,36 @@
+name: Export target branch
+
+on:
+  push:
+    branches:
+      - automation/import-beta4.2-20261105
+    paths:
+      - .github/export_target/READY
+
+permissions:
+  contents: read
+
+tasks: {}
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout target branch
+        uses: actions/checkout@v4
+        with:
+          ref: develop/10su10
+          fetch-depth: 1
+      - name: Create source archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          tar --exclude=.git --exclude=node_modules --exclude=dist -czf /tmp/target-source.tar.gz .
+          sha256sum /tmp/target-source.tar.gz
+      - name: Upload target source
+        uses: actions/upload-artifact@v4
+        with:
+          name: target-source-f0c83d3
+          path: /tmp/target-source.tar.gz
+          if-no-files-found: error
+          retention-days: 1
