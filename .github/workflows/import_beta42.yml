@@ -1,0 +1,95 @@
+name: Import Mythic Rings beta 4.2
+
+on:
+  push:
+    branches:
+      - automation/import-beta4.2-20261105
+    paths:
+      - .github/import_payload/READY
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mythic-rings-beta42-import
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout import payload
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Reconstruct and verify payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .github/import_payload/source.part* | base64 --decode > /tmp/mythic-rings-source.tar.xz
+          echo "838a62332fca1def0c3cb3e3480fb56d4361acf6187494b951a9a4040b27141a  /tmp/mythic-rings-source.tar.xz" | sha256sum -c -
+
+      - name: Checkout target branch
+        uses: actions/checkout@v4
+        with:
+          ref: develop/10su10
+          path: target
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: target/package-lock.json
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: target/requirements.txt
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libreoffice pandoc zip unzip fonts-ebgaramond fonts-crosextra-carlito
+
+      - name: Apply beta 4.2 source tree
+        shell: bash
+        run: bash .github/import_beta42.sh "$GITHUB_WORKSPACE/target" /tmp/mythic-rings-source.tar.xz
+
+      - name: Install project dependencies
+        working-directory: target
+        run: |
+          npm ci
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Full release gate
+        working-directory: target
+        run: npm run release:check
+
+      - name: Finalize baseline metadata
+        working-directory: target
+        shell: bash
+        run: |
+          python3 "$GITHUB_WORKSPACE/.github/finalize_imported_baseline.py" "$GITHUB_WORKSPACE/target"
+          npm run baseline:check
+
+      - name: Commit and push beta 4.2
+        working-directory: target
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "mythic-rings-release-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 1
+          fi
+          git commit -m "release: Mythic Rings 0.9.0-beta.4.2 Phase 3 Candidate"
+          git push origin HEAD:develop/10su10
