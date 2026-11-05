@@ -29,7 +29,7 @@ jobs:
         run: |
           set -euo pipefail
           cat .github/import_payload/source.part* | base64 --decode > /tmp/mythic-rings-source.tar.xz
-          echo "838a62332fca1def0c3cb3e3480fb56d4361acf6187494b951a9a4040b27141a  /tmp/mythic-rings-source.tar.xz" | sha256sum -c -
+          echo "d4c084b286089adf0eff3b28df42d0432d1dc6b34d84fdeb86217cd188be2d15  /tmp/mythic-rings-source.tar.xz" | sha256sum -c -
 
       - name: Checkout target branch
         uses: actions/checkout@v4
